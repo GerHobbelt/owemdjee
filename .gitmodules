@@ -55,3 +55,9 @@
 [submodule "ImageMagick"]
 	path = ImageMagick
 	url = git@github.com:GerHobbelt/ImageMagick.git
+[submodule "unicode-cldr"]
+	path = unicode-cldr
+	url = git@github.com:GerHobbelt/cldr.git
+[submodule "unicode-icu"]
+	path = unicode-icu
+	url = git@github.com:GerHobbelt/icu.git
