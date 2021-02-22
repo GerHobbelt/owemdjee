@@ -61,3 +61,9 @@
 [submodule "unicode-icu"]
 	path = unicode-icu
 	url = git@github.com:GerHobbelt/icu.git
+[submodule "dlib"]
+	path = dlib
+	url = git@github.com:GerHobbelt/dlib.git
+[submodule "MITIE-nlp"]
+	path = MITIE-nlp
+	url = git@github.com:GerHobbelt/MITIE.git
