@@ -67,3 +67,66 @@
 [submodule "MITIE-nlp"]
 	path = MITIE-nlp
 	url = git@github.com:GerHobbelt/MITIE.git
+[submodule "flatbuffers"]
+	path = flatbuffers
+	url = git@github.com:GerHobbelt/flatbuffers.git
+[submodule "h5cpp-HDF5"]
+	path = h5cpp-HDF5
+	url = git@github.com:GerHobbelt/h5cpp.git
+[submodule "HDF5"]
+	path = HDF5
+	url = git@github.com:GerHobbelt/hdf5.git
+[submodule "yyjson"]
+	path = yyjson
+	url = git@github.com:GerHobbelt/yyjson.git
+[submodule "flatcc"]
+	path = flatcc
+	url = git@github.com:GerHobbelt/flatcc.git
+[submodule "bebop"]
+	path = bebop
+	url = git@github.com:GerHobbelt/bebop.git
+[submodule "inih"]
+	path = inih
+	url = git@github.com:GerHobbelt/inih.git
+[submodule "iniparser"]
+	path = iniparser
+	url = git@github.com:GerHobbelt/iniparser.git
+[submodule "popt"]
+	path = popt
+	url = git@github.com:GerHobbelt/POPT.git
+[submodule "tre"]
+	path = tre
+	url = git@github.com:GerHobbelt/tre.git
+[submodule "hyperscan"]
+	path = hyperscan
+	url = git@github.com:GerHobbelt/hyperscan.git
+[submodule "EasyLogger"]
+	path = EasyLogger
+	url = git@github.com:GerHobbelt/EasyLogger.git
+[submodule "log4cplus"]
+	path = log4cplus
+	url = git@github.com:GerHobbelt/log4cplus.git
+[submodule "zlog"]
+	path = zlog
+	url = git@github.com:GerHobbelt/zlog.git
+[submodule "clipp"]
+	path = clipp
+	url = git@github.com:GerHobbelt/clipp.git
+[submodule "olena"]
+	path = olena
+	url = git@github.com:GerHobbelt/olena.git
+[submodule "hocr-spec"]
+	path = hocr-spec
+	url = git@github.com:GerHobbelt/hocr-spec.git
+[submodule "hocr-tools"]
+	path = hocr-tools
+	url = git@github.com:GerHobbelt/hocr-tools.git
+[submodule "hocr-fileformat"]
+	path = hocr-fileformat
+	url = git@github.com:GerHobbelt/ocr-fileformat.git
+[submodule "BLAKE3"]
+	path = BLAKE3
+	url = git@github.com:GerHobbelt/BLAKE3.git
+[submodule "FastBinaryEncoding"]
+	path = FastBinaryEncoding
+	url = git@github.com:GerHobbelt/FastBinaryEncoding.git
