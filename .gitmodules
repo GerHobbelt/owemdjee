@@ -130,3 +130,6 @@
 [submodule "FastBinaryEncoding"]
 	path = FastBinaryEncoding
 	url = git@github.com:GerHobbelt/FastBinaryEncoding.git
+[submodule "cryptopp"]
+	path = cryptopp
+	url = git@github.com:GerHobbelt/cryptopp.git
