@@ -133,3 +133,6 @@
 [submodule "cryptopp"]
 	path = cryptopp
 	url = git@github.com:GerHobbelt/cryptopp.git
+[submodule "sqlite"]
+	path = sqlite
+	url = git@github.com:GerHobbelt/sqlite.git
