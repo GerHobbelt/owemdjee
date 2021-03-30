@@ -82,6 +82,8 @@
 # define _LARGEFILE_SOURCE 1
 #endif
 
+#include "mupdf/mutool.h"
+
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
@@ -445,7 +447,7 @@ static void*(*defaultMalloc)(int) = 0; /* The low-level malloc routine */
 ** This is the name of our program. It is set in main(), used
 ** in a number of other places, mostly for error messages.
 */
-static char *Argv0;
+static const char *Argv0;
 
 /*
 ** Prompt strings. Initialized in main. Settable with
@@ -20996,9 +20998,10 @@ static char *cmdline_option_value(int argc, char **argv, int i){
 #endif
 
 #if SQLITE_SHELL_IS_UTF8
-int SQLITE_CDECL main(int argc, char **argv){
+int SQLITE_CDECL sqlite_main(int argc, const char **argv_){
+  char **argv;
 #else
-int SQLITE_CDECL wmain(int argc, wchar_t **wargv){
+int SQLITE_CDECL sqlite_wmain(int argc, const wchar_t **wargv){
   char **argv;
 #endif
   char *zErrMsg = 0;
@@ -21011,7 +21014,7 @@ int SQLITE_CDECL wmain(int argc, wchar_t **wargv){
   int nCmd = 0;
   char **azCmd = 0;
   const char *zVfs = 0;           /* Value of -vfs command-line option */
-#if !SQLITE_SHELL_IS_UTF8
+#if 1
   char **argvToFree = 0;
   int argcToFree = 0;
 #endif
@@ -21079,6 +21082,16 @@ int SQLITE_CDECL wmain(int argc, wchar_t **wargv){
     sqlite3_free(z);
   }
   sqlite3_shutdown();
+#else
+  argvToFree = argv = malloc(sizeof(argv[0]) * (argc + 1));
+  if (argvToFree == 0) shell_out_of_memory();
+  argcToFree = argc;
+  for (i = 0; i < argc; i++) {
+	  char* z = strdup(argv_[i]);
+	  if (z == 0) shell_out_of_memory();
+	  argvToFree[i] = z;
+  }
+  argvToFree[i] = 0;
 #endif
 
   assert( argc>=1 && argv && argv[0] );
@@ -21535,7 +21548,7 @@ int SQLITE_CDECL wmain(int argc, wchar_t **wargv){
   output_reset(&data);
   data.doXdgOpen = 0;
   clearTempFile(&data);
-#if !SQLITE_SHELL_IS_UTF8
+#if 1
   for(i=0; i<argcToFree; i++) free(argvToFree[i]);
   free(argvToFree);
 #endif

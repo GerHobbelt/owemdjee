@@ -41,6 +41,13 @@
 extern "C" {
 #endif
 
+#define SQLITE_ENABLE_SESSION 1
+#define SQLITE_ENABLE_PREUPDATE_HOOK 1
+#define SQLITE_ENABLE_SQLLOG  1
+#define SQLITE_ENABLE_MEMORY_MANAGEMENT 1
+#define SQLITE_ENABLE_UNLOCK_NOTIFY 1
+#define SQLITE_ENABLE_SNAPSHOT 1
+#define SQLITE_ENABLE_DESERIALIZE 1
 
 /*
 ** Provide the ability to override linkage features of the interface.
