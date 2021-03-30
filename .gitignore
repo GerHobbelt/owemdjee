@@ -9,3 +9,7 @@ install_manifest.txt
 compile_commands.json
 CTestTestfile.cmake
 _deps
+/sqlite-amalgamation-3350300.zip
+/sqlite-doc-3350300.zip
+/sqlite-preprocessed-3350300.zip
+/sqlite-src-3350300.zip
