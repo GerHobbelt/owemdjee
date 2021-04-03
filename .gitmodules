@@ -22,9 +22,6 @@
 [submodule "mlpack"]
 	path = mlpack
 	url = git@github.com:GerHobbelt/mlpack.git
-[submodule "atlas"]
-	path = atlas
-	url = git@github.com:GerHobbelt/math-atlas.git
 [submodule "rapidJSON"]
 	path = rapidJSON
 	url = git@github.com:GerHobbelt/rapidjson.git
@@ -136,3 +133,9 @@
 [submodule "sqlite"]
 	path = sqlite
 	url = git@github.com:GerHobbelt/sqlite.git
+[submodule "libwebp"]
+	path = libwebp
+	url = git@github.com:GerHobbelt/libwebp.git
+[submodule "libgif"]
+	path = libgif
+	url = git@github.com:GerHobbelt/libgif.git
