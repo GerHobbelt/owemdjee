@@ -139,3 +139,21 @@
 [submodule "libgif"]
 	path = libgif
 	url = git@github.com:GerHobbelt/libgif.git
+[submodule "upskirt-markdown"]
+	path = upskirt-markdown
+	url = git@github.com:GerHobbelt/upskirt.git
+[submodule "pthread-win32"]
+	path = pthread-win32
+	url = git@github.com:GerHobbelt/pthread-win32.git
+[submodule "jasper"]
+	path = jasper
+	url = git@github.com:GerHobbelt/jasper.git
+[submodule "lz4"]
+	path = lz4
+	url = git@github.com:GerHobbelt/lz4.git
+[submodule "opencv_contrib"]
+	path = opencv_contrib
+	url = git@github.com:GerHobbelt/opencv_contrib.git
+[submodule "libzmq"]
+	path = libzmq
+	url = git@github.com:GerHobbelt/libzmq.git
