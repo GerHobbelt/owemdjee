@@ -157,3 +157,18 @@
 [submodule "libzmq"]
 	path = libzmq
 	url = git@github.com:GerHobbelt/libzmq.git
+[submodule "re2"]
+	path = re2
+	url = git@github.com:GerHobbelt/re2.git
+[submodule "glob"]
+	path = glob
+	url = git@github.com:GerHobbelt/glob.git
+[submodule "libvips"]
+	path = libvips
+	url = git@github.com:GerHobbelt/libvips.git
+[submodule "GraphicsMagick"]
+	path = GraphicsMagick
+	url = git@github.com:GerHobbelt/graphicsmagick.git
+[submodule "googletest"]
+	path = googletest
+	url = git@github.com:GerHobbelt/googletest.git
