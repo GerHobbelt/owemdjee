@@ -178,3 +178,30 @@
 [submodule "libjpeg-turbo"]
 	path = libjpeg-turbo
 	url = git@github.com:GerHobbelt/libjpeg-turbo.git
+[submodule "duktape-cpp-glue"]
+	path = duktape-cpp-glue
+	url = git@github.com:GerHobbelt/dukglue.git
+[submodule "duktape"]
+	path = duktape
+	url = git@github.com:GerHobbelt/duktape.git
+[submodule "escargot"]
+	path = escargot
+	url = git@github.com:GerHobbelt/escargot.git
+[submodule "node-jerryscript"]
+	path = node-jerryscript
+	url = git@github.com:GerHobbelt/node-jerryscript.git
+[submodule "XMP-Toolkit-SDK"]
+	path = XMP-Toolkit-SDK
+	url = git@github.com:GerHobbelt/XMP-Toolkit-SDK.git
+[submodule "libexpat"]
+	path = libexpat
+	url = git@github.com:GerHobbelt/libexpat.git
+[submodule "xsimd"]
+	path = xsimd
+	url = git@github.com:GerHobbelt/xsimd.git
+[submodule "xtl"]
+	path = xtl
+	url = git@github.com:GerHobbelt/xtl.git
+[submodule "json"]
+	path = json
+	url = git@github.com:GerHobbelt/nlohmann-json.git
