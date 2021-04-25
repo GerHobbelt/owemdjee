@@ -205,3 +205,6 @@
 [submodule "json"]
 	path = json
 	url = git@github.com:GerHobbelt/nlohmann-json.git
+[submodule "sqlite-amalgamation"]
+	path = sqlite-amalgamation
+	url = git@github.com:GerHobbelt/sqlite-amalgamation.git
