@@ -208,3 +208,57 @@
 [submodule "sqlite-amalgamation"]
 	path = sqlite-amalgamation
 	url = git@github.com:GerHobbelt/sqlite-amalgamation.git
+[submodule "XS-moddable"]
+	path = XS-moddable
+	url = git@github.com:GerHobbelt/moddable.git
+[submodule "QuickJS"]
+	path = QuickJS
+	url = git@github.com:GerHobbelt/quickjs.git
+[submodule "ECMA262"]
+	path = ECMA262
+	url = git@github.com:GerHobbelt/ecma262.git
+[submodule "libtuv"]
+	path = libtuv
+	url = git@github.com:GerHobbelt/libtuv.git
+[submodule "http-parser"]
+	path = http-parser
+	url = git@github.com:GerHobbelt/http-parser.git
+[submodule "picohttpparser"]
+	path = picohttpparser
+	url = git@github.com:GerHobbelt/picohttpparser.git
+[submodule "libsvm"]
+	path = libsvm
+	url = git@github.com:GerHobbelt/libsvm.git
+[submodule "thunderSVM"]
+	path = thunderSVM
+	url = git@github.com:GerHobbelt/thundersvm.git
+[submodule "fmt"]
+	path = fmt
+	url = git@github.com:GerHobbelt/fmt.git
+[submodule "xml-pugixml"]
+	path = xml-pugixml
+	url = git@github.com:GerHobbelt/pugixml.git
+[submodule "json-jansson"]
+	path = json-jansson
+	url = git@github.com:GerHobbelt/jansson.git
+[submodule "yara-pattern-matcher"]
+	path = yara-pattern-matcher
+	url = git@github.com:GerHobbelt/yara.git
+[submodule "HDiffPatch"]
+	path = HDiffPatch
+	url = git@github.com:GerHobbelt/HDiffPatch.git
+[submodule "dtl-diff-template-library"]
+	path = dtl-diff-template-library
+	url = git@github.com:GerHobbelt/dtl.git
+[submodule "google-diff-match-patch"]
+	path = google-diff-match-patch
+	url = git@github.com:GerHobbelt/diff-match-patch.git
+[submodule "txiki.js"]
+	path = txiki.js
+	url = git@github.com:GerHobbelt/txiki.js.git
+[submodule "libxml2"]
+	path = libxml2
+	url = git@github.com:GerHobbelt/libxml2.git
+[submodule "gumbo-libxml"]
+	path = gumbo-libxml
+	url = git@github.com:GerHobbelt/gumbo-libxml.git
