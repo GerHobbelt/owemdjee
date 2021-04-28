@@ -262,3 +262,6 @@
 [submodule "gumbo-libxml"]
 	path = gumbo-libxml
 	url = git@github.com:GerHobbelt/gumbo-libxml.git
+[submodule "libarchive"]
+	path = libarchive
+	url = git@github.com:GerHobbelt/libarchive.git
