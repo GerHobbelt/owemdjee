@@ -160,6 +160,7 @@ The other JavaScript engines considered are of varying size, performance and com
     - [libgif](./libgif)
     - [libjpeg-turbo](./libjpeg-turbo)
     - [libwebp](./libwebp)
+    - [GDCM-Grassroots-DICOM](./GDCM-Grassroots-DICOM)
 - database "backend storage"
     - [sqlite](./sqlite)
     - [sqlite-amalgamation](./sqlite-amalgamation)

@@ -271,3 +271,6 @@
 [submodule "tinyexpr"]
 	path = tinyexpr
 	url = git@github.com:GerHobbelt/tinyexpr.git
+[submodule "GDCM-Grassroots-DICOM"]
+	path = GDCM-Grassroots-DICOM
+	url = git@github.com:GerHobbelt/GDCM.git
