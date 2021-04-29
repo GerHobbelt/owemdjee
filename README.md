@@ -132,15 +132,16 @@ The other JavaScript engines considered are of varying size, performance and com
         + [HDiffPatch](./HDiffPatch)
         + [yara-pattern-matcher](./yara-pattern-matcher)
         + [lz4](./lz4)
-        - [re2](./re2)
-        - [tre](./tre)
+- regex matchers (manual edit - pattern recognition)
+    * [re2](./re2)
+    * [tre](./tre)
+    * [hyperscan](./hyperscan) -- Hyperscan is a high-performance multiple regex matching library.
 - OCR: quality improvements, language detect, ...
     - [hunspell](./hunspell)
     - [hunspell-hyphen](./hunspell-hyphen)
 - OCR page image preprocessing, \[scanner] tooling: getting the pages to the OCR engine
     + [lcms2](../lcms2)
     + [leptonica](../leptonica)
-    - [hyperscan](./hyperscan)
     - [ImageMagick](./ImageMagick)
     - [jasper](./jasper) -- JasPer Image Processing/Coding Tool Kit
     - [libvips](./libvips)
