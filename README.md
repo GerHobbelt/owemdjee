@@ -207,6 +207,8 @@ The other JavaScript engines considered are of varying size, performance and com
     - [libzmq](./libzmq)
     - [pthread-win32](./pthread-win32)
     - [upskirt-markdown](./upskirt-markdown)
+        - [svg-charter](./svg-charter)
+            - [tinyexpr](./tinyexpr)
     - [libarchive](./libarchive)
 - testing & fuzzing
     - [googletest](./googletest)

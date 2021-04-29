@@ -265,3 +265,9 @@
 [submodule "libarchive"]
 	path = libarchive
 	url = git@github.com:GerHobbelt/libarchive.git
+[submodule "svg-charter"]
+	path = svg-charter
+	url = git@github.com:GerHobbelt/charter.git
+[submodule "tinyexpr"]
+	path = tinyexpr
+	url = git@github.com:GerHobbelt/tinyexpr.git
