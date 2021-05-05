@@ -105,15 +105,19 @@ The other JavaScript engines considered are of varying size, performance and com
 - content hashing
     - [BLAKE3](./BLAKE3)
     - [cryptopp](./cryptopp)
-- OCR: hOCR output format, other output format? (dedicated binary?)
+- intermediate data storage / caching / hierarchical data stores (binary hOCR; document text revisions; ...) 
+    - [c-blosc2](./c-blosc2)
     - [h5cpp-HDF5](./h5cpp-HDF5)
     - [HDF5](./HDF5)
     - [HighFive-HDF5](./HighFive-HDF5)
+    + [lz4](./lz4)
+    + [lzss](./lzss)
+    + see also [lzbench](https://github.com/inikep/lzbench)
+- OCR: hOCR output format, other output format? (dedicated binary?)
     - [hocr-fileformat](./hocr-fileformat)
     - [hocr-spec](./hocr-spec)
     - [hocr-tools](./hocr-tools)
 - pattern recognition: "A.I." for cover pages, image/page *segmentation*, including abstract & summary demarcation, "figure" and "table" detection & extraction from documents, ...
-    - [c-blosc](./c-blosc)
     - [dlib](./dlib) -- machine learning algorithms
     - [libsvm](./libsvm)
     - [thunderSVM](./thunderSVM)

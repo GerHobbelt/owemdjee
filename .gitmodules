@@ -25,9 +25,6 @@
 [submodule "rapidJSON"]
 	path = rapidJSON
 	url = git@github.com:GerHobbelt/rapidjson.git
-[submodule "c-blosc"]
-	path = c-blosc
-	url = git@github.com:GerHobbelt/c-blosc.git
 [submodule "HighFive-HDF5"]
 	path = HighFive-HDF5
 	url = git@github.com:GerHobbelt/HighFive.git
@@ -274,3 +271,21 @@
 [submodule "GDCM-Grassroots-DICOM"]
 	path = GDCM-Grassroots-DICOM
 	url = git@github.com:GerHobbelt/GDCM.git
+[submodule "c-blosc2"]
+	path = c-blosc2
+	url = git@github.com:GerHobbelt/c-blosc2.git
+[submodule "lzsse"]
+	path = lzsse
+	url = git@github.com:GerHobbelt/LZSSE.git
+[submodule "lizard"]
+	path = lizard
+	url = git@github.com:GerHobbelt/lizard.git
+[submodule "fast-lzma2"]
+	path = fast-lzma2
+	url = git@github.com:GerHobbelt/fast-lzma2.git
+[submodule "boost"]
+	path = boost
+	url = git@github.com:GerHobbelt/boost.git
+[submodule "xz-utils"]
+	path = xz-utils
+	url = git@github.com:GerHobbelt/xz.git
