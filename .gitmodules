@@ -289,3 +289,6 @@
 [submodule "xz-utils"]
 	path = xz-utils
 	url = git@github.com:GerHobbelt/xz.git
+[submodule "libwebsockets"]
+	path = libwebsockets
+	url = git@github.com:GerHobbelt/libwebsockets.git
