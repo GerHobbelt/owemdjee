@@ -301,3 +301,24 @@
 [submodule "mipp"]
 	path = mipp
 	url = git@github.com:GerHobbelt/MIPP.git
+[submodule "clippson"]
+	path = clippson
+	url = git@github.com:GerHobbelt/clippson.git
+[submodule "djvulibre"]
+	path = djvulibre
+	url = git@github.com:GerHobbelt/djvulibre.git
+[submodule "zstd"]
+	path = zstd
+	url = git@github.com:GerHobbelt/zstd.git
+[submodule "libwebsocketpp"]
+	path = libwebsocketpp
+	url = git@github.com:GerHobbelt/websocketpp.git
+[submodule "websocket-sharp"]
+	path = websocket-sharp
+	url = git@github.com:GerHobbelt/websocket-sharp.git
+[submodule "oatpp"]
+	path = oatpp
+	url = git@github.com:GerHobbelt/oatpp.git
+[submodule "crow"]
+	path = crow
+	url = git@github.com:GerHobbelt/crow.git
