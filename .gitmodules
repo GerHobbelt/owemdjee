@@ -292,3 +292,12 @@
 [submodule "libwebsockets"]
 	path = libwebsockets
 	url = git@github.com:GerHobbelt/libwebsockets.git
+[submodule "mcmc"]
+	path = mcmc
+	url = git@github.com:GerHobbelt/mcmc.git
+[submodule "mmc"]
+	path = mmc
+	url = git@github.com:GerHobbelt/mmc.git
+[submodule "mipp"]
+	path = mipp
+	url = git@github.com:GerHobbelt/MIPP.git
