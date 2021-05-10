@@ -96,12 +96,17 @@ The other JavaScript engines considered are of varying size, performance and com
     - [FastBinaryEncoding](./FastBinaryEncoding)
     - [flatbuffers](./flatbuffers)
     - [flatcc](./flatcc)
+    - [libzmq](./libzmq)
+    - [libwebsocketpp](../libwebsocketpp)
+    - [libwebsockets](../libwebsockets)
+    - [websocket-sharp](../websocket-sharp)
+    - [crow](../crow) -- IPC / server framework
+    - [oatpp](../oatpp) -- IPC / server framework
+- IPC: JSON for protocol design:
     - [json](./json)
     - [json-jansson](./json-jansson)
-    - [libzmq](./libzmq)
     - [rapidJSON](./rapidJSON)
     - [yyjson](./yyjson)
-    - [lz4](./lz4)
 - content hashing
     - [BLAKE3](./BLAKE3)
     - [cryptopp](./cryptopp)
@@ -110,9 +115,15 @@ The other JavaScript engines considered are of varying size, performance and com
     - [h5cpp-HDF5](./h5cpp-HDF5)
     - [HDF5](./HDF5)
     - [HighFive-HDF5](./HighFive-HDF5)
-    + [lz4](./lz4)
-    + [lzss](./lzss)
-    + see also [lzbench](https://github.com/inikep/lzbench)
+- data storage / caching / IPC: loss-less data compression
+    - [lz4](./lz4)
+    - [lzss](./lzss)
+    - [lzsse](./lzsse)
+    - [lizard](../lizard)
+    - [xz-utils](../xz-utils)
+    - [fast-lzma2](../fast-lzma2)
+    - [zstd](../zstd)
+    - see also [lzbench](https://github.com/inikep/lzbench)
 - OCR: hOCR output format, other output format? (dedicated binary?)
     - [hocr-fileformat](./hocr-fileformat)
     - [hocr-spec](./hocr-spec)
@@ -144,8 +155,8 @@ The other JavaScript engines considered are of varying size, performance and com
     - [hunspell](./hunspell)
     - [hunspell-hyphen](./hunspell-hyphen)
 - OCR page image preprocessing, \[scanner] tooling: getting the pages to the OCR engine
-    + [lcms2](../lcms2)
-    + [leptonica](../leptonica)
+    - [lcms2](../lcms2)
+    - [leptonica](../leptonica)
     - [ImageMagick](./ImageMagick)
     - [jasper](./jasper) -- JasPer Image Processing/Coding Tool Kit
     - [libvips](./libvips)
@@ -153,18 +164,31 @@ The other JavaScript engines considered are of varying size, performance and com
     - [opencv](./opencv)
     - [opencv_contrib](./opencv_contrib)
 - image export, image / \[scanned] document import
-    + [jbig2dec](../jbig2dec)
-    + [jpeginfo](../jpeginfo)
-    + [libjpeg](../libjpeg)
-    + [libpng](../libpng)
-    + [libtiff](../libtiff)
-    + [openjpeg](../openjpeg)
+    - [jbig2dec](../jbig2dec)
+    - [jpeginfo](../jpeginfo)
+    - [libjpeg](../libjpeg)
+    - [libpng](../libpng)
+    - [libtiff](../libtiff)
+    - [openjpeg](../openjpeg)
     - [OpenImageIO](./OpenImageIO)
     - [jpeg-xl](./jpeg-xl)
     - [libgif](./libgif)
     - [libjpeg-turbo](./libjpeg-turbo)
     - [libwebp](./libwebp)
     - [GDCM-Grassroots-DICOM](./GDCM-Grassroots-DICOM)
+- Monte Carlo simulations, LDA, keyword inference/extraction, etc.
+    + [lda](../lda) -- variational EM for latent Dirichlet allocation (LDA), David Blei et al
+    + [lda-Familia](../lda-Familia)
+    + [lda-bigartm](../lda-bigartm)
+    + [LightLDA](../LightLDA)
+    + [mcmc](../mcmc)
+    + [mipp](../mipp)
+    + [mmc](../mmc)
+    + other *topic modeling* code on the Net:
+        * [Hierarchical Dirichlet Process (with Split-Merge Operations), Chong Wang](https://github.com/renaud/hdp-faster)
+        * [Hierarchical Latent Tree Analysis (HLTA)](https://github.com/kmpoon/hlta)
+        * [Leonard Poon - various works]](https://github.com/kmpoon?tab=repositories)
+        * [David Blei's list of topic modeling OSS software](http://www.cs.columbia.edu/~blei/topicmodeling_software.html) + [github repo list](https://github.com/blei-lab)
 - database "backend storage"
     - [sqlite](./sqlite)
     - [sqlite-amalgamation](./sqlite-amalgamation)
@@ -178,9 +202,19 @@ The other JavaScript engines considered are of varying size, performance and com
     - [libxml2](./libxml2)
 - web scraping (document eextraction, cleaning, metadata extraction, BibTeX, ...) 
     - see investigation notes in Qiqqa docs
-    + [curl](../curl)
-    + [extract](../extract)
-    + [gumbo-parser](../gumbo-parser)
+    - [curl](../curl)
+    - [extract](../extract)
+    - [gumbo-parser](../gumbo-parser)
+    - [gumbo-libxml](../gumbo-libxml)
+    - [http-parser](./http-parser)
+    - [picohttpparser](./picohttpparser)
+    - [xml-pugixml](./xml-pugixml)
+    - [libexpat](./libexpat)
+    - [libxml2](./libxml2) -- [libxml](http://xmlsoft.org/)
+* file format support
+    - [djvulibre](../djvulibre)
+    - [extract](../extract)
+    - [gumbo-parser](../gumbo-parser)
     - [gumbo-libxml](../gumbo-libxml)
     - [http-parser](./http-parser)
     - [picohttpparser](./picohttpparser)
@@ -188,7 +222,7 @@ The other JavaScript engines considered are of varying size, performance and com
     - [libexpat](./libexpat)
     - [libxml2](./libxml2) -- [libxml](http://xmlsoft.org/)
 - scripting *user-tunable tasks* such as OCR preproceessing, metadata extraction, metadata cleaning & other \[post-]processing, ...
-    + [mujs](../mujs)
+    - [mujs](../mujs)
     - [CPython](./CPython)
     - [duktape](./duktape)
     - [duktape-cpp-glue](./duktape-cpp-glue)
@@ -199,20 +233,27 @@ The other JavaScript engines considered are of varying size, performance and com
     - [lua](./lua)
     - [luaJIT](./luaJIT)
     - [QuickJS](./QuickJS)
+        - [txiki](./txiki.js)
     - [XS-moddable](./XS-moddable)
  - multi-processing core technologies
     - [civet-webserver](./civet-webserver)
-    - [clipp](./clipp)
-    - [popt](./popt)
+    - [libwebsocketpp](../libwebsocketpp)
+    - [libwebsockets](../libwebsockets)
+    - [websocket-sharp](../websocket-sharp)
+    - [crow](../crow) -- IPC / server framework
+    - [oatpp](../oatpp) -- IPC / server framework
+    - [clipp](./clipp) -- commandline parser 
+    - [clippson](../clippson) -- commandline parser + JSON data diagnostical dumper
+    - [popt](./popt) -- commandline parser 
     - [fmt](./fmt)
-    - [glob](./glob)
+    - [glob](./glob) -- directory scanner
     - [inih](./inih)
     - [iniparser](./iniparser)
     - [libtuv](./libtuv)
     - [libzmq](./libzmq)
     - [pthread-win32](./pthread-win32)
-    - [upskirt-markdown](./upskirt-markdown)
-        - [svg-charter](./svg-charter)
+    - [upskirt-markdown](./upskirt-markdown) -- MarkDown renderer
+        - [svg-charter](./svg-charter) -- SVG chart renderer
             - [tinyexpr](./tinyexpr)
     - [libarchive](./libarchive)
 - testing & fuzzing
@@ -254,22 +295,28 @@ The other JavaScript engines considered are of varying size, performance and com
 
 - [bebop](./bebop)
 - [BLAKE3](./BLAKE3)
-- [c-blosc](./c-blosc)
+- [boost](../boost) -- required by several other libraries in this collection
+- [c-blosc2](./c-blosc2)
 - [civet-webserver](./civet-webserver)
 - [clipp](./clipp)
+- [clippson](../clippson)
 - [CPython](./CPython)
+- [crow](../crow)
 - [cryptopp](./cryptopp)
+- [djvulibre](../djvulibre)
 - [dlib](./dlib)
 - [dtl-diff-template-library](./dtl-diff-template-library)
-- [duktape](./duktape)
 - [duktape-cpp-glue](./duktape-cpp-glue)
+- [duktape](./duktape)
 - [EasyLogger](./EasyLogger)
 - [ECMA262](./ECMA262)
 - [escargot](./escargot)
+- [fast-lzma2](../fast-lzma2)
 - [FastBinaryEncoding](./FastBinaryEncoding)
 - [flatbuffers](./flatbuffers)
 - [flatcc](./flatcc)
 - [fmt](./fmt)
+- [GDCM-Grassroots-DICOM](./GDCM-Grassroots-DICOM)
 - [glob](./glob)
 - [google-diff-match-patch](./google-diff-match-patch)
 - [googletest](./googletest)
@@ -282,8 +329,8 @@ The other JavaScript engines considered are of varying size, performance and com
 - [hocr-spec](./hocr-spec)
 - [hocr-tools](./hocr-tools)
 - [http-parser](./http-parser)
-- [hunspell](./hunspell)
 - [hunspell-hyphen](./hunspell-hyphen)
+- [hunspell](./hunspell)
 - [hyperscan](./hyperscan)
 - [ImageMagick](./ImageMagick)
 - [inih](./inih)
@@ -291,8 +338,11 @@ The other JavaScript engines considered are of varying size, performance and com
 - [jasper](./jasper)
 - [jerryscript](./jerryscript)
 - [jpeg-xl](./jpeg-xl)
-- [json](./json)
 - [json-jansson](./json-jansson)
+- [json](./json)
+- [lda-bigartm](../lda-bigartm)
+- [lda-Familia](../lda-Familia)
+- [lda](../lda) -- variational EM for latent Dirichlet allocation (LDA), David Blei et al
 - [libarchive](./libarchive)
 - [libexpat](./libexpat)
 - [libgif](./libgif)
@@ -301,15 +351,26 @@ The other JavaScript engines considered are of varying size, performance and com
 - [libtuv](./libtuv)
 - [libvips](./libvips)
 - [libwebp](./libwebp)
+- [libwebsocketpp](../libwebsocketpp)
+- [libwebsockets](../libwebsockets)
+- [libxml2](./libxml2)
 - [libzmq](./libzmq)
+- [LightLDA](../LightLDA)
+- [lizard](../lizard)
 - [log4cplus](./log4cplus)
 - [lua](./lua)
 - [luaJIT](./luaJIT)
 - [lz4](./lz4)
+- [lzss](./lzss)
+- [lzsse](./lzsse)
 - [math-atlas](./math-atlas)
+- [mcmc](../mcmc)
+- [mipp](../mipp)
 - [MITIE-nlp](./MITIE-nlp)
 - [mlpack](./mlpack)
+- [mmc](../mmc)
 - [node-jerryscript](./node-jerryscript)
+- [oatpp](../oatpp)
 - [olena](./olena)
 - [opencv](./opencv)
 - [opencv_contrib](./opencv_contrib)
@@ -320,24 +381,30 @@ The other JavaScript engines considered are of varying size, performance and com
 - [QuickJS](./QuickJS)
 - [rapidJSON](./rapidJSON)
 - [re2](./re2)
-- [sqlite](./sqlite)
 - [sqlite-amalgamation](./sqlite-amalgamation)
+- [sqlite](./sqlite)
+- [svg-charter](./svg-charter)
 - [thunderSVM](./thunderSVM)
+- [tinyexpr](./tinyexpr)
 - [tre](./tre)
+- [txiki](./txiki.js)
 - [unicode-cldr](./unicode-cldr)
 - [unicode-icu](./unicode-icu)
 - [upskirt-markdown](./upskirt-markdown)
+- [websocket-sharp](../websocket-sharp)
 - [xml-pugixml](./xml-pugixml)
 - [XMP-Toolkit-SDK](./XMP-Toolkit-SDK)
 - [XS-moddable](./XS-moddable)
 - [xsimd](./xsimd)
-- [xtensor](./xtensor)
 - [xtensor-blas](./xtensor-blas)
 - [xtensor-io](./xtensor-io)
+- [xtensor](./xtensor)
 - [xtl](./xtl)
+- [xz-utils](../xz-utils)
 - [yara-pattern-matcher](./yara-pattern-matcher)
 - [yyjson](./yyjson)
 - [zlog](./zlog)
+- [zstd](../zstd)
 
 
 ### Libraries not available in this collection but already part of `mupdf`
@@ -369,3 +436,23 @@ The other JavaScript engines considered are of varying size, performance and com
 + [tesseract_langdata](../tesseract_langdata)
 + [tesstrain](../tesstrain)
 + [zlib](../zlib)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

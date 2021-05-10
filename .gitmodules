@@ -322,3 +322,15 @@
 [submodule "crow"]
 	path = crow
 	url = git@github.com:GerHobbelt/crow.git
+[submodule "lda"]
+	path = lda
+	url = git@github.com:GerHobbelt/lda-c.git
+[submodule "lda-Familia"]
+	path = lda-Familia
+	url = git@github.com:GerHobbelt/Familia.git
+[submodule "lda-bigartm"]
+	path = lda-bigartm
+	url = git@github.com:GerHobbelt/bigartm.git
+[submodule "LightLDA"]
+	path = LightLDA
+	url = git@github.com:GerHobbelt/LightLDA.git
