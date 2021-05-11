@@ -100,7 +100,11 @@ The other JavaScript engines considered are of varying size, performance and com
     - [libwebsocketpp](../libwebsocketpp)
     - [libwebsockets](../libwebsockets)
     - [websocket-sharp](../websocket-sharp)
-    - [crow](../crow) -- IPC / server framework
+    - [crow](../crow) -- IPC / server framework 
+    
+      **STATUS**: regrettably it currently only compiles 98% with some bruhaha about incomplete types -- bloody C++ template crap
+
+      Interface looks nicer than `oatpp`, but given the state of affairs it's either `oatpp` or `civetweb` for us...   :-(
     - [oatpp](../oatpp) -- IPC / server framework
 - IPC: JSON for protocol design:
     - [json](./json)
@@ -192,6 +196,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - database "backend storage"
     - [sqlite](./sqlite)
     - [sqlite-amalgamation](./sqlite-amalgamation)
+    - [lib_nas_lockfile](../lib_nas_lockfile) -- lockfile management on NAS and other disparate network filesystem storage. To be combined with SQLite to create a proper Qiqqa Sync operation.
 - metadata & text (OCR et al): language detect, suggesting fixes, ...    
     - [unicode-cldr](./unicode-cldr)
     - [unicode-icu](./unicode-icu)
@@ -221,6 +226,8 @@ The other JavaScript engines considered are of varying size, performance and com
     - [xml-pugixml](./xml-pugixml)
     - [libexpat](./libexpat)
     - [libxml2](./libxml2) -- [libxml](http://xmlsoft.org/)
+    - [mht-rip](./mht-rip) -- as I have several HTML pages stored in this MHTML format. See also CHM: `CHM-lib`
+    - [CHM lib](./CHM-lib) -- as I have several HTML pages stored in this format. See also MHTML: `mht-rip`
 - scripting *user-tunable tasks* such as OCR preproceessing, metadata extraction, metadata cleaning & other \[post-]processing, ...
     - [mujs](../mujs)
     - [CPython](./CPython)
@@ -297,6 +304,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [BLAKE3](./BLAKE3)
 - [boost](../boost) -- required by several other libraries in this collection
 - [c-blosc2](./c-blosc2)
+- [CHM lib](./CHM-lib) -- as I have several HTML pages stored in this format. See also MHTML: `mht-rip`
 - [civet-webserver](./civet-webserver)
 - [clipp](./clipp)
 - [clippson](../clippson)
@@ -343,6 +351,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [lda-bigartm](../lda-bigartm)
 - [lda-Familia](../lda-Familia)
 - [lda](../lda) -- variational EM for latent Dirichlet allocation (LDA), David Blei et al
+- [lib_nas_lockfile](../lib_nas_lockfile) -- lockfile management on NAS and other disparate network filesystem storage. To be combined with SQLite to create a proper Qiqqa Sync operation.
 - [libarchive](./libarchive)
 - [libexpat](./libexpat)
 - [libgif](./libgif)
@@ -365,6 +374,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [lzsse](./lzsse)
 - [math-atlas](./math-atlas)
 - [mcmc](../mcmc)
+- [mht-rip](./mht-rip) -- as I have several HTML pages stored in this MHTML format. See also CHM: `CHM-lib`
 - [mipp](../mipp)
 - [MITIE-nlp](./MITIE-nlp)
 - [mlpack](./mlpack)

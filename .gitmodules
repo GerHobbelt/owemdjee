@@ -334,3 +334,12 @@
 [submodule "LightLDA"]
 	path = LightLDA
 	url = git@github.com:GerHobbelt/LightLDA.git
+[submodule "CHM-lib"]
+	path = CHM-lib
+	url = git@github.com:GerHobbelt/CHMLib.git
+[submodule "lib_nas_lockfile"]
+	path = lib_nas_lockfile
+	url = git@github.com:GerHobbelt/lib_nas_lockfile.git
+[submodule "mht-rip"]
+	path = mht-rip
+	url = git@github.com:GerHobbelt/mht-rip.git
