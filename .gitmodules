@@ -343,3 +343,18 @@
 [submodule "mht-rip"]
 	path = mht-rip
 	url = git@github.com:GerHobbelt/mht-rip.git
+[submodule "snappy"]
+	path = snappy
+	url = git@github.com:GerHobbelt/snappy.git
+[submodule "pithy"]
+	path = pithy
+	url = git@github.com:GerHobbelt/pithy.git
+[submodule "lzo"]
+	path = lzo
+	url = git@github.com:GerHobbelt/lzo.git
+[submodule "squash"]
+	path = squash
+	url = git@github.com:GerHobbelt/squash.git
+[submodule "shoco"]
+	path = shoco
+	url = git@github.com:GerHobbelt/shoco.git
