@@ -97,15 +97,15 @@ The other JavaScript engines considered are of varying size, performance and com
     - [flatbuffers](./flatbuffers)
     - [flatcc](./flatcc)
     - [libzmq](./libzmq)
-    - [libwebsocketpp](../libwebsocketpp)
-    - [libwebsockets](../libwebsockets)
-    - [websocket-sharp](../websocket-sharp)
-    - [crow](../crow) -- IPC / server framework 
+    - [libwebsocketpp](./libwebsocketpp)
+    - [libwebsockets](./libwebsockets)
+    - [websocket-sharp](./websocket-sharp)
+    - [crow](./crow) -- IPC / server framework 
     
       **STATUS**: regrettably it currently only compiles 98% with some bruhaha about incomplete types -- bloody C++ template crap
 
       Interface looks nicer than `oatpp`, but given the state of affairs it's either `oatpp` or `civetweb` for us...   :-(
-    - [oatpp](../oatpp) -- IPC / server framework
+    - [oatpp](./oatpp) -- IPC / server framework
 - IPC: JSON for protocol design:
     - [json](./json)
     - [json-jansson](./json-jansson)
@@ -121,12 +121,12 @@ The other JavaScript engines considered are of varying size, performance and com
     - [HighFive-HDF5](./HighFive-HDF5)
 - data storage / caching / IPC: loss-less data compression
     - [lz4](./lz4)
-    - [lzss](./lzss)
     - [lzsse](./lzsse)
-    - [lizard](../lizard)
-    - [xz-utils](../xz-utils)
-    - [fast-lzma2](../fast-lzma2)
-    - [zstd](../zstd)
+    - [lizard](./lizard)
+    - [xz-utils](./xz-utils)
+    - [fast-lzma2](./fast-lzma2)
+    - [zstd](./zstd)
+    - [squash](./squash)
     - see also [lzbench](https://github.com/inikep/lzbench)
 - OCR: hOCR output format, other output format? (dedicated binary?)
     - [hocr-fileformat](./hocr-fileformat)
@@ -181,13 +181,13 @@ The other JavaScript engines considered are of varying size, performance and com
     - [libwebp](./libwebp)
     - [GDCM-Grassroots-DICOM](./GDCM-Grassroots-DICOM)
 - Monte Carlo simulations, LDA, keyword inference/extraction, etc.
-    + [lda](../lda) -- variational EM for latent Dirichlet allocation (LDA), David Blei et al
-    + [lda-Familia](../lda-Familia)
-    + [lda-bigartm](../lda-bigartm)
-    + [LightLDA](../LightLDA)
-    + [mcmc](../mcmc)
-    + [mipp](../mipp)
-    + [mmc](../mmc)
+    + [lda](./lda) -- variational EM for latent Dirichlet allocation (LDA), David Blei et al
+    + [lda-Familia](./lda-Familia)
+    + [lda-bigartm](./lda-bigartm)
+    + [LightLDA](./LightLDA)
+    + [mcmc](./mcmc)
+    + [mipp](./mipp)
+    + [mmc](./mmc)
     + other *topic modeling* code on the Net:
         * [Hierarchical Dirichlet Process (with Split-Merge Operations), Chong Wang](https://github.com/renaud/hdp-faster)
         * [Hierarchical Latent Tree Analysis (HLTA)](https://github.com/kmpoon/hlta)
@@ -196,7 +196,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - database "backend storage"
     - [sqlite](./sqlite)
     - [sqlite-amalgamation](./sqlite-amalgamation)
-    - [lib_nas_lockfile](../lib_nas_lockfile) -- lockfile management on NAS and other disparate network filesystem storage. To be combined with SQLite to create a proper Qiqqa Sync operation.
+    - [lib_nas_lockfile](./lib_nas_lockfile) -- lockfile management on NAS and other disparate network filesystem storage. To be combined with SQLite to create a proper Qiqqa Sync operation.
 - metadata & text (OCR et al): language detect, suggesting fixes, ...    
     - [unicode-cldr](./unicode-cldr)
     - [unicode-icu](./unicode-icu)
@@ -210,17 +210,17 @@ The other JavaScript engines considered are of varying size, performance and com
     - [curl](../curl)
     - [extract](../extract)
     - [gumbo-parser](../gumbo-parser)
-    - [gumbo-libxml](../gumbo-libxml)
+    - [gumbo-libxml](./gumbo-libxml)
     - [http-parser](./http-parser)
     - [picohttpparser](./picohttpparser)
     - [xml-pugixml](./xml-pugixml)
     - [libexpat](./libexpat)
     - [libxml2](./libxml2) -- [libxml](http://xmlsoft.org/)
 * file format support
-    - [djvulibre](../djvulibre)
+    - [djvulibre](./djvulibre)
     - [extract](../extract)
     - [gumbo-parser](../gumbo-parser)
-    - [gumbo-libxml](../gumbo-libxml)
+    - [gumbo-libxml](./gumbo-libxml)
     - [http-parser](./http-parser)
     - [picohttpparser](./picohttpparser)
     - [xml-pugixml](./xml-pugixml)
@@ -244,13 +244,13 @@ The other JavaScript engines considered are of varying size, performance and com
     - [XS-moddable](./XS-moddable)
  - multi-processing core technologies
     - [civet-webserver](./civet-webserver)
-    - [libwebsocketpp](../libwebsocketpp)
-    - [libwebsockets](../libwebsockets)
-    - [websocket-sharp](../websocket-sharp)
-    - [crow](../crow) -- IPC / server framework
-    - [oatpp](../oatpp) -- IPC / server framework
+    - [libwebsocketpp](./libwebsocketpp)
+    - [libwebsockets](./libwebsockets)
+    - [websocket-sharp](./websocket-sharp)
+    - [crow](./crow) -- IPC / server framework
+    - [oatpp](./oatpp) -- IPC / server framework
     - [clipp](./clipp) -- commandline parser 
-    - [clippson](../clippson) -- commandline parser + JSON data diagnostical dumper
+    - [clippson](./clippson) -- commandline parser + JSON data diagnostical dumper
     - [popt](./popt) -- commandline parser 
     - [fmt](./fmt)
     - [glob](./glob) -- directory scanner
@@ -302,16 +302,16 @@ The other JavaScript engines considered are of varying size, performance and com
 
 - [bebop](./bebop)
 - [BLAKE3](./BLAKE3)
-- [boost](../boost) -- required by several other libraries in this collection
+- [boost](./boost) -- required by several other libraries in this collection
 - [c-blosc2](./c-blosc2)
 - [CHM lib](./CHM-lib) -- as I have several HTML pages stored in this format. See also MHTML: `mht-rip`
 - [civet-webserver](./civet-webserver)
 - [clipp](./clipp)
-- [clippson](../clippson)
+- [clippson](./clippson)
 - [CPython](./CPython)
-- [crow](../crow)
+- [crow](./crow)
 - [cryptopp](./cryptopp)
-- [djvulibre](../djvulibre)
+- [djvulibre](./djvulibre)
 - [dlib](./dlib)
 - [dtl-diff-template-library](./dtl-diff-template-library)
 - [duktape-cpp-glue](./duktape-cpp-glue)
@@ -319,7 +319,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [EasyLogger](./EasyLogger)
 - [ECMA262](./ECMA262)
 - [escargot](./escargot)
-- [fast-lzma2](../fast-lzma2)
+- [fast-lzma2](./fast-lzma2)
 - [FastBinaryEncoding](./FastBinaryEncoding)
 - [flatbuffers](./flatbuffers)
 - [flatcc](./flatcc)
@@ -348,10 +348,10 @@ The other JavaScript engines considered are of varying size, performance and com
 - [jpeg-xl](./jpeg-xl)
 - [json-jansson](./json-jansson)
 - [json](./json)
-- [lda-bigartm](../lda-bigartm)
-- [lda-Familia](../lda-Familia)
-- [lda](../lda) -- variational EM for latent Dirichlet allocation (LDA), David Blei et al
-- [lib_nas_lockfile](../lib_nas_lockfile) -- lockfile management on NAS and other disparate network filesystem storage. To be combined with SQLite to create a proper Qiqqa Sync operation.
+- [lda-bigartm](./lda-bigartm)
+- [lda-Familia](./lda-Familia)
+- [lda](./lda) -- variational EM for latent Dirichlet allocation (LDA), David Blei et al
+- [lib_nas_lockfile](./lib_nas_lockfile) -- lockfile management on NAS and other disparate network filesystem storage. To be combined with SQLite to create a proper Qiqqa Sync operation.
 - [libarchive](./libarchive)
 - [libexpat](./libexpat)
 - [libgif](./libgif)
@@ -360,27 +360,26 @@ The other JavaScript engines considered are of varying size, performance and com
 - [libtuv](./libtuv)
 - [libvips](./libvips)
 - [libwebp](./libwebp)
-- [libwebsocketpp](../libwebsocketpp)
-- [libwebsockets](../libwebsockets)
+- [libwebsocketpp](./libwebsocketpp)
+- [libwebsockets](./libwebsockets)
 - [libxml2](./libxml2)
 - [libzmq](./libzmq)
-- [LightLDA](../LightLDA)
-- [lizard](../lizard)
+- [LightLDA](./LightLDA)
+- [lizard](./lizard)
 - [log4cplus](./log4cplus)
 - [lua](./lua)
 - [luaJIT](./luaJIT)
 - [lz4](./lz4)
-- [lzss](./lzss)
 - [lzsse](./lzsse)
 - [math-atlas](./math-atlas)
-- [mcmc](../mcmc)
+- [mcmc](./mcmc)
 - [mht-rip](./mht-rip) -- as I have several HTML pages stored in this MHTML format. See also CHM: `CHM-lib`
-- [mipp](../mipp)
+- [mipp](./mipp)
 - [MITIE-nlp](./MITIE-nlp)
 - [mlpack](./mlpack)
-- [mmc](../mmc)
+- [mmc](./mmc)
 - [node-jerryscript](./node-jerryscript)
-- [oatpp](../oatpp)
+- [oatpp](./oatpp)
 - [olena](./olena)
 - [opencv](./opencv)
 - [opencv_contrib](./opencv_contrib)
@@ -391,6 +390,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [QuickJS](./QuickJS)
 - [rapidJSON](./rapidJSON)
 - [re2](./re2)
+- [squash](./squash)
 - [sqlite-amalgamation](./sqlite-amalgamation)
 - [sqlite](./sqlite)
 - [svg-charter](./svg-charter)
@@ -401,7 +401,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [unicode-cldr](./unicode-cldr)
 - [unicode-icu](./unicode-icu)
 - [upskirt-markdown](./upskirt-markdown)
-- [websocket-sharp](../websocket-sharp)
+- [websocket-sharp](./websocket-sharp)
 - [xml-pugixml](./xml-pugixml)
 - [XMP-Toolkit-SDK](./XMP-Toolkit-SDK)
 - [XS-moddable](./XS-moddable)
@@ -410,11 +410,11 @@ The other JavaScript engines considered are of varying size, performance and com
 - [xtensor-io](./xtensor-io)
 - [xtensor](./xtensor)
 - [xtl](./xtl)
-- [xz-utils](../xz-utils)
+- [xz-utils](./xz-utils)
 - [yara-pattern-matcher](./yara-pattern-matcher)
 - [yyjson](./yyjson)
 - [zlog](./zlog)
-- [zstd](../zstd)
+- [zstd](./zstd)
 
 
 ### Libraries not available in this collection but already part of `mupdf`
