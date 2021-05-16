@@ -101,6 +101,7 @@ The other JavaScript engines considered are of varying size, performance and com
     - [libwebsocketpp](./libwebsocketpp)
     - [libwebsockets](./libwebsockets)
     - [websocket-sharp](./websocket-sharp)
+    - [OpenSSL](./openssl) -- also used by CURL et al, incidentally.
     - [crow](./crow) -- IPC / server framework 
     
       **STATUS**: regrettably it currently only compiles 98% with some bruhaha about incomplete types -- bloody C++ template crap
@@ -393,6 +394,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [opencv](./opencv)
 - [opencv_contrib](./opencv_contrib)
 - [OpenImageIO](./OpenImageIO)
+- [OpenSSL](./openssl)
 - [picohttpparser](./picohttpparser)
 - [pithy](./pithy)
 - [popt](./popt)

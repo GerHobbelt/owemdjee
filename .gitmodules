@@ -364,3 +364,6 @@
 [submodule "lapack"]
 	path = lapack
 	url = git@github.com:GerHobbelt/lapack.git
+[submodule "openssl"]
+	path = openssl
+	url = git@github.com:GerHobbelt/openssl.git
