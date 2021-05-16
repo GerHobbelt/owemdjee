@@ -97,6 +97,7 @@ The other JavaScript engines considered are of varying size, performance and com
     - [flatbuffers](./flatbuffers)
     - [flatcc](./flatcc)
     - [libzmq](./libzmq)
+    - [libsmile](./libsmile) -- ["Smile" format](https://en.wikipedia.org/wiki/Smile_%28data_interchange_format%29), i.e. a compact binary JSON format
     - [libwebsocketpp](./libwebsocketpp)
     - [libwebsockets](./libwebsockets)
     - [websocket-sharp](./websocket-sharp)
@@ -111,6 +112,7 @@ The other JavaScript engines considered are of varying size, performance and com
     - [json-jansson](./json-jansson)
     - [rapidJSON](./rapidJSON)
     - [yyjson](./yyjson)
+    - [libsmile](./libsmile) -- ["Smile" format](https://en.wikipedia.org/wiki/Smile_%28data_interchange_format%29), i.e. a compact binary JSON format
 - content hashing
     - [BLAKE3](./BLAKE3)
     - [cryptopp](./cryptopp)
@@ -134,6 +136,7 @@ The other JavaScript engines considered are of varying size, performance and com
     - [hocr-tools](./hocr-tools)
 - pattern recognition: "A.I." for cover pages, image/page *segmentation*, including abstract & summary demarcation, "figure" and "table" detection & extraction from documents, ...
     - [dlib](./dlib) -- machine learning algorithms
+        - [lapack](./lapack) -- [CBLAS](http://www.netlib.org/blas/) + [LAPACK](http://www.netlib.org/lapack/index.html) optimized linear algebra libs
     - [libsvm](./libsvm)
     - [thunderSVM](./thunderSVM)
     - [math-atlas](./math-atlas)
@@ -348,6 +351,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [jpeg-xl](./jpeg-xl)
 - [json-jansson](./json-jansson)
 - [json](./json)
+- [lapack](./lapack)
 - [lda-bigartm](./lda-bigartm)
 - [lda-Familia](./lda-Familia)
 - [lda](./lda) -- variational EM for latent Dirichlet allocation (LDA), David Blei et al
@@ -356,6 +360,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [libexpat](./libexpat)
 - [libgif](./libgif)
 - [libjpeg-turbo](./libjpeg-turbo)
+- [libsmile](./libsmile)
 - [libsvm](./libsvm)
 - [libtuv](./libtuv)
 - [libvips](./libvips)

@@ -358,3 +358,9 @@
 [submodule "shoco"]
 	path = shoco
 	url = git@github.com:GerHobbelt/shoco.git
+[submodule "libsmile"]
+	path = libsmile
+	url = git@github.com:GerHobbelt/libsmile.git
+[submodule "lapack"]
+	path = lapack
+	url = git@github.com:GerHobbelt/lapack.git
