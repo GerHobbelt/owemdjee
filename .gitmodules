@@ -367,3 +367,6 @@
 [submodule "openssl"]
 	path = openssl
 	url = git@github.com:GerHobbelt/openssl.git
+[submodule "OpenEXR"]
+	path = OpenEXR
+	url = git@github.com:GerHobbelt/openexr.git
