@@ -367,3 +367,15 @@
 [submodule "OpenEXR"]
 	path = OpenEXR
 	url = git@github.com:GerHobbelt/openexr.git
+[submodule "Imath"]
+	path = Imath
+	url = git@github.com:GerHobbelt/Imath.git
+[submodule "oneTBB"]
+	path = oneTBB
+	url = git@github.com:GerHobbelt/oneTBB.git
+[submodule "gmime"]
+	path = gmime
+	url = git@github.com:GerHobbelt/gmime.git
+[submodule "libidn2"]
+	path = libidn2
+	url = git@github.com:GerHobbelt/libidn2.git

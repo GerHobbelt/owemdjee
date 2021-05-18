@@ -181,8 +181,9 @@ The other JavaScript engines considered are of varying size, performance and com
     - [libpng](../libpng)
     - [libtiff](../libtiff)
     - [openjpeg](../openjpeg)
+    - [OpenEXR](./OpenEXR) -- lossless format for multi-layered images. Professional use. (I've used it before; nice file format.)
     - [OpenImageIO](./OpenImageIO)
-    - [jpeg-xl](./jpeg-xl)
+    - [jpeg-xl](https://gitlab.com/wg1/jpeg-xl) - \[DROPPED: nobody is using it yet, while I am more interested in high perf **lossless** formats for internal communications and storage]
     - [libgif](./libgif)
     - [libjpeg-turbo](./libjpeg-turbo)
     - [libwebp](./libwebp)
@@ -226,6 +227,7 @@ The other JavaScript engines considered are of varying size, performance and com
 * file format support
     - [djvulibre](./djvulibre)
     - [extract](../extract)
+    - [gmime](./gmime) -- multipart MIME library; serves as a fundameental building block for full MHTML file format I/O support
     - [gumbo-parser](../gumbo-parser)
     - [gumbo-libxml](./gumbo-libxml)
     - [http-parser](./http-parser)
@@ -261,10 +263,13 @@ The other JavaScript engines considered are of varying size, performance and com
     - [popt](./popt) -- commandline parser 
     - [fmt](./fmt)
     - [glob](./glob) -- directory scanner
+    - [Imath](./Imath) -- float16 support lib for OpenEXR format
     - [inih](./inih)
     - [iniparser](./iniparser)
+    - [libidn2](./libidn2) -- International Domain Name decoder/encoder library; used with gmime --> MHTML format
     - [libtuv](./libtuv)
     - [libzmq](./libzmq)
+    - [oneTBB](./oneTBB) -- Intel's Thread Building Blocks library: used with OpenImageIO, ...
     - [pthread-win32](./pthread-win32)
     - [upskirt-markdown](./upskirt-markdown) -- MarkDown renderer
         - [svg-charter](./svg-charter) -- SVG chart renderer
@@ -333,6 +338,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [fmt](./fmt)
 - [GDCM-Grassroots-DICOM](./GDCM-Grassroots-DICOM)
 - [glob](./glob)
+- [gmime](./gmime)
 - [google-diff-match-patch](./google-diff-match-patch)
 - [googletest](./googletest)
 - [GraphicsMagick](./GraphicsMagick)
@@ -348,11 +354,12 @@ The other JavaScript engines considered are of varying size, performance and com
 - [hunspell](./hunspell)
 - [hyperscan](./hyperscan)
 - [ImageMagick](./ImageMagick)
+- [Imath](./Imath)
 - [inih](./inih)
 - [iniparser](./iniparser)
 - [jasper](./jasper)
 - [jerryscript](./jerryscript)
-- [jpeg-xl](./jpeg-xl)
+- [jpeg-xl](https://gitlab.com/wg1/jpeg-xl) - \[DROPPED: nobody is using it yet, while I am more interested in high perf **lossless** formats for internal communications and storage]
 - [json-jansson](./json-jansson)
 - [json](./json)
 - [lapack](./lapack)
@@ -363,6 +370,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [libarchive](./libarchive)
 - [libexpat](./libexpat)
 - [libgif](./libgif)
+- [libidn2](./libidn2)
 - [libjpeg-turbo](./libjpeg-turbo)
 - [libsmile](./libsmile)
 - [libsvm](./libsvm)
@@ -391,8 +399,10 @@ The other JavaScript engines considered are of varying size, performance and com
 - [node-jerryscript](./node-jerryscript)
 - [oatpp](./oatpp)
 - [olena](./olena)
+- [oneTBB](./oneTBB)
 - [opencv](./opencv)
 - [opencv_contrib](./opencv_contrib)
+- [OpenEXR](./OpenEXR)
 - [OpenImageIO](./OpenImageIO)
 - [OpenSSL](./openssl)
 - [picohttpparser](./picohttpparser)
