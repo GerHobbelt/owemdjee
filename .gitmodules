@@ -373,9 +373,15 @@
 [submodule "oneTBB"]
 	path = oneTBB
 	url = git@github.com:GerHobbelt/oneTBB.git
-[submodule "gmime"]
-	path = gmime
-	url = git@github.com:GerHobbelt/gmime.git
 [submodule "libidn2"]
 	path = libidn2
 	url = git@github.com:GerHobbelt/libidn2.git
+[submodule "mimetic"]
+	path = mimetic
+	url = git@github.com:GerHobbelt/mimetic.git
+[submodule "libzip"]
+	path = libzip
+	url = git@github.com:GerHobbelt/libzip.git
+[submodule "gumbo-query"]
+	path = gumbo-query
+	url = git@github.com:GerHobbelt/gumbo-query.git
