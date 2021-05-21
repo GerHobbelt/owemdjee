@@ -385,3 +385,6 @@
 [submodule "gumbo-query"]
 	path = gumbo-query
 	url = git@github.com:GerHobbelt/gumbo-query.git
+[submodule "pytorch"]
+	path = pytorch
+	url = git@github.com:GerHobbelt/pytorch.git
