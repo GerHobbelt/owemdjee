@@ -188,6 +188,9 @@ The other JavaScript engines considered are of varying size, performance and com
     - [libjpeg-turbo](./libjpeg-turbo)
     - [libwebp](./libwebp)
     - [GDCM-Grassroots-DICOM](./GDCM-Grassroots-DICOM)
+    - [DICOM to NIfTI](https://github.com/rordenlab/dcm2niix) (*not included yet*)
+    - [cgohlke::imagecodecs](https://github.com/cgohlke/imagecodecs) (*not included yet*)
+    - [image formats (visual) quality comparison](https://eclipseo.github.io/image-comparison-web/) (*not included*)
 - Monte Carlo simulations, LDA, keyword inference/extraction, etc.
     + [lda](./lda) -- variational EM for latent Dirichlet allocation (LDA), David Blei et al
     + [lda-Familia](./lda-Familia)
