@@ -391,3 +391,6 @@
 [submodule "pytorch"]
 	path = pytorch
 	url = git@github.com:GerHobbelt/pytorch.git
+[submodule "glog"]
+	path = glog
+	url = git@github.com:GerHobbelt/glog.git
