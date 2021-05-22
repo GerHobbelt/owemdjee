@@ -169,6 +169,9 @@
 [submodule "googletest"]
 	path = googletest
 	url = git@github.com:GerHobbelt/googletest.git
+[submodule "jpeg-xl"]
+	path = jpeg-xl
+	url = git@github.com:GerHobbelt/jpeg-xl.git
 [submodule "libjpeg-turbo"]
 	path = libjpeg-turbo
 	url = git@github.com:GerHobbelt/libjpeg-turbo.git
