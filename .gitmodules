@@ -394,3 +394,6 @@
 [submodule "glog"]
 	path = glog
 	url = git@github.com:GerHobbelt/glog.git
+[submodule "replxx"]
+	path = replxx
+	url = git@github.com:GerHobbelt/replxx.git
