@@ -397,3 +397,6 @@
 [submodule "replxx"]
 	path = replxx
 	url = git@github.com:GerHobbelt/replxx.git
+[submodule "tidy-html5"]
+	path = tidy-html5
+	url = git@github.com:GerHobbelt/tidy-html5.git
