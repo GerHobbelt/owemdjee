@@ -400,3 +400,6 @@
 [submodule "tidy-html5"]
 	path = tidy-html5
 	url = git@github.com:GerHobbelt/tidy-html5.git
+[submodule "pmt-png-tools"]
+	path = pmt-png-tools
+	url = git@github.com:GerHobbelt/pmt.git
