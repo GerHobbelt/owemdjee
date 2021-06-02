@@ -403,3 +403,6 @@
 [submodule "pmt-png-tools"]
 	path = pmt-png-tools
 	url = git@github.com:GerHobbelt/pmt.git
+[submodule "apophenia"]
+	path = apophenia
+	url = git@github.com:GerHobbelt/apophenia.git
