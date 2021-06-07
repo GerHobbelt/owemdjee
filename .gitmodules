@@ -2,18 +2,10 @@
 	path = lua
 	url = git@github.com:GerHobbelt/lua.git
 	ignore = dirty
-[submodule "jerryscript"]
-	path = jerryscript
-	url = git@github.com:GerHobbelt/jerryscript.git
-	ignore = dirty
 [submodule "CPython"]
 	path = CPython
 	url = git@github.com:GerHobbelt/cpython.git
 	ignore = dirty
-[submodule "civet-webserver"]
-	path = civet-webserver
-	url = git@github.com:GerHobbelt/civet-webserver.git
-
 [submodule "xtensor"]
 	path = xtensor
 	url = git@github.com:GerHobbelt/xtensor.git
@@ -113,10 +105,6 @@
 [submodule "iniparser"]
 	path = iniparser
 	url = git@github.com:GerHobbelt/iniparser.git
-	ignore = dirty
-[submodule "popt"]
-	path = popt
-	url = git@github.com:GerHobbelt/POPT.git
 	ignore = dirty
 [submodule "tre"]
 	path = tre
@@ -234,22 +222,6 @@
 	path = libjpeg-turbo
 	url = git@github.com:GerHobbelt/libjpeg-turbo.git
 
-[submodule "duktape-cpp-glue"]
-	path = duktape-cpp-glue
-	url = git@github.com:GerHobbelt/dukglue.git
-	ignore = dirty
-[submodule "duktape"]
-	path = duktape
-	url = git@github.com:GerHobbelt/duktape.git
-	ignore = dirty
-[submodule "escargot"]
-	path = escargot
-	url = git@github.com:GerHobbelt/escargot.git
-	ignore = dirty
-[submodule "node-jerryscript"]
-	path = node-jerryscript
-	url = git@github.com:GerHobbelt/node-jerryscript.git
-	ignore = dirty
 [submodule "XMP-Toolkit-SDK"]
 	path = XMP-Toolkit-SDK
 	url = git@github.com:GerHobbelt/XMP-Toolkit-SDK.git
@@ -274,10 +246,6 @@
 	path = sqlite-amalgamation
 	url = git@github.com:GerHobbelt/sqlite-amalgamation.git
 
-[submodule "XS-moddable"]
-	path = XS-moddable
-	url = git@github.com:GerHobbelt/moddable.git
-	ignore = dirty
 [submodule "QuickJS"]
 	path = QuickJS
 	url = git@github.com:GerHobbelt/quickjs.git

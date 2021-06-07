@@ -87,6 +87,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [QuickJS](https://github.com/bellard/quickjs): ES2020, DevTools or [VS Code debugging](https://github.com/koush/vscode-quickjs-debug) seems to be available. Also comes with an interesting runtime: [txiki](https://github.com/saghul/txiki.js), which we still need to take a good look at.
 - [Google's V8](https://v8.dev/)<sup>[here](https://github.com/v8/v8) [too](https://chromium.googlesource.com/v8/v8/+/84450a2239672109bcf537d6740b8babda521567)</sup>, as available in NodeJS, is deemed too complex for integration: when we go there, we could spend the same amount of effort on CPython integration -- though there again is the ever-present "how to debug this visually?!" question...)
 
+**UPDATE 2021/June**: jerryscript, duktape, XS/moddable, escargot: these have been dropped as we picked QuickJS. After somee initial hassle with that codebase, we picked a different branch to test, which was cleaner and compiled out of the box (CMake > MSVC), which is always a good omen for a codebase when you have cross-platform portability in mind.
 
 
 ### Libraries we're looking at for this *intent*:
@@ -103,10 +104,8 @@ The other JavaScript engines considered are of varying size, performance and com
     - [websocket-sharp](./websocket-sharp)
     - [OpenSSL](./openssl) -- also used by CURL et al, incidentally.
     - [crow](./crow) -- IPC / server framework 
-    
-      **STATUS**: regrettably it currently only compiles 98% with some bruhaha about incomplete types -- bloody C++ template crap
-
-      Interface looks nicer than `oatpp`, but given the state of affairs it's either `oatpp` or `civetweb` for us...   :-(
+     
+      Interface looks nicer than `oatpp`...
     - [oatpp](./oatpp) -- IPC / server framework
 - IPC: JSON for protocol design:
     - [json](./json)
@@ -133,12 +132,14 @@ The other JavaScript engines considered are of varying size, performance and com
     - [fast-lzma2](./fast-lzma2)
     - [zstd](./zstd)
     - [squash](./squash)
+    - [libzip](./libzip)
     - see also [lzbench](https://github.com/inikep/lzbench)
 - OCR: hOCR output format, other output format? (dedicated binary?)
     - [hocr-fileformat](./hocr-fileformat)
     - [hocr-spec](./hocr-spec)
     - [hocr-tools](./hocr-tools)
 - pattern recognition: "A.I." for cover pages, image/page *segmentation*, including abstract & summary demarcation, "figure" and "table" detection & extraction from documents, ...
+    - [apophenia](./apophenia) -- statistics
     - [dlib](./dlib) -- machine learning algorithms
         - [lapack](./lapack) -- [CBLAS](http://www.netlib.org/blas/) + [LAPACK](http://www.netlib.org/lapack/index.html) optimized linear algebra libs
     - [libsvm](./libsvm)
@@ -146,6 +147,7 @@ The other JavaScript engines considered are of varying size, performance and com
     - [math-atlas](./math-atlas)
     - [MITIE-nlp](./MITIE-nlp)
     - [mlpack](./mlpack)
+    - [pytorch](./pytorch) -- PyTorch library in C++
     - [xtensor](./xtensor)
     - [xtensor-blas](./xtensor-blas)
     - [xtensor-io](./xtensor-io)
@@ -188,6 +190,7 @@ The other JavaScript engines considered are of varying size, performance and com
     - [libjpeg-turbo](./libjpeg-turbo)
     - [libwebp](./libwebp)
     - [GDCM-Grassroots-DICOM](./GDCM-Grassroots-DICOM)
+    - [pmt-png-tools](./pmt-png-tools)
     - [DICOM to NIfTI](https://github.com/rordenlab/dcm2niix) (*not included yet*)
     - [cgohlke::imagecodecs](https://github.com/cgohlke/imagecodecs) (*not included yet*)
     - [image formats (visual) quality comparison](https://eclipseo.github.io/image-comparison-web/) (*not included*)
@@ -227,12 +230,18 @@ The other JavaScript engines considered are of varying size, performance and com
     - [xml-pugixml](./xml-pugixml)
     - [libexpat](./libexpat)
     - [libxml2](./libxml2) -- [libxml](http://xmlsoft.org/)
+    - [gumbo-query](./gumbo-query)
+    - [tidy-html5](./tidy-html5)
 * file format support
     - [djvulibre](./djvulibre)
     - [extract](../extract)
     - [gmime](./gmime) -- multipart MIME library; serves as a fundameental building block for full MHTML file format I/O support
     - [gumbo-parser](../gumbo-parser)
     - [gumbo-libxml](./gumbo-libxml)
+    - [mimetic](./mimetic) -- S/MIME: use for MHTML support
+    - [libzip](./libzip)
+    - [gumbo-query](./gumbo-query) -- HTML DOM access in C/C++
+    - [tidy-html5](./tidy-html5) -- clean up HTML documents before archiving/processing
     - [http-parser](./http-parser)
     - [picohttpparser](./picohttpparser)
     - [xml-pugixml](./xml-pugixml)
@@ -243,19 +252,13 @@ The other JavaScript engines considered are of varying size, performance and com
 - scripting *user-tunable tasks* such as OCR preproceessing, metadata extraction, metadata cleaning & other \[post-]processing, ...
     - [mujs](../mujs)
     - [CPython](./CPython)
-    - [duktape](./duktape)
-    - [duktape-cpp-glue](./duktape-cpp-glue)
     - [ECMA262](./ECMA262)
-    - [escargot](./escargot)
-    - [jerryscript](./jerryscript)
-    - [node-jerryscript](./node-jerryscript)
     - [lua](./lua)
     - [luaJIT](./luaJIT)
     - [QuickJS](./QuickJS)
-        - [txiki](./txiki.js)
-    - [XS-moddable](./XS-moddable)
+        - [txiki](./txiki.js) -- uses QuickJS as its kernel
+    - [replxx](./replxx) -- REPL CLI component: `readline` simile for REPL/interactive runs in a CLI
  - multi-processing core technologies
-    - [civet-webserver](./civet-webserver)
     - [libwebsocketpp](./libwebsocketpp)
     - [libwebsockets](./libwebsockets)
     - [websocket-sharp](./websocket-sharp)
@@ -263,7 +266,6 @@ The other JavaScript engines considered are of varying size, performance and com
     - [oatpp](./oatpp) -- IPC / server framework
     - [clipp](./clipp) -- commandline parser 
     - [clippson](./clippson) -- commandline parser + JSON data diagnostical dumper
-    - [popt](./popt) -- commandline parser 
     - [fmt](./fmt)
     - [glob](./glob) -- directory scanner
     - [Imath](./Imath) -- float16 support lib for OpenEXR format
@@ -283,6 +285,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - logging & debugging
     - MuPDF itself
     - [EasyLogger](./EasyLogger)
+    - [glog](./glog)
     - [log4cplus](./log4cplus)
     - [zlog](./zlog)
     - [fmt](./fmt)
@@ -315,12 +318,12 @@ The other JavaScript engines considered are of varying size, performance and com
 
 ### Libraries in this collection
 
+- [apophenia](./apophenia)
 - [bebop](./bebop)
 - [BLAKE3](./BLAKE3)
 - [boost](./boost) -- required by several other libraries in this collection
 - [c-blosc2](./c-blosc2)
 - [CHM lib](./CHM-lib) -- as I have several HTML pages stored in this format. See also MHTML: `mht-rip`
-- [civet-webserver](./civet-webserver)
 - [clipp](./clipp)
 - [clippson](./clippson)
 - [CPython](./CPython)
@@ -329,11 +332,8 @@ The other JavaScript engines considered are of varying size, performance and com
 - [djvulibre](./djvulibre)
 - [dlib](./dlib)
 - [dtl-diff-template-library](./dtl-diff-template-library)
-- [duktape-cpp-glue](./duktape-cpp-glue)
-- [duktape](./duktape)
 - [EasyLogger](./EasyLogger)
 - [ECMA262](./ECMA262)
-- [escargot](./escargot)
 - [fast-lzma2](./fast-lzma2)
 - [FastBinaryEncoding](./FastBinaryEncoding)
 - [flatbuffers](./flatbuffers)
@@ -341,10 +341,12 @@ The other JavaScript engines considered are of varying size, performance and com
 - [fmt](./fmt)
 - [GDCM-Grassroots-DICOM](./GDCM-Grassroots-DICOM)
 - [glob](./glob)
+- [glog](./glog)
 - [gmime](./gmime)
 - [google-diff-match-patch](./google-diff-match-patch)
 - [googletest](./googletest)
 - [GraphicsMagick](./GraphicsMagick)
+- [gumbo-query](./gumbo-query)
 - [h5cpp-HDF5](./h5cpp-HDF5)
 - [HDF5](./HDF5)
 - [HDiffPatch](./HDiffPatch)
@@ -361,7 +363,6 @@ The other JavaScript engines considered are of varying size, performance and com
 - [inih](./inih)
 - [iniparser](./iniparser)
 - [jasper](./jasper)
-- [jerryscript](./jerryscript)
 - [jpeg-xl](https://gitlab.com/wg1/jpeg-xl) - \[DROPPED: nobody is using it yet, while I am more interested in high perf **lossless** formats for internal communications and storage]
 - [json-jansson](./json-jansson)
 - [json](./json)
@@ -383,6 +384,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [libwebsocketpp](./libwebsocketpp)
 - [libwebsockets](./libwebsockets)
 - [libxml2](./libxml2)
+- [libzip](./libzip)
 - [libzmq](./libzmq)
 - [LightLDA](./LightLDA)
 - [lizard](./lizard)
@@ -395,11 +397,11 @@ The other JavaScript engines considered are of varying size, performance and com
 - [math-atlas](./math-atlas)
 - [mcmc](./mcmc)
 - [mht-rip](./mht-rip) -- as I have several HTML pages stored in this MHTML format. See also CHM: `CHM-lib`
+- [mimetic](./mimetic)
 - [mipp](./mipp)
 - [MITIE-nlp](./MITIE-nlp)
 - [mlpack](./mlpack)
 - [mmc](./mmc)
-- [node-jerryscript](./node-jerryscript)
 - [oatpp](./oatpp)
 - [olena](./olena)
 - [oneTBB](./oneTBB)
@@ -410,17 +412,20 @@ The other JavaScript engines considered are of varying size, performance and com
 - [OpenSSL](./openssl)
 - [picohttpparser](./picohttpparser)
 - [pithy](./pithy)
-- [popt](./popt)
+- [pmt-png-tools](./pmt-png-tools)
 - [pthread-win32](./pthread-win32)
+- [pytorch](./pytorch)
 - [QuickJS](./QuickJS)
 - [rapidJSON](./rapidJSON)
 - [re2](./re2)
+- [replxx](./replxx)
 - [snappy](./snappy)
 - [sqlite-amalgamation](./sqlite-amalgamation)
 - [sqlite](./sqlite)
 - [squash](./squash)
 - [svg-charter](./svg-charter)
 - [thunderSVM](./thunderSVM)
+- [tidy-html5](./tidy-html5)
 - [tinyexpr](./tinyexpr)
 - [tre](./tre)
 - [txiki](./txiki.js)
@@ -430,7 +435,6 @@ The other JavaScript engines considered are of varying size, performance and com
 - [websocket-sharp](./websocket-sharp)
 - [xml-pugixml](./xml-pugixml)
 - [XMP-Toolkit-SDK](./XMP-Toolkit-SDK)
-- [XS-moddable](./XS-moddable)
 - [xsimd](./xsimd)
 - [xtensor-blas](./xtensor-blas)
 - [xtensor-io](./xtensor-io)
