@@ -506,7 +506,3 @@
 	path = pmt-png-tools
 	url = git@github.com:GerHobbelt/pmt.git
 	ignore = dirty
-[submodule "apophenia"]
-	path = apophenia
-	url = git@github.com:GerHobbelt/apophenia.git
-	ignore = dirty

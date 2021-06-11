@@ -139,7 +139,6 @@ The other JavaScript engines considered are of varying size, performance and com
     - [hocr-spec](./hocr-spec)
     - [hocr-tools](./hocr-tools)
 - pattern recognition: "A.I." for cover pages, image/page *segmentation*, including abstract & summary demarcation, "figure" and "table" detection & extraction from documents, ...
-    - [apophenia](./apophenia) -- statistics
     - [dlib](./dlib) -- machine learning algorithms
         - [lapack](./lapack) -- [CBLAS](http://www.netlib.org/blas/) + [LAPACK](http://www.netlib.org/lapack/index.html) optimized linear algebra libs
     - [libsvm](./libsvm)
@@ -318,7 +317,6 @@ The other JavaScript engines considered are of varying size, performance and com
 
 ### Libraries in this collection
 
-- [apophenia](./apophenia)
 - [bebop](./bebop)
 - [BLAKE3](./BLAKE3)
 - [boost](./boost) -- required by several other libraries in this collection
