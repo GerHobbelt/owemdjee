@@ -506,3 +506,6 @@
 	path = pmt-png-tools
 	url = git@github.com:GerHobbelt/pmt.git
 	ignore = dirty
+[submodule "libunistring"]
+	path = libunistring
+	url = git@github.com:GerHobbelt/libunistring.git
