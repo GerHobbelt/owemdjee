@@ -270,7 +270,6 @@ The other JavaScript engines considered are of varying size, performance and com
     - [Imath](./Imath) -- float16 support lib for OpenEXR format
     - [inih](./inih)
     - [iniparser](./iniparser)
-    - [libidn2](./libidn2) -- International Domain Name decoder/encoder library; used with gmime --> MHTML format
     - [libtuv](./libtuv)
     - [libzmq](./libzmq)
     - [oneTBB](./oneTBB) -- Intel's Thread Building Blocks library: used with OpenImageIO, ...
@@ -372,7 +371,6 @@ The other JavaScript engines considered are of varying size, performance and com
 - [libarchive](./libarchive)
 - [libexpat](./libexpat)
 - [libgif](./libgif)
-- [libidn2](./libidn2)
 - [libjpeg-turbo](./libjpeg-turbo)
 - [libsmile](./libsmile)
 - [libsvm](./libsvm)

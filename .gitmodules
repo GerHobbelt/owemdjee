@@ -470,10 +470,6 @@
 	path = oneTBB
 	url = git@github.com:GerHobbelt/oneTBB.git
 	ignore = dirty
-[submodule "libidn2"]
-	path = libidn2
-	url = git@github.com:GerHobbelt/libidn2.git
-	ignore = dirty
 [submodule "mimetic"]
 	path = mimetic
 	url = git@github.com:GerHobbelt/mimetic.git
@@ -506,6 +502,3 @@
 	path = pmt-png-tools
 	url = git@github.com:GerHobbelt/pmt.git
 	ignore = dirty
-[submodule "libunistring"]
-	path = libunistring
-	url = git@github.com:GerHobbelt/libunistring.git
