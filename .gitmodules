@@ -172,7 +172,7 @@
 
 [submodule "upskirt-markdown"]
 	path = upskirt-markdown
-	url = https://github.com/GerHobbelt/upskirt.git
+	url = https://github.com/GerHobbelt/soldout.git
 
 [submodule "pthread-win32"]
 	path = pthread-win32
