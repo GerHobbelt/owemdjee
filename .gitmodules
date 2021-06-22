@@ -502,3 +502,9 @@
 	path = pmt-png-tools
 	url = https://github.com/GerHobbelt/pmt.git
 	ignore = dirty
+[submodule "ScriptX"]
+	path = ScriptX
+	url = git@github.com:GerHobbelt/ScriptX.git
+[submodule "QuickJS-C++-Wrapper"]
+	path = QuickJS-C++-Wrapper
+	url = git@github.com:GerHobbelt/quickjscpp.git

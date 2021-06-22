@@ -87,6 +87,11 @@ The other JavaScript engines considered are of varying size, performance and com
 - [QuickJS](https://github.com/bellard/quickjs): ES2020, DevTools or [VS Code debugging](https://github.com/koush/vscode-quickjs-debug) seems to be available. Also comes with an interesting runtime: [txiki](https://github.com/saghul/txiki.js), which we still need to take a good look at.
 - [Google's V8](https://v8.dev/)<sup>[here](https://github.com/v8/v8) [too](https://chromium.googlesource.com/v8/v8/+/84450a2239672109bcf537d6740b8babda521567)</sup>, as available in NodeJS, is deemed too complex for integration: when we go there, we could spend the same amount of effort on CPython integration -- though there again is the ever-present "how to debug this visually?!" question...)
 
+- [ScriptX](./ScriptX/) -- Tencent's [ScriptX](https://github.com/Tencent/ScriptX) is a script engine abstraction layer. A variety of script engines are encapsulated on the bottom and a unified API is exposed on the top, so that the upper-layer caller can completely isolate the underlying engine implementation (back-end).
+
+  ScriptX not only isolates several JavaScript engines (e.g. V8 and QuickJS), but can even isolate different scripting languages, so that the upper layer can seamlessly switch between scripting engine and scripting language without changing the code.
+
+
 **UPDATE 2021/June**: jerryscript, duktape, XS/moddable, escargot: these have been dropped as we picked QuickJS. After somee initial hassle with that codebase, we picked a different branch to test, which was cleaner and compiled out of the box (CMake > MSVC), which is always a good omen for a codebase when you have cross-platform portability in mind.
 
 
@@ -231,7 +236,7 @@ The other JavaScript engines considered are of varying size, performance and com
     - [libxml2](./libxml2) -- [libxml](http://xmlsoft.org/)
     - [gumbo-query](./gumbo-query)
     - [tidy-html5](./tidy-html5)
-* file format support
+- file format support
     - [djvulibre](./djvulibre)
     - [extract](../extract)
     - [gmime](./gmime) -- multipart MIME library; serves as a fundameental building block for full MHTML file format I/O support
@@ -257,7 +262,8 @@ The other JavaScript engines considered are of varying size, performance and com
     - [QuickJS](./QuickJS)
         - [txiki](./txiki.js) -- uses QuickJS as its kernel
     - [replxx](./replxx) -- REPL CLI component: `readline` simile for REPL/interactive runs in a CLI
- - multi-processing core technologies
+    - [ScriptX](./ScriptX/) -- wrapper for V8, QuickJS, Lua, Python, ...
+- multi-processing core technologies
     - [libwebsocketpp](./libwebsocketpp)
     - [libwebsockets](./libwebsockets)
     - [websocket-sharp](./websocket-sharp)
