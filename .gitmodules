@@ -508,3 +508,6 @@
 [submodule "QuickJS-C++-Wrapper"]
 	path = QuickJS-C++-Wrapper
 	url = git@github.com:GerHobbelt/quickjscpp.git
+[submodule "libconfig"]
+	path = libconfig
+	url = git@github.com:GerHobbelt/libconfig.git
