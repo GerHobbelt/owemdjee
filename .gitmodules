@@ -511,3 +511,9 @@
 [submodule "libconfig"]
 	path = libconfig
 	url = git@github.com:GerHobbelt/libconfig.git
+[submodule "OptimizationTemplateLibrary"]
+	path = OptimizationTemplateLibrary
+	url = git@github.com:GerHobbelt/O-T-L.git
+[submodule "otl"]
+	path = otl
+	url = git@github.com:GerHobbelt/otl.git
