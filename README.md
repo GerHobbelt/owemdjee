@@ -239,10 +239,11 @@ The other JavaScript engines considered are of varying size, performance and com
 - file format support
     - [djvulibre](./djvulibre)
     - [extract](../extract)
-    - [gmime](./gmime) -- multipart MIME library; serves as a fundameental building block for full MHTML file format I/O support
+    - ~~[gmime](./gmime) -- multipart MIME library; serves as a fundameental building block for full MHTML file format I/O support~~
+      + *removed*; reason: GNOME libraries are horrible to integrate with other codebases
     - [gumbo-parser](../gumbo-parser)
     - [gumbo-libxml](./gumbo-libxml)
-    - [mimetic](./mimetic) -- S/MIME: use for MHTML support
+    - [mimetic](./mimetic) -- MIME: use for MHTML support
     - [libzip](./libzip)
     - [gumbo-query](./gumbo-query) -- HTML DOM access in C/C++
     - [tidy-html5](./tidy-html5) -- clean up HTML documents before archiving/processing
@@ -479,6 +480,22 @@ The other JavaScript engines considered are of varying size, performance and com
 + [tesstrain](../tesstrain)
 + [zlib](../zlib)
 
++ [libconfig](../libconfig) -- generic config (file) reader/writer
++ [OptimizationTemplateLibrary](../OptimizationTemplateLibrary)
++ [otl](../otl) -- Oracle Template Library (STL-like wrapper for SQL DB queries; supports many databases besides Oracle)
++ [brotli](../brotli) -- compression
++ [tomlpp](../tomlpp) -- TOML++
++ [plf_nanotimer](../plf_nanotimer) -- high precision cross-platform performance timer
++ [ice](../ice)
++ [mime-mega](../mime-mega) -- MIME extract/insert/encode/decode: use for MHTML support
++ [file](../file) -- `file` filetype recognizer tool & mimemagic 
++ [libyaml](../libyaml) -- YAML
++ [lmdb](../lmdb)
++ [tlx-btree](../tlx-btree) -- in-memory B+-tree: an alternative for the priority queue as we expect the queue to grow huge, given past experience with Qiqqa.
++ [cpp-btree](../cpp-btree) -- in-memory B+-tree: an alternative for the priority queue as we expect the queue to grow huge, given past experience with Qiqqa.
++ [libcmime](../libcmime) -- MIME extract/insert/encode/decode: use for MHTML support
++ [gflags](../gflags) -- google::flags library, used by other libs in this set.
++ [libidn2](../libidn2)
 
 
 

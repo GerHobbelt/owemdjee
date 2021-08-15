@@ -25,7 +25,7 @@
 [submodule "rapidJSON"]
 	path = rapidJSON
 	url = https://github.com/GerHobbelt/rapidjson.git
-	ignore = dirty
+
 [submodule "HighFive-HDF5"]
 	path = HighFive-HDF5
 	url = https://github.com/GerHobbelt/HighFive.git
@@ -89,7 +89,7 @@
 [submodule "yyjson"]
 	path = yyjson
 	url = https://github.com/GerHobbelt/yyjson.git
-	ignore = dirty
+
 [submodule "flatcc"]
 	path = flatcc
 	url = https://github.com/GerHobbelt/flatcc.git
@@ -97,7 +97,7 @@
 [submodule "bebop"]
 	path = bebop
 	url = https://github.com/GerHobbelt/bebop.git
-	ignore = dirty
+
 [submodule "inih"]
 	path = inih
 	url = https://github.com/GerHobbelt/inih.git
@@ -121,11 +121,11 @@
 [submodule "log4cplus"]
 	path = log4cplus
 	url = https://github.com/GerHobbelt/log4cplus.git
-	ignore = dirty
+
 [submodule "zlog"]
 	path = zlog
 	url = https://github.com/GerHobbelt/zlog.git
-	ignore = dirty
+
 [submodule "clipp"]
 	path = clipp
 	url = https://github.com/GerHobbelt/clipp.git
@@ -153,7 +153,7 @@
 [submodule "FastBinaryEncoding"]
 	path = FastBinaryEncoding
 	url = https://github.com/GerHobbelt/FastBinaryEncoding.git
-	ignore = dirty
+
 [submodule "cryptopp"]
 	path = cryptopp
 	url = https://github.com/GerHobbelt/cryptopp.git
@@ -193,7 +193,7 @@
 [submodule "libzmq"]
 	path = libzmq
 	url = https://github.com/GerHobbelt/libzmq.git
-	ignore = dirty
+
 [submodule "re2"]
 	path = re2
 	url = https://github.com/GerHobbelt/re2.git
@@ -265,7 +265,7 @@
 [submodule "picohttpparser"]
 	path = picohttpparser
 	url = https://github.com/GerHobbelt/picohttpparser.git
-	ignore = dirty
+
 [submodule "libsvm"]
 	path = libsvm
 	url = https://github.com/GerHobbelt/libsvm.git
@@ -337,7 +337,7 @@
 [submodule "lzsse"]
 	path = lzsse
 	url = https://github.com/GerHobbelt/LZSSE.git
-	ignore = dirty
+
 [submodule "lizard"]
 	path = lizard
 	url = https://github.com/GerHobbelt/lizard.git
@@ -345,7 +345,7 @@
 [submodule "fast-lzma2"]
 	path = fast-lzma2
 	url = https://github.com/GerHobbelt/fast-lzma2.git
-	ignore = dirty
+
 [submodule "boost"]
 	path = boost
 	url = https://github.com/GerHobbelt/boost.git
@@ -353,7 +353,7 @@
 [submodule "xz-utils"]
 	path = xz-utils
 	url = https://github.com/GerHobbelt/xz.git
-	ignore = dirty
+
 [submodule "libwebsockets"]
 	path = libwebsockets
 	url = https://github.com/GerHobbelt/libwebsockets.git
@@ -369,7 +369,7 @@
 [submodule "mipp"]
 	path = mipp
 	url = https://github.com/GerHobbelt/MIPP.git
-	ignore = dirty
+
 [submodule "clippson"]
 	path = clippson
 	url = https://github.com/GerHobbelt/clippson.git
@@ -437,7 +437,7 @@
 [submodule "lzo"]
 	path = lzo
 	url = https://github.com/GerHobbelt/lzo.git
-	ignore = dirty
+
 [submodule "squash"]
 	path = squash
 	url = https://github.com/GerHobbelt/squash.git
@@ -457,7 +457,7 @@
 [submodule "openssl"]
 	path = openssl
 	url = https://github.com/GerHobbelt/openssl.git
-	ignore = dirty
+
 [submodule "OpenEXR"]
 	path = OpenEXR
 	url = https://github.com/GerHobbelt/openexr.git
@@ -533,33 +533,43 @@
 [submodule "plf_nanotimer"]
 	path = plf_nanotimer
 	url = git@github.com:GerHobbelt/plf_nanotimer.git
+
 [submodule "ice"]
 	path = ice
 	url = git@github.com:GerHobbelt/ice.git
+
 [submodule "mime-mega"]
 	path = mime-mega
 	url = git@github.com:GerHobbelt/MegaMimes.git
+
 [submodule "file"]
 	path = file
 	url = git@github.com:GerHobbelt/file.git
+
 [submodule "libyaml"]
 	path = libyaml
 	url = git@github.com:GerHobbelt/libyaml.git
+
 [submodule "lmdb"]
 	path = lmdb
 	url = git@github.com:GerHobbelt/lmdb.git
+
 [submodule "tlx-btree"]
 	path = tlx-btree
 	url = git@github.com:GerHobbelt/tlx.git
+
 [submodule "cpp-btree"]
 	path = cpp-btree
 	url = git@github.com:GerHobbelt/cpp-btree.git
+
 [submodule "libcmime"]
 	path = libcmime
 	url = git@github.com:GerHobbelt/libcmime.git
+
 [submodule "gflags"]
 	path = gflags
 	url = git@github.com:GerHobbelt/gflags.git
+	
 [submodule "libidn2"]
 	path = libidn2
 	url = git@github.com:GerHobbelt/libidn2.git
