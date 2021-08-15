@@ -554,3 +554,12 @@
 [submodule "cpp-btree"]
 	path = cpp-btree
 	url = git@github.com:GerHobbelt/cpp-btree.git
+[submodule "libcmime"]
+	path = libcmime
+	url = git@github.com:GerHobbelt/libcmime.git
+[submodule "gflags"]
+	path = gflags
+	url = git@github.com:GerHobbelt/gflags.git
+[submodule "libidn2"]
+	path = libidn2
+	url = git@github.com:GerHobbelt/libidn2.git
