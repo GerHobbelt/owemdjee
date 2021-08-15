@@ -533,3 +533,24 @@
 [submodule "plf_nanotimer"]
 	path = plf_nanotimer
 	url = git@github.com:GerHobbelt/plf_nanotimer.git
+[submodule "ice"]
+	path = ice
+	url = git@github.com:GerHobbelt/ice.git
+[submodule "mime-mega"]
+	path = mime-mega
+	url = git@github.com:GerHobbelt/MegaMimes.git
+[submodule "file"]
+	path = file
+	url = git@github.com:GerHobbelt/file.git
+[submodule "libyaml"]
+	path = libyaml
+	url = git@github.com:GerHobbelt/libyaml.git
+[submodule "lmdb"]
+	path = lmdb
+	url = git@github.com:GerHobbelt/lmdb.git
+[submodule "tlx-btree"]
+	path = tlx-btree
+	url = git@github.com:GerHobbelt/tlx.git
+[submodule "cpp-btree"]
+	path = cpp-btree
+	url = git@github.com:GerHobbelt/cpp-btree.git
