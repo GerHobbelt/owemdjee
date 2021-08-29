@@ -577,3 +577,6 @@
 [submodule "uint128_t"]
 	path = uint128_t
 	url = https://github.com/GerHobbelt/uint128_t.git
+[submodule "bzip2"]
+	path = bzip2
+	url = git@github.com:GerHobbelt/bzip2.git
