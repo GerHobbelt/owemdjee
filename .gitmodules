@@ -585,9 +585,18 @@
 [submodule "cereal"]
 	path = cereal
 	url = git@github.com:GerHobbelt/cereal.git
+
 [submodule "parallel-hashmap"]
 	path = parallel-hashmap
 	url = git@github.com:GerHobbelt/parallel-hashmap.git
+
 [submodule "tlx"]
 	path = tlx
 	url = git@github.com:GerHobbelt/tlx.git
+	
+[submodule "palmtree"]
+	path = palmtree
+	url = git@github.com:GerHobbelt/palmtree.git
+[submodule "jemalloc"]
+	path = jemalloc
+	url = git@github.com:GerHobbelt/jemalloc.git
