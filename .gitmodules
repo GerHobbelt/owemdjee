@@ -582,3 +582,12 @@
 	path = bzip2
 	url = git@github.com:GerHobbelt/bzip2.git
 
+[submodule "cereal"]
+	path = cereal
+	url = git@github.com:GerHobbelt/cereal.git
+[submodule "parallel-hashmap"]
+	path = parallel-hashmap
+	url = git@github.com:GerHobbelt/parallel-hashmap.git
+[submodule "tlx"]
+	path = tlx
+	url = git@github.com:GerHobbelt/tlx.git
