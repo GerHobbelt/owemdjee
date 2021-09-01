@@ -600,3 +600,6 @@
 [submodule "jemalloc"]
 	path = jemalloc
 	url = git@github.com:GerHobbelt/jemalloc.git
+[submodule "gbenchmark"]
+	path = gbenchmark
+	url = git@github.com:GerHobbelt/benchmark.git
