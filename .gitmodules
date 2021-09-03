@@ -603,3 +603,6 @@
 [submodule "gbenchmark"]
 	path = gbenchmark
 	url = git@github.com:GerHobbelt/benchmark.git
+[submodule "protobuf"]
+	path = protobuf
+	url = git@github.com:GerHobbelt/protobuf.git
