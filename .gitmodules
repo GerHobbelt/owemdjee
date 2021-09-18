@@ -609,3 +609,15 @@
 [submodule "resumable-assert"]
 	path = resumable-assert
 	url = git@github.com:GerHobbelt/resumable-assert.git
+[submodule "docopt"]
+	path = docopt
+	url = git@github.com:GerHobbelt/docopt.cpp.git
+[submodule "bibutils"]
+	path = bibutils
+	url = git@github.com:GerHobbelt/bibutils.git
+[submodule "bibtex-robust-decoder"]
+	path = bibtex-robust-decoder
+	url = git@github.com:GerHobbelt/bibtex-robust-decoder.git
+[submodule "efsw"]
+	path = efsw
+	url = git@github.com:GerHobbelt/efsw.git
