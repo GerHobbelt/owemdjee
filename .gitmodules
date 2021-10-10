@@ -597,27 +597,68 @@
 [submodule "palmtree"]
 	path = palmtree
 	url = git@github.com:GerHobbelt/palmtree.git
+	
 [submodule "jemalloc"]
 	path = jemalloc
 	url = git@github.com:GerHobbelt/jemalloc.git
+	
 [submodule "gbenchmark"]
 	path = gbenchmark
 	url = git@github.com:GerHobbelt/benchmark.git
+	
 [submodule "protobuf"]
 	path = protobuf
 	url = git@github.com:GerHobbelt/protobuf.git
+	
 [submodule "resumable-assert"]
 	path = resumable-assert
 	url = git@github.com:GerHobbelt/resumable-assert.git
+	
 [submodule "docopt"]
 	path = docopt
 	url = git@github.com:GerHobbelt/docopt.cpp.git
+	
 [submodule "bibutils"]
 	path = bibutils
 	url = git@github.com:GerHobbelt/bibutils.git
+	
 [submodule "bibtex-robust-decoder"]
 	path = bibtex-robust-decoder
 	url = git@github.com:GerHobbelt/bibtex-robust-decoder.git
+	
 [submodule "efsw"]
 	path = efsw
 	url = git@github.com:GerHobbelt/efsw.git
+	
+[submodule "url"]
+	path = url
+	url = git@github.com:GerHobbelt/url.git
+	
+[submodule "breakpad"]
+	path = breakpad
+	url = git@github.com:GerHobbelt/breakpad.git
+	
+[submodule "libqrencode"]
+	path = libqrencode
+	url = git@github.com:GerHobbelt/libqrencode.git
+	
+[submodule "tiny-process-library"]
+	path = tiny-process-library
+	url = git@github.com:GerHobbelt/tiny-process-library.git
+	
+[submodule "Lightning.NET"]
+	path = Lightning.NET
+	url = git@github.com:GerHobbelt/Lightning.NET.git
+	
+[submodule "lmdb-store"]
+	path = lmdb-store
+	url = git@github.com:GerHobbelt/lmdb-store.git
+	
+[submodule "lmdb-safe"]
+	path = lmdb-safe
+	url = git@github.com:GerHobbelt/lmdb-safe.git
+	
+[submodule "lmdb.spreads.net"]
+	path = lmdb.spreads.net
+	url = git@github.com:GerHobbelt/Spreads.LMDB.git
+	
