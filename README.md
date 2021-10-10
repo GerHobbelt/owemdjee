@@ -61,7 +61,7 @@ We expect to use these languages in processes which require this type of IPC:
   + "A.I."-assisted tooling to help process and *clean* PDFs: cover pages, abstract/summary extraction for meta-research, etc. (think ngrams, xdelta, SVM, tensors, author identification, document categorization, document similarity / \[*near-]duplicate / revision detection, tagging, ...)
   + document identifier key generator a.k.a. **content hasher** for creating **unique** key for each document, which can be used as database record index, etc.
     * old: Qiqqa SHA1B
-    * new: BLAKE3 & Base36
+    * new: BLAKE3+Base36
 - C# (**"business logic" / "middleware"**: the glue logic)
 - Java (SOLR / Lucene: our choice for the "full text search database" ~ **backend No.2**)
 
