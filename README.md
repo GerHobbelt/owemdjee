@@ -19,6 +19,7 @@ A few problems have been repeatedly observed over our lifetime with `git`:
 - folks haven't always been the happy campers they were supposed to be when they're facing a set of submodules and want to feel safe and sure in their "knowledge" that each library X is at commit Y, when the top off the module tree is itself at commit Z, for we are busy producing a production release, perhaps? That's a wee bit stressful and there have beeen enough "flukes" with git to make that a not-so-ironclad-as-we-would-like position. 
 
   Over time, I've created several bash shell scripts to help with that buzzin' feelin' of *absolute certainty*. Useful perhaps, but the cuteness of those wears off pretty darn quickly when many nodes in the submodule tree start cluttering their git repo with those.
+
   
 ### And?
 
@@ -39,6 +40,7 @@ And that's what this repo is here to provide: the source code gathered and ready
 
 ---
 
+
 # Intent
 
 ## Inter-process communications (IPC)
@@ -46,6 +48,7 @@ And that's what this repo is here to provide: the source code gathered and ready
 Lowest possible **run-time** cost, a.k.a. "run-time overhead": the aim is to have IPC which does not noticably impact UX (User Experience of the application: responsiveness / UI) on reeasonably powered machines. (Users are *not* expected to have the latest or fastest hardware.)
 
 As *at least* large images will be transfered (PDF page renders) we need to have a binary-able protocol.
+
 
 ## Programming Languages used: *intent and purposes*
 
@@ -92,7 +95,7 @@ The other JavaScript engines considered are of varying size, performance and com
   ScriptX not only isolates several JavaScript engines (e.g. V8 and QuickJS), but can even isolate different scripting languages, so that the upper layer can seamlessly switch between scripting engine and scripting language without changing the code.
 
 
-**UPDATE 2021/June**: jerryscript, duktape, XS/moddable, escargot: these have been dropped as we picked QuickJS. After somee initial hassle with that codebase, we picked a different branch to test, which was cleaner and compiled out of the box (CMake > MSVC), which is always a good omen for a codebase when you have cross-platform portability in mind.
+**UPDATE 2021/June**: jerryscript, duktape, XS/moddable, escargot: these have been dropped as we picked QuickJS. After some initial hassle with that codebase, we picked a different branch to test, which was cleaner and compiled out of the box (CMake > MSVC), which is always a good omen for a codebase when you have cross-platform portability in mind.
 
 
 ### Libraries we're looking at for this *intent*:
@@ -102,8 +105,11 @@ The other JavaScript engines considered are of varying size, performance and com
     - [FastBinaryEncoding](./FastBinaryEncoding)
     - [flatbuffers](./flatbuffers)
     - [flatcc](./flatcc)
+    - [cereal](./cereal) -- C++11 serialization library
     - [libzmq](./libzmq)
     - [libsmile](./libsmile) -- ["Smile" format](https://en.wikipedia.org/wiki/Smile_%28data_interchange_format%29), i.e. a compact binary JSON format
+    - [protobuf](./protobuf)
+- IPC: websockets, etc.: all communication means
     - [libwebsocketpp](./libwebsocketpp)
     - [libwebsockets](./libwebsockets)
     - [websocket-sharp](./websocket-sharp)
@@ -112,6 +118,7 @@ The other JavaScript engines considered are of varying size, performance and com
      
       Interface looks nicer than `oatpp`...
     - [oatpp](./oatpp) -- IPC / server framework
+    - [ice](./ice) -- Comprehensive RPC Framework: helps you network your software with minimal effort.
 - IPC: JSON for protocol design:
     - [json](./json)
     - [json-jansson](./json-jansson)
@@ -126,6 +133,16 @@ The other JavaScript engines considered are of varying size, performance and com
     - [h5cpp-HDF5](./h5cpp-HDF5)
     - [HDF5](./HDF5)
     - [HighFive-HDF5](./HighFive-HDF5)
+    - RAM-/disk-based large queues and stores: B+tree, LSM-tree, ...
+        + [cpp-btree](../cpp-btree) -- in-memory B+-tree: an alternative for the priority queue as we expect the queue to grow huge, given past experience with Qiqqa.
+        + [tlx-btree](./tlx-btree) -- in-memory B+-tree: an alternative for the priority queue as we expect the queue to grow huge, given past experience with Qiqqa.
+        + [Lightning.NET](./Lightning.NET) -- .NET library for OpenLDAP's LMDB key-value store
+        + [lmdb-safe](./lmdb-safe)
+        + [lmdb-store](./lmdb-store)
+        + [lmdb.spreads.net](./lmdb.spreads.net)
+        + [lmdb](./lmdb)
+        + [palmtree](./palmtree) -- concurrent lock free B+Tree
+        + [parallel-hashmap](./parallel-hashmap) -- a set of hash map implementations, as well as a btree alternative to std::map and std::set
 - data storage / caching / IPC: loss-less data compression
     - [lz4](./lz4)
     - [lzsse](./lzsse)
@@ -139,6 +156,9 @@ The other JavaScript engines considered are of varying size, performance and com
     - [squash](./squash)
     - [libzip](./libzip)
     - see also [lzbench](https://github.com/inikep/lzbench)
+    - [brotli](../brotli) -- compression
+    - [bzip2](./bzip2)
+    - [shoco](./shoco) -- a fast compressor for short strings
 - OCR: hOCR output format, other output format? (dedicated binary?)
     - [hocr-fileformat](./hocr-fileformat)
     - [hocr-spec](./hocr-spec)
@@ -165,17 +185,18 @@ The other JavaScript engines considered are of varying size, performance and com
         + [yara-pattern-matcher](./yara-pattern-matcher)
         + [lz4](./lz4)
 - regex matchers (manual edit - pattern recognition)
+    * [hyperscan](./hyperscan) -- Hyperscan is a high-performance multiple regex matching library.
     * [re2](./re2)
     * [tre](./tre)
-    * [hyperscan](./hyperscan) -- Hyperscan is a high-performance multiple regex matching library.
 - OCR: quality improvements, language detect, ...
     - [hunspell](./hunspell)
     - [hunspell-hyphen](./hunspell-hyphen)
 - OCR page image preprocessing, \[scanner] tooling: getting the pages to the OCR engine
-    - [lcms2](../lcms2)
-    - [leptonica](../leptonica)
+    - [GraphicsMagick](./GraphicsMagick)
     - [ImageMagick](./ImageMagick)
     - [jasper](./jasper) -- JasPer Image Processing/Coding Tool Kit
+    - [lcms2](../lcms2)
+    - [leptonica](../leptonica)
     - [libvips](./libvips)
     - [olena](./olena)
     - [opencv](./opencv)
@@ -188,6 +209,7 @@ The other JavaScript engines considered are of varying size, performance and com
     - [libtiff](../libtiff)
     - [openjpeg](../openjpeg)
     - [OpenEXR](./OpenEXR) -- lossless format for multi-layered images. Professional use. (I've used it before; nice file format.)
+        + [Imath](./Imath) -- float16 support lib for OpenEXR format
     - [OpenImageIO](./OpenImageIO)
     - [jpeg-xl](https://gitlab.com/wg1/jpeg-xl) - \[DROPPED: nobody is using it yet, while I am more interested in high perf **lossless** formats for internal communications and storage]
     - [libgif](./libgif)
@@ -199,13 +221,14 @@ The other JavaScript engines considered are of varying size, performance and com
     - [cgohlke::imagecodecs](https://github.com/cgohlke/imagecodecs) (*not included yet*)
     - [image formats (visual) quality comparison](https://eclipseo.github.io/image-comparison-web/) (*not included*)
 - Monte Carlo simulations, LDA, keyword inference/extraction, etc.
-    + [lda](./lda) -- variational EM for latent Dirichlet allocation (LDA), David Blei et al
-    + [lda-Familia](./lda-Familia)
     + [lda-bigartm](./lda-bigartm)
+    + [lda-Familia](./lda-Familia)
+    + [lda](./lda) -- variational EM for latent Dirichlet allocation (LDA), David Blei et al
     + [LightLDA](./LightLDA)
     + [mcmc](./mcmc)
     + [mipp](./mipp)
     + [mmc](./mmc)
+    + [OptimizationTemplateLibrary](./OptimizationTemplateLibrary) -- Optimization Template Library (OTL)
     + other *topic modeling* code on the Net:
         * [Hierarchical Dirichlet Process (with Split-Merge Operations), Chong Wang](https://github.com/renaud/hdp-faster)
         * [Hierarchical Latent Tree Analysis (HLTA)](https://github.com/kmpoon/hlta)
@@ -215,34 +238,39 @@ The other JavaScript engines considered are of varying size, performance and com
     - [sqlite](./sqlite)
     - [sqlite-amalgamation](./sqlite-amalgamation)
     - [lib_nas_lockfile](./lib_nas_lockfile) -- lockfile management on NAS and other disparate network filesystem storage. To be combined with SQLite to create a proper Qiqqa Sync operation.
+    - [otl](../otl) -- Oracle Template Library (STL-like wrapper for SQL DB queries; supports many databases besides Oracle)
 - metadata & text (OCR et al): language detect, suggesting fixes, ...    
     - [unicode-cldr](./unicode-cldr)
     - [unicode-icu](./unicode-icu)
 - PDF metadata editing for round-trip annotation and other "external application editing" of known documents; metadata embedding / *export*
-    - [xml-pugixml](./xml-pugixml)
-    - [XMP-Toolkit-SDK](./XMP-Toolkit-SDK)
     - [libexpat](./libexpat)
     - [libxml2](./libxml2)
-- web scraping (document eextraction, cleaning, metadata extraction, BibTeX, ...) 
+    - [xml-pugixml](./xml-pugixml)
+    - [XMP-Toolkit-SDK](./XMP-Toolkit-SDK)
+- web scraping (document extraction, cleaning, metadata extraction, BibTeX, ...) 
     - see investigation notes in Qiqqa docs
     - [curl](../curl)
     - [extract](../extract)
-    - [gumbo-parser](../gumbo-parser)
+    - [libidn2](./libidn2) -- international domain name parsing
+    - [gumbo-parser](../gumbo-parser) -- HTML parser
     - [gumbo-libxml](./gumbo-libxml)
     - [http-parser](./http-parser)
     - [picohttpparser](./picohttpparser)
     - [xml-pugixml](./xml-pugixml)
     - [libexpat](./libexpat)
     - [libxml2](./libxml2) -- [libxml](http://xmlsoft.org/)
-    - [gumbo-query](./gumbo-query)
+    - [gumbo-query](./gumbo-query) -- HTML DOM access in C/C++
     - [tidy-html5](./tidy-html5)
+    - [url](./url) -- URI parsing and other utility functions
 - file format support
+    - [file](./file) -- `file` filetype recognizer tool & mimemagic 
     - [djvulibre](./djvulibre)
     - [extract](../extract)
-    - ~~[gmime](./gmime) -- multipart MIME library; serves as a fundameental building block for full MHTML file format I/O support~~
-      + *removed*; reason: GNOME libraries are horrible to integrate with other codebases
+    - ~~[gmime](./gmime) -- multipart MIME library; serves as a fundamental building block for full MHTML file format I/O support~~
+      + **removed**; reason: GNOME libraries are horrible to integrate with other codebases
     - [gumbo-parser](../gumbo-parser)
     - [gumbo-libxml](./gumbo-libxml)
+    - [mime-mega](../mime-mega) -- MIME extract/insert/encode/decode: use for MHTML support
     - [mimetic](./mimetic) -- MIME: use for MHTML support
     - [libzip](./libzip)
     - [gumbo-query](./gumbo-query) -- HTML DOM access in C/C++
@@ -254,6 +282,14 @@ The other JavaScript engines considered are of varying size, performance and com
     - [libxml2](./libxml2) -- [libxml](http://xmlsoft.org/)
     - [mht-rip](./mht-rip) -- as I have several HTML pages stored in this MHTML format. See also CHM: `CHM-lib`
     - [CHM lib](./CHM-lib) -- as I have several HTML pages stored in this format. See also MHTML: `mht-rip`
+    - [libcmime](../libcmime) -- MIME extract/insert/encode/decode: use for MHTML support
+    - [libarchive](./libarchive)
+- BibTeX and similar library formats' support
+    + [bibtex-robust-decoder](./bibtex-robust-decoder)
+    + [bibutils](./bibutils)
+- export / output file formats, etc.
+    + [libqrencode](./libqrencode) -- generate QRcodes from anything (e.g. URLs)
+    + [fmt](./fmt) -- advanced C++ data-to-text formatter. The modern answer to classic `printf()`.
 - scripting *user-tunable tasks* such as OCR preproceessing, metadata extraction, metadata cleaning & other \[post-]processing, ...
     - [mujs](../mujs)
     - [CPython](./CPython)
@@ -262,40 +298,53 @@ The other JavaScript engines considered are of varying size, performance and com
     - [luaJIT](./luaJIT)
     - [QuickJS](./QuickJS)
         - [txiki](./txiki.js) -- uses QuickJS as its kernel
+        - [QuickJS-C++-Wrapper](./QuickJS-C++-Wrapper)
     - [replxx](./replxx) -- REPL CLI component: `readline` simile for REPL/interactive runs in a CLI
     - [ScriptX](./ScriptX/) -- wrapper for V8, QuickJS, Lua, Python, ...
 - multi-processing core technologies
+    - [clipp](./clipp) -- commandline parser 
+    - [clippson](./clippson) -- commandline parser + JSON data diagnostical dumper
+    - [docopt](./docopt) -- generate documentation for command line options
+    - [fmt](./fmt) -- advanced C++ data-to-text formatter. The modern answer to classic `printf()`.
+    - [crow](./crow) -- IPC / server framework
+    - [oatpp](./oatpp) -- IPC / server framework
+    - [libtuv](./libtuv)
     - [libwebsocketpp](./libwebsocketpp)
     - [libwebsockets](./libwebsockets)
     - [websocket-sharp](./websocket-sharp)
-    - [crow](./crow) -- IPC / server framework
-    - [oatpp](./oatpp) -- IPC / server framework
-    - [clipp](./clipp) -- commandline parser 
-    - [clippson](./clippson) -- commandline parser + JSON data diagnostical dumper
-    - [fmt](./fmt)
-    - [glob](./glob) -- directory scanner
-    - [Imath](./Imath) -- float16 support lib for OpenEXR format
-    - [inih](./inih)
-    - [iniparser](./iniparser)
-    - [libtuv](./libtuv)
     - [libzmq](./libzmq)
     - [oneTBB](./oneTBB) -- Intel's Thread Building Blocks library: used with OpenImageIO, ...
+    - [plf_nanotimer](./plf_nanotimer) -- high precision cross-platform performance timer
     - [pthread-win32](./pthread-win32)
+    - [tiny-process-library](./tiny-process-library) -- small platform independent library making it simple to create and stop new processes, as well as writing to stdin and reading from stdout and stderr of a new process.
     - [upskirt-markdown](./upskirt-markdown) -- MarkDown renderer
         - [svg-charter](./svg-charter) -- SVG chart renderer
             - [tinyexpr](./tinyexpr)
-    - [libarchive](./libarchive)
+- disk I/O, monitoring import locations, ...
+    + [efsw](./efsw) -- cross-platform file system watcher and notifier
+    + [glob](./glob) -- directory scanner
+- configuration / parameterization 
+    + [gflags](./gflags) -- google::flags library, used by other libs in this set.
+    + [tomlpp](../tomlpp) -- TOML++
+    + [libyaml](./libyaml) -- YAML
+    + [inih](./inih)
+    + [iniparser](./iniparser)
+    + [libconfig](../libconfig) -- generic config (file) reader/writer
 - testing & fuzzing
     - [googletest](./googletest)
+    - [gbenchmark](./gbenchmark)
 - logging & debugging
-    - MuPDF itself
-    - [EasyLogger](./EasyLogger)
-    - [glog](./glog)
-    - [log4cplus](./log4cplus)
-    - [zlog](./zlog)
-    - [fmt](./fmt)
+    + [breakpad](./breakpad)
+    + [EasyLogger](./EasyLogger)
+    + [fmt](./fmt)
+    + [glog](./glog)
+    + [log4cplus](./log4cplus)
+    + [MuPDF itself](../../)
+    + [plf_nanotimer](./plf_nanotimer) -- high precision cross-platform performance timer
+    + [replxx](./replxx) -- REPL CLI component: `readline` simile for REPL/interactive runs in a CLI
+    + [resumable-assert](./resumable-assert)
+    + [zlog](./zlog)
 - OCR core (tesseract)
-    + [tesseract](../tesseract)
     + [langdata_LSTM](../langdata_LSTM)
     + [tessconfigs](../tessconfigs)
     + [tessdata](../tessdata)
@@ -303,6 +352,7 @@ The other JavaScript engines considered are of varying size, performance and com
     + [tessdata_contrib](../tessdata_contrib)
     + [tessdata_fast](../tessdata_fast)
     + [tessdoc](../tessdoc)
+    + [tesseract](../tesseract)
     + [tesseract_docs](../tesseract_docs)
     + [tesseract_langdata](../tesseract_langdata)
     + [tesstrain](../tesstrain)
@@ -319,39 +369,70 @@ The other JavaScript engines considered are of varying size, performance and com
     + [libtiff](../libtiff)
     + [openjpeg](../openjpeg)
     + [zlib](../zlib)
+- sub-dependencies (libraries which are required by any of the above)
+    + [boost](./boost) -- required by several other libraries in this collection
+    + [gflags](./gflags) -- google::flags library, used by other libs in this set.
+    + [Imath](./Imath) -- float16 support lib for OpenEXR format
+    + [jemalloc](./jemalloc)
+    + [libidn2](./libidn2)
+    + [OpenSSL](./openssl) -- also used by CURL et al, incidentally.
+    + [protobuf](./protobuf)
+    + [uint128_t](./uint128_t)
+    + [svg-charter](./svg-charter) -- SVG chart renderer
+    + [tinyexpr](./tinyexpr)
+    + [tlx](./tlx) -- a collection of C++ helpers and extensions universally needed, but not found in the STL.
+
 
 
 ### Libraries in this collection
 
 - [bebop](./bebop)
+- [bibtex-robust-decoder](./bibtex-robust-decoder)
+- [bibutils](./bibutils)
 - [BLAKE3](./BLAKE3)
 - [boost](./boost) -- required by several other libraries in this collection
+- [breakpad](./breakpad)
+- [brotli](../brotli) -- compression
+- [bzip2](./bzip2)
 - [c-blosc2](./c-blosc2)
+- [cereal](./cereal) -- C++11 serialization library
 - [CHM lib](./CHM-lib) -- as I have several HTML pages stored in this format. See also MHTML: `mht-rip`
-- [clipp](./clipp)
-- [clippson](./clippson)
+- [clipp](./clipp) -- commandline parser 
+- [clippson](./clippson) -- commandline parser + JSON data diagnostical dumper
+- [cpp-btree](../cpp-btree) -- in-memory B+-tree: an alternative for the priority queue as we expect the queue to grow huge, given past experience with Qiqqa.
 - [CPython](./CPython)
-- [crow](./crow)
+- [crow](./crow) -- IPC / server framework 
 - [cryptopp](./cryptopp)
+- [curl](../curl)
 - [djvulibre](./djvulibre)
-- [dlib](./dlib)
+- [dlib](./dlib) -- machine learning algorithms
+- [docopt](./docopt) -- generate documentation for command line options
 - [dtl-diff-template-library](./dtl-diff-template-library)
 - [EasyLogger](./EasyLogger)
 - [ECMA262](./ECMA262)
+- [efsw](./efsw) -- cross-platform file system watcher and notifier
+- [extract](../extract)
 - [fast-lzma2](./fast-lzma2)
 - [FastBinaryEncoding](./FastBinaryEncoding)
+- [file](./file) -- `file` filetype recognizer tool & mimemagic 
 - [flatbuffers](./flatbuffers)
 - [flatcc](./flatcc)
-- [fmt](./fmt)
+- [fmt](./fmt) -- advanced C++ data-to-text formatter. The modern answer to classic `printf()`.
+- [freeglut](../freeglut)
+- [freetype](../freetype)
+- [gbenchmark](./gbenchmark)
 - [GDCM-Grassroots-DICOM](./GDCM-Grassroots-DICOM)
-- [glob](./glob)
+- [gflags](./gflags) -- google::flags library, used by other libs in this set.
+- [glob](./glob) -- directory scanner
 - [glog](./glog)
-- [gmime](./gmime)
 - [google-diff-match-patch](./google-diff-match-patch)
 - [googletest](./googletest)
 - [GraphicsMagick](./GraphicsMagick)
-- [gumbo-query](./gumbo-query)
+- [gumbo-libxml](./gumbo-libxml)
+- [gumbo-parser](../gumbo-parser)
+- [gumbo-query](./gumbo-query) -- HTML DOM access in C/C++
 - [h5cpp-HDF5](./h5cpp-HDF5)
+- [harfbuzz](../harfbuzz)
 - [HDF5](./HDF5)
 - [HDiffPatch](./HDiffPatch)
 - [HighFive-HDF5](./HighFive-HDF5)
@@ -361,36 +442,56 @@ The other JavaScript engines considered are of varying size, performance and com
 - [http-parser](./http-parser)
 - [hunspell-hyphen](./hunspell-hyphen)
 - [hunspell](./hunspell)
-- [hyperscan](./hyperscan)
+- [hyperscan](./hyperscan) -- Hyperscan is a high-performance multiple regex matching library.
+- [ice](./ice) -- Comprehensive RPC Framework: helps you network your software with minimal effort.
 - [ImageMagick](./ImageMagick)
-- [Imath](./Imath)
+- [Imath](./Imath) -- float16 support lib for OpenEXR format
 - [inih](./inih)
 - [iniparser](./iniparser)
-- [jasper](./jasper)
+- [jasper](./jasper) -- JasPer Image Processing/Coding Tool Kit
+- [jbig2dec](../jbig2dec)
+- [jemalloc](./jemalloc)
 - [jpeg-xl](https://gitlab.com/wg1/jpeg-xl) - \[DROPPED: nobody is using it yet, while I am more interested in high perf **lossless** formats for internal communications and storage]
+- [jpeginfo](../jpeginfo)
 - [json-jansson](./json-jansson)
 - [json](./json)
-- [lapack](./lapack)
+- [langdata_LSTM](../langdata_LSTM) -- tesseract data
+- [lapack](./lapack) -- [CBLAS](http://www.netlib.org/blas/) + [LAPACK](http://www.netlib.org/lapack/index.html) optimized linear algebra libs
+- [lcms2](../lcms2)
 - [lda-bigartm](./lda-bigartm)
 - [lda-Familia](./lda-Familia)
 - [lda](./lda) -- variational EM for latent Dirichlet allocation (LDA), David Blei et al
+- [leptonica](../leptonica)
 - [lib_nas_lockfile](./lib_nas_lockfile) -- lockfile management on NAS and other disparate network filesystem storage. To be combined with SQLite to create a proper Qiqqa Sync operation.
 - [libarchive](./libarchive)
+- [libcmime](../libcmime) -- MIME extract/insert/encode/decode: use for MHTML support
+- [libconfig](../libconfig) -- generic config (file) reader/writer
 - [libexpat](./libexpat)
 - [libgif](./libgif)
+- [libidn2](./libidn2)
 - [libjpeg-turbo](./libjpeg-turbo)
-- [libsmile](./libsmile)
+- [libjpeg](../libjpeg)
+- [libpng](../libpng)
+- [libqrencode](./libqrencode)
+- [libsmile](./libsmile) -- ["Smile" format](https://en.wikipedia.org/wiki/Smile_%28data_interchange_format%29), i.e. a compact binary JSON format
 - [libsvm](./libsvm)
+- [libtiff](../libtiff)
 - [libtuv](./libtuv)
 - [libvips](./libvips)
 - [libwebp](./libwebp)
 - [libwebsocketpp](./libwebsocketpp)
 - [libwebsockets](./libwebsockets)
-- [libxml2](./libxml2)
+- [libxml2](./libxml2) -- [libxml](http://xmlsoft.org/)
+- [libyaml](./libyaml) -- YAML
 - [libzip](./libzip)
 - [libzmq](./libzmq)
 - [LightLDA](./LightLDA)
+- [Lightning.NET](./Lightning.NET) -- .NET library for OpenLDAP's LMDB key-value store
 - [lizard](./lizard)
+- [lmdb-safe](./lmdb-safe)
+- [lmdb-store](./lmdb-store)
+- [lmdb.spreads.net](./lmdb.spreads.net)
+- [lmdb](./lmdb)
 - [log4cplus](./log4cplus)
 - [lua](./lua)
 - [luaJIT](./luaJIT)
@@ -400,113 +501,119 @@ The other JavaScript engines considered are of varying size, performance and com
 - [math-atlas](./math-atlas)
 - [mcmc](./mcmc)
 - [mht-rip](./mht-rip) -- as I have several HTML pages stored in this MHTML format. See also CHM: `CHM-lib`
-- [mimetic](./mimetic)
+- [mime-mega](../mime-mega) -- MIME extract/insert/encode/decode: use for MHTML support
+- [mimetic](./mimetic) -- MIME: use for MHTML support
 - [mipp](./mipp)
 - [MITIE-nlp](./MITIE-nlp)
 - [mlpack](./mlpack)
 - [mmc](./mmc)
-- [oatpp](./oatpp)
+- [mujs](../mujs)
+- [oatpp](./oatpp) -- IPC / server framework
 - [olena](./olena)
-- [oneTBB](./oneTBB)
+- [oneTBB](./oneTBB) -- Intel's Thread Building Blocks library: used with OpenImageIO, ...
 - [opencv](./opencv)
 - [opencv_contrib](./opencv_contrib)
-- [OpenEXR](./OpenEXR)
+- [OpenEXR](./OpenEXR) -- lossless format for multi-layered images. Professional use. (I've used it before; nice file format.)
 - [OpenImageIO](./OpenImageIO)
-- [OpenSSL](./openssl)
+- [openjpeg](../openjpeg)
+- [OpenSSL](./openssl) -- also used by CURL et al, incidentally.
+- [OptimizationTemplateLibrary](./OptimizationTemplateLibrary) -- Optimization Template Library (OTL)
+- [otl](../otl) -- Oracle Template Library (STL-like wrapper for SQL DB queries; supports many databases besides Oracle)
+- [palmtree](./palmtree) -- concurrent lock free B+Tree
+- [parallel-hashmap](./parallel-hashmap) -- a set of hash map implementations, as well as a btree alternative to std::map and std::set
 - [picohttpparser](./picohttpparser)
 - [pithy](./pithy)
+- [plf_nanotimer](./plf_nanotimer) -- high precision cross-platform performance timer
 - [pmt-png-tools](./pmt-png-tools)
+- [protobuf](./protobuf)
 - [pthread-win32](./pthread-win32)
-- [pytorch](./pytorch)
+- [pytorch](./pytorch) -- PyTorch library in C++
+- [QuickJS-C++-Wrapper](./QuickJS-C++-Wrapper)
 - [QuickJS](./QuickJS)
 - [rapidJSON](./rapidJSON)
 - [re2](./re2)
-- [replxx](./replxx)
+- [replxx](./replxx) -- REPL CLI component: `readline` simile for REPL/interactive runs in a CLI
+- [resumable-assert](./resumable-assert)
+- [ScriptX](./ScriptX)
+- [ScriptX](./ScriptX/) -- wrapper for V8, QuickJS, Lua, Python, ...
+- [shoco](./shoco) -- a fast compressor for short strings
 - [snappy](./snappy)
 - [sqlite-amalgamation](./sqlite-amalgamation)
 - [sqlite](./sqlite)
 - [squash](./squash)
-- [svg-charter](./svg-charter)
+- [svg-charter](./svg-charter) -- SVG chart renderer
+- [tessconfigs](../tessconfigs)
+- [tessdata](../tessdata)
+- [tessdata_best](../tessdata_best)
+- [tessdata_contrib](../tessdata_contrib)
+- [tessdata_fast](../tessdata_fast)
+- [tessdoc](../tessdoc)
+- [tesseract](../tesseract)
+- [tesseract_docs](../tesseract_docs)
+- [tesseract_langdata](../tesseract_langdata)
+- [tesstrain](../tesstrain)
 - [thunderSVM](./thunderSVM)
-- [tidy-html5](./tidy-html5)
+- [tidy-html5](./tidy-html5) -- clean up HTML documents before archiving/processing
+- [tiny-process-library](./tiny-process-library) -- small platform independent library making it simple to create and stop new processes, as well as writing to stdin and reading from stdout and stderr of a new process.
 - [tinyexpr](./tinyexpr)
+- [tlx-btree](./tlx-btree) -- in-memory B+-tree: an alternative for the priority queue as we expect the queue to grow huge, given past experience with Qiqqa.
+- [tlx](./tlx) -- a collection of C++ helpers and extensions universally needed, but not found in the STL.
+- [tomlpp](../tomlpp) -- TOML++
 - [tre](./tre)
-- [txiki](./txiki.js)
+- [txiki](./txiki.js) -- uses QuickJS as its kernel
+- [uint128_t](./uint128_t)
 - [unicode-cldr](./unicode-cldr)
 - [unicode-icu](./unicode-icu)
-- [upskirt-markdown](./upskirt-markdown)
+- [upskirt-markdown](./upskirt-markdown) -- MarkDown renderer
+- [url](./url) -- URI parsing and other utility functions
 - [websocket-sharp](./websocket-sharp)
 - [xml-pugixml](./xml-pugixml)
 - [XMP-Toolkit-SDK](./XMP-Toolkit-SDK)
-- [xsimd](./xsimd)
+- [xsimd](./xsimd) -- xtensor core library
 - [xtensor-blas](./xtensor-blas)
 - [xtensor-io](./xtensor-io)
 - [xtensor](./xtensor)
-- [xtl](./xtl)
+- [xtl](./xtl) -- xtensor core library
 - [xz-utils](./xz-utils)
-- [yara-pattern-matcher](./yara-pattern-matcher)
+- [yara-pattern-matcher](./yara-pattern-matcher) -- for automated and user-specified pattern recognition in custom document & metadata *cleaning* / processing tasks
 - [yyjson](./yyjson)
+- [zlib](../zlib)
 - [zlog](./zlog)
 - [zstd](./zstd)
 
 
+
+
+
 ### Libraries not available in this collection but already part of `mupdf`
 
-+ [curl](../curl)
-+ [extract](../extract)
-+ [freeglut](../freeglut)
-+ [freetype](../freetype)
-+ [gumbo-parser](../gumbo-parser)
-+ [harfbuzz](../harfbuzz)
-+ [jbig2dec](../jbig2dec)
-+ [jpeginfo](../jpeginfo)
-+ [langdata_LSTM](../langdata_LSTM)
-+ [lcms2](../lcms2)
-+ [leptonica](../leptonica)
-+ [libjpeg](../libjpeg)
-+ [libpng](../libpng)
-+ [libtiff](../libtiff)
-+ [mujs](../mujs)
-+ [openjpeg](../openjpeg)
-+ [tessconfigs](../tessconfigs)
-+ [tessdata](../tessdata)
-+ [tessdata_best](../tessdata_best)
-+ [tessdata_contrib](../tessdata_contrib)
-+ [tessdata_fast](../tessdata_fast)
-+ [tessdoc](../tessdoc)
-+ [tesseract](../tesseract)
-+ [tesseract_docs](../tesseract_docs)
-+ [tesseract_langdata](../tesseract_langdata)
-+ [tesstrain](../tesstrain)
-+ [zlib](../zlib)
-
-+ [libconfig](../libconfig) -- generic config (file) reader/writer
-+ [OptimizationTemplateLibrary](../OptimizationTemplateLibrary)
-+ [otl](../otl) -- Oracle Template Library (STL-like wrapper for SQL DB queries; supports many databases besides Oracle)
-+ [brotli](../brotli) -- compression
-+ [tomlpp](../tomlpp) -- TOML++
-+ [plf_nanotimer](../plf_nanotimer) -- high precision cross-platform performance timer
-+ [ice](../ice)
-+ [mime-mega](../mime-mega) -- MIME extract/insert/encode/decode: use for MHTML support
-+ [file](../file) -- `file` filetype recognizer tool & mimemagic 
-+ [libyaml](../libyaml) -- YAML
-+ [lmdb](../lmdb)
-+ [tlx-btree](../tlx-btree) -- in-memory B+-tree: an alternative for the priority queue as we expect the queue to grow huge, given past experience with Qiqqa.
-+ [cpp-btree](../cpp-btree) -- in-memory B+-tree: an alternative for the priority queue as we expect the queue to grow huge, given past experience with Qiqqa.
-+ [libcmime](../libcmime) -- MIME extract/insert/encode/decode: use for MHTML support
-+ [gflags](../gflags) -- google::flags library, used by other libs in this set.
-+ [libidn2](../libidn2)
-
-
-
-
-
-
-
-
-
-
-
+- [curl](../curl)
+- [extract](../extract)
+- [freeglut](../freeglut)
+- [freetype](../freetype)
+- [gumbo-parser](../gumbo-parser)
+- [harfbuzz](../harfbuzz)
+- [jbig2dec](../jbig2dec)
+- [jpeginfo](../jpeginfo)
+- [langdata_LSTM](../langdata_LSTM)
+- [lcms2](../lcms2)
+- [leptonica](../leptonica)
+- [libjpeg](../libjpeg)
+- [libpng](../libpng)
+- [libtiff](../libtiff)
+- [mujs](../mujs)
+- [openjpeg](../openjpeg)
+- [tessconfigs](../tessconfigs)
+- [tessdata](../tessdata)
+- [tessdata_best](../tessdata_best)
+- [tessdata_contrib](../tessdata_contrib)
+- [tessdata_fast](../tessdata_fast)
+- [tessdoc](../tessdoc)
+- [tesseract](../tesseract)
+- [tesseract_docs](../tesseract_docs)
+- [tesseract_langdata](../tesseract_langdata)
+- [tesstrain](../tesstrain)
+- [zlib](../zlib)
 
 
 
