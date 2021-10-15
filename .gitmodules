@@ -662,3 +662,103 @@
 	path = lmdb.spreads.net
 	url = git@github.com:GerHobbelt/Spreads.LMDB.git
 	
+[submodule "createprocess-windows"]
+	path = createprocess-windows
+	url = git@github.com:GerHobbelt/createprocess-windows.git
+[submodule "messagebox-windows"]
+	path = messagebox-windows
+	url = git@github.com:GerHobbelt/messagebox-windows.git
+[submodule "spy-build-sysinfo"]
+	path = spy-build-sysinfo
+	url = git@github.com:GerHobbelt/spy.git
+[submodule "cli11"]
+	path = cli11
+	url = git@github.com:GerHobbelt/CLI11.git
+[submodule "clBLAS"]
+	path = clBLAS
+	url = git@github.com:GerHobbelt/clBLAS.git
+[submodule "pcg-c-random"]
+	path = pcg-c-random
+	url = git@github.com:GerHobbelt/pcg-c.git
+[submodule "stdext-path"]
+	path = stdext-path
+	url = git@github.com:GerHobbelt/stdext-path.git
+[submodule "lmdbxx"]
+	path = lmdbxx
+	url = git@github.com:GerHobbelt/lmdbxx.git
+[submodule "libcpuid"]
+	path = libcpuid
+	url = git@github.com:GerHobbelt/libcpuid.git
+[submodule "thread-pool-cpp"]
+	path = thread-pool-cpp
+	url = git@github.com:GerHobbelt/thread-pool-cpp.git
+[submodule "sparsehash"]
+	path = sparsehash
+	url = git@github.com:GerHobbelt/sparsehash.git
+[submodule "ncnn"]
+	path = ncnn
+	url = git@github.com:GerHobbelt/ncnn.git
+[submodule "xxHash"]
+	path = xxHash
+	url = git@github.com:GerHobbelt/xxHash.git
+[submodule "cpuinfo"]
+	path = cpuinfo
+	url = git@github.com:GerHobbelt/cpuinfo.git
+[submodule "thread-pool"]
+	path = thread-pool
+	url = git@github.com:GerHobbelt/thread-pool.git
+[submodule "thread-pool-c"]
+	path = thread-pool-c
+	url = git@github.com:GerHobbelt/C-Thread-Pool.git
+[submodule "sentencepiece"]
+	path = sentencepiece
+	url = git@github.com:GerHobbelt/sentencepiece.git
+[submodule "sentence-tokenizer"]
+	path = sentence-tokenizer
+	url = git@github.com:GerHobbelt/Tokenizer.git
+[submodule "you-token-to-me"]
+	path = you-token-to-me
+	url = git@github.com:GerHobbelt/YouTokenToMe.git
+[submodule "libtextcat"]
+	path = libtextcat
+	url = git@github.com:GerHobbelt/libtextcat.git
+[submodule "uctodata"]
+	path = uctodata
+	url = git@github.com:GerHobbelt/uctodata.git
+[submodule "ucto"]
+	path = ucto
+	url = git@github.com:GerHobbelt/ucto.git
+[submodule "libfolia"]
+	path = libfolia
+	url = git@github.com:GerHobbelt/libfolia.git
+[submodule "fastBPE"]
+	path = fastBPE
+	url = git@github.com:GerHobbelt/fastBPE.git
+
+[submodule "libunifex"]
+	path = libunifex
+	url = git@github.com:GerHobbelt/libunifex.git
+[submodule "libscanf"]
+	path = libscanf
+	url = git@github.com:GerHobbelt/scnlib.git
+[submodule "magic_enum"]
+	path = magic_enum
+	url = git@github.com:GerHobbelt/magic_enum.git
+[submodule "hedley"]
+	path = hedley
+	url = git@github.com:GerHobbelt/hedley.git
+[submodule "expected-lite"]
+	path = expected-lite
+	url = git@github.com:GerHobbelt/expected-lite.git
+[submodule "spdlog"]
+	path = spdlog
+	url = git@github.com:GerHobbelt/spdlog.git
+[submodule "many-stop-words"]
+	path = many-stop-words
+	url = git@github.com:GerHobbelt/many-stop-words.git
+[submodule "stopwords"]
+	path = stopwords
+	url = git@github.com:GerHobbelt/stopwords.git
+[submodule "wget"]
+	path = wget
+	url = git@github.com:GerHobbelt/wget.git

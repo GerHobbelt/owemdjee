@@ -126,8 +126,10 @@ The other JavaScript engines considered are of varying size, performance and com
     - [yyjson](./yyjson)
     - [libsmile](./libsmile) -- ["Smile" format](https://en.wikipedia.org/wiki/Smile_%28data_interchange_format%29), i.e. a compact binary JSON format
 - content hashing
-    - [BLAKE3](./BLAKE3)
-    - [cryptopp](./cryptopp)
+    - [BLAKE3](./BLAKE3) -- cryptographic hash
+    - [cryptopp](./cryptopp) -- crypto library
+    - [sparsehash](./sparsehash) -- fast (non-cryptographic) hash algorithms
+    - [xxHash](./xxHash) -- fast (non-cryptographic) hash algorithm
 - intermediate data storage / caching / hierarchical data stores (binary hOCR; document text revisions; ...) 
     - [c-blosc2](./c-blosc2)
     - [h5cpp-HDF5](./h5cpp-HDF5)
@@ -141,6 +143,7 @@ The other JavaScript engines considered are of varying size, performance and com
         + [lmdb-store](./lmdb-store)
         + [lmdb.spreads.net](./lmdb.spreads.net)
         + [lmdb](./lmdb)
+        + [lmdbxx](./lmdbxx) -- LMDB C++ wrapper
         + [palmtree](./palmtree) -- concurrent lock free B+Tree
         + [parallel-hashmap](./parallel-hashmap) -- a set of hash map implementations, as well as a btree alternative to std::map and std::set
 - data storage / caching / IPC: loss-less data compression
@@ -177,6 +180,16 @@ The other JavaScript engines considered are of varying size, performance and com
     - [xtensor-io](./xtensor-io)
     - [xsimd](./xsimd) -- xtensor core library
     - [xtl](./xtl) -- xtensor core library
+    - [clBLAS](./clBLAS)
+    - [ncnn](./ncnn) -- high-performance neural network inference computing framework optimized for mobile platforms (i.e. small footprint)
+    - [sentencepiece](./sentencepiece) -- text tokenization
+    - [sentence-tokenizer](./sentence-tokenizer) -- text tokenization
+    - [you-token-to-me](./you-token-to-me) -- text tokenization
+    - [libtextcat](./libtextcat) -- text language detection
+    - [ucto](./ucto) -- text tokenization
+        + [uctodata](./uctodata) -- data for `ucto` library
+        + [libfolia](./libfolia)
+    - [fastBPE](./fastBPE) -- text tokenization / ngrams
     - [yara-pattern-matcher](./yara-pattern-matcher) -- for automated and user-specified pattern recognition in custom document & metadata *cleaning* / processing tasks
     - *delta features* & other feature extraction (see Qiqqa research notes)
         + [dtl-diff-template-library](./dtl-diff-template-library)
@@ -191,6 +204,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - OCR: quality improvements, language detect, ...
     - [hunspell](./hunspell)
     - [hunspell-hyphen](./hunspell-hyphen)
+    - [libtextcat](./libtextcat) -- text language detection
 - OCR page image preprocessing, \[scanner] tooling: getting the pages to the OCR engine
     - [GraphicsMagick](./GraphicsMagick)
     - [ImageMagick](./ImageMagick)
@@ -221,14 +235,27 @@ The other JavaScript engines considered are of varying size, performance and com
     - [cgohlke::imagecodecs](https://github.com/cgohlke/imagecodecs) (*not included yet*)
     - [image formats (visual) quality comparison](https://eclipseo.github.io/image-comparison-web/) (*not included*)
 - Monte Carlo simulations, LDA, keyword inference/extraction, etc.
-    + [lda-bigartm](./lda-bigartm)
-    + [lda-Familia](./lda-Familia)
-    + [lda](./lda) -- variational EM for latent Dirichlet allocation (LDA), David Blei et al
-    + [LightLDA](./LightLDA)
-    + [mcmc](./mcmc)
-    + [mipp](./mipp)
-    + [mmc](./mmc)
-    + [OptimizationTemplateLibrary](./OptimizationTemplateLibrary) -- Optimization Template Library (OTL)
+    - [lda-bigartm](./lda-bigartm)
+    - [lda-Familia](./lda-Familia)
+    - [lda](./lda) -- variational EM for latent Dirichlet allocation (LDA), David Blei et al
+    - [LightLDA](./LightLDA)
+    - [mcmc](./mcmc) -- Monte Carlo
+    - [mipp](./mipp)
+    - [mmc](./mmc) -- Monte Carlo
+    - [OptimizationTemplateLibrary](./OptimizationTemplateLibrary) -- Optimization Template Library (OTL)
+    - [pcg-c-random](./pcg-c-random) -- fast random generators
+    - [ncnn](./ncnn) -- high-performance neural network inference computing framework optimized for mobile platforms (i.e. small footprint)
+    + text tokenization (as a preprocessing step for LDA et al):
+        + [sentencepiece](./sentencepiece) -- text tokenization
+        + [sentence-tokenizer](./sentence-tokenizer) -- text tokenization
+        + [you-token-to-me](./you-token-to-me) -- text tokenization
+        + [libtextcat](./libtextcat) -- text language detection
+        + [ucto](./ucto) -- text tokenization
+            * [uctodata](./uctodata) -- data for `ucto` library
+            * [libfolia](./libfolia)
+        + [fastBPE](./fastBPE) -- text tokenization / ngrams
+        + [many-stop-words](./many-stop-words)
+        + [stopwords](./stopwords)
     + other *topic modeling* code on the Net:
         * [Hierarchical Dirichlet Process (with Split-Merge Operations), Chong Wang](https://github.com/renaud/hdp-faster)
         * [Hierarchical Latent Tree Analysis (HLTA)](https://github.com/kmpoon/hlta)
@@ -239,9 +266,23 @@ The other JavaScript engines considered are of varying size, performance and com
     - [sqlite-amalgamation](./sqlite-amalgamation)
     - [lib_nas_lockfile](./lib_nas_lockfile) -- lockfile management on NAS and other disparate network filesystem storage. To be combined with SQLite to create a proper Qiqqa Sync operation.
     - [otl](../otl) -- Oracle Template Library (STL-like wrapper for SQL DB queries; supports many databases besides Oracle)
+    - [Lightning.NET](./Lightning.NET) -- .NET library for OpenLDAP's LMDB key-value store
+    - [lmdb-safe](./lmdb-safe)
+    - [lmdb-store](./lmdb-store)
+    - [lmdb.spreads.net](./lmdb.spreads.net)
+    - [lmdb](./lmdb)
+    - [lmdbxx](./lmdbxx) -- LMDB C++ wrapper
 - metadata & text (OCR et al): language detect, suggesting fixes, ...    
     - [unicode-cldr](./unicode-cldr)
     - [unicode-icu](./unicode-icu)
+    - [sentencepiece](./sentencepiece) -- text tokenization
+    - [sentence-tokenizer](./sentence-tokenizer) -- text tokenization
+    - [you-token-to-me](./you-token-to-me) -- text tokenization
+    - [libtextcat](./libtextcat) -- text language detection
+    - [ucto](./ucto) -- text tokenization
+        + [uctodata](./uctodata) -- data for `ucto` library
+        + [libfolia](./libfolia)
+    - [fastBPE](./fastBPE) -- text tokenization / ngrams
 - PDF metadata editing for round-trip annotation and other "external application editing" of known documents; metadata embedding / *export*
     - [libexpat](./libexpat)
     - [libxml2](./libxml2)
@@ -284,12 +325,18 @@ The other JavaScript engines considered are of varying size, performance and com
     - [CHM lib](./CHM-lib) -- as I have several HTML pages stored in this format. See also MHTML: `mht-rip`
     - [libcmime](../libcmime) -- MIME extract/insert/encode/decode: use for MHTML support
     - [libarchive](./libarchive)
+    - [upskirt-markdown](./upskirt-markdown) -- MarkDown renderer
+        - [svg-charter](./svg-charter) -- SVG chart renderer
+            - [tinyexpr](./tinyexpr)
 - BibTeX and similar library formats' support
-    + [bibtex-robust-decoder](./bibtex-robust-decoder)
-    + [bibutils](./bibutils)
+    - [bibtex-robust-decoder](./bibtex-robust-decoder)
+    - [bibutils](./bibutils)
 - export / output file formats, etc.
-    + [libqrencode](./libqrencode) -- generate QRcodes from anything (e.g. URLs)
-    + [fmt](./fmt) -- advanced C++ data-to-text formatter. The modern answer to classic `printf()`.
+    - [libqrencode](./libqrencode) -- generate QRcodes from anything (e.g. URLs)
+    - [fmt](./fmt) -- advanced C++ data-to-text formatter. The modern answer to classic `printf()`.
+    - [upskirt-markdown](./upskirt-markdown) -- MarkDown renderer
+        - [svg-charter](./svg-charter) -- SVG chart renderer
+            - [tinyexpr](./tinyexpr)
 - scripting *user-tunable tasks* such as OCR preproceessing, metadata extraction, metadata cleaning & other \[post-]processing, ...
     - [mujs](../mujs)
     - [CPython](./CPython)
@@ -317,9 +364,25 @@ The other JavaScript engines considered are of varying size, performance and com
     - [plf_nanotimer](./plf_nanotimer) -- high precision cross-platform performance timer
     - [pthread-win32](./pthread-win32)
     - [tiny-process-library](./tiny-process-library) -- small platform independent library making it simple to create and stop new processes, as well as writing to stdin and reading from stdout and stderr of a new process.
-    - [upskirt-markdown](./upskirt-markdown) -- MarkDown renderer
-        - [svg-charter](./svg-charter) -- SVG chart renderer
-            - [tinyexpr](./tinyexpr)
+    - [createprocess-windows](./createprocess-windows) -- drive `CreateProcess` Win32 API
+    - [messagebox-windows](./messagebox-windows) -- drive `MessageBox` and `MessageBeep` Win32 APIs
+    - [spy-build-sysinfo](./spy-build-sysinfo) -- build system info
+    - [cli11](./cli11) -- command line options parser
+    - [pcg-c-random](./pcg-c-random) -- fast random generators
+    - [stdext-path](./stdext-path) -- path manipulations (`dirname` et al)
+    - [libcpuid](./libcpuid) -- CPU & hardware info
+    - [thread-pool-cpp](./thread-pool-cpp)
+    - [sparsehash](./sparsehash) -- fast hash algorithms
+    - [xxHash](./xxHash) -- fast hash algorithm
+    - [cpuinfo](./cpuinfo) -- CPU & hardware info
+    - [thread-pool](./thread-pool)
+    - [thread-pool-c](./thread-pool-c)
+    - [libunifex](./libunifex)
+    - [libscanf](./libscanf)
+    - [magic_enum](./magic_enum)
+    - [hedley](./hedley)
+    - [expected-lite](./expected-lite)
+    - [wget](./wget)
 - disk I/O, monitoring import locations, ...
     + [efsw](./efsw) -- cross-platform file system watcher and notifier
     + [glob](./glob) -- directory scanner
@@ -344,6 +407,7 @@ The other JavaScript engines considered are of varying size, performance and com
     + [replxx](./replxx) -- REPL CLI component: `readline` simile for REPL/interactive runs in a CLI
     + [resumable-assert](./resumable-assert)
     + [zlog](./zlog)
+    + [spdlog](./spdlog)
 - OCR core (tesseract)
     + [langdata_LSTM](../langdata_LSTM)
     + [tessconfigs](../tessconfigs)
@@ -381,6 +445,7 @@ The other JavaScript engines considered are of varying size, performance and com
     + [svg-charter](./svg-charter) -- SVG chart renderer
     + [tinyexpr](./tinyexpr)
     + [tlx](./tlx) -- a collection of C++ helpers and extensions universally needed, but not found in the STL.
+    + [libfolia](./libfolia)
 
 
 
@@ -397,10 +462,14 @@ The other JavaScript engines considered are of varying size, performance and com
 - [c-blosc2](./c-blosc2)
 - [cereal](./cereal) -- C++11 serialization library
 - [CHM lib](./CHM-lib) -- as I have several HTML pages stored in this format. See also MHTML: `mht-rip`
+- [clBLAS](./clBLAS)
+- [cli11](./cli11) -- command line options parser
 - [clipp](./clipp) -- commandline parser 
 - [clippson](./clippson) -- commandline parser + JSON data diagnostical dumper
 - [cpp-btree](../cpp-btree) -- in-memory B+-tree: an alternative for the priority queue as we expect the queue to grow huge, given past experience with Qiqqa.
+- [cpuinfo](./cpuinfo) -- CPU & hardware info
 - [CPython](./CPython)
+- [createprocess-windows](./createprocess-windows) -- drive `CreateProcess` Win32 API
 - [crow](./crow) -- IPC / server framework 
 - [cryptopp](./cryptopp)
 - [curl](../curl)
@@ -411,9 +480,11 @@ The other JavaScript engines considered are of varying size, performance and com
 - [EasyLogger](./EasyLogger)
 - [ECMA262](./ECMA262)
 - [efsw](./efsw) -- cross-platform file system watcher and notifier
+- [expected-lite](./expected-lite)
 - [extract](../extract)
 - [fast-lzma2](./fast-lzma2)
 - [FastBinaryEncoding](./FastBinaryEncoding)
+- [fastBPE](./fastBPE) -- text tokenization / ngrams
 - [file](./file) -- `file` filetype recognizer tool & mimemagic 
 - [flatbuffers](./flatbuffers)
 - [flatcc](./flatcc)
@@ -435,6 +506,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [harfbuzz](../harfbuzz)
 - [HDF5](./HDF5)
 - [HDiffPatch](./HDiffPatch)
+- [hedley](./hedley)
 - [HighFive-HDF5](./HighFive-HDF5)
 - [hocr-fileformat](./hocr-fileformat)
 - [hocr-spec](./hocr-spec)
@@ -466,17 +538,22 @@ The other JavaScript engines considered are of varying size, performance and com
 - [libarchive](./libarchive)
 - [libcmime](../libcmime) -- MIME extract/insert/encode/decode: use for MHTML support
 - [libconfig](../libconfig) -- generic config (file) reader/writer
+- [libcpuid](./libcpuid) -- CPU & hardware info
 - [libexpat](./libexpat)
+- [libfolia](./libfolia)
 - [libgif](./libgif)
 - [libidn2](./libidn2)
 - [libjpeg-turbo](./libjpeg-turbo)
 - [libjpeg](../libjpeg)
 - [libpng](../libpng)
 - [libqrencode](./libqrencode)
+- [libscanf](./libscanf)
 - [libsmile](./libsmile) -- ["Smile" format](https://en.wikipedia.org/wiki/Smile_%28data_interchange_format%29), i.e. a compact binary JSON format
 - [libsvm](./libsvm)
+- [libtextcat](./libtextcat) -- text language detection
 - [libtiff](../libtiff)
 - [libtuv](./libtuv)
+- [libunifex](./libunifex)
 - [libvips](./libvips)
 - [libwebp](./libwebp)
 - [libwebsocketpp](./libwebsocketpp)
@@ -492,14 +569,18 @@ The other JavaScript engines considered are of varying size, performance and com
 - [lmdb-store](./lmdb-store)
 - [lmdb.spreads.net](./lmdb.spreads.net)
 - [lmdb](./lmdb)
+- [lmdbxx](./lmdbxx) -- LMDB C++ wrapper
 - [log4cplus](./log4cplus)
 - [lua](./lua)
 - [luaJIT](./luaJIT)
 - [lz4](./lz4)
 - [lzo](./lzo)
 - [lzsse](./lzsse)
+- [magic_enum](./magic_enum)
+- [many-stop-words](./many-stop-words)
 - [math-atlas](./math-atlas)
 - [mcmc](./mcmc)
+- [messagebox-windows](./messagebox-windows) -- drive `MessageBox` and `MessageBeep` Win32 APIs
 - [mht-rip](./mht-rip) -- as I have several HTML pages stored in this MHTML format. See also CHM: `CHM-lib`
 - [mime-mega](../mime-mega) -- MIME extract/insert/encode/decode: use for MHTML support
 - [mimetic](./mimetic) -- MIME: use for MHTML support
@@ -508,6 +589,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [mlpack](./mlpack)
 - [mmc](./mmc)
 - [mujs](../mujs)
+- [ncnn](./ncnn) -- high-performance neural network inference computing framework optimized for mobile platforms (i.e. small footprint)
 - [oatpp](./oatpp) -- IPC / server framework
 - [olena](./olena)
 - [oneTBB](./oneTBB) -- Intel's Thread Building Blocks library: used with OpenImageIO, ...
@@ -521,6 +603,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [otl](../otl) -- Oracle Template Library (STL-like wrapper for SQL DB queries; supports many databases besides Oracle)
 - [palmtree](./palmtree) -- concurrent lock free B+Tree
 - [parallel-hashmap](./parallel-hashmap) -- a set of hash map implementations, as well as a btree alternative to std::map and std::set
+- [pcg-c-random](./pcg-c-random) -- fast random generators
 - [picohttpparser](./picohttpparser)
 - [pithy](./pithy)
 - [plf_nanotimer](./plf_nanotimer) -- high precision cross-platform performance timer
@@ -536,11 +619,18 @@ The other JavaScript engines considered are of varying size, performance and com
 - [resumable-assert](./resumable-assert)
 - [ScriptX](./ScriptX)
 - [ScriptX](./ScriptX/) -- wrapper for V8, QuickJS, Lua, Python, ...
+- [sentence-tokenizer](./sentence-tokenizer) -- text tokenization
+- [sentencepiece](./sentencepiece) -- text tokenization
 - [shoco](./shoco) -- a fast compressor for short strings
 - [snappy](./snappy)
+- [sparsehash](./sparsehash) -- fast hash algorithms
+- [spdlog](./spdlog)
+- [spy-build-sysinfo](./spy-build-sysinfo) -- build system info
 - [sqlite-amalgamation](./sqlite-amalgamation)
 - [sqlite](./sqlite)
 - [squash](./squash)
+- [stdext-path](./stdext-path) -- path manipulations (`dirname` et al)
+- [stopwords](./stopwords)
 - [svg-charter](./svg-charter) -- SVG chart renderer
 - [tessconfigs](../tessconfigs)
 - [tessdata](../tessdata)
@@ -552,6 +642,9 @@ The other JavaScript engines considered are of varying size, performance and com
 - [tesseract_docs](../tesseract_docs)
 - [tesseract_langdata](../tesseract_langdata)
 - [tesstrain](../tesstrain)
+- [thread-pool-c](./thread-pool-c)
+- [thread-pool-cpp](./thread-pool-cpp)
+- [thread-pool](./thread-pool)
 - [thunderSVM](./thunderSVM)
 - [tidy-html5](./tidy-html5) -- clean up HTML documents before archiving/processing
 - [tiny-process-library](./tiny-process-library) -- small platform independent library making it simple to create and stop new processes, as well as writing to stdin and reading from stdout and stderr of a new process.
@@ -561,12 +654,15 @@ The other JavaScript engines considered are of varying size, performance and com
 - [tomlpp](../tomlpp) -- TOML++
 - [tre](./tre)
 - [txiki](./txiki.js) -- uses QuickJS as its kernel
+- [ucto](./ucto) -- text tokenization
+- [uctodata](./uctodata) -- data for `ucto` library
 - [uint128_t](./uint128_t)
 - [unicode-cldr](./unicode-cldr)
 - [unicode-icu](./unicode-icu)
 - [upskirt-markdown](./upskirt-markdown) -- MarkDown renderer
 - [url](./url) -- URI parsing and other utility functions
 - [websocket-sharp](./websocket-sharp)
+- [wget](./wget)
 - [xml-pugixml](./xml-pugixml)
 - [XMP-Toolkit-SDK](./XMP-Toolkit-SDK)
 - [xsimd](./xsimd) -- xtensor core library
@@ -574,8 +670,10 @@ The other JavaScript engines considered are of varying size, performance and com
 - [xtensor-io](./xtensor-io)
 - [xtensor](./xtensor)
 - [xtl](./xtl) -- xtensor core library
+- [xxHash](./xxHash) -- fast hash algorithm
 - [xz-utils](./xz-utils)
 - [yara-pattern-matcher](./yara-pattern-matcher) -- for automated and user-specified pattern recognition in custom document & metadata *cleaning* / processing tasks
+- [you-token-to-me](./you-token-to-me) -- text tokenization
 - [yyjson](./yyjson)
 - [zlib](../zlib)
 - [zlog](./zlog)
@@ -614,6 +712,8 @@ The other JavaScript engines considered are of varying size, performance and com
 - [tesseract_langdata](../tesseract_langdata)
 - [tesstrain](../tesstrain)
 - [zlib](../zlib)
+
+
 
 
 
