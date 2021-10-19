@@ -762,3 +762,12 @@
 [submodule "wget"]
 	path = wget
 	url = git@github.com:GerHobbelt/wget.git
+[submodule "cppzmq"]
+	path = cppzmq
+	url = git@github.com:GerHobbelt/cppzmq.git
+[submodule "linenoise"]
+	path = linenoise
+	url = git@github.com:GerHobbelt/linenoise.git
+[submodule "libmdbx"]
+	path = libmdbx
+	url = git@github.com:GerHobbelt/libmdbx.git

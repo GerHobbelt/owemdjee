@@ -103,12 +103,15 @@ The other JavaScript engines considered are of varying size, performance and com
 - IPC: flatbuffer et al for protocol design:
     - [bebop](./bebop)
     - [FastBinaryEncoding](./FastBinaryEncoding)
-    - [flatbuffers](./flatbuffers)
-    - [flatcc](./flatcc)
+    - ~~[flatbuffers](./flatbuffers)~~
+      + **removed**; reason: see `protobuf`: same smell rising. Faster at run time, but still a bit hairy to my tastes while `bebop` et al are on to something *potentially nice*.
+    - ~~[flatcc](./flatcc)~~
+      + **removed**; reason: see `flatbuffers`. When we don't dig `flatbuffers`, then `flatcc` is automatically pretty useless to us. Let's rephrase that professionally: "`flatcc` has moved out of scope for our project."
     - [cereal](./cereal) -- C++11 serialization library
     - [libzmq](./libzmq)
     - [libsmile](./libsmile) -- ["Smile" format](https://en.wikipedia.org/wiki/Smile_%28data_interchange_format%29), i.e. a compact binary JSON format
-    - [protobuf](./protobuf)
+    - ~~[protobuf](./protobuf)~~
+      + **removed**; reason: relatively slow run-time and (in my opinion) rather ugly & convoluted approach at build time. Has too much of a Java/CorprorateProgramming smell, which has not lessened over the years, unfortunately.
 - IPC: websockets, etc.: all communication means
     - [libwebsocketpp](./libwebsocketpp)
     - [libwebsockets](./libwebsockets)
@@ -117,8 +120,12 @@ The other JavaScript engines considered are of varying size, performance and com
     - [crow](./crow) -- IPC / server framework 
      
       Interface looks nicer than `oatpp`...
-    - [oatpp](./oatpp) -- IPC / server framework
-    - [ice](./ice) -- Comprehensive RPC Framework: helps you network your software with minimal effort.
+    - ~~[oatpp](./oatpp) -- IPC / server framework~~
+      + **removed**; reason: see `crow`. We have picked `crow` as the preferred way forward, so any similar/competing product is out of scope unless `crow` throws a tantrum on our test bench after all, the chances of that being *very slim*.
+    - ~~[ice](./ice) -- Comprehensive RPC Framework: helps you network your software with minimal effort.~~
+      + **removed**; reason: has a strong focus on the *remote*, i.e. `R` in `RPC` (thus a focus on things such as encryption, authentication, firewalling, etc.), which we don't want or need: all services are supposed to run on a single machine and comms go through `localhost` *only*. When folks find they need to distribute the workload across multiple machines, then we'll be entering a new era in Qiqqa usage and then will be soon enough to (re-)investigate the usefulness of this package.
+      
+        Also, we are currently more interested in *fast data serialization* then RPC *pre se* as we aim for a solution that's more akin to a REST API interface style.
 - IPC: JSON for protocol design:
     - [json](./json)
     - [json-jansson](./json-jansson)
