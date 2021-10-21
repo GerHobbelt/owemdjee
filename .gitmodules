@@ -771,3 +771,60 @@
 [submodule "libmdbx"]
 	path = libmdbx
 	url = git@github.com:GerHobbelt/libmdbx.git
+[submodule "binary_bakery"]
+	path = binary_bakery
+	url = git@github.com:GerHobbelt/binary_bakery.git
+[submodule "subprocess"]
+	path = subprocess
+	url = git@github.com:GerHobbelt/subprocess.git
+[submodule "taskflow"]
+	path = taskflow
+	url = git@github.com:GerHobbelt/taskflow.git
+[submodule "frozen"]
+	path = frozen
+	url = git@github.com:GerHobbelt/frozen.git
+[submodule "cmph-hasher"]
+	path = cmph-hasher
+	url = git@github.com:GerHobbelt/cmph.git
+[submodule "libbloom"]
+	path = libbloom
+	url = git@github.com:GerHobbelt/bloomd.git
+[submodule "cuckoofilter"]
+	path = cuckoofilter
+	url = git@github.com:GerHobbelt/cuckoofilter.git
+[submodule "cuckoo-index"]
+	path = cuckoo-index
+	url = git@github.com:GerHobbelt/cuckoo-index.git
+[submodule "morton_filter"]
+	path = morton_filter
+	url = git@github.com:GerHobbelt/morton_filter.git
+[submodule "caffe"]
+	path = caffe
+	url = git@github.com:GerHobbelt/caffe.git
+[submodule "BCF-cuckoo-index"]
+	path = BCF-cuckoo-index
+	url = git@github.com:GerHobbelt/BCF.git
+[submodule "DCF-cuckoo-index"]
+	path = DCF-cuckoo-index
+	url = git@github.com:GerHobbelt/DCF.git
+[submodule "ligra-graph"]
+	path = ligra-graph
+	url = git@github.com:GerHobbelt/ligra.git
+[submodule "emphf-hash"]
+	path = emphf-hash
+	url = git@github.com:GerHobbelt/emphf.git
+[submodule "gperf-hash"]
+	path = gperf-hash
+	url = git@github.com:GerHobbelt/gperf.git
+[submodule "phf-hash"]
+	path = phf-hash
+	url = git@github.com:GerHobbelt/phf.git
+[submodule "BBHash"]
+	path = BBHash
+	url = git@github.com:GerHobbelt/BBHash.git
+[submodule "catboost"]
+	path = catboost
+	url = git@github.com:GerHobbelt/catboost.git
+[submodule "LDCF-hash"]
+	path = LDCF-hash
+	url = git@github.com:GerHobbelt/LDCF.git

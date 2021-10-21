@@ -85,6 +85,24 @@
 
 - https://devmesh.intel.com/git?sort=best :: **interesting papers**, sites and git repositories. With a search index to dig through the (growing) collection.
 
+- coroutines et al:
+  + https://github.com/xhawk18/s_task :: awaitable coroutine library for C
+  + https://github.com/tencent-wechat/libco :: Coroutine library for C/C++
+  + https://github.com/idealvin/co :: A go-style coroutine library in C++11 and more.
+  + https://github.com/lewissbaker/cppcoro :: A library of C++ coroutine abstractions for the coroutines C++ Standards Proposal
+  + https://github.com/Naios/continuable :: C++14 asynchronous allocation aware futures (supporting then, exception handling, coroutines and connections)
+  + https://github.com/David-Haim/concurrencpp :: Modern concurrency for C++. Tasks, executors, timers and C++20 coroutines to rule them all
+  + https://github.com/iqiyi/libfiber :: The high performance coroutine library for Linux/FreeBSD/MacOS/Windows, supporting select/poll/epoll/kqueue/iocp/windows GUI
+
+    *What's more*: with the help of libfiber you can even write network module of the Windows GUI application written by MFC, wtl or other GUI framework on Windows in coroutine way. 
+  + https://github.com/sustrik/libmill :: Go-style concurrency in C
+  + https://github.com/google/marl :: A hybrid thread / fiber task scheduler written in C++ 11
+  + https://github.com/Tastyep/TaskManager :: an asynchronous task management library using the features of C++14.
+  + https://github.com/Naios/TaskScheduler :: Use functors, lambdas and std::chrono to schedule tasks in the near future
+  + 
+  
+- https://www.youtube.com/watch?v=X1T3IQ4N-3g&ab_channel=CppCon :: atomics, two types of 'em in the standard
+- https://www.youtube.com/watch?v=fHNmRkzxHWs :: part 1, https://www.youtube.com/watch?v=vElZc6zSIXM&ab_channel=CppCon :: part 2
 
 
 
