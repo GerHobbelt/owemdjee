@@ -828,3 +828,9 @@
 [submodule "LDCF-hash"]
 	path = LDCF-hash
 	url = git@github.com:GerHobbelt/LDCF.git
+[submodule "libmicrohttpd"]
+	path = libmicrohttpd
+	url = git@github.com:GerHobbelt/libmicrohttpd.git
+[submodule "civetweb"]
+	path = civetweb
+	url = git@github.com:GerHobbelt/civetweb.git
