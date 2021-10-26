@@ -834,3 +834,9 @@
 [submodule "civetweb"]
 	path = civetweb
 	url = git@github.com:GerHobbelt/civetweb.git
+[submodule "proxygen"]
+	path = proxygen
+	url = git@github.com:GerHobbelt/proxygen.git
+[submodule "h2o-server"]
+	path = h2o-server
+	url = git@github.com:GerHobbelt/h2o.git
