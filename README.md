@@ -109,6 +109,7 @@ The other JavaScript engines considered are of varying size, performance and com
       + **removed**; reason: see `flatbuffers`. When we don't dig `flatbuffers`, then `flatcc` is automatically pretty useless to us. Let's rephrase that professionally: "`flatcc` has moved out of scope for our project."
     - [cereal](./cereal) -- C++11 serialization library
     - [libzmq](./libzmq)
+    - [cppzmq](./cppzmq)
     - [libsmile](./libsmile) -- ["Smile" format](https://en.wikipedia.org/wiki/Smile_%28data_interchange_format%29), i.e. a compact binary JSON format
     - ~~[protobuf](./protobuf)~~
       + **removed**; reason: relatively slow run-time and (in my opinion) rather ugly & convoluted approach at build time. Has too much of a Java/CorprorateProgramming smell, which has not lessened over the years, unfortunately.
@@ -153,6 +154,8 @@ The other JavaScript engines considered are of varying size, performance and com
         + [lmdbxx](./lmdbxx) -- LMDB C++ wrapper
         + [palmtree](./palmtree) -- concurrent lock free B+Tree
         + [parallel-hashmap](./parallel-hashmap) -- a set of hash map implementations, as well as a btree alternative to std::map and std::set
+        + [ligra-graph](./ligra-graph)
+        + [libmdbx](./libmdbx)
 - data storage / caching / IPC: loss-less data compression
     - [lz4](./lz4)
     - [lzsse](./lzsse)
@@ -279,6 +282,8 @@ The other JavaScript engines considered are of varying size, performance and com
     - [lmdb.spreads.net](./lmdb.spreads.net)
     - [lmdb](./lmdb)
     - [lmdbxx](./lmdbxx) -- LMDB C++ wrapper
+    - [ligra-graph](./ligra-graph)
+    - [libmdbx](./libmdbx)
 - metadata & text (OCR et al): language detect, suggesting fixes, ...    
     - [unicode-cldr](./unicode-cldr)
     - [unicode-icu](./unicode-icu)
@@ -354,19 +359,16 @@ The other JavaScript engines considered are of varying size, performance and com
         - [txiki](./txiki.js) -- uses QuickJS as its kernel
         - [QuickJS-C++-Wrapper](./QuickJS-C++-Wrapper)
     - [replxx](./replxx) -- REPL CLI component: `readline` simile for REPL/interactive runs in a CLI
+    - [linenoise](./linenoise)
     - [ScriptX](./ScriptX/) -- wrapper for V8, QuickJS, Lua, Python, ...
 - multi-processing core technologies
     - [clipp](./clipp) -- commandline parser 
     - [clippson](./clippson) -- commandline parser + JSON data diagnostical dumper
     - [docopt](./docopt) -- generate documentation for command line options
     - [fmt](./fmt) -- advanced C++ data-to-text formatter. The modern answer to classic `printf()`.
-    - [crow](./crow) -- IPC / server framework
-    - [oatpp](./oatpp) -- IPC / server framework
     - [libtuv](./libtuv)
-    - [libwebsocketpp](./libwebsocketpp)
-    - [libwebsockets](./libwebsockets)
-    - [websocket-sharp](./websocket-sharp)
-    - [libzmq](./libzmq)
+    - [libzmq](./libzmq) -- ZeroMQ
+    - [cppzmq](./cppzmq)
     - [oneTBB](./oneTBB) -- Intel's Thread Building Blocks library: used with OpenImageIO, ...
     - [plf_nanotimer](./plf_nanotimer) -- high precision cross-platform performance timer
     - [pthread-win32](./pthread-win32)
@@ -379,8 +381,6 @@ The other JavaScript engines considered are of varying size, performance and com
     - [stdext-path](./stdext-path) -- path manipulations (`dirname` et al)
     - [libcpuid](./libcpuid) -- CPU & hardware info
     - [thread-pool-cpp](./thread-pool-cpp)
-    - [sparsehash](./sparsehash) -- fast hash algorithms
-    - [xxHash](./xxHash) -- fast hash algorithm
     - [cpuinfo](./cpuinfo) -- CPU & hardware info
     - [thread-pool](./thread-pool)
     - [thread-pool-c](./thread-pool-c)
@@ -389,7 +389,39 @@ The other JavaScript engines considered are of varying size, performance and com
     - [magic_enum](./magic_enum)
     - [hedley](./hedley)
     - [expected-lite](./expected-lite)
-    - [wget](./wget)
+    - [subprocess](./subprocess)
+    - [taskflow](./taskflow)
+    - [frozen](./frozen)
+- hashing, hash-like filters
+    + [sparsehash](./sparsehash) -- fast hash algorithms
+    + [xxHash](./xxHash) -- fast hash algorithm
+    + [cmph-hasher](./cmph-hasher)
+    + [libbloom](./libbloom)
+    + [cuckoofilter](./cuckoofilter)
+    + [cuckoo-index](./cuckoo-index)
+    + [morton_filter](./morton_filter)
+    + [caffe](./caffe)
+    + [BCF-cuckoo-index](./BCF-cuckoo-index)
+    + [DCF-cuckoo-index](./DCF-cuckoo-index)
+    + [emphf-hash](./emphf-hash)
+    + [gperf-hash](./gperf-hash)
+    + [phf-hash](./phf-hash)
+    + [BBHash](./BBHash)
+    + [catboost](./catboost)
+    + [LDCF-hash](./LDCF-hash)
+- web servers, generic sockets I/O (IPC)
+    + [libmicrohttpd](./libmicrohttpd)
+    + [civetweb](./civetweb)
+    + [proxygen](./proxygen)
+    + [h2o-server](./h2o-server)
+    + [drogon](./drogon)
+    + [crow](./crow) -- IPC / server framework
+    + [oatpp](./oatpp) -- IPC / server framework
+    + [wget](./wget)
+- socket I/O: websockets
+    - [libwebsocketpp](./libwebsocketpp)
+    - [libwebsockets](./libwebsockets)
+    - [websocket-sharp](./websocket-sharp)
 - disk I/O, monitoring import locations, ...
     + [efsw](./efsw) -- cross-platform file system watcher and notifier
     + [glob](./glob) -- directory scanner
@@ -458,35 +490,48 @@ The other JavaScript engines considered are of varying size, performance and com
 
 ### Libraries in this collection
 
+- [BBHash](./BBHash)
+- [BCF-cuckoo-index](./BCF-cuckoo-index)
 - [bebop](./bebop)
 - [bibtex-robust-decoder](./bibtex-robust-decoder)
 - [bibutils](./bibutils)
+- [binary_bakery](./binary_bakery) -- resource compiler-like tool: embed any data in your C/C++ application
 - [BLAKE3](./BLAKE3)
 - [boost](./boost) -- required by several other libraries in this collection
 - [breakpad](./breakpad)
 - [brotli](../brotli) -- compression
 - [bzip2](./bzip2)
 - [c-blosc2](./c-blosc2)
+- [caffe](./caffe)
+- [catboost](./catboost)
 - [cereal](./cereal) -- C++11 serialization library
 - [CHM lib](./CHM-lib) -- as I have several HTML pages stored in this format. See also MHTML: `mht-rip`
+- [civetweb](./civetweb)
 - [clBLAS](./clBLAS)
 - [cli11](./cli11) -- command line options parser
 - [clipp](./clipp) -- commandline parser 
 - [clippson](./clippson) -- commandline parser + JSON data diagnostical dumper
+- [cmph-hasher](./cmph-hasher)
 - [cpp-btree](../cpp-btree) -- in-memory B+-tree: an alternative for the priority queue as we expect the queue to grow huge, given past experience with Qiqqa.
+- [cppzmq](./cppzmq)
 - [cpuinfo](./cpuinfo) -- CPU & hardware info
 - [CPython](./CPython)
 - [createprocess-windows](./createprocess-windows) -- drive `CreateProcess` Win32 API
 - [crow](./crow) -- IPC / server framework 
 - [cryptopp](./cryptopp)
+- [cuckoo-index](./cuckoo-index)
+- [cuckoofilter](./cuckoofilter)
 - [curl](../curl)
+- [DCF-cuckoo-index](./DCF-cuckoo-index)
 - [djvulibre](./djvulibre)
 - [dlib](./dlib) -- machine learning algorithms
 - [docopt](./docopt) -- generate documentation for command line options
+- [drogon](./drogon)
 - [dtl-diff-template-library](./dtl-diff-template-library)
 - [EasyLogger](./EasyLogger)
 - [ECMA262](./ECMA262)
 - [efsw](./efsw) -- cross-platform file system watcher and notifier
+- [emphf-hash](./emphf-hash)
 - [expected-lite](./expected-lite)
 - [extract](../extract)
 - [fast-lzma2](./fast-lzma2)
@@ -498,6 +543,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [fmt](./fmt) -- advanced C++ data-to-text formatter. The modern answer to classic `printf()`.
 - [freeglut](../freeglut)
 - [freetype](../freetype)
+- [frozen](./frozen)
 - [gbenchmark](./gbenchmark)
 - [GDCM-Grassroots-DICOM](./GDCM-Grassroots-DICOM)
 - [gflags](./gflags) -- google::flags library, used by other libs in this set.
@@ -505,10 +551,12 @@ The other JavaScript engines considered are of varying size, performance and com
 - [glog](./glog)
 - [google-diff-match-patch](./google-diff-match-patch)
 - [googletest](./googletest)
+- [gperf-hash](./gperf-hash)
 - [GraphicsMagick](./GraphicsMagick)
 - [gumbo-libxml](./gumbo-libxml)
 - [gumbo-parser](../gumbo-parser)
 - [gumbo-query](./gumbo-query) -- HTML DOM access in C/C++
+- [h2o-server](./h2o-server)
 - [h5cpp-HDF5](./h5cpp-HDF5)
 - [harfbuzz](../harfbuzz)
 - [HDF5](./HDF5)
@@ -540,9 +588,11 @@ The other JavaScript engines considered are of varying size, performance and com
 - [lda-bigartm](./lda-bigartm)
 - [lda-Familia](./lda-Familia)
 - [lda](./lda) -- variational EM for latent Dirichlet allocation (LDA), David Blei et al
+- [LDCF-hash](./LDCF-hash)
 - [leptonica](../leptonica)
 - [lib_nas_lockfile](./lib_nas_lockfile) -- lockfile management on NAS and other disparate network filesystem storage. To be combined with SQLite to create a proper Qiqqa Sync operation.
 - [libarchive](./libarchive)
+- [libbloom](./libbloom)
 - [libcmime](../libcmime) -- MIME extract/insert/encode/decode: use for MHTML support
 - [libconfig](../libconfig) -- generic config (file) reader/writer
 - [libcpuid](./libcpuid) -- CPU & hardware info
@@ -552,6 +602,8 @@ The other JavaScript engines considered are of varying size, performance and com
 - [libidn2](./libidn2)
 - [libjpeg-turbo](./libjpeg-turbo)
 - [libjpeg](../libjpeg)
+- [libmdbx](./libmdbx)
+- [libmicrohttpd](./libmicrohttpd)
 - [libpng](../libpng)
 - [libqrencode](./libqrencode)
 - [libscanf](./libscanf)
@@ -571,6 +623,8 @@ The other JavaScript engines considered are of varying size, performance and com
 - [libzmq](./libzmq)
 - [LightLDA](./LightLDA)
 - [Lightning.NET](./Lightning.NET) -- .NET library for OpenLDAP's LMDB key-value store
+- [ligra-graph](./ligra-graph)
+- [linenoise](./linenoise)
 - [lizard](./lizard)
 - [lmdb-safe](./lmdb-safe)
 - [lmdb-store](./lmdb-store)
@@ -595,6 +649,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [MITIE-nlp](./MITIE-nlp)
 - [mlpack](./mlpack)
 - [mmc](./mmc)
+- [morton_filter](./morton_filter)
 - [mujs](../mujs)
 - [ncnn](./ncnn) -- high-performance neural network inference computing framework optimized for mobile platforms (i.e. small footprint)
 - [oatpp](./oatpp) -- IPC / server framework
@@ -611,11 +666,13 @@ The other JavaScript engines considered are of varying size, performance and com
 - [palmtree](./palmtree) -- concurrent lock free B+Tree
 - [parallel-hashmap](./parallel-hashmap) -- a set of hash map implementations, as well as a btree alternative to std::map and std::set
 - [pcg-c-random](./pcg-c-random) -- fast random generators
+- [phf-hash](./phf-hash)
 - [picohttpparser](./picohttpparser)
 - [pithy](./pithy)
 - [plf_nanotimer](./plf_nanotimer) -- high precision cross-platform performance timer
 - [pmt-png-tools](./pmt-png-tools)
 - [protobuf](./protobuf)
+- [proxygen](./proxygen)
 - [pthread-win32](./pthread-win32)
 - [pytorch](./pytorch) -- PyTorch library in C++
 - [QuickJS-C++-Wrapper](./QuickJS-C++-Wrapper)
@@ -638,7 +695,9 @@ The other JavaScript engines considered are of varying size, performance and com
 - [squash](./squash)
 - [stdext-path](./stdext-path) -- path manipulations (`dirname` et al)
 - [stopwords](./stopwords)
+- [subprocess](./subprocess)
 - [svg-charter](./svg-charter) -- SVG chart renderer
+- [taskflow](./taskflow)
 - [tessconfigs](../tessconfigs)
 - [tessdata](../tessdata)
 - [tessdata_best](../tessdata_best)
