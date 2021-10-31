@@ -903,3 +903,21 @@
 	url = git@github.com:GerHobbelt/drogon.git
 	ignore = dirty
 
+[submodule "webview"]
+	path = webview
+	url = git@github.com:GerHobbelt/webview.git
+[submodule "wxWidgets"]
+	path = wxWidgets
+	url = git@github.com:GerHobbelt/wxWidgets.git
+[submodule "pcre"]
+	path = pcre
+	url = git@github.com:GerHobbelt/pcre.git
+[submodule "Catch2"]
+	path = Catch2
+	url = git@github.com:GerHobbelt/Catch2.git
+[submodule "cpu_features"]
+	path = cpu_features
+	url = git@github.com:GerHobbelt/cpu_features.git
+[submodule "cpu_stat"]
+	path = cpu_stat
+	url = git@github.com:GerHobbelt/cpu-stat.git
