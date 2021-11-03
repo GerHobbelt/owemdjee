@@ -392,6 +392,8 @@ The other JavaScript engines considered are of varying size, performance and com
     - [subprocess](./subprocess)
     - [taskflow](./taskflow)
     - [frozen](./frozen)
+    - [cpu_features](./cpu_features)
+    - [cpu_stat](./cpu_stat)
 - hashing, hash-like filters
     + [sparsehash](./sparsehash) -- fast hash algorithms
     + [xxHash](./xxHash) -- fast hash algorithm
@@ -485,7 +487,15 @@ The other JavaScript engines considered are of varying size, performance and com
     + [tinyexpr](./tinyexpr)
     + [tlx](./tlx) -- a collection of C++ helpers and extensions universally needed, but not found in the STL.
     + [libfolia](./libfolia)
-
+    + [pcre](./pcre)
+    + [Catch2](./Catch2)
+    + [nanosvg](./nanosvg)
+- UI / GUI
+    + [neutralinoJS](./neutralinoJS)
+    + [neutralinoJS-CLI](./neutralinoJS-CLI)
+    + [webview](./webview)
+    + [wxWidgets](./wxWidgets)
+         
 
 
 ### Libraries in this collection
@@ -504,6 +514,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [c-blosc2](./c-blosc2)
 - [caffe](./caffe)
 - [catboost](./catboost)
+- [Catch2](./Catch2)
 - [cereal](./cereal) -- C++11 serialization library
 - [CHM lib](./CHM-lib) -- as I have several HTML pages stored in this format. See also MHTML: `mht-rip`
 - [civetweb](./civetweb)
@@ -514,6 +525,8 @@ The other JavaScript engines considered are of varying size, performance and com
 - [cmph-hasher](./cmph-hasher)
 - [cpp-btree](../cpp-btree) -- in-memory B+-tree: an alternative for the priority queue as we expect the queue to grow huge, given past experience with Qiqqa.
 - [cppzmq](./cppzmq)
+- [cpu_features](./cpu_features)
+- [cpu_stat](./cpu_stat)
 - [cpuinfo](./cpuinfo) -- CPU & hardware info
 - [CPython](./CPython)
 - [createprocess-windows](./createprocess-windows) -- drive `CreateProcess` Win32 API
@@ -651,7 +664,10 @@ The other JavaScript engines considered are of varying size, performance and com
 - [mmc](./mmc)
 - [morton_filter](./morton_filter)
 - [mujs](../mujs)
+- [nanosvg](./nanosvg)
 - [ncnn](./ncnn) -- high-performance neural network inference computing framework optimized for mobile platforms (i.e. small footprint)
+- [neutralinoJS-CLI](./neutralinoJS-CLI)
+- [neutralinoJS](./neutralinoJS)
 - [oatpp](./oatpp) -- IPC / server framework
 - [olena](./olena)
 - [oneTBB](./oneTBB) -- Intel's Thread Building Blocks library: used with OpenImageIO, ...
@@ -666,6 +682,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [palmtree](./palmtree) -- concurrent lock free B+Tree
 - [parallel-hashmap](./parallel-hashmap) -- a set of hash map implementations, as well as a btree alternative to std::map and std::set
 - [pcg-c-random](./pcg-c-random) -- fast random generators
+- [pcre](./pcre)
 - [phf-hash](./phf-hash)
 - [picohttpparser](./picohttpparser)
 - [pithy](./pithy)
@@ -728,7 +745,9 @@ The other JavaScript engines considered are of varying size, performance and com
 - [upskirt-markdown](./upskirt-markdown) -- MarkDown renderer
 - [url](./url) -- URI parsing and other utility functions
 - [websocket-sharp](./websocket-sharp)
+- [webview](./webview)
 - [wget](./wget)
+- [wxWidgets](./wxWidgets)
 - [xml-pugixml](./xml-pugixml)
 - [XMP-Toolkit-SDK](./XMP-Toolkit-SDK)
 - [xsimd](./xsimd) -- xtensor core library

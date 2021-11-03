@@ -906,18 +906,36 @@
 [submodule "webview"]
 	path = webview
 	url = git@github.com:GerHobbelt/webview.git
+	ignore = dirty
 [submodule "wxWidgets"]
 	path = wxWidgets
 	url = git@github.com:GerHobbelt/wxWidgets.git
+
 [submodule "pcre"]
 	path = pcre
 	url = git@github.com:GerHobbelt/pcre.git
+	ignore = dirty
 [submodule "Catch2"]
 	path = Catch2
 	url = git@github.com:GerHobbelt/Catch2.git
+	ignore = dirty
 [submodule "cpu_features"]
 	path = cpu_features
 	url = git@github.com:GerHobbelt/cpu_features.git
+	ignore = dirty
 [submodule "cpu_stat"]
 	path = cpu_stat
 	url = git@github.com:GerHobbelt/cpu-stat.git
+	ignore = dirty
+[submodule "nanosvg"]
+	path = nanosvg
+	url = git@github.com:GerHobbelt/nanosvg.git
+	ignore = dirty
+[submodule "neutralinoJS"]
+	path = neutralinoJS
+	url = git@github.com:GerHobbelt/neutralinojs.git
+	ignore = dirty
+[submodule "neutralinoJS-CLI"]
+	path = neutralinoJS-CLI
+	url = git@github.com:GerHobbelt/neutralinojs-cli.git
+	ignore = dirty
