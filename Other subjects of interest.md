@@ -662,3 +662,34 @@
   
     This library provides a simple and an efficient C API to construct a suffix array and a Burrows-Wheeler transformed string from a given string over a constant-size alphabet. The algorithm runs in O(n log n) worst-case time using only 5n+O(1) bytes of memory space, where n is the length of the string.
 
+- https://github.com/fredrik-johansson/arb :: Arb
+
+  Arb is a C library for arbitrary-precision interval arithmetic. It has full support for both real and complex numbers. The library is thread-safe, portable, and extensively tested.
+
+  Arb produces a rigorous enclosure of the exact value of the expression, hence the user can rely on Arb's automatic error bound tracking to get an output that is guaranteed to be accurate -- no error analysis needs to be done by the user.
+
+  Features
+
+  Besides basic arithmetic, Arb allows working with univariate polynomials, truncated power series, and matrices over both real and complex numbers.
+  
+  Basic linear algebra is supported, including matrix multiplication, determinant, inverse, nonsingular solving, matrix exponential, and computation of eigenvalues and eigenvectors.
+  
+  Support for polynomials and power series is quite extensive, including methods for composition, reversion, product trees, multipoint evaluation and interpolation, complex root isolation, and transcendental functions of power series.
+  
+  Other features include root isolation for real functions, rigorous numerical integration of complex functions, and discrete Fourier transforms (DFTs).
+  
+  Special functions
+
+  Arb can compute a wide range of transcendental and special functions, including the gamma function, polygamma functions, Riemann zeta and Hurwitz zeta function, Dirichlet L-functions, polylogarithm, error function, Gauss hypergeometric function 2F1, confluent hypergeometric functions, Bessel functions, Airy functions, Legendre functions and other orthogonal polynomials, exponential and trigonometric integrals, incomplete gamma and beta functions, Jacobi theta functions, modular functions, Weierstrass elliptic functions, complete and incomplete elliptic integrals, arithmetic-geometric mean, Bernoulli numbers, partition function, Barnes G-function, Lambert W function.
+  
+  Speed
+
+  Arb uses a midpoint-radius (ball) representation of real numbers. At high precision, this allows doing interval arithmetic without significant overhead compared to plain floating-point arithmetic. Various low-level optimizations have also been implemented to reduce overhead at precisions of just a few machine words. Most operations on polynomials and power series use asymptotically fast FFT multiplication based on FLINT. Similarly, most operations on large matrices take advantage of the fast integer matrix multiplication in FLINT.
+
+  For basic arithmetic, Arb should generally be around as fast as MPFR (http://mpfr.org), though it can be a bit slower at low precision, and around twice as fast as MPFI (https://perso.ens-lyon.fr/nathalie.revol/software.html).
+  
+  Transcendental functions in Arb are quite well optimized and should generally be faster than any other arbitrary-precision software currently available. 
+
+
+
+  
