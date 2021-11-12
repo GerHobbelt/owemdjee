@@ -595,3 +595,70 @@
   
 - https://github.com/yuki-koyama/sequential-line-search :: A human-in-the-loop Bayesian optimization [SIGGRAPH 2017]
 
+- https://github.com/mavam/libbf :: a C++11 library which implements various Bloom filters, including:
+
+  + Basic
+  + Counting
+  + Spectral MI
+  + Spectral RM
+  + Bitwise
+  + A^2
+  + Stable
+
+- https://github.com/ArashPartow/bloom :: C++ Bloom Filter Library, has the following capabilities:
+  
+  + Optimal parameter selection based on expected false positive rate.
+  + Union, intersection and difference operations between bloom filters.
+  + Compression of in-use table (increase of false positive probability vs space)
+  + Portable and efficient source code implementation.
+  + Single header implementation, no building required. No external dependencies
+
+- https://github.com/bitly/dablooms :: A Scalable, Counting, Bloom Filter
+
+  This project aims to demonstrate a novel Bloom filter implementation that can scale, and provide not only the addition of new members, but reliable removal of existing members.
+
+  Bloom filters are a probabilistic data structure that provide space-efficient storage of elements at the cost of possible false positive on membership queries.
+
+  dablooms implements such a structure that takes additional metadata to classify elements in order to make an intelligent decision as to which Bloom filter an element should belong.
+
+- https://github.com/bcgsc/biobloom :: BioBloom Tools (BBT) provides the means to create filters for a given reference and then to categorize sequences. This methodology is faster than alignment but does not provide mapping locations. BBT was initially intended to be used for pre-processing and QC applications like contamination detection, but is flexible to accommodate other purposes. This tool is intended to be a pipeline component to replace costly alignment steps.
+
+  Relevant paper:
+
+  BioBloom tools: fast, accurate and memory-efficient host species sequence screening using bloom filters.  
+  Justin Chu, Sara Sadeghi, Anthony Raymond, Shaun D. Jackman, Ka Ming Nip, Richard Mar, Hamid Mohamadi, Yaron S. Butterfield, A. Gordon Robertson, Inanç Birol  
+  Bioinformatics 2014; 30 (23): 3402-3404.  
+  doi: 10.1093/bioinformatics/btu558  
+  PMID: 25143290  
+
+- https://github.com/efficient/cuckoofilter :: Cuckoo Filter
+
+  Cuckoo filter is a Bloom filter replacement for approximated set-membership queries. While Bloom filters are well-known space-efficient data structures to serve queries like "if item x is in a set?", they do not support deletion. Their variances to enable deletion (like counting Bloom filters) usually require much more space.
+
+  Cuckoo ﬁlters provide the ﬂexibility to add and remove items dynamically. A cuckoo filter is based on cuckoo hashing (and therefore named as cuckoo filter). It is essentially a cuckoo hash table storing each key's fingerprint. Cuckoo hash tables can be highly compact, thus a cuckoo filter could use less space than conventional Bloom ﬁlters, for applications that require low false positive rates (< 3%).
+
+  For details about the algorithm and citations please use:
+
+  "Cuckoo Filter: Practically Better Than Bloom" in proceedings of ACM CoNEXT 2014 by Bin Fan, Dave Andersen and Michael Kaminsky
+
+- https://github.com/simongog/sdsl-lite :: SDSL - Succinct Data Structure Library
+
+  The Succinct Data Structure Library (SDSL) is a powerful and flexible C++11 library implementing succinct data structures. In total, the library contains the highlights of 40 research publications. Succinct data structures can represent an object (such as a bitvector or a tree) in space close to the information-theoretic lower bound of the object while supporting operations of the original object efficiently. The theoretical time complexity of an operation performed on the classical data structure and the equivalent succinct data structure are (most of the time) identical.
+
+  Why SDSL?
+
+  Succinct data structures have very attractive theoretical properties. However, in practice implementing succinct data structures is non-trivial as they are often composed of complex operations on bitvectors. The SDSL Library provides high quality, open source implementations of many succinct data structures proposed in literature.
+
+  Specifically, the aim of the library is to provide basic and complex succinct data structure which are
+
+  - Easy and intuitive to use (like the STL, which provides classical data structures),
+  - Faithful to the original theoretical results,
+  - Capable of handling large inputs (yes, we support 64-bit),
+  - Provide efficient construction of all implemented succinct data structures, while at the same time enable good run-time performance.
+
+  Uses:
+
+  + https://github.com/y-256/libdivsufsort/ :: a software library that implements a lightweight suffix array construction algorithm.
+  
+    This library provides a simple and an efficient C API to construct a suffix array and a Burrows-Wheeler transformed string from a given string over a constant-size alphabet. The algorithm runs in O(n log n) worst-case time using only 5n+O(1) bytes of memory space, where n is the length of the string.
+
