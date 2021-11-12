@@ -902,7 +902,6 @@
 	path = drogon
 	url = git@github.com:GerHobbelt/drogon.git
 	ignore = dirty
-
 [submodule "webview"]
 	path = webview
 	url = git@github.com:GerHobbelt/webview.git
@@ -938,4 +937,28 @@
 [submodule "neutralinoJS-CLI"]
 	path = neutralinoJS-CLI
 	url = git@github.com:GerHobbelt/neutralinojs-cli.git
+	ignore = dirty
+[submodule "wxCharts"]
+	path = wxCharts
+	url = git@github.com:GerHobbelt/wxCharts.git
+
+[submodule "GMMreg"]
+	path = GMMreg
+	url = git@github.com:GerHobbelt/Project_gmmreg.git
+	ignore = dirty
+[submodule "liblinear"]
+	path = liblinear
+	url = git@github.com:GerHobbelt/liblinear.git
+	ignore = dirty
+[submodule "hmm-scalable"]
+	path = hmm-scalable
+	url = git@github.com:GerHobbelt/hmm-scalable.git
+	ignore = dirty
+[submodule "hmm-stoch"]
+	path = hmm-stoch
+	url = git@github.com:GerHobbelt/StochHMM.git
+	ignore = dirty
+[submodule "GMM-HMM-kMeans"]
+	path = GMM-HMM-kMeans
+	url = git@github.com:GerHobbelt/KMeans-GMM-HMM.git
 	ignore = dirty

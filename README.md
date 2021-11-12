@@ -192,14 +192,21 @@ The other JavaScript engines considered are of varying size, performance and com
     - [xtl](./xtl) -- xtensor core library
     - [clBLAS](./clBLAS)
     - [ncnn](./ncnn) -- high-performance neural network inference computing framework optimized for mobile platforms (i.e. small footprint)
-    - [sentencepiece](./sentencepiece) -- text tokenization
-    - [sentence-tokenizer](./sentence-tokenizer) -- text tokenization
-    - [you-token-to-me](./you-token-to-me) -- text tokenization
-    - [libtextcat](./libtextcat) -- text language detection
-    - [ucto](./ucto) -- text tokenization
-        + [uctodata](./uctodata) -- data for `ucto` library
-        + [libfolia](./libfolia)
-    - [fastBPE](./fastBPE) -- text tokenization / ngrams
+    - text tokenization, i.e. breaking text into words when you receiveatextstreamwithoutspaces. Also useful for Asian languages, which don't do spaces, e.g. Chinese.
+        + [sentencepiece](./sentencepiece) -- text tokenization
+        + [sentence-tokenizer](./sentence-tokenizer) -- text tokenization
+        + [you-token-to-me](./you-token-to-me) -- text tokenization
+        + [libtextcat](./libtextcat) -- text language detection
+        + [ucto](./ucto) -- text tokenization
+            * [uctodata](./uctodata) -- data for `ucto` library
+            * [libfolia](./libfolia)
+        + [fastBPE](./fastBPE) -- text tokenization / ngrams
+    - GMM/HMM/kM: fit patterns, e.g. match & transform a point cloud or image onto a template --> help matching pages against banner templates, etc. as part of the OCR/recognition task.
+        + [GMMreg](./GMMreg) -- implementations of the robust point set registration framework described in the paper "[Robust Point Set Registration Using Gaussian Mixture Models](https://github.com/bing-jian/gmmreg/blob/master/gmmreg_PAMI_preprint.pdf)", Bing Jian and Baba C. Vemuri, IEEE Transactions on Pattern Analysis and Machine Intelligence, 2011, 33(8), pp. 1633-1645. An earlier conference version of this work, "A Robust Algorithm for Point Set Registration Using Mixture of Gaussians, Bing Jian and Baba C. Vemuri.", appeared in the proceedings of ICCV'05.
+        + [liblinear](./liblinear)
+        + [hmm-scalable](./hmm-scalable)
+        + [hmm-stoch](./hmm-stoch)
+        + [GMM-HMM-kMeans](./GMM-HMM-kMeans)
     - [yara-pattern-matcher](./yara-pattern-matcher) -- for automated and user-specified pattern recognition in custom document & metadata *cleaning* / processing tasks
     - *delta features* & other feature extraction (see Qiqqa research notes)
         + [dtl-diff-template-library](./dtl-diff-template-library)
@@ -295,6 +302,7 @@ The other JavaScript engines considered are of varying size, performance and com
         + [uctodata](./uctodata) -- data for `ucto` library
         + [libfolia](./libfolia)
     - [fastBPE](./fastBPE) -- text tokenization / ngrams
+    - see also https://github.com/fxsjy/jieba for a Chinese text tokenizer (done in Python)
 - PDF metadata editing for round-trip annotation and other "external application editing" of known documents; metadata embedding / *export*
     - [libexpat](./libexpat)
     - [libxml2](./libxml2)
@@ -495,6 +503,7 @@ The other JavaScript engines considered are of varying size, performance and com
     + [neutralinoJS-CLI](./neutralinoJS-CLI)
     + [webview](./webview)
     + [wxWidgets](./wxWidgets)
+    + [wxCharts](./wxCharts)
          
 
 
@@ -562,6 +571,8 @@ The other JavaScript engines considered are of varying size, performance and com
 - [gflags](./gflags) -- google::flags library, used by other libs in this set.
 - [glob](./glob) -- directory scanner
 - [glog](./glog)
+- [GMM-HMM-kMeans](./GMM-HMM-kMeans)
+- [GMMreg](./GMMreg)
 - [google-diff-match-patch](./google-diff-match-patch)
 - [googletest](./googletest)
 - [gperf-hash](./gperf-hash)
@@ -576,6 +587,8 @@ The other JavaScript engines considered are of varying size, performance and com
 - [HDiffPatch](./HDiffPatch)
 - [hedley](./hedley)
 - [HighFive-HDF5](./HighFive-HDF5)
+- [hmm-scalable](./hmm-scalable)
+- [hmm-stoch](./hmm-stoch)
 - [hocr-fileformat](./hocr-fileformat)
 - [hocr-spec](./hocr-spec)
 - [hocr-tools](./hocr-tools)
@@ -615,6 +628,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [libidn2](./libidn2)
 - [libjpeg-turbo](./libjpeg-turbo)
 - [libjpeg](../libjpeg)
+- [liblinear](./liblinear)
 - [libmdbx](./libmdbx)
 - [libmicrohttpd](./libmicrohttpd)
 - [libpng](../libpng)
@@ -747,6 +761,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [websocket-sharp](./websocket-sharp)
 - [webview](./webview)
 - [wget](./wget)
+- [wxCharts](./wxCharts)
 - [wxWidgets](./wxWidgets)
 - [xml-pugixml](./xml-pugixml)
 - [XMP-Toolkit-SDK](./XMP-Toolkit-SDK)
@@ -763,6 +778,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [zlib](../zlib)
 - [zlog](./zlog)
 - [zstd](./zstd)
+
 
 
 
