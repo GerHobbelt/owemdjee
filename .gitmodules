@@ -962,3 +962,12 @@
 	path = GMM-HMM-kMeans
 	url = git@github.com:GerHobbelt/KMeans-GMM-HMM.git
 	ignore = dirty
+[submodule "libCZMQ"]
+	path = libCZMQ
+	url = git@github.com:GerHobbelt/czmq.git
+[submodule "libcppzmq"]
+	path = libcppzmq
+	url = git@github.com:GerHobbelt/cppzmq.git
+[submodule "libbf"]
+	path = libbf
+	url = git@github.com:GerHobbelt/libbf.git
