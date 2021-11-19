@@ -971,3 +971,9 @@
 [submodule "libbf"]
 	path = libbf
 	url = git@github.com:GerHobbelt/libbf.git
+[submodule "photino.native"]
+	path = photino.native
+	url = git@github.com:GerHobbelt/photino.Native.git
+[submodule "wxFormBuilder"]
+	path = wxFormBuilder
+	url = git@github.com:GerHobbelt/wxFormBuilder.git
