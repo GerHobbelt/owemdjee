@@ -110,6 +110,8 @@ The other JavaScript engines considered are of varying size, performance and com
     - [cereal](./cereal) -- C++11 serialization library
     - [libzmq](./libzmq)
     - [cppzmq](./cppzmq)
+    - [libcppzmq](../libcppzmq)
+    - [libCZMQ](../libCZMQ)
     - [libsmile](./libsmile) -- ["Smile" format](https://en.wikipedia.org/wiki/Smile_%28data_interchange_format%29), i.e. a compact binary JSON format
     - ~~[protobuf](./protobuf)~~
       + **removed**; reason: relatively slow run-time and (in my opinion) rather ugly & convoluted approach at build time. Has too much of a Java/CorprorateProgramming smell, which has not lessened over the years, unfortunately.
@@ -292,12 +294,12 @@ The other JavaScript engines considered are of varying size, performance and com
     - [ligra-graph](./ligra-graph)
     - [libmdbx](./libmdbx)
 - metadata & text (OCR et al): language detect, suggesting fixes, ...    
+    - [libtextcat](./libtextcat) -- text language detection
+    - [sentence-tokenizer](./sentence-tokenizer) -- text tokenization
+    - [sentencepiece](./sentencepiece) -- text tokenization
     - [unicode-cldr](./unicode-cldr)
     - [unicode-icu](./unicode-icu)
-    - [sentencepiece](./sentencepiece) -- text tokenization
-    - [sentence-tokenizer](./sentence-tokenizer) -- text tokenization
     - [you-token-to-me](./you-token-to-me) -- text tokenization
-    - [libtextcat](./libtextcat) -- text language detection
     - [ucto](./ucto) -- text tokenization
         + [uctodata](./uctodata) -- data for `ucto` library
         + [libfolia](./libfolia)
@@ -329,22 +331,22 @@ The other JavaScript engines considered are of varying size, performance and com
     - [extract](../extract)
     - ~~[gmime](./gmime) -- multipart MIME library; serves as a fundamental building block for full MHTML file format I/O support~~
       + **removed**; reason: GNOME libraries are horrible to integrate with other codebases
-    - [gumbo-parser](../gumbo-parser)
     - [gumbo-libxml](./gumbo-libxml)
-    - [mime-mega](../mime-mega) -- MIME extract/insert/encode/decode: use for MHTML support
-    - [mimetic](./mimetic) -- MIME: use for MHTML support
-    - [libzip](./libzip)
+    - [gumbo-parser](../gumbo-parser)
     - [gumbo-query](./gumbo-query) -- HTML DOM access in C/C++
-    - [tidy-html5](./tidy-html5) -- clean up HTML documents before archiving/processing
     - [http-parser](./http-parser)
-    - [picohttpparser](./picohttpparser)
-    - [xml-pugixml](./xml-pugixml)
+    - [libarchive](./libarchive)
+    - [libcmime](../libcmime) -- MIME extract/insert/encode/decode: use for MHTML support
     - [libexpat](./libexpat)
     - [libxml2](./libxml2) -- [libxml](http://xmlsoft.org/)
-    - [mht-rip](./mht-rip) -- as I have several HTML pages stored in this MHTML format. See also CHM: `CHM-lib`
+    - [libzip](./libzip)
     - [CHM lib](./CHM-lib) -- as I have several HTML pages stored in this format. See also MHTML: `mht-rip`
-    - [libcmime](../libcmime) -- MIME extract/insert/encode/decode: use for MHTML support
-    - [libarchive](./libarchive)
+    - [mht-rip](./mht-rip) -- as I have several HTML pages stored in this MHTML format. See also CHM: `CHM-lib`
+    - [mime-mega](../mime-mega) -- MIME extract/insert/encode/decode: use for MHTML support
+    - [mimetic](./mimetic) -- MIME: use for MHTML support
+    - [picohttpparser](./picohttpparser)
+    - [tidy-html5](./tidy-html5) -- clean up HTML documents before archiving/processing
+    - [xml-pugixml](./xml-pugixml)
     - [upskirt-markdown](./upskirt-markdown) -- MarkDown renderer
         - [svg-charter](./svg-charter) -- SVG chart renderer
             - [tinyexpr](./tinyexpr)
@@ -366,67 +368,70 @@ The other JavaScript engines considered are of varying size, performance and com
     - [QuickJS](./QuickJS)
         - [txiki](./txiki.js) -- uses QuickJS as its kernel
         - [QuickJS-C++-Wrapper](./QuickJS-C++-Wrapper)
+        - [libbf](../libbf) -- a small library to handle arbitrary precision binary or decimal floating point numbers
     - [replxx](./replxx) -- REPL CLI component: `readline` simile for REPL/interactive runs in a CLI
     - [linenoise](./linenoise)
     - [ScriptX](./ScriptX/) -- wrapper for V8, QuickJS, Lua, Python, ...
 - multi-processing core technologies
+    - [cli11](./cli11) -- command line options parser
     - [clipp](./clipp) -- commandline parser 
     - [clippson](./clippson) -- commandline parser + JSON data diagnostical dumper
-    - [docopt](./docopt) -- generate documentation for command line options
-    - [fmt](./fmt) -- advanced C++ data-to-text formatter. The modern answer to classic `printf()`.
-    - [libtuv](./libtuv)
-    - [libzmq](./libzmq) -- ZeroMQ
-    - [cppzmq](./cppzmq)
-    - [oneTBB](./oneTBB) -- Intel's Thread Building Blocks library: used with OpenImageIO, ...
-    - [plf_nanotimer](./plf_nanotimer) -- high precision cross-platform performance timer
-    - [pthread-win32](./pthread-win32)
-    - [tiny-process-library](./tiny-process-library) -- small platform independent library making it simple to create and stop new processes, as well as writing to stdin and reading from stdout and stderr of a new process.
-    - [createprocess-windows](./createprocess-windows) -- drive `CreateProcess` Win32 API
-    - [messagebox-windows](./messagebox-windows) -- drive `MessageBox` and `MessageBeep` Win32 APIs
-    - [spy-build-sysinfo](./spy-build-sysinfo) -- build system info
-    - [cli11](./cli11) -- command line options parser
-    - [pcg-c-random](./pcg-c-random) -- fast random generators
-    - [stdext-path](./stdext-path) -- path manipulations (`dirname` et al)
-    - [libcpuid](./libcpuid) -- CPU & hardware info
-    - [thread-pool-cpp](./thread-pool-cpp)
-    - [cpuinfo](./cpuinfo) -- CPU & hardware info
-    - [thread-pool](./thread-pool)
-    - [thread-pool-c](./thread-pool-c)
-    - [libunifex](./libunifex)
-    - [libscanf](./libscanf)
-    - [magic_enum](./magic_enum)
-    - [hedley](./hedley)
-    - [expected-lite](./expected-lite)
-    - [subprocess](./subprocess)
-    - [taskflow](./taskflow)
-    - [frozen](./frozen)
     - [cpu_features](./cpu_features)
     - [cpu_stat](./cpu_stat)
+    - [cpuinfo](./cpuinfo) -- CPU & hardware info
+    - [createprocess-windows](./createprocess-windows) -- drive `CreateProcess` Win32 API
+    - [docopt](./docopt) -- generate documentation for command line options
+    - [expected-lite](./expected-lite)
+    - [fmt](./fmt) -- advanced C++ data-to-text formatter. The modern answer to classic `printf()`.
+    - [frozen](./frozen)
+    - [hedley](./hedley)
+    - [libcpuid](./libcpuid) -- CPU & hardware info
+    - [libscanf](./libscanf)
+    - [libtuv](./libtuv)
+    - [libunifex](./libunifex)
+    - [libzmq](./libzmq) -- ZeroMQ
+    - [cppzmq](./cppzmq)
+    - [libcppzmq](../libcppzmq)
+    - [libCZMQ](../libCZMQ)
+    - [magic_enum](./magic_enum)
+    - [messagebox-windows](./messagebox-windows) -- drive `MessageBox` and `MessageBeep` Win32 APIs
+    - [oneTBB](./oneTBB) -- Intel's Thread Building Blocks library: used with OpenImageIO, ...
+    - [pcg-c-random](./pcg-c-random) -- fast random generators
+    - [plf_nanotimer](./plf_nanotimer) -- high precision cross-platform performance timer
+    - [pthread-win32](./pthread-win32)
+    - [spy-build-sysinfo](./spy-build-sysinfo) -- build system info
+    - [stdext-path](./stdext-path) -- path manipulations (`dirname` et al)
+    - [subprocess](./subprocess)
+    - [taskflow](./taskflow)
+    - [thread-pool-c](./thread-pool-c)
+    - [thread-pool-cpp](./thread-pool-cpp)
+    - [thread-pool](./thread-pool)
+    - [tiny-process-library](./tiny-process-library) -- small platform independent library making it simple to create and stop new processes, as well as writing to stdin and reading from stdout and stderr of a new process.
 - hashing, hash-like filters
-    + [sparsehash](./sparsehash) -- fast hash algorithms
-    + [xxHash](./xxHash) -- fast hash algorithm
-    + [cmph-hasher](./cmph-hasher)
-    + [libbloom](./libbloom)
-    + [cuckoofilter](./cuckoofilter)
-    + [cuckoo-index](./cuckoo-index)
-    + [morton_filter](./morton_filter)
-    + [caffe](./caffe)
+    + [BBHash](./BBHash)
     + [BCF-cuckoo-index](./BCF-cuckoo-index)
+    + [caffe](./caffe)
+    + [catboost](./catboost)
+    + [cmph-hasher](./cmph-hasher)
+    + [cuckoo-index](./cuckoo-index)
+    + [cuckoofilter](./cuckoofilter)
     + [DCF-cuckoo-index](./DCF-cuckoo-index)
     + [emphf-hash](./emphf-hash)
     + [gperf-hash](./gperf-hash)
-    + [phf-hash](./phf-hash)
-    + [BBHash](./BBHash)
-    + [catboost](./catboost)
     + [LDCF-hash](./LDCF-hash)
+    + [libbloom](./libbloom)
+    + [morton_filter](./morton_filter)
+    + [phf-hash](./phf-hash)
+    + [sparsehash](./sparsehash) -- fast hash algorithms
+    + [xxHash](./xxHash) -- fast hash algorithm
 - web servers, generic sockets I/O (IPC)
-    + [libmicrohttpd](./libmicrohttpd)
     + [civetweb](./civetweb)
-    + [proxygen](./proxygen)
-    + [h2o-server](./h2o-server)
-    + [drogon](./drogon)
     + [crow](./crow) -- IPC / server framework
+    + [drogon](./drogon)
+    + [h2o-server](./h2o-server)
+    + [libmicrohttpd](./libmicrohttpd)
     + [oatpp](./oatpp) -- IPC / server framework
+    + [proxygen](./proxygen)
     + [wget](./wget)
 - socket I/O: websockets
     - [libwebsocketpp](./libwebsocketpp)
@@ -437,11 +442,11 @@ The other JavaScript engines considered are of varying size, performance and com
     + [glob](./glob) -- directory scanner
 - configuration / parameterization 
     + [gflags](./gflags) -- google::flags library, used by other libs in this set.
-    + [tomlpp](../tomlpp) -- TOML++
-    + [libyaml](./libyaml) -- YAML
     + [inih](./inih)
     + [iniparser](./iniparser)
     + [libconfig](../libconfig) -- generic config (file) reader/writer
+    + [libyaml](./libyaml) -- YAML
+    + [tomlpp](../tomlpp) -- TOML++
 - testing & fuzzing
     - [googletest](./googletest)
     - [gbenchmark](./gbenchmark)
@@ -455,8 +460,8 @@ The other JavaScript engines considered are of varying size, performance and com
     + [plf_nanotimer](./plf_nanotimer) -- high precision cross-platform performance timer
     + [replxx](./replxx) -- REPL CLI component: `readline` simile for REPL/interactive runs in a CLI
     + [resumable-assert](./resumable-assert)
-    + [zlog](./zlog)
     + [spdlog](./spdlog)
+    + [zlog](./zlog)
 - OCR core (tesseract)
     + [langdata_LSTM](../langdata_LSTM)
     + [tessconfigs](../tessconfigs)
@@ -484,26 +489,29 @@ The other JavaScript engines considered are of varying size, performance and com
     + [zlib](../zlib)
 - sub-dependencies (libraries which are required by any of the above)
     + [boost](./boost) -- required by several other libraries in this collection
+    + [Catch2](./Catch2)
     + [gflags](./gflags) -- google::flags library, used by other libs in this set.
     + [Imath](./Imath) -- float16 support lib for OpenEXR format
     + [jemalloc](./jemalloc)
+    + [libbf](../libbf)
+    + [libfolia](./libfolia)
     + [libidn2](./libidn2)
+    + [nanosvg](./nanosvg)
     + [OpenSSL](./openssl) -- also used by CURL et al, incidentally.
+    + [pcre](./pcre)
     + [protobuf](./protobuf)
-    + [uint128_t](./uint128_t)
     + [svg-charter](./svg-charter) -- SVG chart renderer
     + [tinyexpr](./tinyexpr)
     + [tlx](./tlx) -- a collection of C++ helpers and extensions universally needed, but not found in the STL.
-    + [libfolia](./libfolia)
-    + [pcre](./pcre)
-    + [Catch2](./Catch2)
-    + [nanosvg](./nanosvg)
+    + [uint128_t](./uint128_t)
 - UI / GUI
     + [neutralinoJS](./neutralinoJS)
     + [neutralinoJS-CLI](./neutralinoJS-CLI)
+    + [photino.native](../photino.native)
     + [webview](./webview)
     + [wxWidgets](./wxWidgets)
     + [wxCharts](./wxCharts)
+    + [wxFormBuilder](../wxFormBuilder)
          
 
 
@@ -618,10 +626,13 @@ The other JavaScript engines considered are of varying size, performance and com
 - [leptonica](../leptonica)
 - [lib_nas_lockfile](./lib_nas_lockfile) -- lockfile management on NAS and other disparate network filesystem storage. To be combined with SQLite to create a proper Qiqqa Sync operation.
 - [libarchive](./libarchive)
+- [libbf](../libbf)
 - [libbloom](./libbloom)
 - [libcmime](../libcmime) -- MIME extract/insert/encode/decode: use for MHTML support
 - [libconfig](../libconfig) -- generic config (file) reader/writer
+- [libcppzmq](../libcppzmq)
 - [libcpuid](./libcpuid) -- CPU & hardware info
+- [libCZMQ](../libCZMQ)
 - [libexpat](./libexpat)
 - [libfolia](./libfolia)
 - [libgif](./libgif)
@@ -698,6 +709,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [pcg-c-random](./pcg-c-random) -- fast random generators
 - [pcre](./pcre)
 - [phf-hash](./phf-hash)
+- [photino.native](../photino.native)
 - [picohttpparser](./picohttpparser)
 - [pithy](./pithy)
 - [plf_nanotimer](./plf_nanotimer) -- high precision cross-platform performance timer
@@ -762,6 +774,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [webview](./webview)
 - [wget](./wget)
 - [wxCharts](./wxCharts)
+- [wxFormBuilder](../wxFormBuilder)
 - [wxWidgets](./wxWidgets)
 - [xml-pugixml](./xml-pugixml)
 - [XMP-Toolkit-SDK](./XMP-Toolkit-SDK)
