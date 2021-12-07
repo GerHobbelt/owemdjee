@@ -149,6 +149,8 @@ The other JavaScript engines considered are of varying size, performance and com
         + [cpp-btree](../cpp-btree) -- in-memory B+-tree: an alternative for the priority queue as we expect the queue to grow huge, given past experience with Qiqqa.
         + [tlx-btree](./tlx-btree) -- in-memory B+-tree: an alternative for the priority queue as we expect the queue to grow huge, given past experience with Qiqqa.
         + [Lightning.NET](./Lightning.NET) -- .NET library for OpenLDAP's LMDB key-value store
+        + [libmdbx](./libmdbx)
+        + [ligra-graph](./ligra-graph)
         + [lmdb-safe](./lmdb-safe)
         + [lmdb-store](./lmdb-store)
         + [lmdb.spreads.net](./lmdb.spreads.net)
@@ -156,24 +158,22 @@ The other JavaScript engines considered are of varying size, performance and com
         + [lmdbxx](./lmdbxx) -- LMDB C++ wrapper
         + [palmtree](./palmtree) -- concurrent lock free B+Tree
         + [parallel-hashmap](./parallel-hashmap) -- a set of hash map implementations, as well as a btree alternative to std::map and std::set
-        + [ligra-graph](./ligra-graph)
-        + [libmdbx](./libmdbx)
 - data storage / caching / IPC: loss-less data compression
-    - [lz4](./lz4)
-    - [lzsse](./lzsse)
-    - [lizard](./lizard)
-    - [pithy](./pithy)
-    - [snappy](./snappy)
-    - [lzo](./lzo)
-    - [xz-utils](./xz-utils)
-    - [fast-lzma2](./fast-lzma2)
-    - [zstd](./zstd)
-    - [squash](./squash)
-    - [libzip](./libzip)
-    - see also [lzbench](https://github.com/inikep/lzbench)
     - [brotli](../brotli) -- compression
     - [bzip2](./bzip2)
+    - [fast-lzma2](./fast-lzma2)
+    - [libzip](./libzip)
+    - [lizard](./lizard)
+    - [lz4](./lz4)
+    - [lzo](./lzo)
+    - [lzsse](./lzsse)
+    - [pithy](./pithy)
     - [shoco](./shoco) -- a fast compressor for short strings
+    - [snappy](./snappy)
+    - [squash](./squash)
+    - [xz-utils](./xz-utils)
+    - [zstd](./zstd)
+    - see also [lzbench](https://github.com/inikep/lzbench)
 - OCR: hOCR output format, other output format? (dedicated binary?)
     - [hocr-fileformat](./hocr-fileformat)
     - [hocr-spec](./hocr-spec)
@@ -181,19 +181,19 @@ The other JavaScript engines considered are of varying size, performance and com
 - pattern recognition: "A.I." for cover pages, image/page *segmentation*, including abstract & summary demarcation, "figure" and "table" detection & extraction from documents, ...
     - [dlib](./dlib) -- machine learning algorithms
         - [lapack](./lapack) -- [CBLAS](http://www.netlib.org/blas/) + [LAPACK](http://www.netlib.org/lapack/index.html) optimized linear algebra libs
+    - [clBLAS](./clBLAS)
     - [libsvm](./libsvm)
-    - [thunderSVM](./thunderSVM)
     - [math-atlas](./math-atlas)
     - [MITIE-nlp](./MITIE-nlp)
     - [mlpack](./mlpack)
+    - [ncnn](./ncnn) -- high-performance neural network inference computing framework optimized for mobile platforms (i.e. small footprint)
     - [pytorch](./pytorch) -- PyTorch library in C++
-    - [xtensor](./xtensor)
+    - [thunderSVM](./thunderSVM)
+    - [xsimd](./xsimd) -- xtensor core library
     - [xtensor-blas](./xtensor-blas)
     - [xtensor-io](./xtensor-io)
-    - [xsimd](./xsimd) -- xtensor core library
+    - [xtensor](./xtensor)
     - [xtl](./xtl) -- xtensor core library
-    - [clBLAS](./clBLAS)
-    - [ncnn](./ncnn) -- high-performance neural network inference computing framework optimized for mobile platforms (i.e. small footprint)
     - text tokenization, i.e. breaking text into words when you receiveatextstreamwithoutspaces. Also useful for Asian languages, which don't do spaces, e.g. Chinese.
         + [sentencepiece](./sentencepiece) -- text tokenization
         + [sentence-tokenizer](./sentence-tokenizer) -- text tokenization
@@ -201,7 +201,7 @@ The other JavaScript engines considered are of varying size, performance and com
         + [libtextcat](./libtextcat) -- text language detection
         + [ucto](./ucto) -- text tokenization
             * [uctodata](./uctodata) -- data for `ucto` library
-            * [libfolia](./libfolia)
+            * [libfolia](./libfolia) -- working with the Format for Linguistic Annotation (FoLiA).
         + [fastBPE](./fastBPE) -- text tokenization / ngrams
     - GMM/HMM/kM: fit patterns, e.g. match & transform a point cloud or image onto a template --> help matching pages against banner templates, etc. as part of the OCR/recognition task.
         + [GMMreg](./GMMreg) -- implementations of the robust point set registration framework described in the paper "[Robust Point Set Registration Using Gaussian Mixture Models](https://github.com/bing-jian/gmmreg/blob/master/gmmreg_PAMI_preprint.pdf)", Bing Jian and Baba C. Vemuri, IEEE Transactions on Pattern Analysis and Machine Intelligence, 2011, 33(8), pp. 1633-1645. An earlier conference version of this work, "A Robust Algorithm for Point Set Registration Using Mixture of Gaussians, Bing Jian and Baba C. Vemuri.", appeared in the proceedings of ICCV'05.
@@ -271,7 +271,7 @@ The other JavaScript engines considered are of varying size, performance and com
         + [libtextcat](./libtextcat) -- text language detection
         + [ucto](./ucto) -- text tokenization
             * [uctodata](./uctodata) -- data for `ucto` library
-            * [libfolia](./libfolia)
+            * [libfolia](./libfolia) -- working with the Format for Linguistic Annotation (FoLiA).
         + [fastBPE](./fastBPE) -- text tokenization / ngrams
         + [many-stop-words](./many-stop-words)
         + [stopwords](./stopwords)
@@ -302,12 +302,12 @@ The other JavaScript engines considered are of varying size, performance and com
     - [you-token-to-me](./you-token-to-me) -- text tokenization
     - [ucto](./ucto) -- text tokenization
         + [uctodata](./uctodata) -- data for `ucto` library
-        + [libfolia](./libfolia)
+        + [libfolia](./libfolia) -- working with the Format for Linguistic Annotation (FoLiA).
     - [fastBPE](./fastBPE) -- text tokenization / ngrams
     - see also https://github.com/fxsjy/jieba for a Chinese text tokenizer (done in Python)
 - PDF metadata editing for round-trip annotation and other "external application editing" of known documents; metadata embedding / *export*
-    - [libexpat](./libexpat)
-    - [libxml2](./libxml2)
+    - [libexpat](./libexpat) -- XML read/write
+    - [libxml2](./libxml2) -- XML read/write
     - [xml-pugixml](./xml-pugixml)
     - [XMP-Toolkit-SDK](./XMP-Toolkit-SDK)
 - web scraping (document extraction, cleaning, metadata extraction, BibTeX, ...) 
@@ -320,8 +320,8 @@ The other JavaScript engines considered are of varying size, performance and com
     - [http-parser](./http-parser)
     - [picohttpparser](./picohttpparser)
     - [xml-pugixml](./xml-pugixml)
-    - [libexpat](./libexpat)
-    - [libxml2](./libxml2) -- [libxml](http://xmlsoft.org/)
+    - [libexpat](./libexpat) -- XML read/write
+    - [libxml2](./libxml2) -- [libxml](http://xmlsoft.org/): XML read/write
     - [gumbo-query](./gumbo-query) -- HTML DOM access in C/C++
     - [tidy-html5](./tidy-html5)
     - [url](./url) -- URI parsing and other utility functions
@@ -337,14 +337,15 @@ The other JavaScript engines considered are of varying size, performance and com
     - [http-parser](./http-parser)
     - [libarchive](./libarchive)
     - [libcmime](../libcmime) -- MIME extract/insert/encode/decode: use for MHTML support
-    - [libexpat](./libexpat)
-    - [libxml2](./libxml2) -- [libxml](http://xmlsoft.org/)
+    - [libexpat](./libexpat) -- XML read/write
+    - [libxml2](./libxml2) -- [libxml](http://xmlsoft.org/): XML read/write
     - [libzip](./libzip)
     - [CHM lib](./CHM-lib) -- as I have several HTML pages stored in this format. See also MHTML: `mht-rip`
     - [mht-rip](./mht-rip) -- as I have several HTML pages stored in this MHTML format. See also CHM: `CHM-lib`
     - [mime-mega](../mime-mega) -- MIME extract/insert/encode/decode: use for MHTML support
     - [mimetic](./mimetic) -- MIME: use for MHTML support
     - [picohttpparser](./picohttpparser)
+    - [ticpp](./ticpp) -- TinyXML++: XML read/write
     - [tidy-html5](./tidy-html5) -- clean up HTML documents before archiving/processing
     - [xml-pugixml](./xml-pugixml)
     - [upskirt-markdown](./upskirt-markdown) -- MarkDown renderer
@@ -369,13 +370,15 @@ The other JavaScript engines considered are of varying size, performance and com
         - [txiki](./txiki.js) -- uses QuickJS as its kernel
         - [QuickJS-C++-Wrapper](./QuickJS-C++-Wrapper)
         - [libbf](../libbf) -- a small library to handle arbitrary precision binary or decimal floating point numbers
+    - [ScriptX](./ScriptX/) -- wrapper for V8, QuickJS, Lua, Python, ...
+     
     - [replxx](./replxx) -- REPL CLI component: `readline` simile for REPL/interactive runs in a CLI
     - [linenoise](./linenoise)
-    - [ScriptX](./ScriptX/) -- wrapper for V8, QuickJS, Lua, Python, ...
 - multi-processing core technologies
     - [cli11](./cli11) -- command line options parser
     - [clipp](./clipp) -- commandline parser 
     - [clippson](./clippson) -- commandline parser + JSON data diagnostical dumper
+    - [cppzmq](./cppzmq)
     - [cpu_features](./cpu_features)
     - [cpu_stat](./cpu_stat)
     - [cpuinfo](./cpuinfo) -- CPU & hardware info
@@ -385,28 +388,55 @@ The other JavaScript engines considered are of varying size, performance and com
     - [fmt](./fmt) -- advanced C++ data-to-text formatter. The modern answer to classic `printf()`.
     - [frozen](./frozen)
     - [hedley](./hedley)
+    - [libcppzmq](../libcppzmq)
     - [libcpuid](./libcpuid) -- CPU & hardware info
+    - [libCZMQ](../libCZMQ)
     - [libscanf](./libscanf)
     - [libtuv](./libtuv)
-    - [libunifex](./libunifex)
+    - [libunifex](./libunifex) -- a prototype implementation of the C++ sender/receiver async programming model that is currently being considered for standardisation. This project contains implementations of the following: Schedulers, Timers, Asynchronous I/O, Algorithms that encapsulate certain concurrency patterns, Async streams, Cancellation, Coroutine integration.
     - [libzmq](./libzmq) -- ZeroMQ
-    - [cppzmq](./cppzmq)
-    - [libcppzmq](../libcppzmq)
-    - [libCZMQ](../libCZMQ)
     - [magic_enum](./magic_enum)
     - [messagebox-windows](./messagebox-windows) -- drive `MessageBox` and `MessageBeep` Win32 APIs
     - [oneTBB](./oneTBB) -- Intel's Thread Building Blocks library: used with OpenImageIO, ...
     - [pcg-c-random](./pcg-c-random) -- fast random generators
     - [plf_nanotimer](./plf_nanotimer) -- high precision cross-platform performance timer
+    - [prio_queue](./prio_queue) -- a cache friendly priority queue, done as a B-heap.
     - [pthread-win32](./pthread-win32)
     - [spy-build-sysinfo](./spy-build-sysinfo) -- build system info
     - [stdext-path](./stdext-path) -- path manipulations (`dirname` et al)
     - [subprocess](./subprocess)
-    - [taskflow](./taskflow)
     - [thread-pool-c](./thread-pool-c)
     - [thread-pool-cpp](./thread-pool-cpp)
     - [thread-pool](./thread-pool)
     - [tiny-process-library](./tiny-process-library) -- small platform independent library making it simple to create and stop new processes, as well as writing to stdin and reading from stdout and stderr of a new process.
+    - task schedulers
+      - [enkiTS](./enkiTS-TaskScheduler) -- A C++11 Task Scheduler for creating parallel programs.
+     
+        Features:
+        - Lightweight
+        - Fast, then scalable - designed for consumer devices first, so performance on a low number of threads is important, followed by scalability.
+        - Braided parallelism - can issue tasks from another task as well as from the thread which created the Task System, and has a simple task interface for both data and task parallelism.
+        - Up-front Allocation friendly - designed for zero allocations during scheduling.
+        - Can pin tasks to a given thread - can schedule a task which will only be run on the specified thread.
+        - Can set task priorities - Up to 5 task priorities can be configured via define ENKITS_TASK_PRIORITIES_NUM (defaults to 3). Higher priority tasks are run before lower priority ones.
+        - Can register external threads to use with enkiTS
+        - Dependencies - can set dependendencies between tasks.
+        - Completion Actions - can perform an action on task completion. This avoids the expensive action of adding the task to the scheduler, and can be used to safely delete a completed task.
+        - Can wait for pinned tasks - useful for creating IO threads which do no other work.
+      - [google::marl](./google-marl) -- a hybrid thread / fiber task scheduler written in C++ 11. Marl uses a combination of fibers and threads to allow efficient execution of tasks that can block, while keeping a fixed number of hardware threads.
+      - [taskflow](./taskflow) -- Quickly write parallel and heterogeneous task programs in modern C++. Taskflow is faster, more expressive, and easier for drop-in integration than many of existing task programming frameworks in handling complex parallel workloads.
+ 
+    - Promise/A+
+
+      The key distinction between Promises/A+ and `std::promise` in C++11 is that Promises/A+ provides non-blocking synchronization (via chaining function objects) and `std::promise` provides blocking synchronization (or polling). Both have their uses and one is not a direct replacement for the other.
+
+      IMPORTANT NOTE: there is one major difference, though. Most modern Javascript promises (including JS Native promises) resolve asynchronously, i.e. their `resolve()` method does not directly call the `then()` handlers, but schedules the calls on the next message loop iteration. The same happens when a `then()`/`catch()` handler is attached to an already resolved/rejected promise. This may be a bit less efficient, but makes the behavior symmetric and more predictable. These libraries *SHOULD* resolve synchronously, because they are unaware of the message loop that is used in the application. (Look into task schedulers above for when you need such awareness, e.g. `taskflow`.)
+
+        - [promise-cpp](./promise-cpp) -- advanced C++ promise/A+ library in Javascript style
+        - [libq](./libq) -- A platform-independent promise library for C++, implementing asynchronous continuations.
+        - https://github.com/rhashimoto/poolqueue -- C++ Asynchronous Promises, inspired by Promises/A+.
+        - https://github.com/YACLib/YACLib -- Yet Another lightweight C++ library for concurrent and parallel task execution.
+        - https://github.com/alxvasilev/cpp-promise -- Javascript-like C++ promise library
 - hashing, hash-like filters
     + [BBHash](./BBHash)
     + [BCF-cuckoo-index](./BCF-cuckoo-index)
@@ -494,16 +524,18 @@ The other JavaScript engines considered are of varying size, performance and com
     + [Imath](./Imath) -- float16 support lib for OpenEXR format
     + [jemalloc](./jemalloc)
     + [libbf](../libbf)
-    + [libfolia](./libfolia)
+    + [libfolia](./libfolia) -- working with the Format for Linguistic Annotation (FoLiA).
     + [libidn2](./libidn2)
     + [nanosvg](./nanosvg)
     + [OpenSSL](./openssl) -- also used by CURL et al, incidentally.
     + [pcre](./pcre)
     + [protobuf](./protobuf)
     + [svg-charter](./svg-charter) -- SVG chart renderer
+    + [ticpp](./ticpp) -- TinyXML++: XML read/write (is part of wxFormbuilder).
     + [tinyexpr](./tinyexpr)
     + [tlx](./tlx) -- a collection of C++ helpers and extensions universally needed, but not found in the STL.
     + [uint128_t](./uint128_t)
+    + [scintilla](./scintilla) -- text editor (part of wxWidgets)
 - UI / GUI
     + [neutralinoJS](./neutralinoJS)
     + [neutralinoJS-CLI](./neutralinoJS-CLI)
@@ -512,6 +544,7 @@ The other JavaScript engines considered are of varying size, performance and com
     + [wxWidgets](./wxWidgets)
     + [wxCharts](./wxCharts)
     + [wxFormBuilder](../wxFormBuilder)
+    + [scintilla](./scintilla) -- text editor
          
 
 
@@ -562,6 +595,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [ECMA262](./ECMA262)
 - [efsw](./efsw) -- cross-platform file system watcher and notifier
 - [emphf-hash](./emphf-hash)
+- [enkiTS](./enkiTS-TaskScheduler) -- A C++11 Task Scheduler for creating parallel programs.
 - [expected-lite](./expected-lite)
 - [extract](../extract)
 - [fast-lzma2](./fast-lzma2)
@@ -582,6 +616,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [GMM-HMM-kMeans](./GMM-HMM-kMeans)
 - [GMMreg](./GMMreg)
 - [google-diff-match-patch](./google-diff-match-patch)
+- [google::marl](./google-marl) -- a hybrid thread / fiber task scheduler written in C++ 11. Marl uses a combination of fibers and threads to allow efficient execution of tasks that can block, while keeping a fixed number of hardware threads.
 - [googletest](./googletest)
 - [gperf-hash](./gperf-hash)
 - [GraphicsMagick](./GraphicsMagick)
@@ -633,8 +668,8 @@ The other JavaScript engines considered are of varying size, performance and com
 - [libcppzmq](../libcppzmq)
 - [libcpuid](./libcpuid) -- CPU & hardware info
 - [libCZMQ](../libCZMQ)
-- [libexpat](./libexpat)
-- [libfolia](./libfolia)
+- [libexpat](./libexpat) -- XML read/write
+- [libfolia](./libfolia) -- working with the Format for Linguistic Annotation (FoLiA).
 - [libgif](./libgif)
 - [libidn2](./libidn2)
 - [libjpeg-turbo](./libjpeg-turbo)
@@ -643,6 +678,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [libmdbx](./libmdbx)
 - [libmicrohttpd](./libmicrohttpd)
 - [libpng](../libpng)
+- [libq](./libq) -- A platform-independent promise library for C++, implementing asynchronous continuations.
 - [libqrencode](./libqrencode)
 - [libscanf](./libscanf)
 - [libsmile](./libsmile) -- ["Smile" format](https://en.wikipedia.org/wiki/Smile_%28data_interchange_format%29), i.e. a compact binary JSON format
@@ -650,12 +686,12 @@ The other JavaScript engines considered are of varying size, performance and com
 - [libtextcat](./libtextcat) -- text language detection
 - [libtiff](../libtiff)
 - [libtuv](./libtuv)
-- [libunifex](./libunifex)
+- [libunifex](./libunifex) -- a prototype implementation of the C++ sender/receiver async programming model that is currently being considered for standardisation. This project contains implementations of the following: Schedulers, Timers, Asynchronous I/O, Algorithms that encapsulate certain concurrency patterns, Async streams, Cancellation, Coroutine integration.
 - [libvips](./libvips)
 - [libwebp](./libwebp)
 - [libwebsocketpp](./libwebsocketpp)
 - [libwebsockets](./libwebsockets)
-- [libxml2](./libxml2) -- [libxml](http://xmlsoft.org/)
+- [libxml2](./libxml2) -- [libxml](http://xmlsoft.org/): XML read/write
 - [libyaml](./libyaml) -- YAML
 - [libzip](./libzip)
 - [libzmq](./libzmq)
@@ -714,6 +750,8 @@ The other JavaScript engines considered are of varying size, performance and com
 - [pithy](./pithy)
 - [plf_nanotimer](./plf_nanotimer) -- high precision cross-platform performance timer
 - [pmt-png-tools](./pmt-png-tools)
+- [prio_queue](./prio_queue) -- a cache friendly priority queue, done as a B-heap.
+- [promise-cpp](./promise-cpp) -- advanced C++ promise/A+ library in Javascript style
 - [protobuf](./protobuf)
 - [proxygen](./proxygen)
 - [pthread-win32](./pthread-win32)
@@ -755,6 +793,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [thread-pool-cpp](./thread-pool-cpp)
 - [thread-pool](./thread-pool)
 - [thunderSVM](./thunderSVM)
+- [ticpp](./ticpp) -- TinyXML++: XML read/write
 - [tidy-html5](./tidy-html5) -- clean up HTML documents before archiving/processing
 - [tiny-process-library](./tiny-process-library) -- small platform independent library making it simple to create and stop new processes, as well as writing to stdin and reading from stdout and stderr of a new process.
 - [tinyexpr](./tinyexpr)
