@@ -985,21 +985,28 @@
 [submodule "scintilla"]
 	path = scintilla
 	url = git@github.com:GerHobbelt/scintilla.git
+
 [submodule "enkiTS-TaskScheduler"]
 	path = enkiTS-TaskScheduler
 	url = git@github.com:GerHobbelt/enkiTS.git
+	ignore = dirty
 [submodule "promise-cpp"]
 	path = promise-cpp
 	url = git@github.com:GerHobbelt/promise-cpp.git
+	ignore = dirty
 [submodule "libq"]
 	path = libq
 	url = git@github.com:GerHobbelt/q.git
+	ignore = dirty
 [submodule "prio_queue"]
 	path = prio_queue
 	url = git@github.com:GerHobbelt/prio_queue.git
+	ignore = dirty
 [submodule "google-marl"]
 	path = google-marl
 	url = git@github.com:GerHobbelt/marl.git
+	ignore = dirty
 [submodule "ticpp"]
 	path = ticpp
 	url = git@github.com:GerHobbelt/ticpp.git
+	ignore = dirty
