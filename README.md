@@ -114,7 +114,7 @@ The other JavaScript engines considered are of varying size, performance and com
     - [libCZMQ](../libCZMQ)
     - [libsmile](./libsmile) -- ["Smile" format](https://en.wikipedia.org/wiki/Smile_%28data_interchange_format%29), i.e. a compact binary JSON format
     - ~~[protobuf](./protobuf)~~
-      + **removed**; reason: relatively slow run-time and (in my opinion) rather ugly & convoluted approach at build time. Has too much of a Java/CorprorateProgramming smell, which has not lessened over the years, unfortunately.
+      + **removed**; reason: relatively slow run-time and (in my opinion) rather ugly & convoluted approach at build time. Has too much of a Java/CorporateProgramming smell, which has not lessened over the years, unfortunately.
 - IPC: websockets, etc.: all communication means
     - [libwebsocketpp](./libwebsocketpp)
     - [libwebsockets](./libwebsockets)
@@ -762,7 +762,6 @@ The other JavaScript engines considered are of varying size, performance and com
 - [re2](./re2)
 - [replxx](./replxx) -- REPL CLI component: `readline` simile for REPL/interactive runs in a CLI
 - [resumable-assert](./resumable-assert)
-- [ScriptX](./ScriptX)
 - [ScriptX](./ScriptX/) -- wrapper for V8, QuickJS, Lua, Python, ...
 - [sentence-tokenizer](./sentence-tokenizer) -- text tokenization
 - [sentencepiece](./sentencepiece) -- text tokenization
