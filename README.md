@@ -142,6 +142,7 @@ The other JavaScript engines considered are of varying size, performance and com
     - [xxHash](./xxHash) -- fast (non-cryptographic) hash algorithm
 - intermediate data storage / caching / hierarchical data stores (binary hOCR; document text revisions; ...) 
     - [c-blosc2](./c-blosc2)
+    - [CacheLib](./CacheLib) -- provides an in-process high performance caching mechanism, thread-safe API to build high throughput, low overhead caching services, with built-in ability to leverage DRAM and SSD caching transparently.
     - [h5cpp-HDF5](./h5cpp-HDF5)
     - [HDF5](./HDF5)
     - [HighFive-HDF5](./HighFive-HDF5)
@@ -390,25 +391,31 @@ The other JavaScript engines considered are of varying size, performance and com
     - [hedley](./hedley)
     - [libcppzmq](../libcppzmq)
     - [libcpuid](./libcpuid) -- CPU & hardware info
-    - [libCZMQ](../libCZMQ)
+    - [libCZMQ](../libCZMQ) -- High-level C binding for ZeroMQ. (http://czmq.zeromq.org/)
     - [libscanf](./libscanf)
     - [libtuv](./libtuv)
     - [libunifex](./libunifex) -- a prototype implementation of the C++ sender/receiver async programming model that is currently being considered for standardisation. This project contains implementations of the following: Schedulers, Timers, Asynchronous I/O, Algorithms that encapsulate certain concurrency patterns, Async streams, Cancellation, Coroutine integration.
-    - [libzmq](./libzmq) -- ZeroMQ
-    - [magic_enum](./magic_enum)
+    - [libzmq](./libzmq) -- ZeroMQ core engine in C++, implements [ZMTP/3.1](https://zguide.zeromq.org/)
+    - [magic_enum](./magic_enum) -- Header-only C++17 library provides static reflection for enums; works with any enum type without any macro or boilerplate code.
     - [messagebox-windows](./messagebox-windows) -- drive `MessageBox` and `MessageBeep` Win32 APIs
     - [oneTBB](./oneTBB) -- Intel's Thread Building Blocks library: used with OpenImageIO, ...
     - [pcg-c-random](./pcg-c-random) -- fast random generators
     - [plf_nanotimer](./plf_nanotimer) -- high precision cross-platform performance timer
     - [prio_queue](./prio_queue) -- a cache friendly priority queue, done as a B-heap.
-    - [pthread-win32](./pthread-win32)
+    - [pthread-win32](./pthread-win32) -- `pthread` for MS Windows
     - [spy-build-sysinfo](./spy-build-sysinfo) -- build system info
     - [stdext-path](./stdext-path) -- path manipulations (`dirname` et al)
-    - [subprocess](./subprocess)
-    - [thread-pool-c](./thread-pool-c)
-    - [thread-pool-cpp](./thread-pool-cpp)
-    - [thread-pool](./thread-pool)
-    - [tiny-process-library](./tiny-process-library) -- small platform independent library making it simple to create and stop new processes, as well as writing to stdin and reading from stdout and stderr of a new process.
+    - invoking external applications
+        + [subprocess](./subprocess) -- [benman64/subprocess](https://github.com/benman64/subprocess): cross platform subprocess library for C++ similar to design of Python `subprocess`. 
+        + [tiny-process-library](./tiny-process-library) -- small platform independent library making it simple to create and stop new processes, as well as writing to stdin and reading from stdout and stderr of a new process.
+        + https://github.com/rajatjain1997/subprocess -- A C++ high level library for running shell processes
+        + https://github.com/arun11299/cpp-subprocess -- as close as possible to Python2.7 `subprocess` module in dealing with processes.
+        + https://github.com/pnappa/subprocesscpp -- A header-only library that allows you to execute processes either synchronously or asynchronously, whilst providing input and output handling. No more calling `exec` in C++!
+        + https://github.com/sheredom/subprocess.h -- A one header solution to launching processes and interacting with them for C/C++.
+    - thread pools
+        + [thread-pool-c](./thread-pool-c)
+        + [thread-pool-cpp](./thread-pool-cpp)
+        + [thread-pool](./thread-pool)
     - task schedulers
       - [enkiTS](./enkiTS-TaskScheduler) -- A C++11 Task Scheduler for creating parallel programs.
      
@@ -425,6 +432,7 @@ The other JavaScript engines considered are of varying size, performance and com
         - Can wait for pinned tasks - useful for creating IO threads which do no other work.
       - [google::marl](./google-marl) -- a hybrid thread / fiber task scheduler written in C++ 11. Marl uses a combination of fibers and threads to allow efficient execution of tasks that can block, while keeping a fixed number of hardware threads.
       - [taskflow](./taskflow) -- Quickly write parallel and heterogeneous task programs in modern C++. Taskflow is faster, more expressive, and easier for drop-in integration than many of existing task programming frameworks in handling complex parallel workloads.
+      - [asynqro](./asynqro) -- Futures and thread pool for C++: Asynqro gives developers a rich monadic Future API (inspired by Future API in Scala language), a clean API, refined task scheduling logic and is not tied to any framework.
  
     - Promise/A+
 
@@ -434,6 +442,7 @@ The other JavaScript engines considered are of varying size, performance and com
 
         - [promise-cpp](./promise-cpp) -- advanced C++ promise/A+ library in Javascript style
         - [libq](./libq) -- A platform-independent promise library for C++, implementing asynchronous continuations.
+        - [asynqro](./asynqro) -- Futures and thread pool for C++: Asynqro gives developers a rich monadic Future API (inspired by Future API in Scala language), a clean API, refined task scheduling logic and is not tied to any framework.
         - https://github.com/rhashimoto/poolqueue -- C++ Asynchronous Promises, inspired by Promises/A+.
         - https://github.com/YACLib/YACLib -- Yet Another lightweight C++ library for concurrent and parallel task execution.
         - https://github.com/alxvasilev/cpp-promise -- Javascript-like C++ promise library
@@ -550,6 +559,7 @@ The other JavaScript engines considered are of varying size, performance and com
 
 ### Libraries in this collection
 
+- [asynqro](./asynqro) -- Futures and thread pool for C++: Asynqro gives developers a rich monadic Future API (inspired by Future API in Scala language), a clean API, refined task scheduling logic and is not tied to any framework.
 - [BBHash](./BBHash)
 - [BCF-cuckoo-index](./BCF-cuckoo-index)
 - [bebop](./bebop)
@@ -562,6 +572,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [brotli](../brotli) -- compression
 - [bzip2](./bzip2)
 - [c-blosc2](./c-blosc2)
+- [CacheLib](./CacheLib) -- provides an in-process high performance caching mechanism, thread-safe API to build high throughput, low overhead caching services, with built-in ability to leverage DRAM and SSD caching transparently.
 - [caffe](./caffe)
 - [catboost](./catboost)
 - [Catch2](./Catch2)

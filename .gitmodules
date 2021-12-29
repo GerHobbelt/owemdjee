@@ -1010,3 +1010,10 @@
 	path = ticpp
 	url = git@github.com:GerHobbelt/ticpp.git
 	ignore = dirty
+[submodule "asynqro"]
+	path = asynqro
+	url = git@github.com:GerHobbelt/asynqro.git
+	ignore = dirty
+[submodule "CacheLib"]
+	path = CacheLib
+	url = git@github.com:GerHobbelt/CacheLib.git
