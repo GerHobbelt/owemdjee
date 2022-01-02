@@ -94,7 +94,6 @@ The other JavaScript engines considered are of varying size, performance and com
 
   ScriptX not only isolates several JavaScript engines (e.g. V8 and QuickJS), but can even isolate different scripting languages, so that the upper layer can seamlessly switch between scripting engine and scripting language without changing the code.
 
-
 **UPDATE 2021/June**: jerryscript, duktape, XS/moddable, escargot: these have been dropped as we picked QuickJS. After some initial hassle with that codebase, we picked a different branch to test, which was cleaner and compiled out of the box (CMake > MSVC), which is always a good omen for a codebase when you have cross-platform portability in mind.
 
 
@@ -129,6 +128,8 @@ The other JavaScript engines considered are of varying size, performance and com
       + **removed**; reason: has a strong focus on the *remote*, i.e. `R` in `RPC` (thus a focus on things such as encryption, authentication, firewalling, etc.), which we don't want or need: all services are supposed to run on a single machine and comms go through `localhost` *only*. When folks find they need to distribute the workload across multiple machines, then we'll be entering a new era in Qiqqa usage and then will be soon enough to (re-)investigate the usefulness of this package.
       
         Also, we are currently more interested in *fast data serialization* then RPC *pre se* as we aim for a solution that's more akin to a REST API interface style.
+
+    - [WinHttpPAL](./WinHttpPAL) -- implements [WinHttp API](https://docs.microsoft.com/en-us/windows/win32/winhttp/winhttp-start-page) Platform Abstraction Layer for POSIX systems using libcurl
 - IPC: JSON for protocol design:
     - [json](./json)
     - [json-jansson](./json-jansson)
@@ -204,6 +205,13 @@ The other JavaScript engines considered are of varying size, performance and com
             * [uctodata](./uctodata) -- data for `ucto` library
             * [libfolia](./libfolia) -- working with the Format for Linguistic Annotation (FoLiA).
         + [fastBPE](./fastBPE) -- text tokenization / ngrams
+        + [fastText](./fastText) -- [fastText](https://fasttext.cc/) is a library for efficient learning of word representations and sentence classification.
+        + [BlingFire](./BlingFire) -- we are a team at Microsoft called Bling (Beyond Language Understanding), sharing our [FInite State machine and REgular expression manipulation library](https://github.com/microsoft/BlingFire) (FIRE). We use Fire for many linguistic operations inside Bing such as Tokenization, Multi-word expression matching, Unknown word-guessing, Stemming / Lemmatization just to mention a few.
+        
+        Fire can also be used to improve FastText: see [here](https://github.com/microsoft/BlingFire#8-example-of-reaching-99-accuracy-for-language-detection).
+
+        Bling Fire Tokenizer provides state of the art performance for Natural Language text tokenization.
+
     - GMM/HMM/kM: fit patterns, e.g. match & transform a point cloud or image onto a template --> help matching pages against banner templates, etc. as part of the OCR/recognition task.
         + [GMMreg](./GMMreg) -- implementations of the robust point set registration framework described in the paper "[Robust Point Set Registration Using Gaussian Mixture Models](https://github.com/bing-jian/gmmreg/blob/master/gmmreg_PAMI_preprint.pdf)", Bing Jian and Baba C. Vemuri, IEEE Transactions on Pattern Analysis and Machine Intelligence, 2011, 33(8), pp. 1633-1645. An earlier conference version of this work, "A Robust Algorithm for Point Set Registration Using Mixture of Gaussians, Bing Jian and Baba C. Vemuri.", appeared in the proceedings of ICCV'05.
         + [liblinear](./liblinear)
@@ -532,6 +540,8 @@ The other JavaScript engines considered are of varying size, performance and com
     + [gflags](./gflags) -- google::flags library, used by other libs in this set.
     + [Imath](./Imath) -- float16 support lib for OpenEXR format
     + [jemalloc](./jemalloc)
+    + [mimalloc](./mimalloc) -- a compact general purpose allocator with excellent performance.
+    + [snmalloc](./snmalloc) -- a high-performance allocator.
     + [libbf](../libbf)
     + [libfolia](./libfolia) -- working with the Format for Linguistic Annotation (FoLiA).
     + [libidn2](./libidn2)
@@ -567,6 +577,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [bibutils](./bibutils)
 - [binary_bakery](./binary_bakery) -- resource compiler-like tool: embed any data in your C/C++ application
 - [BLAKE3](./BLAKE3)
+- [BlingFire](./BlingFire) -- we are a team at Microsoft called Bling (Beyond Language Understanding), sharing our [FInite State machine and REgular expression manipulation library](https://github.com/microsoft/BlingFire) (FIRE). We use Fire for many linguistic operations inside Bing such as Tokenization, Multi-word expression matching, Unknown word-guessing, Stemming / Lemmatization just to mention a few.
 - [boost](./boost) -- required by several other libraries in this collection
 - [breakpad](./breakpad)
 - [brotli](../brotli) -- compression
@@ -612,6 +623,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [fast-lzma2](./fast-lzma2)
 - [FastBinaryEncoding](./FastBinaryEncoding)
 - [fastBPE](./fastBPE) -- text tokenization / ngrams
+- [fastText](./fastText) -- [fastText](https://fasttext.cc/) is a library for efficient learning of word representations and sentence classification.
 - [file](./file) -- `file` filetype recognizer tool & mimemagic 
 - [flatbuffers](./flatbuffers)
 - [flatcc](./flatcc)
@@ -728,6 +740,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [mcmc](./mcmc)
 - [messagebox-windows](./messagebox-windows) -- drive `MessageBox` and `MessageBeep` Win32 APIs
 - [mht-rip](./mht-rip) -- as I have several HTML pages stored in this MHTML format. See also CHM: `CHM-lib`
+- [mimalloc](./mimalloc) -- a compact general purpose allocator with excellent performance.
 - [mime-mega](../mime-mega) -- MIME extract/insert/encode/decode: use for MHTML support
 - [mimetic](./mimetic) -- MIME: use for MHTML support
 - [mipp](./mipp)
@@ -778,6 +791,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [sentencepiece](./sentencepiece) -- text tokenization
 - [shoco](./shoco) -- a fast compressor for short strings
 - [snappy](./snappy)
+- [snmalloc](./snmalloc) -- a high-performance allocator.
 - [sparsehash](./sparsehash) -- fast hash algorithms
 - [spdlog](./spdlog)
 - [spy-build-sysinfo](./spy-build-sysinfo) -- build system info
