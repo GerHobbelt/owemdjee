@@ -1037,3 +1037,12 @@
 [submodule "snmalloc"]
 	path = snmalloc
 	url = git@github.com:GerHobbelt/snmalloc.git
+
+[submodule "scantailor"]
+	path = scantailor
+	url = git@github.com:GerHobbelt/scantailor-advanced.git
+
+[submodule "sqlite3pp"]
+	path = sqlite3pp
+	url = git@github.com:GerHobbelt/sqlite3pp.git
+

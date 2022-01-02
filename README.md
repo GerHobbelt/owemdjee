@@ -243,6 +243,8 @@ The other JavaScript engines considered are of varying size, performance and com
     - [olena](./olena)
     - [opencv](./opencv)
     - [opencv_contrib](./opencv_contrib)
+    - [scantailor](./scantailor) -- [scantailor_advanced](https://github.com/4lex4/scantailor-advanced) is the [ScanTailor](https://github.com/scantailor/scantailor) version that merges the features of the ScanTailor Featured and ScanTailor Enhanced versions, brings new ones and fixes. ScanTailor is an interactive post-processing tool for scanned pages. It performs operations such as page splitting, deskewing, adding/removing borders, selecting content, ... and many others.
+    
 - image export, image / \[scanned] document import
     - [jbig2dec](../jbig2dec)
     - [jpeginfo](../jpeginfo)
@@ -292,6 +294,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - database "backend storage"
     - [sqlite](./sqlite)
     - [sqlite-amalgamation](./sqlite-amalgamation)
+    - [sqlite3pp](./sqlite3pp) -- a minimal ORM wrapper for SQLite et al.
     - [lib_nas_lockfile](./lib_nas_lockfile) -- lockfile management on NAS and other disparate network filesystem storage. To be combined with SQLite to create a proper Qiqqa Sync operation.
     - [otl](../otl) -- Oracle Template Library (STL-like wrapper for SQL DB queries; supports many databases besides Oracle)
     - [Lightning.NET](./Lightning.NET) -- .NET library for OpenLDAP's LMDB key-value store
@@ -786,6 +789,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [re2](./re2)
 - [replxx](./replxx) -- REPL CLI component: `readline` simile for REPL/interactive runs in a CLI
 - [resumable-assert](./resumable-assert)
+- [scantailor](./scantailor) -- [scantailor_advanced](https://github.com/4lex4/scantailor-advanced) is the [ScanTailor](https://github.com/scantailor/scantailor) version that merges the features of the ScanTailor Featured and ScanTailor Enhanced versions, brings new ones and fixes. ScanTailor is an interactive post-processing tool for scanned pages. It performs operations such as page splitting, deskewing, adding/removing borders, selecting content, ... and many others.
 - [ScriptX](./ScriptX/) -- wrapper for V8, QuickJS, Lua, Python, ...
 - [sentence-tokenizer](./sentence-tokenizer) -- text tokenization
 - [sentencepiece](./sentencepiece) -- text tokenization
@@ -797,6 +801,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [spy-build-sysinfo](./spy-build-sysinfo) -- build system info
 - [sqlite-amalgamation](./sqlite-amalgamation)
 - [sqlite](./sqlite)
+- [sqlite3pp](./sqlite3pp) -- a minimal ORM wrapper for SQLite et al.
 - [squash](./squash)
 - [stdext-path](./stdext-path) -- path manipulations (`dirname` et al)
 - [stopwords](./stopwords)
