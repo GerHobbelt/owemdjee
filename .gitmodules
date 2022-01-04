@@ -18,10 +18,6 @@
 	path = rapidJSON
 	url = git@github.com:GerHobbelt/rapidjson.git
 
-[submodule "HighFive-HDF5"]
-	path = HighFive-HDF5
-	url = git@github.com:GerHobbelt/HighFive.git
-
 [submodule "hunspell"]
 	path = hunspell
 	url = git@github.com:GerHobbelt/hunspell.git
@@ -57,14 +53,6 @@
 [submodule "MITIE-nlp"]
 	path = MITIE-nlp
 	url = git@github.com:GerHobbelt/MITIE.git
-
-[submodule "h5cpp-HDF5"]
-	path = h5cpp-HDF5
-	url = git@github.com:GerHobbelt/h5cpp.git
-
-[submodule "HDF5"]
-	path = HDF5
-	url = git@github.com:GerHobbelt/hdf5.git
 
 [submodule "yyjson"]
 	path = yyjson
@@ -105,10 +93,6 @@
 [submodule "BLAKE3"]
 	path = BLAKE3
 	url = git@github.com:GerHobbelt/BLAKE3.git
-
-[submodule "FastBinaryEncoding"]
-	path = FastBinaryEncoding
-	url = git@github.com:GerHobbelt/FastBinaryEncoding.git
 
 [submodule "cryptopp"]
 	path = cryptopp
@@ -282,10 +266,6 @@
 	path = tinyexpr
 	url = git@github.com:GerHobbelt/tinyexpr.git
 
-[submodule "GDCM-Grassroots-DICOM"]
-	path = GDCM-Grassroots-DICOM
-	url = git@github.com:GerHobbelt/GDCM.git
-
 [submodule "c-blosc2"]
 	path = c-blosc2
 	url = git@github.com:GerHobbelt/c-blosc2.git
@@ -362,10 +342,6 @@
 	path = shoco
 	url = git@github.com:GerHobbelt/shoco.git
 
-[submodule "libsmile"]
-	path = libsmile
-	url = git@github.com:GerHobbelt/libsmile.git
-	
 [submodule "lapack"]
 	path = lapack
 	url = git@github.com:GerHobbelt/lapack.git
@@ -694,10 +670,6 @@
 	path = libmdbx
 	url = git@github.com:GerHobbelt/libmdbx.git
 
-[submodule "binary_bakery"]
-	path = binary_bakery
-	url = git@github.com:GerHobbelt/binary_bakery.git
-
 [submodule "subprocess"]
 	path = subprocess
 	url = git@github.com:GerHobbelt/subprocess.git
@@ -798,10 +770,6 @@
 	path = pcre
 	url = git@github.com:GerHobbelt/pcre.git
 
-[submodule "Catch2"]
-	path = Catch2
-	url = git@github.com:GerHobbelt/Catch2.git
-
 [submodule "cpu_features"]
 	path = cpu_features
 	url = git@github.com:GerHobbelt/cpu_features.git
@@ -849,10 +817,6 @@
 [submodule "libCZMQ"]
 	path = libCZMQ
 	url = git@github.com:GerHobbelt/czmq.git
-
-[submodule "libcppzmq"]
-	path = libcppzmq
-	url = git@github.com:GerHobbelt/cppzmq.git
 
 [submodule "libbf"]
 	path = libbf

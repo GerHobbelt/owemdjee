@@ -101,19 +101,22 @@ The other JavaScript engines considered are of varying size, performance and com
 
 - IPC: flatbuffer et al for protocol design:
     - [bebop](./bebop)
-    - [FastBinaryEncoding](./FastBinaryEncoding)
+    - ~~[FastBinaryEncoding](https://github.com/chronoxor/FastBinaryEncoding)~~
+      + **removed**; reason: for binary format record serialization we will be using `bebop` exclusively. All other communications will be JSON/JSON5/XML based.
     - ~~[flatbuffers](https://github.com/google/flatbuffers)~~
       + **removed**; reason: see `protobuf`: same smell rising. Faster at run time, but still a bit hairy to my tastes while `bebop` et al are on to something *potentially nice*.
     - ~~[flatcc](https://github.com/dvidelabs/flatcc)~~
       + **removed**; reason: see `flatbuffers`. When we don't dig `flatbuffers`, then `flatcc` is automatically pretty useless to us. Let's rephrase that professionally: "`flatcc` has moved out of scope for our project."
     - [cereal](./cereal) -- C++11 serialization library
-    - [libzmq](./libzmq)
-    - [cppzmq](./cppzmq)
-    - [libcppzmq](../libcppzmq)
-    - [libCZMQ](../libCZMQ)
-    - [libsmile](./libsmile) -- ["Smile" format](https://en.wikipedia.org/wiki/Smile_%28data_interchange_format%29), i.e. a compact binary JSON format
+    - ZeroMQ a.k.a. ØMQ:
+        + [libzmq](./libzmq) -- ZeroMQ core engine in C++, implements [ZMTP/3.1](https://zguide.zeromq.org/).
+        + [cppzmq](./cppzmq) -- header-only C++ binding for libzmq.
+        + [libCZMQ](../libCZMQ) -- High-level C binding for ØMQ. (http://czmq.zeromq.org/)
+    - ~~[libsmile](https://github.com/pierre/libsmile) -- ["Smile" format](https://en.wikipedia.org/wiki/Smile_%28data_interchange_format%29), i.e. a compact binary JSON format~~
+      + **removed**; reason: for binary format record serialization we will be using `bebop` exclusively. All other communications will be JSON/JSON5/XML based.
     - ~~[protobuf](https://github.com/protocolbuffers/protobuf)~~
       + **removed**; reason: relatively slow run-time and (in my opinion) rather ugly & convoluted approach at build time. Has too much of a Java/CorporateProgramming smell, which has not lessened over the years, unfortunately.
+    - ~~[SWIG](https://swig.readthedocs.io/en/latest/Manual/SWIG.html) (*not included; more suitable for RPC than what we have in mind, which is purely data messages enchange*)~~
 - IPC: websockets, etc.: all communication means
     - [libwebsocketpp](./libwebsocketpp)
     - [libwebsockets](./libwebsockets)
@@ -130,6 +133,10 @@ The other JavaScript engines considered are of varying size, performance and com
         Also, we are currently more interested in *fast data serialization* then RPC *pre se* as we aim for a solution that's more akin to a REST API interface style.
 
     - [WinHttpPAL](./WinHttpPAL) -- implements [WinHttp API](https://docs.microsoft.com/en-us/windows/win32/winhttp/winhttp-start-page) Platform Abstraction Layer for POSIX systems using libcurl
+    - ZeroMQ a.k.a. ØMQ:
+        + [libzmq](./libzmq) -- ZeroMQ core engine in C++, implements [ZMTP/3.1](https://zguide.zeromq.org/).
+        + [cppzmq](./cppzmq) -- header-only C++ binding for libzmq.
+        + [libCZMQ](../libCZMQ) -- High-level C binding for ØMQ. (http://czmq.zeromq.org/)
 - IPC: JSON for protocol design:
     - [json](./json)
     - [json-jansson](./json-jansson)
@@ -144,10 +151,13 @@ The other JavaScript engines considered are of varying size, performance and com
 - intermediate data storage / caching / hierarchical data stores (binary hOCR; document text revisions; ...) 
     - [c-blosc2](./c-blosc2) -- a high performance compressor optimized for binary data (i.e. floating point numbers, integers and booleans), designed to transmit data to the processor cache faster than the traditional, non-compressed, direct memory fetch approach via a `memcpy()` OS call.
     - [CacheLib](./CacheLib) -- provides an in-process high performance caching mechanism, thread-safe API to build high throughput, low overhead caching services, with built-in ability to leverage DRAM and SSD caching transparently.
-    - HDF5 file format
-        + [h5cpp-HDF5](./h5cpp-HDF5)
-        + [HDF5](./HDF5)
-        + [HighFive-HDF5](./HighFive-HDF5)
+    - ~~HDF5 file format~~
+        + ~~[h5cpp-HDF5](./h5cpp-HDF5)~~
+          + **removed**; reason: see the `HDF5` entry below.
+        + ~~[HDF5](./HDF5)~~
+          + **removed**; reason: HDF5 is a nice conceept but considered *overkill* right now; where we need disk stores, we'll be using SQLite or LMDB-like key-value stores instead. Such stores are not meant to be interchangeablee with other software in their raw shape and we'll provide public access APIs instead, where applicable.
+        + ~~[HighFive-HDF5](./HighFive-HDF5)~~
+          + **removed**; reason: see the `HDF5` entry above.
     - RAM-/disk-based large queues and stores: B+tree, LSM-tree, ...
         + [cpp-btree](../cpp-btree) -- in-memory B+-tree: an alternative for the priority queue as we expect the queue to grow huge, given past experience with Qiqqa.
         + [tlx-btree](./tlx-btree) -- in-memory B+-tree: an alternative for the priority queue as we expect the queue to grow huge, given past experience with Qiqqa.
@@ -172,9 +182,12 @@ The other JavaScript engines considered are of varying size, performance and com
     - ~~[lizard](https://github.com/inikep/lizard) -- [Lizard](https://github.com/inikep/lizard) (formerly LZ5) is a lossless compression algorithm designed to give better decompression speed than LZ4 i.e. over 2000 MB/s and best ratio (comparable to zlib and low levels of zstd/brotli) at decompression speed of 1000 MB/s~~
       + **removed**; reason: see `fast-lzma2` above. LZ4 either overtakes this one or is on par (anno 2022 AD) and I don't see a lot happening here, so the coolness factor is slowly fading...
     - [lz4](./lz4)
-    - [lzo](https://github.com/nemequ/lzo)
-    - [lzsse](https://github.com/ConorStokes/LZSSE)
-    - [pithy](https://github.com/johnezang/pithy)
+    - ~~[lzo](https://github.com/nemequ/lzo)~~
+      + **removed**; reason: see `fast-lzma2` above. LZ4 either overtakes this one or is on par (anno 2022 AD) and I don't see a lot happening here, so the coolness factor is slowly fading...
+    - ~~[lzsse](https://github.com/ConorStokes/LZSSE)~~
+      + **removed**; reason: see `fast-lzma2` above. LZ4 either overtakes this one or is on par (anno 2022 AD) and I don't see a lot happening here, so the coolness factor is slowly fading...
+    - ~~[pithy](https://github.com/johnezang/pithy)~~
+      + **removed**; reason: see `fast-lzma2` above. LZ4 either overtakes this one or is on par (anno 2022 AD) and I don't see a lot happening here, so the coolness factor is slowly fading...
     - [shoco](./shoco) -- a fast compressor for short strings
     - ~~[snappy](./snappy) -- [Snappy](https://github.com/google/snappy) is a compression/decompression library. It does not aim for maximum compression, or compatibility with any other compression library; instead, it aims for very high speeds and reasonable compression.~~
       + **removed**; reason: see `fast-lzma2` above. LZ4 either overtakes this one or is on par (anno 2022 AD) and I don't see a lot happening here, so the coolness factor is slowly fading. See also [How do I decide between LZ4 and Snappy compression?](https://stackoverflow.com/questions/67537111/how-do-i-decide-between-lz4-and-snappy-compression)
@@ -213,7 +226,7 @@ The other JavaScript engines considered are of varying size, performance and com
             * [uctodata](./uctodata) -- data for `ucto` library
             * [libfolia](./libfolia) -- working with the Format for Linguistic Annotation (FoLiA).
         + [fastBPE](./fastBPE) -- text tokenization / ngrams
-        + [fastText](./fastText) -- [fastText](https://fasttext.cc/) is a library for efficient learning of word representations and sentence classification.
+        + [fastText](./fastText) -- [fastText](https://fasttext.cc/) is a library for efficient learning of word representations and sentence classification. Includes language detection feeatures.
         + [BlingFire](./BlingFire) -- we are a team at Microsoft called Bling (Beyond Language Understanding), sharing our [FInite State machine and REgular expression manipulation library](https://github.com/microsoft/BlingFire) (FIRE). We use Fire for many linguistic operations inside Bing such as Tokenization, Multi-word expression matching, Unknown word-guessing, Stemming / Lemmatization just to mention a few.
         
         Fire can also be used to improve FastText: see [here](https://github.com/microsoft/BlingFire#8-example-of-reaching-99-accuracy-for-language-detection).
@@ -237,10 +250,12 @@ The other JavaScript engines considered are of varying size, performance and com
     * [hyperscan](./hyperscan) -- Hyperscan is a high-performance multiple regex matching library.
     * [re2](./re2)
     * [tre](./tre)
+    * [pcre](./pcre)
 - OCR: quality improvements, language detect, ...
     - [hunspell](./hunspell)
     - [hunspell-hyphen](./hunspell-hyphen)
     - [libtextcat](./libtextcat) -- text language detection
+    - [fastText](./fastText) -- [fastText](https://fasttext.cc/) is a library for efficient learning of word representations and sentence classification. Includes language detection feeatures.
 - OCR page image preprocessing, \[scanner] tooling: getting the pages to the OCR engine
     - [GraphicsMagick](./GraphicsMagick)
     - [ImageMagick](./ImageMagick)
@@ -269,10 +284,11 @@ The other JavaScript engines considered are of varying size, performance and com
     - [libgif](./libgif)
     - [libjpeg-turbo](./libjpeg-turbo)
     - [libwebp](./libwebp)
-    - [GDCM-Grassroots-DICOM](./GDCM-Grassroots-DICOM)
+    - ~~[GDCM-Grassroots-DICOM](./GDCM-Grassroots-DICOM)~~
+      + **removed**; reason: not a frequently used format; the filter codes can be found in other libraries. *Overkill*. Qiqqa tooling can use [Apache Tika](https://tika.apache.org/), [ImageMagick](https://imagemagick.org/) or other thirdparty pipelines to convert to & from supported formats.
     - [pmt-png-tools](./pmt-png-tools)
-    - [DICOM to NIfTI](https://github.com/rordenlab/dcm2niix) (*not included yet*)
-    - [cgohlke::imagecodecs](https://github.com/cgohlke/imagecodecs) (*not included yet*)
+    - ~~[DICOM to NIfTI](https://github.com/rordenlab/dcm2niix) (*not included; see also DICOM slot above*)~~
+    - ~~[cgohlke::imagecodecs](https://github.com/cgohlke/imagecodecs) (*not included; see also DICOM slot above*)~~
     - [image formats (visual) quality comparison](https://eclipseo.github.io/image-comparison-web/) (*not included*)
 - Monte Carlo simulations, LDA, keyword inference/extraction, etc.
     - [lda-bigartm](./lda-bigartm)
@@ -296,7 +312,7 @@ The other JavaScript engines considered are of varying size, performance and com
         + [fastBPE](./fastBPE) -- text tokenization / ngrams
         + [many-stop-words](./many-stop-words)
         + [stopwords](./stopwords)
-        + [fastText](./fastText) -- [fastText](https://fasttext.cc/) is a library for efficient learning of word representations and sentence classification.
+        + [fastText](./fastText) -- [fastText](https://fasttext.cc/) is a library for efficient learning of word representations and sentence classification. Includes language detection feeatures.
     + other *topic modeling* code on the Net:
         * [Hierarchical Dirichlet Process (with Split-Merge Operations), Chong Wang](https://github.com/renaud/hdp-faster)
         * [Hierarchical Latent Tree Analysis (HLTA)](https://github.com/kmpoon/hlta)
@@ -314,7 +330,7 @@ The other JavaScript engines considered are of varying size, performance and com
     - [lmdb.spreads.net](./lmdb.spreads.net)
     - [lmdb](./lmdb)
     - [lmdbxx](./lmdbxx) -- LMDB C++ wrapper
-    - [ligra-graph](./ligra-graph)
+    - [ligra-graph](./ligra-graph) -- a Lightweight Graph Processing Framework for Shared Memory; works on both uncompressed and compressed graphs and hypergraphs.
     - [libmdbx](./libmdbx)
 - metadata & text (OCR et al): language detect, suggesting fixes, ...    
     - [libtextcat](./libtextcat) -- text language detection
@@ -408,7 +424,6 @@ The other JavaScript engines considered are of varying size, performance and com
     - [clipp](./clipp) -- commandline parser 
     - ~~[clippson](./clippson) -- commandline parser + JSON data diagnostical dumper~~
       + **removed**; reason: deemed cool but unsuitable for our needs. Besides, we intend to use `cli11` instead of `clipp` for that library is easier to read and support is more active there.
-    - [cppzmq](./cppzmq)
     - [cpu_features](./cpu_features)
     - [cpu_stat](./cpu_stat)
     - [cpuinfo](./cpuinfo) -- CPU & hardware info
@@ -419,13 +434,10 @@ The other JavaScript engines considered are of varying size, performance and com
     - [fmt](./fmt) -- advanced C++ data-to-text formatter. The modern answer to classic `printf()`.
     - [frozen](./frozen)
     - [hedley](./hedley)
-    - [libcppzmq](../libcppzmq)
     - [libcpuid](./libcpuid) -- CPU & hardware info
-    - [libCZMQ](../libCZMQ) -- High-level C binding for ZeroMQ. (http://czmq.zeromq.org/)
     - [libscanf](./libscanf)
     - [libtuv](./libtuv)
     - [libunifex](./libunifex) -- a prototype implementation of the C++ sender/receiver async programming model that is currently being considered for standardisation. This project contains implementations of the following: Schedulers, Timers, Asynchronous I/O, Algorithms that encapsulate certain concurrency patterns, Async streams, Cancellation, Coroutine integration.
-    - [libzmq](./libzmq) -- ZeroMQ core engine in C++, implements [ZMTP/3.1](https://zguide.zeromq.org/)
     - [magic_enum](./magic_enum) -- Header-only C++17 library provides static reflection for enums; works with any enum type without any macro or boilerplate code.
     - [messagebox-windows](./messagebox-windows) -- drive `MessageBox` and `MessageBeep` Win32 APIs
     - [oneTBB](./oneTBB) -- Intel's Thread Building Blocks library: used with OpenImageIO, ...
@@ -496,17 +508,17 @@ The other JavaScript engines considered are of varying size, performance and com
 - web servers, generic sockets I/O (IPC)
     + [civetweb](./civetweb)
     + [crow](./crow) -- IPC / server framework
-    + [drogon](./drogon)
-    + [h2o-server](./h2o-server)
+    + [drogon](./drogon) -- a C++14/17-based HTTP application framework to easily build various types of web application server programs.
+    + [h2o-server](./h2o-server) -- an optimized HTTP/1, HTTP/2, HTTP/3 server.
     + ~~[libmicrohttpd](https://github.com/Karlson2k/libmicrohttpd)~~
       + **removed**; reason: we've decided on using `crow` as the main server framework. Second choices are civetweb and h2o. This GNU library is way too 'Unix-is-the-world' oriented for a smooth portable dev experience.
     + ~~[oatpp](https://github.com/oatpp/oatpp) -- IPC / server framework~~
       + **removed**; reason: we've decided on using `crow` as the main server framework.
-    + [proxygen](./proxygen)
+    + [proxygen](./proxygen) -- the core C++ HTTP abstractions used at Facebook. Internally, it is used as the basis for building many HTTP servers, proxies, and clients, focusing on the common HTTP abstractions and our simple HTTPServer framework. The framework supports HTTP/1.1, SPDY/3, SPDY/3.1, HTTP/2, and HTTP/3.
     + [wget](./wget)
 - socket I/O: websockets
-    - [libwebsocketpp](./libwebsocketpp)
-    - [libwebsockets](./libwebsockets)
+    - [libwebsocketpp](./libwebsocketpp) -- a header only C++ library that implements RFC6455 The WebSocket Protocol.
+    - [libwebsockets](./libwebsockets) -- a simple-to-use library providing client and server for HTTP/1, HTTP/2, websockets, MQTT and other protocols in a security-minded, lightweight, configurable, scalable and flexible way.
     - [websocket-sharp](./websocket-sharp)
 - disk I/O, monitoring import locations, ...
     + [efsw](./efsw) -- cross-platform file system watcher and notifier
@@ -566,9 +578,10 @@ The other JavaScript engines considered are of varying size, performance and com
     + [zlib](../zlib)
 - sub-dependencies (libraries which are required by any of the above)
     + [boost](./boost) -- required by several other libraries in this collection
-    + [Catch2](./Catch2)
+    + ~~[Catch2](./Catch2)~~
+      + **removed**; reason: we've decided to standardize on a single unittest library (which is well supported in Microsoft Visual Studio, including the Test Explorer view there); where necessary, we'll have to provide a translation layer instead when existing submodules use different test rigs originally.
     + [gflags](./gflags) -- google::flags library, used by other libs in this set.
-    + [Imath](./Imath) -- float16 support lib for OpenEXR format
+    + ~~[Imath](./Imath) -- float16 support lib for OpenEXR format~~
     + [jemalloc](./jemalloc)
     + [mimalloc](./mimalloc) -- a compact general purpose allocator with excellent performance.
     + [snmalloc](./snmalloc) -- a high-performance allocator.
@@ -578,7 +591,7 @@ The other JavaScript engines considered are of varying size, performance and com
     + [nanosvg](./nanosvg)
     + [OpenSSL](./openssl) -- also used by CURL et al, incidentally.
     + [pcre](./pcre)
-    + [protobuf](./protobuf)
+    + ~~[protobuf](./protobuf)~~
     + [svg-charter](./svg-charter) -- SVG chart renderer
     + [ticpp](./ticpp) -- TinyXML++: XML read/write (is part of wxFormbuilder).
     + [tinyexpr](./tinyexpr)
@@ -594,7 +607,9 @@ The other JavaScript engines considered are of varying size, performance and com
     + [wxCharts](./wxCharts)
     + [wxFormBuilder](../wxFormBuilder)
     + [scintilla](./scintilla) -- text editor
-         
+- misc / other
+    + ~~[binary_bakery](https://github.com/s9w/binary_bakery) -- resource compiler-like tool: embed any data in your C/C++ application~~
+      + **removed**; reason: we already have `bin2coff` from MuPDF, which serves this purpose well enough.
 
 
 ### Libraries in this collection
@@ -616,7 +631,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [CacheLib](./CacheLib) -- provides an in-process high performance caching mechanism, thread-safe API to build high throughput, low overhead caching services, with built-in ability to leverage DRAM and SSD caching transparently.
 - [caffe](./caffe)
 - [catboost](./catboost)
-- [Catch2](./Catch2)
+- ~~[Catch2](./Catch2)~~
 - [cereal](./cereal) -- C++11 serialization library
 - [CHM lib](./CHM-lib) -- as I have several HTML pages stored in this format. See also MHTML: `mht-rip`
 - [civetweb](./civetweb)
@@ -651,7 +666,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [expected-lite](./expected-lite)
 - [extract](../extract)
 - [fast-lzma2](./fast-lzma2)
-- [FastBinaryEncoding](./FastBinaryEncoding)
+- ~~[FastBinaryEncoding](./FastBinaryEncoding)~~
 - [fastBPE](./fastBPE) -- text tokenization / ngrams
 - [fastText](./fastText) -- [fastText](https://fasttext.cc/) is a library for efficient learning of word representations and sentence classification.
 - [file](./file) -- `file` filetype recognizer tool & mimemagic 
@@ -677,12 +692,12 @@ The other JavaScript engines considered are of varying size, performance and com
 - [gumbo-parser](../gumbo-parser)
 - [gumbo-query](./gumbo-query) -- HTML DOM access in C/C++
 - [h2o-server](./h2o-server)
-- [h5cpp-HDF5](./h5cpp-HDF5)
+- ~~[h5cpp-HDF5](./h5cpp-HDF5)~~
 - [harfbuzz](../harfbuzz)
-- [HDF5](./HDF5)
+- ~~[HDF5](./HDF5)~~
 - [HDiffPatch](./HDiffPatch)
 - [hedley](./hedley)
-- [HighFive-HDF5](./HighFive-HDF5)
+- ~~[HighFive-HDF5](./HighFive-HDF5)~~
 - [hmm-scalable](./hmm-scalable)
 - [hmm-stoch](./hmm-stoch)
 - [hocr-fileformat](./hocr-fileformat)
@@ -718,7 +733,6 @@ The other JavaScript engines considered are of varying size, performance and com
 - [libbloom](./libbloom)
 - [libcmime](../libcmime) -- MIME extract/insert/encode/decode: use for MHTML support
 - [libconfig](../libconfig) -- generic config (file) reader/writer
-- [libcppzmq](../libcppzmq)
 - [libcpuid](./libcpuid) -- CPU & hardware info
 - [libCZMQ](../libCZMQ)
 - [libexpat](./libexpat) -- XML read/write
@@ -734,7 +748,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [libq](./libq) -- A platform-independent promise library for C++, implementing asynchronous continuations.
 - [libqrencode](./libqrencode)
 - [libscanf](./libscanf)
-- [libsmile](./libsmile) -- ["Smile" format](https://en.wikipedia.org/wiki/Smile_%28data_interchange_format%29), i.e. a compact binary JSON format
+- ~~[libsmile](./libsmile) -- ["Smile" format](https://en.wikipedia.org/wiki/Smile_%28data_interchange_format%29), i.e. a compact binary JSON format~~
 - [libsvm](./libsvm)
 - [libtextcat](./libtextcat) -- text language detection
 - [libtiff](../libtiff)
