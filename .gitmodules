@@ -1,11 +1,3 @@
-[submodule "lua"]
-	path = lua
-	url = git@github.com:GerHobbelt/lua.git
-
-[submodule "CPython"]
-	path = CPython
-	url = git@github.com:GerHobbelt/cpython.git
-
 [submodule "xtensor"]
 	path = xtensor
 	url = git@github.com:GerHobbelt/xtensor.git
@@ -29,14 +21,6 @@
 [submodule "HighFive-HDF5"]
 	path = HighFive-HDF5
 	url = git@github.com:GerHobbelt/HighFive.git
-
-[submodule "OpenImageIO"]
-	path = OpenImageIO
-	url = git@github.com:GerHobbelt/oiio.git
-
-[submodule "luaJIT"]
-	path = luaJIT
-	url = git@github.com:GerHobbelt/LuaJIT.git
 
 [submodule "hunspell"]
 	path = hunspell
@@ -74,10 +58,6 @@
 	path = MITIE-nlp
 	url = git@github.com:GerHobbelt/MITIE.git
 
-[submodule "flatbuffers"]
-	path = flatbuffers
-	url = git@github.com:GerHobbelt/flatbuffers.git
-
 [submodule "h5cpp-HDF5"]
 	path = h5cpp-HDF5
 	url = git@github.com:GerHobbelt/h5cpp.git
@@ -90,21 +70,9 @@
 	path = yyjson
 	url = git@github.com:GerHobbelt/yyjson.git
 
-[submodule "flatcc"]
-	path = flatcc
-	url = git@github.com:GerHobbelt/flatcc.git
-
 [submodule "bebop"]
 	path = bebop
 	url = git@github.com:GerHobbelt/bebop.git
-
-[submodule "inih"]
-	path = inih
-	url = git@github.com:GerHobbelt/inih.git
-
-[submodule "iniparser"]
-	path = iniparser
-	url = git@github.com:GerHobbelt/iniparser.git
 
 [submodule "tre"]
 	path = tre
@@ -113,18 +81,6 @@
 [submodule "hyperscan"]
 	path = hyperscan
 	url = git@github.com:GerHobbelt/hyperscan.git
-
-[submodule "EasyLogger"]
-	path = EasyLogger
-	url = git@github.com:GerHobbelt/EasyLogger.git
-
-[submodule "log4cplus"]
-	path = log4cplus
-	url = git@github.com:GerHobbelt/log4cplus.git
-
-[submodule "zlog"]
-	path = zlog
-	url = git@github.com:GerHobbelt/zlog.git
 
 [submodule "clipp"]
 	path = clipp
@@ -334,25 +290,9 @@
 	path = c-blosc2
 	url = git@github.com:GerHobbelt/c-blosc2.git
 
-[submodule "lzsse"]
-	path = lzsse
-	url = git@github.com:GerHobbelt/LZSSE.git
-
-[submodule "lizard"]
-	path = lizard
-	url = git@github.com:GerHobbelt/lizard.git
-
-[submodule "fast-lzma2"]
-	path = fast-lzma2
-	url = git@github.com:GerHobbelt/fast-lzma2.git
-
 [submodule "boost"]
 	path = boost
 	url = git@github.com:GerHobbelt/boost.git
-
-[submodule "xz-utils"]
-	path = xz-utils
-	url = git@github.com:GerHobbelt/xz.git
 
 [submodule "libwebsockets"]
 	path = libwebsockets
@@ -370,10 +310,6 @@
 	path = mipp
 	url = git@github.com:GerHobbelt/MIPP.git
 
-[submodule "clippson"]
-	path = clippson
-	url = git@github.com:GerHobbelt/clippson.git
-
 [submodule "djvulibre"]
 	path = djvulibre
 	url = git@github.com:GerHobbelt/djvulibre.git
@@ -389,10 +325,6 @@
 [submodule "websocket-sharp"]
 	path = websocket-sharp
 	url = git@github.com:GerHobbelt/websocket-sharp.git
-
-[submodule "oatpp"]
-	path = oatpp
-	url = git@github.com:GerHobbelt/oatpp.git
 
 [submodule "crow"]
 	path = crow
@@ -426,22 +358,6 @@
 	path = mht-rip
 	url = git@github.com:GerHobbelt/mht-rip.git
 	
-[submodule "snappy"]
-	path = snappy
-	url = git@github.com:GerHobbelt/snappy.git
-
-[submodule "pithy"]
-	path = pithy
-	url = git@github.com:GerHobbelt/pithy.git
-
-[submodule "lzo"]
-	path = lzo
-	url = git@github.com:GerHobbelt/lzo.git
-
-[submodule "squash"]
-	path = squash
-	url = git@github.com:GerHobbelt/squash.git
-
 [submodule "shoco"]
 	path = shoco
 	url = git@github.com:GerHobbelt/shoco.git
@@ -457,14 +373,6 @@
 [submodule "openssl"]
 	path = openssl
 	url = git@github.com:GerHobbelt/openssl.git
-
-[submodule "OpenEXR"]
-	path = OpenEXR
-	url = git@github.com:GerHobbelt/openexr.git
-
-[submodule "Imath"]
-	path = Imath
-	url = git@github.com:GerHobbelt/Imath.git
 
 [submodule "oneTBB"]
 	path = oneTBB
@@ -534,10 +442,6 @@
 	path = plf_nanotimer
 	url = git@github.com:GerHobbelt/plf_nanotimer.git
 
-[submodule "ice"]
-	path = ice
-	url = git@github.com:GerHobbelt/ice.git
-
 [submodule "mime-mega"]
 	path = mime-mega
 	url = git@github.com:GerHobbelt/MegaMimes.git
@@ -578,10 +482,6 @@
 	path = uint128_t
 	url = git@github.com:GerHobbelt/uint128_t.git
 
-[submodule "bzip2"]
-	path = bzip2
-	url = git@github.com:GerHobbelt/bzip2.git
-
 [submodule "cereal"]
 	path = cereal
 	url = git@github.com:GerHobbelt/cereal.git
@@ -606,18 +506,10 @@
 	path = gbenchmark
 	url = git@github.com:GerHobbelt/benchmark.git
 	
-[submodule "protobuf"]
-	path = protobuf
-	url = git@github.com:GerHobbelt/protobuf.git
-
 [submodule "resumable-assert"]
 	path = resumable-assert
 	url = git@github.com:GerHobbelt/resumable-assert.git
 	
-[submodule "docopt"]
-	path = docopt
-	url = git@github.com:GerHobbelt/docopt.cpp.git
-
 [submodule "bibutils"]
 	path = bibutils
 	url = git@github.com:GerHobbelt/bibutils.git
@@ -778,10 +670,6 @@
 	path = expected-lite
 	url = git@github.com:GerHobbelt/expected-lite.git
 
-[submodule "spdlog"]
-	path = spdlog
-	url = git@github.com:GerHobbelt/spdlog.git
-
 [submodule "many-stop-words"]
 	path = many-stop-words
 	url = git@github.com:GerHobbelt/many-stop-words.git
@@ -881,10 +769,6 @@
 [submodule "LDCF-hash"]
 	path = LDCF-hash
 	url = git@github.com:GerHobbelt/LDCF.git
-
-[submodule "libmicrohttpd"]
-	path = libmicrohttpd
-	url = git@github.com:GerHobbelt/libmicrohttpd.git
 
 [submodule "civetweb"]
 	path = civetweb

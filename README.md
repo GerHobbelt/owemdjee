@@ -102,9 +102,9 @@ The other JavaScript engines considered are of varying size, performance and com
 - IPC: flatbuffer et al for protocol design:
     - [bebop](./bebop)
     - [FastBinaryEncoding](./FastBinaryEncoding)
-    - ~~[flatbuffers](./flatbuffers)~~
+    - ~~[flatbuffers](https://github.com/google/flatbuffers)~~
       + **removed**; reason: see `protobuf`: same smell rising. Faster at run time, but still a bit hairy to my tastes while `bebop` et al are on to something *potentially nice*.
-    - ~~[flatcc](./flatcc)~~
+    - ~~[flatcc](https://github.com/dvidelabs/flatcc)~~
       + **removed**; reason: see `flatbuffers`. When we don't dig `flatbuffers`, then `flatcc` is automatically pretty useless to us. Let's rephrase that professionally: "`flatcc` has moved out of scope for our project."
     - [cereal](./cereal) -- C++11 serialization library
     - [libzmq](./libzmq)
@@ -112,7 +112,7 @@ The other JavaScript engines considered are of varying size, performance and com
     - [libcppzmq](../libcppzmq)
     - [libCZMQ](../libCZMQ)
     - [libsmile](./libsmile) -- ["Smile" format](https://en.wikipedia.org/wiki/Smile_%28data_interchange_format%29), i.e. a compact binary JSON format
-    - ~~[protobuf](./protobuf)~~
+    - ~~[protobuf](https://github.com/protocolbuffers/protobuf)~~
       + **removed**; reason: relatively slow run-time and (in my opinion) rather ugly & convoluted approach at build time. Has too much of a Java/CorporateProgramming smell, which has not lessened over the years, unfortunately.
 - IPC: websockets, etc.: all communication means
     - [libwebsocketpp](./libwebsocketpp)
@@ -122,9 +122,9 @@ The other JavaScript engines considered are of varying size, performance and com
     - [crow](./crow) -- IPC / server framework 
      
       Interface looks nicer than `oatpp`...
-    - ~~[oatpp](./oatpp) -- IPC / server framework~~
+    - ~~[oatpp](https://github.com/oatpp/oatpp) -- IPC / server framework~~
       + **removed**; reason: see `crow`. We have picked `crow` as the preferred way forward, so any similar/competing product is out of scope unless `crow` throws a tantrum on our test bench after all, the chances of that being *very slim*.
-    - ~~[ice](./ice) -- Comprehensive RPC Framework: helps you network your software with minimal effort.~~
+    - ~~[ice](https://github.com/zeroc-ice/ice) -- Comprehensive RPC Framework: helps you network your software with minimal effort.~~
       + **removed**; reason: has a strong focus on the *remote*, i.e. `R` in `RPC` (thus a focus on things such as encryption, authentication, firewalling, etc.), which we don't want or need: all services are supposed to run on a single machine and comms go through `localhost` *only*. When folks find they need to distribute the workload across multiple machines, then we'll be entering a new era in Qiqqa usage and then will be soon enough to (re-)investigate the usefulness of this package.
       
         Also, we are currently more interested in *fast data serialization* then RPC *pre se* as we aim for a solution that's more akin to a REST API interface style.
@@ -142,11 +142,12 @@ The other JavaScript engines considered are of varying size, performance and com
     - [sparsehash](./sparsehash) -- fast (non-cryptographic) hash algorithms
     - [xxHash](./xxHash) -- fast (non-cryptographic) hash algorithm
 - intermediate data storage / caching / hierarchical data stores (binary hOCR; document text revisions; ...) 
-    - [c-blosc2](./c-blosc2)
+    - [c-blosc2](./c-blosc2) -- a high performance compressor optimized for binary data (i.e. floating point numbers, integers and booleans), designed to transmit data to the processor cache faster than the traditional, non-compressed, direct memory fetch approach via a `memcpy()` OS call.
     - [CacheLib](./CacheLib) -- provides an in-process high performance caching mechanism, thread-safe API to build high throughput, low overhead caching services, with built-in ability to leverage DRAM and SSD caching transparently.
-    - [h5cpp-HDF5](./h5cpp-HDF5)
-    - [HDF5](./HDF5)
-    - [HighFive-HDF5](./HighFive-HDF5)
+    - HDF5 file format
+        + [h5cpp-HDF5](./h5cpp-HDF5)
+        + [HDF5](./HDF5)
+        + [HighFive-HDF5](./HighFive-HDF5)
     - RAM-/disk-based large queues and stores: B+tree, LSM-tree, ...
         + [cpp-btree](../cpp-btree) -- in-memory B+-tree: an alternative for the priority queue as we expect the queue to grow huge, given past experience with Qiqqa.
         + [tlx-btree](./tlx-btree) -- in-memory B+-tree: an alternative for the priority queue as we expect the queue to grow huge, given past experience with Qiqqa.
@@ -162,18 +163,25 @@ The other JavaScript engines considered are of varying size, performance and com
         + [parallel-hashmap](./parallel-hashmap) -- a set of hash map implementations, as well as a btree alternative to std::map and std::set
 - data storage / caching / IPC: loss-less data compression
     - [brotli](../brotli) -- compression
-    - [bzip2](./bzip2)
-    - [fast-lzma2](./fast-lzma2)
-    - [libzip](./libzip)
-    - [lizard](./lizard)
+    - ~~[bzip2](https://github.com/nemequ/bzip2)~~
+      + **removed**; reason: see `fast-lzma2` below. When we want this, we can through [Apache Tika](https://tika.apache.org/) or other thirdparty pipelines.
+    - [c-blosc2](./c-blosc2) -- a high performance compressor optimized for binary data (i.e. floating point numbers, integers and booleans), designed to transmit data to the processor cache faster than the traditional, non-compressed, direct memory fetch approach via a `memcpy()` OS call.
+    - ~~[fast-lzma2](https://github.com/conor42/fast-lzma2)~~
+      + **removed**; reason: gone as part of the first round of compression libraries' cleanup: we intend to support lz4 for fast work, plus zstd and *maybe* brotli for higher compression ratios, while we won't bother with anything else: the rest can be dealt with through [Apache Tika](https://tika.apache.org/) or other thirdparty pipelines when we need to read (or write) them. See also: [7zip-Zstd](https://github.com/mcmilk/7-Zip-zstd), which is what I use for accessing almost all compressed material anywhere.
+    - [libzip](./libzip) -- a library for reading, creating, and modifying zip archives.
+    - ~~[lizard](https://github.com/inikep/lizard) -- [Lizard](https://github.com/inikep/lizard) (formerly LZ5) is a lossless compression algorithm designed to give better decompression speed than LZ4 i.e. over 2000 MB/s and best ratio (comparable to zlib and low levels of zstd/brotli) at decompression speed of 1000 MB/s~~
+      + **removed**; reason: see `fast-lzma2` above. LZ4 either overtakes this one or is on par (anno 2022 AD) and I don't see a lot happening here, so the coolness factor is slowly fading...
     - [lz4](./lz4)
-    - [lzo](./lzo)
-    - [lzsse](./lzsse)
-    - [pithy](./pithy)
+    - [lzo](https://github.com/nemequ/lzo)
+    - [lzsse](https://github.com/ConorStokes/LZSSE)
+    - [pithy](https://github.com/johnezang/pithy)
     - [shoco](./shoco) -- a fast compressor for short strings
-    - [snappy](./snappy)
-    - [squash](./squash)
-    - [xz-utils](./xz-utils)
+    - ~~[snappy](./snappy) -- [Snappy](https://github.com/google/snappy) is a compression/decompression library. It does not aim for maximum compression, or compatibility with any other compression library; instead, it aims for very high speeds and reasonable compression.~~
+      + **removed**; reason: see `fast-lzma2` above. LZ4 either overtakes this one or is on par (anno 2022 AD) and I don't see a lot happening here, so the coolness factor is slowly fading. See also [How do I decide between LZ4 and Snappy compression?](https://stackoverflow.com/questions/67537111/how-do-i-decide-between-lz4-and-snappy-compression)
+    - ~~[squash](https://github.com/quixdb/squash)~~
+      + **removed**; reason: see `fast-lzma2` above. LZ4 either overtakes this one or is on par (anno 2022 AD).
+    - ~~[xz-utils](https://github.com/xz-mirror/xz)~~
+      + **removed**; reason: see `fast-lzma2` above. When we want this, we can through [Apache Tika](https://tika.apache.org/) or other thirdparty pipelines.
     - [zstd](./zstd)
     - see also [lzbench](https://github.com/inikep/lzbench)
 - OCR: hOCR output format, other output format? (dedicated binary?)
@@ -252,9 +260,11 @@ The other JavaScript engines considered are of varying size, performance and com
     - [libpng](../libpng)
     - [libtiff](../libtiff)
     - [openjpeg](../openjpeg)
-    - [OpenEXR](./OpenEXR) -- lossless format for multi-layered images. Professional use. (I've used it before; nice file format.)
-        + [Imath](./Imath) -- float16 support lib for OpenEXR format
-    - [OpenImageIO](./OpenImageIO)
+    - ~~[OpenEXR](./OpenEXR) -- lossless format for multi-layered images. Professional use. (I've used it before; nice file format.)~~
+        + ~~[Imath](./Imath) -- float16 support lib for OpenEXR format~~
+        + **removed**; reason: considered *overkill* for the projects I'm currently involved in, including Qiqqa. Those can use [Apache Tika](https://tika.apache.org/), [ImageMagick](https://imagemagick.org/) or other thirdparty pipelines to convert to & from supported formats.
+    - ~~[OpenImageIO](./OpenImageIO)~~
+        + **removed**; reason: considered nice & cool but still *overkill*. Qiqqa tooling can use [Apache Tika](https://tika.apache.org/), [ImageMagick](https://imagemagick.org/) or other thirdparty pipelines to convert to & from supported formats.
     - [jpeg-xl](https://gitlab.com/wg1/jpeg-xl) - \[DROPPED: nobody is using it yet, while I am more interested in high perf **lossless** formats for internal communications and storage]
     - [libgif](./libgif)
     - [libjpeg-turbo](./libjpeg-turbo)
@@ -286,6 +296,7 @@ The other JavaScript engines considered are of varying size, performance and com
         + [fastBPE](./fastBPE) -- text tokenization / ngrams
         + [many-stop-words](./many-stop-words)
         + [stopwords](./stopwords)
+        + [fastText](./fastText) -- [fastText](https://fasttext.cc/) is a library for efficient learning of word representations and sentence classification.
     + other *topic modeling* code on the Net:
         * [Hierarchical Dirichlet Process (with Split-Merge Operations), Chong Wang](https://github.com/renaud/hdp-faster)
         * [Hierarchical Latent Tree Analysis (HLTA)](https://github.com/kmpoon/hlta)
@@ -316,6 +327,7 @@ The other JavaScript engines considered are of varying size, performance and com
         + [uctodata](./uctodata) -- data for `ucto` library
         + [libfolia](./libfolia) -- working with the Format for Linguistic Annotation (FoLiA).
     - [fastBPE](./fastBPE) -- text tokenization / ngrams
+    - [fastText](./fastText) -- [fastText](https://fasttext.cc/) is a library for efficient learning of word representations and sentence classification.
     - see also https://github.com/fxsjy/jieba for a Chinese text tokenizer (done in Python)
 - PDF metadata editing for round-trip annotation and other "external application editing" of known documents; metadata embedding / *export*
     - [libexpat](./libexpat) -- XML read/write
@@ -341,8 +353,8 @@ The other JavaScript engines considered are of varying size, performance and com
     - [file](./file) -- `file` filetype recognizer tool & mimemagic 
     - [djvulibre](./djvulibre)
     - [extract](../extract)
-    - ~~[gmime](./gmime) -- multipart MIME library; serves as a fundamental building block for full MHTML file format I/O support~~
-      + **removed**; reason: GNOME libraries are horrible to integrate with other codebases
+    - ~~[gmime](https://github.com/jstedfast/gmime) (alternative repo [here](https://github.com/GNOME/gmime)) -- multipart MIME library; serves as a fundamental building block for full MHTML file format I/O support~~
+      + **removed**; reason: GNOME libraries are horrible to integrate with other codebases.
     - [gumbo-libxml](./gumbo-libxml)
     - [gumbo-parser](../gumbo-parser)
     - [gumbo-query](./gumbo-query) -- HTML DOM access in C/C++
@@ -374,10 +386,15 @@ The other JavaScript engines considered are of varying size, performance and com
             - [tinyexpr](./tinyexpr)
 - scripting *user-tunable tasks* such as OCR preproceessing, metadata extraction, metadata cleaning & other \[post-]processing, ...
     - [mujs](../mujs)
-    - [CPython](./CPython)
+    - ~~[CPython](./CPython)~~
+      + **removed**; reason: we've decided to offer any application user facing scripting features in JavaScript only: Python and the others can use socket-based messaging when someone wants to write their user scripts in any of those languages.
+        
+        The additional (and more important) reason to ditch CPython from the R&D set is hairiness of integrating Python into an application as an embedded scripting language, instead of the other way around. With the envisioned advent of ZeroMQ/socket based IPC, any Python scripts can hook into that instead of spending the effort and maintenance of having that large language as an embedded 'assistive' scripting/configuration language: it's simply too huge and complicated. We're not Blender and we don't have the funding.
     - [ECMA262](./ECMA262)
-    - [lua](./lua)
-    - [luaJIT](./luaJIT)
+    - ~~[lua](./lua)~~
+      + **removed**; reason: we've decided to offer any application user facing scripting features in JavaScript only: Python and the others can use socket-based messaging when someone wants to write their user scripts in any of those languages. See also the `CPython` entry.
+    - ~~[luaJIT](./luaJIT)~~
+      + **removed**; reason: see the `lua` entry above.
     - [QuickJS](./QuickJS)
         - [txiki](./txiki.js) -- uses QuickJS as its kernel
         - [QuickJS-C++-Wrapper](./QuickJS-C++-Wrapper)
@@ -389,13 +406,15 @@ The other JavaScript engines considered are of varying size, performance and com
 - multi-processing core technologies
     - [cli11](./cli11) -- command line options parser
     - [clipp](./clipp) -- commandline parser 
-    - [clippson](./clippson) -- commandline parser + JSON data diagnostical dumper
+    - ~~[clippson](./clippson) -- commandline parser + JSON data diagnostical dumper~~
+      + **removed**; reason: deemed cool but unsuitable for our needs. Besides, we intend to use `cli11` instead of `clipp` for that library is easier to read and support is more active there.
     - [cppzmq](./cppzmq)
     - [cpu_features](./cpu_features)
     - [cpu_stat](./cpu_stat)
     - [cpuinfo](./cpuinfo) -- CPU & hardware info
     - [createprocess-windows](./createprocess-windows) -- drive `CreateProcess` Win32 API
-    - [docopt](./docopt) -- generate documentation for command line options
+    - ~~[docopt](./docopt) -- generate documentation for command line options~~
+      + **removed**; reason: deemed cool but unsuitable for our needs. We intend to use `cli11` instead.
     - [expected-lite](./expected-lite)
     - [fmt](./fmt) -- advanced C++ data-to-text formatter. The modern answer to classic `printf()`.
     - [frozen](./frozen)
@@ -479,8 +498,10 @@ The other JavaScript engines considered are of varying size, performance and com
     + [crow](./crow) -- IPC / server framework
     + [drogon](./drogon)
     + [h2o-server](./h2o-server)
-    + [libmicrohttpd](./libmicrohttpd)
-    + [oatpp](./oatpp) -- IPC / server framework
+    + ~~[libmicrohttpd](https://github.com/Karlson2k/libmicrohttpd)~~
+      + **removed**; reason: we've decided on using `crow` as the main server framework. Second choices are civetweb and h2o. This GNU library is way too 'Unix-is-the-world' oriented for a smooth portable dev experience.
+    + ~~[oatpp](https://github.com/oatpp/oatpp) -- IPC / server framework~~
+      + **removed**; reason: we've decided on using `crow` as the main server framework.
     + [proxygen](./proxygen)
     + [wget](./wget)
 - socket I/O: websockets
@@ -492,8 +513,10 @@ The other JavaScript engines considered are of varying size, performance and com
     + [glob](./glob) -- directory scanner
 - configuration / parameterization 
     + [gflags](./gflags) -- google::flags library, used by other libs in this set.
-    + [inih](./inih)
-    + [iniparser](./iniparser)
+    + ~~[inih](https://github.com/benhoyt/inih)~~
+      + **removed**; reason: we've decided on using `libconfig` for configuration files.
+    + ~~[iniparser](https://github.com/ndevilla/iniparser)~~
+      + **removed**; reason: we've decided on using `libconfig` for configuration files.
     + [libconfig](../libconfig) -- generic config (file) reader/writer
     + [libyaml](./libyaml) -- YAML
     + [tomlpp](../tomlpp) -- TOML++
@@ -502,16 +525,20 @@ The other JavaScript engines considered are of varying size, performance and com
     - [gbenchmark](./gbenchmark)
 - logging & debugging
     + [breakpad](./breakpad)
-    + [EasyLogger](./EasyLogger)
+    + ~~[EasyLogger](https://github.com/armink/EasyLogger) -- an ultra-lightweight (ROM<1.6K, RAM<0.3K), high-performance C/C++ log library, very suitable for resource-sensitive software projects. Compared with the well-known C/C++ log libraries such as log4c and zlog, EasyLogger has simpler functions and provides fewer interfaces to users, but it will be quick to get started. More practical functions support dynamic expansion in the form of plug-ins.~~
+      + **removed**; reason: we've decided on using `glog` as the logging library for everything: while that one isn't perfect, most of the other stuff we've been looking at is using that one already and it matches our needs 80% of the time, while I'm okay with patching that library for the other 20% (syslog-like use, i.e. logging to localhost logging server where all logging is collected -- these log messages should travel across as part of the ZeroMQ message streams.)
     + [fmt](./fmt)
-    + [glog](./glog)
-    + [log4cplus](./log4cplus)
+    + [glog](./glog) -- Google Logging is a C++98 library that implements application-level logging. The library provides logging APIs based on C++-style streams and various helper macros.
+    + ~~[log4cplus](https://github.com/log4cplus/log4cplus)~~
+      + **removed**; reason: we've decided on using `glog` as the logging library for everything. log4cplus, at the same time, is a tad too much. (I consider `log4j` et al *overdone* as it caters to every need instead of just providing those things as contrib code which can be integrated at need -- should not be as far run-time configurable as it currently is.)
     + [MuPDF itself](../../)
     + [plf_nanotimer](./plf_nanotimer) -- high precision cross-platform performance timer
     + [replxx](./replxx) -- REPL CLI component: `readline` simile for REPL/interactive runs in a CLI
     + [resumable-assert](./resumable-assert)
-    + [spdlog](./spdlog)
-    + [zlog](./zlog)
+    + ~~[spdlog](https://github.com/gabime/spdlog)~~
+      + **removed**; reason: we've decided on using `glog` as the logging library for everything. `spdlog` has some nice features but in the end it was easy of cross-platform compilation and installed base that won out here... 
+    + ~~[zlog](https://github.com/HardySimpson/zlog)~~
+      + **removed**; `zlog` has a nice overall design but is too 'Unix-is-the-world' in its coding: in the end it was easy of cross-platform compilation of `glog` that won the day and I'm okay with layering on top of that one to get the zlog category and other channel features, once I really need them.
 - OCR core (tesseract)
     + [langdata_LSTM](../langdata_LSTM)
     + [tessconfigs](../tessconfigs)
@@ -585,7 +612,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [breakpad](./breakpad)
 - [brotli](../brotli) -- compression
 - [bzip2](./bzip2)
-- [c-blosc2](./c-blosc2)
+- [c-blosc2](./c-blosc2) -- a high performance compressor optimized for binary data (i.e. floating point numbers, integers and booleans), designed to transmit data to the processor cache faster than the traditional, non-compressed, direct memory fetch approach via a `memcpy()` OS call.
 - [CacheLib](./CacheLib) -- provides an in-process high performance caching mechanism, thread-safe API to build high throughput, low overhead caching services, with built-in ability to leverage DRAM and SSD caching transparently.
 - [caffe](./caffe)
 - [catboost](./catboost)
@@ -596,14 +623,14 @@ The other JavaScript engines considered are of varying size, performance and com
 - [clBLAS](./clBLAS)
 - [cli11](./cli11) -- command line options parser
 - [clipp](./clipp) -- commandline parser 
-- [clippson](./clippson) -- commandline parser + JSON data diagnostical dumper
+- ~~[clippson](./clippson) -- commandline parser + JSON data diagnostical dumper~~
 - [cmph-hasher](./cmph-hasher)
 - [cpp-btree](../cpp-btree) -- in-memory B+-tree: an alternative for the priority queue as we expect the queue to grow huge, given past experience with Qiqqa.
 - [cppzmq](./cppzmq)
 - [cpu_features](./cpu_features)
 - [cpu_stat](./cpu_stat)
 - [cpuinfo](./cpuinfo) -- CPU & hardware info
-- [CPython](./CPython)
+- ~~[CPython](./CPython)~~
 - [createprocess-windows](./createprocess-windows) -- drive `CreateProcess` Win32 API
 - [crow](./crow) -- IPC / server framework 
 - [cryptopp](./cryptopp)
@@ -613,10 +640,10 @@ The other JavaScript engines considered are of varying size, performance and com
 - [DCF-cuckoo-index](./DCF-cuckoo-index)
 - [djvulibre](./djvulibre)
 - [dlib](./dlib) -- machine learning algorithms
-- [docopt](./docopt) -- generate documentation for command line options
+- ~~[docopt](./docopt) -- generate documentation for command line options~~
 - [drogon](./drogon)
 - [dtl-diff-template-library](./dtl-diff-template-library)
-- [EasyLogger](./EasyLogger)
+- ~~[EasyLogger](https://github.com/armink/EasyLogger) -- an ultra-lightweight (ROM<1.6K, RAM<0.3K), high-performance C/C++ log library, very suitable for resource-sensitive software projects. Compared with the well-known C/C++ log libraries such as log4c and zlog, EasyLogger has simpler functions and provides fewer interfaces to users, but it will be quick to get started. More practical functions support dynamic expansion in the form of plug-ins.~~
 - [ECMA262](./ECMA262)
 - [efsw](./efsw) -- cross-platform file system watcher and notifier
 - [emphf-hash](./emphf-hash)
@@ -628,8 +655,8 @@ The other JavaScript engines considered are of varying size, performance and com
 - [fastBPE](./fastBPE) -- text tokenization / ngrams
 - [fastText](./fastText) -- [fastText](https://fasttext.cc/) is a library for efficient learning of word representations and sentence classification.
 - [file](./file) -- `file` filetype recognizer tool & mimemagic 
-- [flatbuffers](./flatbuffers)
-- [flatcc](./flatcc)
+- ~~[flatbuffers](./flatbuffers)~~
+- ~~[flatcc](./flatcc)~~
 - [fmt](./fmt) -- advanced C++ data-to-text formatter. The modern answer to classic `printf()`.
 - [freeglut](../freeglut)
 - [freetype](../freetype)
@@ -638,7 +665,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [GDCM-Grassroots-DICOM](./GDCM-Grassroots-DICOM)
 - [gflags](./gflags) -- google::flags library, used by other libs in this set.
 - [glob](./glob) -- directory scanner
-- [glog](./glog)
+- [glog](./glog) -- Google Logging is a C++98 library that implements application-level logging. The library provides logging APIs based on C++-style streams and various helper macros.
 - [GMM-HMM-kMeans](./GMM-HMM-kMeans)
 - [GMMreg](./GMMreg)
 - [google-diff-match-patch](./google-diff-match-patch)
@@ -665,11 +692,11 @@ The other JavaScript engines considered are of varying size, performance and com
 - [hunspell-hyphen](./hunspell-hyphen)
 - [hunspell](./hunspell)
 - [hyperscan](./hyperscan) -- Hyperscan is a high-performance multiple regex matching library.
-- [ice](./ice) -- Comprehensive RPC Framework: helps you network your software with minimal effort.
+- ~~[ice](./ice) -- Comprehensive RPC Framework: helps you network your software with minimal effort.~~
 - [ImageMagick](./ImageMagick)
-- [Imath](./Imath) -- float16 support lib for OpenEXR format
-- [inih](./inih)
-- [iniparser](./iniparser)
+- ~~[Imath](./Imath) -- float16 support lib for OpenEXR format~~
+- ~~[inih](./inih)~~
+- ~~[iniparser](./iniparser)~~
 - [jasper](./jasper) -- JasPer Image Processing/Coding Tool Kit
 - [jbig2dec](../jbig2dec)
 - [jemalloc](./jemalloc)
@@ -702,7 +729,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [libjpeg](../libjpeg)
 - [liblinear](./liblinear)
 - [libmdbx](./libmdbx)
-- [libmicrohttpd](./libmicrohttpd)
+- ~~[libmicrohttpd](./libmicrohttpd)~~
 - [libpng](../libpng)
 - [libq](./libq) -- A platform-independent promise library for C++, implementing asynchronous continuations.
 - [libqrencode](./libqrencode)
@@ -725,7 +752,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [Lightning.NET](./Lightning.NET) -- .NET library for OpenLDAP's LMDB key-value store
 - [ligra-graph](./ligra-graph)
 - [linenoise](./linenoise)
-- [lizard](./lizard)
+- ~~[lizard](./lizard)~~
 - [lmdb-safe](./lmdb-safe)
 - [lmdb-store](./lmdb-store)
 - [lmdb.spreads.net](./lmdb.spreads.net)
@@ -735,8 +762,8 @@ The other JavaScript engines considered are of varying size, performance and com
 - [lua](./lua)
 - [luaJIT](./luaJIT)
 - [lz4](./lz4)
-- [lzo](./lzo)
-- [lzsse](./lzsse)
+- ~~[lzo](./lzo)~~
+- ~~[lzsse](./lzsse)~~
 - [magic_enum](./magic_enum)
 - [many-stop-words](./many-stop-words)
 - [math-atlas](./math-atlas)
@@ -756,7 +783,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [ncnn](./ncnn) -- high-performance neural network inference computing framework optimized for mobile platforms (i.e. small footprint)
 - [neutralinoJS-CLI](./neutralinoJS-CLI)
 - [neutralinoJS](./neutralinoJS)
-- [oatpp](./oatpp) -- IPC / server framework
+- ~~[oatpp](./oatpp) -- IPC / server framework~~
 - [olena](./olena)
 - [oneTBB](./oneTBB) -- Intel's Thread Building Blocks library: used with OpenImageIO, ...
 - [opencv](./opencv)
@@ -774,7 +801,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [phf-hash](./phf-hash)
 - [photino.native](../photino.native)
 - [picohttpparser](./picohttpparser)
-- [pithy](./pithy)
+- ~~[pithy](./pithy)~~
 - [plf_nanotimer](./plf_nanotimer) -- high precision cross-platform performance timer
 - [pmt-png-tools](./pmt-png-tools)
 - [prio_queue](./prio_queue) -- a cache friendly priority queue, done as a B-heap.
@@ -794,15 +821,15 @@ The other JavaScript engines considered are of varying size, performance and com
 - [sentence-tokenizer](./sentence-tokenizer) -- text tokenization
 - [sentencepiece](./sentencepiece) -- text tokenization
 - [shoco](./shoco) -- a fast compressor for short strings
-- [snappy](./snappy)
+- ~~[snappy](./snappy)~~
 - [snmalloc](./snmalloc) -- a high-performance allocator.
 - [sparsehash](./sparsehash) -- fast hash algorithms
-- [spdlog](./spdlog)
+- ~~[spdlog](./spdlog)~~
 - [spy-build-sysinfo](./spy-build-sysinfo) -- build system info
 - [sqlite-amalgamation](./sqlite-amalgamation)
 - [sqlite](./sqlite)
 - [sqlite3pp](./sqlite3pp) -- a minimal ORM wrapper for SQLite et al.
-- [squash](./squash)
+- ~~[squash](./squash)~~
 - [stdext-path](./stdext-path) -- path manipulations (`dirname` et al)
 - [stopwords](./stopwords)
 - [subprocess](./subprocess)
@@ -857,7 +884,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [you-token-to-me](./you-token-to-me) -- text tokenization
 - [yyjson](./yyjson)
 - [zlib](../zlib)
-- [zlog](./zlog)
+- ~~[zlog](./zlog)~~
 - [zstd](./zstd)
 
 
