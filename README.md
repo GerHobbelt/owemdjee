@@ -280,7 +280,7 @@ The other JavaScript engines considered are of varying size, performance and com
         + **removed**; reason: considered *overkill* for the projects I'm currently involved in, including Qiqqa. Those can use [Apache Tika](https://tika.apache.org/), [ImageMagick](https://imagemagick.org/) or other thirdparty pipelines to convert to & from supported formats.
     - ~~[OpenImageIO](./OpenImageIO)~~
         + **removed**; reason: considered nice & cool but still *overkill*. Qiqqa tooling can use [Apache Tika](https://tika.apache.org/), [ImageMagick](https://imagemagick.org/) or other thirdparty pipelines to convert to & from supported formats.
-    - [jpeg-xl](https://gitlab.com/wg1/jpeg-xl) - \[DROPPED: nobody is using it yet, while I am more interested in high perf **lossless** formats for internal communications and storage]
+    - [jpeg-xl](./jpeg-xl) - [JPEG-XL]https://gitlab.com/wg1/jpeg-xl) support
     - [libgif](./libgif)
     - [libjpeg-turbo](./libjpeg-turbo)
     - [libwebp](./libwebp)
@@ -715,7 +715,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [jasper](./jasper) -- JasPer Image Processing/Coding Tool Kit
 - [jbig2dec](../jbig2dec)
 - [jemalloc](./jemalloc)
-- [jpeg-xl](https://gitlab.com/wg1/jpeg-xl) - \[DROPPED: nobody is using it yet, while I am more interested in high perf **lossless** formats for internal communications and storage]
+- [jpeg-xl](./jpeg-xl) - [JPEG-XL]https://gitlab.com/wg1/jpeg-xl) support
 - [jpeginfo](../jpeginfo)
 - [json-jansson](./json-jansson)
 - [json](./json)
