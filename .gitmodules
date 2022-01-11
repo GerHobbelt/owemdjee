@@ -894,3 +894,12 @@
 	path = sqlite3pp
 	url = git@github.com:GerHobbelt/sqlite3pp.git
 	ignore = dirty
+[submodule "wxPDFView"]
+	path = wxPDFView
+	url = git@github.com:GerHobbelt/wxPDFView.git
+[submodule "hypertextcpp"]
+	path = hypertextcpp
+	url = git@github.com:GerHobbelt/hypertextcpp.git
+[submodule "uberlog"]
+	path = uberlog
+	url = git@github.com:GerHobbelt/uberlog.git
