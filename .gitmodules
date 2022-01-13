@@ -903,3 +903,6 @@
 [submodule "uberlog"]
 	path = uberlog
 	url = git@github.com:GerHobbelt/uberlog.git
+[submodule "wxWebViewChromium"]
+	path = wxWebViewChromium
+	url = git@github.com:GerHobbelt/wxWebViewChromium.git
