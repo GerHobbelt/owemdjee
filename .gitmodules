@@ -409,7 +409,7 @@
 [submodule "brotli"]
 	path = brotli
 	url = git@github.com:GerHobbelt/brotli.git
-	ignore = dirty
+
 [submodule "tomlpp"]
 	path = tomlpp
 	url = git@github.com:GerHobbelt/tomlplusplus.git
@@ -897,12 +897,16 @@
 [submodule "wxPDFView"]
 	path = wxPDFView
 	url = git@github.com:GerHobbelt/wxPDFView.git
+	ignore = dirty
 [submodule "hypertextcpp"]
 	path = hypertextcpp
 	url = git@github.com:GerHobbelt/hypertextcpp.git
+	ignore = dirty
 [submodule "uberlog"]
 	path = uberlog
 	url = git@github.com:GerHobbelt/uberlog.git
+	ignore = dirty
 [submodule "wxWebViewChromium"]
 	path = wxWebViewChromium
 	url = git@github.com:GerHobbelt/wxWebViewChromium.git
+	ignore = dirty

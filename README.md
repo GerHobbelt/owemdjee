@@ -266,7 +266,7 @@ The other JavaScript engines considered are of varying size, performance and com
     - [olena](./olena)
     - [opencv](./opencv)
     - [opencv_contrib](./opencv_contrib)
-    - [scantailor](./scantailor) -- [scantailor_advanced](https://github.com/4lex4/scantailor-advanced) is the [ScanTailor](https://github.com/scantailor/scantailor) version that merges the features of the ScanTailor Featured and ScanTailor Enhanced versions, brings new ones and fixes. ScanTailor is an interactive post-processing tool for scanned pages. It performs operations such as page splitting, deskewing, adding/removing borders, selecting content, ... and many others.
+    - [scantailor](./scantailor) -- [scantailor_advanced](https://github.com/4lex4/scantailor-advanced) is the [ScanTailor](https://github.com/scantailor/scantailor) version that merges the features of the *ScanTailor Featured* and *ScanTailor Enhanced* versions, brings new ones and fixes. ScanTailor is an interactive post-processing tool for scanned pages. It performs operations such as page splitting, deskewing, adding/removing borders, selecting content, ... and many others.
     
 - image export, image / \[scanned] document import
     - [jbig2dec](../jbig2dec)
@@ -394,9 +394,10 @@ The other JavaScript engines considered are of varying size, performance and com
 - BibTeX and similar library formats' support
     - [bibtex-robust-decoder](./bibtex-robust-decoder)
     - [bibutils](./bibutils)
-- export / output file formats, etc.
-    - [libqrencode](./libqrencode) -- generate QRcodes from anything (e.g. URLs)
+- export / output file formats, text formatting, etc.
     - [fmt](./fmt) -- advanced C++ data-to-text formatter. The modern answer to classic `printf()`.
+    - [hypertextcpp](./hypertextcpp) -- string/text template engine & source-to-source compiler.
+    - [libqrencode](./libqrencode) -- generate QRcodes from anything (e.g. URLs)
     - [upskirt-markdown](./upskirt-markdown) -- MarkDown renderer
         - [svg-charter](./svg-charter) -- SVG chart renderer
             - [tinyexpr](./tinyexpr)
@@ -432,8 +433,9 @@ The other JavaScript engines considered are of varying size, performance and com
       + **removed**; reason: deemed cool but unsuitable for our needs. We intend to use `cli11` instead.
     - [expected-lite](./expected-lite)
     - [fmt](./fmt) -- advanced C++ data-to-text formatter. The modern answer to classic `printf()`.
-    - [frozen](./frozen)
-    - [hedley](./hedley)
+    - [hypertextcpp](./hypertextcpp) -- string/text template engine & source-to-source compiler.
+    - [frozen](./frozen) -- provides 0 cost initialization for immutable containers, fixed-size containers, and various algorithms.
+    - [hedley](./hedley) -- a C/C++ header file designed to smooth over some platform-specific annoyances.
     - [libcpuid](./libcpuid) -- CPU & hardware info
     - [libscanf](./libscanf)
     - [libtuv](./libtuv)
@@ -549,6 +551,7 @@ The other JavaScript engines considered are of varying size, performance and com
     + [resumable-assert](./resumable-assert)
     + ~~[spdlog](https://github.com/gabime/spdlog)~~
       + **removed**; reason: we've decided on using `glog` as the logging library for everything. `spdlog` has some nice features but in the end it was easy of cross-platform compilation and installed base that won out here... 
+    + [uberlog](./uberlog) -- a cross platform C++ logging system that is focused on fast and small, writing to a shared memory ring buffer.
     + ~~[zlog](https://github.com/HardySimpson/zlog)~~
       + **removed**; `zlog` has a nice overall design but is too 'Unix-is-the-world' in its coding: in the end it was easy of cross-platform compilation of `glog` that won the day and I'm okay with layering on top of that one to get the zlog category and other channel features, once I really need them.
 - OCR core (tesseract)
@@ -606,6 +609,8 @@ The other JavaScript engines considered are of varying size, performance and com
     + [wxWidgets](./wxWidgets)
     + [wxCharts](./wxCharts)
     + [wxFormBuilder](../wxFormBuilder)
+    + [wxPDFView](./wxPDFView) -- wxWidgets PDF viewer/reader control
+    + [wxWebViewChromium](./wxWebViewChromium) -- Chromium CEF3-based embedded browser for wxWidgets
     + [scintilla](./scintilla) -- text editor
 - misc / other
     + ~~[binary_bakery](https://github.com/s9w/binary_bakery) -- resource compiler-like tool: embed any data in your C/C++ application~~
@@ -675,7 +680,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [fmt](./fmt) -- advanced C++ data-to-text formatter. The modern answer to classic `printf()`.
 - [freeglut](../freeglut)
 - [freetype](../freetype)
-- [frozen](./frozen)
+- [frozen](./frozen) -- provides 0 cost initialization for immutable containers, fixed-size containers, and various algorithms.
 - [gbenchmark](./gbenchmark)
 - [GDCM-Grassroots-DICOM](./GDCM-Grassroots-DICOM)
 - [gflags](./gflags) -- google::flags library, used by other libs in this set.
@@ -696,7 +701,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [harfbuzz](../harfbuzz)
 - ~~[HDF5](./HDF5)~~
 - [HDiffPatch](./HDiffPatch)
-- [hedley](./hedley)
+- [hedley](./hedley) -- a C/C++ header file designed to smooth over some platform-specific annoyances.
 - ~~[HighFive-HDF5](./HighFive-HDF5)~~
 - [hmm-scalable](./hmm-scalable)
 - [hmm-stoch](./hmm-stoch)
@@ -830,7 +835,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [re2](./re2)
 - [replxx](./replxx) -- REPL CLI component: `readline` simile for REPL/interactive runs in a CLI
 - [resumable-assert](./resumable-assert)
-- [scantailor](./scantailor) -- [scantailor_advanced](https://github.com/4lex4/scantailor-advanced) is the [ScanTailor](https://github.com/scantailor/scantailor) version that merges the features of the ScanTailor Featured and ScanTailor Enhanced versions, brings new ones and fixes. ScanTailor is an interactive post-processing tool for scanned pages. It performs operations such as page splitting, deskewing, adding/removing borders, selecting content, ... and many others.
+- [scantailor](./scantailor) -- [scantailor_advanced](https://github.com/4lex4/scantailor-advanced) is the [ScanTailor](https://github.com/scantailor/scantailor) version that merges the features of the *ScanTailor Featured* and *ScanTailor Enhanced* versions, brings new ones and fixes. ScanTailor is an interactive post-processing tool for scanned pages. It performs operations such as page splitting, deskewing, adding/removing borders, selecting content, ... and many others.
 - [ScriptX](./ScriptX/) -- wrapper for V8, QuickJS, Lua, Python, ...
 - [sentence-tokenizer](./sentence-tokenizer) -- text tokenization
 - [sentencepiece](./sentencepiece) -- text tokenization
@@ -872,6 +877,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [tomlpp](../tomlpp) -- TOML++
 - [tre](./tre)
 - [txiki](./txiki.js) -- uses QuickJS as its kernel
+- [uberlog](./uberlog) -- a cross platform C++ logging system that is focused on fast and small, writing to a shared memory ring buffer.
 - [ucto](./ucto) -- text tokenization
 - [uctodata](./uctodata) -- data for `ucto` library
 - [uint128_t](./uint128_t)
@@ -882,9 +888,12 @@ The other JavaScript engines considered are of varying size, performance and com
 - [websocket-sharp](./websocket-sharp)
 - [webview](./webview)
 - [wget](./wget)
+- [WinHttpPAL](./WinHttpPAL) -- implements [WinHttp API](https://docs.microsoft.com/en-us/windows/win32/winhttp/winhttp-start-page) Platform Abstraction Layer for POSIX systems using libcurl
 - [wxCharts](./wxCharts)
 - [wxFormBuilder](../wxFormBuilder)
 - [wxWidgets](./wxWidgets)
+- [wxPDFView](./wxPDFView) -- wxWidgets PDF viewer/reader control
+- [wxWebViewChromium](./wxWebViewChromium) -- Chromium CEF3-based embedded browser for wxWidgets
 - [xml-pugixml](./xml-pugixml)
 - [XMP-Toolkit-SDK](./XMP-Toolkit-SDK)
 - [xsimd](./xsimd) -- xtensor core library
