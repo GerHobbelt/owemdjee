@@ -599,6 +599,7 @@ The other JavaScript engines considered are of varying size, performance and com
     + [ticpp](./ticpp) -- TinyXML++: XML read/write (is part of wxFormbuilder).
     + [tinyexpr](./tinyexpr)
     + [tlx](./tlx) -- a collection of C++ helpers and extensions universally needed, but not found in the STL.
+    + [tsf](./tsf) -- type-safe printf equivalent for C++ (used by the uberlog submodule)
     + [uint128_t](./uint128_t)
     + [scintilla](./scintilla) -- text editor (part of wxWidgets)
 - UI / GUI
@@ -876,6 +877,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [tlx](./tlx) -- a collection of C++ helpers and extensions universally needed, but not found in the STL.
 - [tomlpp](../tomlpp) -- TOML++
 - [tre](./tre)
+- [tsf](./tsf) -- type-safe printf equivalent for C++ (used by the uberlog submodule)
 - [txiki](./txiki.js) -- uses QuickJS as its kernel
 - [uberlog](./uberlog) -- a cross platform C++ logging system that is focused on fast and small, writing to a shared memory ring buffer.
 - [ucto](./ucto) -- text tokenization
