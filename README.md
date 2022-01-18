@@ -632,7 +632,7 @@ The other JavaScript engines considered are of varying size, performance and com
       + **removed**; reason: we already have `bin2coff` from MuPDF, which serves this purpose well enough.
 
 
-### Libraries in this collection
+### Libraries in this collection (All of the above, listed in alphabetical order)
 
 - [asynqro](./asynqro) -- Futures and thread pool for C++: Asynqro gives developers a rich monadic Future API (inspired by Future API in Scala language), a clean API, refined task scheduling logic and is not tied to any framework.
 - [BBHash](./BBHash)
