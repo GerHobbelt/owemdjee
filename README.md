@@ -111,7 +111,10 @@ The other JavaScript engines considered are of varying size, performance and com
 **UPDATE 2021/June**: jerryscript, duktape, XS/moddable, escargot: these have been dropped as we picked QuickJS. After some initial hassle with that codebase, we picked a different branch to test, which was cleaner and compiled out of the box (CMake > MSVC), which is always a good omen for a codebase when you have cross-platform portability in mind.
 
 
-## Libraries we're looking at for this *intent*:
+
+---
+
+# Libraries we're looking at for this *intent*:
 
 - IPC: flatbuffer et al for protocol design:
     - [bebop](./bebop)
@@ -634,7 +637,7 @@ The other JavaScript engines considered are of varying size, performance and com
 
 ---
 
-## Libraries in this collection (All of the above, listed in alphabetical order)
+# Libraries in this collection (All of the above, listed in alphabetical order)
 
 - [asynqro](./asynqro) -- Futures and thread pool for C++: Asynqro gives developers a rich monadic Future API (inspired by Future API in Scala language), a clean API, refined task scheduling logic and is not tied to any framework.
 - [BBHash](./BBHash)
