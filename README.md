@@ -330,7 +330,7 @@ The other JavaScript engines considered are of varying size, performance and com
     + other *topic modeling* code on the Net:
         * [Hierarchical Dirichlet Process (with Split-Merge Operations), Chong Wang](https://github.com/renaud/hdp-faster)
         * [Hierarchical Latent Tree Analysis (HLTA)](https://github.com/kmpoon/hlta)
-        * [Leonard Poon - various works]](https://github.com/kmpoon?tab=repositories)
+        * [Leonard Poon - various works](https://github.com/kmpoon?tab=repositories)
         * [David Blei's list of topic modeling OSS software](http://www.cs.columbia.edu/~blei/topicmodeling_software.html) + [github repo list](https://github.com/blei-lab)
 - database "backend storage"
     - [sqlite](./sqlite)
