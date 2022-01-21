@@ -542,6 +542,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - disk I/O, monitoring import locations, ...
     + [efsw](./efsw) -- cross-platform file system watcher and notifier
     + [glob](./glob) -- directory scanner
+    + [filesystem](./filesystem) -- a header-only single-file `std::filesystem` compatible helper library, based on the C++17 and C++20 specs, but implemented for C++11, C++14, C++17 or C++20 (tightly following the C++17 standard with very few documented exceptions). It is of course in its own namespace `ghc::filesystem` to not interfere with a regular `std::filesystem` should you use it in a mixed C++17 environment (which is possible).
 - configuration / parameterization 
     + [gflags](./gflags) -- google::flags library, used by other libs in this set.
     + ~~[inih](https://github.com/benhoyt/inih)~~
@@ -695,6 +696,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [fastBPE](./fastBPE) -- text tokenization / ngrams
 - [fastText](./fastText) -- [fastText](https://fasttext.cc/) is a library for efficient learning of word representations and sentence classification.
 - [file](./file) -- `file` filetype recognizer tool & mimemagic 
+- [filesystem](./filesystem) -- a header-only single-file `std::filesystem` compatible helper library, based on the C++17 and C++20 specs, but implemented for C++11, C++14, C++17 or C++20 (tightly following the C++17 standard with very few documented exceptions). It is of course in its own namespace `ghc::filesystem` to not interfere with a regular `std::filesystem` should you use it in a mixed C++17 environment (which is possible).
 - ~~[flatbuffers](./flatbuffers)~~
 - ~~[flatcc](./flatcc)~~
 - [fmt](./fmt) -- advanced C++ data-to-text formatter. The modern answer to classic `printf()`.

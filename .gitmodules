@@ -914,3 +914,19 @@
 	path = tsf
 	url = git@github.com:GerHobbelt/tsf.git
 	
+[submodule "filesystem"]
+	path = filesystem
+	url = git@github.com:GerHobbelt/filesystem.git
+	ignore = dirty
+[submodule "cxxtest_catch_2_gtest"]
+	path = cxxtest_catch_2_gtest
+	url = git@github.com:GerHobbelt/cxxtest_catch_2_gtest.git
+
+[submodule "QuickJS-C++-Wrapper2"]
+	path = QuickJS-C++-Wrapper2
+	url = git@github.com:GerHobbelt/quickjspp.git
+	ignore = dirty
+[submodule "binlog"]
+	path = binlog
+	url = git@github.com:GerHobbelt/binlog.git
+	ignore = dirty

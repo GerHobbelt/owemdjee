@@ -106,6 +106,25 @@
 
 
 
+# Monitoring, (SQL) Querying, Data Gathering and Reporting
+
+- https://github.com/osquery/osquery :: osquery exposes an operating system as a high-performance relational database. This allows you to write SQL-based queries to explore operating system data. With osquery, SQL tables represent abstract concepts such as running processes, loaded kernel modules, open network connections, browser plugins, hardware events or file hashes.
+
+  SQL tables are implemented via a simple plugin and extensions API. A variety of tables already exist and more are being written: https://osquery.io/schema.
+
+  ---
+
+  This inspired me to consider this or a similar interface for monitoring and debugging the task queue, which can grow *huge* in Qiqqa and has beeen a problem spot since the beginning: we need to discover how we can prioritize tasks, how they are queued in the internal task list and how and where we can modify or *tune* this behaviour to provide an optimal UX.
+
+  Turns out following a quick scan of the source tree that osquery is using [SQLite Virtual Tables](https://sqlite.org/vtab.html) as a fundament, which suits us *fine* as we're using SQLite already ourselves *and* intend to run it as part of the C/C++ backend binary in the *new Qiqqa design*, which is a place we have already considered moving the task list + scheduler to in the past. Ergo: a very nice fit for our needs and ideas.
+
+  See also:
+
+  - https://www.sqlite.org/vtablist.html#:~:text=A%20virtual%20table%20is%20an%20object%20that%20presents,database%20file%20using%20the%20powerful%20SQL%20query%20language.
+  - https://sqlite.org/vtab.html
+
+
+
 # Network protocols
 
 - https://github.com/xia-chu/ZLMediaKit :: A lightweight RTSP/RTMP/HTTP/HLS/HTTP-FLV/WebSocket-FLV/HTTP-TS/HTTP-fMP4/WebSocket-TS/WebSocket-fMP4/GB28181/WebRTC server and client framework based on C++11
