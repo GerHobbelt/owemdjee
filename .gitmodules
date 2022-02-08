@@ -930,3 +930,27 @@
 	path = binlog
 	url = git@github.com:GerHobbelt/binlog.git
 	ignore = dirty
+[submodule "CImg"]
+	path = CImg
+	url = git@github.com:GerHobbelt/CImg.git
+[submodule "wxMEdit"]
+	path = wxMEdit
+	url = git@github.com:GerHobbelt/wxMEdit.git
+[submodule "libgd"]
+	path = libgd
+	url = git@github.com:GerHobbelt/libgd.git
+[submodule "CxImage"]
+	path = CxImage
+	url = git@github.com:GerHobbelt/CxImage.git
+[submodule "VisualScriptEngine"]
+	path = VisualScriptEngine
+	url = git@github.com:GerHobbelt/VisualScriptEngine.git
+[submodule "wxVisualScriptEngine"]
+	path = wxVisualScriptEngine
+	url = git@github.com:GerHobbelt/VisualScriptEngineWxWidgets.git
+[submodule "wxSQLite3"]
+	path = wxSQLite3
+	url = git@github.com:GerHobbelt/wxsqlite3.git
+[submodule "wxExamples"]
+	path = wxExamples
+	url = git@github.com:GerHobbelt/Examples_wxWidgets.git
