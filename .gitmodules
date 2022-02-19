@@ -933,69 +933,92 @@
 [submodule "CImg"]
 	path = CImg
 	url = git@github.com:GerHobbelt/CImg.git
+	ignore = dirty
 [submodule "wxMEdit"]
 	path = wxMEdit
 	url = git@github.com:GerHobbelt/wxMEdit.git
+	ignore = dirty
 [submodule "libgd"]
 	path = libgd
 	url = git@github.com:GerHobbelt/libgd.git
+	ignore = dirty
 [submodule "CxImage"]
 	path = CxImage
 	url = git@github.com:GerHobbelt/CxImage.git
+	ignore = dirty
 [submodule "VisualScriptEngine"]
 	path = VisualScriptEngine
 	url = git@github.com:GerHobbelt/VisualScriptEngine.git
+	ignore = dirty
 [submodule "wxVisualScriptEngine"]
 	path = wxVisualScriptEngine
 	url = git@github.com:GerHobbelt/VisualScriptEngineWxWidgets.git
+	ignore = dirty
 [submodule "wxSQLite3"]
 	path = wxSQLite3
 	url = git@github.com:GerHobbelt/wxsqlite3.git
+	ignore = dirty
 [submodule "wxExamples"]
 	path = wxExamples
 	url = git@github.com:GerHobbelt/Examples_wxWidgets.git
+	ignore = dirty
 [submodule "libwarc"]
 	path = libwarc
 	url = git@github.com:GerHobbelt/libwarc.git
+	ignore = dirty
 [submodule "warc2text"]
 	path = warc2text
 	url = git@github.com:GerHobbelt/warc2text.git
+	ignore = dirty
 [submodule "preprocess-corpuses"]
 	path = preprocess-corpuses
 	url = git@github.com:GerHobbelt/preprocess.git
+	ignore = dirty
 [submodule "cld2-language-detect"]
 	path = cld2-language-detect
 	url = git@github.com:GerHobbelt/cld2.git
+	ignore = dirty
 [submodule "uchardet"]
 	path = uchardet
 	url = git@github.com:GerHobbelt/uchardet.git
+	ignore = dirty
 [submodule "libpsl"]
 	path = libpsl
 	url = git@github.com:GerHobbelt/libpsl.git
+	ignore = dirty
 [submodule "upscaledb"]
 	path = upscaledb
 	url = git@github.com:GerHobbelt/hamsterdb.git
+	ignore = dirty
 [submodule "manticore-columnar"]
 	path = manticore-columnar
 	url = git@github.com:GerHobbelt/columnar.git
+	ignore = dirty
 [submodule "manticoresearch"]
 	path = manticoresearch
 	url = git@github.com:GerHobbelt/manticoresearch.git
+	ignore = dirty
 [submodule "manticore-plugins"]
 	path = manticore-plugins
 	url = git@github.com:GerHobbelt/manticore-plugins.git
+	ignore = dirty
 [submodule "libstemmer"]
 	path = libstemmer
 	url = git@github.com:GerHobbelt/libstemmer.git
+	ignore = dirty
 [submodule "snowball"]
 	path = snowball
 	url = git@github.com:GerHobbelt/snowball.git
+	ignore = dirty
 [submodule "csync2"]
 	path = csync2
 	url = git@github.com:GerHobbelt/csync2.git
+	ignore = dirty
 [submodule "librsync"]
 	path = librsync
 	url = git@github.com:GerHobbelt/librsync.git
+	ignore = dirty
 [submodule "SQLiteCpp"]
 	path = SQLiteCpp
 	url = git@github.com:GerHobbelt/SQLiteCpp.git
+	ignore = dirty
