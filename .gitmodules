@@ -954,3 +954,48 @@
 [submodule "wxExamples"]
 	path = wxExamples
 	url = git@github.com:GerHobbelt/Examples_wxWidgets.git
+[submodule "libwarc"]
+	path = libwarc
+	url = git@github.com:GerHobbelt/libwarc.git
+[submodule "warc2text"]
+	path = warc2text
+	url = git@github.com:GerHobbelt/warc2text.git
+[submodule "preprocess-corpuses"]
+	path = preprocess-corpuses
+	url = git@github.com:GerHobbelt/preprocess.git
+[submodule "cld2-language-detect"]
+	path = cld2-language-detect
+	url = git@github.com:GerHobbelt/cld2.git
+[submodule "uchardet"]
+	path = uchardet
+	url = git@github.com:GerHobbelt/uchardet.git
+[submodule "libpsl"]
+	path = libpsl
+	url = git@github.com:GerHobbelt/libpsl.git
+[submodule "upscaledb"]
+	path = upscaledb
+	url = git@github.com:GerHobbelt/hamsterdb.git
+[submodule "manticore-columnar"]
+	path = manticore-columnar
+	url = git@github.com:GerHobbelt/columnar.git
+[submodule "manticoresearch"]
+	path = manticoresearch
+	url = git@github.com:GerHobbelt/manticoresearch.git
+[submodule "manticore-plugins"]
+	path = manticore-plugins
+	url = git@github.com:GerHobbelt/manticore-plugins.git
+[submodule "libstemmer"]
+	path = libstemmer
+	url = git@github.com:GerHobbelt/libstemmer.git
+[submodule "snowball"]
+	path = snowball
+	url = git@github.com:GerHobbelt/snowball.git
+[submodule "csync2"]
+	path = csync2
+	url = git@github.com:GerHobbelt/csync2.git
+[submodule "librsync"]
+	path = librsync
+	url = git@github.com:GerHobbelt/librsync.git
+[submodule "SQLiteCpp"]
+	path = SQLiteCpp
+	url = git@github.com:GerHobbelt/SQLiteCpp.git

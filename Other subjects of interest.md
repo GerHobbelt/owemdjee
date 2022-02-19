@@ -104,6 +104,8 @@
 - https://www.youtube.com/watch?v=X1T3IQ4N-3g&ab_channel=CppCon :: atomics, two types of 'em in the standard
 - https://www.youtube.com/watch?v=fHNmRkzxHWs :: part 1, https://www.youtube.com/watch?v=vElZc6zSIXM&ab_channel=CppCon :: part 2
 
+- https://github.com/dokan-dev/dokany -- FUSE on Windows; mountable custom file systems for MSWindows. Includes a `memfs` sample FS. Interesting as an alternative way into large libraries: a custom file-system like that can be used to offer folks a 'human-readable' set of document files which do not take up space on your harddrive as they will be direct aliases of the hash-encoded Qiqqa-managed documents.
+
 
 
 # Monitoring, (SQL) Querying, Data Gathering and Reporting
