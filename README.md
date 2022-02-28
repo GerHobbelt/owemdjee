@@ -241,7 +241,7 @@ The other JavaScript engines considered are of varying size, performance and com
         + [libtextcat](./libtextcat) -- text language detection
         + [ucto](./ucto) -- text tokenization
             * [uctodata](./uctodata) -- data for `ucto` library
-            * [libfolia](./libfolia) -- working with the Format for Linguistic Annotation (FoLiA).
+            * [libfolia](./libfolia) -- working with the Format for Linguistic Annotation (FoLiA). Provides a high-level API to read, manipulate, and create FoLiA documents.
         + [fastBPE](./fastBPE) -- text tokenization / ngrams
         + [fastText](./fastText) -- [fastText](https://fasttext.cc/) is a library for efficient learning of word representations and sentence classification. Includes language detection feeatures.
         + [BlingFire](./BlingFire) -- we are a team at Microsoft called Bling (Beyond Language Understanding), sharing our [FInite State machine and REgular expression manipulation library](https://github.com/microsoft/BlingFire) (FIRE). We use Fire for many linguistic operations inside Bing such as Tokenization, Multi-word expression matching, Unknown word-guessing, Stemming / Lemmatization just to mention a few.
@@ -325,7 +325,7 @@ The other JavaScript engines considered are of varying size, performance and com
         + [libtextcat](./libtextcat) -- text language detection
         + [ucto](./ucto) -- text tokenization
             * [uctodata](./uctodata) -- data for `ucto` library
-            * [libfolia](./libfolia) -- working with the Format for Linguistic Annotation (FoLiA).
+            * [libfolia](./libfolia) -- working with the Format for Linguistic Annotation (FoLiA). Provides a high-level API to read, manipulate, and create FoLiA documents.
         + [fastBPE](./fastBPE) -- text tokenization / ngrams
         + [many-stop-words](./many-stop-words)
         + [stopwords](./stopwords)
@@ -358,7 +358,7 @@ The other JavaScript engines considered are of varying size, performance and com
     - [you-token-to-me](./you-token-to-me) -- text tokenization
     - [ucto](./ucto) -- text tokenization
         + [uctodata](./uctodata) -- data for `ucto` library
-        + [libfolia](./libfolia) -- working with the Format for Linguistic Annotation (FoLiA).
+        + [libfolia](./libfolia) -- working with the Format for Linguistic Annotation (FoLiA). Provides a high-level API to read, manipulate, and create FoLiA documents.
     - [fastBPE](./fastBPE) -- text tokenization / ngrams
     - [fastText](./fastText) -- [fastText](https://fasttext.cc/) is a library for efficient learning of word representations and sentence classification.
     - see also https://github.com/fxsjy/jieba for a Chinese text tokenizer (done in Python)
@@ -607,7 +607,7 @@ The other JavaScript engines considered are of varying size, performance and com
     + [mimalloc](./mimalloc) -- a compact general purpose allocator with excellent performance.
     + [snmalloc](./snmalloc) -- a high-performance allocator.
     + [libbf](../libbf)
-    + [libfolia](./libfolia) -- working with the Format for Linguistic Annotation (FoLiA).
+    + [libfolia](./libfolia) -- working with the Format for Linguistic Annotation (FoLiA). Provides a high-level API to read, manipulate, and create FoLiA documents.
     + [libidn2](./libidn2)
     + [nanosvg](./nanosvg)
     + [OpenSSL](./openssl) -- also used by CURL et al, incidentally.
@@ -763,7 +763,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [libcpuid](./libcpuid) -- CPU & hardware info
 - [libCZMQ](../libCZMQ)
 - [libexpat](./libexpat) -- XML read/write
-- [libfolia](./libfolia) -- working with the Format for Linguistic Annotation (FoLiA).
+- [libfolia](./libfolia) -- working with the Format for Linguistic Annotation (FoLiA). Provides a high-level API to read, manipulate, and create FoLiA documents.
 - [libgif](./libgif)
 - [libidn2](./libidn2)
 - [libjpeg-turbo](./libjpeg-turbo)
@@ -977,3 +977,30 @@ The other JavaScript engines considered are of varying size, performance and com
 
 
 
+
+- [cxxtest_catch_2_gtest](../cxxtest_catch_2_gtest)
+- [QuickJS-C++-Wrapper2](../QuickJS-C++-Wrapper2)
+- [binlog](../binlog)
+- [CImg](../CImg)
+- [wxMEdit](../wxMEdit)
+- [libgd](../libgd)
+- [CxImage](../CxImage)
+- [VisualScriptEngine](../VisualScriptEngine)
+- [wxVisualScriptEngine](../wxVisualScriptEngine)
+- [wxSQLite3](../wxSQLite3)
+- [wxExamples](../wxExamples)
+- [libwarc](../libwarc)
+- [warc2text](../warc2text)
+- [preprocess-corpuses](../preprocess-corpuses)
+- [cld2-language-detect](../cld2-language-detect)
+- [uchardet](../uchardet)
+- [libpsl](../libpsl)
+- [upscaledb](../upscaledb)
+- [manticore-columnar](../manticore-columnar)
+- [manticoresearch](../manticoresearch)
+- [manticore-plugins](../manticore-plugins)
+- [libstemmer](../libstemmer)
+- [snowball](../snowball)
+- [csync2](../csync2)
+- [librsync](../librsync)
+- [SQLiteCpp](../SQLiteCpp)

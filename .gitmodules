@@ -1022,3 +1022,35 @@
 	path = SQLiteCpp
 	url = git@github.com:GerHobbelt/SQLiteCpp.git
 	ignore = dirty
+[submodule "libcyaml"]
+	path = libcyaml
+	url = git@github.com:GerHobbelt/libcyaml.git
+	ignore = dirty
+[submodule "libyaml-examples"]
+	path = libyaml-examples
+	url = git@github.com:GerHobbelt/libyaml-examples.git
+	ignore = dirty
+[submodule "libfyaml"]
+	path = libfyaml
+	url = git@github.com:GerHobbelt/libfyaml.git
+	ignore = dirty
+[submodule "yaml-test-suite"]
+	path = yaml-test-suite
+	url = git@github.com:GerHobbelt/yaml-test-suite.git
+	ignore = dirty
+[submodule "yaml-cpp"]
+	path = yaml-cpp
+	url = git@github.com:GerHobbelt/yaml-cpp.git
+	ignore = dirty
+[submodule "rapidyaml"]
+	path = rapidyaml
+	url = git@github.com:GerHobbelt/rapidyaml.git
+	ignore = dirty
+[submodule "smhasher"]
+	path = smhasher
+	url = git@github.com:GerHobbelt/smhasher.git
+	ignore = dirty
+[submodule "circlehash"]
+	path = circlehash
+	url = git@github.com:GerHobbelt/circlehash.git
+	ignore = dirty
