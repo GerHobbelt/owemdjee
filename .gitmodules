@@ -1054,3 +1054,12 @@
 	path = circlehash
 	url = git@github.com:GerHobbelt/circlehash.git
 	ignore = dirty
+[submodule "htmlstreamparser"]
+	path = htmlstreamparser
+	url = git@github.com:GerHobbelt/htmlstreamparser.git
+[submodule "zsync2"]
+	path = zsync2
+	url = git@github.com:GerHobbelt/zsync2.git
+[submodule "libcpr"]
+	path = libcpr
+	url = git@github.com:GerHobbelt/cpr.git
