@@ -1057,9 +1057,12 @@
 [submodule "htmlstreamparser"]
 	path = htmlstreamparser
 	url = git@github.com:GerHobbelt/htmlstreamparser.git
+	ignore = dirty
 [submodule "zsync2"]
 	path = zsync2
 	url = git@github.com:GerHobbelt/zsync2.git
+	ignore = dirty
 [submodule "libcpr"]
 	path = libcpr
 	url = git@github.com:GerHobbelt/cpr.git
+	ignore = dirty

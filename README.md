@@ -138,7 +138,7 @@ The other JavaScript engines considered are of varying size, performance and com
     - [libwebsocketpp](./libwebsocketpp)
     - [libwebsockets](./libwebsockets)
     - [websocket-sharp](./websocket-sharp)
-    - [OpenSSL](./openssl) -- also used by CURL et al, incidentally.
+    - [OpenSSL](./openssl) -- also used by cURL et al, incidentally.
     - [crow](./crow) -- IPC / server framework 
      
       Interface looks nicer than `oatpp`...
@@ -369,7 +369,8 @@ The other JavaScript engines considered are of varying size, performance and com
     - [XMP-Toolkit-SDK](./XMP-Toolkit-SDK)
 - web scraping (document extraction, cleaning, metadata extraction, BibTeX, ...) 
     - see investigation notes in Qiqqa docs
-    - [curl](../curl)
+    - [cURL](../curl)
+    - [libcpr](../libcpr) -- wrapper library for cURL
     - [extract](../extract)
     - [libidn2](./libidn2) -- international domain name parsing
     - [gumbo-parser](../gumbo-parser) -- HTML parser
@@ -610,7 +611,7 @@ The other JavaScript engines considered are of varying size, performance and com
     + [libfolia](./libfolia) -- working with the Format for Linguistic Annotation (FoLiA). Provides a high-level API to read, manipulate, and create FoLiA documents.
     + [libidn2](./libidn2)
     + [nanosvg](./nanosvg)
-    + [OpenSSL](./openssl) -- also used by CURL et al, incidentally.
+    + [OpenSSL](./openssl) -- also used by cURL et al, incidentally.
     + [pcre](./pcre)
     + ~~[protobuf](./protobuf)~~
     + [svg-charter](./svg-charter) -- SVG chart renderer
@@ -620,6 +621,8 @@ The other JavaScript engines considered are of varying size, performance and com
     + [tsf](./tsf) -- type-safe printf equivalent for C++ (used by the uberlog submodule)
     + [uint128_t](./uint128_t)
     + [scintilla](./scintilla) -- text editor (part of wxWidgets)
+    + [htmlstreamparser](../htmlstreamparser) -- used in a demo of zsync2
+    + [libcpr](../libcpr) -- wrapper library for cURL; used by zsync2
 - UI / GUI
     + [neutralinoJS](./neutralinoJS)
     + [neutralinoJS-CLI](./neutralinoJS-CLI)
@@ -677,7 +680,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [cryptopp](./cryptopp)
 - [cuckoo-index](./cuckoo-index)
 - [cuckoofilter](./cuckoofilter)
-- [curl](../curl)
+- [cURL](../curl)
 - [DCF-cuckoo-index](./DCF-cuckoo-index)
 - [djvulibre](./djvulibre)
 - [dlib](./dlib) -- machine learning algorithms
@@ -832,7 +835,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [OpenEXR](./OpenEXR) -- lossless format for multi-layered images. Professional use. (I've used it before; nice file format.)
 - [OpenImageIO](./OpenImageIO)
 - [openjpeg](../openjpeg)
-- [OpenSSL](./openssl) -- also used by CURL et al, incidentally.
+- [OpenSSL](./openssl) -- also used by cURL et al, incidentally.
 - [OptimizationTemplateLibrary](./OptimizationTemplateLibrary) -- Optimization Template Library (OTL)
 - [otl](../otl) -- Oracle Template Library (STL-like wrapper for SQL DB queries; supports many databases besides Oracle)
 - [palmtree](./palmtree) -- concurrent lock free B+Tree
@@ -940,7 +943,7 @@ The other JavaScript engines considered are of varying size, performance and com
 
 ## Libraries not available in this collection but already part of `mupdf`
 
-- [curl](../curl)
+- [cURL](../curl)
 - [extract](../extract)
 - [freeglut](../freeglut)
 - [freetype](../freetype)
@@ -1004,3 +1007,14 @@ The other JavaScript engines considered are of varying size, performance and com
 - [csync2](../csync2)
 - [librsync](../librsync)
 - [SQLiteCpp](../SQLiteCpp)
+- [libcyaml](../libcyaml)
+- [libyaml-examples](../libyaml-examples)
+- [libfyaml](../libfyaml)
+- [yaml-test-suite](../yaml-test-suite)
+- [yaml-cpp](../yaml-cpp)
+- [rapidyaml](../rapidyaml)
+- [smhasher](../smhasher)
+- [circlehash](../circlehash)
+- [htmlstreamparser](../htmlstreamparser)
+- [zsync2](../zsync2)
+- [libcpr](../libcpr)
