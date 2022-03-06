@@ -117,6 +117,7 @@ The other JavaScript engines considered are of varying size, performance and com
 # Libraries we're looking at for this *intent*:
 
 - IPC: flatbuffer et al for protocol design:
+
     - [bebop](./bebop)
     - ~~[FastBinaryEncoding](https://github.com/chronoxor/FastBinaryEncoding)~~
       + **removed**; reason: for binary format record serialization we will be using `bebop` exclusively. All other communications will be JSON/JSON5/XML based.
@@ -134,7 +135,9 @@ The other JavaScript engines considered are of varying size, performance and com
     - ~~[protobuf](https://github.com/protocolbuffers/protobuf)~~
       + **removed**; reason: relatively slow run-time and (in my opinion) rather ugly & convoluted approach at build time. Has too much of a Java/CorporateProgramming smell, which has not lessened over the years, unfortunately.
     - ~~[SWIG](https://swig.readthedocs.io/en/latest/Manual/SWIG.html) (*not included; more suitable for RPC than what we have in mind, which is purely data messages enchange*)~~
+
 - IPC: websockets, etc.: all communication means
+
     - [libwebsocketpp](./libwebsocketpp)
     - [libwebsockets](./libwebsockets)
     - [websocket-sharp](./websocket-sharp)
@@ -154,18 +157,50 @@ The other JavaScript engines considered are of varying size, performance and com
         + [libzmq](./libzmq) -- ZeroMQ core engine in C++, implements [ZMTP/3.1](https://zguide.zeromq.org/).
         + [cppzmq](./cppzmq) -- header-only C++ binding for libzmq.
         + [libCZMQ](../libCZMQ) -- High-level C binding for ØMQ. (http://czmq.zeromq.org/)
+
 - IPC: JSON for protocol design:
+
     - [json](./json)
     - [json-jansson](./json-jansson)
     - [rapidJSON](./rapidJSON)
     - [yyjson](./yyjson)
     - [libsmile](./libsmile) -- ["Smile" format](https://en.wikipedia.org/wiki/Smile_%28data_interchange_format%29), i.e. a compact binary JSON format
-- content hashing
+
+- content hashing (cryptographic strength i.e. *"guaranteed"* collision-free)
+    
+    The bit about **_"guaranteed"_ collision-free** is to be read as: hash algorithms in this section must come with *strong statistical guarantees* that any chance at a **hash collision** is negligible, even for *extremely large* collections. In practice this means: use *cryptographic* hash algorithms with a *strength* of 128 bits or more. (Qiqqa used a b0rked version SHA1 thus far, which is considered too weak as we already sample PDFs which cause a hash collision for the *official* SHA1 algo (and thus also collide in our b0rked SHA1 variant): while those can still be argued to be fringe case, I don't want to be bothered with this at all and thus choose to err on the side of 'better than SHA1B' here. Meanwhile, any library in here *may* contain weaker cryptographic hashes alongside: we won't be using those for **content hashing**.
+  
     - [BLAKE3](./BLAKE3) -- cryptographic hash
     - [cryptopp](./cryptopp) -- crypto library
-    - [sparsehash](./sparsehash) -- fast (non-cryptographic) hash algorithms
-    - [xxHash](./xxHash) -- fast (non-cryptographic) hash algorithm
+    - [OpenSSL](./openssl) -- its crypto library part, more specifically.
+
+- hash-like filters & fast hashing for hash tables et al (64 bits and less, mostly)
+
+    These hashes are for other purposes, e.g. fast lookup in dictionaries, fast approximate hit testing and set reduction through fast filtering (think *bloom filter*). These *may* be **machine specific** (and some of them *are*): these are **never supposed to be used for encoding in storage or other means which crosses machine boundaries**: if you want to use them for a database index, that is fine *as long as* you don't expect that database index to be readable by any other machine than the one which produced and uses these hash numbers.
+  
+    > As you can see from the list below, I went on a shopping spree, having fun with all the latest, including some *possibly insane* stuff that's only really useful for particular edge cases -- which we *hope to avoid ourselves, for a while at least*. Anyway, I'ld say we've got the motherlode here. Simple fun for those days when your brain-flag is at half-mast. Enjoy.
+  
+    + [sparsehash](./sparsehash) -- fast (non-cryptographic) hash algorithms
+    + [xxHash](./xxHash) -- fast (non-cryptographic) hash algorithm
+    + [circlehash](../circlehash) -- a family of non-cryptographic hash functions that pass every test in SMHasher.
+    + [smhasher](../smhasher) -- benchmark and collection of fast hash functions for symbol tables or hash tables.
+    + [BBHash](./BBHash)
+    + [BCF-cuckoo-index](./BCF-cuckoo-index)
+    + [caffe](./caffe)
+    + [catboost](./catboost)
+    + [cmph-hasher](./cmph-hasher)
+    + [cuckoo-index](./cuckoo-index)
+    + [cuckoofilter](./cuckoofilter)
+    + [DCF-cuckoo-index](./DCF-cuckoo-index)
+    + [emphf-hash](./emphf-hash)
+    + [gperf-hash](./gperf-hash)
+    + [LDCF-hash](./LDCF-hash)
+    + [libbloom](./libbloom)
+    + [morton_filter](./morton_filter)
+    + [phf-hash](./phf-hash)
+
 - intermediate data storage / caching / hierarchical data stores (binary hOCR; document text revisions; ...) 
+
     - [c-blosc2](./c-blosc2) -- a high performance compressor optimized for binary data (i.e. floating point numbers, integers and booleans), designed to transmit data to the processor cache faster than the traditional, non-compressed, direct memory fetch approach via a `memcpy()` OS call.
     - [CacheLib](./CacheLib) -- provides an in-process high performance caching mechanism, thread-safe API to build high throughput, low overhead caching services, with built-in ability to leverage DRAM and SSD caching transparently.
     - ~~HDF5 file format~~
@@ -188,10 +223,12 @@ The other JavaScript engines considered are of varying size, performance and com
         + [lmdbxx](./lmdbxx) -- LMDB C++ wrapper
         + [palmtree](./palmtree) -- concurrent lock free B+Tree
         + [parallel-hashmap](./parallel-hashmap) -- a set of hash map implementations, as well as a btree alternative to std::map and std::set
+	
 - data storage / caching / IPC: loss-less data compression
+
     - [brotli](../brotli) -- compression
     - ~~[bzip2](https://github.com/nemequ/bzip2)~~
-      + **removed**; reason: see `fast-lzma2` below. When we want this, we can through [Apache Tika](https://tika.apache.org/) or other thirdparty pipelines.
+      + **removed**; reason: see `fast-lzma2` below. When we want this, we can go through [Apache Tika](https://tika.apache.org/) or other thirdparty pipelines.
     - [c-blosc2](./c-blosc2) -- a high performance compressor optimized for binary data (i.e. floating point numbers, integers and booleans), designed to transmit data to the processor cache faster than the traditional, non-compressed, direct memory fetch approach via a `memcpy()` OS call.
     - ~~[fast-lzma2](https://github.com/conor42/fast-lzma2)~~
       + **removed**; reason: gone as part of the first round of compression libraries' cleanup: we intend to support lz4 for fast work, plus zstd and *maybe* brotli for higher compression ratios, while we won't bother with anything else: the rest can be dealt with through [Apache Tika](https://tika.apache.org/) or other thirdparty pipelines when we need to read (or write) them. See also: [7zip-Zstd](https://github.com/mcmilk/7-Zip-zstd), which is what I use for accessing almost all compressed material anywhere.
@@ -211,21 +248,37 @@ The other JavaScript engines considered are of varying size, performance and com
     - ~~[squash](https://github.com/quixdb/squash)~~
       + **removed**; reason: see `fast-lzma2` above. LZ4 either overtakes this one or is on par (anno 2022 AD).
     - ~~[xz-utils](https://github.com/xz-mirror/xz)~~
-      + **removed**; reason: see `fast-lzma2` above. When we want this, we can through [Apache Tika](https://tika.apache.org/) or other thirdparty pipelines.
+      + **removed**; reason: see `fast-lzma2` above. When we want this, we can go through [Apache Tika](https://tika.apache.org/) or other thirdparty pipelines.
     - [zstd](./zstd)
     - see also [lzbench](https://github.com/inikep/lzbench)
+
+- file / directory tree synchronization (local and remote)
+
+    - [lib_nas_lockfile](./lib_nas_lockfile) -- lockfile management on NAS and other disparate network filesystem storage. To be combined with SQLite to create a proper Qiqqa Sync operation.
+    
+    - [librsync](../librsync) -- a library for calculating and applying network deltas. librsync encapsulates the core algorithms of the rsync protocol, which help with efficient calculation of the differences between two files. The rsync algorithm is different from most differencing algorithms because it does not require the presence of the two files to calculate the delta.  Instead, it requires a set of checksums of each block of one file, which together form a signature for that file.  Blocks at any position in the other file which have the same checksum are likely to be identical, and whatever remains is the difference. This algorithm transfers the differences between two files without needing both files on the same system.
+
+    - [zsync2](../zsync2) -- the advanced file download/sync tool zsync. zsync is a well known tool for downloading and updating local files from HTTP servers using the well known algorithms rsync used for diffing binary files. Therefore, it becomes possible to synchronize modifications by exchanging the changed blocks locally using `Range:` requests. The system is based on meta files called `.zsync` files. They contain hash sums for every block of data. The file is generated from and stored along with the actual file it refers to. Due to how system works, nothing but a "dumb" HTTP server is required to make use of zsync2. This makes it easy to integrate zsync2 into existing systems.
+
+    - [csync2](../csync2) -- a cluster synchronization tool. It can be used to keep files on multiple hosts in a cluster in sync. Csync2 can handle complex setups with much more than just 2 hosts, handle file deletions and can detect conflicts.
+
 - OCR: hOCR output format, other output format? (dedicated binary?)
+
     - [hocr-fileformat](./hocr-fileformat)
     - [hocr-spec](./hocr-spec)
     - [hocr-tools](./hocr-tools)
+
 - pattern recognition: "A.I." for cover pages, image/page *segmentation*, including abstract & summary demarcation, "figure" and "table" detection & extraction from documents, ...
+
     - [dlib](./dlib) -- machine learning algorithms
         - [lapack](./lapack) -- [CBLAS](http://www.netlib.org/blas/) + [LAPACK](http://www.netlib.org/lapack/index.html) optimized linear algebra libs
     - [clBLAS](./clBLAS)
     - [libsvm](./libsvm)
     - [math-atlas](./math-atlas)
-    - [MITIE-nlp](./MITIE-nlp)
+    - [MITIE-nlp](./MITIE-nlp) -- provides state-of-the-art information extraction tools. Includes tools for performing [named entity extraction](http://blog.dlib.net/2014/04/mitie-completely-free-and-state-of-art.html) and [binary relation detection](http://blog.dlib.net/2014/07/mitie-v02-released-now-includes-python.html) as well as tools for training custom extractors and relation detectors.  MITIE is built on top of [dlib](http://dlib.net), a high-performance machine-learning library, MITIE makes use of several state-of-the-art techniques including the use of distributional word embeddings and Structural Support Vector Machines.
     - [mlpack](./mlpack)
+    - [mipp](./mipp) -- MyIntrinsics++ (MIPP): a portable wrapper for vector intrinsic functions (SIMD) written in C++11. It works for SSE, AVX, AVX-512 and ARM NEON (32-bit and 64-bit) instructions. MIPP wrapper supports simple/double precision floating-point numbers and also signed integer arithmetic (64-bit, 32-bit, 16-bit and 8-bit). With the MIPP wrapper you do not need to write a specific intrinsic code anymore. Just use provided functions and the wrapper will automatically generate the right intrisic calls for your specific architecture.
+    - [libbf](../libbf) -- a small library to handle arbitrary precision binary or decimal floating point numbers
     - [ncnn](./ncnn) -- high-performance neural network inference computing framework optimized for mobile platforms (i.e. small footprint)
     - [pytorch](./pytorch) -- PyTorch library in C++
     - [thunderSVM](./thunderSVM)
@@ -262,18 +315,23 @@ The other JavaScript engines considered are of varying size, performance and com
         + [google-diff-match-patch](./google-diff-match-patch)
         + [HDiffPatch](./HDiffPatch)
         + [yara-pattern-matcher](./yara-pattern-matcher)
-        + [lz4](./lz4)
+
 - regex matchers (manual edit - pattern recognition)
+
     * [hyperscan](./hyperscan) -- Hyperscan is a high-performance multiple regex matching library.
     * [re2](./re2)
     * [tre](./tre)
     * [pcre](./pcre)
+
 - OCR: quality improvements, language detect, ...
+
     - [hunspell](./hunspell)
     - [hunspell-hyphen](./hunspell-hyphen)
     - [libtextcat](./libtextcat) -- text language detection
     - [fastText](./fastText) -- [fastText](https://fasttext.cc/) is a library for efficient learning of word representations and sentence classification. Includes language detection feeatures.
+
 - OCR page image preprocessing, \[scanner] tooling: getting the pages to the OCR engine
+
     - [GraphicsMagick](./GraphicsMagick)
     - [ImageMagick](./ImageMagick)
     - [jasper](./jasper) -- JasPer Image Processing/Coding Tool Kit
@@ -284,10 +342,15 @@ The other JavaScript engines considered are of varying size, performance and com
     - [opencv](./opencv)
     - [opencv_contrib](./opencv_contrib)
     - [scantailor](./scantailor) -- [scantailor_advanced](https://github.com/4lex4/scantailor-advanced) is the [ScanTailor](https://github.com/scantailor/scantailor) version that merges the features of the *ScanTailor Featured* and *ScanTailor Enhanced* versions, brings new ones and fixes. ScanTailor is an interactive post-processing tool for scanned pages. It performs operations such as page splitting, deskewing, adding/removing borders, selecting content, ... and many others.
+    - [CImg](../CImg) -- a **small** C++ toolkit for **image processing**.
     
 - image export, image / \[scanned] document import
+
+    - [CImg](../CImg) -- a **small** C++ toolkit for **image processing**.
+    - [CxImage](../CxImage) -- venerated library for reading and creating many image file formats.
     - [jbig2dec](../jbig2dec)
     - [jpeginfo](../jpeginfo)
+    - [libgd](../libgd) -- GD is a library for the dynamic creation of images by programmers. GD has support for: WebP, JPEG, PNG, AVIF, HEIF, TIFF, BMP, GIF, TGA, WBMP, XPM.
     - [libjpeg](../libjpeg)
     - [libpng](../libpng)
     - [libtiff](../libtiff)
@@ -307,13 +370,14 @@ The other JavaScript engines considered are of varying size, performance and com
     - ~~[DICOM to NIfTI](https://github.com/rordenlab/dcm2niix) (*not included; see also DICOM slot above*)~~
     - ~~[cgohlke::imagecodecs](https://github.com/cgohlke/imagecodecs) (*not included; see also DICOM slot above*)~~
     - [image formats (visual) quality comparison](https://eclipseo.github.io/image-comparison-web/) (*not included*)
+
 - Monte Carlo simulations, LDA, keyword inference/extraction, etc.
+
     - [lda-bigartm](./lda-bigartm)
     - [lda-Familia](./lda-Familia)
     - [lda](./lda) -- variational EM for latent Dirichlet allocation (LDA), David Blei et al
     - [LightLDA](./LightLDA)
     - [mcmc](./mcmc) -- Monte Carlo
-    - [mipp](./mipp)
     - [mmc](./mmc) -- Monte Carlo
     - [OptimizationTemplateLibrary](./OptimizationTemplateLibrary) -- Optimization Template Library (OTL)
     - [pcg-c-random](./pcg-c-random) -- fast random generators
@@ -335,21 +399,35 @@ The other JavaScript engines considered are of varying size, performance and com
         * [Hierarchical Latent Tree Analysis (HLTA)](https://github.com/kmpoon/hlta)
         * [Leonard Poon - various works](https://github.com/kmpoon?tab=repositories)
         * [David Blei's list of topic modeling OSS software](http://www.cs.columbia.edu/~blei/topicmodeling_software.html) + [github repo list](https://github.com/blei-lab)
+
 - database "backend storage"
+
     - [sqlite](./sqlite)
     - [sqlite-amalgamation](./sqlite-amalgamation)
     - [sqlite3pp](./sqlite3pp) -- a minimal ORM wrapper for SQLite et al.
+    - [SQLiteCpp](../SQLiteCpp) -- a smart and easy to use C++ SQLite3 wrapper. SQLiteC++ offers an encapsulation around the native C APIs of SQLite, with a few intuitive and well documented C++ classes.
     - [lib_nas_lockfile](./lib_nas_lockfile) -- lockfile management on NAS and other disparate network filesystem storage. To be combined with SQLite to create a proper Qiqqa Sync operation.
     - [otl](../otl) -- Oracle Template Library (STL-like wrapper for SQL DB queries; supports many databases besides Oracle)
+    
+    - LMDB, NoSQL and key/value stores:
+    
+    - [lmdb](./lmdb) -- OpenLDAP [LMDB](http://www.lmdb.tech/doc/index.html) is an outrageously fast key/value store with semantics that make it highly interesting for many applications.  Of specific note, besides speed, is the full support for transactions and good read/write concurrency.  LMDB is also famed for its robustness **when used correctly**.
+
     - [Lightning.NET](./Lightning.NET) -- .NET library for OpenLDAP's LMDB key-value store
-    - [lmdb-safe](./lmdb-safe)
-    - [lmdb-store](./lmdb-store)
-    - [lmdb.spreads.net](./lmdb.spreads.net)
-    - [lmdb](./lmdb)
+    - [lmdb.spreads.net](./lmdb.spreads.net) -- Low-level zero-overhead and [the fastest](https://github.com/Spreads/Spreads.LMDB/commit/4085dde649ef9ebb64310f2627299762dd62d5ce) LMDB .NET wrapper with some additional native methods useful for [Spreads](https://github.com/Spreads/).
+
+    - [lmdb-store](./lmdb-store) -- an ultra-fast NodeJS interface to LMDB; probably the fastest and most efficient NodeJS key-value/database interface that exists for full storage and retrieval of structured JS data (objects, arrays, etc.) in a true persisted, scalable, [ACID compliant](https://en.wikipedia.org/wiki/ACID) database. It provides a simple interface for interacting with LMDB.
+
+    - [lmdb-safe](./lmdb-safe) -- A safe modern & performant C++17 wrapper of LMDB. [LMDB](http://www.lmdb.tech/doc/index.html) is an outrageously fast key/value store with semantics that make it highly interesting for many applications.  Of specific note, besides speed, is the full support for transactions and good read/write concurrency.  LMDB is also famed for its robustness **when used correctly**.
     - [lmdbxx](./lmdbxx) -- LMDB C++ wrapper
+    - [libmdbx](./libmdbx) -- lmdb++: a comprehensive C++11 wrapper for the LMDB embedded database library, offering both an error-checked procedural interface and an object-oriented resource interface with RAII semantics.
+
     - [ligra-graph](./ligra-graph) -- a Lightweight Graph Processing Framework for Shared Memory; works on both uncompressed and compressed graphs and hypergraphs.
-    - [libmdbx](./libmdbx)
+
+    - [upscaledb](../upscaledb) -- a.k.a. hamsterdb: a thread-safe key/value database engine. It supports a B+Tree index structure, uses memory mapped I/O (if available), fast Cursors and variable length keys and can create In-Memory Databases.
+
 - metadata & text (OCR et al): language detect, suggesting fixes, ...    
+
     - [libtextcat](./libtextcat) -- text language detection
     - [sentence-tokenizer](./sentence-tokenizer) -- text tokenization
     - [sentencepiece](./sentencepiece) -- text tokenization
@@ -360,17 +438,23 @@ The other JavaScript engines considered are of varying size, performance and com
         + [uctodata](./uctodata) -- data for `ucto` library
         + [libfolia](./libfolia) -- working with the Format for Linguistic Annotation (FoLiA). Provides a high-level API to read, manipulate, and create FoLiA documents.
     - [fastBPE](./fastBPE) -- text tokenization / ngrams
-    - [fastText](./fastText) -- [fastText](https://fasttext.cc/) is a library for efficient learning of word representations and sentence classification.
     - see also https://github.com/fxsjy/jieba for a Chinese text tokenizer (done in Python)
+    - [fastText](./fastText) -- [fastText](https://fasttext.cc/) is a library for efficient learning of word representations and sentence classification.
+    - [cld2-language-detect](../cld2-language-detect) -- CLD2 probabilistically detects over 80 languages in Unicode UTF-8 text, either plain text or HTML/XML. For mixed-language input, CLD2 returns the top three languages found and their approximate percentages of the total text bytes.  Optionally, it also returns a vector of text spans with the language of each identified. The design target is web pages of at least 200 characters (about two sentences); CLD2 is not designed to do well on very short text.
+    - [uchardet](../uchardet) -- [uchardet](https://www.freedesktop.org/wiki/Software/uchardet/) is an encoding and language detector library, which attempts to determine the encoding of the text. It can reliably detect many charsets. Moreover it also works as a very good and fast language detector.
+
 - PDF metadata editing for round-trip annotation and other "external application editing" of known documents; metadata embedding / *export*
+
     - [libexpat](./libexpat) -- XML read/write
     - [libxml2](./libxml2) -- XML read/write
     - [xml-pugixml](./xml-pugixml)
     - [XMP-Toolkit-SDK](./XMP-Toolkit-SDK)
+
 - web scraping (document extraction, cleaning, metadata extraction, BibTeX, ...) 
+
     - see investigation notes in Qiqqa docs
-    - [cURL](../curl)
-    - [libcpr](../libcpr) -- wrapper library for cURL
+    - [cURL](../curl) -- the ubiquitous [libcurl](http://curl.haxx.se/libcurl).
+    - [libcpr](../libcpr) -- wrapper library for cURL. C++ Requests is a simple wrapper around [libcurl](http://curl.haxx.se/libcurl) inspired by the excellent [Python Requests](https://github.com/kennethreitz/requests) project. Despite its name, libcurl's easy interface is anything but, and making mistakes misusing it is a common source of error and frustration. Using the more expressive language facilities of C++11, this library captures the essence of making network calls into a few concise idioms.
     - [extract](../extract)
     - [libidn2](./libidn2) -- international domain name parsing
     - [gumbo-parser](../gumbo-parser) -- HTML parser
@@ -383,7 +467,15 @@ The other JavaScript engines considered are of varying size, performance and com
     - [gumbo-query](./gumbo-query) -- HTML DOM access in C/C++
     - [tidy-html5](./tidy-html5)
     - [url](./url) -- URI parsing and other utility functions
+    - [htmlstreamparser](../htmlstreamparser)
+    - [libpsl](../libpsl) -- handles the *Public Suffix List* (a collection of Top Level Domains (TLDs) suffixes, e.g. `.com`, `.net`, *Country Top Level Domains* (ccTLDs) like `.de` and `.cn` and *[Brand Top Level Domains](https://icannwiki.org/Brand_TLD)* like `.apple` and `.google`. Can be used to:
+        - avoid privacy-leaking "supercookies"
+        - avoid privacy-leaking "super domain" certificates ([see post from Jeffry Walton](https://lists.gnu.org/archive/html/bug-wget/2014-03/msg00093.html))
+        - domain highlighting parts of the domain in a user interface
+        - sorting domain lists by site
+
 - file format support
+
     - [file](./file) -- `file` filetype recognizer tool & mimemagic 
     - [djvulibre](./djvulibre)
     - [extract](../extract)
@@ -397,7 +489,7 @@ The other JavaScript engines considered are of varying size, performance and com
     - [libcmime](../libcmime) -- MIME extract/insert/encode/decode: use for MHTML support
     - [libexpat](./libexpat) -- XML read/write
     - [libxml2](./libxml2) -- [libxml](http://xmlsoft.org/): XML read/write
-    - [libzip](./libzip)
+    - [libzip](./libzip) -- a C library for reading, creating, and modifying zip and zip64 archives. Files can be added from data buffers, files, or compressed data copied directly from other zip archives. Changes made without closing the archive can be reverted. Decryption and encryption of Winzip AES and legacy PKware encrypted files is supported.
     - [CHM lib](./CHM-lib) -- as I have several HTML pages stored in this format. See also MHTML: `mht-rip`
     - [mht-rip](./mht-rip) -- as I have several HTML pages stored in this MHTML format. See also CHM: `CHM-lib`
     - [mime-mega](../mime-mega) -- MIME extract/insert/encode/decode: use for MHTML support
@@ -409,17 +501,40 @@ The other JavaScript engines considered are of varying size, performance and com
     - [upskirt-markdown](./upskirt-markdown) -- MarkDown renderer
         - [svg-charter](./svg-charter) -- SVG chart renderer
             - [tinyexpr](./tinyexpr)
+    - [libwarc](../libwarc) -- C++ library to parse WARC files. WARC is the official storage format of the Internet Archive for storing scraped content. WARC format used: http://bibnum.bnf.fr/WARC/WARC_ISO_28500_version1_latestdraft.pdf
+    - [warc2text](../warc2text) -- Extracts plain text, language identification and more metadata from WARC records.
+
 - BibTeX and similar library formats' support
+
     - [bibtex-robust-decoder](./bibtex-robust-decoder)
     - [bibutils](./bibutils)
+
 - export / output file formats, text formatting, etc.
+
     - [fmt](./fmt) -- advanced C++ data-to-text formatter. The modern answer to classic `printf()`.
     - [hypertextcpp](./hypertextcpp) -- string/text template engine & source-to-source compiler.
     - [libqrencode](./libqrencode) -- generate QRcodes from anything (e.g. URLs)
     - [upskirt-markdown](./upskirt-markdown) -- MarkDown renderer
         - [svg-charter](./svg-charter) -- SVG chart renderer
             - [tinyexpr](./tinyexpr)
-- scripting *user-tunable tasks* such as OCR preproceessing, metadata extraction, metadata cleaning & other \[post-]processing, ...
+
+- FTS (*Full Text Search*) and related: SOLR/Lucene et al: document content search
+
+  We'll be using SOLR mostly, but here might be some interface libraries and an intersting alternative
+  
+    - [Manticore](https://manticoresearch.com/): while the userbase is much smaller than for the *Lucene Gang* (Lucene/SOLR/ES/OpenSearch), this still got me. Can't say exactly why. All the other Lucene/SOLR alternatives out there didn't appeal to me (old tech, slow dev, ...).
+
+        - [manticore-columnar](../manticore-columnar)
+        - [manticoresearch](../manticoresearch)
+        - [manticore-plugins](../manticore-plugins)
+    
+    - [libstemmer](../libstemmer) -- SnowBall stemmer for many languages.
+    - [snowball](../snowball) -- SnowBall stemming compiler (code generator)
+    - [cld2-language-detect](../cld2-language-detect) -- CLD2 probabilistically detects over 80 languages in Unicode UTF-8 text, either plain text or HTML/XML. For mixed-language input, CLD2 returns the top three languages found and their approximate percentages of the total text bytes.  Optionally, it also returns a vector of text spans with the language of each identified. The design target is web pages of at least 200 characters (about two sentences); CLD2 is not designed to do well on very short text.
+    - [uchardet](../uchardet) -- [uchardet](https://www.freedesktop.org/wiki/Software/uchardet/) is an encoding and language detector library, which attempts to determine the encoding of the text. It can reliably detect many charsets. Moreover it also works as a very good and fast language detector.
+
+- scripting *user-tunable tasks* such as OCR preprocessing, metadata extraction, metadata cleaning & other \[post-]processing, ...
+
     - [mujs](../mujs)
     - ~~[CPython](./CPython)~~
       + **removed**; reason: we've decided to offer any application user facing scripting features in JavaScript only: Python and the others can use socket-based messaging when someone wants to write their user scripts in any of those languages.
@@ -433,12 +548,17 @@ The other JavaScript engines considered are of varying size, performance and com
     - [QuickJS](./QuickJS)
         - [txiki](./txiki.js) -- uses QuickJS as its kernel
         - [QuickJS-C++-Wrapper](./QuickJS-C++-Wrapper)
+        - [QuickJS-C++-Wrapper2](../QuickJS-C++-Wrapper2)
         - [libbf](../libbf) -- a small library to handle arbitrary precision binary or decimal floating point numbers
     - [ScriptX](./ScriptX/) -- wrapper for V8, QuickJS, Lua, Python, ...
+    - [VisualScriptEngine](../VisualScriptEngine) -- A visual scripting engine designed for embedding. The engine is written in modern C++ and compiles on several platforms with no external dependencies.
+    - [wxVisualScriptEngine](../wxVisualScriptEngine) -- a utility module for [VisualScriptEngine](https://github.com/kovacsv/VisualScriptEngine) which provides helper classes for embedding the engine in a wxWidgets application.
      
     - [replxx](./replxx) -- REPL CLI component: `readline` simile for REPL/interactive runs in a CLI
-    - [linenoise](./linenoise)
+    - [linenoise](./linenoise) -- `readline` simile for REPL/interactive runs in a CLI
+
 - multi-processing core technologies
+
     - [cli11](./cli11) -- command line options parser
     - [clipp](./clipp) -- commandline parser 
     - ~~[clippson](./clippson) -- commandline parser + JSON data diagnostical dumper~~
@@ -508,24 +628,9 @@ The other JavaScript engines considered are of varying size, performance and com
         - https://github.com/rhashimoto/poolqueue -- C++ Asynchronous Promises, inspired by Promises/A+.
         - https://github.com/YACLib/YACLib -- Yet Another lightweight C++ library for concurrent and parallel task execution.
         - https://github.com/alxvasilev/cpp-promise -- Javascript-like C++ promise library
-- hashing, hash-like filters
-    + [BBHash](./BBHash)
-    + [BCF-cuckoo-index](./BCF-cuckoo-index)
-    + [caffe](./caffe)
-    + [catboost](./catboost)
-    + [cmph-hasher](./cmph-hasher)
-    + [cuckoo-index](./cuckoo-index)
-    + [cuckoofilter](./cuckoofilter)
-    + [DCF-cuckoo-index](./DCF-cuckoo-index)
-    + [emphf-hash](./emphf-hash)
-    + [gperf-hash](./gperf-hash)
-    + [LDCF-hash](./LDCF-hash)
-    + [libbloom](./libbloom)
-    + [morton_filter](./morton_filter)
-    + [phf-hash](./phf-hash)
-    + [sparsehash](./sparsehash) -- fast hash algorithms
-    + [xxHash](./xxHash) -- fast hash algorithm
+
 - web servers, generic sockets I/O (IPC)
+
     + [civetweb](./civetweb)
     + [crow](./crow) -- IPC / server framework
     + [drogon](./drogon) -- a C++14/17-based HTTP application framework to easily build various types of web application server programs.
@@ -536,28 +641,47 @@ The other JavaScript engines considered are of varying size, performance and com
       + **removed**; reason: we've decided on using `crow` as the main server framework.
     + [proxygen](./proxygen) -- the core C++ HTTP abstractions used at Facebook. Internally, it is used as the basis for building many HTTP servers, proxies, and clients, focusing on the common HTTP abstractions and our simple HTTPServer framework. The framework supports HTTP/1.1, SPDY/3, SPDY/3.1, HTTP/2, and HTTP/3.
     + [wget](./wget)
+
 - socket I/O: websockets
+
     - [libwebsocketpp](./libwebsocketpp) -- a header only C++ library that implements RFC6455 The WebSocket Protocol.
     - [libwebsockets](./libwebsockets) -- a simple-to-use library providing client and server for HTTP/1, HTTP/2, websockets, MQTT and other protocols in a security-minded, lightweight, configurable, scalable and flexible way.
     - [websocket-sharp](./websocket-sharp)
+
 - disk I/O, monitoring import locations, ...
+
     + [efsw](./efsw) -- cross-platform file system watcher and notifier
     + [glob](./glob) -- directory scanner
     + [filesystem](./filesystem) -- a header-only single-file `std::filesystem` compatible helper library, based on the C++17 and C++20 specs, but implemented for C++11, C++14, C++17 or C++20 (tightly following the C++17 standard with very few documented exceptions). It is of course in its own namespace `ghc::filesystem` to not interfere with a regular `std::filesystem` should you use it in a mixed C++17 environment (which is possible).
-- configuration / parameterization 
+
+- configuration / parameterization
+
     + [gflags](./gflags) -- google::flags library, used by other libs in this set.
     + ~~[inih](https://github.com/benhoyt/inih)~~
       + **removed**; reason: we've decided on using `libconfig` for configuration files.
     + ~~[iniparser](https://github.com/ndevilla/iniparser)~~
       + **removed**; reason: we've decided on using `libconfig` for configuration files.
     + [libconfig](../libconfig) -- generic config (file) reader/writer
-    + [libyaml](./libyaml) -- YAML
     + [tomlpp](../tomlpp) -- TOML++
+    + YAML
+        + [libyaml](./libyaml) -- YAML
+        + [libcyaml](../libcyaml)
+        + [libyaml-examples](../libyaml-examples)
+        + [libfyaml](../libfyaml)
+        + [yaml-test-suite](../yaml-test-suite)
+        + [yaml-cpp](../yaml-cpp)
+        + [rapidyaml](../rapidyaml)
+
 - testing & fuzzing
+
     - [googletest](./googletest)
     - [gbenchmark](./gbenchmark)
+    - [cxxtest_catch_2_gtest](../cxxtest_catch_2_gtest) -- quick & dirty converter from various test suites to googletest, i.e. allows us to use a single test framework, despite some libraries having been set up to use another, e.g. Catch2.
+
 - logging & debugging
-    + [breakpad](./breakpad)
+
+    + [binlog](../binlog) -- a high performance C++ log library to produce structured binary logs.
+    + [breakpad](./breakpad) -- a set of client and server components which implement a crash-reporting system.
     + ~~[EasyLogger](https://github.com/armink/EasyLogger) -- an ultra-lightweight (ROM<1.6K, RAM<0.3K), high-performance C/C++ log library, very suitable for resource-sensitive software projects. Compared with the well-known C/C++ log libraries such as log4c and zlog, EasyLogger has simpler functions and provides fewer interfaces to users, but it will be quick to get started. More practical functions support dynamic expansion in the form of plug-ins.~~
       + **removed**; reason: we've decided on using `glog` as the logging library for everything: while that one isn't perfect, most of the other stuff we've been looking at is using that one already and it matches our needs 80% of the time, while I'm okay with patching that library for the other 20% (syslog-like use, i.e. logging to localhost logging server where all logging is collected -- these log messages should travel across as part of the ZeroMQ message streams.)
     + [fmt](./fmt)
@@ -573,7 +697,9 @@ The other JavaScript engines considered are of varying size, performance and com
     + [uberlog](./uberlog) -- a cross platform C++ logging system that is focused on fast and small, writing to a shared memory ring buffer.
     + ~~[zlog](https://github.com/HardySimpson/zlog)~~
       + **removed**; `zlog` has a nice overall design but is too 'Unix-is-the-world' in its coding: in the end it was easy of cross-platform compilation of `glog` that won the day and I'm okay with layering on top of that one to get the zlog category and other channel features, once I really need them.
+
 - OCR core (tesseract)
+
     + [langdata_LSTM](../langdata_LSTM)
     + [tessconfigs](../tessconfigs)
     + [tessdata](../tessdata)
@@ -585,7 +711,9 @@ The other JavaScript engines considered are of varying size, performance and com
     + [tesseract_docs](../tesseract_docs)
     + [tesseract_langdata](../tesseract_langdata)
     + [tesstrain](../tesstrain)
+
 - PDF render & metadata core (mupdf)
+
     + [extract](../extract)
     + [freeglut](../freeglut)
     + [freetype](../freetype)
@@ -598,7 +726,32 @@ The other JavaScript engines considered are of varying size, performance and com
     + [libtiff](../libtiff)
     + [openjpeg](../openjpeg)
     + [zlib](../zlib)
+
+- UI / GUI
+
+    + [neutralinoJS](./neutralinoJS) -- a lightweight and portable desktop application development framework. It lets you develop lightweight cross-platform desktop applications using JavaScript, HTML and CSS. Neutralinojs offers a lightweight SDK which is an alternative for Electron and NW.js. Neutralinojs doesn't bundle Chromium and uses the existing web browser library in the operating system. Neutralinojs implements a WebSocket connection for native operations and embeds a static web server to serve the web content. Also, it offers a built-in [JavaScript client library](https://github.com/neutralinojs/neutralino.js) for developers.
+    + [neutralinoJS-CLI](./neutralinoJS-CLI) -- The official CLI of Neutralinojs.
+    + [photino.native](../photino.native) -- Photino is a lightweight open-source framework for building native, cross-platform desktop applications with Web UI technology. Photino uses the OSs built-in WebKit-based browser control for Windows, macOS and Linux. Photino is the lightest cross-platform framework compared to Electron.
+    + [webview](./webview) -- cross-platform embedding of the system-default web browser: a tiny cross-platform webview library for C/C++/Golang to build modern cross-platform GUIs. The goal of the project is to create a common HTML5 UI abstraction layer for the most widely used platforms. It supports two-way JavaScript bindings (to call JavaScript from C/C++/Go and to call C/C++/Go from JavaScript).
+    + [wxWidgets](./wxWidgets) -- cross-platform GUI framework.
+    + [wxCharts](./wxCharts) -- charts for wxWidgets
+    + [wxFormBuilder](../wxFormBuilder) -- resource editor and GUI designer
+    + [wxPDFView](./wxPDFView) -- wxWidgets PDF viewer/reader control
+    + [wxWebViewChromium](./wxWebViewChromium) -- Chromium CEF3-based embedded browser for wxWidgets
+    + [scintilla](./scintilla) -- text editor
+    + [wxExamples](../wxExamples) -- examples using wxWidgets
+    + [wxMEdit](../wxMEdit) -- a cross-platform Text/Hex Editor written in C++ & wxWidgets. wxMEdit supports many useful functions, e.g. Bookmark, Syntax Highlightings, Word Wraps, Encodings and Column/Hex Modes.
+    + [wxSQLite3](../wxSQLite3) -- a C++ wrapper around the SQLite 3.x database and is specifically designed for use in programs based on the wxWidgets library. **wxSQLite3** does not try to hide the underlying database, in contrary almost all special features of the current SQLite3 version are supported, like for example the creation of user defined scalar or aggregate functions.
+    + [wxVisualScriptEngine](../wxVisualScriptEngine) -- a utility module for [VisualScriptEngine](https://github.com/kovacsv/VisualScriptEngine) which provides helper classes for embedding the engine in a wxWidgets application.
+
+- misc / other
+
+    + ~~[binary_bakery](https://github.com/s9w/binary_bakery) -- resource compiler-like tool: embed any data in your C/C++ application~~
+      + **removed**; reason: we already have `bin2coff` from MuPDF, which serves this purpose well enough.
+    + [preprocess-corpuses](../preprocess-corpuses) -- Pipelines for preprocessing corpora.
+
 - sub-dependencies (libraries which are required by any of the above)
+
     + [boost](./boost) -- required by several other libraries in this collection
     + ~~[Catch2](./Catch2)~~
       + **removed**; reason: we've decided to standardize on a single unittest library (which is well supported in Microsoft Visual Studio, including the Test Explorer view there); where necessary, we'll have to provide a translation layer instead when existing submodules use different test rigs originally.
@@ -623,20 +776,6 @@ The other JavaScript engines considered are of varying size, performance and com
     + [scintilla](./scintilla) -- text editor (part of wxWidgets)
     + [htmlstreamparser](../htmlstreamparser) -- used in a demo of zsync2
     + [libcpr](../libcpr) -- wrapper library for cURL; used by zsync2
-- UI / GUI
-    + [neutralinoJS](./neutralinoJS)
-    + [neutralinoJS-CLI](./neutralinoJS-CLI)
-    + [photino.native](../photino.native)
-    + [webview](./webview)
-    + [wxWidgets](./wxWidgets)
-    + [wxCharts](./wxCharts)
-    + [wxFormBuilder](../wxFormBuilder)
-    + [wxPDFView](./wxPDFView) -- wxWidgets PDF viewer/reader control
-    + [wxWebViewChromium](./wxWebViewChromium) -- Chromium CEF3-based embedded browser for wxWidgets
-    + [scintilla](./scintilla) -- text editor
-- misc / other
-    + ~~[binary_bakery](https://github.com/s9w/binary_bakery) -- resource compiler-like tool: embed any data in your C/C++ application~~
-      + **removed**; reason: we already have `bin2coff` from MuPDF, which serves this purpose well enough.
 
 
 ---
@@ -650,6 +789,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [bibtex-robust-decoder](./bibtex-robust-decoder)
 - [bibutils](./bibutils)
 - [binary_bakery](./binary_bakery) -- resource compiler-like tool: embed any data in your C/C++ application
+- [binlog](../binlog) -- a high performance C++ log library to produce structured binary logs.
 - [BLAKE3](./BLAKE3)
 - [BlingFire](./BlingFire) -- we are a team at Microsoft called Bling (Beyond Language Understanding), sharing our [FInite State machine and REgular expression manipulation library](https://github.com/microsoft/BlingFire) (FIRE). We use Fire for many linguistic operations inside Bing such as Tokenization, Multi-word expression matching, Unknown word-guessing, Stemming / Lemmatization just to mention a few.
 - [boost](./boost) -- required by several other libraries in this collection
@@ -663,9 +803,11 @@ The other JavaScript engines considered are of varying size, performance and com
 - ~~[Catch2](./Catch2)~~
 - [cereal](./cereal) -- C++11 serialization library
 - [CHM lib](./CHM-lib) -- as I have several HTML pages stored in this format. See also MHTML: `mht-rip`
+- [CImg](../CImg) -- a **small** C++ toolkit for **image processing**.
+- [circlehash](../circlehash) -- a family of non-cryptographic hash functions that pass every test in SMHasher.
 - [civetweb](./civetweb)
 - [clBLAS](./clBLAS)
-- [cli11](./cli11) -- command line options parser
+- [cld2-language-detect](../cld2-language-detect) -- CLD2 probabilistically detects over 80 languages in Unicode UTF-8 text, either plain text or HTML/XML. For mixed-language input, CLD2 returns the top three languages found and their approximate percentages of the total text bytes.  Optionally, it also returns a vector of text spans with the language of each identified. The design target is web pages of at least 200 characters (about two sentences); CLD2 is not designed to do well on very short text.- [cli11](./cli11) -- command line options parser
 - [clipp](./clipp) -- commandline parser 
 - ~~[clippson](./clippson) -- commandline parser + JSON data diagnostical dumper~~
 - [cmph-hasher](./cmph-hasher)
@@ -678,9 +820,11 @@ The other JavaScript engines considered are of varying size, performance and com
 - [createprocess-windows](./createprocess-windows) -- drive `CreateProcess` Win32 API
 - [crow](./crow) -- IPC / server framework 
 - [cryptopp](./cryptopp)
+- [csync2](../csync2) -- a cluster synchronization tool. It can be used to keep files on multiple hosts in a cluster in sync. Csync2 can handle complex setups with much more than just 2 hosts, handle file deletions and can detect conflicts.
 - [cuckoo-index](./cuckoo-index)
 - [cuckoofilter](./cuckoofilter)
 - [cURL](../curl)
+- [CxImage](../CxImage) -- venerated library for reading and creating many image file formats
 - [DCF-cuckoo-index](./DCF-cuckoo-index)
 - [djvulibre](./djvulibre)
 - [dlib](./dlib) -- machine learning algorithms
@@ -716,6 +860,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [google-diff-match-patch](./google-diff-match-patch)
 - [google::marl](./google-marl) -- a hybrid thread / fiber task scheduler written in C++ 11. Marl uses a combination of fibers and threads to allow efficient execution of tasks that can block, while keeping a fixed number of hardware threads.
 - [googletest](./googletest)
+- [cxxtest_catch_2_gtest](../cxxtest_catch_2_gtest) -- quick & dirty converter from various test suites to googletest, i.e. allows us to use a single test framework, despite some libraries having been set up to use another, e.g. Catch2.
 - [gperf-hash](./gperf-hash)
 - [GraphicsMagick](./GraphicsMagick)
 - [gumbo-libxml](./gumbo-libxml)
@@ -733,6 +878,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [hocr-fileformat](./hocr-fileformat)
 - [hocr-spec](./hocr-spec)
 - [hocr-tools](./hocr-tools)
+- [htmlstreamparser](../htmlstreamparser)
 - [http-parser](./http-parser)
 - [hunspell-hyphen](./hunspell-hyphen)
 - [hunspell](./hunspell)
@@ -763,10 +909,12 @@ The other JavaScript engines considered are of varying size, performance and com
 - [libbloom](./libbloom)
 - [libcmime](../libcmime) -- MIME extract/insert/encode/decode: use for MHTML support
 - [libconfig](../libconfig) -- generic config (file) reader/writer
+- [libcpr](../libcpr) -- wrapper library for cURL. C++ Requests is a simple wrapper around [libcurl](http://curl.haxx.se/libcurl) inspired by the excellent [Python Requests](https://github.com/kennethreitz/requests) project. Despite its name, libcurl's easy interface is anything but, and making mistakes misusing it is a common source of error and frustration. Using the more expressive language facilities of C++11, this library captures the essence of making network calls into a few concise idioms.
 - [libcpuid](./libcpuid) -- CPU & hardware info
 - [libCZMQ](../libCZMQ)
 - [libexpat](./libexpat) -- XML read/write
 - [libfolia](./libfolia) -- working with the Format for Linguistic Annotation (FoLiA). Provides a high-level API to read, manipulate, and create FoLiA documents.
+- [libgd](../libgd) -- GD is a library for the dynamic creation of images by programmers. GD has support for: WebP, JPEG, PNG, AVIF, HEIF, TIFF, BMP, GIF, TGA, WBMP, XPM.
 - [libgif](./libgif)
 - [libidn2](./libidn2)
 - [libjpeg-turbo](./libjpeg-turbo)
@@ -775,22 +923,33 @@ The other JavaScript engines considered are of varying size, performance and com
 - [libmdbx](./libmdbx)
 - ~~[libmicrohttpd](./libmicrohttpd)~~
 - [libpng](../libpng)
+- [libpsl](../libpsl) -- handles the *Public Suffix List* (a collection of Top Level Domains (TLDs) suffixes, e.g. `.com`, `.net`, *Country Top Level Domains* (ccTLDs) like `.de` and `.cn` and *[Brand Top Level Domains](https://icannwiki.org/Brand_TLD)* like `.apple` and `.google`.
 - [libq](./libq) -- A platform-independent promise library for C++, implementing asynchronous continuations.
 - [libqrencode](./libqrencode)
 - [libscanf](./libscanf)
 - ~~[libsmile](./libsmile) -- ["Smile" format](https://en.wikipedia.org/wiki/Smile_%28data_interchange_format%29), i.e. a compact binary JSON format~~
+- [libstemmer](../libstemmer) -- SnowBall stemmer for many languages.
+- [snowball](../snowball) -- SnowBell stemming compiler (code generator)
 - [libsvm](./libsvm)
 - [libtextcat](./libtextcat) -- text language detection
 - [libtiff](../libtiff)
 - [libtuv](./libtuv)
 - [libunifex](./libunifex) -- a prototype implementation of the C++ sender/receiver async programming model that is currently being considered for standardisation. This project contains implementations of the following: Schedulers, Timers, Asynchronous I/O, Algorithms that encapsulate certain concurrency patterns, Async streams, Cancellation, Coroutine integration.
 - [libvips](./libvips)
+- [libwarc](../libwarc) -- C++ library to parse WARC files. WARC is the official storage format of the Internet Archive for storing scraped content. WARC format used: http://bibnum.bnf.fr/WARC/WARC_ISO_28500_version1_latestdraft.pdf
+- [warc2text](../warc2text) -- Extracts plain text, language identification and more metadata from WARC records.
 - [libwebp](./libwebp)
 - [libwebsocketpp](./libwebsocketpp)
 - [libwebsockets](./libwebsockets)
 - [libxml2](./libxml2) -- [libxml](http://xmlsoft.org/): XML read/write
 - [libyaml](./libyaml) -- YAML
-- [libzip](./libzip)
+- [libcyaml](../libcyaml)
+- [libyaml-examples](../libyaml-examples)
+- [libfyaml](../libfyaml)
+- [yaml-test-suite](../yaml-test-suite)
+- [yaml-cpp](../yaml-cpp)
+- [rapidyaml](../rapidyaml)
+- [libzip](./libzip) -- a C library for reading, creating, and modifying zip and zip64 archives.
 - [libzmq](./libzmq)
 - [LightLDA](./LightLDA)
 - [Lightning.NET](./Lightning.NET) -- .NET library for OpenLDAP's LMDB key-value store
@@ -809,6 +968,9 @@ The other JavaScript engines considered are of varying size, performance and com
 - ~~[lzo](./lzo)~~
 - ~~[lzsse](./lzsse)~~
 - [magic_enum](./magic_enum)
+- [manticore-columnar](../manticore-columnar)
+- [manticoresearch](../manticoresearch)
+- [manticore-plugins](../manticore-plugins)
 - [many-stop-words](./many-stop-words)
 - [math-atlas](./math-atlas)
 - [mcmc](./mcmc)
@@ -817,7 +979,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [mimalloc](./mimalloc) -- a compact general purpose allocator with excellent performance.
 - [mime-mega](../mime-mega) -- MIME extract/insert/encode/decode: use for MHTML support
 - [mimetic](./mimetic) -- MIME: use for MHTML support
-- [mipp](./mipp)
+- [mipp](./mipp) -- MyIntrinsics++ (MIPP): a portable wrapper for vector intrinsic functions (SIMD) written in C++11. It works for SSE, AVX, AVX-512 and ARM NEON (32-bit and 64-bit) instructions.
 - [MITIE-nlp](./MITIE-nlp)
 - [mlpack](./mlpack)
 - [mmc](./mmc)
@@ -848,6 +1010,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - ~~[pithy](./pithy)~~
 - [plf_nanotimer](./plf_nanotimer) -- high precision cross-platform performance timer
 - [pmt-png-tools](./pmt-png-tools)
+- [preprocess-corpuses](../preprocess-corpuses) -- Pipelines for preprocessing corpora.
 - [prio_queue](./prio_queue) -- a cache friendly priority queue, done as a B-heap.
 - [promise-cpp](./promise-cpp) -- advanced C++ promise/A+ library in Javascript style
 - [protobuf](./protobuf)
@@ -855,6 +1018,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [pthread-win32](./pthread-win32)
 - [pytorch](./pytorch) -- PyTorch library in C++
 - [QuickJS-C++-Wrapper](./QuickJS-C++-Wrapper)
+- [QuickJS-C++-Wrapper2](../QuickJS-C++-Wrapper2)
 - [QuickJS](./QuickJS)
 - [rapidJSON](./rapidJSON)
 - [re2](./re2)
@@ -865,6 +1029,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [sentence-tokenizer](./sentence-tokenizer) -- text tokenization
 - [sentencepiece](./sentencepiece) -- text tokenization
 - [shoco](./shoco) -- a fast compressor for short strings
+- [smhasher](../smhasher) -- benchmark and collection of fast hash functions for symbol tables or hash tables.
 - ~~[snappy](./snappy)~~
 - [snmalloc](./snmalloc) -- a high-performance allocator.
 - [sparsehash](./sparsehash) -- fast hash algorithms
@@ -873,6 +1038,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [sqlite-amalgamation](./sqlite-amalgamation)
 - [sqlite](./sqlite)
 - [sqlite3pp](./sqlite3pp) -- a minimal ORM wrapper for SQLite et al.
+- [SQLiteCpp](../SQLiteCpp) -- a smart and easy to use C++ SQLite3 wrapper. SQLiteC++ offers an encapsulation around the native C APIs of SQLite, with a few intuitive and well documented C++ classes.
 - ~~[squash](./squash)~~
 - [stdext-path](./stdext-path) -- path manipulations (`dirname` et al)
 - [stopwords](./stopwords)
@@ -904,21 +1070,28 @@ The other JavaScript engines considered are of varying size, performance and com
 - [tsf](./tsf) -- type-safe printf equivalent for C++ (used by the uberlog submodule)
 - [txiki](./txiki.js) -- uses QuickJS as its kernel
 - [uberlog](./uberlog) -- a cross platform C++ logging system that is focused on fast and small, writing to a shared memory ring buffer.
+- [uchardet](../uchardet) -- [uchardet](https://www.freedesktop.org/wiki/Software/uchardet/) is an encoding and language detector library, which attempts to determine the encoding of the text. It can reliably detect many charsets. Moreover it also works as a very good and fast language detector.
 - [ucto](./ucto) -- text tokenization
 - [uctodata](./uctodata) -- data for `ucto` library
 - [uint128_t](./uint128_t)
 - [unicode-cldr](./unicode-cldr)
 - [unicode-icu](./unicode-icu)
+- [upscaledb](../upscaledb) -- a.k.a. hamsterdb: a thread-safe key/value database engine. It supports a B+Tree index structure, uses memory mapped I/O (if available), fast Cursors and variable length keys and can create In-Memory Databases.
 - [upskirt-markdown](./upskirt-markdown) -- MarkDown renderer
 - [url](./url) -- URI parsing and other utility functions
+- [VisualScriptEngine](../VisualScriptEngine) -- A visual scripting engine designed for embedding. The engine is written in modern C++ and compiles on several platforms with no external dependencies.
 - [websocket-sharp](./websocket-sharp)
 - [webview](./webview)
 - [wget](./wget)
 - [WinHttpPAL](./WinHttpPAL) -- implements [WinHttp API](https://docs.microsoft.com/en-us/windows/win32/winhttp/winhttp-start-page) Platform Abstraction Layer for POSIX systems using libcurl
 - [wxCharts](./wxCharts)
+- [wxExamples](../wxExamples)
 - [wxFormBuilder](../wxFormBuilder)
+- [wxMEdit](../wxMEdit) -- a cross-platform Text/Hex Editor written in C++ & wxWidgets. wxMEdit supports many useful functions, e.g. Bookmark, Syntax Highlightings, Word Wraps, Encodings and Column/Hex Modes.
 - [wxWidgets](./wxWidgets)
 - [wxPDFView](./wxPDFView) -- wxWidgets PDF viewer/reader control
+- [wxSQLite3](../wxSQLite3) -- a C++ wrapper around the SQLite 3.x database and is specifically designed for use in programs based on the wxWidgets library. **wxSQLite3** does not try to hide the underlying database, in contrary almost all special features of the current SQLite3 version are supported, like for example the creation of user defined scalar or aggregate functions.
+- [wxVisualScriptEngine](../wxVisualScriptEngine) -- a utility module for [VisualScriptEngine](https://github.com/kovacsv/VisualScriptEngine) which provides helper classes for embedding the engine in a wxWidgets application.
 - [wxWebViewChromium](./wxWebViewChromium) -- Chromium CEF3-based embedded browser for wxWidgets
 - [xml-pugixml](./xml-pugixml)
 - [XMP-Toolkit-SDK](./XMP-Toolkit-SDK)
@@ -935,6 +1108,9 @@ The other JavaScript engines considered are of varying size, performance and com
 - [zlib](../zlib)
 - ~~[zlog](./zlog)~~
 - [zstd](./zstd)
+- [librsync](../librsync) -- a library for calculating and applying network deltas. librsync encapsulates the core algorithms of the rsync protocol.
+- [zsync2](../zsync2) -- the advanced file download/sync tool zsync. zsync is a well known tool for downloading and updating local files from HTTP servers using the well known algorithms rsync.
+- [csync2](../csync2) -- a cluster synchronization tool. It can be used to keep files on multiple hosts in a cluster in sync. Csync2 can handle complex setups with much more than just 2 hosts, handle file deletions and can detect conflicts.
 
 
 
@@ -981,40 +1157,16 @@ The other JavaScript engines considered are of varying size, performance and com
 
 
 
-- [cxxtest_catch_2_gtest](../cxxtest_catch_2_gtest)
-- [QuickJS-C++-Wrapper2](../QuickJS-C++-Wrapper2)
-- [binlog](../binlog)
-- [CImg](../CImg)
-- [wxMEdit](../wxMEdit)
-- [libgd](../libgd)
-- [CxImage](../CxImage)
-- [VisualScriptEngine](../VisualScriptEngine)
-- [wxVisualScriptEngine](../wxVisualScriptEngine)
-- [wxSQLite3](../wxSQLite3)
-- [wxExamples](../wxExamples)
-- [libwarc](../libwarc)
-- [warc2text](../warc2text)
-- [preprocess-corpuses](../preprocess-corpuses)
-- [cld2-language-detect](../cld2-language-detect)
-- [uchardet](../uchardet)
-- [libpsl](../libpsl)
-- [upscaledb](../upscaledb)
-- [manticore-columnar](../manticore-columnar)
-- [manticoresearch](../manticoresearch)
-- [manticore-plugins](../manticore-plugins)
-- [libstemmer](../libstemmer)
-- [snowball](../snowball)
-- [csync2](../csync2)
-- [librsync](../librsync)
-- [SQLiteCpp](../SQLiteCpp)
-- [libcyaml](../libcyaml)
-- [libyaml-examples](../libyaml-examples)
-- [libfyaml](../libfyaml)
-- [yaml-test-suite](../yaml-test-suite)
-- [yaml-cpp](../yaml-cpp)
-- [rapidyaml](../rapidyaml)
-- [smhasher](../smhasher)
-- [circlehash](../circlehash)
-- [htmlstreamparser](../htmlstreamparser)
-- [zsync2](../zsync2)
-- [libcpr](../libcpr)
+
+
+
+
+
+
+
+
+
+
+
+
+
