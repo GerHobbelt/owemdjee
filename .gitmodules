@@ -753,11 +753,11 @@
 [submodule "h2o-server"]
 	path = h2o-server
 	url = git@github.com:GerHobbelt/h2o.git
-	
+	ignore = dirty
 [submodule "drogon"]
 	path = drogon
 	url = git@github.com:GerHobbelt/drogon.git
-	
+	ignore = dirty
 [submodule "webview"]
 	path = webview
 	url = git@github.com:GerHobbelt/webview.git
