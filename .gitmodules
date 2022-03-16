@@ -33,7 +33,7 @@
 [submodule "opencv"]
 	path = opencv
 	url = git@github.com:GerHobbelt/opencv.git
-	
+	ignore = dirty
 [submodule "ImageMagick"]
 	path = ImageMagick
 	url = git@github.com:GerHobbelt/ImageMagick.git
@@ -129,7 +129,7 @@
 [submodule "opencv_contrib"]
 	path = opencv_contrib
 	url = git@github.com:GerHobbelt/opencv_contrib.git
-	
+	ignore = dirty
 [submodule "libzmq"]
 	path = libzmq
 	url = git@github.com:GerHobbelt/libzmq.git
@@ -369,7 +369,7 @@
 [submodule "pytorch"]
 	path = pytorch
 	url = git@github.com:GerHobbelt/pytorch.git
-	
+	ignore = dirty
 [submodule "glog"]
 	path = glog
 	url = git@github.com:GerHobbelt/glog.git
