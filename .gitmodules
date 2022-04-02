@@ -349,7 +349,7 @@
 [submodule "openssl"]
 	path = openssl
 	url = git@github.com:GerHobbelt/openssl.git
-	
+	ignore = dirty
 [submodule "oneTBB"]
 	path = oneTBB
 	url = git@github.com:GerHobbelt/oneTBB.git
@@ -1066,3 +1066,9 @@
 	path = libcpr
 	url = git@github.com:GerHobbelt/cpr.git
 	
+[submodule "glib2"]
+	path = glib2
+	url = git@github.com:GerHobbelt/glib.git
+[submodule "fast_pfor"]
+	path = fast_pfor
+	url = git@github.com:GerHobbelt/FastPFor.git
