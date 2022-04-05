@@ -1069,15 +1069,20 @@
 [submodule "glib2"]
 	path = glib2
 	url = git@github.com:GerHobbelt/glib.git
+	ignore = dirty
 [submodule "fast_pfor"]
 	path = fast_pfor
 	url = git@github.com:GerHobbelt/FastPFor.git
+
 [submodule "multiverso"]
 	path = multiverso
 	url = git@github.com:GerHobbelt/Multiverso.git
+
 [submodule "lda-3-variants"]
 	path = lda-3-variants
 	url = git@github.com:GerHobbelt/LDA.git
+
 [submodule "gibbs-lda"]
 	path = gibbs-lda
 	url = git@github.com:GerHobbelt/gibbs-lda.git
+
