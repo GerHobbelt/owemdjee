@@ -1086,3 +1086,38 @@
 	path = gibbs-lda
 	url = git@github.com:GerHobbelt/gibbs-lda.git
 
+[submodule "portable-memory-mapping"]
+	path = portable-memory-mapping
+	url = git@github.com:GerHobbelt/portable-memory-mapping.git
+
+[submodule "libmio"]
+	path = libmio
+	url = git@github.com:GerHobbelt/mio.git
+
+[submodule "libvrb"]
+	path = libvrb
+	url = git@github.com:GerHobbelt/vrb.git
+
+[submodule "fmtlog"]
+	path = fmtlog
+	url = git@github.com:GerHobbelt/fmtlog.git
+
+[submodule "libcnl"]
+	path = libcnl
+	url = git@github.com:GerHobbelt/cnl.git
+
+[submodule "libucl"]
+	path = libucl
+	url = git@github.com:GerHobbelt/libucl.git
+
+[submodule "libquill"]
+	path = libquill
+	url = git@github.com:GerHobbelt/quill.git
+
+[submodule "NanoLog"]
+	path = NanoLog
+	url = git@github.com:GerHobbelt/NanoLog.git
+
+[submodule "libwil"]
+	path = libwil
+	url = git@github.com:GerHobbelt/wil.git
