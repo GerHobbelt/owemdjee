@@ -1121,3 +1121,8 @@
 [submodule "libwil"]
 	path = libwil
 	url = git@github.com:GerHobbelt/wil.git
+	
+[submodule "libzopfli"]
+	path = libzopfli
+	url = git@github.com:GerHobbelt/zopfli.git
+
