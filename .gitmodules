@@ -1126,3 +1126,7 @@
 	path = libzopfli
 	url = git@github.com:GerHobbelt/zopfli.git
 
+[submodule "libwildmatch"]
+	path = libwildmatch
+	url = git@github.com:GerHobbelt/wildmatch.git
+
