@@ -1130,3 +1130,24 @@
 	path = libwildmatch
 	url = git@github.com:GerHobbelt/wildmatch.git
 
+[submodule "libsqlfs"]
+	path = libsqlfs
+	url = git@github.com:GerHobbelt/libsqlfs.git
+[submodule "sqlean"]
+	path = sqlean
+	url = git@github.com:GerHobbelt/sqlean.git
+[submodule "sqlite-stats"]
+	path = sqlite-stats
+	url = git@github.com:GerHobbelt/sqlite-stats.git
+[submodule "SQLiteHistograms"]
+	path = SQLiteHistograms
+	url = git@github.com:GerHobbelt/SQLiteHistograms.git
+[submodule "sqlite-fts5-snowball"]
+	path = sqlite-fts5-snowball
+	url = git@github.com:GerHobbelt/fts5-snowball.git
+[submodule "sqlite_wrapper"]
+	path = sqlite_wrapper
+	url = git@github.com:GerHobbelt/sqlite_wrapper.git
+[submodule "velocypack"]
+	path = velocypack
+	url = git@github.com:GerHobbelt/velocypack.git
