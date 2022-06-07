@@ -1133,21 +1133,268 @@
 [submodule "libsqlfs"]
 	path = libsqlfs
 	url = git@github.com:GerHobbelt/libsqlfs.git
+
 [submodule "sqlean"]
 	path = sqlean
 	url = git@github.com:GerHobbelt/sqlean.git
+
 [submodule "sqlite-stats"]
 	path = sqlite-stats
 	url = git@github.com:GerHobbelt/sqlite-stats.git
+
 [submodule "SQLiteHistograms"]
 	path = SQLiteHistograms
 	url = git@github.com:GerHobbelt/SQLiteHistograms.git
+
 [submodule "sqlite-fts5-snowball"]
 	path = sqlite-fts5-snowball
 	url = git@github.com:GerHobbelt/fts5-snowball.git
+
 [submodule "sqlite_wrapper"]
 	path = sqlite_wrapper
 	url = git@github.com:GerHobbelt/sqlite_wrapper.git
+
 [submodule "velocypack"]
 	path = velocypack
 	url = git@github.com:GerHobbelt/velocypack.git
+
+[submodule "libdeflate"]
+	path = libdeflate
+	url = git@github.com:GerHobbelt/libdeflate.git
+
+[submodule "libCRCpp"]
+	path = libCRCpp
+	url = git@github.com:GerHobbelt/CRCpp.git
+
+[submodule "UIforETW"]
+	path = UIforETW
+	url = git@github.com:GerHobbelt/UIforETW.git
+
+[submodule "ms_cpp_client_telemetry"]
+	path = ms_cpp_client_telemetry
+	url = git@github.com:GerHobbelt/cpp_client_telemetry.git
+
+[submodule "krabsETW"]
+	path = krabsETW
+	url = git@github.com:GerHobbelt/krabsetw.git
+
+[submodule "tracelogging-for-ETW"]
+	path = tracelogging-for-ETW
+	url = git@github.com:GerHobbelt/tracelogging.git
+
+[submodule "typesense"]
+	path = typesense
+	url = git@github.com:GerHobbelt/typesense.git
+
+[submodule "dtoa-benchmark"]
+	path = dtoa-benchmark
+	url = git@github.com:GerHobbelt/dtoa-benchmark.git
+
+[submodule "Extensible-Storage-Engine"]
+	path = Extensible-Storage-Engine
+	url = git@github.com:GerHobbelt/Extensible-Storage-Engine.git
+
+[submodule "pthreadpool"]
+	path = pthreadpool
+	url = git@github.com:GerHobbelt/pthreadpool.git
+
+[submodule "lrucache11"]
+	path = lrucache11
+	url = git@github.com:GerHobbelt/lrucache11.git
+
+[submodule "CTPL-Thread-Pool"]
+	path = CTPL-Thread-Pool
+	url = git@github.com:GerHobbelt/CTPL.git
+
+[submodule "ThreadPool"]
+	path = ThreadPool
+	url = git@github.com:GerHobbelt/ThreadPool.git
+
+[submodule "portable_concurrency-std-future"]
+	path = portable_concurrency-std-future
+	url = git@github.com:GerHobbelt/portable_concurrency.git
+
+[submodule "YACLib"]
+	path = YACLib
+	url = git@github.com:GerHobbelt/YACLib.git
+
+[submodule "q"]
+	path = q
+	url = git@github.com:GerHobbelt/q.git
+
+[submodule "promise-hpp"]
+	path = promise-hpp
+	url = git@github.com:GerHobbelt/promise.hpp.git
+
+[submodule "taolog"]
+	path = taolog
+	url = git@github.com:GerHobbelt/taolog.git
+
+[submodule "opentelemetry-cpp"]
+	path = opentelemetry-cpp
+	url = git@github.com:GerHobbelt/opentelemetry-cpp.git
+
+[submodule "TraceETW"]
+	path = TraceETW
+	url = git@github.com:GerHobbelt/TraceEtw.git
+
+[submodule "Sealighter"]
+	path = Sealighter
+	url = git@github.com:GerHobbelt/Sealighter.git
+
+[submodule "Windows10EtwEvents"]
+	path = Windows10EtwEvents
+	url = git@github.com:GerHobbelt/Windows10EtwEvents.git
+
+[submodule "EtwExplorer"]
+	path = EtwExplorer
+	url = git@github.com:GerHobbelt/EtwExplorer.git
+
+[submodule "SilkETW"]
+	path = SilkETW
+	url = git@github.com:GerHobbelt/SilkETW.git
+
+[submodule "microsoft-performance-toolkit-sdk"]
+	path = microsoft-performance-toolkit-sdk
+	url = git@github.com:GerHobbelt/microsoft-performance-toolkit-sdk.git
+
+[submodule "pelikan"]
+	path = pelikan
+	url = git@github.com:GerHobbelt/pelikan.git
+
+[submodule "oppat"]
+	path = oppat
+	url = git@github.com:GerHobbelt/oppat.git
+
+[submodule "compact_enc_det"]
+	path = compact_enc_det
+	url = git@github.com:GerHobbelt/compact_enc_det.git
+
+[submodule "tink"]
+	path = tink
+	url = git@github.com:GerHobbelt/tink.git
+
+[submodule "highwayhash"]
+	path = highwayhash
+	url = git@github.com:GerHobbelt/highwayhash.git
+
+[submodule "kgraph"]
+	path = kgraph
+	url = git@github.com:GerHobbelt/kgraph.git
+
+[submodule "nanoflann"]
+	path = nanoflann
+	url = git@github.com:GerHobbelt/nanoflann.git
+
+[submodule "hnswlib"]
+	path = hnswlib
+	url = git@github.com:GerHobbelt/hnswlib.git
+
+[submodule "nmslib"]
+	path = nmslib
+	url = git@github.com:GerHobbelt/nmslib.git
+
+[submodule "annoy"]
+	path = annoy
+	url = git@github.com:GerHobbelt/annoy.git
+
+[submodule "libngt-ann"]
+	path = libngt-ann
+	url = git@github.com:GerHobbelt/NGT.git
+
+[submodule "libsptag"]
+	path = libsptag
+	url = git@github.com:GerHobbelt/SPTAG.git
+
+[submodule "CTCWordBeamSearch"]
+	path = CTCWordBeamSearch
+	url = git@github.com:GerHobbelt/CTCWordBeamSearch.git
+
+[submodule "faiss"]
+	path = faiss
+	url = git@github.com:GerHobbelt/faiss.git
+
+[submodule "xgboost"]
+	path = xgboost
+	url = git@github.com:GerHobbelt/xgboost.git
+
+[submodule "pisa"]
+	path = pisa
+	url = git@github.com:GerHobbelt/pisa.git
+
+[submodule "nsync"]
+	path = nsync
+	url = git@github.com:GerHobbelt/nsync.git
+
+[submodule "randen"]
+	path = randen
+	url = git@github.com:GerHobbelt/randen.git
+
+[submodule "zfp-compressed-arrays"]
+	path = zfp-compressed-arrays
+	url = git@github.com:GerHobbelt/zfp.git
+
+[submodule "random"]
+	path = random
+	url = git@github.com:GerHobbelt/random.git
+
+[submodule "wyhash"]
+	path = wyhash
+	url = git@github.com:GerHobbelt/wyhash.git
+
+[submodule "xnnpack"]
+	path = xnnpack
+	url = git@github.com:GerHobbelt/XNNPACK.git
+
+[submodule "merror"]
+	path = merror
+	url = git@github.com:GerHobbelt/merror.git
+
+[submodule "kahypar"]
+	path = kahypar
+	url = git@github.com:GerHobbelt/kahypar.git
+
+[submodule "flat_hash_map"]
+	path = flat_hash_map
+	url = git@github.com:GerHobbelt/flat_hash_map.git
+
+[submodule "pagerank"]
+	path = pagerank
+	url = git@github.com:GerHobbelt/pagerank.git
+
+[submodule "graphit"]
+	path = graphit
+	url = git@github.com:GerHobbelt/graphit.git
+
+[submodule "libgrape-lite"]
+	path = libgrape-lite
+	url = git@github.com:GerHobbelt/libgrape-lite.git
+
+[submodule "concurrencpp"]
+	path = concurrencpp
+	url = git@github.com:GerHobbelt/concurrencpp.git
+
+[submodule "lerc"]
+	path = lerc
+	url = git@github.com:GerHobbelt/lerc.git
+
+[submodule "stx-error-handling"]
+	path = stx-error-handling
+	url = git@github.com:GerHobbelt/STX.git
+
+[submodule "result-cpp"]
+	path = result-cpp
+	url = git@github.com:GerHobbelt/result.git
+
+[submodule "delegate"]
+	path = delegate
+	url = git@github.com:GerHobbelt/delegate.git
+
+[submodule "robin-map"]
+	path = robin-map
+	url = git@github.com:GerHobbelt/robin-map.git
+
+[submodule "hopscotch-map"]
+	path = hopscotch-map
+	url = git@github.com:GerHobbelt/hopscotch-map.git
+
