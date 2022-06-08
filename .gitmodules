@@ -1218,10 +1218,6 @@
 	path = YACLib
 	url = git@github.com:GerHobbelt/YACLib.git
 
-[submodule "q"]
-	path = q
-	url = git@github.com:GerHobbelt/q.git
-
 [submodule "promise-hpp"]
 	path = promise-hpp
 	url = git@github.com:GerHobbelt/promise.hpp.git

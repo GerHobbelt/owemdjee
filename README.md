@@ -1170,3 +1170,90 @@ The other JavaScript engines considered are of varying size, performance and com
 
 
 
+- [glib2](../glib2): GLib is the low-level core library that forms the basis for projects such as GTK and GNOME.
+- [fast_pfor](../fast_pfor): a research library with integer compression schemes. It is broadly applicable to the compression of arrays of 32-bit integers where most integers are small. The library seeks to exploit SIMD instructions (SSE) whenever possible.
+- [multiverso](../multiverso): a parameter server based framework for training machine learning models on big data with numbers of machines. It is currently a standard C++ library and provides a series of friendly programming interfaces. Now machine learning researchers and practitioners do not need to worry about the system routine issues such as distributed model storage and operation, inter-process and inter-thread communication, multi-threading management, and so on. Instead, they are able to focus on the core machine learning logics: data, model, and training.
+- [lda-3-variants](../lda-3-variants): three modified open source versions of LDA with collapsed Gibbs Sampling: GibbsLDA++, ompi-lda and online_twitter_lda.
+- [gibbs-lda](../gibbs-lda): modified GibbsLDA++: A C/C++ Implementation of Latent Dirichlet Allocation by by Xuan-Hieu Phan and Cam-Tu Nguyen.
+- [portable-memory-mapping](../portable-memory-mapping): portable Memory Mapping C++ Class (Windows/Linux)
+- [libmio](../libmio): An easy to use header-only cross-platform C++11 memory mapping library. `mio` has been created with the goal to be easily includable (i.e. no dependencies) in any C++ project that needs memory mapped file IO without the need to pull in Boost.
+- [libvrb](../libvrb): implements a ring buffer, also known as a character FIFO or circular buffer, with a special property that any data present in the buffer, as well as any empty space, are always seen as a single contiguous extent by the calling program.  This is implemented with virtual memory mapping by creating a mirror image of the buffer contents at the memory location in the virtual address space immediately after the main buffer location.  This allows the mirror image to always be seen without doing any copying of data.
+- [fmtlog](../fmtlog): a performant fmtlib-style logging library with latency in nanoseconds (i.e. using fmt library format).
+- [libcnl](../libcnl): The Compositional Numeric Library (CNL) is a C++ library of fixed-precision numeric classes which enhance integers to deliver safer, simpler, cheaper arithmetic types. CNL is particularly well-suited to: (1) compute on energy-constrained environments where FPUs are absent or costly; (2) compute on energy-intensive environments where arithmetic is the bottleneck such as simulations, machine learning applications and DSPs; and (3) domains such as finance where precision is essential.
+- [libucl](../libucl): the configuration language called UCL - Universal Configuration Language.  UCL is heavily infused by nginx configuration as the example of a convenient configuration system. However, UCL is fully compatible with JSON format and is able to parse json files.
+- [libquill](../libquill): a cross-platform low latency logging library based on C++14.
+- [NanoLog](../NanoLog): an extremely performant nanosecond scale logging system for C++ that exposes a simple printf-like API and achieves over 80 million logs/second at a median latency of just over 7 nanoseconds.
+- [libwil](../libwil): The Windows Implementation Libraries (WIL) is a header-only C++ library created to make life easier for developers on Windows through readable type-safe C++ interfaces for common Windows coding patterns.
+- [libzopfli](../libzopfli): Zopfli Compression Algorithm is a compression library programmed in C to perform very good, but slow, deflate or zlib compression.
+- [libwildmatch](../libwildmatch): wildmatch is a BSD-licensed C/C++ library for git/rsync-style pattern matching.
+- [libsqlfs](../libsqlfs): a POSIX style file system on top of an SQLite database.  It allows applications to have access to a full read/write file system in a single file, complete with its own file hierarchy and name space.  This is useful for applications which needs structured storage, such as embedding documents within documents, or management of configuration data or preferences.
+- [sqlean](../sqlean): The ultimate set of SQLite extensions: SQLite has few functions compared to other database management systems. SQLite authors see this as a feature rather than a problem, because SQLite has an extension mechanism in place. There are a lot of SQLite extensions out there, but they are incomplete, inconsistent and scattered across the internet. sqlean brings them together, neatly packaged into domain modules, documented, tested, and built for Linux, Windows and macOS.
+- [sqlite-stats](../sqlite-stats): provides common statistical functions for SQLite.
+- [SQLiteHistograms](../SQLiteHistograms): an SQLite extension library for creating histogram tables, tables of ratio between histograms and interpolation tables of scatter point tables.
+- [sqlite-fts5-snowball](../sqlite-fts5-snowball): a simple extension for use with FTS5 within SQLite. It allows FTS5 to use Martin Porter's Snowball stemmers (libstemmer), which are available in several languages. Check http://snowballstem.org/ for more information about them.
+- [sqlite_wrapper](../sqlite_wrapper): an easy-to-use, lightweight and concurrency-friendly SQLite wrapper written in C++17.
+- [velocypack](../velocypack): a fast and compact format for serialization and storage.  These days, JSON (JavaScript Object Notation, see ECMA-404) is used in many cases where data has to be exchanged. Lots of protocols between different services use it, databases store JSON (document stores naturally, but others increasingly as well). It is popular, because it is simple, human-readable, and yet surprisingly versatile, despite its limitations. At the same time there is a plethora of alternatives ranging from XML over Universal Binary JSON, MongoDB's BSON, MessagePack, BJSON (binary JSON), Apache Thrift till Google's protocol buffers and ArangoDB's shaped JSON. When looking into this, we were surprised to find that none of these formats manages to combine compactness, platform independence, fast access to sub-objects and rapid conversion from and to JSON.
+- [libdeflate](../libdeflate): heavily optimized library for DEFLATE/zlib/gzip compression and decompression.
+- [libCRCpp](../libCRCpp): easy to use and fast C++ CRC library.
+- [UIforETW](../UIforETW):
+- [ms_cpp_client_telemetry](../ms_cpp_client_telemetry):
+- [krabsETW](../krabsETW):
+- [tracelogging-for-ETW](../tracelogging-for-ETW):
+- [typesense](../typesense):
+- [dtoa-benchmark](../dtoa-benchmark):
+- [Extensible-Storage-Engine](../Extensible-Storage-Engine):
+- [pthreadpool](../pthreadpool):
+- [lrucache11](../lrucache11):
+- [CTPL-Thread-Pool](../CTPL-Thread-Pool):
+- [ThreadPool](../ThreadPool):
+- [portable_concurrency-std-future](../portable_concurrency-std-future):
+- [YACLib](../YACLib):
+- [promise-hpp](../promise-hpp):
+- [taolog](../taolog):
+- [opentelemetry-cpp](../opentelemetry-cpp):
+- [TraceETW](../TraceETW):
+- [Sealighter](../Sealighter):
+- [Windows10EtwEvents](../Windows10EtwEvents):
+- [EtwExplorer](../EtwExplorer):
+- [SilkETW](../SilkETW):
+- [microsoft-performance-toolkit-sdk](../microsoft-performance-toolkit-sdk):
+- [pelikan](../pelikan):
+- [oppat](../oppat):
+- [compact_enc_det](../compact_enc_det):
+- [tink](../tink):
+- [highwayhash](../highwayhash):
+- [kgraph](../kgraph):
+- [nanoflann](../nanoflann):
+- [hnswlib](../hnswlib):
+- [nmslib](../nmslib):
+- [annoy](../annoy):
+- [libngt-ann](../libngt-ann):
+- [libsptag](../libsptag): a library for fast approximate nearest neighbor search.  SPTAG (Space Partition Tree And Graph) is a library for large scale vector approximate nearest neighbor search scenario released by [Microsoft Research (MSR)](https://www.msra.cn/) and [Microsoft Bing](http://bing.com). 
+- [CTCWordBeamSearch](../CTCWordBeamSearch):
+- [faiss](../faiss):
+- [xgboost](../xgboost):
+- [pisa](../pisa):
+- [nsync](../nsync):
+- [randen](../randen):
+- [zfp-compressed-arrays](../zfp-compressed-arrays):
+- [random](../random):
+- [wyhash](../wyhash):
+- [xnnpack](../xnnpack):
+- [merror](../merror):
+- [kahypar](../kahypar):
+- [flat_hash_map](../flat_hash_map):
+- [pagerank](../pagerank):
+- [graphit](../graphit):
+- [libgrape-lite](../libgrape-lite):
+- [concurrencpp](../concurrencpp):
+- [lerc](../lerc):
+- [stx-error-handling](../stx-error-handling):
+- [result-cpp](../result-cpp):
+- [delegate](../delegate):
+- [robin-map](../robin-map):
+- [hopscotch-map](../hopscotch-map):
+
+
+
+
+
