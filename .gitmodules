@@ -1394,3 +1394,7 @@
 	path = hopscotch-map
 	url = git@github.com:GerHobbelt/hopscotch-map.git
 
+[submodule "ocreval"]
+	path = ocreval
+	url = git@github.com:GerHobbelt/ocreval.git
+
