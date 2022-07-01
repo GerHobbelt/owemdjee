@@ -1398,3 +1398,6 @@
 	path = ocreval
 	url = git@github.com:GerHobbelt/ocreval.git
 
+[submodule "asio"]
+	path = asio
+	url = git@github.com:GerHobbelt/asio.git
