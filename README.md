@@ -1196,9 +1196,6 @@ The other JavaScript engines considered are of varying size, performance and com
 - [libdeflate](../libdeflate): heavily optimized library for DEFLATE/zlib/gzip compression and decompression.
 - [libCRCpp](../libCRCpp): easy to use and fast C++ CRC library.
 - [libsptag](../libsptag): a library for fast approximate nearest neighbor search.  SPTAG (Space Partition Tree And Graph) is a library for large scale vector approximate nearest neighbor search scenario released by [Microsoft Research (MSR)](https://www.msra.cn/) and [Microsoft Bing](http://bing.com). 
-
-
-
 - [UIforETW](../UIforETW): Bruce Dawson's user interface for recording ETW (Event Tracing for Windows) traces, which allow amazingly deep investigations of performance problems on Windows.
 - [ms_cpp_client_telemetry](../ms_cpp_client_telemetry): 1DS C/C++ SDK enables cross-platform telemetry collection from various Microsoft products. It enables data / telemetry upload to Collector++. 1DS (One Data Strategy), also known as One Observability, is a cross-org initiative with five teams across the company coming together to unify multiple telemetry efforts at Microsoft. Collector++ is the externally-facing destination end-point where telemetry data is uploaded to that subsequently routes the data to Microsoft internal data pipeline.
 - [krabsETW](../krabsETW): a C++ library that simplifies interacting with ETW. It allows for any number of traces and providers to be enabled and for client code to register for event notifications from these traces.
@@ -1209,13 +1206,11 @@ The other JavaScript engines considered are of varying size, performance and com
 - [pthreadpool](../pthreadpool): pthreadpool is a portable and efficient thread pool implementation. It provides similar functionality to `#pragma omp parallel for`, but with additional features.
 - [lrucache11](../lrucache11): A header only C++11 LRU Cache template class that allows you to define key, value and optionally the `Map` type. uses a double linked list and a `std::unordered_map` style container to provide fast insert, delete and update No dependencies other than the C++ standard library. 
 - [CTPL-Thread-Pool](../CTPL-Thread-Pool): Modern and efficient C++ Thread Pool Library. More specifically, there are some threads dedicated to the pool and a container of jobs. The jobs come to the pool dynamically. A job is fetched and deleted from the container when there is an idle thread. The job is then run on that thread.
-- [ThreadPool](../ThreadPool):
 - [portable_concurrency-std-future](../portable_concurrency-std-future): Portable implementation of future/promise API in C++. `std::future` done right.
 - [YACLib](../YACLib): YACLib is a lightweight C++ library for concurrent and parallel task execution.
 - [promise-hpp](../promise-hpp): C++ asynchronous promises like a Promises/A+
 - [taolog](../taolog): A Win32 logger based on DebugView & ETW.
 - [opentelemetry-cpp](../opentelemetry-cpp): The OpenTelemetry C++ Client
-- [TraceETW](../TraceETW):
 - [Sealighter](../Sealighter): Sysmon-Like research tool for ETW: helps non-developers dive into researching Event Tracing for Windows (ETW) and Windows PreProcessor Tracing (WPP).
 - [Windows10EtwEvents](../Windows10EtwEvents): Events from all manifest-based and mof-based ETW providers across Windows 10 versions.
 - [EtwExplorer](../EtwExplorer): View ETW Provider metadata. Event Tracing for Windows (ETW) is a logging facility built into the Windows OS. Modern providers register a manifest that describes all the events they support, with their properties. Classic providers register a MOF instead.
@@ -1239,6 +1234,10 @@ The other JavaScript engines considered are of varying size, performance and com
 - [nsync](../nsync): a C library that exports various synchronization primitives. `nsync` may be desirable in place of `pthread` primitives in some cases:  (1) nsync locks are reader-writer locks (but are as efficient as mutexes).  (2) nsync locks and condition variables occupy only two words each.  (3) nsync works on Unix-like systems and Windows.  It should be portable to other platforms straightforwardly.  (4) nsync provides conditional critical sections.  These fill the same role as condition variables, but are usually easier to use, and in most common cases are comparable in speed.  They can be easier to use in two ways:  (A) it's not necessary to surround the "wait" operation in a while loop; instead the condition is passed to the call as a function and arbitrary pointer argument.  (B) it's not necessary to wake or signal explicitly when the condition(s) become true; they are checked automatically. The primary downsides are:  (A) they are not available in most other common synchronization APIs, and so they may be unfamiliar (even though they date back to the 1960s), and (B) if threads routinely wait on many distinct, false conditions associated with the same lock, they may be slower than condition variables. In this case, clients can use condition variables in the normal way; conditional critical sections and condition variables can be used with the same lock.  (5) nsync waits can be cancelled via an object passed to the wait calls, unlike the pthread model in which threads are cancelled.  This difference can be useful if the computation needs multiple threads, or if cancellation affects only sub-operations within a larger operation by the thread.
 - [randen](../randen): What if we could default to attack-resistant random generators without excessive CPU cost? We introduce 'Randen', a new generator with security guarantees; it outperforms MT19937, pcg64_c32, Philox, ISAAC and ChaCha8 in real-world benchmarks. This is made possible by AES hardware acceleration and a large Feistel permutation.
 - [zfp-compressed-arrays](../zfp-compressed-arrays): zfp is a compressed format for representing multidimensional floating-point and integer arrays. zfp provides compressed-array classes that support high throughput read and write random access to individual array elements. zfp also supports serial and parallel (OpenMP and CUDA) compression of whole arrays, e.g., for applications that read and write large data sets to and from disk.
+
+
+- [ThreadPool](../ThreadPool):
+- [TraceETW](../TraceETW):
 - [random](../random):
 - [wyhash](../wyhash):
 - [xnnpack](../xnnpack):
