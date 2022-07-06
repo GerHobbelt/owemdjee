@@ -1195,47 +1195,50 @@ The other JavaScript engines considered are of varying size, performance and com
 - [velocypack](../velocypack): a fast and compact format for serialization and storage.  These days, JSON (JavaScript Object Notation, see ECMA-404) is used in many cases where data has to be exchanged. Lots of protocols between different services use it, databases store JSON (document stores naturally, but others increasingly as well). It is popular, because it is simple, human-readable, and yet surprisingly versatile, despite its limitations. At the same time there is a plethora of alternatives ranging from XML over Universal Binary JSON, MongoDB's BSON, MessagePack, BJSON (binary JSON), Apache Thrift till Google's protocol buffers and ArangoDB's shaped JSON. When looking into this, we were surprised to find that none of these formats manages to combine compactness, platform independence, fast access to sub-objects and rapid conversion from and to JSON.
 - [libdeflate](../libdeflate): heavily optimized library for DEFLATE/zlib/gzip compression and decompression.
 - [libCRCpp](../libCRCpp): easy to use and fast C++ CRC library.
-- [UIforETW](../UIforETW):
-- [ms_cpp_client_telemetry](../ms_cpp_client_telemetry):
-- [krabsETW](../krabsETW):
-- [tracelogging-for-ETW](../tracelogging-for-ETW):
-- [typesense](../typesense):
-- [dtoa-benchmark](../dtoa-benchmark):
-- [Extensible-Storage-Engine](../Extensible-Storage-Engine):
-- [pthreadpool](../pthreadpool):
-- [lrucache11](../lrucache11):
-- [CTPL-Thread-Pool](../CTPL-Thread-Pool):
-- [ThreadPool](../ThreadPool):
-- [portable_concurrency-std-future](../portable_concurrency-std-future):
-- [YACLib](../YACLib):
-- [promise-hpp](../promise-hpp):
-- [taolog](../taolog):
-- [opentelemetry-cpp](../opentelemetry-cpp):
-- [TraceETW](../TraceETW):
-- [Sealighter](../Sealighter):
-- [Windows10EtwEvents](../Windows10EtwEvents):
-- [EtwExplorer](../EtwExplorer):
-- [SilkETW](../SilkETW):
-- [microsoft-performance-toolkit-sdk](../microsoft-performance-toolkit-sdk):
-- [pelikan](../pelikan):
-- [oppat](../oppat):
-- [compact_enc_det](../compact_enc_det):
-- [tink](../tink):
-- [highwayhash](../highwayhash):
-- [kgraph](../kgraph):
-- [nanoflann](../nanoflann):
-- [hnswlib](../hnswlib):
-- [nmslib](../nmslib):
-- [annoy](../annoy):
-- [libngt-ann](../libngt-ann):
 - [libsptag](../libsptag): a library for fast approximate nearest neighbor search.  SPTAG (Space Partition Tree And Graph) is a library for large scale vector approximate nearest neighbor search scenario released by [Microsoft Research (MSR)](https://www.msra.cn/) and [Microsoft Bing](http://bing.com). 
-- [CTCWordBeamSearch](../CTCWordBeamSearch):
-- [faiss](../faiss):
-- [xgboost](../xgboost):
-- [pisa](../pisa):
-- [nsync](../nsync):
-- [randen](../randen):
-- [zfp-compressed-arrays](../zfp-compressed-arrays):
+
+
+
+- [UIforETW](../UIforETW): Bruce Dawson's user interface for recording ETW (Event Tracing for Windows) traces, which allow amazingly deep investigations of performance problems on Windows.
+- [ms_cpp_client_telemetry](../ms_cpp_client_telemetry): 1DS C/C++ SDK enables cross-platform telemetry collection from various Microsoft products. It enables data / telemetry upload to Collector++. 1DS (One Data Strategy), also known as One Observability, is a cross-org initiative with five teams across the company coming together to unify multiple telemetry efforts at Microsoft. Collector++ is the externally-facing destination end-point where telemetry data is uploaded to that subsequently routes the data to Microsoft internal data pipeline.
+- [krabsETW](../krabsETW): a C++ library that simplifies interacting with ETW. It allows for any number of traces and providers to be enabled and for client code to register for event notifications from these traces.
+- [tracelogging-for-ETW](../tracelogging-for-ETW): C++ Wrapper for Windows ETW TraceLogging
+- [typesense](../typesense): a fast, typo-tolerant search engine for building delightful search experiences. Open Source alternative to Algolia and an Easier-to-Use alternative to ElasticSearch. ⚡🔍✨ Fast, typo tolerant, in-memory fuzzy Search Engine for building delightful search experiences.
+- [dtoa-benchmark](../dtoa-benchmark): This benchmark evaluates the performance of conversion from double precision IEEE-754 floating point (double) to ASCII string.
+- [Extensible-Storage-Engine](../Extensible-Storage-Engine): ESE is an embedded / ISAM-based database engine, that provides rudimentary table and indexed access. However the library provides many other strongly layered and and thus reusable sub-facilities as well: A Synchronization / Locking library, a Data-structures / STL-like library, an OS-abstraction layer, and a Cache Manager, as well as the full-blown database engine itself.
+- [pthreadpool](../pthreadpool): pthreadpool is a portable and efficient thread pool implementation. It provides similar functionality to `#pragma omp parallel for`, but with additional features.
+- [lrucache11](../lrucache11): A header only C++11 LRU Cache template class that allows you to define key, value and optionally the `Map` type. uses a double linked list and a `std::unordered_map` style container to provide fast insert, delete and update No dependencies other than the C++ standard library. 
+- [CTPL-Thread-Pool](../CTPL-Thread-Pool): Modern and efficient C++ Thread Pool Library. More specifically, there are some threads dedicated to the pool and a container of jobs. The jobs come to the pool dynamically. A job is fetched and deleted from the container when there is an idle thread. The job is then run on that thread.
+- [ThreadPool](../ThreadPool):
+- [portable_concurrency-std-future](../portable_concurrency-std-future): Portable implementation of future/promise API in C++. `std::future` done right.
+- [YACLib](../YACLib): YACLib is a lightweight C++ library for concurrent and parallel task execution.
+- [promise-hpp](../promise-hpp): C++ asynchronous promises like a Promises/A+
+- [taolog](../taolog): A Win32 logger based on DebugView & ETW.
+- [opentelemetry-cpp](../opentelemetry-cpp): The OpenTelemetry C++ Client
+- [TraceETW](../TraceETW):
+- [Sealighter](../Sealighter): Sysmon-Like research tool for ETW: helps non-developers dive into researching Event Tracing for Windows (ETW) and Windows PreProcessor Tracing (WPP).
+- [Windows10EtwEvents](../Windows10EtwEvents): Events from all manifest-based and mof-based ETW providers across Windows 10 versions.
+- [EtwExplorer](../EtwExplorer): View ETW Provider metadata. Event Tracing for Windows (ETW) is a logging facility built into the Windows OS. Modern providers register a manifest that describes all the events they support, with their properties. Classic providers register a MOF instead.
+- [SilkETW](../SilkETW): SilkETW & SilkService are flexible C# wrappers for ETW, they are meant to abstract away the complexities of ETW and give people a simple interface to perform research and introspection. While both projects have obvious defensive (and offensive) applications they should primarily be considered as research tools.
+- [microsoft-performance-toolkit-sdk](../microsoft-performance-toolkit-sdk): The Microsoft Performance Toolkit is a collection of cross-platform tools developers can use to create and extend performance analysis applications. It serves as the runtime of the Windows Performance Analyzer, a Windows program included in the Windows Performance Toolkit. By using the Microsoft Performance Toolkit SDK, Windows Performance Analyzer - or any performance analysis application - can be configured to process and display performance data from arbitrary sources.
+- [pelikan](../pelikan): Pelikan is Twitter's unified cache backend.
+- [oppat](../oppat): Open Power/Performance Analysis Tool (OPPAT) is a cross-OS, cross-architecture Power and Performance Analysis Tool. cross-OS: supports Windows ETW trace files and Linux/Android perf/trace-cmd trace files. cross-architecture: supports Intel and ARM chips hardware events (using perf and/or PCM).
+- [compact_enc_det](../compact_enc_det): Compact Encoding Detection (CED for short) is a library written in C++ that scans given raw bytes and detect the most likely text encoding.
+- [tink](../tink): A multi-language, cross-platform library that provides cryptographic APIs that are secure, easy to use correctly, and hard(er) to misuse.
+- [highwayhash](../highwayhash): Fast strong hash functions: SipHash/HighwayHash
+- [kgraph](../kgraph): a library for k-nearest neighbor (k-NN) graph construction and online k-NN search using a k-NN Graph as index. KGraph implements heuristic algorithms that are extremely generic and fast. KGraph works on abstract objects. The only assumption it makes is that a similarity score can be computed on any pair of objects, with a user-provided function.
+- [nanoflann](../nanoflann): a C++11 header-only library for building KD-Trees of datasets with different topologies: R^2, R^3 (point clouds), SO(2) and SO(3) (2D and 3D rotation groups). No support for approximate NN is provided. This library is a fork of the `flann` library by Marius Muja and David G. Lowe, and born as a child project of `MRPT`.
+- [hnswlib](../hnswlib): fast approximate nearest neighbor search. Header-only C++ HNSW implementation with python bindings.
+- [nmslib](../nmslib): Non-Metric Space Library (NMSLIB) is an efficient cross-platform similarity search library and a toolkit for evaluation of similarity search methods. The core-library does not have any third-party dependencies. It has been gaining popularity recently. In particular, it has become a part of Amazon Elasticsearch Service. The goal of the project is to create an effective and comprehensive toolkit for searching in generic and non-metric spaces. Even though the library contains a variety of metric-space access methods, our main focus is on generic and approximate search methods, in particular, on methods for non-metric spaces. NMSLIB is possibly the first library with a principled support for non-metric space searching.
+- [annoy](../annoy): Annoy (Approximate Nearest Neighbors Oh Yeah) is a C++ library with Python bindings to search for points in space that are close to a given query point. It also creates large read-only file-based data structures that are mmapped into memory so that many processes may share the same data. Annoy is almost as fast as the fastest libraries, but there is actually another feature that really sets Annoy apart: it has the ability to use static files as indexes. In particular, this means you can share index across processes. Annoy also decouples creating indexes from loading them, so you can pass around indexes as files and map them into memory quickly. Another nice thing of Annoy is that it tries to minimize memory footprint so the indexes are quite small. Why is this useful? If you want to find nearest neighbors and you have many CPU's, you only need to build the index once. You can also pass around and distribute static files to use in production environment: any process will be able to load (`mmap`) the index into memory and will be able to do lookups immediately. We use it at Spotify for music recommendations. After running matrix factorization algorithms, every user/item can be represented as a vector in f-dimensional space. This library helps us search for similar users/items. We have many millions of tracks in a high-dimensional space, so memory usage is a prime concern.
+- [libngt-ann](../libngt-ann): Yahoo's Neighborhood Graph and Tree for Indexing High-dimensional Data. NGT provides commands and a library for performing high-speed approximate nearest neighbor searches against a large volume of data (several million to several 10 million items of data) in high dimensional vector data space (several ten to several thousand dimensions).
+- [CTCWordBeamSearch](../CTCWordBeamSearch): Connectionist Temporal Classification (CTC) decoder with dictionary and Language Model (LM).
+- [faiss](../faiss): a library for efficient similarity search and clustering of dense vectors. It contains algorithms that search in sets of vectors of any size, up to ones that possibly do not fit in RAM. It also contains supporting code for evaluation and parameter tuning. Faiss is written in C++ with complete wrappers for Python/numpy. Some of the most useful algorithms are implemented on the GPU. It is developed primarily at Facebook AI Research.
+- [xgboost](../xgboost): an optimized distributed gradient boosting library designed to be highly efficient, flexible and portable. It implements machine learning algorithms under the Gradient Boosting framework. XGBoost provides a parallel tree boosting (also known as GBDT, GBM) that solve many data science problems in a fast and accurate way. The same code runs on major distributed environment (Kubernetes, Hadoop, SGE, MPI, Dask) and can solve problems beyond billions of examples.
+- [pisa](../pisa): a text search engine able to run on large-scale collections of documents. It allows researchers to experiment with state-of-the-art techniques, allowing an ideal environment for rapid development. PISA is a text search engine, though the "PISA Project" is a set of tools that help experiment with indexing and query processing. Given a text collection, PISA can build an inverted index over this corpus, allowing the corpus to be searched. The inverted index, put simply, is an efficient data structure that represents the document corpus by storing a list of documents for each unique term (see here). At query time, PISA stores its index in main memory for rapid retrieval.
+- [nsync](../nsync): a C library that exports various synchronization primitives. `nsync` may be desirable in place of `pthread` primitives in some cases:  (1) nsync locks are reader-writer locks (but are as efficient as mutexes).  (2) nsync locks and condition variables occupy only two words each.  (3) nsync works on Unix-like systems and Windows.  It should be portable to other platforms straightforwardly.  (4) nsync provides conditional critical sections.  These fill the same role as condition variables, but are usually easier to use, and in most common cases are comparable in speed.  They can be easier to use in two ways:  (A) it's not necessary to surround the "wait" operation in a while loop; instead the condition is passed to the call as a function and arbitrary pointer argument.  (B) it's not necessary to wake or signal explicitly when the condition(s) become true; they are checked automatically. The primary downsides are:  (A) they are not available in most other common synchronization APIs, and so they may be unfamiliar (even though they date back to the 1960s), and (B) if threads routinely wait on many distinct, false conditions associated with the same lock, they may be slower than condition variables. In this case, clients can use condition variables in the normal way; conditional critical sections and condition variables can be used with the same lock.  (5) nsync waits can be cancelled via an object passed to the wait calls, unlike the pthread model in which threads are cancelled.  This difference can be useful if the computation needs multiple threads, or if cancellation affects only sub-operations within a larger operation by the thread.
+- [randen](../randen): What if we could default to attack-resistant random generators without excessive CPU cost? We introduce 'Randen', a new generator with security guarantees; it outperforms MT19937, pcg64_c32, Philox, ISAAC and ChaCha8 in real-world benchmarks. This is made possible by AES hardware acceleration and a large Feistel permutation.
+- [zfp-compressed-arrays](../zfp-compressed-arrays): zfp is a compressed format for representing multidimensional floating-point and integer arrays. zfp provides compressed-array classes that support high throughput read and write random access to individual array elements. zfp also supports serial and parallel (OpenMP and CUDA) compression of whole arrays, e.g., for applications that read and write large data sets to and from disk.
 - [random](../random):
 - [wyhash](../wyhash):
 - [xnnpack](../xnnpack):
@@ -1252,8 +1255,5 @@ The other JavaScript engines considered are of varying size, performance and com
 - [delegate](../delegate):
 - [robin-map](../robin-map):
 - [hopscotch-map](../hopscotch-map):
-
-
-
-
-
+- [ocreval](../ocreval):
+- [asio](../asio):
