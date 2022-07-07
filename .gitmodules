@@ -1401,3 +1401,6 @@
 [submodule "asio"]
 	path = asio
 	url = git@github.com:GerHobbelt/asio.git
+[submodule "highway"]
+	path = highway
+	url = git@github.com:GerHobbelt/highway.git
