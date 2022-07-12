@@ -776,6 +776,7 @@ The other JavaScript engines considered are of varying size, performance and com
     + [scintilla](./scintilla) -- text editor (part of wxWidgets)
     + [htmlstreamparser](../htmlstreamparser) -- used in a demo of zsync2
     + [libcpr](../libcpr) -- wrapper library for cURL; used by zsync2
+    + [highway](../highway) -- dependency of JpegXL
 
 
 ---
@@ -1256,3 +1257,4 @@ The other JavaScript engines considered are of varying size, performance and com
 - [hopscotch-map](../hopscotch-map):
 - [ocreval](../ocreval):
 - [asio](../asio):
+- [highway](../highway):
