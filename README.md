@@ -1258,3 +1258,4 @@ The other JavaScript engines considered are of varying size, performance and com
 - [ocreval](../ocreval):
 - [asio](../asio):
 - [highway](../highway):
+- [tinycolormap](../tinycolormap):

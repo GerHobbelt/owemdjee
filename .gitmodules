@@ -1406,3 +1406,6 @@
 	path = highway
 	url = git@github.com:GerHobbelt/highway.git
 
+[submodule "tinycolormap"]
+	path = tinycolormap
+	url = git@github.com:GerHobbelt/tinycolormap.git
