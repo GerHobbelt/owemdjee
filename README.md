@@ -116,7 +116,7 @@ The other JavaScript engines considered are of varying size, performance and com
 
 # Libraries we're looking at for this *intent*:
 
-- IPC: flatbuffer et al for protocol design:
+- **IPC: flatbuffer et al for protocol design**:
 
     - [bebop](./bebop)
     - ~~[FastBinaryEncoding](https://github.com/chronoxor/FastBinaryEncoding)~~
@@ -135,8 +135,9 @@ The other JavaScript engines considered are of varying size, performance and com
     - ~~[protobuf](https://github.com/protocolbuffers/protobuf)~~
       + **removed**; reason: relatively slow run-time and (in my opinion) rather ugly & convoluted approach at build time. Has too much of a Java/CorporateProgramming smell, which has not lessened over the years, unfortunately.
     - ~~[SWIG](https://swig.readthedocs.io/en/latest/Manual/SWIG.html) (*not included; more suitable for RPC than what we have in mind, which is purely data messages enchange*)~~
+	- [velocypack](../velocypack): a fast and compact format for serialization and storage.  These days, JSON (JavaScript Object Notation, see ECMA-404) is used in many cases where data has to be exchanged. Lots of protocols between different services use it, databases store JSON (document stores naturally, but others increasingly as well). It is popular, because it is simple, human-readable, and yet surprisingly versatile, despite its limitations. At the same time there is a plethora of alternatives ranging from XML over Universal Binary JSON, MongoDB's BSON, MessagePack, BJSON (binary JSON), Apache Thrift till Google's protocol buffers and ArangoDB's shaped JSON. When looking into this, we were surprised to find that none of these formats manages to combine compactness, platform independence, fast access to sub-objects and rapid conversion from and to JSON.
 
-- IPC: websockets, etc.: all communication means
+- **IPC: websockets, etc.: all communication means**
 
     - [libwebsocketpp](./libwebsocketpp)
     - [libwebsockets](./libwebsockets)
@@ -158,7 +159,7 @@ The other JavaScript engines considered are of varying size, performance and com
         + [cppzmq](./cppzmq) -- header-only C++ binding for libzmq.
         + [libCZMQ](../libCZMQ) -- High-level C binding for ØMQ. (http://czmq.zeromq.org/)
 
-- IPC: JSON for protocol design:
+- **IPC: JSON for protocol design**:
 
     - [json](./json)
     - [json-jansson](./json-jansson)
@@ -166,7 +167,13 @@ The other JavaScript engines considered are of varying size, performance and com
     - [yyjson](./yyjson)
     - [libsmile](./libsmile) -- ["Smile" format](https://en.wikipedia.org/wiki/Smile_%28data_interchange_format%29), i.e. a compact binary JSON format
 
-- content hashing (cryptographic strength i.e. *"guaranteed"* collision-free)
+- ~~**IPC: YAML, TOML, etc. for protocol design**~~:
+
+    **Not considered**: reason: when we want the IPC protocol to be "human readable" in any form/approximation, we've decided to stick with JSON or XML (if we cannot help it -- I particularly dislike the verbosity and tag redundancy (open+close) in XML and consider it a lousy design choice for *any* purpose).
+
+    The more human readable formats (YAML, TOML, ...) are intended for human to machine communications, e.g. for feeding configurations into applications, and **SHOULD NOT** be used for IPC anywhere. (Though I must say I'm on the fence where it comes using YAML as an alternative IPC format where it replaces JSON; another contender there are the JSON5/JSON6 formats.)
+
+- **content hashing** (cryptographic strength i.e. *"guaranteed"* collision-free)
     
     The bit about **_"guaranteed"_ collision-free** is to be read as: hash algorithms in this section must come with *strong statistical guarantees* that any chance at a **hash collision** is negligible, even for *extremely large* collections. In practice this means: use *cryptographic* hash algorithms with a *strength* of 128 bits or more. (Qiqqa used a b0rked version SHA1 thus far, which is considered too weak as we already sample PDFs which cause a hash collision for the *official* SHA1 algo (and thus also collide in our b0rked SHA1 variant): while those can still be argued to be fringe case, I don't want to be bothered with this at all and thus choose to err on the side of 'better than SHA1B' here. Meanwhile, any library in here *may* contain weaker cryptographic hashes alongside: we won't be using those for **content hashing**.
   
@@ -174,7 +181,7 @@ The other JavaScript engines considered are of varying size, performance and com
     - [cryptopp](./cryptopp) -- crypto library
     - [OpenSSL](./openssl) -- its crypto library part, more specifically.
 
-- hash-like filters & fast hashing for hash tables et al (64 bits and less, mostly)
+- **hash-like filters & fast hashing for hash tables** et al (64 bits and less, mostly)
 
     These hashes are for other purposes, e.g. fast lookup in dictionaries, fast approximate hit testing and set reduction through fast filtering (think *bloom filter*). These *may* be **machine specific** (and some of them *are*): these are **never supposed to be used for encoding in storage or other means which crosses machine boundaries**: if you want to use them for a database index, that is fine *as long as* you don't expect that database index to be readable by any other machine than the one which produced and uses these hash numbers.
   
@@ -199,7 +206,7 @@ The other JavaScript engines considered are of varying size, performance and com
     + [morton_filter](./morton_filter)
     + [phf-hash](./phf-hash)
 
-- intermediate data storage / caching / hierarchical data stores (binary hOCR; document text revisions; ...) 
+- **intermediate data storage / caching / hierarchical data stores** (binary hOCR; document text revisions; ...) 
 
     - [c-blosc2](./c-blosc2) -- a high performance compressor optimized for binary data (i.e. floating point numbers, integers and booleans), designed to transmit data to the processor cache faster than the traditional, non-compressed, direct memory fetch approach via a `memcpy()` OS call.
     - [CacheLib](./CacheLib) -- provides an in-process high performance caching mechanism, thread-safe API to build high throughput, low overhead caching services, with built-in ability to leverage DRAM and SSD caching transparently.
@@ -224,7 +231,7 @@ The other JavaScript engines considered are of varying size, performance and com
         + [palmtree](./palmtree) -- concurrent lock free B+Tree
         + [parallel-hashmap](./parallel-hashmap) -- a set of hash map implementations, as well as a btree alternative to std::map and std::set
 	
-- data storage / caching / IPC: loss-less data compression
+- **data storage / caching / IPC: loss-less data compression**
 
     - [brotli](../brotli) -- compression
     - ~~[bzip2](https://github.com/nemequ/bzip2)~~
@@ -252,7 +259,7 @@ The other JavaScript engines considered are of varying size, performance and com
     - [zstd](./zstd)
     - see also [lzbench](https://github.com/inikep/lzbench)
 
-- file / directory tree synchronization (local and remote)
+- **file / directory tree synchronization** (local and remote)
 
     - [lib_nas_lockfile](./lib_nas_lockfile) -- lockfile management on NAS and other disparate network filesystem storage. To be combined with SQLite to create a proper Qiqqa Sync operation.
     
@@ -262,13 +269,13 @@ The other JavaScript engines considered are of varying size, performance and com
 
     - [csync2](../csync2) -- a cluster synchronization tool. It can be used to keep files on multiple hosts in a cluster in sync. Csync2 can handle complex setups with much more than just 2 hosts, handle file deletions and can detect conflicts.
 
-- OCR: hOCR output format, other output format? (dedicated binary?)
+- **OCR: hOCR output format, other output formats? (dedicated binary?)**
 
     - [hocr-fileformat](./hocr-fileformat)
     - [hocr-spec](./hocr-spec)
     - [hocr-tools](./hocr-tools)
 
-- pattern recognition: "A.I." for cover pages, image/page *segmentation*, including abstract & summary demarcation, "figure" and "table" detection & extraction from documents, ...
+- **pattern recognition: "A.I." for cover pages, image/page *segmentation*, including abstract & summary demarcation, "figure" and "table" detection & extraction from documents, ...**
 
     - [dlib](./dlib) -- machine learning algorithms
         - [lapack](./lapack) -- [CBLAS](http://www.netlib.org/blas/) + [LAPACK](http://www.netlib.org/lapack/index.html) optimized linear algebra libs
@@ -278,6 +285,7 @@ The other JavaScript engines considered are of varying size, performance and com
     - [MITIE-nlp](./MITIE-nlp) -- provides state-of-the-art information extraction tools. Includes tools for performing [named entity extraction](http://blog.dlib.net/2014/04/mitie-completely-free-and-state-of-art.html) and [binary relation detection](http://blog.dlib.net/2014/07/mitie-v02-released-now-includes-python.html) as well as tools for training custom extractors and relation detectors.  MITIE is built on top of [dlib](http://dlib.net), a high-performance machine-learning library, MITIE makes use of several state-of-the-art techniques including the use of distributional word embeddings and Structural Support Vector Machines.
     - [mlpack](./mlpack)
     - [mipp](./mipp) -- MyIntrinsics++ (MIPP): a portable wrapper for vector intrinsic functions (SIMD) written in C++11. It works for SSE, AVX, AVX-512 and ARM NEON (32-bit and 64-bit) instructions. MIPP wrapper supports simple/double precision floating-point numbers and also signed integer arithmetic (64-bit, 32-bit, 16-bit and 8-bit). With the MIPP wrapper you do not need to write a specific intrinsic code anymore. Just use provided functions and the wrapper will automatically generate the right intrisic calls for your specific architecture.
+	- [multiverso](../multiverso): a parameter server based framework for training machine learning models on big data with numbers of machines. It is currently a standard C++ library and provides a series of friendly programming interfaces. Now machine learning researchers and practitioners do not need to worry about the system routine issues such as distributed model storage and operation, inter-process and inter-thread communication, multi-threading management, and so on. Instead, they are able to focus on the core machine learning logics: data, model, and training.
     - [libbf](../libbf) -- a small library to handle arbitrary precision binary or decimal floating point numbers
     - [ncnn](./ncnn) -- high-performance neural network inference computing framework optimized for mobile platforms (i.e. small footprint)
     - [pytorch](./pytorch) -- PyTorch library in C++
@@ -287,7 +295,20 @@ The other JavaScript engines considered are of varying size, performance and com
     - [xtensor-io](./xtensor-io)
     - [xtensor](./xtensor)
     - [xtl](./xtl) -- xtensor core library
-    - text tokenization, i.e. breaking text into words when you receiveatextstreamwithoutspaces. Also useful for Asian languages, which don't do spaces, e.g. Chinese.
+	
+	- **similarity search**:
+		- [annoy](../annoy): Annoy (Approximate Nearest Neighbors Oh Yeah) is a C++ library with Python bindings to search for points in space that are close to a given query point. It also creates large read-only file-based data structures that are mmapped into memory so that many processes may share the same data. Annoy is almost as fast as the fastest libraries, but there is actually another feature that really sets Annoy apart: it has the ability to use static files as indexes. In particular, this means you can share index across processes. Annoy also decouples creating indexes from loading them, so you can pass around indexes as files and map them into memory quickly. Another nice thing of Annoy is that it tries to minimize memory footprint so the indexes are quite small. Why is this useful? If you want to find nearest neighbors and you have many CPU's, you only need to build the index once. You can also pass around and distribute static files to use in production environment: any process will be able to load (`mmap`) the index into memory and will be able to do lookups immediately. We use it at Spotify for music recommendations. After running matrix factorization algorithms, every user/item can be represented as a vector in f-dimensional space. This library helps us search for similar users/items. We have many millions of tracks in a high-dimensional space, so memory usage is a prime concern.
+		- [CTCWordBeamSearch](../CTCWordBeamSearch): Connectionist Temporal Classification (CTC) decoder with dictionary and Language Model (LM).
+		- [faiss](../faiss): a library for efficient similarity search and clustering of dense vectors. It contains algorithms that search in sets of vectors of any size, up to ones that possibly do not fit in RAM. It also contains supporting code for evaluation and parameter tuning. Faiss is written in C++ with complete wrappers for Python/numpy. Some of the most useful algorithms are implemented on the GPU. It is developed primarily at Facebook AI Research.
+		- [hnswlib](../hnswlib): fast approximate nearest neighbor search. Header-only C++ HNSW implementation with python bindings.
+		- [kgraph](../kgraph): a library for k-nearest neighbor (k-NN) graph construction and online k-NN search using a k-NN Graph as index. KGraph implements heuristic algorithms that are extremely generic and fast. KGraph works on abstract objects. The only assumption it makes is that a similarity score can be computed on any pair of objects, with a user-provided function.
+		- [libngt-ann](../libngt-ann): Yahoo's Neighborhood Graph and Tree for Indexing High-dimensional Data. NGT provides commands and a library for performing high-speed approximate nearest neighbor searches against a large volume of data (several million to several 10 million items of data) in high dimensional vector data space (several ten to several thousand dimensions).
+		- [libsptag](../libsptag): a library for fast approximate nearest neighbor search.  SPTAG (Space Partition Tree And Graph) is a library for large scale vector approximate nearest neighbor search scenario released by [Microsoft Research (MSR)](https://www.msra.cn/) and [Microsoft Bing](http://bing.com). 
+		- [nanoflann](../nanoflann): a C++11 header-only library for building KD-Trees of datasets with different topologies: R^2, R^3 (point clouds), SO(2) and SO(3) (2D and 3D rotation groups). No support for approximate NN is provided. This library is a fork of the `flann` library by Marius Muja and David G. Lowe, and born as a child project of `MRPT`.
+		- [nmslib](../nmslib): Non-Metric Space Library (NMSLIB) is an efficient cross-platform similarity search library and a toolkit for evaluation of similarity search methods. The core-library does not have any third-party dependencies. It has been gaining popularity recently. In particular, it has become a part of Amazon Elasticsearch Service. The goal of the project is to create an effective and comprehensive toolkit for searching in generic and non-metric spaces. Even though the library contains a variety of metric-space access methods, our main focus is on generic and approximate search methods, in particular, on methods for non-metric spaces. NMSLIB is possibly the first library with a principled support for non-metric space searching.
+		- [xgboost](../xgboost): an optimized distributed gradient boosting library designed to be highly efficient, flexible and portable. It implements machine learning algorithms under the Gradient Boosting framework. XGBoost provides a parallel tree boosting (also known as GBDT, GBM) that solve many data science problems in a fast and accurate way. The same code runs on major distributed environment (Kubernetes, Hadoop, SGE, MPI, Dask) and can solve problems beyond billions of examples.
+
+    - **text tokenization**, i.e. breaking text into words when you _receive a textstream without spaces_. Also useful for Asian languages, which don't do spaces, e.g. Chinese.
         + [sentencepiece](./sentencepiece) -- text tokenization
         + [sentence-tokenizer](./sentence-tokenizer) -- text tokenization
         + [you-token-to-me](./you-token-to-me) -- text tokenization
@@ -303,34 +324,36 @@ The other JavaScript engines considered are of varying size, performance and com
 
         Bling Fire Tokenizer provides state of the art performance for Natural Language text tokenization.
 
-    - GMM/HMM/kM: fit patterns, e.g. match & transform a point cloud or image onto a template --> help matching pages against banner templates, etc. as part of the OCR/recognition task.
+    - **GMM/HMM/kM: fit patterns, e.g. match & transform a point cloud or image onto a template** --> help matching pages against banner templates, etc. as part of the OCR/recognition task.
         + [GMMreg](./GMMreg) -- implementations of the robust point set registration framework described in the paper "[Robust Point Set Registration Using Gaussian Mixture Models](https://github.com/bing-jian/gmmreg/blob/master/gmmreg_PAMI_preprint.pdf)", Bing Jian and Baba C. Vemuri, IEEE Transactions on Pattern Analysis and Machine Intelligence, 2011, 33(8), pp. 1633-1645. An earlier conference version of this work, "A Robust Algorithm for Point Set Registration Using Mixture of Gaussians, Bing Jian and Baba C. Vemuri.", appeared in the proceedings of ICCV'05.
         + [liblinear](./liblinear)
         + [hmm-scalable](./hmm-scalable)
         + [hmm-stoch](./hmm-stoch)
         + [GMM-HMM-kMeans](./GMM-HMM-kMeans)
+
     - [yara-pattern-matcher](./yara-pattern-matcher) -- for automated and user-specified pattern recognition in custom document & metadata *cleaning* / processing tasks
-    - *delta features* & other feature extraction (see Qiqqa research notes)
+	
+    - **_delta features_ & other feature extraction** (see Qiqqa research notes)
         + [dtl-diff-template-library](./dtl-diff-template-library)
         + [google-diff-match-patch](./google-diff-match-patch)
         + [HDiffPatch](./HDiffPatch)
         + [yara-pattern-matcher](./yara-pattern-matcher)
 
-- regex matchers (manual edit - pattern recognition)
+- **regex matchers (manual edit - pattern recognition)**
 
     * [hyperscan](./hyperscan) -- Hyperscan is a high-performance multiple regex matching library.
     * [re2](./re2)
     * [tre](./tre)
     * [pcre](./pcre)
 
-- OCR: quality improvements, language detect, ...
+- **OCR: quality improvements, language detect, ...**
 
     - [hunspell](./hunspell)
     - [hunspell-hyphen](./hunspell-hyphen)
     - [libtextcat](./libtextcat) -- text language detection
     - [fastText](./fastText) -- [fastText](https://fasttext.cc/) is a library for efficient learning of word representations and sentence classification. Includes language detection feeatures.
 
-- OCR page image preprocessing, \[scanner] tooling: getting the pages to the OCR engine
+- **OCR page image preprocessing, \[scanner] tooling: getting the pages to the OCR engine**
 
     - [GraphicsMagick](./GraphicsMagick)
     - [ImageMagick](./ImageMagick)
@@ -344,7 +367,7 @@ The other JavaScript engines considered are of varying size, performance and com
     - [scantailor](./scantailor) -- [scantailor_advanced](https://github.com/4lex4/scantailor-advanced) is the [ScanTailor](https://github.com/scantailor/scantailor) version that merges the features of the *ScanTailor Featured* and *ScanTailor Enhanced* versions, brings new ones and fixes. ScanTailor is an interactive post-processing tool for scanned pages. It performs operations such as page splitting, deskewing, adding/removing borders, selecting content, ... and many others.
     - [CImg](../CImg) -- a **small** C++ toolkit for **image processing**.
     
-- image export, image / \[scanned] document import
+- **image export, image / \[scanned] document import**
 
     - [CImg](../CImg) -- a **small** C++ toolkit for **image processing**.
     - [CxImage](../CxImage) -- venerated library for reading and creating many image file formats.
@@ -371,18 +394,23 @@ The other JavaScript engines considered are of varying size, performance and com
     - ~~[cgohlke::imagecodecs](https://github.com/cgohlke/imagecodecs) (*not included; see also DICOM slot above*)~~
     - [image formats (visual) quality comparison](https://eclipseo.github.io/image-comparison-web/) (*not included*)
 
-- Monte Carlo simulations, LDA, keyword inference/extraction, etc.
+- **Monte Carlo simulations, LDA, keyword inference/extraction, etc.**
 
+	- [gibbs-lda](../gibbs-lda): modified GibbsLDA++: A C/C++ Implementation of Latent Dirichlet Allocation by by Xuan-Hieu Phan and Cam-Tu Nguyen.
     - [lda-bigartm](./lda-bigartm)
     - [lda-Familia](./lda-Familia)
     - [lda](./lda) -- variational EM for latent Dirichlet allocation (LDA), David Blei et al
+	- [lda-3-variants](../lda-3-variants): three modified open source versions of LDA with collapsed Gibbs Sampling: GibbsLDA++, ompi-lda and online_twitter_lda.
     - [LightLDA](./LightLDA)
     - [mcmc](./mcmc) -- Monte Carlo
     - [mmc](./mmc) -- Monte Carlo
+	- [multiverso](../multiverso): a parameter server based framework for training machine learning models on big data with numbers of machines. It is currently a standard C++ library and provides a series of friendly programming interfaces. Now machine learning researchers and practitioners do not need to worry about the system routine issues such as distributed model storage and operation, inter-process and inter-thread communication, multi-threading management, and so on. Instead, they are able to focus on the core machine learning logics: data, model, and training.
+    - [ncnn](./ncnn) -- high-performance neural network inference computing framework optimized for mobile platforms (i.e. small footprint)
     - [OptimizationTemplateLibrary](./OptimizationTemplateLibrary) -- Optimization Template Library (OTL)
     - [pcg-c-random](./pcg-c-random) -- fast random generators
-    - [ncnn](./ncnn) -- high-performance neural network inference computing framework optimized for mobile platforms (i.e. small footprint)
-    + text tokenization (as a preprocessing step for LDA et al):
+	- [randen](../randen): What if we could default to attack-resistant random generators without excessive CPU cost? We introduce 'Randen', a new generator with security guarantees; it outperforms MT19937, pcg64_c32, Philox, ISAAC and ChaCha8 in real-world benchmarks. This is made possible by AES hardware acceleration and a large Feistel permutation.
+
+    - **text tokenization** (as a preprocessing step for LDA et al):
         + [sentencepiece](./sentencepiece) -- text tokenization
         + [sentence-tokenizer](./sentence-tokenizer) -- text tokenization
         + [you-token-to-me](./you-token-to-me) -- text tokenization
@@ -394,13 +422,14 @@ The other JavaScript engines considered are of varying size, performance and com
         + [many-stop-words](./many-stop-words)
         + [stopwords](./stopwords)
         + [fastText](./fastText) -- [fastText](https://fasttext.cc/) is a library for efficient learning of word representations and sentence classification. Includes language detection feeatures.
-    + other *topic modeling* code on the Net:
+
+    - other *topic modeling* code on the Net:
         * [Hierarchical Dirichlet Process (with Split-Merge Operations), Chong Wang](https://github.com/renaud/hdp-faster)
         * [Hierarchical Latent Tree Analysis (HLTA)](https://github.com/kmpoon/hlta)
         * [Leonard Poon - various works](https://github.com/kmpoon?tab=repositories)
         * [David Blei's list of topic modeling OSS software](http://www.cs.columbia.edu/~blei/topicmodeling_software.html) + [github repo list](https://github.com/blei-lab)
 
-- database "backend storage"
+- **database "backend storage"**
 
     - [sqlite](./sqlite)
     - [sqlite-amalgamation](./sqlite-amalgamation)
@@ -426,7 +455,7 @@ The other JavaScript engines considered are of varying size, performance and com
 
     - [upscaledb](../upscaledb) -- a.k.a. hamsterdb: a thread-safe key/value database engine. It supports a B+Tree index structure, uses memory mapped I/O (if available), fast Cursors and variable length keys and can create In-Memory Databases.
 
-- metadata & text (OCR et al): language detect, suggesting fixes, ...    
+- **metadata & text (OCR et al): language detect, suggesting fixes, ...**
 
     - [libtextcat](./libtextcat) -- text language detection
     - [sentence-tokenizer](./sentence-tokenizer) -- text tokenization
@@ -443,14 +472,14 @@ The other JavaScript engines considered are of varying size, performance and com
     - [cld2-language-detect](../cld2-language-detect) -- CLD2 probabilistically detects over 80 languages in Unicode UTF-8 text, either plain text or HTML/XML. For mixed-language input, CLD2 returns the top three languages found and their approximate percentages of the total text bytes.  Optionally, it also returns a vector of text spans with the language of each identified. The design target is web pages of at least 200 characters (about two sentences); CLD2 is not designed to do well on very short text.
     - [uchardet](../uchardet) -- [uchardet](https://www.freedesktop.org/wiki/Software/uchardet/) is an encoding and language detector library, which attempts to determine the encoding of the text. It can reliably detect many charsets. Moreover it also works as a very good and fast language detector.
 
-- PDF metadata editing for round-trip annotation and other "external application editing" of known documents; metadata embedding / *export*
+- **PDF metadata editing** for round-trip annotation and other "external application editing" of known documents; metadata embedding / *export*
 
     - [libexpat](./libexpat) -- XML read/write
     - [libxml2](./libxml2) -- XML read/write
     - [xml-pugixml](./xml-pugixml)
     - [XMP-Toolkit-SDK](./XMP-Toolkit-SDK)
 
-- web scraping (document extraction, cleaning, metadata extraction, BibTeX, ...) 
+- **web scraping** (document extraction, cleaning, metadata extraction, BibTeX, ...) 
 
     - see investigation notes in Qiqqa docs
     - [cURL](../curl) -- the ubiquitous [libcurl](http://curl.haxx.se/libcurl).
@@ -474,7 +503,7 @@ The other JavaScript engines considered are of varying size, performance and com
         - domain highlighting parts of the domain in a user interface
         - sorting domain lists by site
 
-- file format support
+- **file format support**
 
     - [file](./file) -- `file` filetype recognizer tool & mimemagic 
     - [djvulibre](./djvulibre)
@@ -504,12 +533,12 @@ The other JavaScript engines considered are of varying size, performance and com
     - [libwarc](../libwarc) -- C++ library to parse WARC files. WARC is the official storage format of the Internet Archive for storing scraped content. WARC format used: http://bibnum.bnf.fr/WARC/WARC_ISO_28500_version1_latestdraft.pdf
     - [warc2text](../warc2text) -- Extracts plain text, language identification and more metadata from WARC records.
 
-- BibTeX and similar library formats' support
+- **BibTeX and similar library metadata formats' support**
 
     - [bibtex-robust-decoder](./bibtex-robust-decoder)
     - [bibutils](./bibutils)
 
-- export / output file formats, text formatting, etc.
+- **export / output file formats, text formatting, etc.**
 
     - [fmt](./fmt) -- advanced C++ data-to-text formatter. The modern answer to classic `printf()`.
     - [hypertextcpp](./hypertextcpp) -- string/text template engine & source-to-source compiler.
@@ -518,7 +547,7 @@ The other JavaScript engines considered are of varying size, performance and com
         - [svg-charter](./svg-charter) -- SVG chart renderer
             - [tinyexpr](./tinyexpr)
 
-- FTS (*Full Text Search*) and related: SOLR/Lucene et al: document content search
+- **FTS (*Full Text Search*) and related: SOLR/Lucene et al: document content search**
 
   We'll be using SOLR mostly, but here might be some interface libraries and an intersting alternative
   
@@ -528,12 +557,17 @@ The other JavaScript engines considered are of varying size, performance and com
         - [manticoresearch](../manticoresearch)
         - [manticore-plugins](../manticore-plugins)
     
-    - [libstemmer](../libstemmer) -- SnowBall stemmer for many languages.
-    - [snowball](../snowball) -- SnowBall stemming compiler (code generator)
-    - [cld2-language-detect](../cld2-language-detect) -- CLD2 probabilistically detects over 80 languages in Unicode UTF-8 text, either plain text or HTML/XML. For mixed-language input, CLD2 returns the top three languages found and their approximate percentages of the total text bytes.  Optionally, it also returns a vector of text spans with the language of each identified. The design target is web pages of at least 200 characters (about two sentences); CLD2 is not designed to do well on very short text.
-    - [uchardet](../uchardet) -- [uchardet](https://www.freedesktop.org/wiki/Software/uchardet/) is an encoding and language detector library, which attempts to determine the encoding of the text. It can reliably detect many charsets. Moreover it also works as a very good and fast language detector.
+	- [pisa](../pisa): a text search engine able to run on large-scale collections of documents. It allows researchers to experiment with state-of-the-art techniques, allowing an ideal environment for rapid development. PISA is a text search engine, though the "PISA Project" is a set of tools that help experiment with indexing and query processing. Given a text collection, PISA can build an inverted index over this corpus, allowing the corpus to be searched. The inverted index, put simply, is an efficient data structure that represents the document corpus by storing a list of documents for each unique term (see here). At query time, PISA stores its index in main memory for rapid retrieval.
+	
+	- **stemmers**:
+	    - [libstemmer](../libstemmer) -- SnowBall stemmer for many languages.
+	    - [snowball](../snowball) -- SnowBall stemming compiler (code generator)
+		
+	- **language detection / inference**:
+	    - [cld2-language-detect](../cld2-language-detect) -- CLD2 probabilistically detects over 80 languages in Unicode UTF-8 text, either plain text or HTML/XML. For mixed-language input, CLD2 returns the top three languages found and their approximate percentages of the total text bytes.  Optionally, it also returns a vector of text spans with the language of each identified. The design target is web pages of at least 200 characters (about two sentences); CLD2 is not designed to do well on very short text.
+	    - [uchardet](../uchardet) -- [uchardet](https://www.freedesktop.org/wiki/Software/uchardet/) is an encoding and language detector library, which attempts to determine the encoding of the text. It can reliably detect many charsets. Moreover it also works as a very good and fast language detector.
 
-- scripting *user-tunable tasks* such as OCR preprocessing, metadata extraction, metadata cleaning & other \[post-]processing, ...
+- **scripting *user-tunable tasks* such as OCR preprocessing, metadata extraction, metadata cleaning & other \[post-]processing, ...**
 
     - [mujs](../mujs)
     - ~~[CPython](./CPython)~~
@@ -557,48 +591,72 @@ The other JavaScript engines considered are of varying size, performance and com
     - [replxx](./replxx) -- REPL CLI component: `readline` simile for REPL/interactive runs in a CLI
     - [linenoise](./linenoise) -- `readline` simile for REPL/interactive runs in a CLI
 
-- multi-processing core technologies
+- **multi-processing core technologies**
 
-    - [cli11](./cli11) -- command line options parser
-    - [clipp](./clipp) -- commandline parser 
-    - ~~[clippson](./clippson) -- commandline parser + JSON data diagnostical dumper~~
-      + **removed**; reason: deemed cool but unsuitable for our needs. Besides, we intend to use `cli11` instead of `clipp` for that library is easier to read and support is more active there.
-    - [cpu_features](./cpu_features)
-    - [cpu_stat](./cpu_stat)
-    - [cpuinfo](./cpuinfo) -- CPU & hardware info
-    - [createprocess-windows](./createprocess-windows) -- drive `CreateProcess` Win32 API
-    - ~~[docopt](./docopt) -- generate documentation for command line options~~
-      + **removed**; reason: deemed cool but unsuitable for our needs. We intend to use `cli11` instead.
-    - [expected-lite](./expected-lite)
-    - [fmt](./fmt) -- advanced C++ data-to-text formatter. The modern answer to classic `printf()`.
-    - [hypertextcpp](./hypertextcpp) -- string/text template engine & source-to-source compiler.
-    - [frozen](./frozen) -- provides 0 cost initialization for immutable containers, fixed-size containers, and various algorithms.
-    - [hedley](./hedley) -- a C/C++ header file designed to smooth over some platform-specific annoyances.
-    - [libcpuid](./libcpuid) -- CPU & hardware info
-    - [libscanf](./libscanf)
-    - [libtuv](./libtuv)
-    - [libunifex](./libunifex) -- a prototype implementation of the C++ sender/receiver async programming model that is currently being considered for standardisation. This project contains implementations of the following: Schedulers, Timers, Asynchronous I/O, Algorithms that encapsulate certain concurrency patterns, Async streams, Cancellation, Coroutine integration.
-    - [magic_enum](./magic_enum) -- Header-only C++17 library provides static reflection for enums; works with any enum type without any macro or boilerplate code.
-    - [messagebox-windows](./messagebox-windows) -- drive `MessageBox` and `MessageBeep` Win32 APIs
-    - [oneTBB](./oneTBB) -- Intel's Thread Building Blocks library: used with OpenImageIO, ...
-    - [pcg-c-random](./pcg-c-random) -- fast random generators
-    - [plf_nanotimer](./plf_nanotimer) -- high precision cross-platform performance timer
-    - [prio_queue](./prio_queue) -- a cache friendly priority queue, done as a B-heap.
-    - [pthread-win32](./pthread-win32) -- `pthread` for MS Windows
-    - [spy-build-sysinfo](./spy-build-sysinfo) -- build system info
-    - [stdext-path](./stdext-path) -- path manipulations (`dirname` et al)
-    - invoking external applications
+	- **CLI: commandline parsing & perusing**
+	    + [cli11](./cli11) -- command line options parser
+	    + [clipp](./clipp) -- commandline parser 
+	    + ~~[clippson](./clippson) -- commandline parser + JSON data diagnostical dumper~~
+	      + **removed**; reason: deemed cool but unsuitable for our needs. Besides, we intend to use `cli11` instead of `clipp` for that library is easier to read and support is more active there.
+	    + ~~[docopt](./docopt) -- generate documentation for command line options~~
+	      + **removed**; reason: deemed cool but unsuitable for our needs. We intend to use `cli11` instead.
+		  
+	- **CPU features & capabilities detection**
+	
+	    - [cpu_features](./cpu_features)
+	    - [cpu_stat](./cpu_stat)
+	    - [cpuinfo](./cpuinfo) -- CPU & hardware info
+	    - [libcpuid](./libcpuid) -- CPU & hardware info
+	    - [spy-build-sysinfo](./spy-build-sysinfo) -- build system info
+		
+	- **run-time library core features: logging, formatting, ...**
+	
+	    - [expected-lite](./expected-lite)
+	    - [fmt](./fmt) -- advanced C++ data-to-text formatter. The modern answer to classic `printf()`.
+	    - [hypertextcpp](./hypertextcpp) -- string/text template engine & source-to-source compiler.
+	    - [frozen](./frozen) -- provides 0 cost initialization for immutable containers, fixed-size containers, and various algorithms.
+	    - [hedley](./hedley) -- a C/C++ header file designed to smooth over some platform-specific annoyances.
+	    - [libscanf](./libscanf)
+	    - [magic_enum](./magic_enum) -- Header-only C++17 library provides static reflection for enums; works with any enum type without any macro or boilerplate code.
+	    - [messagebox-windows](./messagebox-windows) -- drive `MessageBox` and `MessageBeep` Win32 APIs
+	    - [pcg-c-random](./pcg-c-random) -- fast random generators
+	    - [plf_nanotimer](./plf_nanotimer) -- high precision cross-platform performance timer
+	    - [prio_queue](./prio_queue) -- a cache friendly priority queue, done as a B-heap.
+		- [randen](../randen): What if we could default to attack-resistant random generators without excessive CPU cost? We introduce 'Randen', a new generator with security guarantees; it outperforms MT19937, pcg64_c32, Philox, ISAAC and ChaCha8 in real-world benchmarks. This is made possible by AES hardware acceleration and a large Feistel permutation.
+	    - [stdext-path](./stdext-path) -- path manipulations (`dirname` et al)
+		
+	- **running tasks in parallel: multi-processing, multithreading, async, ...**
+	
+	    + [createprocess-windows](./createprocess-windows) -- drive `CreateProcess` Win32 API
+	    + [libtuv](./libtuv)
+	    + [libunifex](./libunifex) -- a prototype implementation of the C++ sender/receiver async programming model that is currently being considered for standardisation. This project contains implementations of the following: Schedulers, Timers, Asynchronous I/O, Algorithms that encapsulate certain concurrency patterns, Async streams, Cancellation, Coroutine integration.
+	    + [oneTBB](./oneTBB) -- Intel's Thread Building Blocks library: used with OpenImageIO, ...
+	    + [pthread-win32](./pthread-win32) -- `pthread` for MS Windows
         + [subprocess](./subprocess) -- [benman64/subprocess](https://github.com/benman64/subprocess): cross platform subprocess library for C++ similar to design of Python `subprocess`. 
         + [tiny-process-library](./tiny-process-library) -- small platform independent library making it simple to create and stop new processes, as well as writing to stdin and reading from stdout and stderr of a new process.
         + https://github.com/rajatjain1997/subprocess -- A C++ high level library for running shell processes
         + https://github.com/arun11299/cpp-subprocess -- as close as possible to Python2.7 `subprocess` module in dealing with processes.
         + https://github.com/pnappa/subprocesscpp -- A header-only library that allows you to execute processes either synchronously or asynchronously, whilst providing input and output handling. No more calling `exec` in C++!
         + https://github.com/sheredom/subprocess.h -- A one header solution to launching processes and interacting with them for C/C++.
-    - thread pools
+		
+    - **multi-processing: invoking external applications**
+	
+        + [subprocess](./subprocess) -- [benman64/subprocess](https://github.com/benman64/subprocess): cross platform subprocess library for C++ similar to design of Python `subprocess`. 
+        + [tiny-process-library](./tiny-process-library) -- small platform independent library making it simple to create and stop new processes, as well as writing to stdin and reading from stdout and stderr of a new process.
+        + https://github.com/rajatjain1997/subprocess -- A C++ high level library for running shell processes
+        + https://github.com/arun11299/cpp-subprocess -- as close as possible to Python2.7 `subprocess` module in dealing with processes.
+        + https://github.com/pnappa/subprocesscpp -- A header-only library that allows you to execute processes either synchronously or asynchronously, whilst providing input and output handling. No more calling `exec` in C++!
+        + https://github.com/sheredom/subprocess.h -- A one header solution to launching processes and interacting with them for C/C++.
+	    + [createprocess-windows](./createprocess-windows) -- drive `CreateProcess` Win32 API
+		
+    - **thread pools**
+	
         + [thread-pool-c](./thread-pool-c)
         + [thread-pool-cpp](./thread-pool-cpp)
         + [thread-pool](./thread-pool)
-    - task schedulers
+		
+    - **task schedulers**
+	
       - [enkiTS](./enkiTS-TaskScheduler) -- A C++11 Task Scheduler for creating parallel programs.
      
         Features:
@@ -609,27 +667,29 @@ The other JavaScript engines considered are of varying size, performance and com
         - Can pin tasks to a given thread - can schedule a task which will only be run on the specified thread.
         - Can set task priorities - Up to 5 task priorities can be configured via define ENKITS_TASK_PRIORITIES_NUM (defaults to 3). Higher priority tasks are run before lower priority ones.
         - Can register external threads to use with enkiTS
-        - Dependencies - can set dependendencies between tasks.
+        - Dependencies - can set dependencies between tasks.
         - Completion Actions - can perform an action on task completion. This avoids the expensive action of adding the task to the scheduler, and can be used to safely delete a completed task.
         - Can wait for pinned tasks - useful for creating IO threads which do no other work.
+		
       - [google::marl](./google-marl) -- a hybrid thread / fiber task scheduler written in C++ 11. Marl uses a combination of fibers and threads to allow efficient execution of tasks that can block, while keeping a fixed number of hardware threads.
       - [taskflow](./taskflow) -- Quickly write parallel and heterogeneous task programs in modern C++. Taskflow is faster, more expressive, and easier for drop-in integration than many of existing task programming frameworks in handling complex parallel workloads.
       - [asynqro](./asynqro) -- Futures and thread pool for C++: Asynqro gives developers a rich monadic Future API (inspired by Future API in Scala language), a clean API, refined task scheduling logic and is not tied to any framework.
  
-    - Promise/A+
+    - **Promise/A+**
 
       The key distinction between Promises/A+ and `std::promise` in C++11 is that Promises/A+ provides non-blocking synchronization (via chaining function objects) and `std::promise` provides blocking synchronization (or polling). Both have their uses and one is not a direct replacement for the other.
 
       IMPORTANT NOTE: there is one major difference, though. Most modern Javascript promises (including JS Native promises) resolve asynchronously, i.e. their `resolve()` method does not directly call the `then()` handlers, but schedules the calls on the next message loop iteration. The same happens when a `then()`/`catch()` handler is attached to an already resolved/rejected promise. This may be a bit less efficient, but makes the behavior symmetric and more predictable. These libraries *SHOULD* resolve synchronously, because they are unaware of the message loop that is used in the application. (Look into task schedulers above for when you need such awareness, e.g. `taskflow`.)
 
         - [promise-cpp](./promise-cpp) -- advanced C++ promise/A+ library in Javascript style
+		- [promise-hpp](../promise-hpp): C++ asynchronous promises like a Promises/A+
         - [libq](./libq) -- A platform-independent promise library for C++, implementing asynchronous continuations.
         - [asynqro](./asynqro) -- Futures and thread pool for C++: Asynqro gives developers a rich monadic Future API (inspired by Future API in Scala language), a clean API, refined task scheduling logic and is not tied to any framework.
         - https://github.com/rhashimoto/poolqueue -- C++ Asynchronous Promises, inspired by Promises/A+.
         - https://github.com/YACLib/YACLib -- Yet Another lightweight C++ library for concurrent and parallel task execution.
         - https://github.com/alxvasilev/cpp-promise -- Javascript-like C++ promise library
 
-- web servers, generic sockets I/O (IPC)
+- **web servers, generic sockets I/O (IPC)**
 
     + [civetweb](./civetweb)
     + [crow](./crow) -- IPC / server framework
@@ -642,19 +702,19 @@ The other JavaScript engines considered are of varying size, performance and com
     + [proxygen](./proxygen) -- the core C++ HTTP abstractions used at Facebook. Internally, it is used as the basis for building many HTTP servers, proxies, and clients, focusing on the common HTTP abstractions and our simple HTTPServer framework. The framework supports HTTP/1.1, SPDY/3, SPDY/3.1, HTTP/2, and HTTP/3.
     + [wget](./wget)
 
-- socket I/O: websockets
+- **socket I/O: websockets**
 
     - [libwebsocketpp](./libwebsocketpp) -- a header only C++ library that implements RFC6455 The WebSocket Protocol.
     - [libwebsockets](./libwebsockets) -- a simple-to-use library providing client and server for HTTP/1, HTTP/2, websockets, MQTT and other protocols in a security-minded, lightweight, configurable, scalable and flexible way.
     - [websocket-sharp](./websocket-sharp)
 
-- disk I/O, monitoring import locations, ...
+- **disk I/O, monitoring import locations, ...**
 
     + [efsw](./efsw) -- cross-platform file system watcher and notifier
     + [glob](./glob) -- directory scanner
     + [filesystem](./filesystem) -- a header-only single-file `std::filesystem` compatible helper library, based on the C++17 and C++20 specs, but implemented for C++11, C++14, C++17 or C++20 (tightly following the C++17 standard with very few documented exceptions). It is of course in its own namespace `ghc::filesystem` to not interfere with a regular `std::filesystem` should you use it in a mixed C++17 environment (which is possible).
 
-- configuration / parameterization
+- **configuration / parameterization**
 
     + [gflags](./gflags) -- google::flags library, used by other libs in this set.
     + ~~[inih](https://github.com/benhoyt/inih)~~
@@ -662,8 +722,9 @@ The other JavaScript engines considered are of varying size, performance and com
     + ~~[iniparser](https://github.com/ndevilla/iniparser)~~
       + **removed**; reason: we've decided on using `libconfig` for configuration files.
     + [libconfig](../libconfig) -- generic config (file) reader/writer
-    + [tomlpp](../tomlpp) -- TOML++
-    + YAML
+	+ **TOML**
+	    + [tomlpp](../tomlpp) -- TOML++
+    + **YAML**
         + [libyaml](./libyaml) -- YAML
         + [libcyaml](../libcyaml)
         + [libyaml-examples](../libyaml-examples)
@@ -672,13 +733,13 @@ The other JavaScript engines considered are of varying size, performance and com
         + [yaml-cpp](../yaml-cpp)
         + [rapidyaml](../rapidyaml)
 
-- testing & fuzzing
+- **testing & fuzzing**
 
     - [googletest](./googletest)
     - [gbenchmark](./gbenchmark)
     - [cxxtest_catch_2_gtest](../cxxtest_catch_2_gtest) -- quick & dirty converter from various test suites to googletest, i.e. allows us to use a single test framework, despite some libraries having been set up to use another, e.g. Catch2.
 
-- logging & debugging
+- **logging & debugging**
 
     + [binlog](../binlog) -- a high performance C++ log library to produce structured binary logs.
     + [breakpad](./breakpad) -- a set of client and server components which implement a crash-reporting system.
@@ -698,7 +759,16 @@ The other JavaScript engines considered are of varying size, performance and com
     + ~~[zlog](https://github.com/HardySimpson/zlog)~~
       + **removed**; `zlog` has a nice overall design but is too 'Unix-is-the-world' in its coding: in the end it was easy of cross-platform compilation of `glog` that won the day and I'm okay with layering on top of that one to get the zlog category and other channel features, once I really need them.
 
-- OCR core (tesseract)
+    + **ETW (Event Tracing for Microsoft Windows)**
+		- [UIforETW](../UIforETW): Bruce Dawson's user interface for recording ETW (Event Tracing for Windows) traces, which allow amazingly deep investigations of performance problems on Windows.
+		- [krabsETW](../krabsETW): a C++ library that simplifies interacting with ETW. It allows for any number of traces and providers to be enabled and for client code to register for event notifications from these traces.
+		- [tracelogging-for-ETW](../tracelogging-for-ETW): C++ Wrapper for Windows ETW TraceLogging
+		- [Sealighter](../Sealighter): Sysmon-Like research tool for ETW: helps non-developers dive into researching Event Tracing for Windows (ETW) and Windows PreProcessor Tracing (WPP).
+		- [Windows10EtwEvents](../Windows10EtwEvents): Events from all manifest-based and mof-based ETW providers across Windows 10 versions.
+		- [EtwExplorer](../EtwExplorer): View ETW Provider metadata. Event Tracing for Windows (ETW) is a logging facility built into the Windows OS. Modern providers register a manifest that describes all the events they support, with their properties. Classic providers register a MOF instead.
+		- [SilkETW](../SilkETW): SilkETW & SilkService are flexible C# wrappers for ETW, they are meant to abstract away the complexities of ETW and give people a simple interface to perform research and introspection. While both projects have obvious defensive (and offensive) applications they should primarily be considered as research tools.
+	
+- **OCR core (*tesseract*)**
 
     + [langdata_LSTM](../langdata_LSTM)
     + [tessconfigs](../tessconfigs)
@@ -712,7 +782,7 @@ The other JavaScript engines considered are of varying size, performance and com
     + [tesseract_langdata](../tesseract_langdata)
     + [tesstrain](../tesstrain)
 
-- PDF render & metadata core (mupdf)
+- **PDF render & metadata core (*mupdf*)**
 
     + [extract](../extract)
     + [freeglut](../freeglut)
@@ -727,7 +797,7 @@ The other JavaScript engines considered are of varying size, performance and com
     + [openjpeg](../openjpeg)
     + [zlib](../zlib)
 
-- UI / GUI
+- **UI / GUI**
 
     + [neutralinoJS](./neutralinoJS) -- a lightweight and portable desktop application development framework. It lets you develop lightweight cross-platform desktop applications using JavaScript, HTML and CSS. Neutralinojs offers a lightweight SDK which is an alternative for Electron and NW.js. Neutralinojs doesn't bundle Chromium and uses the existing web browser library in the operating system. Neutralinojs implements a WebSocket connection for native operations and embeds a static web server to serve the web content. Also, it offers a built-in [JavaScript client library](https://github.com/neutralinojs/neutralino.js) for developers.
     + [neutralinoJS-CLI](./neutralinoJS-CLI) -- The official CLI of Neutralinojs.
@@ -744,18 +814,19 @@ The other JavaScript engines considered are of varying size, performance and com
     + [wxSQLite3](../wxSQLite3) -- a C++ wrapper around the SQLite 3.x database and is specifically designed for use in programs based on the wxWidgets library. **wxSQLite3** does not try to hide the underlying database, in contrary almost all special features of the current SQLite3 version are supported, like for example the creation of user defined scalar or aggregate functions.
     + [wxVisualScriptEngine](../wxVisualScriptEngine) -- a utility module for [VisualScriptEngine](https://github.com/kovacsv/VisualScriptEngine) which provides helper classes for embedding the engine in a wxWidgets application.
 
-- misc / other
+- **misc / other**
 
     + ~~[binary_bakery](https://github.com/s9w/binary_bakery) -- resource compiler-like tool: embed any data in your C/C++ application~~
       + **removed**; reason: we already have `bin2coff` from MuPDF, which serves this purpose well enough.
     + [preprocess-corpuses](../preprocess-corpuses) -- Pipelines for preprocessing corpora.
 
-- sub-dependencies (libraries which are required by any of the above)
+- **sub-dependencies (libraries which are required by any of the above)**
 
     + [boost](./boost) -- required by several other libraries in this collection
     + ~~[Catch2](./Catch2)~~
       + **removed**; reason: we've decided to standardize on a single unittest library (which is well supported in Microsoft Visual Studio, including the Test Explorer view there); where necessary, we'll have to provide a translation layer instead when existing submodules use different test rigs originally.
     + [gflags](./gflags) -- google::flags library, used by other libs in this set.
+    + [glib2](../glib2): GLib is the low-level core library that forms the basis for projects such as GTK and GNOME.
     + ~~[Imath](./Imath) -- float16 support lib for OpenEXR format~~
     + [jemalloc](./jemalloc)
     + [mimalloc](./mimalloc) -- a compact general purpose allocator with excellent performance.
@@ -783,6 +854,7 @@ The other JavaScript engines considered are of varying size, performance and com
 
 # Libraries in this collection (All of the above, listed in alphabetical order)
 
+- [annoy](../annoy): Annoy (Approximate Nearest Neighbors Oh Yeah) is a C++ library with Python bindings to search for points in space that are close to a given query point. It also creates large read-only file-based data structures that are mmapped into memory so that many processes may share the same data. Annoy is almost as fast as the fastest libraries, but there is actually another feature that really sets Annoy apart: it has the ability to use static files as indexes. In particular, this means you can share index across processes. Annoy also decouples creating indexes from loading them, so you can pass around indexes as files and map them into memory quickly. Another nice thing of Annoy is that it tries to minimize memory footprint so the indexes are quite small. Why is this useful? If you want to find nearest neighbors and you have many CPU's, you only need to build the index once. You can also pass around and distribute static files to use in production environment: any process will be able to load (`mmap`) the index into memory and will be able to do lookups immediately. We use it at Spotify for music recommendations. After running matrix factorization algorithms, every user/item can be represented as a vector in f-dimensional space. This library helps us search for similar users/items. We have many millions of tracks in a high-dimensional space, so memory usage is a prime concern.
 - [asynqro](./asynqro) -- Futures and thread pool for C++: Asynqro gives developers a rich monadic Future API (inspired by Future API in Scala language), a clean API, refined task scheduling logic and is not tied to any framework.
 - [BBHash](./BBHash)
 - [BCF-cuckoo-index](./BCF-cuckoo-index)
@@ -822,6 +894,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [crow](./crow) -- IPC / server framework 
 - [cryptopp](./cryptopp)
 - [csync2](../csync2) -- a cluster synchronization tool. It can be used to keep files on multiple hosts in a cluster in sync. Csync2 can handle complex setups with much more than just 2 hosts, handle file deletions and can detect conflicts.
+- [CTCWordBeamSearch](../CTCWordBeamSearch): Connectionist Temporal Classification (CTC) decoder with dictionary and Language Model (LM).
 - [cuckoo-index](./cuckoo-index)
 - [cuckoofilter](./cuckoofilter)
 - [cURL](../curl)
@@ -837,8 +910,10 @@ The other JavaScript engines considered are of varying size, performance and com
 - [efsw](./efsw) -- cross-platform file system watcher and notifier
 - [emphf-hash](./emphf-hash)
 - [enkiTS](./enkiTS-TaskScheduler) -- A C++11 Task Scheduler for creating parallel programs.
+- [EtwExplorer](../EtwExplorer): View ETW Provider metadata. Event Tracing for Windows (ETW) is a logging facility built into the Windows OS. Modern providers register a manifest that describes all the events they support, with their properties. Classic providers register a MOF instead.
 - [expected-lite](./expected-lite)
 - [extract](../extract)
+- [faiss](../faiss): a library for efficient similarity search and clustering of dense vectors. It contains algorithms that search in sets of vectors of any size, up to ones that possibly do not fit in RAM. It also contains supporting code for evaluation and parameter tuning. Faiss is written in C++ with complete wrappers for Python/numpy. Some of the most useful algorithms are implemented on the GPU. It is developed primarily at Facebook AI Research.
 - [fast-lzma2](./fast-lzma2)
 - ~~[FastBinaryEncoding](./FastBinaryEncoding)~~
 - [fastBPE](./fastBPE) -- text tokenization / ngrams
@@ -854,6 +929,8 @@ The other JavaScript engines considered are of varying size, performance and com
 - [gbenchmark](./gbenchmark)
 - [GDCM-Grassroots-DICOM](./GDCM-Grassroots-DICOM)
 - [gflags](./gflags) -- google::flags library, used by other libs in this set.
+- [gibbs-lda](../gibbs-lda): modified GibbsLDA++: A C/C++ Implementation of Latent Dirichlet Allocation by by Xuan-Hieu Phan and Cam-Tu Nguyen.
+- [glib2](../glib2): GLib is the low-level core library that forms the basis for projects such as GTK and GNOME.
 - [glob](./glob) -- directory scanner
 - [glog](./glog) -- Google Logging is a C++98 library that implements application-level logging. The library provides logging APIs based on C++-style streams and various helper macros.
 - [GMM-HMM-kMeans](./GMM-HMM-kMeans)
@@ -876,6 +953,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - ~~[HighFive-HDF5](./HighFive-HDF5)~~
 - [hmm-scalable](./hmm-scalable)
 - [hmm-stoch](./hmm-stoch)
+- [hnswlib](../hnswlib): fast approximate nearest neighbor search. Header-only C++ HNSW implementation with python bindings.
 - [hocr-fileformat](./hocr-fileformat)
 - [hocr-spec](./hocr-spec)
 - [hocr-tools](./hocr-tools)
@@ -896,12 +974,15 @@ The other JavaScript engines considered are of varying size, performance and com
 - [jpeginfo](../jpeginfo)
 - [json-jansson](./json-jansson)
 - [json](./json)
+- [kgraph](../kgraph): a library for k-nearest neighbor (k-NN) graph construction and online k-NN search using a k-NN Graph as index. KGraph implements heuristic algorithms that are extremely generic and fast. KGraph works on abstract objects. The only assumption it makes is that a similarity score can be computed on any pair of objects, with a user-provided function.
+- [krabsETW](../krabsETW): a C++ library that simplifies interacting with ETW. It allows for any number of traces and providers to be enabled and for client code to register for event notifications from these traces.
 - [langdata_LSTM](../langdata_LSTM) -- tesseract data
 - [lapack](./lapack) -- [CBLAS](http://www.netlib.org/blas/) + [LAPACK](http://www.netlib.org/lapack/index.html) optimized linear algebra libs
 - [lcms2](../lcms2)
 - [lda-bigartm](./lda-bigartm)
 - [lda-Familia](./lda-Familia)
 - [lda](./lda) -- variational EM for latent Dirichlet allocation (LDA), David Blei et al
+- [lda-3-variants](../lda-3-variants): three modified open source versions of LDA with collapsed Gibbs Sampling: GibbsLDA++, ompi-lda and online_twitter_lda.
 - [LDCF-hash](./LDCF-hash)
 - [leptonica](../leptonica)
 - [lib_nas_lockfile](./lib_nas_lockfile) -- lockfile management on NAS and other disparate network filesystem storage. To be combined with SQLite to create a proper Qiqqa Sync operation.
@@ -923,8 +1004,10 @@ The other JavaScript engines considered are of varying size, performance and com
 - [liblinear](./liblinear)
 - [libmdbx](./libmdbx)
 - ~~[libmicrohttpd](./libmicrohttpd)~~
+- [libngt-ann](../libngt-ann): Yahoo's Neighborhood Graph and Tree for Indexing High-dimensional Data. NGT provides commands and a library for performing high-speed approximate nearest neighbor searches against a large volume of data (several million to several 10 million items of data) in high dimensional vector data space (several ten to several thousand dimensions).
 - [libpng](../libpng)
 - [libpsl](../libpsl) -- handles the *Public Suffix List* (a collection of Top Level Domains (TLDs) suffixes, e.g. `.com`, `.net`, *Country Top Level Domains* (ccTLDs) like `.de` and `.cn` and *[Brand Top Level Domains](https://icannwiki.org/Brand_TLD)* like `.apple` and `.google`.
+- [libsptag](../libsptag): a library for fast approximate nearest neighbor search.  SPTAG (Space Partition Tree And Graph) is a library for large scale vector approximate nearest neighbor search scenario released by [Microsoft Research (MSR)](https://www.msra.cn/) and [Microsoft Bing](http://bing.com). 
 - [libq](./libq) -- A platform-independent promise library for C++, implementing asynchronous continuations.
 - [libqrencode](./libqrencode)
 - [libscanf](./libscanf)
@@ -986,10 +1069,13 @@ The other JavaScript engines considered are of varying size, performance and com
 - [mmc](./mmc)
 - [morton_filter](./morton_filter)
 - [mujs](../mujs)
+- [multiverso](../multiverso): a parameter server based framework for training machine learning models on big data with numbers of machines. It is currently a standard C++ library and provides a series of friendly programming interfaces. Now machine learning researchers and practitioners do not need to worry about the system routine issues such as distributed model storage and operation, inter-process and inter-thread communication, multi-threading management, and so on. Instead, they are able to focus on the core machine learning logics: data, model, and training.
+- [nanoflann](../nanoflann): a C++11 header-only library for building KD-Trees of datasets with different topologies: R^2, R^3 (point clouds), SO(2) and SO(3) (2D and 3D rotation groups). No support for approximate NN is provided. This library is a fork of the `flann` library by Marius Muja and David G. Lowe, and born as a child project of `MRPT`.
 - [nanosvg](./nanosvg)
 - [ncnn](./ncnn) -- high-performance neural network inference computing framework optimized for mobile platforms (i.e. small footprint)
 - [neutralinoJS-CLI](./neutralinoJS-CLI)
 - [neutralinoJS](./neutralinoJS)
+- [nmslib](../nmslib): Non-Metric Space Library (NMSLIB) is an efficient cross-platform similarity search library and a toolkit for evaluation of similarity search methods. The core-library does not have any third-party dependencies. It has been gaining popularity recently. In particular, it has become a part of Amazon Elasticsearch Service. The goal of the project is to create an effective and comprehensive toolkit for searching in generic and non-metric spaces. Even though the library contains a variety of metric-space access methods, our main focus is on generic and approximate search methods, in particular, on methods for non-metric spaces. NMSLIB is possibly the first library with a principled support for non-metric space searching.
 - ~~[oatpp](./oatpp) -- IPC / server framework~~
 - [olena](./olena)
 - [oneTBB](./oneTBB) -- Intel's Thread Building Blocks library: used with OpenImageIO, ...
@@ -1008,12 +1094,14 @@ The other JavaScript engines considered are of varying size, performance and com
 - [phf-hash](./phf-hash)
 - [photino.native](../photino.native)
 - [picohttpparser](./picohttpparser)
+- [pisa](../pisa): a text search engine able to run on large-scale collections of documents. It allows researchers to experiment with state-of-the-art techniques, allowing an ideal environment for rapid development. PISA is a text search engine, though the "PISA Project" is a set of tools that help experiment with indexing and query processing. Given a text collection, PISA can build an inverted index over this corpus, allowing the corpus to be searched. The inverted index, put simply, is an efficient data structure that represents the document corpus by storing a list of documents for each unique term (see here). At query time, PISA stores its index in main memory for rapid retrieval.
 - ~~[pithy](./pithy)~~
 - [plf_nanotimer](./plf_nanotimer) -- high precision cross-platform performance timer
 - [pmt-png-tools](./pmt-png-tools)
 - [preprocess-corpuses](../preprocess-corpuses) -- Pipelines for preprocessing corpora.
 - [prio_queue](./prio_queue) -- a cache friendly priority queue, done as a B-heap.
 - [promise-cpp](./promise-cpp) -- advanced C++ promise/A+ library in Javascript style
+- [promise-hpp](../promise-hpp): C++ asynchronous promises like a Promises/A+
 - [protobuf](./protobuf)
 - [proxygen](./proxygen)
 - [pthread-win32](./pthread-win32)
@@ -1021,15 +1109,18 @@ The other JavaScript engines considered are of varying size, performance and com
 - [QuickJS-C++-Wrapper](./QuickJS-C++-Wrapper)
 - [QuickJS-C++-Wrapper2](../QuickJS-C++-Wrapper2)
 - [QuickJS](./QuickJS)
+- [randen](../randen): What if we could default to attack-resistant random generators without excessive CPU cost? We introduce 'Randen', a new generator with security guarantees; it outperforms MT19937, pcg64_c32, Philox, ISAAC and ChaCha8 in real-world benchmarks. This is made possible by AES hardware acceleration and a large Feistel permutation.
 - [rapidJSON](./rapidJSON)
 - [re2](./re2)
 - [replxx](./replxx) -- REPL CLI component: `readline` simile for REPL/interactive runs in a CLI
 - [resumable-assert](./resumable-assert)
 - [scantailor](./scantailor) -- [scantailor_advanced](https://github.com/4lex4/scantailor-advanced) is the [ScanTailor](https://github.com/scantailor/scantailor) version that merges the features of the *ScanTailor Featured* and *ScanTailor Enhanced* versions, brings new ones and fixes. ScanTailor is an interactive post-processing tool for scanned pages. It performs operations such as page splitting, deskewing, adding/removing borders, selecting content, ... and many others.
 - [ScriptX](./ScriptX/) -- wrapper for V8, QuickJS, Lua, Python, ...
+- [Sealighter](../Sealighter): Sysmon-Like research tool for ETW: helps non-developers dive into researching Event Tracing for Windows (ETW) and Windows PreProcessor Tracing (WPP).
 - [sentence-tokenizer](./sentence-tokenizer) -- text tokenization
 - [sentencepiece](./sentencepiece) -- text tokenization
 - [shoco](./shoco) -- a fast compressor for short strings
+- [SilkETW](../SilkETW): SilkETW & SilkService are flexible C# wrappers for ETW, they are meant to abstract away the complexities of ETW and give people a simple interface to perform research and introspection. While both projects have obvious defensive (and offensive) applications they should primarily be considered as research tools.
 - [smhasher](../smhasher) -- benchmark and collection of fast hash functions for symbol tables or hash tables.
 - ~~[snappy](./snappy)~~
 - [snmalloc](./snmalloc) -- a high-performance allocator.
@@ -1067,6 +1158,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [tlx-btree](./tlx-btree) -- in-memory B+-tree: an alternative for the priority queue as we expect the queue to grow huge, given past experience with Qiqqa.
 - [tlx](./tlx) -- a collection of C++ helpers and extensions universally needed, but not found in the STL.
 - [tomlpp](../tomlpp) -- TOML++
+- [tracelogging-for-ETW](../tracelogging-for-ETW): C++ Wrapper for Windows ETW TraceLogging
 - [tre](./tre)
 - [tsf](./tsf) -- type-safe printf equivalent for C++ (used by the uberlog submodule)
 - [txiki](./txiki.js) -- uses QuickJS as its kernel
@@ -1074,16 +1166,19 @@ The other JavaScript engines considered are of varying size, performance and com
 - [uchardet](../uchardet) -- [uchardet](https://www.freedesktop.org/wiki/Software/uchardet/) is an encoding and language detector library, which attempts to determine the encoding of the text. It can reliably detect many charsets. Moreover it also works as a very good and fast language detector.
 - [ucto](./ucto) -- text tokenization
 - [uctodata](./uctodata) -- data for `ucto` library
+- [UIforETW](../UIforETW): Bruce Dawson's user interface for recording ETW (Event Tracing for Windows) traces, which allow amazingly deep investigations of performance problems on Windows.
 - [uint128_t](./uint128_t)
 - [unicode-cldr](./unicode-cldr)
 - [unicode-icu](./unicode-icu)
 - [upscaledb](../upscaledb) -- a.k.a. hamsterdb: a thread-safe key/value database engine. It supports a B+Tree index structure, uses memory mapped I/O (if available), fast Cursors and variable length keys and can create In-Memory Databases.
 - [upskirt-markdown](./upskirt-markdown) -- MarkDown renderer
 - [url](./url) -- URI parsing and other utility functions
+- [velocypack](../velocypack): a fast and compact format for serialization and storage.  These days, JSON (JavaScript Object Notation, see ECMA-404) is used in many cases where data has to be exchanged. Lots of protocols between different services use it, databases store JSON (document stores naturally, but others increasingly as well). It is popular, because it is simple, human-readable, and yet surprisingly versatile, despite its limitations. At the same time there is a plethora of alternatives ranging from XML over Universal Binary JSON, MongoDB's BSON, MessagePack, BJSON (binary JSON), Apache Thrift till Google's protocol buffers and ArangoDB's shaped JSON. When looking into this, we were surprised to find that none of these formats manages to combine compactness, platform independence, fast access to sub-objects and rapid conversion from and to JSON.
 - [VisualScriptEngine](../VisualScriptEngine) -- A visual scripting engine designed for embedding. The engine is written in modern C++ and compiles on several platforms with no external dependencies.
 - [websocket-sharp](./websocket-sharp)
 - [webview](./webview)
 - [wget](./wget)
+- [Windows10EtwEvents](../Windows10EtwEvents): Events from all manifest-based and mof-based ETW providers across Windows 10 versions.
 - [WinHttpPAL](./WinHttpPAL) -- implements [WinHttp API](https://docs.microsoft.com/en-us/windows/win32/winhttp/winhttp-start-page) Platform Abstraction Layer for POSIX systems using libcurl
 - [wxCharts](./wxCharts)
 - [wxExamples](../wxExamples)
@@ -1094,6 +1189,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [wxSQLite3](../wxSQLite3) -- a C++ wrapper around the SQLite 3.x database and is specifically designed for use in programs based on the wxWidgets library. **wxSQLite3** does not try to hide the underlying database, in contrary almost all special features of the current SQLite3 version are supported, like for example the creation of user defined scalar or aggregate functions.
 - [wxVisualScriptEngine](../wxVisualScriptEngine) -- a utility module for [VisualScriptEngine](https://github.com/kovacsv/VisualScriptEngine) which provides helper classes for embedding the engine in a wxWidgets application.
 - [wxWebViewChromium](./wxWebViewChromium) -- Chromium CEF3-based embedded browser for wxWidgets
+- [xgboost](../xgboost): an optimized distributed gradient boosting library designed to be highly efficient, flexible and portable. It implements machine learning algorithms under the Gradient Boosting framework. XGBoost provides a parallel tree boosting (also known as GBDT, GBM) that solve many data science problems in a fast and accurate way. The same code runs on major distributed environment (Kubernetes, Hadoop, SGE, MPI, Dask) and can solve problems beyond billions of examples.
 - [xml-pugixml](./xml-pugixml)
 - [XMP-Toolkit-SDK](./XMP-Toolkit-SDK)
 - [xsimd](./xsimd) -- xtensor core library
@@ -1171,11 +1267,7 @@ The other JavaScript engines considered are of varying size, performance and com
 
 
 
-- [glib2](../glib2): GLib is the low-level core library that forms the basis for projects such as GTK and GNOME.
 - [fast_pfor](../fast_pfor): a research library with integer compression schemes. It is broadly applicable to the compression of arrays of 32-bit integers where most integers are small. The library seeks to exploit SIMD instructions (SSE) whenever possible.
-- [multiverso](../multiverso): a parameter server based framework for training machine learning models on big data with numbers of machines. It is currently a standard C++ library and provides a series of friendly programming interfaces. Now machine learning researchers and practitioners do not need to worry about the system routine issues such as distributed model storage and operation, inter-process and inter-thread communication, multi-threading management, and so on. Instead, they are able to focus on the core machine learning logics: data, model, and training.
-- [lda-3-variants](../lda-3-variants): three modified open source versions of LDA with collapsed Gibbs Sampling: GibbsLDA++, ompi-lda and online_twitter_lda.
-- [gibbs-lda](../gibbs-lda): modified GibbsLDA++: A C/C++ Implementation of Latent Dirichlet Allocation by by Xuan-Hieu Phan and Cam-Tu Nguyen.
 - [portable-memory-mapping](../portable-memory-mapping): portable Memory Mapping C++ Class (Windows/Linux)
 - [libmio](../libmio): An easy to use header-only cross-platform C++11 memory mapping library. `mio` has been created with the goal to be easily includable (i.e. no dependencies) in any C++ project that needs memory mapped file IO without the need to pull in Boost.
 - [libvrb](../libvrb): implements a ring buffer, also known as a character FIFO or circular buffer, with a special property that any data present in the buffer, as well as any empty space, are always seen as a single contiguous extent by the calling program.  This is implemented with virtual memory mapping by creating a mirror image of the buffer contents at the memory location in the virtual address space immediately after the main buffer location.  This allows the mirror image to always be seen without doing any copying of data.
@@ -1193,14 +1285,9 @@ The other JavaScript engines considered are of varying size, performance and com
 - [SQLiteHistograms](../SQLiteHistograms): an SQLite extension library for creating histogram tables, tables of ratio between histograms and interpolation tables of scatter point tables.
 - [sqlite-fts5-snowball](../sqlite-fts5-snowball): a simple extension for use with FTS5 within SQLite. It allows FTS5 to use Martin Porter's Snowball stemmers (libstemmer), which are available in several languages. Check http://snowballstem.org/ for more information about them.
 - [sqlite_wrapper](../sqlite_wrapper): an easy-to-use, lightweight and concurrency-friendly SQLite wrapper written in C++17.
-- [velocypack](../velocypack): a fast and compact format for serialization and storage.  These days, JSON (JavaScript Object Notation, see ECMA-404) is used in many cases where data has to be exchanged. Lots of protocols between different services use it, databases store JSON (document stores naturally, but others increasingly as well). It is popular, because it is simple, human-readable, and yet surprisingly versatile, despite its limitations. At the same time there is a plethora of alternatives ranging from XML over Universal Binary JSON, MongoDB's BSON, MessagePack, BJSON (binary JSON), Apache Thrift till Google's protocol buffers and ArangoDB's shaped JSON. When looking into this, we were surprised to find that none of these formats manages to combine compactness, platform independence, fast access to sub-objects and rapid conversion from and to JSON.
 - [libdeflate](../libdeflate): heavily optimized library for DEFLATE/zlib/gzip compression and decompression.
 - [libCRCpp](../libCRCpp): easy to use and fast C++ CRC library.
-- [libsptag](../libsptag): a library for fast approximate nearest neighbor search.  SPTAG (Space Partition Tree And Graph) is a library for large scale vector approximate nearest neighbor search scenario released by [Microsoft Research (MSR)](https://www.msra.cn/) and [Microsoft Bing](http://bing.com). 
-- [UIforETW](../UIforETW): Bruce Dawson's user interface for recording ETW (Event Tracing for Windows) traces, which allow amazingly deep investigations of performance problems on Windows.
 - [ms_cpp_client_telemetry](../ms_cpp_client_telemetry): 1DS C/C++ SDK enables cross-platform telemetry collection from various Microsoft products. It enables data / telemetry upload to Collector++. 1DS (One Data Strategy), also known as One Observability, is a cross-org initiative with five teams across the company coming together to unify multiple telemetry efforts at Microsoft. Collector++ is the externally-facing destination end-point where telemetry data is uploaded to that subsequently routes the data to Microsoft internal data pipeline.
-- [krabsETW](../krabsETW): a C++ library that simplifies interacting with ETW. It allows for any number of traces and providers to be enabled and for client code to register for event notifications from these traces.
-- [tracelogging-for-ETW](../tracelogging-for-ETW): C++ Wrapper for Windows ETW TraceLogging
 - [typesense](../typesense): a fast, typo-tolerant search engine for building delightful search experiences. Open Source alternative to Algolia and an Easier-to-Use alternative to ElasticSearch. ⚡🔍✨ Fast, typo tolerant, in-memory fuzzy Search Engine for building delightful search experiences.
 - [dtoa-benchmark](../dtoa-benchmark): This benchmark evaluates the performance of conversion from double precision IEEE-754 floating point (double) to ASCII string.
 - [Extensible-Storage-Engine](../Extensible-Storage-Engine): ESE is an embedded / ISAM-based database engine, that provides rudimentary table and indexed access. However the library provides many other strongly layered and and thus reusable sub-facilities as well: A Synchronization / Locking library, a Data-structures / STL-like library, an OS-abstraction layer, and a Cache Manager, as well as the full-blown database engine itself.
@@ -1209,31 +1296,15 @@ The other JavaScript engines considered are of varying size, performance and com
 - [CTPL-Thread-Pool](../CTPL-Thread-Pool): Modern and efficient C++ Thread Pool Library. More specifically, there are some threads dedicated to the pool and a container of jobs. The jobs come to the pool dynamically. A job is fetched and deleted from the container when there is an idle thread. The job is then run on that thread.
 - [portable_concurrency-std-future](../portable_concurrency-std-future): Portable implementation of future/promise API in C++. `std::future` done right.
 - [YACLib](../YACLib): YACLib is a lightweight C++ library for concurrent and parallel task execution.
-- [promise-hpp](../promise-hpp): C++ asynchronous promises like a Promises/A+
 - [taolog](../taolog): A Win32 logger based on DebugView & ETW.
 - [opentelemetry-cpp](../opentelemetry-cpp): The OpenTelemetry C++ Client
-- [Sealighter](../Sealighter): Sysmon-Like research tool for ETW: helps non-developers dive into researching Event Tracing for Windows (ETW) and Windows PreProcessor Tracing (WPP).
-- [Windows10EtwEvents](../Windows10EtwEvents): Events from all manifest-based and mof-based ETW providers across Windows 10 versions.
-- [EtwExplorer](../EtwExplorer): View ETW Provider metadata. Event Tracing for Windows (ETW) is a logging facility built into the Windows OS. Modern providers register a manifest that describes all the events they support, with their properties. Classic providers register a MOF instead.
-- [SilkETW](../SilkETW): SilkETW & SilkService are flexible C# wrappers for ETW, they are meant to abstract away the complexities of ETW and give people a simple interface to perform research and introspection. While both projects have obvious defensive (and offensive) applications they should primarily be considered as research tools.
-- [microsoft-performance-toolkit-sdk](../microsoft-performance-toolkit-sdk): The Microsoft Performance Toolkit is a collection of cross-platform tools developers can use to create and extend performance analysis applications. It serves as the runtime of the Windows Performance Analyzer, a Windows program included in the Windows Performance Toolkit. By using the Microsoft Performance Toolkit SDK, Windows Performance Analyzer - or any performance analysis application - can be configured to process and display performance data from arbitrary sources.
 - [pelikan](../pelikan): Pelikan is Twitter's unified cache backend.
+- [microsoft-performance-toolkit-sdk](../microsoft-performance-toolkit-sdk): The Microsoft Performance Toolkit is a collection of cross-platform tools developers can use to create and extend performance analysis applications. It serves as the runtime of the Windows Performance Analyzer, a Windows program included in the Windows Performance Toolkit. By using the Microsoft Performance Toolkit SDK, Windows Performance Analyzer - or any performance analysis application - can be configured to process and display performance data from arbitrary sources.
 - [oppat](../oppat): Open Power/Performance Analysis Tool (OPPAT) is a cross-OS, cross-architecture Power and Performance Analysis Tool. cross-OS: supports Windows ETW trace files and Linux/Android perf/trace-cmd trace files. cross-architecture: supports Intel and ARM chips hardware events (using perf and/or PCM).
 - [compact_enc_det](../compact_enc_det): Compact Encoding Detection (CED for short) is a library written in C++ that scans given raw bytes and detect the most likely text encoding.
 - [tink](../tink): A multi-language, cross-platform library that provides cryptographic APIs that are secure, easy to use correctly, and hard(er) to misuse.
 - [highwayhash](../highwayhash): Fast strong hash functions: SipHash/HighwayHash
-- [kgraph](../kgraph): a library for k-nearest neighbor (k-NN) graph construction and online k-NN search using a k-NN Graph as index. KGraph implements heuristic algorithms that are extremely generic and fast. KGraph works on abstract objects. The only assumption it makes is that a similarity score can be computed on any pair of objects, with a user-provided function.
-- [nanoflann](../nanoflann): a C++11 header-only library for building KD-Trees of datasets with different topologies: R^2, R^3 (point clouds), SO(2) and SO(3) (2D and 3D rotation groups). No support for approximate NN is provided. This library is a fork of the `flann` library by Marius Muja and David G. Lowe, and born as a child project of `MRPT`.
-- [hnswlib](../hnswlib): fast approximate nearest neighbor search. Header-only C++ HNSW implementation with python bindings.
-- [nmslib](../nmslib): Non-Metric Space Library (NMSLIB) is an efficient cross-platform similarity search library and a toolkit for evaluation of similarity search methods. The core-library does not have any third-party dependencies. It has been gaining popularity recently. In particular, it has become a part of Amazon Elasticsearch Service. The goal of the project is to create an effective and comprehensive toolkit for searching in generic and non-metric spaces. Even though the library contains a variety of metric-space access methods, our main focus is on generic and approximate search methods, in particular, on methods for non-metric spaces. NMSLIB is possibly the first library with a principled support for non-metric space searching.
-- [annoy](../annoy): Annoy (Approximate Nearest Neighbors Oh Yeah) is a C++ library with Python bindings to search for points in space that are close to a given query point. It also creates large read-only file-based data structures that are mmapped into memory so that many processes may share the same data. Annoy is almost as fast as the fastest libraries, but there is actually another feature that really sets Annoy apart: it has the ability to use static files as indexes. In particular, this means you can share index across processes. Annoy also decouples creating indexes from loading them, so you can pass around indexes as files and map them into memory quickly. Another nice thing of Annoy is that it tries to minimize memory footprint so the indexes are quite small. Why is this useful? If you want to find nearest neighbors and you have many CPU's, you only need to build the index once. You can also pass around and distribute static files to use in production environment: any process will be able to load (`mmap`) the index into memory and will be able to do lookups immediately. We use it at Spotify for music recommendations. After running matrix factorization algorithms, every user/item can be represented as a vector in f-dimensional space. This library helps us search for similar users/items. We have many millions of tracks in a high-dimensional space, so memory usage is a prime concern.
-- [libngt-ann](../libngt-ann): Yahoo's Neighborhood Graph and Tree for Indexing High-dimensional Data. NGT provides commands and a library for performing high-speed approximate nearest neighbor searches against a large volume of data (several million to several 10 million items of data) in high dimensional vector data space (several ten to several thousand dimensions).
-- [CTCWordBeamSearch](../CTCWordBeamSearch): Connectionist Temporal Classification (CTC) decoder with dictionary and Language Model (LM).
-- [faiss](../faiss): a library for efficient similarity search and clustering of dense vectors. It contains algorithms that search in sets of vectors of any size, up to ones that possibly do not fit in RAM. It also contains supporting code for evaluation and parameter tuning. Faiss is written in C++ with complete wrappers for Python/numpy. Some of the most useful algorithms are implemented on the GPU. It is developed primarily at Facebook AI Research.
-- [xgboost](../xgboost): an optimized distributed gradient boosting library designed to be highly efficient, flexible and portable. It implements machine learning algorithms under the Gradient Boosting framework. XGBoost provides a parallel tree boosting (also known as GBDT, GBM) that solve many data science problems in a fast and accurate way. The same code runs on major distributed environment (Kubernetes, Hadoop, SGE, MPI, Dask) and can solve problems beyond billions of examples.
-- [pisa](../pisa): a text search engine able to run on large-scale collections of documents. It allows researchers to experiment with state-of-the-art techniques, allowing an ideal environment for rapid development. PISA is a text search engine, though the "PISA Project" is a set of tools that help experiment with indexing and query processing. Given a text collection, PISA can build an inverted index over this corpus, allowing the corpus to be searched. The inverted index, put simply, is an efficient data structure that represents the document corpus by storing a list of documents for each unique term (see here). At query time, PISA stores its index in main memory for rapid retrieval.
 - [nsync](../nsync): a C library that exports various synchronization primitives. `nsync` may be desirable in place of `pthread` primitives in some cases:  (1) nsync locks are reader-writer locks (but are as efficient as mutexes).  (2) nsync locks and condition variables occupy only two words each.  (3) nsync works on Unix-like systems and Windows.  It should be portable to other platforms straightforwardly.  (4) nsync provides conditional critical sections.  These fill the same role as condition variables, but are usually easier to use, and in most common cases are comparable in speed.  They can be easier to use in two ways:  (A) it's not necessary to surround the "wait" operation in a while loop; instead the condition is passed to the call as a function and arbitrary pointer argument.  (B) it's not necessary to wake or signal explicitly when the condition(s) become true; they are checked automatically. The primary downsides are:  (A) they are not available in most other common synchronization APIs, and so they may be unfamiliar (even though they date back to the 1960s), and (B) if threads routinely wait on many distinct, false conditions associated with the same lock, they may be slower than condition variables. In this case, clients can use condition variables in the normal way; conditional critical sections and condition variables can be used with the same lock.  (5) nsync waits can be cancelled via an object passed to the wait calls, unlike the pthread model in which threads are cancelled.  This difference can be useful if the computation needs multiple threads, or if cancellation affects only sub-operations within a larger operation by the thread.
-- [randen](../randen): What if we could default to attack-resistant random generators without excessive CPU cost? We introduce 'Randen', a new generator with security guarantees; it outperforms MT19937, pcg64_c32, Philox, ISAAC and ChaCha8 in real-world benchmarks. This is made possible by AES hardware acceleration and a large Feistel permutation.
 - [zfp-compressed-arrays](../zfp-compressed-arrays): zfp is a compressed format for representing multidimensional floating-point and integer arrays. zfp provides compressed-array classes that support high throughput read and write random access to individual array elements. zfp also supports serial and parallel (OpenMP and CUDA) compression of whole arrays, e.g., for applications that read and write large data sets to and from disk.
 
 
