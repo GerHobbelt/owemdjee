@@ -1409,3 +1409,12 @@
 [submodule "tinycolormap"]
 	path = tinycolormap
 	url = git@github.com:GerHobbelt/tinycolormap.git
+[submodule "tesseract-gImgRdrGui"]
+	path = tesseract-gImgRdrGui
+	url = git@github.com:GerHobbelt/gImageReader.git
+[submodule "pdf2htmlEX"]
+	path = pdf2htmlEX
+	url = git@github.com:GerHobbelt/pdf2htmlEX.git
+[submodule "bhtsne--Barnes-Hut-t-SNE"]
+	path = bhtsne--Barnes-Hut-t-SNE
+	url = git@github.com:GerHobbelt/bhtsne.git
