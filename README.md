@@ -214,7 +214,7 @@ The other JavaScript engines considered are of varying size, performance and com
         + ~~[h5cpp-HDF5](./h5cpp-HDF5)~~
           + **removed**; reason: see the `HDF5` entry below.
         + ~~[HDF5](./HDF5)~~
-          + **removed**; reason: HDF5 is a nice conceept but considered *overkill* right now; where we need disk stores, we'll be using SQLite or LMDB-like key-value stores instead. Such stores are not meant to be interchangeablee with other software in their raw shape and we'll provide public access APIs instead, where applicable.
+          + **removed**; reason: HDF5 is a nice concept but considered *overkill* right now; where we need disk stores, we'll be using SQLite or LMDB-like key-value stores instead. Such stores are not meant to be interchangeable with other software in their raw shape and we'll provide public access APIs instead, where applicable.
         + ~~[HighFive-HDF5](./HighFive-HDF5)~~
           + **removed**; reason: see the `HDF5` entry above.
     - RAM-/disk-based large queues and stores: B+tree, LSM-tree, ...
@@ -320,9 +320,9 @@ The other JavaScript engines considered are of varying size, performance and com
         + [fastText](./fastText) -- [fastText](https://fasttext.cc/) is a library for efficient learning of word representations and sentence classification. Includes language detection feeatures.
         + [BlingFire](./BlingFire) -- we are a team at Microsoft called Bling (Beyond Language Understanding), sharing our [FInite State machine and REgular expression manipulation library](https://github.com/microsoft/BlingFire) (FIRE). We use Fire for many linguistic operations inside Bing such as Tokenization, Multi-word expression matching, Unknown word-guessing, Stemming / Lemmatization just to mention a few.
         
-        Fire can also be used to improve FastText: see [here](https://github.com/microsoft/BlingFire#8-example-of-reaching-99-accuracy-for-language-detection).
+          Fire can also be used to improve FastText: see [here](https://github.com/microsoft/BlingFire#8-example-of-reaching-99-accuracy-for-language-detection).
 
-        Bling Fire Tokenizer provides state of the art performance for Natural Language text tokenization.
+          Bling Fire Tokenizer provides state of the art performance for Natural Language text tokenization.
 
     - **GMM/HMM/kM: fit patterns, e.g. match & transform a point cloud or image onto a template** --> help matching pages against banner templates, etc. as part of the OCR/recognition task.
         + [GMMreg](./GMMreg) -- implementations of the robust point set registration framework described in the paper "[Robust Point Set Registration Using Gaussian Mixture Models](https://github.com/bing-jian/gmmreg/blob/master/gmmreg_PAMI_preprint.pdf)", Bing Jian and Baba C. Vemuri, IEEE Transactions on Pattern Analysis and Machine Intelligence, 2011, 33(8), pp. 1633-1645. An earlier conference version of this work, "A Robust Algorithm for Point Set Registration Using Mixture of Gaussians, Bing Jian and Baba C. Vemuri.", appeared in the proceedings of ICCV'05.
