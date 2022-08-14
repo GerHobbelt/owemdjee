@@ -1418,3 +1418,6 @@
 [submodule "bhtsne--Barnes-Hut-t-SNE"]
 	path = bhtsne--Barnes-Hut-t-SNE
 	url = git@github.com:GerHobbelt/bhtsne.git
+[submodule "pcg-cpp-random"]
+	path = pcg-cpp-random
+	url = git@github.com:GerHobbelt/pcg-cpp.git
