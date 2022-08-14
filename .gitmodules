@@ -770,14 +770,6 @@
 	path = pcre
 	url = git@github.com:GerHobbelt/pcre.git
 	
-[submodule "cpu_features"]
-	path = cpu_features
-	url = git@github.com:GerHobbelt/cpu_features.git
-	
-[submodule "cpu_stat"]
-	path = cpu_stat
-	url = git@github.com:GerHobbelt/cpu-stat.git
-	
 [submodule "nanosvg"]
 	path = nanosvg
 	url = git@github.com:GerHobbelt/nanosvg.git

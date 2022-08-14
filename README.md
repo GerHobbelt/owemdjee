@@ -603,9 +603,12 @@ The other JavaScript engines considered are of varying size, performance and com
 		  
 	- **CPU features & capabilities detection**
 	
-	    - [cpu_features](./cpu_features)
-	    - [cpu_stat](./cpu_stat)
-	    - [cpuinfo](./cpuinfo) -- CPU & hardware info
+	    - ~~[cpu_features](./cpu_features)~~
+	      + **removed**; reason: Linux-only, non-portable, deemed unsuitable for our needs.
+	    - ~~[cpu_stat](./cpu_stat)~~
+	      + **removed**; reason: Linux-only, non-portable, deemed unsuitable for our needs.
+	    - ~~[cpuinfo](./cpuinfo) -- CPU & hardware info~~
+	      + **removed**; reason: Linux-only, non-portable, deemed unsuitable for our needs.
 	    - [libcpuid](./libcpuid) -- CPU & hardware info
 	    - [spy-build-sysinfo](./spy-build-sysinfo) -- build system info
 		
