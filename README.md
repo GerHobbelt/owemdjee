@@ -180,6 +180,7 @@ The other JavaScript engines considered are of varying size, performance and com
     - [BLAKE3](./BLAKE3) -- cryptographic hash
     - [cryptopp](./cryptopp) -- crypto library
     - [OpenSSL](./openssl) -- its crypto library part, more specifically.
+    - [tink](../tink): A multi-language, cross-platform library that provides cryptographic APIs that are secure, easy to use correctly, and hard(er) to misuse.
 
 - **hash-like filters & fast hashing for hash tables** et al (64 bits and less, mostly)
 
@@ -205,6 +206,7 @@ The other JavaScript engines considered are of varying size, performance and com
     + [libbloom](./libbloom)
     + [morton_filter](./morton_filter)
     + [phf-hash](./phf-hash)
+    + [highwayhash](../highwayhash): Fast strong hash functions: SipHash/HighwayHash
 
 - **intermediate data storage / caching / hierarchical data stores** (binary hOCR; document text revisions; ...) 
 
@@ -435,6 +437,12 @@ The other JavaScript engines considered are of varying size, performance and com
     - [sqlite-amalgamation](./sqlite-amalgamation)
     - [sqlite3pp](./sqlite3pp) -- a minimal ORM wrapper for SQLite et al.
     - [SQLiteCpp](../SQLiteCpp) -- a smart and easy to use C++ SQLite3 wrapper. SQLiteC++ offers an encapsulation around the native C APIs of SQLite, with a few intuitive and well documented C++ classes.
+    - [libsqlfs](../libsqlfs): a POSIX style file system on top of an SQLite database.  It allows applications to have access to a full read/write file system in a single file, complete with its own file hierarchy and name space.  This is useful for applications which needs structured storage, such as embedding documents within documents, or management of configuration data or preferences.
+    - [sqlean](../sqlean): The ultimate set of SQLite extensions: SQLite has few functions compared to other database management systems. SQLite authors see this as a feature rather than a problem, because SQLite has an extension mechanism in place. There are a lot of SQLite extensions out there, but they are incomplete, inconsistent and scattered across the internet. sqlean brings them together, neatly packaged into domain modules, documented, tested, and built for Linux, Windows and macOS.
+    - [sqlite-stats](../sqlite-stats): provides common statistical functions for SQLite.
+    - [SQLiteHistograms](../SQLiteHistograms): an SQLite extension library for creating histogram tables, tables of ratio between histograms and interpolation tables of scatter point tables.
+    - [sqlite-fts5-snowball](../sqlite-fts5-snowball): a simple extension for use with FTS5 within SQLite. It allows FTS5 to use Martin Porter's Snowball stemmers (libstemmer), which are available in several languages. Check http://snowballstem.org/ for more information about them.
+    - [sqlite_wrapper](../sqlite_wrapper): an easy-to-use, lightweight and concurrency-friendly SQLite wrapper written in C++17.
     - [lib_nas_lockfile](./lib_nas_lockfile) -- lockfile management on NAS and other disparate network filesystem storage. To be combined with SQLite to create a proper Qiqqa Sync operation.
     - [otl](../otl) -- Oracle Template Library (STL-like wrapper for SQL DB queries; supports many databases besides Oracle)
     
@@ -627,6 +635,7 @@ The other JavaScript engines considered are of varying size, performance and com
 	    - [prio_queue](./prio_queue) -- a cache friendly priority queue, done as a B-heap.
 		- [randen](../randen): What if we could default to attack-resistant random generators without excessive CPU cost? We introduce 'Randen', a new generator with security guarantees; it outperforms MT19937, pcg64_c32, Philox, ISAAC and ChaCha8 in real-world benchmarks. This is made possible by AES hardware acceleration and a large Feistel permutation.
 	    - [stdext-path](./stdext-path) -- path manipulations (`dirname` et al)
+            - [taolog](../taolog): A Win32 logger based on DebugView & ETW.
 		
 	- **running tasks in parallel: multi-processing, multithreading, async, ...**
 	
@@ -758,6 +767,7 @@ The other JavaScript engines considered are of varying size, performance and com
     + [resumable-assert](./resumable-assert)
     + ~~[spdlog](https://github.com/gabime/spdlog)~~
       + **removed**; reason: we've decided on using `glog` as the logging library for everything. `spdlog` has some nice features but in the end it was easy of cross-platform compilation and installed base that won out here... 
+    + [taolog](../taolog): A Win32 logger based on DebugView & ETW.
     + [uberlog](./uberlog) -- a cross platform C++ logging system that is focused on fast and small, writing to a shared memory ring buffer.
     + ~~[zlog](https://github.com/HardySimpson/zlog)~~
       + **removed**; `zlog` has a nice overall design but is too 'Unix-is-the-world' in its coding: in the end it was easy of cross-platform compilation of `glog` that won the day and I'm okay with layering on top of that one to get the zlog category and other channel features, once I really need them.
@@ -770,6 +780,11 @@ The other JavaScript engines considered are of varying size, performance and com
 		- [Windows10EtwEvents](../Windows10EtwEvents): Events from all manifest-based and mof-based ETW providers across Windows 10 versions.
 		- [EtwExplorer](../EtwExplorer): View ETW Provider metadata. Event Tracing for Windows (ETW) is a logging facility built into the Windows OS. Modern providers register a manifest that describes all the events they support, with their properties. Classic providers register a MOF instead.
 		- [SilkETW](../SilkETW): SilkETW & SilkService are flexible C# wrappers for ETW, they are meant to abstract away the complexities of ETW and give people a simple interface to perform research and introspection. While both projects have obvious defensive (and offensive) applications they should primarily be considered as research tools.
+
+- **telemetry**
+
+  - [ms_cpp_client_telemetry](../ms_cpp_client_telemetry): 1DS C/C++ SDK enables cross-platform telemetry collection from various Microsoft products. It enables data / telemetry upload to Collector++. 1DS (One Data Strategy), also known as One Observability, is a cross-org initiative with five teams across the company coming together to unify multiple telemetry efforts at Microsoft. Collector++ is the externally-facing destination end-point where telemetry data is uploaded to that subsequently routes the data to Microsoft internal data pipeline.
+  - [opentelemetry-cpp](../opentelemetry-cpp): The OpenTelemetry C++ Client
 	
 - **OCR core (*tesseract*)**
 
@@ -954,6 +969,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [HDiffPatch](./HDiffPatch)
 - [hedley](./hedley) -- a C/C++ header file designed to smooth over some platform-specific annoyances.
 - ~~[HighFive-HDF5](./HighFive-HDF5)~~
+- [highwayhash](../highwayhash): Fast strong hash functions: SipHash/HighwayHash
 - [hmm-scalable](./hmm-scalable)
 - [hmm-stoch](./hmm-stoch)
 - [hnswlib](../hnswlib): fast approximate nearest neighbor search. Header-only C++ HNSW implementation with python bindings.
@@ -1071,6 +1087,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [mlpack](./mlpack)
 - [mmc](./mmc)
 - [morton_filter](./morton_filter)
+- [ms_cpp_client_telemetry](../ms_cpp_client_telemetry): 1DS C/C++ SDK enables cross-platform telemetry collection from various Microsoft products. It enables data / telemetry upload to Collector++. 1DS (One Data Strategy), also known as One Observability, is a cross-org initiative with five teams across the company coming together to unify multiple telemetry efforts at Microsoft. Collector++ is the externally-facing destination end-point where telemetry data is uploaded to that subsequently routes the data to Microsoft internal data pipeline.
 - [mujs](../mujs)
 - [multiverso](../multiverso): a parameter server based framework for training machine learning models on big data with numbers of machines. It is currently a standard C++ library and provides a series of friendly programming interfaces. Now machine learning researchers and practitioners do not need to worry about the system routine issues such as distributed model storage and operation, inter-process and inter-thread communication, multi-threading management, and so on. Instead, they are able to focus on the core machine learning logics: data, model, and training.
 - [nanoflann](../nanoflann): a C++11 header-only library for building KD-Trees of datasets with different topologies: R^2, R^3 (point clouds), SO(2) and SO(3) (2D and 3D rotation groups). No support for approximate NN is provided. This library is a fork of the `flann` library by Marius Muja and David G. Lowe, and born as a child project of `MRPT`.
@@ -1088,6 +1105,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [OpenImageIO](./OpenImageIO)
 - [openjpeg](../openjpeg)
 - [OpenSSL](./openssl) -- also used by cURL et al, incidentally.
+- [opentelemetry-cpp](../opentelemetry-cpp): The OpenTelemetry C++ Client
 - [OptimizationTemplateLibrary](./OptimizationTemplateLibrary) -- Optimization Template Library (OTL)
 - [otl](../otl) -- Oracle Template Library (STL-like wrapper for SQL DB queries; supports many databases besides Oracle)
 - [palmtree](./palmtree) -- concurrent lock free B+Tree
@@ -1134,11 +1152,18 @@ The other JavaScript engines considered are of varying size, performance and com
 - [sqlite](./sqlite)
 - [sqlite3pp](./sqlite3pp) -- a minimal ORM wrapper for SQLite et al.
 - [SQLiteCpp](../SQLiteCpp) -- a smart and easy to use C++ SQLite3 wrapper. SQLiteC++ offers an encapsulation around the native C APIs of SQLite, with a few intuitive and well documented C++ classes.
+- [libsqlfs](../libsqlfs): a POSIX style file system on top of an SQLite database.  It allows applications to have access to a full read/write file system in a single file, complete with its own file hierarchy and name space.  This is useful for applications which needs structured storage, such as embedding documents within documents, or management of configuration data or preferences.
+- [sqlean](../sqlean): The ultimate set of SQLite extensions: SQLite has few functions compared to other database management systems. SQLite authors see this as a feature rather than a problem, because SQLite has an extension mechanism in place. There are a lot of SQLite extensions out there, but they are incomplete, inconsistent and scattered across the internet. sqlean brings them together, neatly packaged into domain modules, documented, tested, and built for Linux, Windows and macOS.
+- [sqlite-stats](../sqlite-stats): provides common statistical functions for SQLite.
+- [SQLiteHistograms](../SQLiteHistograms): an SQLite extension library for creating histogram tables, tables of ratio between histograms and interpolation tables of scatter point tables.
+- [sqlite-fts5-snowball](../sqlite-fts5-snowball): a simple extension for use with FTS5 within SQLite. It allows FTS5 to use Martin Porter's Snowball stemmers (libstemmer), which are available in several languages. Check http://snowballstem.org/ for more information about them.
+- [sqlite_wrapper](../sqlite_wrapper): an easy-to-use, lightweight and concurrency-friendly SQLite wrapper written in C++17.
 - ~~[squash](./squash)~~
 - [stdext-path](./stdext-path) -- path manipulations (`dirname` et al)
 - [stopwords](./stopwords)
 - [subprocess](./subprocess)
 - [svg-charter](./svg-charter) -- SVG chart renderer
+- [taolog](../taolog): A Win32 logger based on DebugView & ETW.
 - [taskflow](./taskflow)
 - [tessconfigs](../tessconfigs)
 - [tessdata](../tessdata)
@@ -1157,6 +1182,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [ticpp](./ticpp) -- TinyXML++: XML read/write
 - [tidy-html5](./tidy-html5) -- clean up HTML documents before archiving/processing
 - [tiny-process-library](./tiny-process-library) -- small platform independent library making it simple to create and stop new processes, as well as writing to stdin and reading from stdout and stderr of a new process.
+- [tink](../tink): A multi-language, cross-platform library that provides cryptographic APIs that are secure, easy to use correctly, and hard(er) to misuse.
 - [tinyexpr](./tinyexpr)
 - [tlx-btree](./tlx-btree) -- in-memory B+-tree: an alternative for the priority queue as we expect the queue to grow huge, given past experience with Qiqqa.
 - [tlx](./tlx) -- a collection of C++ helpers and extensions universally needed, but not found in the STL.
@@ -1282,31 +1308,20 @@ The other JavaScript engines considered are of varying size, performance and com
 - [libwil](../libwil): The Windows Implementation Libraries (WIL) is a header-only C++ library created to make life easier for developers on Windows through readable type-safe C++ interfaces for common Windows coding patterns.
 - [libzopfli](../libzopfli): Zopfli Compression Algorithm is a compression library programmed in C to perform very good, but slow, deflate or zlib compression.
 - [libwildmatch](../libwildmatch): wildmatch is a BSD-licensed C/C++ library for git/rsync-style pattern matching.
-- [libsqlfs](../libsqlfs): a POSIX style file system on top of an SQLite database.  It allows applications to have access to a full read/write file system in a single file, complete with its own file hierarchy and name space.  This is useful for applications which needs structured storage, such as embedding documents within documents, or management of configuration data or preferences.
-- [sqlean](../sqlean): The ultimate set of SQLite extensions: SQLite has few functions compared to other database management systems. SQLite authors see this as a feature rather than a problem, because SQLite has an extension mechanism in place. There are a lot of SQLite extensions out there, but they are incomplete, inconsistent and scattered across the internet. sqlean brings them together, neatly packaged into domain modules, documented, tested, and built for Linux, Windows and macOS.
-- [sqlite-stats](../sqlite-stats): provides common statistical functions for SQLite.
-- [SQLiteHistograms](../SQLiteHistograms): an SQLite extension library for creating histogram tables, tables of ratio between histograms and interpolation tables of scatter point tables.
-- [sqlite-fts5-snowball](../sqlite-fts5-snowball): a simple extension for use with FTS5 within SQLite. It allows FTS5 to use Martin Porter's Snowball stemmers (libstemmer), which are available in several languages. Check http://snowballstem.org/ for more information about them.
-- [sqlite_wrapper](../sqlite_wrapper): an easy-to-use, lightweight and concurrency-friendly SQLite wrapper written in C++17.
 - [libdeflate](../libdeflate): heavily optimized library for DEFLATE/zlib/gzip compression and decompression.
 - [libCRCpp](../libCRCpp): easy to use and fast C++ CRC library.
-- [ms_cpp_client_telemetry](../ms_cpp_client_telemetry): 1DS C/C++ SDK enables cross-platform telemetry collection from various Microsoft products. It enables data / telemetry upload to Collector++. 1DS (One Data Strategy), also known as One Observability, is a cross-org initiative with five teams across the company coming together to unify multiple telemetry efforts at Microsoft. Collector++ is the externally-facing destination end-point where telemetry data is uploaded to that subsequently routes the data to Microsoft internal data pipeline.
 - [typesense](../typesense): a fast, typo-tolerant search engine for building delightful search experiences. Open Source alternative to Algolia and an Easier-to-Use alternative to ElasticSearch. ⚡🔍✨ Fast, typo tolerant, in-memory fuzzy Search Engine for building delightful search experiences.
 - [dtoa-benchmark](../dtoa-benchmark): This benchmark evaluates the performance of conversion from double precision IEEE-754 floating point (double) to ASCII string.
-- [Extensible-Storage-Engine](../Extensible-Storage-Engine): ESE is an embedded / ISAM-based database engine, that provides rudimentary table and indexed access. However the library provides many other strongly layered and and thus reusable sub-facilities as well: A Synchronization / Locking library, a Data-structures / STL-like library, an OS-abstraction layer, and a Cache Manager, as well as the full-blown database engine itself.
+- [Extensible-Storage-Engine](../Extensible-Storage-Engine): ESE is an embedded / ISAM-based database engine, that provides rudimentary table and indexed access. However the library provides many other strongly layered and thus reusable sub-facilities as well: A Synchronization / Locking library, a Data-structures / STL-like library, an OS-abstraction layer, and a Cache Manager, as well as the full-blown database engine itself.
 - [pthreadpool](../pthreadpool): pthreadpool is a portable and efficient thread pool implementation. It provides similar functionality to `#pragma omp parallel for`, but with additional features.
 - [lrucache11](../lrucache11): A header only C++11 LRU Cache template class that allows you to define key, value and optionally the `Map` type. uses a double linked list and a `std::unordered_map` style container to provide fast insert, delete and update No dependencies other than the C++ standard library. 
 - [CTPL-Thread-Pool](../CTPL-Thread-Pool): Modern and efficient C++ Thread Pool Library. More specifically, there are some threads dedicated to the pool and a container of jobs. The jobs come to the pool dynamically. A job is fetched and deleted from the container when there is an idle thread. The job is then run on that thread.
 - [portable_concurrency-std-future](../portable_concurrency-std-future): Portable implementation of future/promise API in C++. `std::future` done right.
 - [YACLib](../YACLib): YACLib is a lightweight C++ library for concurrent and parallel task execution.
-- [taolog](../taolog): A Win32 logger based on DebugView & ETW.
-- [opentelemetry-cpp](../opentelemetry-cpp): The OpenTelemetry C++ Client
 - [pelikan](../pelikan): Pelikan is Twitter's unified cache backend.
 - [microsoft-performance-toolkit-sdk](../microsoft-performance-toolkit-sdk): The Microsoft Performance Toolkit is a collection of cross-platform tools developers can use to create and extend performance analysis applications. It serves as the runtime of the Windows Performance Analyzer, a Windows program included in the Windows Performance Toolkit. By using the Microsoft Performance Toolkit SDK, Windows Performance Analyzer - or any performance analysis application - can be configured to process and display performance data from arbitrary sources.
 - [oppat](../oppat): Open Power/Performance Analysis Tool (OPPAT) is a cross-OS, cross-architecture Power and Performance Analysis Tool. cross-OS: supports Windows ETW trace files and Linux/Android perf/trace-cmd trace files. cross-architecture: supports Intel and ARM chips hardware events (using perf and/or PCM).
 - [compact_enc_det](../compact_enc_det): Compact Encoding Detection (CED for short) is a library written in C++ that scans given raw bytes and detect the most likely text encoding.
-- [tink](../tink): A multi-language, cross-platform library that provides cryptographic APIs that are secure, easy to use correctly, and hard(er) to misuse.
-- [highwayhash](../highwayhash): Fast strong hash functions: SipHash/HighwayHash
 - [nsync](../nsync): a C library that exports various synchronization primitives. `nsync` may be desirable in place of `pthread` primitives in some cases:  (1) nsync locks are reader-writer locks (but are as efficient as mutexes).  (2) nsync locks and condition variables occupy only two words each.  (3) nsync works on Unix-like systems and Windows.  It should be portable to other platforms straightforwardly.  (4) nsync provides conditional critical sections.  These fill the same role as condition variables, but are usually easier to use, and in most common cases are comparable in speed.  They can be easier to use in two ways:  (A) it's not necessary to surround the "wait" operation in a while loop; instead the condition is passed to the call as a function and arbitrary pointer argument.  (B) it's not necessary to wake or signal explicitly when the condition(s) become true; they are checked automatically. The primary downsides are:  (A) they are not available in most other common synchronization APIs, and so they may be unfamiliar (even though they date back to the 1960s), and (B) if threads routinely wait on many distinct, false conditions associated with the same lock, they may be slower than condition variables. In this case, clients can use condition variables in the normal way; conditional critical sections and condition variables can be used with the same lock.  (5) nsync waits can be cancelled via an object passed to the wait calls, unlike the pthread model in which threads are cancelled.  This difference can be useful if the computation needs multiple threads, or if cancellation affects only sub-operations within a larger operation by the thread.
 - [zfp-compressed-arrays](../zfp-compressed-arrays): zfp is a compressed format for representing multidimensional floating-point and integer arrays. zfp provides compressed-array classes that support high throughput read and write random access to individual array elements. zfp also supports serial and parallel (OpenMP and CUDA) compression of whole arrays, e.g., for applications that read and write large data sets to and from disk.
 
@@ -1333,3 +1348,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - [asio](../asio):
 - [highway](../highway):
 - [tinycolormap](../tinycolormap):
+- [tesseract-gImgRdrGui](../tesseract-gImgRdrGui):
+- [pdf2htmlEX](../pdf2htmlEX):
+- [bhtsne--Barnes-Hut-t-SNE](bhtsne--Barnes-Hut-t-SNE]):
+- [pcg-cpp-random](../pcg-cpp-random):
