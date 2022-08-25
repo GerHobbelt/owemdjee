@@ -1418,3 +1418,6 @@
 	path = pcg-cpp-random
 	url = git@github.com:GerHobbelt/pcg-cpp.git
 
+[submodule "cpp-ipc"]
+	path = cpp-ipc
+	url = git@github.com:GerHobbelt/cpp-ipc.git
