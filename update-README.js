@@ -26,7 +26,7 @@ while (m) {
 	let id = m[1];
 	let localdir = `./${ m[2] }`
 	let key2 = localdir.replace(/[\\\/.]+/g, '');
-	console.log({id, key2, localdir, repo, url })
+	//console.log({id, key2, localdir, repo, url })
 	
 	dict[id.toLowerCase()] = { id, key2, localdir, repo, url };
 	dict[key2.toLowerCase()] = { id, key2, localdir, repo, url };
@@ -45,7 +45,7 @@ while (m) {
 	let id = m[1].replace('thirdparty/', '');
 	let localdir = `../../${ m[2] }`;
 	let key2 = localdir.replace('thirdparty/', '').replace(/[\\\/.]+/g, '');
-	console.log({id, key2, localdir, repo, url })
+	//console.log({id, key2, localdir, repo, url })
 	
 	dict[id.toLowerCase()] = { id, key2, localdir, repo, url };
 	dict[key2.toLowerCase()] = { id, key2, localdir, repo, url };
@@ -53,7 +53,32 @@ while (m) {
 	m = mod_re.exec(module_spec2);
 }
 
-console.log({dict})
+// and supplement dictionary with first hit for every key:
+mod_re = /\*\*([^*]+)\*\* \[📁\]\(([^ )]+)\) \[🌐\]\(([^ )]+)\)/g;
+m = mod_re.exec(txt);
+while (m) {
+	m.input = null;
+	//console.log({m})
+	let repo = m[3];
+	let url = repo;
+	let id = m[1];
+	let localdir = m[2];
+	let key2 = localdir.replace('thirdparty/', '').replace(/[\\\/.]+/g, '');
+	//console.log({id, key2, localdir, repo, url })
+	
+	if (dict[id.toLowerCase()] == undefined) {
+		dict[id.toLowerCase()] = { id, key2, localdir, repo, url };
+		console.log({id, key2, localdir, repo, url })
+	}
+	if (dict[key2.toLowerCase()] == undefined) {
+		dict[key2.toLowerCase()] = { id, key2, localdir, repo, url };
+		console.log({id, key2, localdir, repo, url })
+	}
+	
+	m = mod_re.exec(txt);
+}
+
+//console.log({dict})
 console.log("===================================================================================================================\n\n");
 //process.exit(1);
 
@@ -89,5 +114,9 @@ while (modified) {
 		return s;
 	});
 }
+
+// hotfixes:
+txt = txt
+.replace(/https:\/\/github.com\/GerHobbelt\/\//g, `https://github.com/GerHobbelt/`)
 
 fs.writeFileSync("README.md", txt, "utf8");
