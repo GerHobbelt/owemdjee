@@ -1363,27 +1363,31 @@ The other JavaScript engines considered are of varying size, performance and com
 - **PhotonLibOS** [📁](./PhotonLibOS) [🌐](https://github.com/GerHobbelt/PhotonLibOS):
 - **coost** [📁](./coost) [🌐](https://github.com/GerHobbelt/coost):
 - **libstb** [📁](./libstb) [🌐](https://github.com/GerHobbelt/stb):
-- **bolt** [📁](./bolt) [🌐](https://github.com/GerHobbelt/bolt):
-- **concurrentqueue** [📁](./concurrentqueue) [🌐](https://github.com/GerHobbelt/concurrentqueue):
-- **libimagequant** [📁](./libimagequant) [🌐](https://github.com/GerHobbelt/libimagequant):
-- **palanteer** [📁](./palanteer) [🌐](https://github.com/GerHobbelt/palanteer):
-- **iceoryx** [📁](./iceoryx) [🌐](https://github.com/GerHobbelt/iceoryx):
-- **ecal** [📁](./ecal) [🌐](https://github.com/GerHobbelt/ecal):
-- **recycle** [📁](./recycle) [🌐](https://github.com/GerHobbelt/recycle):
-- **tcp_pubsub** [📁](./tcp_pubsub) [🌐](https://github.com/GerHobbelt/tcp_pubsub):
-- **DBoW2** [📁](./DBoW2) [🌐](https://github.com/GerHobbelt/DBoW2):
-- **warp-ctc** [📁](./warp-ctc) [🌐](https://github.com/GerHobbelt/warp-ctc):
-- **OpenFST** [📁](./OpenFST) [🌐](https://github.com/GerHobbelt/openfst):
-- **dynet** [📁](./dynet) [🌐](https://github.com/GerHobbelt/dynet):
-- **tensorflow** [📁](./tensorflow) [🌐](https://github.com/GerHobbelt/tensorflow):
-- **libchardet** [📁](./libchardet) [🌐](https://github.com/GerHobbelt/libchardet):
-- **line_detector** [📁](./line_detector) [🌐](https://github.com/GerHobbelt/line_detector):
-- **refl-cpp** [📁](./refl-cpp) [🌐](https://github.com/GerHobbelt/refl-cpp):
-- **zpp_bits** [📁](./zpp_bits) [🌐](https://github.com/GerHobbelt/zpp_bits):
-- **cppflow** [📁](./cppflow) [🌐](https://github.com/GerHobbelt/cppflow):
-- **utfcpp** [📁](./utfcpp) [🌐](https://github.com/GerHobbelt/utfcpp):
-- **fast_float** [📁](./fast_float) [🌐](https://github.com/GerHobbelt/fast_float):
-- **libcopp** [📁](./libcopp) [🌐](https://github.com/GerHobbelt/libcopp):
+- **bolt** [📁](./bolt) [🌐](https://github.com/GerHobbelt/bolt): a deep learning library with high performance and heterogeneous flexibility.
+- **concurrentqueue** [📁](./concurrentqueue) [🌐](https://github.com/GerHobbelt/concurrentqueue): moodycamel::ConcurrentQueue, an industrial-strength and fast multi-producer, multi-consumer lock-free concurrent queue for C++11.
+- **libimagequant** [📁](./libimagequant) [🌐](https://github.com/GerHobbelt/libimagequant): Palette quantization library that powers `pngquant` and other PNG optimizers. `libimagequant` converts RGBA images to palette-based 8-bit indexed images, including alpha component. It's ideal for generating tiny PNG images and nice-looking GIFs. Image encoding/decoding isn't handled by the library itself, bring your own encoder.
+- **palanteer** [📁](./palanteer) [🌐](https://github.com/GerHobbelt/palanteer): Visual Python and C++ nanosecond profiler, logger, tests enabler: a set of lean and efficient tools to improve the quality of software, for C++ and Python programs.
+- **iceoryx** [📁](./iceoryx) [🌐](https://github.com/GerHobbelt/iceoryx): true zero-copy inter-process-communication. iceoryx is an inter-process-communication (IPC) middleware for various operating systems (currently we support Linux, macOS, QNX, FreeBSD and Windows 10). It has its origins in the automotive industry, where large amounts of data have to be transferred between different processes when it comes to driver assistance or automated driving systems. However, the efficient communication mechanisms can also be applied to a wider range of use cases, e.g. in the field of robotics or game development.
+- **ecal** [📁](./ecal) [🌐](https://github.com/GerHobbelt/ecal): the *enhanced Communication Abstraction Layer* (*eCAL*) is a middleware that enables scalable, high performance interprocess communication on a single computer node or between different nodes in a computer network. eCAL uses a publish-subscribe pattern to automatically connect different nodes in the network. eCAL automatically chooses the best available data transport mechanism for each link:
+
+  + Shared memory for local communication (incredible fast!)
+  + UDP for network communication
+  
+- **recycle** [📁](./recycle) [🌐](https://github.com/GerHobbelt/recycle): an implementation of a simple resource pool for recycling resources in C++.
+- **tcp_pubsub** [📁](./tcp_pubsub) [🌐](https://github.com/GerHobbelt/tcp_pubsub): a minimal publish-subscribe library that transports data via TCP. `tcp_pubsub` does not define a message format but only transports binary blobs. It does however define a protocol around that, which is kept as lightweight as possible.
+- **DBoW2** [📁](./DBoW2) [🌐](https://github.com/GerHobbelt/DBoW2): a C++ library for indexing and converting images into a bag-of-word representation. It implements a hierarchical tree for approximating nearest neighbours in the image feature space and creating a visual vocabulary. DBoW2 also implements an image database with inverted and direct files to index images and enabling quick queries and feature comparisons.
+- **warp-ctc** [📁](./warp-ctc) [🌐](https://github.com/GerHobbelt/warp-ctc): A fast parallel implementation of CTC, on both CPU and GPU. Connectionist Temporal Classification (CTC) is a loss function useful for performing supervised learning on sequence data, without needing an alignment between input data and labels. For example, CTC can be used to train end-to-end systems for speech recognition.
+- **OpenFST** [📁](./OpenFST) [🌐](https://github.com/GerHobbelt/openfst): a library for constructing, combining, optimizing, and searching weighted finite-state transducers (FSTs). Weighted finite-state transducers are automata where each transition has an input label, an output label, and a weight. The more familiar finite-state acceptor is represented as a transducer with each transition's input and output label equal. Finite-state acceptors are used to represent sets of strings (specifically, regular or rational sets); finite-state transducers are used to represent binary relations between pairs of strings (specifically, rational transductions). The weights can be used to represent the cost of taking a particular transition. FSTs have key applications in speech recognition and synthesis, machine translation, optical character recognition, pattern matching, string processing, machine learning, information extraction and retrieval among others. Often a weighted transducer is used to represent a probabilistic model (e.g., an n-gram model, pronunciation model). FSTs can be optimized by determinization and minimization, models can be applied to hypothesis sets (also represented as automata) or cascaded by finite-state composition, and the best results can be selected by shortest-path algorithms.
+- **dynet** [📁](./dynet) [🌐](https://github.com/GerHobbelt/dynet): The Dynamic Neural Network Toolkit. DyNet is a neural network library developed by Carnegie Mellon University and many others. It is written in C++ (with bindings in Python) and is designed to be efficient when run on either CPU or GPU, and to work well with networks that have dynamic structures that change for every training instance. For example, these kinds of networks are particularly important in natural language processing tasks, and DyNet has been used to build state-of-the-art systems for syntactic parsing, machine translation, morphological inflection, and many other application areas.
+- **tensorflow** [📁](./tensorflow) [🌐](https://github.com/GerHobbelt/tensorflow): an end-to-end open source platform for machine learning.
+- **libchardet** [📁](./libchardet) [🌐](https://github.com/GerHobbelt/libchardet): is based on Mozilla Universal Charset Detector library and, detects the character set used to encode data.
+- **line_detector** [📁](./line_detector) [🌐](https://github.com/GerHobbelt/line_detector): line segment detector ([lsd](http://www.ipol.im/pub/art/2012/gjmr-lsd/)) &. edge drawing line detector (edl) &. hough line detector (standard &. probabilistic) for detection.
+- **refl-cpp** [📁](./refl-cpp) [🌐](https://github.com/GerHobbelt/refl-cpp): static reflection for C++17 (compile-time enumeration, attributes, proxies, overloads, template functions, metaprogramming).
+- **zpp_bits** [📁](./zpp_bits) [🌐](https://github.com/GerHobbelt/zpp_bits): A modern, *fast*, C++20 binary serialization and RPC library, with just one header file.See also the [benchmark](https://github.com/GerHobbelt/zpp_bits#benchmark).
+- **cppflow** [📁](./cppflow) [🌐](https://github.com/GerHobbelt/cppflow): run TensorFlow models in c++ without Bazel, without TensorFlow installation and without compiling Tensorflow.
+- **utfcpp** [📁](./utfcpp) [🌐](https://github.com/GerHobbelt/utfcpp): UTF-8 with C++ in a Portable Way
+- **fast_float** [📁](./fast_float) [🌐](https://github.com/GerHobbelt/fast_float): fast and exact implementation of the C++ `from_chars` functions for float and double types: 4x faster than `strtod`
+- **libcopp** [📁](./libcopp) [🌐](https://github.com/GerHobbelt/libcopp): cross-platform coroutine library in C++
 
 
 
