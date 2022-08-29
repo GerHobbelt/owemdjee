@@ -533,7 +533,7 @@ The other JavaScript engines considered are of varying size, performance and com
     - **libexpat** [📁](./libexpat) [🌐](https://github.com/GerHobbelt/libexpat) -- XML read/write
     - **libxml2** [📁](./libxml2) [🌐](https://github.com/GerHobbelt/libxml2) -- [libxml](http://xmlsoft.org/): XML read/write
     - **libzip** [📁](./libzip) [🌐](https://github.com/GerHobbelt/libzip) -- a C library for reading, creating, and modifying zip and zip64 archives. Files can be added from data buffers, files, or compressed data copied directly from other zip archives. Changes made without closing the archive can be reverted. Decryption and encryption of Winzip AES and legacy PKware encrypted files is supported.
-    - [CHM lib](./CHM-lib) -- as I have several HTML pages stored in this format. See also MHTML: `mht-rip`
+    - **CHM-lib** [📁](./CHM-lib) [🌐](https://github.com/GerHobbelt/CHMLib) -- as I have several HTML pages stored in this format. See also MHTML: `mht-rip`
     - **mht-rip** [📁](./mht-rip) [🌐](https://github.com/GerHobbelt/mht-rip) -- as I have several HTML pages stored in this MHTML format. See also CHM: `CHM-lib`
     - **mime-mega** [📁](./mime-mega) [🌐](https://github.com/GerHobbelt/MegaMimes) -- MIME extract/insert/encode/decode: use for MHTML support
     - **mimetic** [📁](./mimetic) [🌐](https://github.com/GerHobbelt/mimetic) -- MIME: use for MHTML support
@@ -899,7 +899,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - **catboost** [📁](./catboost) [🌐](https://github.com/GerHobbelt/catboost)
 - ~~**Catch2** [🌐](https://github.com/catchorg/Catch2)~~
 - **cereal** [📁](./cereal) [🌐](https://github.com/GerHobbelt/cereal) -- C++11 serialization library
-- [CHM lib](./CHM-lib) -- as I have several HTML pages stored in this format. See also MHTML: `mht-rip`
+- **CHM-lib** [📁](./CHM-lib) [🌐](https://github.com/GerHobbelt/CHMLib) -- as I have several HTML pages stored in this format. See also MHTML: `mht-rip`
 - **CImg** [📁](./CImg) [🌐](https://github.com/GerHobbelt/CImg) -- a **small** C++ toolkit for **image processing**.
 - **circlehash** [📁](./circlehash) [🌐](https://github.com/GerHobbelt/circlehash) -- a family of non-cryptographic hash functions that pass every test in SMHasher.
 - **civetweb** [📁](./civetweb) [🌐](https://github.com/GerHobbelt/civetweb)

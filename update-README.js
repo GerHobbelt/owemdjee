@@ -25,7 +25,7 @@ while (m) {
 	let url = repo.replace(/git@github.com:GerHobbelt/, `https://github.com/GerHobbelt/`).replace(/\.git$/, '');
 	let id = m[1];
 	let localdir = `./${ m[2] }`
-	let key2 = localdir.replace(/[\\\/.]+/g, '');
+	let key2 = localdir.replace(/[\\\/._-]+/g, '');
 	//console.log({id, key2, localdir, repo, url })
 	
 	dict[id.toLowerCase()] = { id, key2, localdir, repo, url };
@@ -44,7 +44,7 @@ while (m) {
 	let url = repo.replace(/git@github.com:GerHobbelt/, `https://github.com/GerHobbelt`).replace(/\.git$/, '');
 	let id = m[1].replace('thirdparty/', '');
 	let localdir = `../../${ m[2] }`;
-	let key2 = localdir.replace('thirdparty/', '').replace(/[\\\/.]+/g, '');
+	let key2 = localdir.replace('thirdparty/', '').replace(/[\\\/._-]+/g, '');
 	//console.log({id, key2, localdir, repo, url })
 	
 	dict[id.toLowerCase()] = { id, key2, localdir, repo, url };
@@ -63,7 +63,7 @@ while (m) {
 	let url = repo;
 	let id = m[1];
 	let localdir = m[2];
-	let key2 = localdir.replace('thirdparty/', '').replace(/[\\\/.]+/g, '');
+	let key2 = localdir.replace('thirdparty/', '').replace(/[\\\/._-]+/g, '');
 	//console.log({id, key2, localdir, repo, url })
 	
 	if (dict[id.toLowerCase()] == undefined) {
@@ -88,11 +88,15 @@ while (m) {
 	let url = repo;
 	let id = m[1];
 	let localdir = null;
-	let key2 = id;
+	let key2 = id.replace(/[\\\/._-]+/g, '');
 	//console.log({id, key2, localdir, repo, url })
 	
 	if (dict[id.toLowerCase()] == undefined) {
 		dict[id.toLowerCase()] = { id, key2, localdir, repo, url };
+		console.log({id, key2, localdir, repo, url })
+	}
+	if (dict[key2.toLowerCase()] == undefined) {
+		dict[key2.toLowerCase()] = { id, key2, localdir, repo, url };
 		console.log({id, key2, localdir, repo, url })
 	}
 	
@@ -111,7 +115,11 @@ while (modified) {
 		console.log({m, p1, p2});
 		let spec = dict[p1.toLowerCase()];
 		if (!spec) {
-			let key2 = p2.replace(/[\\\/.]+/g, '');
+			let key2 = p2.replace(/[\\\/._-]+/g, '');
+			spec = dict[key2.toLowerCase()];
+		}
+		if (!spec) {
+			let key2 = p1.replace(/[ \\\/._-]+/g, '');
 			spec = dict[key2.toLowerCase()];
 		}
 		if (!spec) {
