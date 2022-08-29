@@ -1301,6 +1301,10 @@ The other JavaScript engines considered are of varying size, performance and com
 
 
 
+## TBD: Libraries which still need to be moved into the overview / categories above...
+
+
+
 
 - **fast_pfor** [📁](./fast_pfor) [🌐](https://github.com/GerHobbelt/FastPFor): a research library with integer compression schemes. It is broadly applicable to the compression of arrays of 32-bit integers where most integers are small. The library seeks to exploit SIMD instructions (SSE) whenever possible.
 - **portable-memory-mapping** [📁](./portable-memory-mapping) [🌐](https://github.com/GerHobbelt/portable-memory-mapping): portable Memory Mapping C++ Class (Windows/Linux)
