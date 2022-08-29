@@ -252,7 +252,7 @@ The other JavaScript engines considered are of varying size, performance and com
     - ~~[pithy](https://github.com/johnezang/pithy)~~
       + **removed**; reason: see `fast-lzma2` above. LZ4 either overtakes this one or is on par (anno 2022 AD) and I don't see a lot happening here, so the coolness factor is slowly fading...
     - [shoco](./shoco) -- a fast compressor for short strings
-    - ~~[snappy](./snappy) -- [Snappy](https://github.com/google/snappy) is a compression/decompression library. It does not aim for maximum compression, or compatibility with any other compression library; instead, it aims for very high speeds and reasonable compression.~~
+    - ~~[Snappy](https://github.com/google/snappy) -- a compression/decompression library. It does not aim for maximum compression, or compatibility with any other compression library; instead, it aims for very high speeds and reasonable compression.~~
       + **removed**; reason: see `fast-lzma2` above. LZ4 either overtakes this one or is on par (anno 2022 AD) and I don't see a lot happening here, so the coolness factor is slowly fading. See also [How do I decide between LZ4 and Snappy compression?](https://stackoverflow.com/questions/67537111/how-do-i-decide-between-lz4-and-snappy-compression)
     - ~~[squash](https://github.com/quixdb/squash)~~
       + **removed**; reason: see `fast-lzma2` above. LZ4 either overtakes this one or is on par (anno 2022 AD).
@@ -1382,7 +1382,10 @@ The other JavaScript engines considered are of varying size, performance and com
 
 
 
-🔗🌐
+🔗 🌐 📁 🗃️
+
+
+
 
 
 
