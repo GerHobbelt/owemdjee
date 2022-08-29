@@ -165,7 +165,7 @@ The other JavaScript engines considered are of varying size, performance and com
     - **json-jansson** [📁](./json-jansson) [🌐](https://github.com/GerHobbelt//jansson)
     - **rapidJSON** [📁](./rapidJSON) [🌐](https://github.com/GerHobbelt//rapidjson)
     - **yyjson** [📁](./yyjson) [🌐](https://github.com/GerHobbelt//yyjson)
-    - ~~[libsmile](https://github.com/pierre/libsmile) -- ["Smile" format](https://en.wikipedia.org/wiki/Smile_%28data_interchange_format%29), i.e. a compact binary JSON format~~
+    - ~~**libsmile** [🌐](https://github.com/pierre/libsmile) -- ["Smile" format](https://en.wikipedia.org/wiki/Smile_%28data_interchange_format%29), i.e. a compact binary JSON format~~
       + **removed**; reason: I think we'dd better standardize on using one or more of these:
 	    - JSON
 		- XML
@@ -219,11 +219,11 @@ The other JavaScript engines considered are of varying size, performance and com
     - **c-blosc2** [📁](./c-blosc2) [🌐](https://github.com/GerHobbelt//c-blosc2) -- a high performance compressor optimized for binary data (i.e. floating point numbers, integers and booleans), designed to transmit data to the processor cache faster than the traditional, non-compressed, direct memory fetch approach via a `memcpy()` OS call.
     - **CacheLib** [📁](./CacheLib) [🌐](https://github.com/GerHobbelt//CacheLib) -- provides an in-process high performance caching mechanism, thread-safe API to build high throughput, low overhead caching services, with built-in ability to leverage DRAM and SSD caching transparently.
     - ~~HDF5 file format~~
-        + ~~[h5cpp-HDF5](https://github.com/steven-varga/h5cpp)~~
+        + ~~**h5cpp-HDF5** [🌐](https://github.com/steven-varga/h5cpp)~~
           + **removed**; reason: see the `HDF5` entry below.
-        + ~~[HDF5](https://github.com/HDFGroup/hdf5)~~
+        + ~~**HDF5** [🌐](https://github.com/HDFGroup/hdf5)~~
           + **removed**; reason: HDF5 is a nice concept but considered *overkill* right now; where we need disk stores, we'll be using SQLite or LMDB-like key-value stores instead. Such stores are not meant to be interchangeable with other software in their raw shape and we'll provide public access APIs instead, where applicable.
-        + ~~[HighFive-HDF5](https://github.com/BlueBrain/HighFive)~~
+        + ~~**HighFive-HDF5** [🌐](https://github.com/BlueBrain/HighFive)~~
           + **removed**; reason: see the `HDF5` entry above.
     - RAM-/disk-based large queues and stores: B+tree, LSM-tree, ...
         + **cpp-btree** [📁](./cpp-btree) [🌐](https://github.com/GerHobbelt//cpp-btree) -- in-memory B+-tree: an alternative for the priority queue as we expect the queue to grow huge, given past experience with Qiqqa.
@@ -386,16 +386,16 @@ The other JavaScript engines considered are of varying size, performance and com
     - **libpng** [📁](../../thirdparty/libpng) [🌐](https://github.com/GerHobbelt/libpng)
     - **libtiff** [📁](../../thirdparty/libtiff) [🌐](https://github.com/GerHobbelt/libtiff)
     - **openjpeg** [📁](../../thirdparty/openjpeg) [🌐](https://github.com/GerHobbelt/thirdparty-openjpeg)
-    - ~~[OpenEXR](https://github.com/AcademySoftwareFoundation/openexr) -- lossless format for multi-layered images. Professional use. (I've used it before; nice file format.)~~
-        + ~~[Imath](https://github.com/AcademySoftwareFoundation/Imath) -- float16 support lib for OpenEXR format~~
+    - ~~**OpenEXR** [🌐](https://github.com/AcademySoftwareFoundation/openexr) -- lossless format for multi-layered images. Professional use. (I've used it before; nice file format.)~~
+        + ~~**Imath** [🌐](https://github.com/AcademySoftwareFoundation/Imath) -- float16 support lib for OpenEXR format~~
         + **removed**; reason: considered *overkill* for the projects I'm currently involved in, including Qiqqa. Those can use [Apache Tika](https://tika.apache.org/), [ImageMagick](https://imagemagick.org/) or other thirdparty pipelines to convert to & from supported formats.
-    - ~~[OpenImageIO](https://github.com/OpenImageIO/oiio)~~
+    - ~~**OpenImageIO** [🌐](https://github.com/OpenImageIO/oiio)~~
         + **removed**; reason: considered nice & cool but still *overkill*. Qiqqa tooling can use [Apache Tika](https://tika.apache.org/), [ImageMagick](https://imagemagick.org/) or other thirdparty pipelines to convert to & from supported formats.
     - **jpeg-xl** [📁](./jpeg-xl) [🌐](https://github.com/GerHobbelt//jpeg-xl) - [JPEG-XL](https://gitlab.com/wg1/jpeg-xl) support
     - **libgif** [📁](./libgif) [🌐](https://github.com/GerHobbelt//libgif)
     - **libjpeg-turbo** [📁](./libjpeg-turbo) [🌐](https://github.com/GerHobbelt//libjpeg-turbo)
     - **libwebp** [📁](./libwebp) [🌐](https://github.com/GerHobbelt//libwebp)
-    - ~~[GDCM-Grassroots-DICOM](https://github.com/malaterre/GDCM)~~
+    - ~~**GDCM-Grassroots-DICOM** [🌐](https://github.com/malaterre/GDCM)~~
       + **removed**; reason: not a frequently used format; the filter codes can be found in other libraries. *Overkill*. Qiqqa tooling can use [Apache Tika](https://tika.apache.org/), [ImageMagick](https://imagemagick.org/) or other thirdparty pipelines to convert to & from supported formats.
     - **pmt-png-tools** [📁](./pmt-png-tools) [🌐](https://github.com/GerHobbelt//pmt)
     - ~~[DICOM to NIfTI](https://github.com/rordenlab/dcm2niix) (*not included; see also DICOM slot above*)~~
@@ -584,17 +584,17 @@ The other JavaScript engines considered are of varying size, performance and com
 - **scripting *user-tunable tasks* such as OCR preprocessing, metadata extraction, metadata cleaning & other \[post-]processing, ...**
 
     - **mujs** [📁](../../thirdparty/mujs) [🌐](https://github.com/GerHobbelt/mujs)
-    - ~~[CPython](https://github.com/python/cpython)~~
+    - ~~**CPython** [🌐](https://github.com/python/cpython)~~
       + **removed**; reason: we've decided to offer any application user facing scripting features in JavaScript only: Python and the others can use socket-based messaging when someone wants to write their user scripts in any of those languages.
         
         The additional (and more important) reason to ditch CPython from the R&D set is hairiness of integrating Python into an application as an embedded scripting language, instead of the other way around. With the envisioned advent of ZeroMQ/socket based IPC, any Python scripts can hook into that instead of spending the effort and maintenance of having that large language as an embedded 'assistive' scripting/configuration language: it's simply too huge and complicated. We're not Blender and we don't have the funding.
     - **ECMA262** [📁](./ECMA262) [🌐](https://github.com/GerHobbelt//ecma262)
-    - ~~[lua](https://github.com/lua/lua)~~
+    - ~~**lua** [🌐](https://github.com/lua/lua)~~
       + **removed**; reason: we've decided to offer any application user facing scripting features in JavaScript only: Python and the others can use socket-based messaging when someone wants to write their user scripts in any of those languages. See also the `CPython` entry.
-    - ~~[luaJIT](https://github.com/LuaJIT/LuaJIT)~~
+    - ~~**luaJIT** [🌐](https://github.com/LuaJIT/LuaJIT)~~
       + **removed**; reason: see the `lua` entry above.
     - **QuickJS** [📁](./QuickJS) [🌐](https://github.com/GerHobbelt//quickjs)
-        - [txiki](./txiki.js) -- uses QuickJS as its kernel
+        - **txiki** [📁](./txiki.js) [🌐](https://github.com/GerHobbelt//txiki.js) -- uses QuickJS as its kernel
         - **QuickJS-C++-Wrapper** [📁](./QuickJS-C++-Wrapper) [🌐](https://github.com/GerHobbelt//quickjscpp)
         - **QuickJS-C++-Wrapper2** [📁](./QuickJS-C++-Wrapper2) [🌐](https://github.com/GerHobbelt//quickjspp)
         - **libbf** [📁](./libbf) [🌐](https://github.com/GerHobbelt//libbf) -- a small library to handle arbitrary precision binary or decimal floating point numbers
@@ -610,16 +610,16 @@ The other JavaScript engines considered are of varying size, performance and com
 	- **CLI: commandline parsing & perusing**
 	    + **cli11** [📁](./cli11) [🌐](https://github.com/GerHobbelt//CLI11) -- command line options parser
 	    + **clipp** [📁](./clipp) [🌐](https://github.com/GerHobbelt//clipp) -- commandline parser 
-	    + ~~[clippson](https://github.com/heavywatal/clippson) -- commandline parser + JSON data diagnostical dumper~~
+	    + ~~**clippson** [🌐](https://github.com/heavywatal/clippson) -- commandline parser + JSON data diagnostical dumper~~
 	      + **removed**; reason: deemed cool but unsuitable for our needs. Besides, we intend to use `cli11` instead of `clipp` for that library is easier to read and support is more active there.
-	    + ~~[docopt](https://github.com/docopt/docopt.cpp) -- generate documentation for command line options~~
+	    + ~~**docopt** [🌐](https://github.com/docopt/docopt.cpp) -- generate documentation for command line options~~
 	      + **removed**; reason: deemed cool but unsuitable for our needs. We intend to use `cli11` instead.
 		  
 	- **CPU features & capabilities detection**
 	
-	    - ~~[cpu_features](https://github.com/google/cpu_features)~~
+	    - ~~**cpu_features** [🌐](https://github.com/google/cpu_features)~~
 	      + **removed**; reason: Linux-only, non-portable, deemed unsuitable for our needs.
-	    - ~~[cpu_stat](https://github.com/vivaladav/cpu-stat)~~
+	    - ~~**cpu_stat** [🌐](https://github.com/vivaladav/cpu-stat)~~
 	      + **removed**; reason: Linux-only, non-portable, deemed unsuitable for our needs.
 	    - ~~**cpuinfo** [📁](./cpuinfo) [🌐](https://github.com/GerHobbelt//cpuinfo) -- CPU & hardware info~~
 	      + **removed**; reason: Linux-only, non-portable, deemed unsuitable for our needs.
@@ -847,11 +847,11 @@ The other JavaScript engines considered are of varying size, performance and com
 - **sub-dependencies (libraries which are required by any of the above)**
 
     + **boost** [📁](./boost) [🌐](https://github.com/GerHobbelt//boost) -- required by several other libraries in this collection
-    + ~~[Catch2](https://github.com/catchorg/Catch2)~~
+    + ~~**Catch2** [🌐](https://github.com/catchorg/Catch2)~~
       + **removed**; reason: we've decided to standardize on a single unittest library (which is well supported in Microsoft Visual Studio, including the Test Explorer view there); where necessary, we'll have to provide a translation layer instead when existing submodules use different test rigs originally.
     + **gflags** [📁](./gflags) [🌐](https://github.com/GerHobbelt//gflags) -- google::flags library, used by other libs in this set.
     + **glib2** [📁](./glib2) [🌐](https://github.com/GerHobbelt//glib): GLib is the low-level core library that forms the basis for projects such as GTK and GNOME.
-    + ~~[Imath](https://github.com/AcademySoftwareFoundation/Imath) -- float16 support lib for OpenEXR format~~
+    + ~~**Imath** [🌐](https://github.com/AcademySoftwareFoundation/Imath) -- float16 support lib for OpenEXR format~~
     + **jemalloc** [📁](./jemalloc) [🌐](https://github.com/GerHobbelt//jemalloc)
     + **mimalloc** [📁](./mimalloc) [🌐](https://github.com/GerHobbelt//mimalloc) -- a compact general purpose allocator with excellent performance.
     + **snmalloc** [📁](./snmalloc) [🌐](https://github.com/GerHobbelt//snmalloc) -- a high-performance allocator.
@@ -861,7 +861,7 @@ The other JavaScript engines considered are of varying size, performance and com
     + **nanosvg** [📁](./nanosvg) [🌐](https://github.com/GerHobbelt//nanosvg)
     + **OpenSSL** [📁](./openssl) [🌐](https://github.com/GerHobbelt//openssl) -- also used by cURL et al, incidentally.
     + **pcre** [📁](./pcre) [🌐](https://github.com/GerHobbelt//pcre)
-    + ~~[protobuf](https://github.com/protocolbuffers/protobuf)~~
+    + ~~**protobuf** [🌐](https://github.com/protocolbuffers/protobuf)~~
     + **svg-charter** [📁](./svg-charter) [🌐](https://github.com/GerHobbelt//charter) -- SVG chart renderer
     + **ticpp** [📁](./ticpp) [🌐](https://github.com/GerHobbelt//ticpp) -- TinyXML++: XML read/write (is part of wxFormbuilder).
     + **tinyexpr** [📁](./tinyexpr) [🌐](https://github.com/GerHobbelt//tinyexpr)
@@ -1196,7 +1196,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - **tracelogging-for-ETW** [📁](./tracelogging-for-ETW) [🌐](https://github.com/GerHobbelt//tracelogging): C++ Wrapper for Windows ETW TraceLogging
 - **tre** [📁](./tre) [🌐](https://github.com/GerHobbelt//tre)
 - **tsf** [📁](./tsf) [🌐](https://github.com/GerHobbelt//tsf) -- type-safe printf equivalent for C++ (used by the uberlog submodule)
-- [txiki](./txiki.js) -- uses QuickJS as its kernel
+- **txiki** [📁](./txiki.js) [🌐](https://github.com/GerHobbelt//txiki.js) -- uses QuickJS as its kernel
 - **uberlog** [📁](./uberlog) [🌐](https://github.com/GerHobbelt//uberlog) -- a cross platform C++ logging system that is focused on fast and small, writing to a shared memory ring buffer.
 - **uchardet** [📁](./uchardet) [🌐](https://github.com/GerHobbelt//uchardet) -- [uchardet](https://www.freedesktop.org/wiki/Software/uchardet/) is an encoding and language detector library, which attempts to determine the encoding of the text. It can reliably detect many charsets. Moreover it also works as a very good and fast language detector.
 - **ucto** [📁](./ucto) [🌐](https://github.com/GerHobbelt//ucto) -- text tokenization
