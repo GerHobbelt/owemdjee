@@ -1350,5 +1350,40 @@ The other JavaScript engines considered are of varying size, performance and com
 - [tinycolormap](../tinycolormap):
 - [tesseract-gImgRdrGui](../tesseract-gImgRdrGui):
 - [pdf2htmlEX](../pdf2htmlEX):
-- [bhtsne--Barnes-Hut-t-SNE](bhtsne--Barnes-Hut-t-SNE]):
+- [bhtsne--Barnes-Hut-t-SNE](../bhtsne--Barnes-Hut-t-SNE):
 - [pcg-cpp-random](../pcg-cpp-random):
+- [cpp-ipc](../cpp-ipc):
+- [userver](../userver):
+- [PhotonLibOS](../PhotonLibOS):
+- [coost](../coost):
+- [libstb](../libstb):
+- [bolt](../bolt):
+- [concurrentqueue](../concurrentqueue):
+- [libimagequant](../libimagequant):
+- [palanteer](../palanteer):
+- [iceoryx](../iceoryx):
+- [ecal](../ecal):
+- [recycle](../recycle):
+- [tcp_pubsub](../tcp_pubsub):
+- [DBoW2](../DBoW2):
+- [warp-ctc](../warp-ctc):
+- [OpenFST](../OpenFST):
+- [dynet](../dynet):
+- [tensorflow](../tensorflow):
+- [libchardet](../libchardet):
+- [line_detector](../line_detector):
+- [refl-cpp](../refl-cpp):
+- [zpp_bits](../zpp_bits):
+- [cppflow](../cppflow):
+- [utfcpp](../utfcpp):
+- [fast_float](../fast_float):
+- [libcopp](../libcopp):
+
+
+
+
+🔗🌐
+
+
+
+ 

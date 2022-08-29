@@ -1421,3 +1421,104 @@
 [submodule "cpp-ipc"]
 	path = cpp-ipc
 	url = git@github.com:GerHobbelt/cpp-ipc.git
+	
+[submodule "userver"]
+	path = userver
+	url = git@github.com:GerHobbelt/userver.git
+
+[submodule "PhotonLibOS"]
+	path = PhotonLibOS
+	url = git@github.com:GerHobbelt/PhotonLibOS.git
+
+[submodule "coost"]
+	path = coost
+	url = git@github.com:GerHobbelt/coost.git
+
+[submodule "libstb"]
+	path = libstb
+	url = git@github.com:GerHobbelt/stb.git
+
+[submodule "bolt"]
+	path = bolt
+	url = git@github.com:GerHobbelt/bolt.git
+
+[submodule "concurrentqueue"]
+	path = concurrentqueue
+	url = git@github.com:GerHobbelt/concurrentqueue.git
+
+[submodule "libimagequant"]
+	path = libimagequant
+	url = git@github.com:GerHobbelt/libimagequant.git
+
+[submodule "palanteer"]
+	path = palanteer
+	url = git@github.com:GerHobbelt/palanteer.git
+
+[submodule "iceoryx"]
+	path = iceoryx
+	url = git@github.com:GerHobbelt/iceoryx.git
+
+[submodule "ecal"]
+	path = ecal
+	url = git@github.com:GerHobbelt/ecal.git
+
+[submodule "recycle"]
+	path = recycle
+	url = git@github.com:GerHobbelt/recycle.git
+
+[submodule "tcp_pubsub"]
+	path = tcp_pubsub
+	url = git@github.com:GerHobbelt/tcp_pubsub.git
+
+[submodule "DBoW2"]
+	path = DBoW2
+	url = git@github.com:GerHobbelt/DBoW2.git
+
+[submodule "warp-ctc"]
+	path = warp-ctc
+	url = git@github.com:GerHobbelt/warp-ctc.git
+
+[submodule "OpenFST"]
+	path = OpenFST
+	url = git@github.com:GerHobbelt/openfst.git
+
+[submodule "dynet"]
+	path = dynet
+	url = git@github.com:GerHobbelt/dynet.git
+
+[submodule "tensorflow"]
+	path = tensorflow
+	url = git@github.com:GerHobbelt/tensorflow.git
+
+[submodule "libchardet"]
+	path = libchardet
+	url = git@github.com:GerHobbelt/libchardet.git
+
+[submodule "line_detector"]
+	path = line_detector
+	url = git@github.com:GerHobbelt/line_detector.git
+
+[submodule "refl-cpp"]
+	path = refl-cpp
+	url = git@github.com:GerHobbelt/refl-cpp.git
+
+[submodule "zpp_bits"]
+	path = zpp_bits
+	url = git@github.com:GerHobbelt/zpp_bits.git
+
+[submodule "cppflow"]
+	path = cppflow
+	url = git@github.com:GerHobbelt/cppflow.git
+
+[submodule "utfcpp"]
+	path = utfcpp
+	url = git@github.com:GerHobbelt/utfcpp.git
+
+[submodule "fast_float"]
+	path = fast_float
+	url = git@github.com:GerHobbelt/fast_float.git
+
+[submodule "libcopp"]
+	path = libcopp
+	url = git@github.com:GerHobbelt/libcopp.git
+
