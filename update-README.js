@@ -78,6 +78,27 @@ while (m) {
 	m = mod_re.exec(txt);
 }
 
+// and supplement dictionary with first hit for every key:
+mod_re = /\*\*([^*]+)\*\* \[🌐\]\(([^ )]+)\)/g;
+m = mod_re.exec(txt);
+while (m) {
+	m.input = null;
+	//console.log({m})
+	let repo = m[2];
+	let url = repo;
+	let id = m[1];
+	let localdir = null;
+	let key2 = id;
+	//console.log({id, key2, localdir, repo, url })
+	
+	if (dict[id.toLowerCase()] == undefined) {
+		dict[id.toLowerCase()] = { id, key2, localdir, repo, url };
+		console.log({id, key2, localdir, repo, url })
+	}
+	
+	m = mod_re.exec(txt);
+}
+
 //console.log({dict})
 console.log("===================================================================================================================\n\n");
 //process.exit(1);

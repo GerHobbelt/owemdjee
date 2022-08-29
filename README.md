@@ -885,14 +885,14 @@ The other JavaScript engines considered are of varying size, performance and com
 - **bebop** [📁](./bebop) [🌐](https://github.com/GerHobbelt/bebop)
 - **bibtex-robust-decoder** [📁](./bibtex-robust-decoder) [🌐](https://github.com/GerHobbelt/bibtex-robust-decoder)
 - **bibutils** [📁](./bibutils) [🌐](https://github.com/GerHobbelt/bibutils)
-- [binary_bakery](https://github.com/s9w/binary_bakery) -- resource compiler-like tool: embed any data in your C/C++ application
+- ~~[binary_bakery](https://github.com/s9w/binary_bakery) -- resource compiler-like tool: embed any data in your C/C++ application~~
 - **binlog** [📁](./binlog) [🌐](https://github.com/GerHobbelt/binlog) -- a high performance C++ log library to produce structured binary logs.
 - **BLAKE3** [📁](./BLAKE3) [🌐](https://github.com/GerHobbelt/BLAKE3)
 - **BlingFire** [📁](./BlingFire) [🌐](https://github.com/GerHobbelt/BlingFire) -- we are a team at Microsoft called Bling (Beyond Language Understanding), sharing our [FInite State machine and REgular expression manipulation library](https://github.com/microsoft/BlingFire) (FIRE). We use Fire for many linguistic operations inside Bing such as Tokenization, Multi-word expression matching, Unknown word-guessing, Stemming / Lemmatization just to mention a few.
 - **boost** [📁](./boost) [🌐](https://github.com/GerHobbelt/boost) -- required by several other libraries in this collection
 - **breakpad** [📁](./breakpad) [🌐](https://github.com/GerHobbelt/breakpad)
 - **brotli** [📁](./brotli) [🌐](https://github.com/GerHobbelt/brotli) -- compression
-- [bzip2](./bzip2)
+- ~~[bzip2](./bzip2)~~
 - **c-blosc2** [📁](./c-blosc2) [🌐](https://github.com/GerHobbelt/c-blosc2) -- a high performance compressor optimized for binary data (i.e. floating point numbers, integers and booleans), designed to transmit data to the processor cache faster than the traditional, non-compressed, direct memory fetch approach via a `memcpy()` OS call.
 - **CacheLib** [📁](./CacheLib) [🌐](https://github.com/GerHobbelt/CacheLib) -- provides an in-process high performance caching mechanism, thread-safe API to build high throughput, low overhead caching services, with built-in ability to leverage DRAM and SSD caching transparently.
 - **caffe** [📁](./caffe) [🌐](https://github.com/GerHobbelt/caffe)
@@ -910,8 +910,8 @@ The other JavaScript engines considered are of varying size, performance and com
 - **cmph-hasher** [📁](./cmph-hasher) [🌐](https://github.com/GerHobbelt/cmph)
 - **cpp-btree** [📁](./cpp-btree) [🌐](https://github.com/GerHobbelt/cpp-btree) -- in-memory B+-tree: an alternative for the priority queue as we expect the queue to grow huge, given past experience with Qiqqa.
 - **cppzmq** [📁](./cppzmq) [🌐](https://github.com/GerHobbelt/cppzmq)
-- [cpu_features](./cpu_features)
-- [cpu_stat](./cpu_stat)
+- ~~[cpu_features](./cpu_features)~~
+- ~~[cpu_stat](./cpu_stat)~~
 - **cpuinfo** [📁](./cpuinfo) [🌐](https://github.com/GerHobbelt/cpuinfo) -- CPU & hardware info
 - ~~[CPython](./CPython)~~
 - **createprocess-windows** [📁](./createprocess-windows) [🌐](https://github.com/GerHobbelt/createprocess-windows) -- drive `CreateProcess` Win32 API
@@ -951,7 +951,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - **freetype** [📁](../../thirdparty/freetype) [🌐](https://github.com/GerHobbelt/thirdparty-freetype2)
 - **frozen** [📁](./frozen) [🌐](https://github.com/GerHobbelt/frozen) -- provides 0 cost initialization for immutable containers, fixed-size containers, and various algorithms.
 - **gbenchmark** [📁](./gbenchmark) [🌐](https://github.com/GerHobbelt/benchmark)
-- [GDCM-Grassroots-DICOM](./GDCM-Grassroots-DICOM)
+- ~~[GDCM-Grassroots-DICOM](./GDCM-Grassroots-DICOM)~~
 - **gflags** [📁](./gflags) [🌐](https://github.com/GerHobbelt/gflags) -- google::flags library, used by other libs in this set.
 - **gibbs-lda** [📁](./gibbs-lda) [🌐](https://github.com/GerHobbelt/gibbs-lda): modified GibbsLDA++: A C/C++ Implementation of Latent Dirichlet Allocation by by Xuan-Hieu Phan and Cam-Tu Nguyen.
 - **glib2** [📁](./glib2) [🌐](https://github.com/GerHobbelt/glib): GLib is the low-level core library that forms the basis for projects such as GTK and GNOME.
@@ -987,11 +987,11 @@ The other JavaScript engines considered are of varying size, performance and com
 - **hunspell-hyphen** [📁](./hunspell-hyphen) [🌐](https://github.com/GerHobbelt/hyphen)
 - **hunspell** [📁](./hunspell) [🌐](https://github.com/GerHobbelt/hunspell)
 - **hyperscan** [📁](./hyperscan) [🌐](https://github.com/GerHobbelt/hyperscan) -- Hyperscan is a high-performance multiple regex matching library.
-- ~~[ice](./ice) -- Comprehensive RPC Framework: helps you network your software with minimal effort.~~
+- ~~[ice](https://github.com/zeroc-ice/ice) -- Comprehensive RPC Framework: helps you network your software with minimal effort.~~
 - **ImageMagick** [📁](./ImageMagick) [🌐](https://github.com/GerHobbelt/ImageMagick)
 - ~~[Imath](./Imath) -- float16 support lib for OpenEXR format~~
-- ~~[inih](./inih)~~
-- ~~[iniparser](./iniparser)~~
+- ~~[inih](https://github.com/benhoyt/inih)~~
+- ~~[iniparser](https://github.com/ndevilla/iniparser)~~
 - **jasper** [📁](./jasper) [🌐](https://github.com/GerHobbelt/jasper) -- JasPer Image Processing/Coding Tool Kit
 - **jbig2dec** [📁](../../thirdparty/jbig2dec) [🌐](https://github.com/GerHobbelt/jbig2dec)
 - **jemalloc** [📁](./jemalloc) [🌐](https://github.com/GerHobbelt/jemalloc)
@@ -1064,7 +1064,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - **Lightning.NET** [📁](./Lightning.NET) [🌐](https://github.com/GerHobbelt/Lightning.NET) -- .NET library for OpenLDAP's LMDB key-value store
 - **ligra-graph** [📁](./ligra-graph) [🌐](https://github.com/GerHobbelt/ligra)
 - **linenoise** [📁](./linenoise) [🌐](https://github.com/GerHobbelt/linenoise)
-- ~~[lizard](./lizard)~~
+- ~~[lizard](https://github.com/inikep/lizard) -- Lizard (formerly LZ5) is an efficient compressor with very fast decompression.~~
 - **lmdb-safe** [📁](./lmdb-safe) [🌐](https://github.com/GerHobbelt/lmdb-safe)
 - **lmdb-store** [📁](./lmdb-store) [🌐](https://github.com/GerHobbelt/lmdb-store)
 - **lmdb.spreads.net** [📁](./lmdb.spreads.net) [🌐](https://github.com/GerHobbelt/Spreads.LMDB)
