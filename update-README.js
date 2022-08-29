@@ -119,6 +119,9 @@ while (modified) {
 			return m;
 		}
 		let s = `**${ p1 }** [📁](${ spec.localdir }) [🌐](${ spec.url })`;
+		if (spec.localdir == null) {
+			s = `**${ p1 }** [🌐](${ spec.url })`;
+		}
 		console.log({ s })
 	
 		modified = true;

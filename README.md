@@ -885,19 +885,19 @@ The other JavaScript engines considered are of varying size, performance and com
 - **bebop** [📁](./bebop) [🌐](https://github.com/GerHobbelt/bebop)
 - **bibtex-robust-decoder** [📁](./bibtex-robust-decoder) [🌐](https://github.com/GerHobbelt/bibtex-robust-decoder)
 - **bibutils** [📁](./bibutils) [🌐](https://github.com/GerHobbelt/bibutils)
-- ~~[binary_bakery](https://github.com/s9w/binary_bakery) -- resource compiler-like tool: embed any data in your C/C++ application~~
+- ~~**binary_bakery** [🌐](https://github.com/s9w/binary_bakery) -- resource compiler-like tool: embed any data in your C/C++ application~~
 - **binlog** [📁](./binlog) [🌐](https://github.com/GerHobbelt/binlog) -- a high performance C++ log library to produce structured binary logs.
 - **BLAKE3** [📁](./BLAKE3) [🌐](https://github.com/GerHobbelt/BLAKE3)
 - **BlingFire** [📁](./BlingFire) [🌐](https://github.com/GerHobbelt/BlingFire) -- we are a team at Microsoft called Bling (Beyond Language Understanding), sharing our [FInite State machine and REgular expression manipulation library](https://github.com/microsoft/BlingFire) (FIRE). We use Fire for many linguistic operations inside Bing such as Tokenization, Multi-word expression matching, Unknown word-guessing, Stemming / Lemmatization just to mention a few.
 - **boost** [📁](./boost) [🌐](https://github.com/GerHobbelt/boost) -- required by several other libraries in this collection
 - **breakpad** [📁](./breakpad) [🌐](https://github.com/GerHobbelt/breakpad)
 - **brotli** [📁](./brotli) [🌐](https://github.com/GerHobbelt/brotli) -- compression
-- ~~[bzip2](./bzip2)~~
+- ~~**bzip2** [🌐](https://github.com/nemequ/bzip2)~~
 - **c-blosc2** [📁](./c-blosc2) [🌐](https://github.com/GerHobbelt/c-blosc2) -- a high performance compressor optimized for binary data (i.e. floating point numbers, integers and booleans), designed to transmit data to the processor cache faster than the traditional, non-compressed, direct memory fetch approach via a `memcpy()` OS call.
 - **CacheLib** [📁](./CacheLib) [🌐](https://github.com/GerHobbelt/CacheLib) -- provides an in-process high performance caching mechanism, thread-safe API to build high throughput, low overhead caching services, with built-in ability to leverage DRAM and SSD caching transparently.
 - **caffe** [📁](./caffe) [🌐](https://github.com/GerHobbelt/caffe)
 - **catboost** [📁](./catboost) [🌐](https://github.com/GerHobbelt/catboost)
-- ~~[Catch2](./Catch2)~~
+- ~~**Catch2** [🌐](https://github.com/catchorg/Catch2)~~
 - **cereal** [📁](./cereal) [🌐](https://github.com/GerHobbelt/cereal) -- C++11 serialization library
 - [CHM lib](./CHM-lib) -- as I have several HTML pages stored in this format. See also MHTML: `mht-rip`
 - **CImg** [📁](./CImg) [🌐](https://github.com/GerHobbelt/CImg) -- a **small** C++ toolkit for **image processing**.
@@ -906,14 +906,14 @@ The other JavaScript engines considered are of varying size, performance and com
 - **clBLAS** [📁](./clBLAS) [🌐](https://github.com/GerHobbelt/clBLAS)
 - **cld2-language-detect** [📁](./cld2-language-detect) [🌐](https://github.com/GerHobbelt/cld2) -- CLD2 probabilistically detects over 80 languages in Unicode UTF-8 text, either plain text or HTML/XML. For mixed-language input, CLD2 returns the top three languages found and their approximate percentages of the total text bytes.  Optionally, it also returns a vector of text spans with the language of each identified. The design target is web pages of at least 200 characters (about two sentences); CLD2 is not designed to do well on very short text.- **cli11** [📁](./cli11) [🌐](https://github.com/GerHobbelt/CLI11) -- command line options parser
 - **clipp** [📁](./clipp) [🌐](https://github.com/GerHobbelt/clipp) -- commandline parser 
-- ~~[clippson](./clippson) -- commandline parser + JSON data diagnostical dumper~~
+- ~~**clippson** [🌐](https://github.com/heavywatal/clippson) -- commandline parser + JSON data diagnostical dumper~~
 - **cmph-hasher** [📁](./cmph-hasher) [🌐](https://github.com/GerHobbelt/cmph)
 - **cpp-btree** [📁](./cpp-btree) [🌐](https://github.com/GerHobbelt/cpp-btree) -- in-memory B+-tree: an alternative for the priority queue as we expect the queue to grow huge, given past experience with Qiqqa.
 - **cppzmq** [📁](./cppzmq) [🌐](https://github.com/GerHobbelt/cppzmq)
-- ~~[cpu_features](./cpu_features)~~
-- ~~[cpu_stat](./cpu_stat)~~
+- ~~**cpu_features** [🌐](https://github.com/google/cpu_features)~~
+- ~~**cpu_stat** [🌐](https://github.com/vivaladav/cpu-stat)~~
 - **cpuinfo** [📁](./cpuinfo) [🌐](https://github.com/GerHobbelt/cpuinfo) -- CPU & hardware info
-- ~~[CPython](./CPython)~~
+- ~~**CPython** [🌐](https://github.com/python/cpython)~~
 - **createprocess-windows** [📁](./createprocess-windows) [🌐](https://github.com/GerHobbelt/createprocess-windows) -- drive `CreateProcess` Win32 API
 - **crow** [📁](./crow) [🌐](https://github.com/GerHobbelt/crow) -- IPC / server framework 
 - **cryptopp** [📁](./cryptopp) [🌐](https://github.com/GerHobbelt/cryptopp)
@@ -926,7 +926,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - **DCF-cuckoo-index** [📁](./DCF-cuckoo-index) [🌐](https://github.com/GerHobbelt/DCF)
 - **djvulibre** [📁](./djvulibre) [🌐](https://github.com/GerHobbelt/djvulibre)
 - **dlib** [📁](./dlib) [🌐](https://github.com/GerHobbelt/dlib) -- machine learning algorithms
-- ~~[docopt](./docopt) -- generate documentation for command line options~~
+- ~~**docopt** [🌐](https://github.com/docopt/docopt.cpp) -- generate documentation for command line options~~
 - **drogon** [📁](./drogon) [🌐](https://github.com/GerHobbelt/drogon)
 - **dtl-diff-template-library** [📁](./dtl-diff-template-library) [🌐](https://github.com/GerHobbelt/dtl)
 - ~~**EasyLogger** [🌐](https://github.com/armink/EasyLogger) -- an ultra-lightweight (ROM<1.6K, RAM<0.3K), high-performance C/C++ log library, very suitable for resource-sensitive software projects. Compared with the well-known C/C++ log libraries such as log4c and zlog, EasyLogger has simpler functions and provides fewer interfaces to users, but it will be quick to get started. More practical functions support dynamic expansion in the form of plug-ins.~~
@@ -938,20 +938,20 @@ The other JavaScript engines considered are of varying size, performance and com
 - **expected-lite** [📁](./expected-lite) [🌐](https://github.com/GerHobbelt/expected-lite)
 - **extract** [📁](../../thirdparty/extract) [🌐](https://github.com/GerHobbelt/thirdparty_extract)
 - **faiss** [📁](./faiss) [🌐](https://github.com/GerHobbelt/faiss): a library for efficient similarity search and clustering of dense vectors. It contains algorithms that search in sets of vectors of any size, up to ones that possibly do not fit in RAM. It also contains supporting code for evaluation and parameter tuning. Faiss is written in C++ with complete wrappers for Python/numpy. Some of the most useful algorithms are implemented on the GPU. It is developed primarily at Facebook AI Research.
-- ~~[fast-lzma2](./fast-lzma2)~~
-- ~~[FastBinaryEncoding](./FastBinaryEncoding)~~
+- ~~**fast-lzma2** [🌐](https://github.com/conor42/fast-lzma2)~~
+- ~~**FastBinaryEncoding** [🌐](https://github.com/chronoxor/FastBinaryEncoding)~~
 - **fastBPE** [📁](./fastBPE) [🌐](https://github.com/GerHobbelt/fastBPE) -- text tokenization / ngrams
 - **fastText** [📁](./fastText) [🌐](https://github.com/GerHobbelt/fastText) -- [fastText](https://fasttext.cc/) is a library for efficient learning of word representations and sentence classification.
 - **file** [📁](./file) [🌐](https://github.com/GerHobbelt/file) -- `file` filetype recognizer tool & mimemagic 
 - **filesystem** [📁](./filesystem) [🌐](https://github.com/GerHobbelt/filesystem) -- a header-only single-file `std::filesystem` compatible helper library, based on the C++17 and C++20 specs, but implemented for C++11, C++14, C++17 or C++20 (tightly following the C++17 standard with very few documented exceptions). It is of course in its own namespace `ghc::filesystem` to not interfere with a regular `std::filesystem` should you use it in a mixed C++17 environment (which is possible).
-- ~~[flatbuffers](./flatbuffers)~~
-- ~~[flatcc](./flatcc)~~
+- ~~**flatbuffers** [🌐](https://github.com/google/flatbuffers)~~
+- ~~**flatcc** [🌐](https://github.com/dvidelabs/flatcc)~~
 - **fmt** [📁](./fmt) [🌐](https://github.com/GerHobbelt/fmt) -- advanced C++ data-to-text formatter. The modern answer to classic `printf()`.
 - **freeglut** [📁](../../thirdparty/freeglut) [🌐](https://github.com/GerHobbelt/thirdparty-freeglut)
 - **freetype** [📁](../../thirdparty/freetype) [🌐](https://github.com/GerHobbelt/thirdparty-freetype2)
 - **frozen** [📁](./frozen) [🌐](https://github.com/GerHobbelt/frozen) -- provides 0 cost initialization for immutable containers, fixed-size containers, and various algorithms.
 - **gbenchmark** [📁](./gbenchmark) [🌐](https://github.com/GerHobbelt/benchmark)
-- ~~[GDCM-Grassroots-DICOM](./GDCM-Grassroots-DICOM)~~
+- ~~**GDCM-Grassroots-DICOM** [🌐](https://github.com/malaterre/GDCM)~~
 - **gflags** [📁](./gflags) [🌐](https://github.com/GerHobbelt/gflags) -- google::flags library, used by other libs in this set.
 - **gibbs-lda** [📁](./gibbs-lda) [🌐](https://github.com/GerHobbelt/gibbs-lda): modified GibbsLDA++: A C/C++ Implementation of Latent Dirichlet Allocation by by Xuan-Hieu Phan and Cam-Tu Nguyen.
 - **glib2** [📁](./glib2) [🌐](https://github.com/GerHobbelt/glib): GLib is the low-level core library that forms the basis for projects such as GTK and GNOME.
@@ -969,12 +969,12 @@ The other JavaScript engines considered are of varying size, performance and com
 - **gumbo-parser** [📁](../../thirdparty/gumbo-parser) [🌐](https://github.com/GerHobbelt/gumbo-parser)
 - **gumbo-query** [📁](./gumbo-query) [🌐](https://github.com/GerHobbelt/gumbo-query) -- HTML DOM access in C/C++
 - **h2o-server** [📁](./h2o-server) [🌐](https://github.com/GerHobbelt/h2o)
-- ~~[h5cpp-HDF5](./h5cpp-HDF5)~~
+- ~~**h5cpp-HDF5** [🌐](https://github.com/steven-varga/h5cpp)~~
 - **harfbuzz** [📁](../../thirdparty/harfbuzz) [🌐](https://github.com/GerHobbelt/thirdparty-harfbuzz)
-- ~~[HDF5](./HDF5)~~
+- ~~**HDF5** [🌐](https://github.com/HDFGroup/hdf5)~~
 - **HDiffPatch** [📁](./HDiffPatch) [🌐](https://github.com/GerHobbelt/HDiffPatch)
 - **hedley** [📁](./hedley) [🌐](https://github.com/GerHobbelt/hedley) -- a C/C++ header file designed to smooth over some platform-specific annoyances.
-- ~~[HighFive-HDF5](./HighFive-HDF5)~~
+- ~~**HighFive-HDF5** [🌐](https://github.com/BlueBrain/HighFive)~~
 - **highwayhash** [📁](./highwayhash) [🌐](https://github.com/GerHobbelt/highwayhash): Fast strong hash functions: SipHash/HighwayHash
 - **hmm-scalable** [📁](./hmm-scalable) [🌐](https://github.com/GerHobbelt/hmm-scalable)
 - **hmm-stoch** [📁](./hmm-stoch) [🌐](https://github.com/GerHobbelt/StochHMM)
@@ -987,11 +987,11 @@ The other JavaScript engines considered are of varying size, performance and com
 - **hunspell-hyphen** [📁](./hunspell-hyphen) [🌐](https://github.com/GerHobbelt/hyphen)
 - **hunspell** [📁](./hunspell) [🌐](https://github.com/GerHobbelt/hunspell)
 - **hyperscan** [📁](./hyperscan) [🌐](https://github.com/GerHobbelt/hyperscan) -- Hyperscan is a high-performance multiple regex matching library.
-- ~~[ice](https://github.com/zeroc-ice/ice) -- Comprehensive RPC Framework: helps you network your software with minimal effort.~~
+- ~~**ice** [🌐](https://github.com/zeroc-ice/ice) -- Comprehensive RPC Framework: helps you network your software with minimal effort.~~
 - **ImageMagick** [📁](./ImageMagick) [🌐](https://github.com/GerHobbelt/ImageMagick)
-- ~~[Imath](./Imath) -- float16 support lib for OpenEXR format~~
-- ~~[inih](https://github.com/benhoyt/inih)~~
-- ~~[iniparser](https://github.com/ndevilla/iniparser)~~
+- ~~**Imath** [🌐](https://github.com/AcademySoftwareFoundation/Imath) -- float16 support lib for OpenEXR format~~
+- ~~**inih** [🌐](https://github.com/benhoyt/inih)~~
+- ~~**iniparser** [🌐](https://github.com/ndevilla/iniparser)~~
 - **jasper** [📁](./jasper) [🌐](https://github.com/GerHobbelt/jasper) -- JasPer Image Processing/Coding Tool Kit
 - **jbig2dec** [📁](../../thirdparty/jbig2dec) [🌐](https://github.com/GerHobbelt/jbig2dec)
 - **jemalloc** [📁](./jemalloc) [🌐](https://github.com/GerHobbelt/jemalloc)
@@ -1028,7 +1028,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - **libjpeg** [📁](../../thirdparty/libjpeg) [🌐](https://github.com/GerHobbelt/thirdparty-libjpeg)
 - **liblinear** [📁](./liblinear) [🌐](https://github.com/GerHobbelt/liblinear)
 - **libmdbx** [📁](./libmdbx) [🌐](https://github.com/GerHobbelt/libmdbx)
-- ~~[libmicrohttpd](./libmicrohttpd)~~
+- ~~**libmicrohttpd** [🌐](https://github.com/Karlson2k/libmicrohttpd)~~
 - **libngt-ann** [📁](./libngt-ann) [🌐](https://github.com/GerHobbelt/NGT): Yahoo's Neighborhood Graph and Tree for Indexing High-dimensional Data. NGT provides commands and a library for performing high-speed approximate nearest neighbor searches against a large volume of data (several million to several 10 million items of data) in high dimensional vector data space (several ten to several thousand dimensions).
 - **libpng** [📁](../../thirdparty/libpng) [🌐](https://github.com/GerHobbelt/libpng)
 - **libpsl** [📁](./libpsl) [🌐](https://github.com/GerHobbelt/libpsl) -- handles the *Public Suffix List* (a collection of Top Level Domains (TLDs) suffixes, e.g. `.com`, `.net`, *Country Top Level Domains* (ccTLDs) like `.de` and `.cn` and *[Brand Top Level Domains](https://icannwiki.org/Brand_TLD)* like `.apple` and `.google`.
@@ -1036,7 +1036,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - **libq** [📁](./libq) [🌐](https://github.com/GerHobbelt/q) -- A platform-independent promise library for C++, implementing asynchronous continuations.
 - **libqrencode** [📁](./libqrencode) [🌐](https://github.com/GerHobbelt/libqrencode)
 - **libscanf** [📁](./libscanf) [🌐](https://github.com/GerHobbelt/scnlib)
-- ~~[libsmile](./libsmile) -- ["Smile" format](https://en.wikipedia.org/wiki/Smile_%28data_interchange_format%29), i.e. a compact binary JSON format~~
+- ~~**libsmile** [🌐](https://github.com/pierre/libsmile) -- ["Smile" format](https://en.wikipedia.org/wiki/Smile_%28data_interchange_format%29), i.e. a compact binary JSON format~~
 - **libstemmer** [📁](./libstemmer) [🌐](https://github.com/GerHobbelt/libstemmer) -- SnowBall stemmer for many languages.
 - **snowball** [📁](./snowball) [🌐](https://github.com/GerHobbelt/snowball) -- SnowBell stemming compiler (code generator)
 - **libsvm** [📁](./libsvm) [🌐](https://github.com/GerHobbelt/libsvm)
@@ -1064,18 +1064,18 @@ The other JavaScript engines considered are of varying size, performance and com
 - **Lightning.NET** [📁](./Lightning.NET) [🌐](https://github.com/GerHobbelt/Lightning.NET) -- .NET library for OpenLDAP's LMDB key-value store
 - **ligra-graph** [📁](./ligra-graph) [🌐](https://github.com/GerHobbelt/ligra)
 - **linenoise** [📁](./linenoise) [🌐](https://github.com/GerHobbelt/linenoise)
-- ~~[lizard](https://github.com/inikep/lizard) -- Lizard (formerly LZ5) is an efficient compressor with very fast decompression.~~
+- ~~**lizard** [🌐](https://github.com/inikep/lizard) -- Lizard (formerly LZ5) is an efficient compressor with very fast decompression.~~
 - **lmdb-safe** [📁](./lmdb-safe) [🌐](https://github.com/GerHobbelt/lmdb-safe)
 - **lmdb-store** [📁](./lmdb-store) [🌐](https://github.com/GerHobbelt/lmdb-store)
 - **lmdb.spreads.net** [📁](./lmdb.spreads.net) [🌐](https://github.com/GerHobbelt/Spreads.LMDB)
 - **lmdb** [📁](./lmdb) [🌐](https://github.com/GerHobbelt/lmdb)
 - **lmdbxx** [📁](./lmdbxx) [🌐](https://github.com/GerHobbelt/lmdbxx) -- LMDB C++ wrapper
-- ~~[log4cplus](./log4cplus)~~
-- ~~[lua](./lua)~~
-- ~~[luaJIT](./luaJIT)~~
+- ~~**log4cplus** [🌐](https://github.com/log4cplus/log4cplus)~~
+- ~~**lua** [🌐](https://github.com/lua/lua)~~
+- ~~**luaJIT** [🌐](https://github.com/LuaJIT/LuaJIT)~~
 - **lz4** [📁](./lz4) [🌐](https://github.com/GerHobbelt/lz4)
-- ~~[lzo](./lzo)~~
-- ~~[lzsse](./lzsse)~~
+- ~~**lzo** [🌐](https://github.com/nemequ/lzo)~~
+- ~~**lzsse** [🌐](https://github.com/ConorStokes/LZSSE)~~
 - **magic_enum** [📁](./magic_enum) [🌐](https://github.com/GerHobbelt/magic_enum)
 - **manticore-columnar** [📁](./manticore-columnar) [🌐](https://github.com/GerHobbelt/columnar)
 - **manticoresearch** [📁](./manticoresearch) [🌐](https://github.com/GerHobbelt/manticoresearch)
@@ -1102,13 +1102,13 @@ The other JavaScript engines considered are of varying size, performance and com
 - **neutralinoJS-CLI** [📁](./neutralinoJS-CLI) [🌐](https://github.com/GerHobbelt/neutralinojs-cli)
 - **neutralinoJS** [📁](./neutralinoJS) [🌐](https://github.com/GerHobbelt/neutralinojs)
 - **nmslib** [📁](./nmslib) [🌐](https://github.com/GerHobbelt/nmslib): Non-Metric Space Library (NMSLIB) is an efficient cross-platform similarity search library and a toolkit for evaluation of similarity search methods. The core-library does not have any third-party dependencies. It has been gaining popularity recently. In particular, it has become a part of Amazon Elasticsearch Service. The goal of the project is to create an effective and comprehensive toolkit for searching in generic and non-metric spaces. Even though the library contains a variety of metric-space access methods, our main focus is on generic and approximate search methods, in particular, on methods for non-metric spaces. NMSLIB is possibly the first library with a principled support for non-metric space searching.
-- ~~[oatpp](./oatpp) -- IPC / server framework~~
+- ~~**oatpp** [🌐](https://github.com/oatpp/oatpp) -- IPC / server framework~~
 - **olena** [📁](./olena) [🌐](https://github.com/GerHobbelt/olena)
 - **oneTBB** [📁](./oneTBB) [🌐](https://github.com/GerHobbelt/oneTBB) -- Intel's Thread Building Blocks library: used with OpenImageIO, ...
 - **opencv** [📁](./opencv) [🌐](https://github.com/GerHobbelt/opencv)
 - **opencv_contrib** [📁](./opencv_contrib) [🌐](https://github.com/GerHobbelt/opencv_contrib)
-- ~~[OpenEXR](./OpenEXR) -- lossless format for multi-layered images. Professional use. (I've used it before; nice file format.)~~
-- ~~[OpenImageIO](./OpenImageIO)~~
+- ~~**OpenEXR** [🌐](https://github.com/AcademySoftwareFoundation/openexr) -- lossless format for multi-layered images. Professional use. (I've used it before; nice file format.)~~
+- ~~**OpenImageIO** [🌐](https://github.com/OpenImageIO/oiio)~~
 - **openjpeg** [📁](../../thirdparty/openjpeg) [🌐](https://github.com/GerHobbelt/thirdparty-openjpeg)
 - **OpenSSL** [📁](./openssl) [🌐](https://github.com/GerHobbelt/openssl) -- also used by cURL et al, incidentally.
 - **opentelemetry-cpp** [📁](./opentelemetry-cpp) [🌐](https://github.com/GerHobbelt/opentelemetry-cpp): The OpenTelemetry C++ Client
@@ -1122,14 +1122,14 @@ The other JavaScript engines considered are of varying size, performance and com
 - **photino.native** [📁](./photino.native) [🌐](https://github.com/GerHobbelt/photino.Native)
 - **picohttpparser** [📁](./picohttpparser) [🌐](https://github.com/GerHobbelt/picohttpparser)
 - **pisa** [📁](./pisa) [🌐](https://github.com/GerHobbelt/pisa): a text search engine able to run on large-scale collections of documents. It allows researchers to experiment with state-of-the-art techniques, allowing an ideal environment for rapid development. PISA is a text search engine, though the "PISA Project" is a set of tools that help experiment with indexing and query processing. Given a text collection, PISA can build an inverted index over this corpus, allowing the corpus to be searched. The inverted index, put simply, is an efficient data structure that represents the document corpus by storing a list of documents for each unique term (see here). At query time, PISA stores its index in main memory for rapid retrieval.
-- ~~[pithy](./pithy)~~
+- ~~**pithy** [🌐](https://github.com/johnezang/pithy)~~
 - **plf_nanotimer** [📁](./plf_nanotimer) [🌐](https://github.com/GerHobbelt/plf_nanotimer) -- high precision cross-platform performance timer
 - **pmt-png-tools** [📁](./pmt-png-tools) [🌐](https://github.com/GerHobbelt/pmt)
 - **preprocess-corpuses** [📁](./preprocess-corpuses) [🌐](https://github.com/GerHobbelt/preprocess) -- Pipelines for preprocessing corpora.
 - **prio_queue** [📁](./prio_queue) [🌐](https://github.com/GerHobbelt/prio_queue) -- a cache friendly priority queue, done as a B-heap.
 - **promise-cpp** [📁](./promise-cpp) [🌐](https://github.com/GerHobbelt/promise-cpp) -- advanced C++ promise/A+ library in Javascript style
 - **promise-hpp** [📁](./promise-hpp) [🌐](https://github.com/GerHobbelt/promise.hpp): C++ asynchronous promises like a Promises/A+
-- ~~[protobuf](./protobuf)~~
+- ~~**protobuf** [🌐](https://github.com/protocolbuffers/protobuf)~~
 - **proxygen** [📁](./proxygen) [🌐](https://github.com/GerHobbelt/proxygen)
 - **pthread-win32** [📁](./pthread-win32) [🌐](https://github.com/GerHobbelt/pthread-win32)
 - **pytorch** [📁](./pytorch) [🌐](https://github.com/GerHobbelt/pytorch) -- PyTorch library in C++
@@ -1149,10 +1149,10 @@ The other JavaScript engines considered are of varying size, performance and com
 - **shoco** [📁](./shoco) [🌐](https://github.com/GerHobbelt/shoco) -- a fast compressor for short strings
 - **SilkETW** [📁](./SilkETW) [🌐](https://github.com/GerHobbelt/SilkETW): SilkETW & SilkService are flexible C# wrappers for ETW, they are meant to abstract away the complexities of ETW and give people a simple interface to perform research and introspection. While both projects have obvious defensive (and offensive) applications they should primarily be considered as research tools.
 - **smhasher** [📁](./smhasher) [🌐](https://github.com/GerHobbelt/smhasher) -- benchmark and collection of fast hash functions for symbol tables or hash tables.
-- ~~[snappy](./snappy)~~
+- ~~**snappy** [🌐](https://github.com/google/snappy)~~
 - **snmalloc** [📁](./snmalloc) [🌐](https://github.com/GerHobbelt/snmalloc) -- a high-performance allocator.
 - **sparsehash** [📁](./sparsehash) [🌐](https://github.com/GerHobbelt/sparsehash) -- fast hash algorithms
-- ~~[spdlog](./spdlog)~~
+- ~~**spdlog** [🌐](https://github.com/gabime/spdlog)~~
 - **spy-build-sysinfo** [📁](./spy-build-sysinfo) [🌐](https://github.com/GerHobbelt/spy) -- build system info
 - **sqlite-amalgamation** [📁](./sqlite-amalgamation) [🌐](https://github.com/GerHobbelt/sqlite-amalgamation)
 - **sqlite** [📁](./sqlite) [🌐](https://github.com/GerHobbelt/sqlite)
@@ -1164,7 +1164,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - **SQLiteHistograms** [📁](./SQLiteHistograms) [🌐](https://github.com/GerHobbelt/SQLiteHistograms): an SQLite extension library for creating histogram tables, tables of ratio between histograms and interpolation tables of scatter point tables.
 - **sqlite-fts5-snowball** [📁](./sqlite-fts5-snowball) [🌐](https://github.com/GerHobbelt/fts5-snowball): a simple extension for use with FTS5 within SQLite. It allows FTS5 to use Martin Porter's Snowball stemmers (libstemmer), which are available in several languages. Check http://snowballstem.org/ for more information about them.
 - **sqlite_wrapper** [📁](./sqlite_wrapper) [🌐](https://github.com/GerHobbelt/sqlite_wrapper): an easy-to-use, lightweight and concurrency-friendly SQLite wrapper written in C++17.
-- ~~[squash](./squash)~~
+- ~~**squash** [🌐](https://github.com/quixdb/squash)~~
 - **stdext-path** [📁](./stdext-path) [🌐](https://github.com/GerHobbelt/stdext-path) -- path manipulations (`dirname` et al)
 - **stopwords** [📁](./stopwords) [🌐](https://github.com/GerHobbelt/stopwords)
 - **subprocess** [📁](./subprocess) [🌐](https://github.com/GerHobbelt/subprocess)
@@ -1233,12 +1233,12 @@ The other JavaScript engines considered are of varying size, performance and com
 - **xtensor** [📁](./xtensor) [🌐](https://github.com/GerHobbelt/xtensor)
 - **xtl** [📁](./xtl) [🌐](https://github.com/GerHobbelt/xtl) -- xtensor core library
 - **xxHash** [📁](./xxHash) [🌐](https://github.com/GerHobbelt/xxHash) -- fast hash algorithm
-- ~~[xz-utils](./xz-utils)~~
+- ~~**xz-utils** [🌐](https://github.com/xz-mirror/xz)~~
 - **yara-pattern-matcher** [📁](./yara-pattern-matcher) [🌐](https://github.com/GerHobbelt/yara) -- for automated and user-specified pattern recognition in custom document & metadata *cleaning* / processing tasks
 - **you-token-to-me** [📁](./you-token-to-me) [🌐](https://github.com/GerHobbelt/YouTokenToMe) -- text tokenization
 - **yyjson** [📁](./yyjson) [🌐](https://github.com/GerHobbelt/yyjson)
 - **zlib** [📁](../../thirdparty/zlib) [🌐](https://github.com/GerHobbelt/thirdparty-zlib)
-- ~~[zlog](./zlog)~~
+- ~~**zlog** [🌐](https://github.com/HardySimpson/zlog)~~
 - **zstd** [📁](./zstd) [🌐](https://github.com/GerHobbelt/zstd)
 - **librsync** [📁](./librsync) [🌐](https://github.com/GerHobbelt/librsync) -- a library for calculating and applying network deltas. librsync encapsulates the core algorithms of the rsync protocol.
 - **zsync2** [📁](./zsync2) [🌐](https://github.com/GerHobbelt/zsync2) -- the advanced file download/sync tool zsync. zsync is a well known tool for downloading and updating local files from HTTP servers using the well known algorithms rsync.
