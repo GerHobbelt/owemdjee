@@ -1394,7 +1394,6 @@ The other JavaScript engines considered are of varying size, performance and com
 - **libcopp** [📁](./libcopp) [🌐](https://github.com/GerHobbelt/libcopp): cross-platform coroutine library in C++
 - **boost-url** [📁](./boost-url) [🌐](https://github.com/GerHobbelt/boost-url):
 - **gdbm** [📁](./gdbm) [🌐](https://github.com/GerHobbelt/gdbm):
-- **wxWidgets_examples** [📁](./wxWidgets_examples) [🌐](https://github.com/GerHobbelt/Examples_wxWidgets):
 - **pevents** [📁](./pevents) [🌐](https://github.com/GerHobbelt/pevents):
 - **win32-dpi** [📁](./win32-dpi) [🌐](https://github.com/GerHobbelt/win32-dpi):
 - **libiconv** [📁](./libiconv) [🌐](https://github.com/GerHobbelt/libiconv-win-build):
