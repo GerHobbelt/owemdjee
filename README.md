@@ -1336,35 +1336,35 @@ The other JavaScript engines considered are of varying size, performance and com
 - **zfp-compressed-arrays** [📁](./zfp-compressed-arrays) [🌐](https://github.com/GerHobbelt/zfp) -- zfp is a compressed format for representing multidimensional floating-point and integer arrays. zfp provides compressed-array classes that support high throughput read and write random access to individual array elements. zfp also supports serial and parallel (OpenMP and CUDA) compression of whole arrays, e.g., for applications that read and write large data sets to and from disk.
 
 
-- **ThreadPool** [📁](./ThreadPool) [🌐](https://github.com/GerHobbelt/ThreadPool):
-- **TraceETW** [📁](./TraceETW) [🌐](https://github.com/GerHobbelt/TraceEtw):
-- **random** [📁](./random) [🌐](https://github.com/GerHobbelt/random):
-- **wyhash** [📁](./wyhash) [🌐](https://github.com/GerHobbelt/wyhash):
-- **xnnpack** [📁](./xnnpack) [🌐](https://github.com/GerHobbelt/XNNPACK):
-- **merror** [📁](./merror) [🌐](https://github.com/GerHobbelt/merror):
-- **kahypar** [📁](./kahypar) [🌐](https://github.com/GerHobbelt/kahypar):
-- **flat_hash_map** [📁](./flat_hash_map) [🌐](https://github.com/GerHobbelt/flat_hash_map):
-- **pagerank** [📁](./pagerank) [🌐](https://github.com/GerHobbelt/pagerank):
-- **graphit** [📁](./graphit) [🌐](https://github.com/GerHobbelt/graphit):
-- **libgrape-lite** [📁](./libgrape-lite) [🌐](https://github.com/GerHobbelt/libgrape-lite):
-- **concurrencpp** [📁](./concurrencpp) [🌐](https://github.com/GerHobbelt/concurrencpp):
-- **lerc** [📁](./lerc) [🌐](https://github.com/GerHobbelt/lerc):
-- **stx-error-handling** [📁](./stx-error-handling) [🌐](https://github.com/GerHobbelt/STX):
-- **result-cpp** [📁](./result-cpp) [🌐](https://github.com/GerHobbelt/result):
-- **delegate** [📁](./delegate) [🌐](https://github.com/GerHobbelt/delegate):
-- **robin-map** [📁](./robin-map) [🌐](https://github.com/GerHobbelt/robin-map):
-- **hopscotch-map** [📁](./hopscotch-map) [🌐](https://github.com/GerHobbelt/hopscotch-map):
-- **ocreval** [📁](./ocreval) [🌐](https://github.com/GerHobbelt/ocreval):
-- **asio** [📁](./asio) [🌐](https://github.com/GerHobbelt/asio):
-- **highway** [📁](./highway) [🌐](https://github.com/GerHobbelt/highway):
-- **tinycolormap** [📁](./tinycolormap) [🌐](https://github.com/GerHobbelt/tinycolormap):
-- **tesseract-gImgRdrGui** [📁](./tesseract-gImgRdrGui) [🌐](https://github.com/GerHobbelt/gImageReader):
-- **pdf2htmlEX** [📁](./pdf2htmlEX) [🌐](https://github.com/GerHobbelt/pdf2htmlEX):
+- **ThreadPool** [📁](./ThreadPool) [🌐](https://github.com/GerHobbelt/ThreadPool)
+- **TraceETW** [📁](./TraceETW) [🌐](https://github.com/GerHobbelt/TraceEtw)
+- **random** [📁](./random) [🌐](https://github.com/GerHobbelt/random)
+- **wyhash** [📁](./wyhash) [🌐](https://github.com/GerHobbelt/wyhash)
+- **xnnpack** [📁](./xnnpack) [🌐](https://github.com/GerHobbelt/XNNPACK)
+- **merror** [📁](./merror) [🌐](https://github.com/GerHobbelt/merror)
+- **kahypar** [📁](./kahypar) [🌐](https://github.com/GerHobbelt/kahypar)
+- **flat_hash_map** [📁](./flat_hash_map) [🌐](https://github.com/GerHobbelt/flat_hash_map)
+- **pagerank** [📁](./pagerank) [🌐](https://github.com/GerHobbelt/pagerank)
+- **graphit** [📁](./graphit) [🌐](https://github.com/GerHobbelt/graphit)
+- **libgrape-lite** [📁](./libgrape-lite) [🌐](https://github.com/GerHobbelt/libgrape-lite)
+- **concurrencpp** [📁](./concurrencpp) [🌐](https://github.com/GerHobbelt/concurrencpp)
+- **lerc** [📁](./lerc) [🌐](https://github.com/GerHobbelt/lerc)
+- **stx-error-handling** [📁](./stx-error-handling) [🌐](https://github.com/GerHobbelt/STX)
+- **result-cpp** [📁](./result-cpp) [🌐](https://github.com/GerHobbelt/result)
+- **delegate** [📁](./delegate) [🌐](https://github.com/GerHobbelt/delegate)
+- **robin-map** [📁](./robin-map) [🌐](https://github.com/GerHobbelt/robin-map)
+- **hopscotch-map** [📁](./hopscotch-map) [🌐](https://github.com/GerHobbelt/hopscotch-map)
+- **ocreval** [📁](./ocreval) [🌐](https://github.com/GerHobbelt/ocreval)
+- **asio** [📁](./asio) [🌐](https://github.com/GerHobbelt/asio)
+- **highway** [📁](./highway) [🌐](https://github.com/GerHobbelt/highway)
+- **tinycolormap** [📁](./tinycolormap) [🌐](https://github.com/GerHobbelt/tinycolormap)
+- **tesseract-gImgRdrGui** [📁](./tesseract-gImgRdrGui) [🌐](https://github.com/GerHobbelt/gImageReader)
+- **pdf2htmlEX** [📁](./pdf2htmlEX) [🌐](https://github.com/GerHobbelt/pdf2htmlEX)
 - **bhtsne--Barnes-Hut-t-SNE** [📁](./bhtsne--Barnes-Hut-t-SNE) [🌐](https://github.com/GerHobbelt/bhtsne) -- Barnes-Hut t-SNE
-- **pcg-cpp-random** [📁](./pcg-cpp-random) [🌐](https://github.com/GerHobbelt/pcg-cpp):
-- **cpp-ipc** [📁](./cpp-ipc) [🌐](https://github.com/GerHobbelt/cpp-ipc):
+- **pcg-cpp-random** [📁](./pcg-cpp-random) [🌐](https://github.com/GerHobbelt/pcg-cpp)
+- **cpp-ipc** [📁](./cpp-ipc) [🌐](https://github.com/GerHobbelt/cpp-ipc)
 - **userver** [📁](./userver) [🌐](https://github.com/GerHobbelt/userver) -- an open source asynchronous framework with a rich set of abstractions for fast and comfortable creation of C++ microservices, services and utilities. The framework solves the problem of efficient I/O interactions transparently for the developers. Operations that would typically suspend the thread of execution do not suspend it. Instead of that, the thread processes other requests and tasks and returns to the handling of the operation only when it is guaranteed to execute immediately. As a result you get straightforward source code and avoid CPU-consuming context switches from OS, efficiently utilizing the CPU with a small amount of execution threads.
-- **PhotonLibOS** [📁](./PhotonLibOS) [🌐](https://github.com/GerHobbelt/PhotonLibOS):
+- **PhotonLibOS** [📁](./PhotonLibOS) [🌐](https://github.com/GerHobbelt/PhotonLibOS)
 - **coost** [📁](./coost) [🌐](https://github.com/GerHobbelt/coost) -- A tiny boost library in C++11. `coost` (formerly known as `cocoyaxi`) is an elegant and efficient cross-platform C++ base library, it is not as heavy as `boost`, but still provides enough powerful features.
 - **libstb** [📁](./libstb) [🌐](https://github.com/GerHobbelt/stb) -- single-file public domain (or MIT licensed) libraries for C/C++.
 - **bolt** [📁](./bolt) [🌐](https://github.com/GerHobbelt/bolt) -- a deep learning library with high performance and heterogeneous flexibility.
@@ -1392,12 +1392,12 @@ The other JavaScript engines considered are of varying size, performance and com
 - **utfcpp** [📁](./utfcpp) [🌐](https://github.com/GerHobbelt/utfcpp) -- UTF-8 with C++ in a Portable Way
 - **fast_float** [📁](./fast_float) [🌐](https://github.com/GerHobbelt/fast_float) -- fast and exact implementation of the C++ `from_chars` functions for float and double types: 4x faster than `strtod`
 - **libcopp** [📁](./libcopp) [🌐](https://github.com/GerHobbelt/libcopp) -- cross-platform coroutine library in C++
-- **boost-url** [📁](./boost-url) [🌐](https://github.com/GerHobbelt/boost-url):
-- **gdbm** [📁](./gdbm) [🌐](https://github.com/GerHobbelt/gdbm):
-- **pevents** [📁](./pevents) [🌐](https://github.com/GerHobbelt/pevents):
-- **win32-dpi** [📁](./win32-dpi) [🌐](https://github.com/GerHobbelt/win32-dpi):
-- **libiconv** [📁](./libiconv) [🌐](https://github.com/GerHobbelt/libiconv-win-build):
-- **horsejs** [📁](./horsejs) [🌐](https://github.com/GerHobbelt/horsejs):
+- **boost-url** [📁](./boost-url) [🌐](https://github.com/GerHobbelt/boost-url)
+- **gdbm** [📁](./gdbm) [🌐](https://github.com/GerHobbelt/gdbm)
+- **pevents** [📁](./pevents) [🌐](https://github.com/GerHobbelt/pevents)
+- **win32-dpi** [📁](./win32-dpi) [🌐](https://github.com/GerHobbelt/win32-dpi)
+- **libiconv** [📁](./libiconv) [🌐](https://github.com/GerHobbelt/libiconv-win-build)
+- **horsejs** [📁](./horsejs) [🌐](https://github.com/GerHobbelt/horsejs)
 
 
 
