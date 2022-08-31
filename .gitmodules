@@ -1528,9 +1528,6 @@
 [submodule "gdbm"]
 	path = gdbm
 	url = git@github.com:GerHobbelt/gdbm.git
-[submodule "wxWidgets_examples"]
-	path = wxWidgets_examples
-	url = git@github.com:GerHobbelt/Examples_wxWidgets.git
 [submodule "pevents"]
 	path = pevents
 	url = git@github.com:GerHobbelt/pevents.git
