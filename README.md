@@ -1363,7 +1363,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - **bhtsne--Barnes-Hut-t-SNE** [📁](./bhtsne--Barnes-Hut-t-SNE) [🌐](https://github.com/GerHobbelt/bhtsne): Barnes-Hut t-SNE
 - **pcg-cpp-random** [📁](./pcg-cpp-random) [🌐](https://github.com/GerHobbelt/pcg-cpp):
 - **cpp-ipc** [📁](./cpp-ipc) [🌐](https://github.com/GerHobbelt/cpp-ipc):
-- **userver** [📁](./userver) [🌐](https://github.com/GerHobbelt/userver):
+- **userver** [📁](./userver) [🌐](https://github.com/GerHobbelt/userver): an open source asynchronous framework with a rich set of abstractions for fast and comfortable creation of C++ microservices, services and utilities. The framework solves the problem of efficient I/O interactions transparently for the developers. Operations that would typically suspend the thread of execution do not suspend it. Instead of that, the thread processes other requests and tasks and returns to the handling of the operation only when it is guaranteed to execute immediately. As a result you get straightforward source code and avoid CPU-consuming context switches from OS, efficiently utilizing the CPU with a small amount of execution threads.
 - **PhotonLibOS** [📁](./PhotonLibOS) [🌐](https://github.com/GerHobbelt/PhotonLibOS):
 - **coost** [📁](./coost) [🌐](https://github.com/GerHobbelt/coost): A tiny boost library in C++11. `coost` (formerly known as `cocoyaxi`) is an elegant and efficient cross-platform C++ base library, it is not as heavy as `boost`, but still provides enough powerful features.
 - **libstb** [📁](./libstb) [🌐](https://github.com/GerHobbelt/stb): single-file public domain (or MIT licensed) libraries for C/C++.
