@@ -1522,3 +1522,24 @@
 	path = libcopp
 	url = git@github.com:GerHobbelt/libcopp.git
 
+[submodule "boost-url"]
+	path = boost-url
+	url = git@github.com:GerHobbelt/boost-url.git
+[submodule "gdbm"]
+	path = gdbm
+	url = git@github.com:GerHobbelt/gdbm.git
+[submodule "wxWidgets_examples"]
+	path = wxWidgets_examples
+	url = git@github.com:GerHobbelt/Examples_wxWidgets.git
+[submodule "pevents"]
+	path = pevents
+	url = git@github.com:GerHobbelt/pevents.git
+[submodule "win32-dpi"]
+	path = win32-dpi
+	url = git@github.com:GerHobbelt/win32-dpi.git
+[submodule "libiconv"]
+	path = libiconv
+	url = git@github.com:GerHobbelt/libiconv-win-build.git
+[submodule "horsejs"]
+	path = horsejs
+	url = git@github.com:GerHobbelt/horsejs.git

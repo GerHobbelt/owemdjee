@@ -671,7 +671,7 @@ The other JavaScript engines considered are of varying size, performance and com
 	
         + **thread-pool-c** [📁](./thread-pool-c) [🌐](https://github.com/GerHobbelt/C-Thread-Pool)
         + **thread-pool-cpp** [📁](./thread-pool-cpp) [🌐](https://github.com/GerHobbelt/thread-pool-cpp)
-        + **thread-pool** [📁](./thread-pool) [🌐](https://github.com/GerHobbelt/thread-pool)
+        + **thread-pool** [📁](./thread-pool) [🌐](https://github.com/GerHobbelt/thread-pool) -- `BS::thread_pool`: a fast, lightweight, and easy-to-use C++17 thread pool for high-performance scientific computing.
 		
     - **task schedulers**
 	
@@ -1183,7 +1183,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - **tesstrain** [📁](../../thirdparty/tesstrain) [🌐](https://github.com/GerHobbelt/tesstrain)
 - **thread-pool-c** [📁](./thread-pool-c) [🌐](https://github.com/GerHobbelt/C-Thread-Pool)
 - **thread-pool-cpp** [📁](./thread-pool-cpp) [🌐](https://github.com/GerHobbelt/thread-pool-cpp)
-- **thread-pool** [📁](./thread-pool) [🌐](https://github.com/GerHobbelt/thread-pool)
+- **thread-pool** [📁](./thread-pool) [🌐](https://github.com/GerHobbelt/thread-pool) -- `BS::thread_pool`: a fast, lightweight, and easy-to-use C++17 thread pool for high-performance scientific computing.
 - **thunderSVM** [📁](./thunderSVM) [🌐](https://github.com/GerHobbelt/thundersvm)
 - **ticpp** [📁](./ticpp) [🌐](https://github.com/GerHobbelt/ticpp) -- TinyXML++: XML read/write
 - **tidy-html5** [📁](./tidy-html5) [🌐](https://github.com/GerHobbelt/tidy-html5) -- clean up HTML documents before archiving/processing
@@ -1365,8 +1365,8 @@ The other JavaScript engines considered are of varying size, performance and com
 - **cpp-ipc** [📁](./cpp-ipc) [🌐](https://github.com/GerHobbelt/cpp-ipc):
 - **userver** [📁](./userver) [🌐](https://github.com/GerHobbelt/userver):
 - **PhotonLibOS** [📁](./PhotonLibOS) [🌐](https://github.com/GerHobbelt/PhotonLibOS):
-- **coost** [📁](./coost) [🌐](https://github.com/GerHobbelt/coost):
-- **libstb** [📁](./libstb) [🌐](https://github.com/GerHobbelt/stb):
+- **coost** [📁](./coost) [🌐](https://github.com/GerHobbelt/coost): A tiny boost library in C++11. `coost` (formerly known as `cocoyaxi`) is an elegant and efficient cross-platform C++ base library, it is not as heavy as `boost`, but still provides enough powerful features.
+- **libstb** [📁](./libstb) [🌐](https://github.com/GerHobbelt/stb): single-file public domain (or MIT licensed) libraries for C/C++.
 - **bolt** [📁](./bolt) [🌐](https://github.com/GerHobbelt/bolt): a deep learning library with high performance and heterogeneous flexibility.
 - **concurrentqueue** [📁](./concurrentqueue) [🌐](https://github.com/GerHobbelt/concurrentqueue): moodycamel::ConcurrentQueue, an industrial-strength and fast multi-producer, multi-consumer lock-free concurrent queue for C++11.
 - **libimagequant** [📁](./libimagequant) [🌐](https://github.com/GerHobbelt/libimagequant): Palette quantization library that powers `pngquant` and other PNG optimizers. `libimagequant` converts RGBA images to palette-based 8-bit indexed images, including alpha component. It's ideal for generating tiny PNG images and nice-looking GIFs. Image encoding/decoding isn't handled by the library itself, bring your own encoder.
@@ -1392,6 +1392,13 @@ The other JavaScript engines considered are of varying size, performance and com
 - **utfcpp** [📁](./utfcpp) [🌐](https://github.com/GerHobbelt/utfcpp): UTF-8 with C++ in a Portable Way
 - **fast_float** [📁](./fast_float) [🌐](https://github.com/GerHobbelt/fast_float): fast and exact implementation of the C++ `from_chars` functions for float and double types: 4x faster than `strtod`
 - **libcopp** [📁](./libcopp) [🌐](https://github.com/GerHobbelt/libcopp): cross-platform coroutine library in C++
+- **boost-url** [📁](./boost-url) [🌐](https://github.com/GerHobbelt/boost-url):
+- **gdbm** [📁](./gdbm) [🌐](https://github.com/GerHobbelt/gdbm):
+- **wxWidgets_examples** [📁](./wxWidgets_examples) [🌐](https://github.com/GerHobbelt/Examples_wxWidgets):
+- **pevents** [📁](./pevents) [🌐](https://github.com/GerHobbelt/pevents):
+- **win32-dpi** [📁](./win32-dpi) [🌐](https://github.com/GerHobbelt/win32-dpi):
+- **libiconv** [📁](./libiconv) [🌐](https://github.com/GerHobbelt/libiconv-win-build):
+- **horsejs** [📁](./horsejs) [🌐](https://github.com/GerHobbelt/horsejs):
 
 
 
