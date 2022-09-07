@@ -1549,3 +1549,9 @@
 [submodule "dirent"]
 	path = dirent
 	url = git@github.com:GerHobbelt/dirent.git
+[submodule "swig"]
+	path = swig
+	url = git@github.com:GerHobbelt/swig.git
+[submodule "cpp_rest_sdk"]
+	path = cpp_rest_sdk
+	url = git@github.com:GerHobbelt/cpprestsdk.git
