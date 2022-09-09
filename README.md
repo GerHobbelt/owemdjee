@@ -1410,6 +1410,9 @@ The other JavaScript engines considered are of varying size, performance and com
 
 - **dirent** [📁](./dirent) [🌐](https://github.com/GerHobbelt/dirent) -- POSIX `dirent.h` ported to MS Windows (Win32/Win64); used by several libraries.
 
+- **swig**  [📁](./swig) [🌐](git@github.com:GerHobbelt/swig.git)
+- **cpp_rest_sdk**  [📁](./cpp_rest_sdk) [🌐](git@github.com:GerHobbelt/cpprestsdk.git)
+
 
 
 
