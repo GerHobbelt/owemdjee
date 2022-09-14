@@ -1555,3 +1555,9 @@
 [submodule "cpp_rest_sdk"]
 	path = cpp_rest_sdk
 	url = git@github.com:GerHobbelt/cpprestsdk.git
+[submodule "infoware"]
+	path = infoware
+	url = git@github.com:GerHobbelt/infoware.git
+[submodule "libassert"]
+	path = libassert
+	url = git@github.com:GerHobbelt/libassert.git
