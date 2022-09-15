@@ -150,5 +150,27 @@ while (modified) {
 // hotfixes:
 txt = txt
 .replace(/https:\/\/github.com\/GerHobbelt\/\//g, `https://github.com/GerHobbelt/`)
+.replace(/\(git@github.com:GerHobbelt\/([^\s]+)\.git\)/g, '(https://github.com/GerHobbelt/$1)')
+
+
+
+// sort the overview list alphabetically:
+txt = txt.replace(/(# Libraries in this collection \(All[^\n]+)([^]+)(## Libraries not available[^\n]+)/, function r(m, p1, p2, p3) {
+	p2 = '\n' + p2 + '\n';
+	let a = p2.split(/\n- /).map((l) => l.trim()).filter((l) => l.length !== 0);
+	let b = a.map((l, i) => {
+		return { line: l.replace(/[^a-z0-9]/gi, '').toLowerCase(), index: i, origline: l };
+	});
+	b.sort((a, b) => {
+		return a.line.localeCompare(b.line);
+	});
+	// remove duplicate entries!
+	b.filter((l, i) => {
+		return (i > 0 && b[i - 1].line === l.line);
+	})
+	let s = b.map((l) => '- ' + l.origline).join('\n');
+	console.log({ b, s });
+	return p1 + '\n\n' + s + '\n\n\n\n\n\n\n\n' + p3;
+});
 
 fs.writeFileSync("README.md", txt, "utf8");
