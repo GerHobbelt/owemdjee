@@ -264,7 +264,8 @@ The other JavaScript engines considered are of varying size, performance and com
     - ~~**xz-utils** [🌐](https://github.com/xz-mirror/xz)~~
       + **removed**; reason: see `fast-lzma2` above. When we want this, we can go through [Apache Tika](https://tika.apache.org/) or other thirdparty pipelines.
     - **zstd** [📁](./zstd) [🌐](https://github.com/GerHobbelt/zstd)
-    - see also [lzbench](https://github.com/inikep/lzbench)
+    
+	See also [lzbench](https://github.com/inikep/lzbench).
 
 - **file / directory tree synchronization** (local and remote)
 
