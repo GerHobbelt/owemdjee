@@ -162,7 +162,8 @@ The other JavaScript engines considered are of varying size, performance and com
 
     - ~~**ice** [🌐](https://github.com/zeroc-ice/ice) -- Comprehensive RPC Framework: helps you network your software with minimal effort.~~
         - **removed**; reason: has a strong focus on the *remote*, i.e. `R` in `RPC` (thus a focus on things such as encryption, authentication, firewalling, etc.), which we don't want or need: all services are supposed to run on a single machine and comms go through `localhost` *only*. When folks find they need to distribute the workload across multiple machines, then we'll be entering a new era in Qiqqa usage and then will be soon enough to (re-)investigate the usefulness of this package.
-        
+    
+    
         Also, we are currently more interested in *fast data serialization* then RPC *per se* as we aim for a solution that's more akin to a REST API interface style.
 
     - ~~**oatpp** [🌐](https://github.com/oatpp/oatpp) -- IPC / server framework~~
@@ -176,13 +177,12 @@ The other JavaScript engines considered are of varying size, performance and com
     - **rapidJSON** [📁](./rapidJSON) [🌐](https://github.com/GerHobbelt/rapidjson) -- TenCent's fast JSON parser/generator for C++ with both SAX & DOM style APIs.
     - **yyjson** [📁](./yyjson) [🌐](https://github.com/GerHobbelt/yyjson) -- allegedly the fastest JSON library in C.
     - ~~**libsmile** [🌐](https://github.com/pierre/libsmile) -- ["Smile" format](https://en.wikipedia.org/wiki/Smile_%28data_interchange_format%29), i.e. a compact binary JSON format~~
-        + **removed**; reason: I think we'dd better standardize on using one or more of these:
+        - **removed**; reason: I think we'dd better standardize on using one or more of these:
+            - custom binary exchange formats for those interchanges that demand highest performance and MAY carry large transfer loads.
             - JSON
+            - TOML
             - XML
             - YAML
-            - TOML
-            - custom binary exchange formats for those interchanges that demand highest performance and MAY carry large transfer loads.
-
 
 
 - ~~**IPC: YAML, TOML, etc. for protocol design**~~:
@@ -649,7 +649,8 @@ The other JavaScript engines considered are of varying size, performance and com
     - **wxVisualScriptEngine** [📁](./wxVisualScriptEngine) [🌐](https://github.com/GerHobbelt/VisualScriptEngineWxWidgets) -- a utility module for [VisualScriptEngine](https://github.com/kovacsv/VisualScriptEngine) which provides helper classes for embedding the engine in a wxWidgets application.
     - ~~**CPython** [🌐](https://github.com/python/cpython)~~
         - **removed**; reason: we've decided to offer any application user facing scripting features in JavaScript only: Python and the others can use socket-based messaging when someone wants to write their user scripts in any of those languages.
-        
+    
+    
         The additional (and more important) reason to ditch CPython from the R&D set is hairiness of integrating Python into an application as an embedded scripting language, instead of the other way around. With the envisioned advent of ZeroMQ/socket based IPC, any Python scripts can hook into that instead of spending the effort and maintenance of having that large language as an embedded 'assistive' scripting/configuration language: it's simply too huge and complicated. We're not Blender and we don't have the funding.
 
     - ~~**lua** [🌐](https://github.com/lua/lua)~~
@@ -742,24 +743,24 @@ The other JavaScript engines considered are of varying size, performance and com
             - **taolog** [📁](./taolog) [🌐](https://github.com/GerHobbelt/taolog) -- A Win32 logger based on DebugView & ETW.
 
     - **task schedulers**
-
+    
+        - **asynqro** [📁](./asynqro) [🌐](https://github.com/GerHobbelt/asynqro) -- Futures and thread pool for C++: Asynqro gives developers a rich monadic Future API (inspired by Future API in Scala language), a clean API, refined task scheduling logic and is not tied to any framework.
         - **enkiTS** [📁](./enkiTS-TaskScheduler) [🌐](https://github.com/GerHobbelt/enkiTS) -- A C++11 Task Scheduler for creating parallel programs.
-
+        
           Features:
-          - Lightweight
-          - Fast, then scalable - designed for consumer devices first, so performance on a low number of threads is important, followed by scalability.
-          - Braided parallelism - can issue tasks from another task as well as from the thread which created the Task System, and has a simple task interface for both data and task parallelism.
-          - Up-front Allocation friendly - designed for zero allocations during scheduling.
-          - Can pin tasks to a given thread - can schedule a task which will only be run on the specified thread.
-          - Can set task priorities - Up to 5 task priorities can be configured via define ENKITS_TASK_PRIORITIES_NUM (defaults to 3). Higher priority tasks are run before lower priority ones.
-          - Can register external threads to use with enkiTS
-          - Dependencies - can set dependencies between tasks.
-          - Completion Actions - can perform an action on task completion. This avoids the expensive action of adding the task to the scheduler, and can be used to safely delete a completed task.
-          - Can wait for pinned tasks - useful for creating IO threads which do no other work.
-
+            - Braided parallelism - can issue tasks from another task as well as from the thread which created the Task System, and has a simple task interface for both data and task parallelism.
+            - Can pin tasks to a given thread - can schedule a task which will only be run on the specified thread.
+            - Can register external threads to use with enkiTS
+            - Can set task priorities - Up to 5 task priorities can be configured via define ENKITS_TASK_PRIORITIES_NUM (defaults to 3). Higher priority tasks are run before lower priority ones.
+            - Can wait for pinned tasks - useful for creating IO threads which do no other work.
+            - Completion Actions - can perform an action on task completion. This avoids the expensive action of adding the task to the scheduler, and can be used to safely delete a completed task.
+            - Dependencies - can set dependencies between tasks.
+            - Fast, then scalable - designed for consumer devices first, so performance on a low number of threads is important, followed by scalability.
+            - Lightweight
+            - Up-front Allocation friendly - designed for zero allocations during scheduling.
+    
         - **google::marl** [📁](./google-marl) [🌐](https://github.com/GerHobbelt/marl) -- a hybrid thread / fiber task scheduler written in C++ 11. Marl uses a combination of fibers and threads to allow efficient execution of tasks that can block, while keeping a fixed number of hardware threads.
         - **taskflow** [📁](./taskflow) [🌐](https://github.com/GerHobbelt/taskflow) -- Quickly write parallel and heterogeneous task programs in modern C++. Taskflow is faster, more expressive, and easier for drop-in integration than many of existing task programming frameworks in handling complex parallel workloads.
-        - **asynqro** [📁](./asynqro) [🌐](https://github.com/GerHobbelt/asynqro) -- Futures and thread pool for C++: Asynqro gives developers a rich monadic Future API (inspired by Future API in Scala language), a clean API, refined task scheduling logic and is not tied to any framework.
 
     - **thread pools**
     
