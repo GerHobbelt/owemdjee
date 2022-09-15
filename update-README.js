@@ -155,22 +155,85 @@ txt = txt
 
 
 // sort the overview list alphabetically:
-txt = txt.replace(/(# Libraries in this collection \(All[^\n]+)([^]+)(## Libraries not available[^\n]+)/, function r(m, p1, p2, p3) {
+function sort_section(start_re_str, txt) {
+	txt = txt.replace(new RegExp(`(${start_re_str}[^\\n]+)\\n([^]+?)\\n(#[^\\n]+)`, 'g'), function r(m, p1, p2, p3) {
+		let s = sort_subsection(/\n- /, p2, '- ');
+
+		console.log({ s, p1, p3 });
+		return p1 + '\n\n' + s + '\n\n\n\n\n\n\n\n' + p3;
+	});
+	return txt;
+}
+
+txt = sort_section('# Libraries in this collection \\(All', txt);
+txt = sort_section('## Libraries not available in this collection but already part', txt);
+
+
+
+// sort the overview list alphabetically:
+function sort_subsection(item_re, p2, rebuild_prefix) {
 	p2 = '\n' + p2 + '\n';
-	let a = p2.split(/\n- /).map((l) => l.trim()).filter((l) => l.length !== 0);
+	let a = p2.split(item_re).map((l) => l.trim()).filter((l) => l.length !== 0);
 	let b = a.map((l, i) => {
-		return { line: l.replace(/[^a-z0-9]/gi, '').toLowerCase(), index: i, origline: l };
+		return { line: l.replace(/[^a-z0-9 ]/gi, '').toLowerCase(), index: i, origline: l };
 	});
 	b.sort((a, b) => {
 		return a.line.localeCompare(b.line);
 	});
+
 	// remove duplicate entries!
-	b.filter((l, i) => {
-		return (i > 0 && b[i - 1].line === l.line);
+	b = b.filter((l, i) => {
+		return (i === 0 || b[i - 1].line !== l.line);
 	})
-	let s = b.map((l) => '- ' + l.origline).join('\n');
+
+	// re-merge the list; make sure multiline entries have an extra empty line at the end to clearly visualize them (as was done by hand before)
+	let s = b.map((l) => rebuild_prefix + l.origline + (l.origline.indexOf('\n') > 0 ? '\n' : '')).join('\n');
+
 	console.log({ b, s });
-	return p1 + '\n\n' + s + '\n\n\n\n\n\n\n\n' + p3;
-});
+	return s;
+}
+
+txt = txt.replace(/(# Libraries we\'re looking at[^\n]+)\n([^]+?)\n((?:#[^\n]+)|---)/, function r(m, p1, p2, p3) {
+	// split up in subsections
+	p2 = p2.replace(/\t/g, '    ');
+	let a = p2.split(/\n- /).map((l) => l.trim()).filter((l) => l.length !== 0);
+	let b = a.map((l) => {
+		var rv = /^([^]+?)(\n  [-+*] [^]+?)(\n[^\s]+[^]+)?$/.exec(l + '\n');
+		let s;
+		if (rv) {
+			rv[0] = null;
+			rv[2] = rv[2].replace(/\n  [-+*] /g, '\n    - ');
+			if (!rv[3])
+				rv[3] = '';
+			rv.input = null;
+
+			s = sort_subsection(/\n    - /, rv[2], '    - ');
+			s = `${ rv[1] }\n${ s }\n${ rv[3] }`;
+		}
+		else {
+			rv = /^([^]+?)(\n    [-+*] [^]+?)(\n[^\s]+[^]+)?$/.exec(l + '\n');
+			if (rv) {
+				rv[0] = null;
+				rv[2] = rv[2].replace(/\n    [-+*] /g, '\n    - ');
+				if (!rv[3])
+					rv[3] = '';
+				rv.input = null;
+
+				s = sort_subsection(/\n    - /, rv[2], '    - ');
+				s = `${ rv[1] }\n${ s }\n${ rv[3] }`;
+			}
+			else {
+				rv = { bugger: 1, l };
+				s = l;
+			}
+		}
+		console.log({ rv, s });
+		return s;
+	})
+
+	console.log({ p1, p3 });
+	return p1 + '\n\n- ' + b.join('\n\n- ') + '\n\n\n\n' + p3;
+})
+
 
 fs.writeFileSync("README.md", txt, "utf8");
