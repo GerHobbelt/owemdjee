@@ -179,15 +179,30 @@ function sort_subsection(item_re, p2, rebuild_prefix, indent_prefix) {
 		let key = l.replace(/[^a-z0-9 ]/gi, '').toLowerCase();
 
 		// unindent sublevel:
-		//l = l.replace(re, '');
+		let old_l = l;
+		//console.log({ subline: 1, l });
+		l = l.replace(re, '\n');
+		if (l !== old_l)
+			console.log({ subline_DEINDENT: 1, re, indent_prefix, old_l, l });
 
 		// see if it has a sublist to sort
-		//l = process_subsection(l);
+		l = process_subsection(l);
+
+		// re-indent sublevel:
+		l = l.replace(/\n/g, `\n${indent_prefix}`);
+		if (l !== old_l)
+			console.log({ subline_sorted: 1, l });
 
 		return { line: key, index: i, origline: l };
 	});
 	b.sort((a, b) => {
-		return a.line.localeCompare(b.line);
+		let ad = (a.origline.indexOf('[📁]') > 0);
+		let bd = (b.origline.indexOf('[📁]') > 0);
+		if (ad !== bd)
+			return bd > ad ? 1 : -1;
+
+		let rv = a.line.localeCompare(b.line);
+		return rv;
 	});
 
 	// remove duplicate entries!
@@ -198,7 +213,7 @@ function sort_subsection(item_re, p2, rebuild_prefix, indent_prefix) {
 	// re-merge the list; make sure multiline entries have an extra empty line at the end to clearly visualize them (as was done by hand before)
 	let s = b.map((l) => rebuild_prefix + l.origline + (l.origline.indexOf('\n') > 0 ? '\n' : '')).join('\n');
 
-	console.log({ b, s });
+	//console.log({ b, s });
 	return s;
 }
 
@@ -227,10 +242,13 @@ function process_subsection(l) {
 	}
 
 	if (rv) {
-		s = sort_subsection(/\n    - /, rv[2], '    - ', '        ');
+		s = sort_subsection(/\n    - /, rv[2], '    - ', '    ');
 		s = `${rv[1]}\n${s}\n\n${rv[3]}`;
 	}
-	console.log({ rv, s });
+
+	s = s.trimRight();
+
+	//console.log({ rv, s });
 	return s;
 }
 
@@ -239,10 +257,11 @@ txt = txt.replace(/(# Libraries we\'re looking at[^\n]+)\n([^]+?)\n((?:#[^\n]+)|
 	p2 = p2.replace(/\t/g, '    ');
 	let a = p2.split(/\n- /).map((l) => l.trim()).filter((l) => l.length !== 0);
 	let b = a.map((l) => {
-		return process_subsection(l);
+		l = process_subsection(l);
+		return l + (l.indexOf('\n') > 0 ? '\n' : '');
 	})
 
-	console.log({ p1, p3 });
+	//console.log({ p1, p3 });
 	return p1 + '\n\n- ' + b.join('\n\n- ') + '\n\n\n\n' + p3;
 })
 
