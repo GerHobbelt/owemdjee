@@ -402,7 +402,8 @@ The other JavaScript engines considered are of varying size, performance and com
     - **pmt-png-tools** [📁](./pmt-png-tools) [🌐](https://github.com/GerHobbelt/pmt)
     - ~~[DICOM to NIfTI](https://github.com/rordenlab/dcm2niix) (*not included; see also DICOM slot above*)~~
     - ~~**cgohlke::imagecodecs** [🌐](https://github.com/cgohlke/imagecodecs) (*not included; see also DICOM slot above*)~~
-    - [image formats (visual) quality comparison](https://eclipseo.github.io/image-comparison-web/) (*not included*)
+    
+	See also [image formats (visual) quality comparison](https://eclipseo.github.io/image-comparison-web/) (*not included*).
 
 - **Monte Carlo simulations, LDA, keyword inference/extraction, etc.**
 
