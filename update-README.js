@@ -157,7 +157,7 @@ txt = txt
 // sort the overview list alphabetically:
 function sort_section(start_re_str, txt) {
 	txt = txt.replace(new RegExp(`(${start_re_str}[^\\n]+)\\n([^]+?)\\n(#[^\\n]+)`, 'g'), function r(m, p1, p2, p3) {
-		let s = sort_subsection(/\n- /, p2, '- ');
+		let s = sort_subsection(/\n- /, p2, '- ', '    ');
 
 		console.log({ s, p1, p3 });
 		return p1 + '\n\n' + s + '\n\n\n\n\n\n\n\n' + p3;
@@ -171,11 +171,20 @@ txt = sort_section('## Libraries not available in this collection but already pa
 
 
 // sort the overview list alphabetically:
-function sort_subsection(item_re, p2, rebuild_prefix) {
+function sort_subsection(item_re, p2, rebuild_prefix, indent_prefix) {
 	p2 = '\n' + p2 + '\n';
 	let a = p2.split(item_re).map((l) => l.trim()).filter((l) => l.length !== 0);
 	let b = a.map((l, i) => {
-		return { line: l.replace(/[^a-z0-9 ]/gi, '').toLowerCase(), index: i, origline: l };
+		let re = new RegExp(`\n${indent_prefix}`, 'g');
+		let key = l.replace(/[^a-z0-9 ]/gi, '').toLowerCase();
+
+		// unindent sublevel:
+		//l = l.replace(re, '');
+
+		// see if it has a sublist to sort
+		//l = process_subsection(l);
+
+		return { line: key, index: i, origline: l };
 	});
 	b.sort((a, b) => {
 		return a.line.localeCompare(b.line);
@@ -193,42 +202,44 @@ function sort_subsection(item_re, p2, rebuild_prefix) {
 	return s;
 }
 
+function process_subsection(l) {
+	var rv = /^([^]+?)(\n  [-+*] [^]+?)(\n  [^-+*\s]+[^]+)?$/.exec(l + '\n');
+	let s = l;
+	if (rv) {
+		rv[0] = null;
+		rv[2] = rv[2].replace(/\n  [-+*] /g, '\n    - ');
+		if (!rv[3])
+			rv[3] = '';
+		rv.input = null;
+	}
+	else {
+		rv = /^([^]+?)(\n    [-+*] [^]+?)(\n    [^-+*\s]+[^]+)?$/.exec(l + '\n');
+		if (rv) {
+			rv[0] = null;
+			rv[2] = rv[2].replace(/\n    [-+*] /g, '\n    - ');
+			if (!rv[3])
+				rv[3] = '';
+			rv.input = null;
+		}
+		else {
+			rv = null;
+		}
+	}
+
+	if (rv) {
+		s = sort_subsection(/\n    - /, rv[2], '    - ', '        ');
+		s = `${rv[1]}\n${s}\n\n${rv[3]}`;
+	}
+	console.log({ rv, s });
+	return s;
+}
+
 txt = txt.replace(/(# Libraries we\'re looking at[^\n]+)\n([^]+?)\n((?:#[^\n]+)|---)/, function r(m, p1, p2, p3) {
 	// split up in subsections
 	p2 = p2.replace(/\t/g, '    ');
 	let a = p2.split(/\n- /).map((l) => l.trim()).filter((l) => l.length !== 0);
 	let b = a.map((l) => {
-		var rv = /^([^]+?)(\n  [-+*] [^]+?)(\n[^\s]+[^]+)?$/.exec(l + '\n');
-		let s;
-		if (rv) {
-			rv[0] = null;
-			rv[2] = rv[2].replace(/\n  [-+*] /g, '\n    - ');
-			if (!rv[3])
-				rv[3] = '';
-			rv.input = null;
-
-			s = sort_subsection(/\n    - /, rv[2], '    - ');
-			s = `${ rv[1] }\n${ s }\n${ rv[3] }`;
-		}
-		else {
-			rv = /^([^]+?)(\n    [-+*] [^]+?)(\n[^\s]+[^]+)?$/.exec(l + '\n');
-			if (rv) {
-				rv[0] = null;
-				rv[2] = rv[2].replace(/\n    [-+*] /g, '\n    - ');
-				if (!rv[3])
-					rv[3] = '';
-				rv.input = null;
-
-				s = sort_subsection(/\n    - /, rv[2], '    - ');
-				s = `${ rv[1] }\n${ s }\n${ rv[3] }`;
-			}
-			else {
-				rv = { bugger: 1, l };
-				s = l;
-			}
-		}
-		console.log({ rv, s });
-		return s;
+		return process_subsection(l);
 	})
 
 	console.log({ p1, p3 });
