@@ -1566,3 +1566,6 @@
 	path = libassert
 	url = git@github.com:GerHobbelt/libassert.git
 
+[submodule "libicns"]
+	path = libicns
+	url = git@github.com:GerHobbelt/libicns.git
