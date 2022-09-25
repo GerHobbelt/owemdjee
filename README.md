@@ -1587,6 +1587,275 @@ The other JavaScript engines considered are of varying size, performance and com
 - **tesseract-gImgRdrGui** [📁](./tesseract-gImgRdrGui) [🌐](https://github.com/GerHobbelt/gImageReader)
 - **pdf2htmlEX** [📁](./pdf2htmlEX) [🌐](https://github.com/GerHobbelt/pdf2htmlEX)
 - **PhotonLibOS** [📁](./PhotonLibOS) [🌐](https://github.com/GerHobbelt/PhotonLibOS)
+- **libicns** [📁](./libicns) [🌐](git@github.com:GerHobbelt/libicns.git)
+
+- **friso** [📁](./friso) [🌐](git@github.com:GerHobbelt/friso.git) -- high performance Chinese tokenizer with both GBK and UTF-8 charset support based on MMSEG algorithm.
+
+- **winflexbison** [📁](./winflexbison) [🌐](git@github.com:GerHobbelt/winflexbison.git) -- Flex and Bison for Microsoft Windows :: a Windows port of Flex (the fast lexical analyser) and GNU Bison (parser generator). Both `win_flex` and `win_bison` are based on upstream sources but depend on system libraries only.
+
+- **jq** [📁](./jq) [🌐](git@github.com:GerHobbelt/jq.git) -- a lightweight and flexible command-line JSON processor.
+
+
+
+
+
+restc-cpp
+About
+Modern C++ REST Client library
+Introduction to the restc-cpp C++ library
+The magic that takes the pain out of accessing JSON API's from C++
+
+What it does:
+
+It formulates a HTTP request to a REST API server. Then, it transforms the JSON formatted payload in the reply into a native C++ object (GET).
+It Serialize a native C++ object or a container of C++ objects into a JSON payload and send it to the REST API server (POST, PUT).
+It formulates a HTTP request to the REST API without serializing any data in either direction (typically DELETE).
+It uploads a stream of data, like a file, to a HTTP server.
+It downloads a stream of data, like a file or an array of JSON objects, from a HTTP server.
+That's basically it. It does not solve world hunger. It make no attempts to be a C++ framework.
+
+You can use it's single components, like the powerful C++ HTTP Client to send and receive non-JSON data as a native C++ replacement for libcurl. You can use the template code that transforms data between C++ and JSON for other purposes (for example in a REST API SERVER) - but the library is designed and implemented for the single purpose of using C++ to interact efficiently and effortless with external REST API servers.
+
+The library is written by Jarle (jgaa) Aase, a senior freelance C++ developer with roughly 30 years of experience in software development.
+
+Design Goals
+The design goal of this project is to make external REST API's simple and safe to use in C++ projects, but still fast and memory efficient.
+
+Another goal was to use coroutines for the application logic that sends data to or pulls data from the REST API servers. This makes the code easy to write and understand, and also simplifies debugging and investigation of core dumps. In short; the code executes asynchronously, but there are no visible callbacks or completion functions. It looks like crystal clear, old fashion, single threaded sequential code (using modern C++ language). You don't sacrifice code clearness to achieve massive parallelism and high performance. Coroutines was a strong motivation to write a new C++ HTTP Client from scratch. To see how this actually works, please see the modern async cpp example).
+
+Finally, in a world where the Internet is getting increasingly dangerous, and all kind of malicious parties, from your own government to the international Mafia (with Putin in Moscow and other autocrats in parliaments and as head of state all over the world - including USA, EU and Norway -, the differences is blurring out), search for vulnerabilities in your software stack to snoop, ddos, intercept and blackmail you and your customers/users - I have a strong emphasis on security in all software projects I'm involved in. I have limited the dependencies on third party libraries as much as I could (I still use OpenSSL which is a snakes nest of of yet undisclosed vulnerabilities - but as of now there are no alternatives that works out of the box with boost::asio). I have also tried to imagine any possible way a malicious API server could try to attack you (by exploiting or exceeding local resources - like sending a malicious compressed package that expands to a petabyte of zeros) and designed to detect any potential problems and break out of it by throwing an exception as soon as possible.
+
+Why?
+In the spring of 2016 I was asked to implement a SDK for a REST API in several languages. For Python, Java and Ruby it was trivial to make a simple object oriented implementation. When I started planning the C++ implementation of the SDK, I found no suitable, free libraries. I could not even find a proper HTTP Client implementation(!). I could have solved the problem using QT - but i found it overkill to use a huge GUI framework for C++ code that are most likely to run in high performance servers - and that may end up in projects using some other C++ framework that can't coexist with QT.
+
+Many years ago I designed and implemented a C++ REST Client for an early version of Amazon AWS using libcurl - and - well, I had no strong urge to repeat that experience. So I spent a few weeks creating my own HTTP Client library using boost::asio with JSON serialization/deserialization.
+
+
+
+
+
+
+
+
+
+
+libaco
+About
+A blazing fast and lightweight C asymmetric coroutine library 💎 ⛅🚀⛅🌞
+
+libaco.org
+ibaco - A blazing fast and lightweight C asymmetric coroutine library.
+
+The code name of this project is Arkenstone 💎
+
+Asymmetric COroutine & Arkenstone is the reason why it's been named aco.
+
+Currently supports Sys V ABI of Intel386 and x86-64.
+
+Here is a brief summary of this project:
+
+Along with the implementation of a production-ready C coroutine library, here is a detailed documentation about how to implement a fastest and correct coroutine library and also with a strict mathematical proof;
+It has no more than 700 LOC but has the full functionality which you may want from a coroutine library;
+The benchmark part shows that a context switch between coroutines only takes about 10 ns (in the case of standalone stack) on the AWS c5d.large machine;
+User could choose to create a new coroutine with a standalone stack or with a shared stack (could be shared with others);
+It is extremely memory efficient: 10,000,000 coroutines simultaneously to run cost only 2.8 GB physical memory (run with tcmalloc, each coroutine has a 120B copy-stack size configuration).
+The phrase "fastest" in above means the fastest context switching implementation which complies to the Sys V ABI of Intel386 or AMD64.
+
+
+
+
+
+
+
+
+libcsp
+About
+A concurrency C library 10x faster than Golang.
+
+libcsp.dev
+Introduction
+libcsp is a high performance concurrency C library influenced by the CSP model.
+
+Features
+Multiple cpu cores supported.
+High performance scheduler.
+Stack size statically analyzed in compile time.
+Lock-free channel.
+Netpoll and timer are supported.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+tinn
+About
+A tiny neural network library
+Tinn (Tiny Neural Network) is a 200 line dependency free neural network library written in C99.
+
+For a demo on how to learn hand written digits, get some training data:
+
+wget http://archive.ics.uci.edu/ml/machine-learning-databases/semeion/semeion.data
+
+make; ./test
+The training data consists of hand written digits written both slowly and quickly. Each line in the data set corresponds to one handwritten digit. Each digit is 16x16 pixels in size giving 256 inputs to the neural network.
+
+At the end of the line 10 digits signify the hand written digit:
+
+0: 1 0 0 0 0 0 0 0 0 0
+1: 0 1 0 0 0 0 0 0 0 0
+2: 0 0 1 0 0 0 0 0 0 0
+3: 0 0 0 1 0 0 0 0 0 0
+4: 0 0 0 0 1 0 0 0 0 0
+...
+9: 0 0 0 0 0 0 0 0 0 1
+This gives 10 outputs to the neural network. The test program will output the accuracy for each digit. Expect above 99% accuracy for the correct digit, and less that 0.1% accuracy for the other digits.
+
+Features
+Portable - Runs where a C99 or C++98 compiler is present.
+
+Sigmoidal activation.
+
+One hidden layer.
+
+Tips
+Tinn will never use more than the C standard library.
+
+Tinn is great for embedded systems. Train a model on your powerful desktop and load it onto a microcontroller and use the analog to digital converter to predict real time events.
+
+The Tinn source code will always be less than 200 lines. Functions externed in the Tinn header are protected with the xt namespace standing for externed tinn.
+
+Tinn can easily be multi-threaded with a bit of ingenuity but the master branch will remain single threaded to aid development for embedded systems.
+
+Tinn does not seed the random number generator. Do not forget to do so yourself.
+
+Always shuffle your input data. Shuffle again after every training iteration.
+
+Get greater training accuracy by annealing your learning rate. For instance, multiply your learning rate by 0.99 every training iteration. This will zero in on a good learning minima.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+subprocess.h
+About
+🐜 single header process launching solution for C and C++
+🐜 subprocess.h
+Actions Status Build Status Sponsor
+
+A simple one header solution to launching processes and interacting with them for C/C++.
+
+Usage
+Just #include "subprocess.h" in your code!
+
+The current supported platforms are Linux, macOS and Windows.
+
+The current supported compilers are gcc, clang, MSVC's cl.exe, and clang-cl.exe.
+
+Design
+Subprocess is a single header cross-platform library that allows users to launch sub-processes, interact with the stdin, stdout, and stderr of the process, and wait for them to complete.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+warplda
+About
+Cache efficient implementation for Latent Dirichlet Allocation
+WarpLDA: Cache Efficient Implementation of Latent Dirichlet Allocation
+Introduction
+WarpLDA is a cache efficient implementation of Latent Dirichlet Allocation, which samples each token in O(1).
+
+
+
+
+
+
+
+
+
+
+
+
+
+ccv
+
+
+
+
+
+
+
+
+
+
+
+
+
+localmemcache
+About
+mmap -> lmc_valloc -> hashtable. BAM database
+Localmemcache README
+=====================
+
+A persistent key-value database based on mmap()'ed shared memory.
+
+* http://localmemcache.rubyforge.org/
+
+WHAT IS IT?
+===========
+
+Localmemcache is a library for C and ruby that aims to provide
+an interface similar to memcached but for accessing local data instead of
+remote data.  It's based on mmap()'ed shared memory for maximum speed.
+Since version 0.3.0 it supports persistence, also making it a fast
+alternative to GDBM and Berkeley DB.
+
+SUPPORTED SYSTEMS
+=================
+
+- a >=64bit Unix (32bit is possible but you'll run out of virtual address
+  space quickly)
+- a file system that offers sparse files
+
+Note for OS X: OS X disqualifies as HFS+ doesn't have sparse files and
+sem_timedwait() and sem_getvalue() aren't supported as well.
+
+Note for FreeBSD: It has been reported that Localmemcache sometimes hangs
+there, it is not yet clear what the problem is.
+
+
+
+
+
 
 
 
