@@ -1599,6 +1599,94 @@ The other JavaScript engines considered are of varying size, performance and com
 
 
 
+
+
+
+[submodule "cpp_rest_sdk"]
+	path = cpp_rest_sdk
+	url = git@github.com:GerHobbelt/cpprestsdk.git
+
+[submodule "infoware"]
+	path = infoware
+	url = git@github.com:GerHobbelt/infoware.git
+
+[submodule "libassert"]
+	path = libassert
+	url = git@github.com:GerHobbelt/libassert.git
+
+[submodule "libicns"]
+	path = libicns
+	url = git@github.com:GerHobbelt/libicns.git
+
+[submodule "friso"]
+	path = friso
+	url = git@github.com:GerHobbelt/friso.git
+
+[submodule "winflexbison"]
+	path = winflexbison
+	url = git@github.com:GerHobbelt/winflexbison.git
+
+[submodule "jq"]
+	path = jq
+	url = git@github.com:GerHobbelt/jq.git
+
+[submodule "restc-cpp"]
+	path = restc-cpp
+	url = git@github.com:GerHobbelt/restc-cpp.git
+
+[submodule "libaco"]
+	path = libaco
+	url = git@github.com:GerHobbelt/libaco.git
+
+[submodule "tinn"]
+	path = tinn
+	url = git@github.com:GerHobbelt/tinn.git
+
+[submodule "libcsp"]
+	path = libcsp
+	url = git@github.com:GerHobbelt/libcsp.git
+
+[submodule "CRoaring"]
+	path = CRoaring
+	url = git@github.com:GerHobbelt/CRoaring.git
+
+[submodule "subprocess_h"]
+	path = subprocess_h
+	url = git@github.com:GerHobbelt/subprocess.h.git
+
+[submodule "nameof"]
+	path = nameof
+	url = git@github.com:GerHobbelt/nameof.git
+
+[submodule "libclipboard"]
+	path = libclipboard
+	url = git@github.com:GerHobbelt/libclipboard.git
+
+[submodule "librs232"]
+	path = librs232
+	url = git@github.com:GerHobbelt/librs232.git
+
+[submodule "caches"]
+	path = caches
+	url = git@github.com:GerHobbelt/caches.git
+
+[submodule "warpLDA"]
+	path = warpLDA
+	url = git@github.com:GerHobbelt/warplda.git
+
+[submodule "ccv-nnc"]
+	path = ccv-nnc
+	url = git@github.com:GerHobbelt/ccv.git
+
+[submodule "localmemcache"]
+	path = localmemcache
+	url = git@github.com:GerHobbelt/localmemcache.git
+
+
+
+
+
+
 restc-cpp
 About
 Modern C++ REST Client library
@@ -1851,6 +1939,9 @@ sem_timedwait() and sem_getvalue() aren't supported as well.
 
 Note for FreeBSD: It has been reported that Localmemcache sometimes hangs
 there, it is not yet clear what the problem is.
+
+
+
 
 
 
