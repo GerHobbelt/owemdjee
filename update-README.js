@@ -6,13 +6,14 @@ const path = require("path");
 const fs = require("fs");
 
 let txt = fs.readFileSync("README.md", "utf8");
+const origTxt = txt;
 let module_spec = fs.readFileSync(".gitmodules", "utf8");
 let module_spec2 = fs.readFileSync("../../.gitmodules", "utf8");
 
 module_spec = module_spec.replace(/[\s\r\n]+/g, ' ');
 module_spec2 = module_spec2.replace(/[\s\r\n]+/g, ' ');
 
-let mod_re = /\[submodule "([^"]+)"] path = ([^ ]+) url = ([^ ]+) /g;
+let mod_re = /\[submodule "([^"]+)"\] path = ([^ ]+) url = ([^ ]+) /g;
 
 let dict = {};
 
@@ -68,11 +69,11 @@ while (m) {
 	
 	if (dict[id.toLowerCase()] == undefined) {
 		dict[id.toLowerCase()] = { id, key2, localdir, repo, url };
-		console.log({id, key2, localdir, repo, url })
+		//console.log({id, key2, localdir, repo, url })
 	}
 	if (dict[key2.toLowerCase()] == undefined) {
 		dict[key2.toLowerCase()] = { id, key2, localdir, repo, url };
-		console.log({id, key2, localdir, repo, url })
+		//console.log({id, key2, localdir, repo, url })
 	}
 	
 	m = mod_re.exec(txt);
@@ -93,15 +94,35 @@ while (m) {
 	
 	if (dict[id.toLowerCase()] == undefined) {
 		dict[id.toLowerCase()] = { id, key2, localdir, repo, url };
-		console.log({id, key2, localdir, repo, url })
+		//console.log({id, key2, localdir, repo, url })
 	}
 	if (dict[key2.toLowerCase()] == undefined) {
 		dict[key2.toLowerCase()] = { id, key2, localdir, repo, url };
-		console.log({id, key2, localdir, repo, url })
+		//console.log({id, key2, localdir, repo, url })
 	}
 	
 	m = mod_re.exec(txt);
 }
+
+mod_re = /\s*\[submodule "([^"]+)"\][\s\r\n]+path = ([^\s\r\n]+)[\s\r\n]+url = ([^\s\r\n]+)[\s\r\n]+/g;
+
+m = mod_re.exec(txt);
+while (m) {
+	m.input = null;
+	console.log({m})
+	let repo = m[3];
+	let url = repo.replace(/git@github.com:GerHobbelt/, `https://github.com/GerHobbelt/`).replace(/\.git$/, '');
+	let id = m[1];
+	let localdir = `./${ m[2] }`
+	let key2 = localdir.replace(/[\\\/._-]+/g, '');
+	console.log({id, key2, localdir, repo, url })
+	
+	dict[id.toLowerCase()] = { id, key2, localdir, repo, url };
+	dict[key2.toLowerCase()] = { id, key2, localdir, repo, url };
+	
+	m = mod_re.exec(txt);
+}
+
 
 //console.log({dict})
 console.log("===================================================================================================================\n\n");
@@ -112,7 +133,7 @@ while (modified) {
 	modified = false;
 	txt = txt
 	.replace(/\[([^\s🔗🌐📁🗃️]+)\]\((\.[^)]+)\)/g, function r(m, p1, p2) {
-		console.log({m, p1, p2});
+		//console.log({m, p1, p2});
 		let spec = dict[p1.toLowerCase()];
 		if (!spec) {
 			let key2 = p2.replace(/[\\\/._-]+/g, '');
@@ -130,16 +151,16 @@ while (modified) {
 		if (spec.localdir == null) {
 			s = `**${ p1 }** [🌐](${ spec.url })`;
 		}
-		console.log({ s })
+		//console.log({ s })
 	
 		modified = true;
 		
 		return s;
 	})
 	.replace(/~~\[([^\s🔗🌐📁🗃️]+)\]\((http[^)]+)\)/g, function r(m, p1, p2) {
-		console.log({m, p1, p2});
+		//console.log({m, p1, p2});
 		let s = `~~**${ p1 }** [🌐](${ p2 })`;
-		console.log({ s })
+		//console.log({ s })
 	
 		modified = true;
 		
@@ -159,7 +180,7 @@ function sort_section(start_re_str, txt) {
 	txt = txt.replace(new RegExp(`(${start_re_str}[^\\n]+)\\n([^]+?)\\n(#[^\\n]+)`, 'g'), function r(m, p1, p2, p3) {
 		let s = sort_subsection(/\n- /, p2, '- ', '    ');
 
-		console.log({ s, p1, p3 });
+		//console.log({ s, p1, p3 });
 		return p1 + '\n\n' + s + '\n\n\n\n\n\n\n\n' + p3;
 	});
 	return txt;
@@ -182,16 +203,18 @@ function sort_subsection(item_re, p2, rebuild_prefix, indent_prefix) {
 		let old_l = l;
 		//console.log({ subline: 1, l });
 		l = l.replace(re, '\n');
-		if (l !== old_l)
-			console.log({ subline_DEINDENT: 1, re, indent_prefix, old_l, l });
+		if (l !== old_l) {
+			//console.log({ subline_DEINDENT: 1, re, indent_prefix, old_l, l });
+		}
 
 		// see if it has a sublist to sort
 		l = process_subsection(l);
 
 		// re-indent sublevel:
 		l = l.replace(/\n/g, `\n${indent_prefix}`);
-		if (l !== old_l)
-			console.log({ subline_sorted: 1, l });
+		if (l !== old_l) {
+			//console.log({ subline_sorted: 1, l });
+		}
 
 		return { line: key, index: i, origline: l };
 	});
@@ -266,4 +289,22 @@ txt = txt.replace(/(# Libraries we\'re looking at[^\n]+)\n([^]+?)\n((?:#[^\n]+)|
 })
 
 
-fs.writeFileSync("README.md", txt, "utf8");
+
+txt = txt.replace(/([\r\n]+)\s*\[submodule "([^"]+)"\][\s\r\n]+path = ([^\s\r\n]+)[\s\r\n]+url = ([^\s\r\n]+)/g, function r(m, p1, p2, p3, p4) {
+	console.log({ p1, p2, p3, p4 });
+	let a = p4;
+	
+	a = a
+	.replace(/^git@github.com:GerHobbelt\/([^\s]+)\.git$/, 'https://github.com/GerHobbelt/$1')
+
+	let rv = p1 + `- **${ p2 }** [📁](./${ p3 }) [🌐](${ a })\n`;
+	console.log({ a, rv })
+	return rv;
+})
+
+
+
+if (origTxt !== txt) {
+	console.log("Updating the README...");
+	fs.writeFileSync("README.md", txt, "utf8");
+}

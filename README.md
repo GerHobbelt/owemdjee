@@ -1587,13 +1587,13 @@ The other JavaScript engines considered are of varying size, performance and com
 - **tesseract-gImgRdrGui** [📁](./tesseract-gImgRdrGui) [🌐](https://github.com/GerHobbelt/gImageReader)
 - **pdf2htmlEX** [📁](./pdf2htmlEX) [🌐](https://github.com/GerHobbelt/pdf2htmlEX)
 - **PhotonLibOS** [📁](./PhotonLibOS) [🌐](https://github.com/GerHobbelt/PhotonLibOS)
-- **libicns** [📁](./libicns) [🌐](git@github.com:GerHobbelt/libicns.git)
+- **libicns** [📁](./libicns) [🌐](https://github.com/GerHobbelt/libicns)
 
-- **friso** [📁](./friso) [🌐](git@github.com:GerHobbelt/friso.git) -- high performance Chinese tokenizer with both GBK and UTF-8 charset support based on MMSEG algorithm.
+- **friso** [📁](./friso) [🌐](https://github.com/GerHobbelt/friso) -- high performance Chinese tokenizer with both GBK and UTF-8 charset support based on MMSEG algorithm.
 
-- **winflexbison** [📁](./winflexbison) [🌐](git@github.com:GerHobbelt/winflexbison.git) -- Flex and Bison for Microsoft Windows :: a Windows port of Flex (the fast lexical analyser) and GNU Bison (parser generator). Both `win_flex` and `win_bison` are based on upstream sources but depend on system libraries only.
+- **winflexbison** [📁](./winflexbison) [🌐](https://github.com/GerHobbelt/winflexbison) -- Flex and Bison for Microsoft Windows :: a Windows port of Flex (the fast lexical analyser) and GNU Bison (parser generator). Both `win_flex` and `win_bison` are based on upstream sources but depend on system libraries only.
 
-- **jq** [📁](./jq) [🌐](git@github.com:GerHobbelt/jq.git) -- a lightweight and flexible command-line JSON processor.
+- **jq** [📁](./jq) [🌐](https://github.com/GerHobbelt/jq) -- a lightweight and flexible command-line JSON processor.
 
 
 
@@ -1682,6 +1682,22 @@ The other JavaScript engines considered are of varying size, performance and com
 	path = localmemcache
 	url = git@github.com:GerHobbelt/localmemcache.git
 
+
+[submodule "libdist"]
+	path = libdist
+	url = git@github.com:GerHobbelt/distlib.git
+
+[submodule "zsv"]
+	path = zsv
+	url = git@github.com:GerHobbelt/zsv.git
+
+[submodule "sqlite_zstd_vfs"]
+	path = sqlite_zstd_vfs
+	url = git@github.com:GerHobbelt/sqlite_zstd_vfs.git
+
+[submodule "libeternaltimestamp"]
+	path = libeternaltimestamp
+	url = git@github.com:GerHobbelt/libeternaltimestamp.git
 
 
 

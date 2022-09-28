@@ -1637,9 +1637,15 @@
 [submodule "libdist"]
 	path = libdist
 	url = git@github.com:GerHobbelt/distlib.git
+
 [submodule "zsv"]
 	path = zsv
 	url = git@github.com:GerHobbelt/zsv.git
+
 [submodule "sqlite_zstd_vfs"]
 	path = sqlite_zstd_vfs
 	url = git@github.com:GerHobbelt/sqlite_zstd_vfs.git
+
+[submodule "libeternaltimestamp"]
+	path = libeternaltimestamp
+	url = git@github.com:GerHobbelt/libeternaltimestamp.git
