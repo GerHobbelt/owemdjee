@@ -291,14 +291,14 @@ txt = txt.replace(/(# Libraries we\'re looking at[^\n]+)\n([^]+?)\n((?:#[^\n]+)|
 
 
 txt = txt.replace(/([\r\n]+)\s*\[submodule "([^"]+)"\][\s\r\n]+path = ([^\s\r\n]+)[\s\r\n]+url = ([^\s\r\n]+)/g, function r(m, p1, p2, p3, p4) {
-	console.log({ p1, p2, p3, p4 });
+	//console.log({ p1, p2, p3, p4 });
 	let a = p4;
 	
 	a = a
 	.replace(/^git@github.com:GerHobbelt\/([^\s]+)\.git$/, 'https://github.com/GerHobbelt/$1')
 
 	let rv = p1 + `- **${ p2 }** [📁](./${ p3 }) [🌐](${ a })\n`;
-	console.log({ a, rv })
+	//console.log({ a, rv })
 	return rv;
 })
 
