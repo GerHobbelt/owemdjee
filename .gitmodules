@@ -1782,10 +1782,6 @@
 	path = zotero-zotfile
 	url = git@github.com:GerHobbelt/zotfile.git
 	
-[submodule "zotfile"]
-	path = zotfile
-	url = git@github.com:GerHobbelt/zotfile.git
-	
 [submodule "notcurses"]
 	path = notcurses
 	url = git@github.com:GerHobbelt/notcurses.git
