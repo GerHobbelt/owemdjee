@@ -1665,6 +1665,86 @@ The other JavaScript engines considered are of varying size, performance and com
 - **libeternaltimestamp** [📁](./libeternaltimestamp) [🌐](https://github.com/GerHobbelt/libeternaltimestamp)
 
 
+- **libxslt** [📁](./libxslt) [🌐](https://github.com/GerHobbelt/libxslt)
+
+
+- **tvision** [📁](./tvision) [🌐](https://github.com/GerHobbelt/tvision)
+
+
+
+- **bibtool** [📁](./bibtool) [🌐](https://github.com/GerHobbelt/bibtool)
+
+- **zotero-translators** [📁](./zotero-translators) [🌐](https://github.com/GerHobbelt/translators)
+
+- **citeproc-js** [📁](./citeproc-js) [🌐](https://github.com/GerHobbelt/citeproc-js)
+
+- **citation-journals** [📁](./citation-journals) [🌐](https://github.com/GerHobbelt/journals)
+
+- **citation-styles** [📁](./citation-styles) [🌐](https://github.com/GerHobbelt/styles)
+
+- **zotero-standalone-build** [📁](./zotero-standalone-build) [🌐](https://github.com/GerHobbelt/zotero-standalone-build)
+
+- **zotero-web-library** [📁](./zotero-web-library) [🌐](https://github.com/GerHobbelt/web-library)
+
+- **zotero** [📁](./zotero) [🌐](https://github.com/GerHobbelt/zotero)
+
+- **zotero-connectors** [📁](./zotero-connectors) [🌐](https://github.com/GerHobbelt/zotero-connectors)
+
+- **zotero-word-for-windows-integration** [📁](./zotero-word-for-windows-integration) [🌐](https://github.com/GerHobbelt/zotero-word-for-windows-integration)
+
+- **zotero-libreoffice-integration** [📁](./zotero-libreoffice-integration) [🌐](https://github.com/GerHobbelt/zotero-libreoffice-integration)
+
+- **zotero-translation-server** [📁](./zotero-translation-server) [🌐](https://github.com/GerHobbelt/translation-server)
+
+- **zotero-bib** [📁](./zotero-bib) [🌐](https://github.com/GerHobbelt/bib)
+
+- **zotero-translate** [📁](./zotero-translate) [🌐](https://github.com/GerHobbelt/translate)
+
+- **zotero-google-docs-integration** [📁](./zotero-google-docs-integration) [🌐](https://github.com/GerHobbelt/zotero-google-docs-integration)
+
+- **zotero-build** [📁](./zotero-build) [🌐](https://github.com/GerHobbelt/zotero-build)
+
+- **JabRef-Browser-Extension** [📁](./JabRef-Browser-Extension) [🌐](https://github.com/GerHobbelt/JabRef-Browser-Extension)
+
+- **JabRef-abbreviations** [📁](./JabRef-abbreviations) [🌐](https://github.com/GerHobbelt/jabref-abbreviations)
+
+- **citation-abbreviations** [📁](./citation-abbreviations) [🌐](https://github.com/GerHobbelt/abbreviations)
+
+- **npoi** [📁](./npoi) [🌐](https://github.com/GerHobbelt/npoi)
+
+- **html2openxml** [📁](./html2openxml) [🌐](https://github.com/GerHobbelt/html2openxml)
+
+- **ShapeCrawler** [📁](./ShapeCrawler) [🌐](https://github.com/GerHobbelt/ShapeCrawler)
+
+- **OfficeIMO** [📁](./OfficeIMO) [🌐](https://github.com/GerHobbelt/OfficeIMO)
+
+- **b2xtranslator** [📁](./b2xtranslator) [🌐](https://github.com/GerHobbelt/b2xtranslator)
+
+- **Open-XML-SDK** [📁](./Open-XML-SDK) [🌐](https://github.com/GerHobbelt/Open-XML-SDK)
+
+- **MariGold.OpenXHTML** [📁](./MariGold.OpenXHTML) [🌐](https://github.com/GerHobbelt/MariGold.OpenXHTML)
+
+- **docxBox** [📁](./docxBox) [🌐](https://github.com/GerHobbelt/docxBox)
+
+- **zotero-scholar-citations** [📁](./zotero-scholar-citations) [🌐](https://github.com/GerHobbelt/zotero-scholar-citations)
+
+- **zotero-shortdoi** [📁](./zotero-shortdoi) [🌐](https://github.com/GerHobbelt/zotero-shortdoi)
+
+- **papis-zotero** [📁](./papis-zotero) [🌐](https://github.com/GerHobbelt/papis-zotero)
+
+- **zotero-zotfile** [📁](./zotero-zotfile) [🌐](https://github.com/GerHobbelt/zotfile)
+
+- **zotfile** [📁](./zotfile) [🌐](https://github.com/GerHobbelt/zotfile)
+
+- **notcurses** [📁](./notcurses) [🌐](https://github.com/GerHobbelt/notcurses)
+
+- **zotero-better-bibtex** [📁](./zotero-better-bibtex) [🌐](https://github.com/GerHobbelt/zotero-better-bibtex)
+
+- **xsldbg** [📁](./xsldbg) [🌐](https://github.com/GerHobbelt/xsldbg)
+
+
+	
+
 
 
 

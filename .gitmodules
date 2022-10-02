@@ -1649,3 +1649,151 @@
 [submodule "libeternaltimestamp"]
 	path = libeternaltimestamp
 	url = git@github.com:GerHobbelt/libeternaltimestamp.git
+
+[submodule "libxslt"]
+	path = libxslt
+	url = git@github.com:GerHobbelt/libxslt.git
+
+[submodule "tvision"]
+	path = tvision
+	url = git@github.com:GerHobbelt/tvision.git
+	
+[submodule "bibtool"]
+	path = bibtool
+	url = git@github.com:GerHobbelt/bibtool.git
+	
+[submodule "zotero-translators"]
+	path = zotero-translators
+	url = git@github.com:GerHobbelt/translators.git
+	
+[submodule "citeproc-js"]
+	path = citeproc-js
+	url = git@github.com:GerHobbelt/citeproc-js.git
+	
+[submodule "citation-journals"]
+	path = citation-journals
+	url = git@github.com:GerHobbelt/journals.git
+	
+[submodule "citation-styles"]
+	path = citation-styles
+	url = git@github.com:GerHobbelt/styles.git
+	
+[submodule "zotero-standalone-build"]
+	path = zotero-standalone-build
+	url = git@github.com:GerHobbelt/zotero-standalone-build.git
+	
+[submodule "zotero-web-library"]
+	path = zotero-web-library
+	url = git@github.com:GerHobbelt/web-library.git
+	
+[submodule "zotero"]
+	path = zotero
+	url = git@github.com:GerHobbelt/zotero.git
+	
+[submodule "zotero-connectors"]
+	path = zotero-connectors
+	url = git@github.com:GerHobbelt/zotero-connectors.git
+	
+[submodule "zotero-word-for-windows-integration"]
+	path = zotero-word-for-windows-integration
+	url = git@github.com:GerHobbelt/zotero-word-for-windows-integration.git
+	
+[submodule "zotero-libreoffice-integration"]
+	path = zotero-libreoffice-integration
+	url = git@github.com:GerHobbelt/zotero-libreoffice-integration.git
+	
+[submodule "zotero-translation-server"]
+	path = zotero-translation-server
+	url = git@github.com:GerHobbelt/translation-server.git
+	
+[submodule "zotero-bib"]
+	path = zotero-bib
+	url = git@github.com:GerHobbelt/bib.git
+	
+[submodule "zotero-translate"]
+	path = zotero-translate
+	url = git@github.com:GerHobbelt/translate.git
+	
+[submodule "zotero-google-docs-integration"]
+	path = zotero-google-docs-integration
+	url = git@github.com:GerHobbelt/zotero-google-docs-integration.git
+	
+[submodule "zotero-build"]
+	path = zotero-build
+	url = git@github.com:GerHobbelt/zotero-build.git
+	
+[submodule "JabRef-Browser-Extension"]
+	path = JabRef-Browser-Extension
+	url = git@github.com:GerHobbelt/JabRef-Browser-Extension.git
+	
+[submodule "JabRef-abbreviations"]
+	path = JabRef-abbreviations
+	url = git@github.com:GerHobbelt/jabref-abbreviations.git
+	
+[submodule "citation-abbreviations"]
+	path = citation-abbreviations
+	url = git@github.com:GerHobbelt/abbreviations.git
+	
+[submodule "npoi"]
+	path = npoi
+	url = git@github.com:GerHobbelt/npoi.git
+	
+[submodule "html2openxml"]
+	path = html2openxml
+	url = git@github.com:GerHobbelt/html2openxml.git
+	
+[submodule "ShapeCrawler"]
+	path = ShapeCrawler
+	url = git@github.com:GerHobbelt/ShapeCrawler.git
+	
+[submodule "OfficeIMO"]
+	path = OfficeIMO
+	url = git@github.com:GerHobbelt/OfficeIMO.git
+	
+[submodule "b2xtranslator"]
+	path = b2xtranslator
+	url = git@github.com:GerHobbelt/b2xtranslator.git
+	
+[submodule "Open-XML-SDK"]
+	path = Open-XML-SDK
+	url = git@github.com:GerHobbelt/Open-XML-SDK.git
+	
+[submodule "MariGold.OpenXHTML"]
+	path = MariGold.OpenXHTML
+	url = git@github.com:GerHobbelt/MariGold.OpenXHTML.git
+	
+[submodule "docxBox"]
+	path = docxBox
+	url = git@github.com:GerHobbelt/docxBox.git
+	
+[submodule "zotero-scholar-citations"]
+	path = zotero-scholar-citations
+	url = git@github.com:GerHobbelt/zotero-scholar-citations.git
+	
+[submodule "zotero-shortdoi"]
+	path = zotero-shortdoi
+	url = git@github.com:GerHobbelt/zotero-shortdoi.git
+	
+[submodule "papis-zotero"]
+	path = papis-zotero
+	url = git@github.com:GerHobbelt/papis-zotero.git
+	
+[submodule "zotero-zotfile"]
+	path = zotero-zotfile
+	url = git@github.com:GerHobbelt/zotfile.git
+	
+[submodule "zotfile"]
+	path = zotfile
+	url = git@github.com:GerHobbelt/zotfile.git
+	
+[submodule "notcurses"]
+	path = notcurses
+	url = git@github.com:GerHobbelt/notcurses.git
+	
+[submodule "zotero-better-bibtex"]
+	path = zotero-better-bibtex
+	url = git@github.com:GerHobbelt/zotero-better-bibtex.git
+	
+[submodule "xsldbg"]
+	path = xsldbg
+	url = git@github.com:GerHobbelt/xsldbg.git
