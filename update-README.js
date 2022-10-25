@@ -304,7 +304,74 @@ txt = txt.replace(/([\r\n]+)\s*\[submodule "([^"]+)"\][\s\r\n]+path = ([^\s\r\n]
 
 
 
+
+
+// -----------------------------------------------------------------------------------------------------------
+// and copy the descriptive text across all occurrences which haven't any yet:
+
+function collect_descriptions(txt) {
+	let a = {};
+		
+	let mod_re = /- \*\*([^*]+)\*\* \[📁\]\(([^ )]+)\) \[🌐\]\(([^ )]+)\)/g;
+	let m = mod_re.exec(txt);
+	while (m) {
+		m.input = null;
+		//console.log({m})
+		let repo = m[3];
+		let url = repo;
+		let id = m[1];
+		let localdir = m[2];
+		let key2 = localdir.replace('thirdparty/', '').replace(/[\\\/._-]+/g, '');
+		let match = m[0];
+		let matchPos = m.index + match.length;
+		let dstr = txt.substring(matchPos, matchPos + 1000);
+		
+		let desc_re = /^ -- ([^ \r\n][^]+?)\n(:?(:?\s*- (:?~~)?\*\*)|(:?\s*- ~~)|(:?\s*- http)|(:?\s*- other)|(:?\s*- ZeroMQ)|(:?\s*- LMDB)|(:?\s*- see also)|(:?\s*- \[Manticore\])|[#*-]|$)/;
+		
+		let d = desc_re.exec(dstr);
+		if (d) {
+			d.input = null;
+			let description = d[1].trim();
+			
+			//console.log({id, key2, localdir, repo, url, m, matchPos, description, dstr })
+			
+			//if (a[id.toLowerCase()] == undefined) {
+			//	a[id.toLowerCase()] = description;
+			//}
+			if (a[key2.toLowerCase()] == undefined) {
+				a[key2.toLowerCase()] = description;
+			}
+			else if (a[key2.toLowerCase()].length < description.length) {
+				console.log("OVERRIDING: ", a[key2.toLowerCase()], " --> ", description);
+				a[key2.toLowerCase()] = description;
+			}
+		}
+		
+		m = mod_re.exec(txt);
+	}
+	
+	//console.log({a})
+	return a;
+}
+
+let descr_arr = collect_descriptions(txt);
+
+
+mod_re = /- \*\*([^*]+)\*\* \[📁\]\(([^ )]+)\) \[🌐\]\(([^ )]+)\)\s*[\n]/g;
+txt = txt.replace(mod_re, (m, p1, p2, p3) => {
+	let localdir = p2;
+	let key2 = localdir.replace('thirdparty/', '').replace(/[\\\/._-]+/g, '');
+	let descr = descr_arr[key2];
+	if (descr) {
+		console.log({m, p1, p2, p3, key2, descr});
+		return `${ m.trim() } -- ${ descr }\n`;
+	}
+	return m;
+});
+
+
 if (origTxt !== txt) {
 	console.log("Updating the README...");
 	fs.writeFileSync("README.md", txt, "utf8");
 }
+
