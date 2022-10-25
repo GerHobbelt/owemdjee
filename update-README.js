@@ -319,7 +319,7 @@ function collect_descriptions(txt) {
 		//console.log({m})
 		let repo = m[3];
 		let url = repo;
-		let id = m[1];
+		let id = 'x' + m[1];
 		let localdir = m[2];
 		let key2 = localdir.replace('thirdparty/', '').replace(/[\\\/._-]+/g, '');
 		let match = m[0];
@@ -333,17 +333,17 @@ function collect_descriptions(txt) {
 			d.input = null;
 			let description = d[1].trim();
 			
-			//console.log({id, key2, localdir, repo, url, m, matchPos, description, dstr })
+			console.log({id, key2, localdir, repo, url, m, matchPos, description, dstr })
 			
 			//if (a[id.toLowerCase()] == undefined) {
 			//	a[id.toLowerCase()] = description;
 			//}
-			if (a[key2.toLowerCase()] == undefined) {
-				a[key2.toLowerCase()] = description;
+			if (a[id] == undefined) {
+				a[id] = description;
 			}
-			else if (a[key2.toLowerCase()].length < description.length) {
-				console.log("OVERRIDING: ", a[key2.toLowerCase()], " --> ", description);
-				a[key2.toLowerCase()] = description;
+			else if (a[id].length < description.length) {
+				console.log("OVERRIDING: ", a[id], " --> ", description);
+				a[id] = description;
 			}
 		}
 		
@@ -359,9 +359,10 @@ let descr_arr = collect_descriptions(txt);
 
 mod_re = /- \*\*([^*]+)\*\* \[📁\]\(([^ )]+)\) \[🌐\]\(([^ )]+)\)\s*[\n]/g;
 txt = txt.replace(mod_re, (m, p1, p2, p3) => {
+	let id = 'x' + p1;
 	let localdir = p2;
 	let key2 = localdir.replace('thirdparty/', '').replace(/[\\\/._-]+/g, '');
-	let descr = descr_arr[key2];
+	let descr = descr_arr[id];
 	if (descr) {
 		console.log({m, p1, p2, p3, key2, descr});
 		return `${ m.trim() } -- ${ descr }\n`;

@@ -1022,7 +1022,7 @@ The other JavaScript engines considered are of varying size, performance and com
 
 - **OCR core (*tesseract*)**
 
-    - **langdata_LSTM** [📁](../../thirdparty/langdata_LSTM) [🌐](https://github.com/GerHobbelt/langdata_lstm)
+    - **langdata_LSTM** [📁](../../thirdparty/langdata_LSTM) [🌐](https://github.com/GerHobbelt/langdata_lstm) -- tesseract data
     - **tessconfigs** [📁](../../thirdparty/tessconfigs) [🌐](https://github.com/GerHobbelt/tessconfigs)
     - **tessdata** [📁](../../thirdparty/tessdata) [🌐](https://github.com/GerHobbelt/tessdata)
     - **tessdata_best** [📁](../../thirdparty/tessdata_best) [🌐](https://github.com/GerHobbelt/tessdata_best)
@@ -1152,9 +1152,9 @@ The other JavaScript engines considered are of varying size, performance and com
     - **localmemcache** [📁](./localmemcache) [🌐](https://github.com/GerHobbelt/localmemcache) -- a key-value database and library that provides an interface similar to `memcached` but for accessing local data instead of remote data.  It's based on mmap()'ed shared memory for maximum speed. It supports persistence, also making it a fast alternative to GDBM and Berkeley DB.
     - **nameof** [📁](./nameof) [🌐](https://github.com/GerHobbelt/nameof) -- header-only C++17 library providing nameof macros and functions to simply obtain the name of a variable, type, function, macro, and enum.
     - **preprocess-corpuses** [📁](./preprocess-corpuses) [🌐](https://github.com/GerHobbelt/preprocess) -- Pipelines for preprocessing corpora.
+    - **zxing-cpp** [📁](./zxing-cpp) [🌐](https://github.com/GerHobbelt/zxing-cpp) -- ZXing-C++ ("zebra crossing") is a multi-format linear/matrix (1D/2D) barcode image processing library implemented in C++. Supported formats include: UPC-A, UPC-E, EAN-8, EAN-13, Code 39, Code 128, QR Code, PDF417, DataMatrix, CodaBar, DataBar, ITF.
     - ~~**binary_bakery** [🌐](https://github.com/s9w/binary_bakery) -- resource compiler-like tool: embed any data in your C/C++ application~~
         - **removed**; reason: we already have `bin2coff` from MuPDF, which serves this purpose well enough.
-    - **zxing-cpp** [📁](./zxing-cpp) [🌐](https://github.com/GerHobbelt/zxing-cpp) -- ZXing-C++ ("zebra crossing") is a multi-format linear/matrix (1D/2D) barcode image processing library implemented in C++. Supported formats include: UPC-A, UPC-E, EAN-8, EAN-13, Code 39, Code 128, QR Code, PDF417, DataMatrix, CodaBar, DataBar, ITF.
 
 
 - **sub-dependencies (libraries which are required by any of the above)**
@@ -1210,7 +1210,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - **bibtool** [📁](./bibtool) [🌐](https://github.com/GerHobbelt/bibtool) -- a tool for manipulating BibTeX data bases. BibTeX provides a mean to integrate citations into LaTeX documents. BibTool allows the manipulation of BibTeX files which goes beyond the possibilities -- and intentions -- of BibTeX.
 - **bibutils** [📁](./bibutils) [🌐](https://github.com/GerHobbelt/bibutils) -- the `bibutils` set interconverts between various bibliography formats using a common MODS-format XML intermediate. For example, one can convert RIS-format files to Bibtex by doing two transformations: RIS->MODS->Bibtex. By using a common intermediate for N formats, only 2N programs are required and not N²-N.
 - **binlog** [📁](./binlog) [🌐](https://github.com/GerHobbelt/binlog) -- a high performance C++ log library to produce structured binary logs.
-- **BLAKE3** [📁](./BLAKE3) [🌐](https://github.com/GerHobbelt/BLAKE3)
+- **BLAKE3** [📁](./BLAKE3) [🌐](https://github.com/GerHobbelt/BLAKE3) -- cryptographic hash
 - **BlingFire** [📁](./BlingFire) [🌐](https://github.com/GerHobbelt/BlingFire) -- we are a team at Microsoft called Bling (Beyond Language Understanding), sharing our [FInite State machine and REgular expression manipulation library](https://github.com/microsoft/BlingFire) (FIRE). We use Fire for many linguistic operations inside Bing such as Tokenization, Multi-word expression matching, Unknown word-guessing, Stemming / Lemmatization just to mention a few.
 - **bolt** [📁](./bolt) [🌐](https://github.com/GerHobbelt/bolt) -- a deep learning library with high performance and heterogeneous flexibility.
 - **boost** [📁](./boost) [🌐](https://github.com/GerHobbelt/boost) -- required by several other libraries in this collection
@@ -1325,7 +1325,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - **glob** [📁](./glob) [🌐](https://github.com/GerHobbelt/glob) -- directory scanner
 - **glog** [📁](./glog) [🌐](https://github.com/GerHobbelt/glog) -- Google Logging is a C++98 library that implements application-level logging. The library provides logging APIs based on C++-style streams and various helper macros.
 - **GMM-HMM-kMeans** [📁](./GMM-HMM-kMeans) [🌐](https://github.com/GerHobbelt/KMeans-GMM-HMM) -- HMM based on KMeans and GMM
-- **GMMreg** [📁](./GMMreg) [🌐](https://github.com/GerHobbelt/Project_gmmreg)
+- **GMMreg** [📁](./GMMreg) [🌐](https://github.com/GerHobbelt/Project_gmmreg) -- implementations of the robust point set registration framework described in the paper "[Robust Point Set Registration Using Gaussian Mixture Models](https://github.com/bing-jian/gmmreg/blob/master/gmmreg_PAMI_preprint.pdf)", Bing Jian and Baba C. Vemuri, IEEE Transactions on Pattern Analysis and Machine Intelligence, 2011, 33(8), pp. 1633-1645. An earlier conference version of this work, "A Robust Algorithm for Point Set Registration Using Mixture of Gaussians, Bing Jian and Baba C. Vemuri.", appeared in the proceedings of ICCV'05.
 - **GoldFish-CBOR** [📁](./GoldFish-CBOR) [🌐](https://github.com/GerHobbelt/GoldFish)
 - **google-diff-match-patch** [📁](./google-diff-match-patch) [🌐](https://github.com/GerHobbelt/diff-match-patch)
 - **google::marl** [📁](./google-marl) [🌐](https://github.com/GerHobbelt/marl) -- a hybrid thread / fiber task scheduler written in C++ 11. Marl uses a combination of fibers and threads to allow efficient execution of tasks that can block, while keeping a fixed number of hardware threads.
@@ -1407,7 +1407,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - **libcsp** [📁](./libcsp) [🌐](https://github.com/GerHobbelt/libcsp) -- a concurrency C library 10x faster than Golang, influenced by the CSP model.
 - **libcsv2** [📁](./libcsv2) [🌐](https://github.com/GerHobbelt/csv2)
 - **libcyaml** [📁](./libcyaml) [🌐](https://github.com/GerHobbelt/libcyaml)
-- **libCZMQ** [📁](./libCZMQ) [🌐](https://github.com/GerHobbelt/czmq)
+- **libCZMQ** [📁](./libCZMQ) [🌐](https://github.com/GerHobbelt/czmq) -- High-level C binding for ØMQ. (http://czmq.zeromq.org/)
 - **libde265** [📁](./libde265) [🌐](https://github.com/GerHobbelt/libde265)
 - **libdeflate** [📁](./libdeflate) [🌐](https://github.com/GerHobbelt/libdeflate) -- heavily optimized library for DEFLATE/zlib/gzip compression and decompression.
 - **libdist** [📁](./libdist) [🌐](https://github.com/GerHobbelt/distlib) -- string distance related functions (Damerau-Levenshtein, Jaro-Winkler, longest common substring & subsequence) implemented as SQLite run-time loadable extension, with UTF-8 support.
@@ -1502,7 +1502,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - **mime-mega** [📁](./mime-mega) [🌐](https://github.com/GerHobbelt/MegaMimes) -- MIME extract/insert/encode/decode: use for MHTML support
 - **mimetic** [📁](./mimetic) [🌐](https://github.com/GerHobbelt/mimetic) -- MIME: use for MHTML support
 - **mipp** [📁](./mipp) [🌐](https://github.com/GerHobbelt/MIPP) -- MyIntrinsics++ (MIPP): a portable wrapper for vector intrinsic functions (SIMD) written in C++11. It works for SSE, AVX, AVX-512 and ARM NEON (32-bit and 64-bit) instructions.
-- **MITIE-nlp** [📁](./MITIE-nlp) [🌐](https://github.com/GerHobbelt/MITIE)
+- **MITIE-nlp** [📁](./MITIE-nlp) [🌐](https://github.com/GerHobbelt/MITIE) -- provides state-of-the-art information extraction tools. Includes tools for performing [named entity extraction](http://blog.dlib.net/2014/04/mitie-completely-free-and-state-of-art.html) and [binary relation detection](http://blog.dlib.net/2014/07/mitie-v02-released-now-includes-python.html) as well as tools for training custom extractors and relation detectors.  MITIE is built on top of [dlib](http://dlib.net), a high-performance machine-learning library, MITIE makes use of several state-of-the-art techniques including the use of distributional word embeddings and Structural Support Vector Machines.
 - **mlpack** [📁](./mlpack) [🌐](https://github.com/GerHobbelt/mlpack) -- an intuitive, fast, and flexible C++ machine learning library, meant to be a machine learning analog to LAPACK, aiming to implement a wide array of machine learning methods and functions as a "swiss army knife" for machine learning researchers.
 - **mmc** [📁](./mmc) [🌐](https://github.com/GerHobbelt/mmc)
 - **monolith** [📁](./monolith) [🌐](https://github.com/GerHobbelt/monolith)
@@ -1548,7 +1548,6 @@ The other JavaScript engines considered are of varying size, performance and com
 - **pcg-c-random** [📁](./pcg-c-random) [🌐](https://github.com/GerHobbelt/pcg-c) -- a C implementation of the PCG family of random number generators, which are fast, statistically excellent, and offer a number of useful features.
 - **pcm** [📁](./pcm) [🌐](https://github.com/GerHobbelt/pcm)
 - **pcre** [📁](./pcre) [🌐](https://github.com/GerHobbelt/pcre) -- PCRE2 : Perl-Compatible Regular Expressions. The PCRE2 library is a set of C functions that implement regular expression pattern matching using the same syntax and semantics as Perl 5. PCRE2 has its own native API, as well as a set of wrapper functions that correspond to the POSIX regular expression API. It comes in three forms, for processing 8-bit, 16-bit, or 32-bit code units, in either literal or UTF encoding.
-- **pdf2htmlEX** [📁](./pdf2htmlEX) [🌐](https://github.com/GerHobbelt/pdf2htmlEX)
 - **pdf2htmlEX** [📁](./pdf2htmlEX) [🌐](https://github.com/GerHobbelt/pdf2htmlEX) -- convert PDF to HTML without losing text or format.
 - **pelikan** [📁](./pelikan) [🌐](https://github.com/GerHobbelt/pelikan) -- Pelikan is Twitter's unified cache backend.
 - **percona-server** [📁](./percona-server) [🌐](https://github.com/GerHobbelt/percona-server)
@@ -1709,15 +1708,15 @@ The other JavaScript engines considered are of varying size, performance and com
 - **winflexbison** [📁](./winflexbison) [🌐](https://github.com/GerHobbelt/winflexbison) -- Flex and Bison for Microsoft Windows :: a Windows port of Flex (the fast lexical analyser) and GNU Bison (parser generator). Both `win_flex` and `win_bison` are based on upstream sources but depend on system libraries only.
 - **winflexbison** [📁](./winflexbison) [🌐](https://github.com/GerHobbelt/winflexbison) -- Flex and Bison for Microsoft Windows. WinFlexBison is a Windows port of Flex (the fast lexical analyser) and GNU Bison (parser generator). Both `win_flex` and `win_bison` are based on upstream sources but depend on system libraries only.
 - **WinHttpPAL** [📁](./WinHttpPAL) [🌐](https://github.com/GerHobbelt/WinHttpPAL) -- implements [WinHttp API](https://docs.microsoft.com/en-us/windows/win32/winhttp/winhttp-start-page) Platform Abstraction Layer for POSIX systems using libcurl
-- **wxCharts** [📁](./wxCharts) [🌐](https://github.com/GerHobbelt/wxCharts)
-- **wxExamples** [📁](./wxExamples) [🌐](https://github.com/GerHobbelt/Examples_wxWidgets)
-- **wxFormBuilder** [📁](./wxFormBuilder) [🌐](https://github.com/GerHobbelt/wxFormBuilder)
+- **wxCharts** [📁](./wxCharts) [🌐](https://github.com/GerHobbelt/wxCharts) -- charts for wxWidgets
+- **wxExamples** [📁](./wxExamples) [🌐](https://github.com/GerHobbelt/Examples_wxWidgets) -- examples using wxWidgets
+- **wxFormBuilder** [📁](./wxFormBuilder) [🌐](https://github.com/GerHobbelt/wxFormBuilder) -- resource editor and GUI designer for wxWidgets
 - **wxMEdit** [📁](./wxMEdit) [🌐](https://github.com/GerHobbelt/wxMEdit) -- a cross-platform Text/Hex Editor written in C++ & wxWidgets. wxMEdit supports many useful functions, e.g. Bookmark, Syntax Highlightings, Word Wraps, Encodings and Column/Hex Modes.
 - **wxPDFView** [📁](./wxPDFView) [🌐](https://github.com/GerHobbelt/wxPDFView) -- wxWidgets PDF viewer/reader control
 - **wxSQLite3** [📁](./wxSQLite3) [🌐](https://github.com/GerHobbelt/wxsqlite3) -- a C++ wrapper around the SQLite 3.x database and is specifically designed for use in programs based on the wxWidgets library. **wxSQLite3** does not try to hide the underlying database, in contrary almost all special features of the current SQLite3 version are supported, like for example the creation of user defined scalar or aggregate functions.
 - **wxVisualScriptEngine** [📁](./wxVisualScriptEngine) [🌐](https://github.com/GerHobbelt/VisualScriptEngineWxWidgets) -- a utility module for [VisualScriptEngine](https://github.com/kovacsv/VisualScriptEngine) which provides helper classes for embedding the engine in a wxWidgets application.
 - **wxWebViewChromium** [📁](./wxWebViewChromium) [🌐](https://github.com/GerHobbelt/wxWebViewChromium) -- Chromium CEF3-based embedded browser for wxWidgets
-- **wxWidgets** [📁](./wxWidgets) [🌐](https://github.com/GerHobbelt/wxWidgets)
+- **wxWidgets** [📁](./wxWidgets) [🌐](https://github.com/GerHobbelt/wxWidgets) -- cross-platform GUI framework.
 - **wyhash** [📁](./wyhash) [🌐](https://github.com/GerHobbelt/wyhash) -- No hash function is perfect, but some are useful. `wyhash` and `wyrand` are the ideal 64-bit hash function and PRNG respectively: solid, portable, fastest (especially for short keys), salted (using a dynamic secret to avoid intended attack).
 - **xgboost** [📁](./xgboost) [🌐](https://github.com/GerHobbelt/xgboost) -- an optimized distributed gradient boosting library designed to be highly efficient, flexible and portable. It implements machine learning algorithms under the Gradient Boosting framework. XGBoost provides a parallel tree boosting (also known as GBDT, GBM) that solve many data science problems in a fast and accurate way. The same code runs on major distributed environment (Kubernetes, Hadoop, SGE, MPI, Dask) and can solve problems beyond billions of examples.
 - **xml-pugixml** [📁](./xml-pugixml) [🌐](https://github.com/GerHobbelt/pugixml) -- light-weight, simple and fast XML parser for C++ with XPath support.
@@ -1815,7 +1814,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - **harfbuzz** [📁](../../thirdparty/harfbuzz) [🌐](https://github.com/GerHobbelt/thirdparty-harfbuzz)
 - **jbig2dec** [📁](../../thirdparty/jbig2dec) [🌐](https://github.com/GerHobbelt/jbig2dec) -- a decoder library and example utility implementing the JBIG2 bi-level image compression spec. Also known as ITU T.88 and ISO IEC 14492, and included by reference in Adobe's PDF version 1.4 and later.
 - **jpeginfo** [📁](../../thirdparty/jpeginfo) [🌐](https://github.com/GerHobbelt/jpeginfo)
-- **langdata_LSTM** [📁](../../thirdparty/langdata_LSTM) [🌐](https://github.com/GerHobbelt/langdata_lstm)
+- **langdata_LSTM** [📁](../../thirdparty/langdata_LSTM) [🌐](https://github.com/GerHobbelt/langdata_lstm) -- tesseract data
 - **lcms2** [📁](../../thirdparty/lcms2) [🌐](https://github.com/GerHobbelt/thirdparty-lcms2) -- `lcms2mt` is a thread-safe fork of `lcms` (a.k.a. Little CMS). Little CMS intends to be a small-footprint color management engine, with special focus on accuracy and performance. It uses the International Color Consortium standard (ICC), which is the modern standard when regarding to color management. The ICC specification is widely used and is referred to in many International and other de-facto standards. It was approved as an International Standard, ISO 15076-1, in 2005. Little CMS is a **full implementation** of ICC specification 4.3, it fully supports all kind of V2 and V4 profiles, including abstract, devicelink and named color profiles.
 - **leptonica** [📁](../../thirdparty/leptonica) [🌐](https://github.com/GerHobbelt/leptonica)
 - **libjpeg** [📁](../../thirdparty/libjpeg) [🌐](https://github.com/GerHobbelt/thirdparty-libjpeg)
