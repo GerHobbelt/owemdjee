@@ -1793,3 +1793,348 @@
 [submodule "xsldbg"]
 	path = xsldbg
 	url = git@github.com:GerHobbelt/xsldbg.git
+	
+[submodule "ceres-solver"]
+	path = ceres-solver
+	url = git@github.com:GerHobbelt/ceres-solver.git
+	
+[submodule "stateline"]
+	path = stateline
+	url = git@github.com:GerHobbelt/stateline.git
+	
+[submodule "cppjieba"]
+	path = cppjieba
+	url = git@github.com:GerHobbelt/cppjieba.git
+	
+[submodule "monolith"]
+	path = monolith
+	url = git@github.com:GerHobbelt/monolith.git
+	
+[submodule "PGM-index"]
+	path = PGM-index
+	url = git@github.com:GerHobbelt/PGM-index.git
+	
+[submodule "iresearch"]
+	path = iresearch
+	url = git@github.com:GerHobbelt/iresearch.git
+	
+[submodule "pHash"]
+	path = pHash
+	url = git@github.com:GerHobbelt/pHash.git
+	
+[submodule "phash-gpl"]
+	path = phash-gpl
+	url = git@github.com:GerHobbelt/phash-gpl.git
+	
+[submodule "ssimulacra2"]
+	path = ssimulacra2
+	url = git@github.com:GerHobbelt/ssimulacra2.git
+	
+[submodule "arangodb"]
+	path = arangodb
+	url = git@github.com:GerHobbelt/arangodb.git
+	
+[submodule "completesearch"]
+	path = completesearch
+	url = git@github.com:GerHobbelt/completesearch.git
+	
+[submodule "qlever"]
+	path = qlever
+	url = git@github.com:GerHobbelt/qlever.git
+	
+[submodule "midas"]
+	path = midas
+	url = git@github.com:GerHobbelt/MIDAS.git
+	
+[submodule "pytorch_cpp_demo"]
+	path = pytorch_cpp_demo
+	url = git@github.com:GerHobbelt/pytorch_cpp.git
+	
+[submodule "LightGBM"]
+	path = LightGBM
+	url = git@github.com:GerHobbelt/LightGBM.git
+	
+[submodule "StarSpace"]
+	path = StarSpace
+	url = git@github.com:GerHobbelt/StarSpace.git
+	
+[submodule "sqlite_fts_tokenizer_chinese_simple"]
+	path = sqlite_fts_tokenizer_chinese_simple
+	url = git@github.com:GerHobbelt/simple.git
+	
+[submodule "libcppjieba"]
+	path = libcppjieba
+	url = git@github.com:GerHobbelt/libcppjieba.git
+	
+[submodule "pinyin"]
+	path = pinyin
+	url = git@github.com:GerHobbelt/pinyin.git
+	
+[submodule "libpinyin"]
+	path = libpinyin
+	url = git@github.com:GerHobbelt/libpinyin.git
+	
+[submodule "libcsv2"]
+	path = libcsv2
+	url = git@github.com:GerHobbelt/csv2.git
+	
+[submodule "csv-parser"]
+	path = csv-parser
+	url = git@github.com:GerHobbelt/csv-parser.git
+	
+[submodule "mammut"]
+	path = mammut
+	url = git@github.com:GerHobbelt/mammut.git
+	
+[submodule "Cysboard"]
+	path = Cysboard
+	url = git@github.com:GerHobbelt/Cysboard.git
+	
+[submodule "diffutils"]
+	path = diffutils
+	url = git@github.com:GerHobbelt/diffutils.git
+	
+[submodule "gtn"]
+	path = gtn
+	url = git@github.com:GerHobbelt/gtn.git
+	
+[submodule "OpenFST-utils"]
+	path = OpenFST-utils
+	url = git@github.com:GerHobbelt/openfst-utils.git
+	
+[submodule "sqlite3-compression-encryption-vfs"]
+	path = sqlite3-compression-encryption-vfs
+	url = git@github.com:GerHobbelt/sqlite3-compression-encryption-vfs.git
+	
+[submodule "nativefiledialog-extended"]
+	path = nativefiledialog-extended
+	url = git@github.com:GerHobbelt/nativefiledialog-extended.git
+	
+[submodule "jsoncons"]
+	path = jsoncons
+	url = git@github.com:GerHobbelt/jsoncons.git
+	
+[submodule "rclone"]
+	path = rclone
+	url = git@github.com:GerHobbelt/rclone.git
+	
+[submodule "mysql-connector-cpp"]
+	path = mysql-connector-cpp
+	url = git@github.com:GerHobbelt/mysql-connector-cpp.git
+	
+[submodule "exiv2"]
+	path = exiv2
+	url = git@github.com:GerHobbelt/exiv2.git
+	
+[submodule "openpbs"]
+	path = openpbs
+	url = git@github.com:GerHobbelt/openpbs.git
+	
+[submodule "pybind11"]
+	path = pybind11
+	url = git@github.com:GerHobbelt/pybind11.git
+
+[submodule "RxCpp"]
+	path = RxCpp
+	url = git@github.com:GerHobbelt/RxCpp.git
+
+[submodule "zxing-cpp"]
+	path = zxing-cpp
+	url = git@github.com:GerHobbelt/zxing-cpp.git
+
+[submodule "statsite"]
+	path = statsite
+	url = git@github.com:GerHobbelt/statsite.git
+
+[submodule "QCBOR"]
+	path = QCBOR
+	url = git@github.com:GerHobbelt/QCBOR.git
+
+[submodule "libcbor"]
+	path = libcbor
+	url = git@github.com:GerHobbelt/libcbor.git
+
+[submodule "tinycbor"]
+	path = tinycbor
+	url = git@github.com:GerHobbelt/tinycbor.git
+
+[submodule "pcm"]
+	path = pcm
+	url = git@github.com:GerHobbelt/pcm.git
+
+[submodule "safestringlib"]
+	path = safestringlib
+	url = git@github.com:GerHobbelt/safestringlib.git
+
+[submodule "libjxl"]
+	path = libjxl
+	url = git@github.com:GerHobbelt/libjxl.git
+
+[submodule "libheif"]
+	path = libheif
+	url = git@github.com:GerHobbelt/heif.git
+
+[submodule "oiio"]
+	path = oiio
+	url = git@github.com:GerHobbelt/oiio.git
+
+[submodule "libheif-alt"]
+	path = libheif-alt
+	url = git@github.com:GerHobbelt/libheif.git
+
+[submodule "libde265"]
+	path = libde265
+	url = git@github.com:GerHobbelt/libde265.git
+
+[submodule "libaom"]
+	path = libaom
+	url = git@github.com:GerHobbelt/libaom.git
+
+[submodule "variadic_table"]
+	path = variadic_table
+	url = git@github.com:GerHobbelt/variadic_table.git
+
+[submodule "libmobi"]
+	path = libmobi
+	url = git@github.com:GerHobbelt/libmobi.git
+
+[submodule "stringi"]
+	path = stringi
+	url = git@github.com:GerHobbelt/stringi.git
+
+[submodule "tinygettext"]
+	path = tinygettext
+	url = git@github.com:GerHobbelt/tinygettext.git
+
+[submodule "gettext"]
+	path = gettext
+	url = git@github.com:GerHobbelt/gettext.git
+
+[submodule "libfort"]
+	path = libfort
+	url = git@github.com:GerHobbelt/libfort.git
+
+[submodule "libevt"]
+	path = libevt
+	url = git@github.com:GerHobbelt/libevt.git
+
+[submodule "date"]
+	path = date
+	url = git@github.com:GerHobbelt/date.git
+
+[submodule "datetimepp"]
+	path = datetimepp
+	url = git@github.com:GerHobbelt/datetimepp.git
+
+[submodule "dateutils"]
+	path = dateutils
+	url = git@github.com:GerHobbelt/dateutils.git
+
+[submodule "cctz"]
+	path = cctz
+	url = git@github.com:GerHobbelt/cctz.git
+
+[submodule "ion-c"]
+	path = ion-c
+	url = git@github.com:GerHobbelt/ion-c.git
+
+[submodule "libsmile"]
+	path = libsmile
+	url = git@github.com:GerHobbelt/libsmile.git
+
+[submodule "eventpp"]
+	path = eventpp
+	url = git@github.com:GerHobbelt/eventpp.git
+
+[submodule "universal-numbers"]
+	path = universal-numbers
+	url = git@github.com:GerHobbelt/universal.git
+
+[submodule "libsigcplusplus"]
+	path = libsigcplusplus
+	url = git@github.com:GerHobbelt/libsigcplusplus.git
+
+[submodule "Signals"]
+	path = Signals
+	url = git@github.com:GerHobbelt/Signals.git
+
+[submodule "percona-server"]
+	path = percona-server
+	url = git@github.com:GerHobbelt/percona-server.git
+
+[submodule "comdb2-bdb"]
+	path = comdb2-bdb
+	url = git@github.com:GerHobbelt/comdb2.git
+
+[submodule "cpython"]
+	path = cpython
+	url = git@github.com:GerHobbelt/cpython.git
+
+[submodule "sqleet"]
+	path = sqleet
+	url = git@github.com:GerHobbelt/sqleet.git
+
+[submodule "sqlcipher"]
+	path = sqlcipher
+	url = git@github.com:GerHobbelt/sqlcipher.git
+
+[submodule "argparse"]
+	path = argparse
+	url = git@github.com:GerHobbelt/argparse.git
+
+[submodule "sqlpp11"]
+	path = sqlpp11
+	url = git@github.com:GerHobbelt/sqlpp11.git
+
+[submodule "mydumper"]
+	path = mydumper
+	url = git@github.com:GerHobbelt/mydumper.git
+
+[submodule "GoldFish-CBOR"]
+	path = GoldFish-CBOR
+	url = git@github.com:GerHobbelt/GoldFish.git
+
+[submodule "indicators"]
+	path = indicators
+	url = git@github.com:GerHobbelt/indicators.git
+
+[submodule "VQMT"]
+	path = VQMT
+	url = git@github.com:GerHobbelt/VQMT.git
+
+[submodule "spdlog"]
+	path = spdlog
+	url = git@github.com:GerHobbelt/spdlog.git
+
+[submodule "spdlog_setup"]
+	path = spdlog_setup
+	url = git@github.com:GerHobbelt/spdlog_setup.git
+
+[submodule "cpptoml"]
+	path = cpptoml
+	url = git@github.com:GerHobbelt/cpptoml.git
+
+[submodule "toml11"]
+	path = toml11
+	url = git@github.com:GerHobbelt/toml11.git
+
+[submodule "folly"]
+	path = folly
+	url = git@github.com:GerHobbelt/folly.git
+
+[submodule "BoxFort"]
+	path = BoxFort
+	url = git@github.com:GerHobbelt/BoxFort.git
+
+[submodule "debugbreak"]
+	path = debugbreak
+	url = git@github.com:GerHobbelt/debugbreak.git
+
+[submodule "Criterion"]
+	path = Criterion
+	url = git@github.com:GerHobbelt/Criterion.git
+
+[submodule "tabulate"]
+	path = tabulate
+	url = git@github.com:GerHobbelt/tabulate.git
+
