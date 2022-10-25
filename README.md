@@ -407,7 +407,7 @@ The other JavaScript engines considered are of varying size, performance and com
         - **thunderSVM** [📁](./thunderSVM) [🌐](https://github.com/GerHobbelt/thundersvm) -- ThunderSVM exploits GPUs and multi-core CPUs to achieve high efficiency, supporting all functionalities of LibSVM such as one-class SVMs, SVC, SVR and probabilistic SVMs.
         - **tinn** [📁](./tinn) [🌐](https://github.com/GerHobbelt/tinn) -- Tinn (Tiny Neural Network) is a 200 line dependency free neural network library written in C99.
         - **warp-ctc** [📁](./warp-ctc) [🌐](https://github.com/GerHobbelt/warp-ctc) -- A fast parallel implementation of CTC, on both CPU and GPU. Connectionist Temporal Classification (CTC) is a loss function useful for performing supervised learning on sequence data, without needing an alignment between input data and labels. For example, CTC can be used to train end-to-end systems for speech recognition.
-        - **xnnpack** [📁](./xnnpack) [🌐](https://github.com/GerHobbelt/XNNPACK)
+        - **xnnpack** [📁](./xnnpack) [🌐](https://github.com/GerHobbelt/XNNPACK) -- a highly optimized library of floating-point neural network inference operators for ARM, WebAssembly, and x86 platforms. XNNPACK is not intended for direct use by deep learning practitioners and researchers; instead it provides low-level performance primitives for accelerating high-level machine learning frameworks, such as TensorFlow Lite, TensorFlow.js, PyTorch, and MediaPipe.
         - **xtensor** [📁](./xtensor) [🌐](https://github.com/GerHobbelt/xtensor) -- C++ tensors with broadcasting and lazy computing. `xtensor` is a C++ library meant for numerical analysis with multi-dimensional array expressions.
         - **xtensor-blas** [📁](./xtensor-blas) [🌐](https://github.com/GerHobbelt/xtensor-blas) -- an extension to the `xtensor` library, offering bindings to BLAS and LAPACK libraries through `cxxblas` and `cxxlapack`.
         - **xtensor-io** [📁](./xtensor-io) [🌐](https://github.com/GerHobbelt/xtensor-io) -- a `xtensor` plugin to read and write images, audio files, NumPy (compressed) NPZ and HDF5 files.
@@ -511,8 +511,8 @@ The other JavaScript engines considered are of varying size, performance and com
         - ~~**Imath** [🌐](https://github.com/AcademySoftwareFoundation/Imath) -- float16 support lib for OpenEXR format~~
         - **removed**; reason: considered *overkill* for the projects I'm currently involved in, including Qiqqa. Those can use [Apache Tika](https://tika.apache.org/), [ImageMagick](https://imagemagick.org/) or other thirdparty pipelines to convert to & from supported formats.
 
-    - ~~**OpenImageIO** [🌐](https://github.com/OpenImageIO/oiio)~~
-        - **removed**; reason: considered nice & cool but still *overkill*. Qiqqa tooling can use [Apache Tika](https://tika.apache.org/), [ImageMagick](https://imagemagick.org/) or other thirdparty pipelines to convert to & from supported formats.
+    - **OpenImageIO** [🌐](https://github.com/OpenImageIO/oiio)
+        - **tentative/pending**; reason: considered nice & cool but still *overkill*. Qiqqa tooling can use [Apache Tika](https://tika.apache.org/), [ImageMagick](https://imagemagick.org/) or other thirdparty pipelines to convert to & from supported formats.
 
 
 
@@ -644,7 +644,7 @@ The other JavaScript engines considered are of varying size, performance and com
     - **picohttpparser** [📁](./picohttpparser) [🌐](https://github.com/GerHobbelt/picohttpparser)
     - **tidy-html5** [📁](./tidy-html5) [🌐](https://github.com/GerHobbelt/tidy-html5) -- clean up HTML documents before archiving/processing
     - **url** [📁](./url) [🌐](https://github.com/GerHobbelt/url) -- URI parsing and other utility functions
-    - **xml-pugixml** [📁](./xml-pugixml) [🌐](https://github.com/GerHobbelt/pugixml)
+    - **xml-pugixml** [📁](./xml-pugixml) [🌐](https://github.com/GerHobbelt/pugixml) -- light-weight, simple and fast XML parser for C++ with XPath support.
 
 
 - **file format support**
@@ -1065,7 +1065,7 @@ The other JavaScript engines considered are of varying size, performance and com
     - **win32-dpi** [📁](./win32-dpi) [🌐](https://github.com/GerHobbelt/win32-dpi) -- Win32 DPI-aware window example, showcasing how to write a Win32 DPI-aware GUI application that scales properly on everything starting from Windows XP up to and including latest Windows 11.
     - **wxCharts** [📁](./wxCharts) [🌐](https://github.com/GerHobbelt/wxCharts) -- charts for wxWidgets
     - **wxExamples** [📁](./wxExamples) [🌐](https://github.com/GerHobbelt/Examples_wxWidgets) -- examples using wxWidgets
-    - **wxFormBuilder** [📁](./wxFormBuilder) [🌐](https://github.com/GerHobbelt/wxFormBuilder) -- resource editor and GUI designer
+    - **wxFormBuilder** [📁](./wxFormBuilder) [🌐](https://github.com/GerHobbelt/wxFormBuilder) -- resource editor and GUI designer for wxWidgets
     - **wxMEdit** [📁](./wxMEdit) [🌐](https://github.com/GerHobbelt/wxMEdit) -- a cross-platform Text/Hex Editor written in C++ & wxWidgets. wxMEdit supports many useful functions, e.g. Bookmark, Syntax Highlightings, Word Wraps, Encodings and Column/Hex Modes.
     - **wxPDFView** [📁](./wxPDFView) [🌐](https://github.com/GerHobbelt/wxPDFView) -- wxWidgets PDF viewer/reader control
     - **wxSQLite3** [📁](./wxSQLite3) [🌐](https://github.com/GerHobbelt/wxsqlite3) -- a C++ wrapper around the SQLite 3.x database and is specifically designed for use in programs based on the wxWidgets library. **wxSQLite3** does not try to hide the underlying database, in contrary almost all special features of the current SQLite3 version are supported, like for example the creation of user defined scalar or aggregate functions.
@@ -1084,19 +1084,19 @@ The other JavaScript engines considered are of varying size, performance and com
     - **tesseract-gImgRdrGui** [📁](./tesseract-gImgRdrGui) [🌐](https://github.com/GerHobbelt/gImageReader) -- a Gtk/Qt front-end to tesseract-ocr.
     - **zotero** [📁](./zotero) [🌐](https://github.com/GerHobbelt/zotero)
     - **zotero-better-bibtex** [📁](./zotero-better-bibtex) [🌐](https://github.com/GerHobbelt/zotero-better-bibtex) -- Better BibTeX (BBT) is an extension for Zotero and Juris-M that makes it easier to manage bibliographic data, especially for people authoring documents using text-based toolchains (e.g. based on LaTeX / Markdown).
-    - **zotero-bib** [📁](./zotero-bib) [🌐](https://github.com/GerHobbelt/bib)
-    - **zotero-build** [📁](./zotero-build) [🌐](https://github.com/GerHobbelt/zotero-build)
-    - **zotero-connectors** [📁](./zotero-connectors) [🌐](https://github.com/GerHobbelt/zotero-connectors)
-    - **zotero-google-docs-integration** [📁](./zotero-google-docs-integration) [🌐](https://github.com/GerHobbelt/zotero-google-docs-integration)
-    - **zotero-libreoffice-integration** [📁](./zotero-libreoffice-integration) [🌐](https://github.com/GerHobbelt/zotero-libreoffice-integration)
+    - **zotero-bib** [📁](./zotero-bib) [🌐](https://github.com/GerHobbelt/bib) -- Zotero Translation Client is a library that can process URLs and identifiers (such as ISBN or DOI) into CSL-JSON bibliography items using a translation server.
+    - **zotero-build** [📁](./zotero-build) [🌐](https://github.com/GerHobbelt/zotero-build) -- Zotero client build scripts.
+    - **zotero-connectors** [📁](./zotero-connectors) [🌐](https://github.com/GerHobbelt/zotero-connectors) -- Chrome, Firefox, and Safari browser extensions for Zotero.
+    - **zotero-google-docs-integration** [📁](./zotero-google-docs-integration) [🌐](https://github.com/GerHobbelt/zotero-google-docs-integration) -- a Zotero integration plugin that communicates between Google Docs and Zotero via the Connector.
+    - **zotero-libreoffice-integration** [📁](./zotero-libreoffice-integration) [🌐](https://github.com/GerHobbelt/zotero-libreoffice-integration) -- comprises extensions for LibreOffice/OpenOffice.org/NeoOffice and Zotero communicating using local web servers.
     - **zotero-scholar-citations** [📁](./zotero-scholar-citations) [🌐](https://github.com/GerHobbelt/zotero-scholar-citations) -- an add-on for Zotero. The add-on automatically fetches numbers of citations of your Zotero items from Google Scholar and makes it possible to sort your items by the citations. Moreover, it allows batch updating the citations, as they may change over time.  **When updating multiple citations in a batch, it may happen that citation queries are blocked by Google Scholar for multiple automated requests. If a blockage happens, the add-on opens a browser window and directs it to http://scholar.google.com/, where you should see a Captcha displayed by Google Scholar, which you need to enter to get unblocked and then re-try updating the citations. It may happen that Google Scholar displays a message like the following "*We're sorry... but your computer or network may be sending automated queries. To protect our users, we can't process your request right now.*" In that case, the only solution is to wait for a while until Google unblocks you.**
     - **zotero-shortdoi** [📁](./zotero-shortdoi) [🌐](https://github.com/GerHobbelt/zotero-shortdoi) -- an add-on for Zotero. The add-on can auto-fetch DOI names for journal articles using the CrossRef API, as well as look up shortDOI names using http://shortdoi.org. The add-on additionally verifies that stored DOIs are valid and marks invalid DOIs.
-    - **zotero-standalone-build** [📁](./zotero-standalone-build) [🌐](https://github.com/GerHobbelt/zotero-standalone-build)
-    - **zotero-translate** [📁](./zotero-translate) [🌐](https://github.com/GerHobbelt/translate)
-    - **zotero-translation-server** [📁](./zotero-translation-server) [🌐](https://github.com/GerHobbelt/translation-server)
+    - **zotero-standalone-build** [📁](./zotero-standalone-build) [🌐](https://github.com/GerHobbelt/zotero-standalone-build) -- build scripts used to bundle the Zotero core into distributable bundles for Mac, Windows, and Linux.
+    - **zotero-translate** [📁](./zotero-translate) [🌐](https://github.com/GerHobbelt/translate) -- browser-based standalone zotero translator.
+    - **zotero-translation-server** [📁](./zotero-translation-server) [🌐](https://github.com/GerHobbelt/translation-server) -- lets you use Zotero translators without the Zotero client.
     - **zotero-translators** [📁](./zotero-translators) [🌐](https://github.com/GerHobbelt/translators) -- Zotero Translators : automatically detect journal articles, library records, news items, and other objects you might like to save to your Zotero library. Zotero uses so-called “translators” to detect and import data from websites. There are currently more than 600 different translators, facilitating data import from countless sites.
-    - **zotero-web-library** [📁](./zotero-web-library) [🌐](https://github.com/GerHobbelt/web-library)
-    - **zotero-word-for-windows-integration** [📁](./zotero-word-for-windows-integration) [🌐](https://github.com/GerHobbelt/zotero-word-for-windows-integration)
+    - **zotero-web-library** [📁](./zotero-web-library) [🌐](https://github.com/GerHobbelt/web-library) -- a Web Library capable of being installed/run on other websites. It is a single-page application implemented in Javascript. It uses Zotero API via CORS requests.
+    - **zotero-word-for-windows-integration** [📁](./zotero-word-for-windows-integration) [🌐](https://github.com/GerHobbelt/zotero-word-for-windows-integration) -- a Firefox add-on that consists of a library written in C++ that communicates with Microsoft Word out of process using OLE Automation, a js-ctypes wrapper for said library, and a template that is installed into Microsoft Word to communicate with Zotero.
     - **zotero-zotfile** [📁](./zotero-zotfile) [🌐](https://github.com/GerHobbelt/zotfile) -- Zotero plugin to manage your attachments: automatically rename, move, and attach PDFs (or other files) to Zotero items, sync PDFs from your Zotero library to your (mobile) PDF reader (e.g. an iPad, Android tablet, etc.), and extract PDF annotations.
 
 
@@ -1524,7 +1524,6 @@ The other JavaScript engines considered are of varying size, performance and com
 - **nsync** [📁](./nsync) [🌐](https://github.com/GerHobbelt/nsync) -- a C library that exports various synchronization primitives. `nsync` may be desirable in place of `pthread` primitives in some cases:  (1) nsync locks are reader-writer locks (but are as efficient as mutexes).  (2) nsync locks and condition variables occupy only two words each.  (3) nsync works on Unix-like systems and Windows.  It should be portable to other platforms straightforwardly.  (4) nsync provides conditional critical sections.  These fill the same role as condition variables, but are usually easier to use, and in most common cases are comparable in speed.  They can be easier to use in two ways:  (A) it's not necessary to surround the "wait" operation in a while loop; instead the condition is passed to the call as a function and arbitrary pointer argument.  (B) it's not necessary to wake or signal explicitly when the condition(s) become true; they are checked automatically. The primary downsides are:  (A) they are not available in most other common synchronization APIs, and so they may be unfamiliar (even though they date back to the 1960s), and (B) if threads routinely wait on many distinct, false conditions associated with the same lock, they may be slower than condition variables. In this case, clients can use condition variables in the normal way; conditional critical sections and condition variables can be used with the same lock.  (5) nsync waits can be cancelled via an object passed to the wait calls, unlike the pthread model in which threads are cancelled.  This difference can be useful if the computation needs multiple threads, or if cancellation affects only sub-operations within a larger operation by the thread.
 - **ocreval** [📁](./ocreval) [🌐](https://github.com/GerHobbelt/ocreval) -- `ocreval` contains 17 tools for measuring the performance of and experimenting with OCR output. `ocreval` is a modern port of the [ISRI Analytic Tools for OCR Evaluation](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.216.9427&rep=rep1&type=pdf), with UTF-8 support and other improvements.
 - **OfficeIMO** [📁](./OfficeIMO) [🌐](https://github.com/GerHobbelt/OfficeIMO) -- fast and easy to use cross-platform .NET library that creates or modifies Microsoft Word (.docx) files without installing any software. Underneath it uses OpenXML SDK but heavily simplifies it.
-- **oiio** [📁](./oiio) [🌐](https://github.com/GerHobbelt/oiio)
 - **olena** [📁](./olena) [🌐](https://github.com/GerHobbelt/olena) -- a platform dedicated to image processing.  At the moment it is mainly composed of a C++ library: Milena.  This library features many tools to easily perform image processing tasks.  Its main characteristic is its genericity: it allows to write an algorithm once and run it over many kinds of images (gray scale, color, 1D, 2D, 3D, ...).
 - **oneTBB** [📁](./oneTBB) [🌐](https://github.com/GerHobbelt/oneTBB) -- Intel's Thread Building Blocks library: used with OpenImageIO, ...
 - **opencv** [📁](./opencv) [🌐](https://github.com/GerHobbelt/opencv)
@@ -1731,7 +1730,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - **xtl** [📁](./xtl) [🌐](https://github.com/GerHobbelt/xtl) -- xtensor core library
 - **xxHash** [📁](./xxHash) [🌐](https://github.com/GerHobbelt/xxHash) -- fast hash algorithm
 - **YACLib** [📁](./YACLib) [🌐](https://github.com/GerHobbelt/YACLib) -- YACLib is a lightweight C++ library for concurrent and parallel task execution.
-- **yaml-cpp** [📁](./yaml-cpp) [🌐](https://github.com/GerHobbelt/yaml-cpp)
+- **yaml-cpp** [📁](./yaml-cpp) [🌐](https://github.com/GerHobbelt/yaml-cpp) -- a YAML parser and emitter in C++ matching the YAML 1.2 spec.
 - **yaml-test-suite** [📁](./yaml-test-suite) [🌐](https://github.com/GerHobbelt/yaml-test-suite)
 - **yara-pattern-matcher** [📁](./yara-pattern-matcher) [🌐](https://github.com/GerHobbelt/yara) -- for automated and user-specified pattern recognition in custom document & metadata *cleaning* / processing tasks
 - **you-token-to-me** [📁](./you-token-to-me) [🌐](https://github.com/GerHobbelt/YouTokenToMe) -- text tokenization
@@ -1755,49 +1754,49 @@ The other JavaScript engines considered are of varying size, performance and com
 - **zotero-word-for-windows-integration** [📁](./zotero-word-for-windows-integration) [🌐](https://github.com/GerHobbelt/zotero-word-for-windows-integration)
 - **zotero-zotfile** [📁](./zotero-zotfile) [🌐](https://github.com/GerHobbelt/zotfile) -- Zotero plugin to manage your attachments: automatically rename, move, and attach PDFs (or other files) to Zotero items, sync PDFs from your Zotero library to your (mobile) PDF reader (e.g. an iPad, Android tablet, etc.), and extract PDF annotations.
 - **zpp_bits** [📁](./zpp_bits) [🌐](https://github.com/GerHobbelt/zpp_bits) -- A modern, *fast*, C++20 binary serialization and RPC library, with just one header file.See also the [benchmark](https://github.com/GerHobbelt/zpp_bits#benchmark).
-- **zstd** [📁](./zstd) [🌐](https://github.com/GerHobbelt/zstd)
+- **zstd** [📁](./zstd) [🌐](https://github.com/GerHobbelt/zstd) -- Zstandard, a.k.a. `zstd`, is a fast lossless compression algorithm, targeting real-time compression scenarios at zlib-level and better compression ratios.
 - **zsv** [📁](./zsv) [🌐](https://github.com/GerHobbelt/zsv) -- the world's fastest (SIMD) CSV parser, with an extensible CLI for SQL querying, format conversion and more.
 - **zsync2** [📁](./zsync2) [🌐](https://github.com/GerHobbelt/zsync2) -- the advanced file download/sync tool zsync. zsync is a well known tool for downloading and updating local files from HTTP servers using the well known algorithms rsync.
-- **zxing-cpp** [📁](./zxing-cpp) [🌐](https://github.com/GerHobbelt/zxing-cpp)
+- **zxing-cpp** [📁](./zxing-cpp) [🌐](https://github.com/GerHobbelt/zxing-cpp) -- ZXing-C++ ("zebra crossing") is a multi-format linear/matrix (1D/2D) barcode image processing library implemented in C++. Supported formats include: UPC-A, UPC-E, EAN-8, EAN-13, Code 39, Code 128, QR Code, PDF417, DataMatrix, CodaBar, DataBar, ITF.
 - ~~**binary_bakery** [🌐](https://github.com/s9w/binary_bakery) -- resource compiler-like tool: embed any data in your C/C++ application~~
 - ~~**bzip2** [🌐](https://github.com/nemequ/bzip2)~~
 - ~~**Catch2** [🌐](https://github.com/catchorg/Catch2)~~
 - ~~**clippson** [🌐](https://github.com/heavywatal/clippson) -- commandline parser + JSON data diagnostical dumper~~
-- ~~**cpu_features** [🌐](https://github.com/google/cpu_features)~~
-- ~~**cpu_stat** [🌐](https://github.com/vivaladav/cpu-stat)~~
-- ~~**CPython** [🌐](https://github.com/python/cpython)~~
+- ~~**cpu_features** [🌐](https://github.com/google/cpu_features) -- a cross-platform C library to retrieve CPU features (such as available instructions) at runtime.~~
+- ~~**cpu_stat** [🌐](https://github.com/vivaladav/cpu-stat) -- a command line program to get CPU usage statistics on Linux systems.~~
+- ~~**CPython** [🌐](https://github.com/python/cpython) -- the Python programming language interpreter~~
 - ~~**docopt** [🌐](https://github.com/docopt/docopt.cpp) -- generate documentation for command line options~~
 - ~~**EasyLogger** [🌐](https://github.com/armink/EasyLogger) -- an ultra-lightweight (ROM<1.6K, RAM<0.3K), high-performance C/C++ log library, very suitable for resource-sensitive software projects. Compared with the well-known C/C++ log libraries such as log4c and zlog, EasyLogger has simpler functions and provides fewer interfaces to users, but it will be quick to get started. More practical functions support dynamic expansion in the form of plug-ins.~~
-- ~~**FastBinaryEncoding** [🌐](https://github.com/chronoxor/FastBinaryEncoding)~~
+- ~~**FastBinaryEncoding** [🌐](https://github.com/chronoxor/FastBinaryEncoding) -- Fast Binary Encoding (FBE) is a universal serialization solution for C++, C#, Go, Java, JavaScript, Kotlin, Python, Ruby, Swift.~~
 - ~~**fast-lzma2** [🌐](https://github.com/conor42/fast-lzma2)~~
 - ~~**flatbuffers** [🌐](https://github.com/google/flatbuffers)~~
 - ~~**flatcc** [🌐](https://github.com/dvidelabs/flatcc)~~
 - ~~**GDCM-Grassroots-DICOM** [🌐](https://github.com/malaterre/GDCM)~~
 - ~~**h5cpp-HDF5** [🌐](https://github.com/steven-varga/h5cpp)~~
-- ~~**HDF5** [🌐](https://github.com/HDFGroup/hdf5)~~
+- ~~**HDF5** [🌐](https://github.com/HDFGroup/hdf5) -- a high-performance library and file format specification that implements the HDF5® data model, which has been adopted across many industries and has become a de facto data management standard in science, engineering, and research communities worldwide.~~
 - ~~**HighFive-HDF5** [🌐](https://github.com/BlueBrain/HighFive)~~
-- ~~**ice** [🌐](https://github.com/zeroc-ice/ice) -- Comprehensive RPC Framework: helps you network your software with minimal effort.~~
+- ~~**ice** [🌐](https://github.com/zeroc-ice/ice) -- comprehensive RPC Framework: helps you network your software with minimal effort.~~
 - ~~**Imath** [🌐](https://github.com/AcademySoftwareFoundation/Imath) -- float16 support lib for OpenEXR format~~
-- ~~**inih** [🌐](https://github.com/benhoyt/inih)~~
-- ~~**iniparser** [🌐](https://github.com/ndevilla/iniparser)~~
-- ~~**libmicrohttpd** [🌐](https://github.com/Karlson2k/libmicrohttpd)~~
+- ~~**inih** [🌐](https://github.com/benhoyt/inih) -- a simple `.INI` file parser in C, good for embedded systems~~
+- ~~**iniparser** [🌐](https://github.com/ndevilla/iniparser) -- an `.INI` file parser~~
+- ~~**libmicrohttpd** [🌐](https://github.com/Karlson2k/libmicrohttpd) -- GNU libmicrohttpd is a C library that provides a compact API and implementation of an HTTP 1.1 web server (HTTP 1.0 is also supported).~~
 - ~~**libsmile** [🌐](https://github.com/pierre/libsmile) -- ["Smile" format](https://en.wikipedia.org/wiki/Smile_%28data_interchange_format%29), i.e. a compact binary JSON format~~
 - ~~**lizard** [🌐](https://github.com/inikep/lizard) -- Lizard (formerly LZ5) is an efficient compressor with very fast decompression.~~
 - ~~**log4cplus** [🌐](https://github.com/log4cplus/log4cplus)~~
-- ~~**lua** [🌐](https://github.com/lua/lua)~~
-- ~~**luaJIT** [🌐](https://github.com/LuaJIT/LuaJIT)~~
-- ~~**lzo** [🌐](https://github.com/nemequ/lzo)~~
-- ~~**lzsse** [🌐](https://github.com/ConorStokes/LZSSE)~~
+- ~~**lua** [🌐](https://github.com/lua/lua) -- the Lua language interpreter~~
+- ~~**luaJIT** [🌐](https://github.com/LuaJIT/LuaJIT) -- a Just-In-Time (JIT) compiler for the Lua programming language.~~
+- ~~**lzo** [🌐](https://github.com/nemequ/lzo) -- LZO -- a real-time data compression library~~
+- ~~**lzsse** [🌐](https://github.com/ConorStokes/LZSSE) -- LZSS is designed for a branchless SSE decompression implementation for LZ compressed data.~~
 - ~~**oatpp** [🌐](https://github.com/oatpp/oatpp) -- IPC / server framework~~
 - ~~**OpenEXR** [🌐](https://github.com/AcademySoftwareFoundation/openexr) -- lossless format for multi-layered images. Professional use. (I've used it before; nice file format.)~~
-- ~~**OpenImageIO** [🌐](https://github.com/OpenImageIO/oiio)~~
-- ~~**pithy** [🌐](https://github.com/johnezang/pithy)~~
+- **OpenImageIO** [🌐](https://github.com/OpenImageIO/oiio) -- a library for reading, writing, and processing images in a wide variety of file formats, using a format-agnostic API, aimed at VFX applications.
+- ~~**pithy** [🌐](https://github.com/johnezang/pithy) -- fast compression / decompression library, derived from `snappy`.~~
 - ~~**protobuf** [🌐](https://github.com/protocolbuffers/protobuf)~~
-- ~~**snappy** [🌐](https://github.com/google/snappy)~~
-- ~~**spdlog** [🌐](https://github.com/gabime/spdlog)~~
-- ~~**squash** [🌐](https://github.com/quixdb/squash)~~
+- ~~**snappy** [🌐](https://github.com/google/snappy) -- a fast compressor/decompressor~~
+- ~~**spdlog** [🌐](https://github.com/gabime/spdlog) -- fast C++ logging library~~
+- ~~**squash** [🌐](https://github.com/quixdb/squash) -- an abstraction library which provides a single API to access many compression libraries, allowing applications a great deal of flexibility when choosing a compression algorithm, or allowing a choice between several of them.~~
 - ~~**xz-utils** [🌐](https://github.com/xz-mirror/xz)~~
-- ~~**zlog** [🌐](https://github.com/HardySimpson/zlog)~~
+- ~~**zlog** [🌐](https://github.com/HardySimpson/zlog) -- a reliable, high-performance, thread safe, flexible, clear-model, pure C logging library.~~
 
 
 
@@ -1984,8 +1983,6 @@ The other JavaScript engines considered are of varying size, performance and com
 - **libjxl** [📁](./libjxl) [🌐](https://github.com/GerHobbelt/libjxl)
 
 - **libheif** [📁](./libheif) [🌐](https://github.com/GerHobbelt/heif)
-
-- **oiio** [📁](./oiio) [🌐](https://github.com/GerHobbelt/oiio)
 
 - **libheif-alt** [📁](./libheif-alt) [🌐](https://github.com/GerHobbelt/libheif)
 
