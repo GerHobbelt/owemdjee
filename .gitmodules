@@ -2138,3 +2138,14 @@
 	path = tabulate
 	url = git@github.com:GerHobbelt/tabulate.git
 
+[submodule "portable-snippets"]
+	path = portable-snippets
+	url = git@github.com:GerHobbelt/portable-snippets.git
+	
+[submodule "salieri"]
+	path = salieri
+	url = git@github.com:GerHobbelt/salieri.git
+	
+[submodule "honggfuzz"]
+	path = honggfuzz
+	url = git@github.com:GerHobbelt/honggfuzz.git
