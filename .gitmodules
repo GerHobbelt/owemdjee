@@ -2149,3 +2149,24 @@
 [submodule "honggfuzz"]
 	path = honggfuzz
 	url = git@github.com:GerHobbelt/honggfuzz.git
+
+[submodule "rsync"]
+	path = rsync
+	url = git@github.com:GerHobbelt/rsync.git
+
+[submodule "unpaper"]
+	path = unpaper
+	url = git@github.com:GerHobbelt/unpaper.git
+
+[submodule "shadesmar"]
+	path = shadesmar
+	url = git@github.com:GerHobbelt/shadesmar.git
+
+[submodule "libuv"]
+	path = libuv
+	url = git@github.com:GerHobbelt/libuv.git
+
+[submodule "ucx"]
+	path = ucx
+	url = git@github.com:GerHobbelt/ucx.git
+

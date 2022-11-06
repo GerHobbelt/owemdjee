@@ -1383,6 +1383,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **hocr-fileformat** [📁](./hocr-fileformat) [🌐](https://github.com/GerHobbelt/ocr-fileformat)
 - **hocr-spec** [📁](./hocr-spec) [🌐](https://github.com/GerHobbelt/hocr-spec)
 - **hocr-tools** [📁](./hocr-tools) [🌐](https://github.com/GerHobbelt/hocr-tools)
+- **honggfuzz** [📁](./honggfuzz) [🌐](https://github.com/GerHobbelt/honggfuzz)
 - **hopscotch-map** [📁](./hopscotch-map) [🌐](https://github.com/GerHobbelt/hopscotch-map) -- a C++ implementation of a fast hash map and hash set using hopscotch hashing and open-addressing to resolve collisions. It is a cache-friendly data structure offering better performances than `std::unordered_map` in most cases and is closely similar to `google::dense_hash_map` while using less memory and providing more functionalities.
 - **horsejs** [📁](./horsejs) [🌐](https://github.com/GerHobbelt/horsejs) -- a framework similar to Electron. Unlike Electron, it has no built-in Node.js, but directly uses C++ to provide most of Electron's capabilities, such as accessing files using JavaScript, opening dialog boxes, creating new windows, etc. Since there is no Node.js, HorseJs runs faster, uses less memory, and is more stable.
 - **html2openxml** [📁](./html2openxml) [🌐](https://github.com/GerHobbelt/html2openxml) -- Html2OpenXml is a small .NET library that converts simple or advanced HTML to plain OpenXml components (docx).
@@ -1489,6 +1490,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **libtuv** [📁](./libtuv) [🌐](https://github.com/GerHobbelt/libtuv) -- a multi-platform tiny event library refactored from `libuv` source for IoT and embedded systems.
 - **libucl** [📁](./libucl) [🌐](https://github.com/GerHobbelt/libucl) -- the configuration language called UCL - Universal Configuration Language.  UCL is heavily infused by nginx configuration as the example of a convenient configuration system. However, UCL is fully compatible with JSON format and is able to parse json files.
 - **libunifex** [📁](./libunifex) [🌐](https://github.com/GerHobbelt/libunifex) -- a prototype implementation of the C++ sender/receiver async programming model that is currently being considered for standardisation. This project contains implementations of the following: Schedulers, Timers, Asynchronous I/O, Algorithms that encapsulate certain concurrency patterns, Async streams, Cancellation, Coroutine integration.
+- **libuv** [📁](./libuv) [🌐](https://github.com/GerHobbelt/libuv)
 - **libvips** [📁](./libvips) [🌐](https://github.com/GerHobbelt/libvips) -- a demand-driven, horizontally threaded image processing library which has around 300 operations covering arithmetic, histograms, convolution, morphological operations, frequency filtering, colour, resampling, statistics and others. It supports a large range of numeric types, from 8-bit int to 128-bit complex. Images can have any number of bands. It supports a good range of image formats, including JPEG, JPEG2000, JPEG-XL, TIFF, PNG, WebP, HEIC, AVIF, FITS, Matlab, OpenEXR, PDF, SVG, HDR, PPM / PGM / PFM, CSV, GIF, Analyze, NIfTI, DeepZoom, and OpenSlide. It can also load images via ImageMagick or GraphicsMagick, letting it work with formats like DICOM.
 - **libvrb** [📁](./libvrb) [🌐](https://github.com/GerHobbelt/vrb) -- implements a ring buffer, also known as a character FIFO or circular buffer, with a special property that any data present in the buffer, as well as any empty space, are always seen as a single contiguous extent by the calling program.  This is implemented with virtual memory mapping by creating a mirror image of the buffer contents at the memory location in the virtual address space immediately after the main buffer location.  This allows the mirror image to always be seen without doing any copying of data.
 - **libwarc** [📁](./libwarc) [🌐](https://github.com/GerHobbelt/libwarc) -- C++ library to parse WARC files. WARC is the official storage format of the Internet Archive for storing scraped content. WARC format used: http://bibnum.bnf.fr/WARC/WARC_ISO_28500_version1_latestdraft.pdf
@@ -1599,6 +1601,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **pmt-png-tools** [📁](./pmt-png-tools) [🌐](https://github.com/GerHobbelt/pmt)
 - **portable_concurrency-std-future** [📁](./portable_concurrency-std-future) [🌐](https://github.com/GerHobbelt/portable_concurrency) -- Portable implementation of future/promise API in C++. `std::future` done right.
 - **portable-memory-mapping** [📁](./portable-memory-mapping) [🌐](https://github.com/GerHobbelt/portable-memory-mapping) -- portable Memory Mapping C++ Class (Windows/Linux)
+- **portable-snippets** [📁](./portable-snippets) [🌐](https://github.com/GerHobbelt/portable-snippets)
 - **preprocess-corpuses** [📁](./preprocess-corpuses) [🌐](https://github.com/GerHobbelt/preprocess) -- Pipelines for preprocessing corpora.
 - **prio_queue** [📁](./prio_queue) [🌐](https://github.com/GerHobbelt/prio_queue) -- a cache friendly priority queue, done as a B-heap.
 - **promise-cpp** [📁](./promise-cpp) [🌐](https://github.com/GerHobbelt/promise-cpp) -- advanced C++ promise/A+ library in Javascript style
@@ -1627,13 +1630,16 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **result-cpp** [📁](./result-cpp) [🌐](https://github.com/GerHobbelt/result) -- `Result<T, E>` is a modern, simple, and light-weight error-handling alternative to C++ exceptions with a rich feature-set.
 - **resumable-assert** [📁](./resumable-assert) [🌐](https://github.com/GerHobbelt/resumable-assert)
 - **robin-map** [📁](./robin-map) [🌐](https://github.com/GerHobbelt/robin-map) -- a C++ implementation of a fast hash map and hash set using open-addressing and linear robin hood hashing with backward shift deletion to resolve collisions.
+- **rsync** [📁](./rsync) [🌐](https://github.com/GerHobbelt/rsync)
 - **RxCpp** [📁](./RxCpp) [🌐](https://github.com/GerHobbelt/RxCpp)
 - **safestringlib** [📁](./safestringlib) [🌐](https://github.com/GerHobbelt/safestringlib)
+- **salieri** [📁](./salieri) [🌐](https://github.com/GerHobbelt/salieri)
 - **scantailor** [📁](./scantailor) [🌐](https://github.com/GerHobbelt/scantailor-advanced) -- [scantailor_advanced](https://github.com/4lex4/scantailor-advanced) is the [ScanTailor](https://github.com/scantailor/scantailor) version that merges the features of the *ScanTailor Featured* and *ScanTailor Enhanced* versions, brings new ones and fixes. ScanTailor is an interactive post-processing tool for scanned pages. It performs operations such as page splitting, deskewing, adding/removing borders, selecting content, ... and many others.
 - **ScriptX** [📁](./ScriptX) [🌐](https://github.com/GerHobbelt/ScriptX) -- wrapper for V8, QuickJS, Lua, Python, ...
 - **Sealighter** [📁](./Sealighter) [🌐](https://github.com/GerHobbelt/Sealighter) -- Sysmon-Like research tool for ETW: helps non-developers dive into researching Event Tracing for Windows (ETW) and Windows PreProcessor Tracing (WPP).
 - **sentencepiece** [📁](./sentencepiece) [🌐](https://github.com/GerHobbelt/sentencepiece) -- text tokenization
 - **sentence-tokenizer** [📁](./sentence-tokenizer) [🌐](https://github.com/GerHobbelt/Tokenizer) -- text tokenization
+- **shadesmar** [📁](./shadesmar) [🌐](https://github.com/GerHobbelt/shadesmar)
 - **ShapeCrawler** [📁](./ShapeCrawler) [🌐](https://github.com/GerHobbelt/ShapeCrawler) -- a .NET library for manipulating PowerPoint presentations.
 - **shoco** [📁](./shoco) [🌐](https://github.com/GerHobbelt/shoco) -- a fast compressor for short strings
 - **Signals** [📁](./Signals) [🌐](https://github.com/GerHobbelt/Signals)
@@ -1717,11 +1723,13 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **uchardet** [📁](./uchardet) [🌐](https://github.com/GerHobbelt/uchardet) -- [uchardet](https://www.freedesktop.org/wiki/Software/uchardet/) is an encoding and language detector library, which attempts to determine the encoding of the text. It can reliably detect many charsets. Moreover it also works as a very good and fast language detector.
 - **ucto** [📁](./ucto) [🌐](https://github.com/GerHobbelt/ucto) -- text tokenization
 - **uctodata** [📁](./uctodata) [🌐](https://github.com/GerHobbelt/uctodata) -- data for `ucto` library
+- **ucx** [📁](./ucx) [🌐](https://github.com/GerHobbelt/ucx)
 - **UIforETW** [📁](./UIforETW) [🌐](https://github.com/GerHobbelt/UIforETW) -- Bruce Dawson's user interface for recording ETW (Event Tracing for Windows) traces, which allow amazingly deep investigations of performance problems on Windows.
 - **uint128_t** [📁](./uint128_t) [🌐](https://github.com/GerHobbelt/uint128_t)
 - **unicode-cldr** [📁](./unicode-cldr) [🌐](https://github.com/GerHobbelt/cldr)
 - **unicode-icu** [📁](./unicode-icu) [🌐](https://github.com/GerHobbelt/icu)
 - **universal-numbers** [📁](./universal-numbers) [🌐](https://github.com/GerHobbelt/universal)
+- **unpaper** [📁](./unpaper) [🌐](https://github.com/GerHobbelt/unpaper)
 - **upscaledb** [📁](./upscaledb) [🌐](https://github.com/GerHobbelt/hamsterdb) -- a.k.a. hamsterdb: a thread-safe key/value database engine. It supports a B+Tree index structure, uses memory mapped I/O (if available), fast Cursors and variable length keys and can create In-Memory Databases.
 - **upskirt-markdown** [📁](./upskirt-markdown) [🌐](https://github.com/GerHobbelt/soldout) -- MarkDown renderer
 - **url** [📁](./url) [🌐](https://github.com/GerHobbelt/url) -- URI parsing and other utility functions
@@ -2101,6 +2109,17 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **salieri** [📁](./salieri) [🌐](https://github.com/GerHobbelt/salieri)
 
 - **honggfuzz** [📁](./honggfuzz) [🌐](https://github.com/GerHobbelt/honggfuzz)
+
+- **rsync** [📁](./rsync) [🌐](https://github.com/GerHobbelt/rsync)
+
+- **unpaper** [📁](./unpaper) [🌐](https://github.com/GerHobbelt/unpaper)
+
+- **shadesmar** [📁](./shadesmar) [🌐](https://github.com/GerHobbelt/shadesmar)
+
+- **libuv** [📁](./libuv) [🌐](https://github.com/GerHobbelt/libuv)
+
+- **ucx** [📁](./ucx) [🌐](https://github.com/GerHobbelt/ucx)
+
 
 
 
