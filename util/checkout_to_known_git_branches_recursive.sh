@@ -674,7 +674,6 @@ git_repo_checkout_branch "../pcg-c-random"                        1afda5718af6d1
 git_repo_checkout_branch "../pcg-cpp-random"                      12a374480dcac3d5d93c7a705af3c22a38bd4f1f master    
 git_repo_checkout_branch "../pcm"                                 530e68527e31378135b58276a762801218bb2913 master    
 git_repo_checkout_branch "../pcre"                                229184a417600b94eeedce01efaa54bdc15e1b92 master    
-git_repo_checkout_branch "../pcre2"                               4686eb098af4507e04fa9e06d485d7ccbc23fdeb master    
 git_repo_checkout_branch "../pdf2htmlEX"                          7c9086b958e3da3ace34feb7306d7ed7e589bc9e master    
 git_repo_checkout_branch "../pdfgrep"                             be55d22b3d335b08a56f5a19a319e3d259a2818d           
 git_repo_checkout_branch "../pdfium"                              a98c08922d62e1d68d8dada74f2c695dd8d83e19 main      

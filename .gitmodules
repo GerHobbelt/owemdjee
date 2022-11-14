@@ -2215,9 +2215,6 @@
 [submodule "pdfgrep"]
 	path = pdfgrep
 	url = git@github.com:GerHobbelt/pdfgrep.git
-[submodule "pcre2"]
-	path = pcre2
-	url = git@github.com:GerHobbelt/pcre2.git
 [submodule "Win32_read_directory_changes"]
 	path = Win32_read_directory_changes
 	url = git@github.com:GerHobbelt/readdirectorychanges.git
