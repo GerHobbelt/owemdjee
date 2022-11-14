@@ -2120,6 +2120,60 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 
 - **ucx** [📁](./ucx) [🌐](https://github.com/GerHobbelt/ucx)
 
+- **libffi** [📁](./libffi) [🌐](https://github.com/GerHobbelt/libffi)
+
+- **fatal** [📁](./fatal) [🌐](https://github.com/GerHobbelt/fatal)
+
+- **marian** [📁](./marian) [🌐](https://github.com/GerHobbelt/marian)
+
+- **OpenBLAS** [📁](./OpenBLAS) [🌐](https://github.com/GerHobbelt/OpenBLAS)
+
+- **NiuTrans.NMT** [📁](./NiuTrans.NMT) [🌐](https://github.com/GerHobbelt/NiuTrans.NMT)
+
+- **libeigen** [📁](./libeigen) [🌐](https://github.com/GerHobbelt/eigen-git-mirror)
+
+- **mxnet** [📁](./mxnet) [🌐](https://github.com/GerHobbelt/mxnet)
+
+- **OpenCL-SDK** [📁](./OpenCL-SDK) [🌐](https://github.com/GerHobbelt/OpenCL-SDK)
+
+- **OpenCL-CTS** [📁](./OpenCL-CTS) [🌐](https://github.com/GerHobbelt/OpenCL-CTS)
+
+- **OpenCL-Headers** [📁](./OpenCL-Headers) [🌐](https://github.com/GerHobbelt/OpenCL-Headers)
+
+- **mace** [📁](./mace) [🌐](https://github.com/GerHobbelt/mace)
+
+- **arrayfire** [📁](./arrayfire) [🌐](https://github.com/GerHobbelt/arrayfire)
+
+- **CLBlast** [📁](./CLBlast) [🌐](https://github.com/GerHobbelt/CLBlast)
+
+- **libocca** [📁](./libocca) [🌐](https://github.com/GerHobbelt/occa)
+
+- **pdfgrep** [📁](./pdfgrep) [🌐](https://github.com/GerHobbelt/pdfgrep)
+
+- **Win32_read_directory_changes** [📁](./Win32_read_directory_changes) [🌐](https://github.com/GerHobbelt/readdirectorychanges)
+
+- **pipes** [📁](./pipes) [🌐](https://github.com/GerHobbelt/pipes)
+
+- **Win32_read_directory_changes_IOCP** [📁](./Win32_read_directory_changes_IOCP) [🌐](https://github.com/GerHobbelt/ReadDirectoryChangesIOCP)
+
+- **asyncplusplus** [📁](./asyncplusplus) [🌐](https://github.com/GerHobbelt/asyncplusplus)
+
+- **calibre** [📁](./calibre) [🌐](https://github.com/GerHobbelt/calibre)
+
+- **poppler** [📁](./poppler) [🌐](https://github.com/GerHobbelt/poppler)
+
+- **xpdf** [📁](./xpdf) [🌐](https://github.com/GerHobbelt/xpdf)
+
+- **pdfium** [📁](./pdfium) [🌐](https://github.com/GerHobbelt/pdfium)
+
+- **cef-pdf** [📁](./cef-pdf) [🌐](https://github.com/GerHobbelt/cef-pdf)
+
+- **wxPdfDocument** [📁](./wxPdfDocument) [🌐](https://github.com/GerHobbelt/wxpdfdoc)
+
+- **sumatrapdf** [📁](./sumatrapdf) [🌐](https://github.com/GerHobbelt/sumatrapdf)
+
+- **sioyek** [📁](./sioyek) [🌐](https://github.com/GerHobbelt/sioyek)
+
 
 
 
