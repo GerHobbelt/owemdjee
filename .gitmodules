@@ -2170,3 +2170,87 @@
 	path = ucx
 	url = git@github.com:GerHobbelt/ucx.git
 
+[submodule "libffi"]
+	path = libffi
+	url = git@github.com:GerHobbelt/libffi.git
+[submodule "fatal"]
+	path = fatal
+	url = git@github.com:GerHobbelt/fatal.git
+[submodule "marian"]
+	path = marian
+	url = git@github.com:GerHobbelt/marian.git
+[submodule "OpenBLAS"]
+	path = OpenBLAS
+	url = git@github.com:GerHobbelt/OpenBLAS.git
+[submodule "NiuTrans.NMT"]
+	path = NiuTrans.NMT
+	url = git@github.com:GerHobbelt/NiuTrans.NMT.git
+[submodule "libeigen"]
+	path = libeigen
+	url = git@github.com:GerHobbelt/eigen-git-mirror.git
+[submodule "mxnet"]
+	path = mxnet
+	url = git@github.com:GerHobbelt/mxnet.git
+[submodule "OpenCL-SDK"]
+	path = OpenCL-SDK
+	url = git@github.com:GerHobbelt/OpenCL-SDK.git
+[submodule "OpenCL-CTS"]
+	path = OpenCL-CTS
+	url = git@github.com:GerHobbelt/OpenCL-CTS.git
+[submodule "OpenCL-Headers"]
+	path = OpenCL-Headers
+	url = git@github.com:GerHobbelt/OpenCL-Headers.git
+[submodule "mace"]
+	path = mace
+	url = git@github.com:GerHobbelt/mace.git
+[submodule "arrayfire"]
+	path = arrayfire
+	url = git@github.com:GerHobbelt/arrayfire.git
+[submodule "CLBlast"]
+	path = CLBlast
+	url = git@github.com:GerHobbelt/CLBlast.git
+[submodule "libocca"]
+	path = libocca
+	url = git@github.com:GerHobbelt/occa.git
+[submodule "pdfgrep"]
+	path = pdfgrep
+	url = git@github.com:GerHobbelt/pdfgrep.git
+[submodule "pcre2"]
+	path = pcre2
+	url = git@github.com:GerHobbelt/pcre2.git
+[submodule "Win32_read_directory_changes"]
+	path = Win32_read_directory_changes
+	url = git@github.com:GerHobbelt/readdirectorychanges.git
+[submodule "pipes"]
+	path = pipes
+	url = git@github.com:GerHobbelt/pipes.git
+[submodule "Win32_read_directory_changes_IOCP"]
+	path = Win32_read_directory_changes_IOCP
+	url = git@github.com:GerHobbelt/ReadDirectoryChangesIOCP.git
+[submodule "asyncplusplus"]
+	path = asyncplusplus
+	url = git@github.com:GerHobbelt/asyncplusplus.git
+[submodule "calibre"]
+	path = calibre
+	url = git@github.com:GerHobbelt/calibre.git
+[submodule "poppler"]
+	path = poppler
+	url = git@github.com:GerHobbelt/poppler.git
+[submodule "xpdf"]
+	path = xpdf
+	url = git@github.com:GerHobbelt/xpdf.git
+[submodule "pdfium"]
+	path = pdfium
+	url = git@github.com:GerHobbelt/pdfium.git
+[submodule "cef-pdf"]
+	path = cef-pdf
+	url = git@github.com:GerHobbelt/cef-pdf.git
+[submodule "wxPdfDocument"]
+	path = wxPdfDocument
+	url = git@github.com:GerHobbelt/wxpdfdoc.git
+[submodule "sumatrapdf"]
+	path = sumatrapdf
+	url = git@github.com:GerHobbelt/sumatrapdf.git
+[submodule "sioyek"]
+	path = sioyek
+	url = git@github.com:GerHobbelt/sioyek.git
