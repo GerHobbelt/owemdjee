@@ -2277,3 +2277,87 @@
 [submodule "sioyek"]
 	path = sioyek
 	url = git@github.com:GerHobbelt/sioyek.git
+
+[submodule "tcpshm"]
+	path = tcpshm
+	url = git@github.com:GerHobbelt/tcpshm.git
+
+[submodule "libshmcache"]
+	path = libshmcache
+	url = git@github.com:GerHobbelt/libshmcache.git
+
+[submodule "pyclustering"]
+	path = pyclustering
+	url = git@github.com:GerHobbelt/pyclustering.git
+
+[submodule "sharedhashfile"]
+	path = sharedhashfile
+	url = git@github.com:GerHobbelt/sharedhashfile.git
+
+[submodule "libdi-dependency-injection"]
+	path = libdi-dependency-injection
+	url = git@github.com:GerHobbelt/di.git
+
+[submodule "shmdata"]
+	path = shmdata
+	url = git@github.com:GerHobbelt/shmdata.git
+
+[submodule "xlnt"]
+	path = xlnt
+	url = git@github.com:GerHobbelt/xlnt.git
+
+[submodule "robin-hood-hashing"]
+	path = robin-hood-hashing
+	url = git@github.com:GerHobbelt/robin-hood-hashing.git
+
+[submodule "picoc"]
+	path = picoc
+	url = git@github.com:GerHobbelt/picoc.git
+
+[submodule "hikyuu"]
+	path = hikyuu
+	url = git@github.com:GerHobbelt/hikyuu.git
+
+[submodule "ApprovalTestsCpp"]
+	path = ApprovalTestsCpp
+	url = git@github.com:GerHobbelt/ApprovalTests.cpp.git
+
+[submodule "Verify"]
+	path = Verify
+	url = git@github.com:GerHobbelt/Verify.git
+
+[submodule "subprocess-cpp"]
+	path = subprocess-cpp
+	url = git@github.com:GerHobbelt/subprocess-cpp.git
+
+[submodule "stan-math"]
+	path = stan-math
+	url = git@github.com:GerHobbelt/stan-math.git
+
+[submodule "stan"]
+	path = stan
+	url = git@github.com:GerHobbelt/stan.git
+
+[submodule "memory"]
+	path = memory
+	url = git@github.com:GerHobbelt/memory.git
+
+[submodule "mesh-allocator"]
+	path = mesh-allocator
+	url = git@github.com:GerHobbelt/Mesh.git
+
+[submodule "snap"]
+	path = snap
+	url = git@github.com:GerHobbelt/snap.git
+
+[submodule "nanomsg-nng"]
+	path = nanomsg-nng
+	url = git@github.com:GerHobbelt/nng.git
+
+[submodule "basez"]
+	path = basez
+	url = git@github.com:GerHobbelt/basez.git
+
+[submodule "libmlpp"]
+	path = libmlpp
+	url = git@github.com:GerHobbelt/MLPP.git
