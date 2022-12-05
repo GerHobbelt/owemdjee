@@ -2361,3 +2361,31 @@
 [submodule "libmlpp"]
 	path = libmlpp
 	url = git@github.com:GerHobbelt/MLPP.git
+
+[submodule "onnxruntime"]
+	path = onnxruntime
+	url = git@github.com:GerHobbelt/onnxruntime.git
+
+[submodule "wil-Win32-Interface-Library"]
+	path = wil-Win32-Interface-Library
+	url = git@github.com:GerHobbelt/wil.git
+
+[submodule "PaddlePaddle"]
+	path = PaddlePaddle
+	url = git@github.com:GerHobbelt/Paddle.git
+
+[submodule "MNN"]
+	path = MNN
+	url = git@github.com:GerHobbelt/MNN.git
+
+[submodule "tesslinesplit"]
+	path = tesslinesplit
+	url = git@github.com:GerHobbelt/tesslinesplit.git
+
+[submodule "osquery"]
+	path = osquery
+	url = git@github.com:GerHobbelt/osquery.git
+
+[submodule "podofo"]
+	path = podofo
+	url = git@github.com:GerHobbelt/podofo.git

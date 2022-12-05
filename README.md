@@ -116,35 +116,47 @@ The other JavaScript engines considered are of varying size, performance and com
 
 # Libraries we're looking at for this *intent*:
 
-## IPC: flatbuffer et al for protocol design
+- ## IPC: flatbuffer et al for protocol design
 
 - **bebop** [📁](./bebop) [🌐](https://github.com/GerHobbelt/bebop) -- an extremely simple, fast, efficient, cross-platform serialization format. Bebop is a schema-based binary serialization technology, similar to Protocol Buffers or MessagePack. In particular, Bebop tries to be a good fit for client–server or distributed web apps that need something faster, more concise, and more type-safe than JSON or MessagePack, while also avoiding some of the complexity of Protocol Buffers, FlatBuffers and the like.
+
 - **cereal** [📁](./cereal) [🌐](https://github.com/GerHobbelt/cereal) -- C++11 serialization library
+
 - **SWIG** [🌐](https://swig.readthedocs.io/en/latest/Manual/SWIG.html) (*Was not considered initially; more suitable for RPC than what we have in mind, which is purely data messages enchange. MAY be of use for transitional applications which are mixed-(programming-)language based, e.g. where we want to mix C/C++ and C# in a single Test Application.*)
     
     - **swig**  [📁](./swig) [🌐](https://github.com/GerHobbelt/swig) -- a software development tool (code generator) that connects programs written in C and C++ with a variety of high-level programming languages.
 
+
 - **velocypack** [📁](./velocypack) [🌐](https://github.com/GerHobbelt/velocypack) -- a fast and compact format for serialization and storage.  These days, JSON (JavaScript Object Notation, see ECMA-404) is used in many cases where data has to be exchanged. Lots of protocols between different services use it, databases store JSON (document stores naturally, but others increasingly as well). It is popular, because it is simple, human-readable, and yet surprisingly versatile, despite its limitations. At the same time there is a plethora of alternatives ranging from XML over Universal Binary JSON, MongoDB's BSON, MessagePack, BJSON (binary JSON), Apache Thrift till Google's protocol buffers and ArangoDB's shaped JSON. When looking into this, we were surprised to find that none of these formats manages to combine compactness, platform independence, fast access to sub-objects and rapid conversion from and to JSON.
+
 - ZeroMQ a.k.a. ØMQ:
     - **cppzmq** [📁](./cppzmq) [🌐](https://github.com/GerHobbelt/cppzmq) -- header-only C++ binding for libzmq.
     - **libCZMQ** [📁](./libCZMQ) [🌐](https://github.com/GerHobbelt/czmq) -- High-level C binding for ØMQ. (http://czmq.zeromq.org/)
     - **libzmq** [📁](./libzmq) [🌐](https://github.com/GerHobbelt/libzmq) -- ZeroMQ core engine in C++, implements [ZMTP/3.1](https://zguide.zeromq.org/).
 
+
 - **zpp_bits** [📁](./zpp_bits) [🌐](https://github.com/GerHobbelt/zpp_bits) -- A modern, *fast*, C++20 binary serialization and RPC library, with just one header file.See also the [benchmark](https://github.com/GerHobbelt/zpp_bits#benchmark).
+
 - ~~**FastBinaryEncoding** [🌐](https://github.com/chronoxor/FastBinaryEncoding)~~
     - **removed**; reason: for binary format record serialization we will be using `bebop` exclusively. All other communications will be JSON/JSON5/XML based.
+
 
 - ~~**flatbuffers** [🌐](https://github.com/google/flatbuffers)~~
     - **removed**; reason: see `protobuf`: same smell rising. Faster at run time, but still a bit hairy to my tastes while `bebop` et al are on to something *potentially nice*.
 
+
 - ~~**flatcc** [🌐](https://github.com/dvidelabs/flatcc)~~
     - **removed**; reason: see `flatbuffers`. When we don't dig `flatbuffers`, then `flatcc` is automatically pretty useless to us. Let's rephrase that professionally: "`flatcc` has moved out of scope for our project."
+
 
 - ~~**libsmile** [🌐](https://github.com/pierre/libsmile) -- ["Smile" format](https://en.wikipedia.org/wiki/Smile_%28data_interchange_format%29), i.e. a compact binary JSON format~~
     - **removed**; reason: for binary format record serialization we will be using `bebop` exclusively. All other communications will be JSON/JSON5/XML based.
 
+
 - ~~**protobuf** [🌐](https://github.com/protocolbuffers/protobuf)~~
     - **removed**; reason: relatively slow run-time and (in my opinion) rather ugly & convoluted approach at build time. Has too much of a Java/CorporateProgramming smell, which has not lessened over the years, unfortunately.
+
+
 
 
 ## IPC: websockets, etc.: all communication means
@@ -650,7 +662,7 @@ for round-trip annotation and other "external application editing" of known docu
 - **gumbo-libxml** [📁](./gumbo-libxml) [🌐](https://github.com/GerHobbelt/gumbo-libxml)
 - **gumbo-parser** [📁](../../thirdparty/gumbo-parser) [🌐](https://github.com/GerHobbelt/gumbo-parser) -- HTML parser
 - **gumbo-query** [📁](./gumbo-query) [🌐](https://github.com/GerHobbelt/gumbo-query) -- HTML DOM access in C/C++
-- **htmlstreamparser** [📁](./htmlstreamparser) [🌐](https://github.com/GerHobbelt/htmlstreamparser)
+- **htmlstreamparser** [📁](./htmlstreamparser) [🌐](https://github.com/GerHobbelt/htmlstreamparser) -- used in a demo of zsync2
 - **http-parser** [📁](./http-parser) [🌐](https://github.com/GerHobbelt/http-parser)
 - **libcpr** [📁](./libcpr) [🌐](https://github.com/GerHobbelt/cpr) -- wrapper library for cURL. C++ Requests is a simple wrapper around [libcurl](http://curl.haxx.se/libcurl) inspired by the excellent [Python Requests](https://github.com/kennethreitz/requests) project. Despite its name, libcurl's easy interface is anything but, and making mistakes misusing it is a common source of error and frustration. Using the more expressive language facilities of C++11, this library captures the essence of making network calls into a few concise idioms.
 - **libexpat** [📁](./libexpat) [🌐](https://github.com/GerHobbelt/libexpat) -- XML read/write
@@ -676,7 +688,7 @@ for round-trip annotation and other "external application editing" of known docu
 - **extract** [📁](../../thirdparty/extract) [🌐](https://github.com/GerHobbelt/thirdparty_extract)
 - **file** [📁](./file) [🌐](https://github.com/GerHobbelt/file) -- `file` filetype recognizer tool & mimemagic
 - **gumbo-libxml** [📁](./gumbo-libxml) [🌐](https://github.com/GerHobbelt/gumbo-libxml)
-- **gumbo-parser** [📁](../../thirdparty/gumbo-parser) [🌐](https://github.com/GerHobbelt/gumbo-parser)
+- **gumbo-parser** [📁](../../thirdparty/gumbo-parser) [🌐](https://github.com/GerHobbelt/gumbo-parser) -- HTML parser
 - **gumbo-query** [📁](./gumbo-query) [🌐](https://github.com/GerHobbelt/gumbo-query) -- HTML DOM access in C/C++
 - **http-parser** [📁](./http-parser) [🌐](https://github.com/GerHobbelt/http-parser)
 - **jq** [📁](./jq) [🌐](https://github.com/GerHobbelt/jq) -- a lightweight and flexible command-line JSON processor.
@@ -808,7 +820,7 @@ The additional (and more important) reason to ditch CPython from the R&D set is 
 - **coost** [📁](./coost) [🌐](https://github.com/GerHobbelt/coost) -- A tiny boost library in C++11. `coost` (formerly known as `cocoyaxi`) is an elegant and efficient cross-platform C++ base library, it is not as heavy as `boost`, but still provides enough powerful features.
 - **delegate** [📁](./delegate) [🌐](https://github.com/GerHobbelt/delegate) -- an embedded friendly alternative to `std::function`. The main purpose is to store callable things such as free functions, member functions, and functors. Once stored, the delegate can be called without knowledge of the type of stored thing. The `delegate` guarantees no heap allocation and [is `trivially_copyable`](https://en.cppreference.com/w/cpp/named_req/TriviallyCopyable). It will never throw exceptions itself. Intended use is as general callback storage (think function pointer analog). The price to pay is that the delegate only stores a pointer to referenced functor objects or objects to call member functions on. The user needs to handle the lifetime of a referred object. In addition, the delegation object has a smaller footprint compared to common `std::function` implementations, using only 2 pointers (free function pointer and void pointer). This is small enough so that a delegate will use small object optimization.
 - **fast_float** [📁](./fast_float) [🌐](https://github.com/GerHobbelt/fast_float) -- fast and exact implementation of the C++ `from_chars` functions for float and double types: 4x faster than `strtod`
-- **highway** [📁](./highway) [🌐](https://github.com/GerHobbelt/highway)
+- **highway** [📁](./highway) [🌐](https://github.com/GerHobbelt/highway) -- dependency of JpegXL
 - **libcnl** [📁](./libcnl) [🌐](https://github.com/GerHobbelt/cnl) -- The Compositional Numeric Library (CNL) is a C++ library of fixed-precision numeric classes which enhance integers to deliver safer, simpler, cheaper arithmetic types. CNL is particularly well-suited to: (1) compute on energy-constrained environments where FPUs are absent or costly; (2) compute on energy-intensive environments where arithmetic is the bottleneck such as simulations, machine learning applications and DSPs; and (3) domains such as finance where precision is essential.
 - **libstb** [📁](./libstb) [🌐](https://github.com/GerHobbelt/stb) -- single-file public domain (or MIT licensed) libraries for C/C++.
 - **libwil** [📁](./libwil) [🌐](https://github.com/GerHobbelt/wil) -- The Windows Implementation Libraries (WIL) is a header-only C++ library created to make life easier for developers on Windows through readable type-safe C++ interfaces for common Windows coding patterns.
@@ -1298,8 +1310,9 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **Criterion** [📁](./Criterion) [🌐](https://github.com/GerHobbelt/Criterion)
 - **CRoaring** [📁](./CRoaring) [🌐](https://github.com/GerHobbelt/CRoaring) -- portable Roaring bitmaps in C (and C++). Bitsets, also called bitmaps, are commonly used as fast data structures. Unfortunately, they can use too much memory. To compensate, we often use compressed bitmaps. Roaring bitmaps are compressed bitmaps which tend to outperform conventional compressed bitmaps such as WAH, EWAH or Concise. They are used by several major systems such as Apache Lucene and derivative systems such as Solr and Elasticsearch, etc.. The CRoaring library is used in several systems such as Apache Doris.
 - **crow** [📁](./crow) [🌐](https://github.com/GerHobbelt/crow) -- IPC / server framework. Crow is a very fast and easy to use C++ micro web framework (inspired by Python Flask).
+    
+      Interface looks nicer than `oatpp`...
 
-  Interface looks nicer than `oatpp`...
 - **cryptopp** [📁](./cryptopp) [🌐](https://github.com/GerHobbelt/cryptopp) -- crypto library
 - **csv-parser** [📁](./csv-parser) [🌐](https://github.com/GerHobbelt/csv-parser)
 - **csync2** [📁](./csync2) [🌐](https://github.com/GerHobbelt/csync2) -- a cluster synchronization tool. It can be used to keep files on multiple hosts in a cluster in sync. Csync2 can handle complex setups with much more than just 2 hosts, handle file deletions and can detect conflicts.
@@ -1329,8 +1342,8 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **dynet** [📁](./dynet) [🌐](https://github.com/GerHobbelt/dynet) -- The Dynamic Neural Network Toolkit. DyNet is a neural network library developed by Carnegie Mellon University and many others. It is written in C++ (with bindings in Python) and is designed to be efficient when run on either CPU or GPU, and to work well with networks that have dynamic structures that change for every training instance. For example, these kinds of networks are particularly important in natural language processing tasks, and DyNet has been used to build state-of-the-art systems for syntactic parsing, machine translation, morphological inflection, and many other application areas.
 - **ecal** [📁](./ecal) [🌐](https://github.com/GerHobbelt/ecal) -- the *enhanced Communication Abstraction Layer* (*eCAL*) is a middleware that enables scalable, high performance interprocess communication on a single computer node or between different nodes in a computer network. eCAL uses a publish-subscribe pattern to automatically connect different nodes in the network. eCAL automatically chooses the best available data transport mechanism for each link:
     
-  - Shared memory for local communication (incredible fast!)
-  - UDP for network communication
+        - Shared memory for local communication (incredible fast!)
+        - UDP for network communication
 
 - **ECMA262** [📁](./ECMA262) [🌐](https://github.com/GerHobbelt/ecma262)
 - **efsw** [📁](./efsw) [🌐](https://github.com/GerHobbelt/efsw) -- cross-platform file system watcher and notifier
@@ -1377,13 +1390,13 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **graphit** [📁](./graphit) [🌐](https://github.com/GerHobbelt/graphit) -- a High-Performance Domain Specific Language for Graph Analytics.
 - **gtn** [📁](./gtn) [🌐](https://github.com/GerHobbelt/gtn)
 - **gumbo-libxml** [📁](./gumbo-libxml) [🌐](https://github.com/GerHobbelt/gumbo-libxml)
-- **gumbo-parser** [📁](../../thirdparty/gumbo-parser) [🌐](https://github.com/GerHobbelt/gumbo-parser)
+- **gumbo-parser** [📁](../../thirdparty/gumbo-parser) [🌐](https://github.com/GerHobbelt/gumbo-parser) -- HTML parser
 - **gumbo-query** [📁](./gumbo-query) [🌐](https://github.com/GerHobbelt/gumbo-query) -- HTML DOM access in C/C++
 - **h2o-server** [📁](./h2o-server) [🌐](https://github.com/GerHobbelt/h2o) -- an optimized HTTP/1, HTTP/2, HTTP/3 server.
 - **harfbuzz** [📁](../../thirdparty/harfbuzz) [🌐](https://github.com/GerHobbelt/thirdparty-harfbuzz)
 - **HDiffPatch** [📁](./HDiffPatch) [🌐](https://github.com/GerHobbelt/HDiffPatch)
 - **hedley** [📁](./hedley) [🌐](https://github.com/GerHobbelt/hedley) -- a C/C++ header file designed to smooth over some platform-specific annoyances.
-- **highway** [📁](./highway) [🌐](https://github.com/GerHobbelt/highway)
+- **highway** [📁](./highway) [🌐](https://github.com/GerHobbelt/highway) -- dependency of JpegXL
 - **highwayhash** [📁](./highwayhash) [🌐](https://github.com/GerHobbelt/highwayhash) -- Fast strong hash functions: SipHash/HighwayHash
 - **hikyuu** [📁](./hikyuu) [🌐](https://github.com/GerHobbelt/hikyuu)
 - **hmm-scalable** [📁](./hmm-scalable) [🌐](https://github.com/GerHobbelt/hmm-scalable)
@@ -1396,7 +1409,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **hopscotch-map** [📁](./hopscotch-map) [🌐](https://github.com/GerHobbelt/hopscotch-map) -- a C++ implementation of a fast hash map and hash set using hopscotch hashing and open-addressing to resolve collisions. It is a cache-friendly data structure offering better performances than `std::unordered_map` in most cases and is closely similar to `google::dense_hash_map` while using less memory and providing more functionalities.
 - **horsejs** [📁](./horsejs) [🌐](https://github.com/GerHobbelt/horsejs) -- a framework similar to Electron. Unlike Electron, it has no built-in Node.js, but directly uses C++ to provide most of Electron's capabilities, such as accessing files using JavaScript, opening dialog boxes, creating new windows, etc. Since there is no Node.js, HorseJs runs faster, uses less memory, and is more stable.
 - **html2openxml** [📁](./html2openxml) [🌐](https://github.com/GerHobbelt/html2openxml) -- Html2OpenXml is a small .NET library that converts simple or advanced HTML to plain OpenXml components (docx).
-- **htmlstreamparser** [📁](./htmlstreamparser) [🌐](https://github.com/GerHobbelt/htmlstreamparser)
+- **htmlstreamparser** [📁](./htmlstreamparser) [🌐](https://github.com/GerHobbelt/htmlstreamparser) -- used in a demo of zsync2
 - **http-parser** [📁](./http-parser) [🌐](https://github.com/GerHobbelt/http-parser)
 - **hunspell** [📁](./hunspell) [🌐](https://github.com/GerHobbelt/hunspell)
 - **hunspell-hyphen** [📁](./hunspell-hyphen) [🌐](https://github.com/GerHobbelt/hyphen)
@@ -1900,7 +1913,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **extract** [📁](../../thirdparty/extract) [🌐](https://github.com/GerHobbelt/thirdparty_extract)
 - **freeglut** [📁](../../thirdparty/freeglut) [🌐](https://github.com/GerHobbelt/thirdparty-freeglut)
 - **freetype** [📁](../../thirdparty/freetype) [🌐](https://github.com/GerHobbelt/thirdparty-freetype2)
-- **gumbo-parser** [📁](../../thirdparty/gumbo-parser) [🌐](https://github.com/GerHobbelt/gumbo-parser)
+- **gumbo-parser** [📁](../../thirdparty/gumbo-parser) [🌐](https://github.com/GerHobbelt/gumbo-parser) -- HTML parser
 - **harfbuzz** [📁](../../thirdparty/harfbuzz) [🌐](https://github.com/GerHobbelt/thirdparty-harfbuzz)
 - **jbig2dec** [📁](../../thirdparty/jbig2dec) [🌐](https://github.com/GerHobbelt/jbig2dec) -- a decoder library and example utility implementing the JBIG2 bi-level image compression spec. Also known as ITU T.88 and ISO IEC 14492, and included by reference in Adobe's PDF version 1.4 and later.
 - **jpeginfo** [📁](../../thirdparty/jpeginfo) [🌐](https://github.com/GerHobbelt/jpeginfo)
@@ -2263,6 +2276,26 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **basez** [📁](./basez) [🌐](https://github.com/GerHobbelt/basez)
 
 - **libmlpp** [📁](./libmlpp) [🌐](https://github.com/GerHobbelt/MLPP)
+
+- **onnxruntime** [📁](./onnxruntime) [🌐](https://github.com/GerHobbelt/onnxruntime)
+
+
+- **wil-Win32-Interface-Library** [📁](./wil-Win32-Interface-Library) [🌐](https://github.com/GerHobbelt/wil)
+
+
+- **PaddlePaddle** [📁](./PaddlePaddle) [🌐](https://github.com/GerHobbelt/Paddle)
+
+
+- **MNN** [📁](./MNN) [🌐](https://github.com/GerHobbelt/MNN)
+
+
+- **tesslinesplit** [📁](./tesslinesplit) [🌐](https://github.com/GerHobbelt/tesslinesplit)
+
+
+- **osquery** [📁](./osquery) [🌐](https://github.com/GerHobbelt/osquery)
+
+
+- **podofo** [📁](./podofo) [🌐](https://github.com/GerHobbelt/podofo)
 
 
 
