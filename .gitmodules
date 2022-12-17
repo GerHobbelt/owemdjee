@@ -1,2391 +1,2396 @@
 [submodule "xtensor"]
 	path = xtensor
-	url = git@github.com:GerHobbelt/xtensor.git
+	url = https://github.com/GerHobbelt/xtensor.git
 	
 [submodule "xtensor-blas"]
 	path = xtensor-blas
-	url = git@github.com:GerHobbelt/xtensor-blas.git
+	url = https://github.com/GerHobbelt/xtensor-blas.git
 	
 [submodule "xtensor-io"]
 	path = xtensor-io
-	url = git@github.com:GerHobbelt/xtensor-io.git
+	url = https://github.com/GerHobbelt/xtensor-io.git
 	
 [submodule "mlpack"]
 	path = mlpack
-	url = git@github.com:GerHobbelt/mlpack.git
+	url = https://github.com/GerHobbelt/mlpack.git
 	
 [submodule "rapidJSON"]
 	path = rapidJSON
-	url = git@github.com:GerHobbelt/rapidjson.git
+	url = https://github.com/GerHobbelt/rapidjson.git
 	
 [submodule "hunspell"]
 	path = hunspell
-	url = git@github.com:GerHobbelt/hunspell.git
+	url = https://github.com/GerHobbelt/hunspell.git
 	
 [submodule "hunspell-hyphen"]
 	path = hunspell-hyphen
-	url = git@github.com:GerHobbelt/hyphen.git
+	url = https://github.com/GerHobbelt/hyphen.git
 	
 [submodule "math-atlas"]
 	path = math-atlas
-	url = git@github.com:GerHobbelt/math-atlas.git
+	url = https://github.com/GerHobbelt/math-atlas.git
 	
 [submodule "opencv"]
 	path = opencv
-	url = git@github.com:GerHobbelt/opencv.git
+	url = https://github.com/GerHobbelt/opencv.git
 	ignore = dirty
 [submodule "ImageMagick"]
 	path = ImageMagick
-	url = git@github.com:GerHobbelt/ImageMagick.git
+	url = https://github.com/GerHobbelt/ImageMagick.git
 	
 [submodule "unicode-cldr"]
 	path = unicode-cldr
-	url = git@github.com:GerHobbelt/cldr.git
+	url = https://github.com/GerHobbelt/cldr.git
 	
 [submodule "unicode-icu"]
 	path = unicode-icu
-	url = git@github.com:GerHobbelt/icu.git
+	url = https://github.com/GerHobbelt/icu.git
 	
 [submodule "dlib"]
 	path = dlib
-	url = git@github.com:GerHobbelt/dlib.git
+	url = https://github.com/GerHobbelt/dlib.git
 	
 [submodule "MITIE-nlp"]
 	path = MITIE-nlp
-	url = git@github.com:GerHobbelt/MITIE.git
+	url = https://github.com/GerHobbelt/MITIE.git
 	
 [submodule "yyjson"]
 	path = yyjson
-	url = git@github.com:GerHobbelt/yyjson.git
+	url = https://github.com/GerHobbelt/yyjson.git
 	
 [submodule "bebop"]
 	path = bebop
-	url = git@github.com:GerHobbelt/bebop.git
+	url = https://github.com/GerHobbelt/bebop.git
 	
 [submodule "tre"]
 	path = tre
-	url = git@github.com:GerHobbelt/tre.git
+	url = https://github.com/GerHobbelt/tre.git
 	
 [submodule "hyperscan"]
 	path = hyperscan
-	url = git@github.com:GerHobbelt/hyperscan.git
+	url = https://github.com/GerHobbelt/hyperscan.git
 	
 [submodule "clipp"]
 	path = clipp
-	url = git@github.com:GerHobbelt/clipp.git
+	url = https://github.com/GerHobbelt/clipp.git
 	
 [submodule "olena"]
 	path = olena
-	url = git@github.com:GerHobbelt/olena.git
+	url = https://github.com/GerHobbelt/olena.git
 	
 [submodule "hocr-spec"]
 	path = hocr-spec
-	url = git@github.com:GerHobbelt/hocr-spec.git
+	url = https://github.com/GerHobbelt/hocr-spec.git
 	
 [submodule "hocr-tools"]
 	path = hocr-tools
-	url = git@github.com:GerHobbelt/hocr-tools.git
+	url = https://github.com/GerHobbelt/hocr-tools.git
 	
 [submodule "hocr-fileformat"]
 	path = hocr-fileformat
-	url = git@github.com:GerHobbelt/ocr-fileformat.git
+	url = https://github.com/GerHobbelt/ocr-fileformat.git
 	
 [submodule "BLAKE3"]
 	path = BLAKE3
-	url = git@github.com:GerHobbelt/BLAKE3.git
+	url = https://github.com/GerHobbelt/BLAKE3.git
 	
 [submodule "cryptopp"]
 	path = cryptopp
-	url = git@github.com:GerHobbelt/cryptopp.git
+	url = https://github.com/GerHobbelt/cryptopp.git
 	
 [submodule "sqlite"]
 	path = sqlite
-	url = git@github.com:GerHobbelt/sqlite.git
+	url = https://github.com/GerHobbelt/sqlite.git
 	
 [submodule "libwebp"]
 	path = libwebp
-	url = git@github.com:GerHobbelt/libwebp.git
+	url = https://github.com/GerHobbelt/libwebp.git
 	
 [submodule "libgif"]
 	path = libgif
-	url = git@github.com:GerHobbelt/libgif.git
+	url = https://github.com/GerHobbelt/libgif.git
 	
 [submodule "upskirt-markdown"]
 	path = upskirt-markdown
-	url = git@github.com:GerHobbelt/soldout.git
+	url = https://github.com/GerHobbelt/soldout.git
 	
 [submodule "pthread-win32"]
 	path = pthread-win32
-	url = git@github.com:GerHobbelt/pthread-win32.git
+	url = https://github.com/GerHobbelt/pthread-win32.git
 	
 [submodule "jasper"]
 	path = jasper
-	url = git@github.com:GerHobbelt/jasper.git
+	url = https://github.com/GerHobbelt/jasper.git
 	
 [submodule "lz4"]
 	path = lz4
-	url = git@github.com:GerHobbelt/lz4.git
+	url = https://github.com/GerHobbelt/lz4.git
 	
 [submodule "opencv_contrib"]
 	path = opencv_contrib
-	url = git@github.com:GerHobbelt/opencv_contrib.git
+	url = https://github.com/GerHobbelt/opencv_contrib.git
 	ignore = dirty
 [submodule "libzmq"]
 	path = libzmq
-	url = git@github.com:GerHobbelt/libzmq.git
+	url = https://github.com/GerHobbelt/libzmq.git
 	
 [submodule "re2"]
 	path = re2
-	url = git@github.com:GerHobbelt/re2.git
+	url = https://github.com/GerHobbelt/re2.git
 	
 [submodule "glob"]
 	path = glob
-	url = git@github.com:GerHobbelt/glob.git
+	url = https://github.com/GerHobbelt/glob.git
 	
 [submodule "libvips"]
 	path = libvips
-	url = git@github.com:GerHobbelt/libvips.git
+	url = https://github.com/GerHobbelt/libvips.git
 	
 [submodule "GraphicsMagick"]
 	path = GraphicsMagick
-	url = git@github.com:GerHobbelt/graphicsmagick.git
+	url = https://github.com/GerHobbelt/graphicsmagick.git
 	
 [submodule "googletest"]
 	path = googletest
-	url = git@github.com:GerHobbelt/googletest.git
+	url = https://github.com/GerHobbelt/googletest.git
 	
 [submodule "jpeg-xl"]
 	path = jpeg-xl
-	url = git@github.com:GerHobbelt/jpeg-xl.git
+	url = https://github.com/GerHobbelt/jpeg-xl.git
 	
 [submodule "libjpeg-turbo"]
 	path = libjpeg-turbo
-	url = git@github.com:GerHobbelt/libjpeg-turbo.git
+	url = https://github.com/GerHobbelt/libjpeg-turbo.git
 	
 [submodule "XMP-Toolkit-SDK"]
 	path = XMP-Toolkit-SDK
-	url = git@github.com:GerHobbelt/XMP-Toolkit-SDK.git
+	url = https://github.com/GerHobbelt/XMP-Toolkit-SDK.git
 	
 [submodule "libexpat"]
 	path = libexpat
-	url = git@github.com:GerHobbelt/libexpat.git
+	url = https://github.com/GerHobbelt/libexpat.git
 	
 [submodule "xsimd"]
 	path = xsimd
-	url = git@github.com:GerHobbelt/xsimd.git
+	url = https://github.com/GerHobbelt/xsimd.git
 	
 [submodule "xtl"]
 	path = xtl
-	url = git@github.com:GerHobbelt/xtl.git
+	url = https://github.com/GerHobbelt/xtl.git
 	
 [submodule "json"]
 	path = json
-	url = git@github.com:GerHobbelt/nlohmann-json.git
+	url = https://github.com/GerHobbelt/nlohmann-json.git
 	
 [submodule "sqlite-amalgamation"]
 	path = sqlite-amalgamation
-	url = git@github.com:GerHobbelt/sqlite-amalgamation.git
+	url = https://github.com/GerHobbelt/sqlite-amalgamation.git
 	
 [submodule "QuickJS"]
 	path = QuickJS
-	url = git@github.com:GerHobbelt/quickjs.git
+	url = https://github.com/GerHobbelt/quickjs.git
 	
 [submodule "ECMA262"]
 	path = ECMA262
-	url = git@github.com:GerHobbelt/ecma262.git
+	url = https://github.com/GerHobbelt/ecma262.git
 	
 [submodule "libtuv"]
 	path = libtuv
-	url = git@github.com:GerHobbelt/libtuv.git
+	url = https://github.com/GerHobbelt/libtuv.git
 	
 [submodule "http-parser"]
 	path = http-parser
-	url = git@github.com:GerHobbelt/http-parser.git
+	url = https://github.com/GerHobbelt/http-parser.git
 	
 [submodule "picohttpparser"]
 	path = picohttpparser
-	url = git@github.com:GerHobbelt/picohttpparser.git
+	url = https://github.com/GerHobbelt/picohttpparser.git
 	
 [submodule "libsvm"]
 	path = libsvm
-	url = git@github.com:GerHobbelt/libsvm.git
+	url = https://github.com/GerHobbelt/libsvm.git
 	
 [submodule "thunderSVM"]
 	path = thunderSVM
-	url = git@github.com:GerHobbelt/thundersvm.git
+	url = https://github.com/GerHobbelt/thundersvm.git
 	
 [submodule "fmt"]
 	path = fmt
-	url = git@github.com:GerHobbelt/fmt.git
+	url = https://github.com/GerHobbelt/fmt.git
 	
 [submodule "xml-pugixml"]
 	path = xml-pugixml
-	url = git@github.com:GerHobbelt/pugixml.git
+	url = https://github.com/GerHobbelt/pugixml.git
 	
 [submodule "json-jansson"]
 	path = json-jansson
-	url = git@github.com:GerHobbelt/jansson.git
+	url = https://github.com/GerHobbelt/jansson.git
 	
 [submodule "yara-pattern-matcher"]
 	path = yara-pattern-matcher
-	url = git@github.com:GerHobbelt/yara.git
+	url = https://github.com/GerHobbelt/yara.git
 	
 [submodule "HDiffPatch"]
 	path = HDiffPatch
-	url = git@github.com:GerHobbelt/HDiffPatch.git
+	url = https://github.com/GerHobbelt/HDiffPatch.git
 	
 [submodule "dtl-diff-template-library"]
 	path = dtl-diff-template-library
-	url = git@github.com:GerHobbelt/dtl.git
+	url = https://github.com/GerHobbelt/dtl.git
 	
 [submodule "google-diff-match-patch"]
 	path = google-diff-match-patch
-	url = git@github.com:GerHobbelt/diff-match-patch.git
+	url = https://github.com/GerHobbelt/diff-match-patch.git
 	
 [submodule "txiki.js"]
 	path = txiki.js
-	url = git@github.com:GerHobbelt/txiki.js.git
+	url = https://github.com/GerHobbelt/txiki.js.git
 	
 [submodule "libxml2"]
 	path = libxml2
-	url = git@github.com:GerHobbelt/libxml2.git
+	url = https://github.com/GerHobbelt/libxml2.git
 	
 [submodule "gumbo-libxml"]
 	path = gumbo-libxml
-	url = git@github.com:GerHobbelt/gumbo-libxml.git
+	url = https://github.com/GerHobbelt/gumbo-libxml.git
 	
 [submodule "libarchive"]
 	path = libarchive
-	url = git@github.com:GerHobbelt/libarchive.git
+	url = https://github.com/GerHobbelt/libarchive.git
 	
 [submodule "svg-charter"]
 	path = svg-charter
-	url = git@github.com:GerHobbelt/charter.git
+	url = https://github.com/GerHobbelt/charter.git
 	
 [submodule "tinyexpr"]
 	path = tinyexpr
-	url = git@github.com:GerHobbelt/tinyexpr.git
+	url = https://github.com/GerHobbelt/tinyexpr.git
 	
 [submodule "c-blosc2"]
 	path = c-blosc2
-	url = git@github.com:GerHobbelt/c-blosc2.git
+	url = https://github.com/GerHobbelt/c-blosc2.git
 	
 [submodule "boost"]
 	path = boost
-	url = git@github.com:GerHobbelt/boost.git
+	url = https://github.com/GerHobbelt/boost.git
 	ignore = dirty
 [submodule "libwebsockets"]
 	path = libwebsockets
-	url = git@github.com:GerHobbelt/libwebsockets.git
+	url = https://github.com/GerHobbelt/libwebsockets.git
 	
 [submodule "mcmc"]
 	path = mcmc
-	url = git@github.com:GerHobbelt/mcmc.git
+	url = https://github.com/GerHobbelt/mcmc.git
 	
 [submodule "mmc"]
 	path = mmc
-	url = git@github.com:GerHobbelt/mmc.git
+	url = https://github.com/GerHobbelt/mmc.git
 	
 [submodule "mipp"]
 	path = mipp
-	url = git@github.com:GerHobbelt/MIPP.git
+	url = https://github.com/GerHobbelt/MIPP.git
 	
 [submodule "djvulibre"]
 	path = djvulibre
-	url = git@github.com:GerHobbelt/djvulibre.git
+	url = https://github.com/GerHobbelt/djvulibre.git
 	
 [submodule "zstd"]
 	path = zstd
-	url = git@github.com:GerHobbelt/zstd.git
+	url = https://github.com/GerHobbelt/zstd.git
 	
 [submodule "libwebsocketpp"]
 	path = libwebsocketpp
-	url = git@github.com:GerHobbelt/websocketpp.git
+	url = https://github.com/GerHobbelt/websocketpp.git
 	
 [submodule "websocket-sharp"]
 	path = websocket-sharp
-	url = git@github.com:GerHobbelt/websocket-sharp.git
+	url = https://github.com/GerHobbelt/websocket-sharp.git
 	
 [submodule "crow"]
 	path = crow
-	url = git@github.com:GerHobbelt/crow.git
+	url = https://github.com/GerHobbelt/crow.git
 	
 [submodule "lda"]
 	path = lda
-	url = git@github.com:GerHobbelt/lda-c.git
+	url = https://github.com/GerHobbelt/lda-c.git
 	
 [submodule "lda-Familia"]
 	path = lda-Familia
-	url = git@github.com:GerHobbelt/Familia.git
+	url = https://github.com/GerHobbelt/Familia.git
 	
 [submodule "lda-bigartm"]
 	path = lda-bigartm
-	url = git@github.com:GerHobbelt/bigartm.git
+	url = https://github.com/GerHobbelt/bigartm.git
 	
 [submodule "LightLDA"]
 	path = LightLDA
-	url = git@github.com:GerHobbelt/LightLDA.git
+	url = https://github.com/GerHobbelt/LightLDA.git
 	
 [submodule "CHM-lib"]
 	path = CHM-lib
-	url = git@github.com:GerHobbelt/CHMLib.git
+	url = https://github.com/GerHobbelt/CHMLib.git
 	
 [submodule "lib_nas_lockfile"]
 	path = lib_nas_lockfile
-	url = git@github.com:GerHobbelt/lib_nas_lockfile.git
+	url = https://github.com/GerHobbelt/lib_nas_lockfile.git
 	
 [submodule "mht-rip"]
 	path = mht-rip
-	url = git@github.com:GerHobbelt/mht-rip.git
+	url = https://github.com/GerHobbelt/mht-rip.git
 	
 [submodule "shoco"]
 	path = shoco
-	url = git@github.com:GerHobbelt/shoco.git
+	url = https://github.com/GerHobbelt/shoco.git
 	
 [submodule "lapack"]
 	path = lapack
-	url = git@github.com:GerHobbelt/lapack.git
+	url = https://github.com/GerHobbelt/lapack.git
 	
 [submodule "openssl"]
 	path = openssl
-	url = git@github.com:GerHobbelt/openssl.git
+	url = https://github.com/GerHobbelt/openssl.git
 	ignore = dirty
 [submodule "oneTBB"]
 	path = oneTBB
-	url = git@github.com:GerHobbelt/oneTBB.git
+	url = https://github.com/GerHobbelt/oneTBB.git
 	
 [submodule "mimetic"]
 	path = mimetic
-	url = git@github.com:GerHobbelt/mimetic.git
+	url = https://github.com/GerHobbelt/mimetic.git
 	
 [submodule "libzip"]
 	path = libzip
-	url = git@github.com:GerHobbelt/libzip.git
+	url = https://github.com/GerHobbelt/libzip.git
 	
 [submodule "gumbo-query"]
 	path = gumbo-query
-	url = git@github.com:GerHobbelt/gumbo-query.git
+	url = https://github.com/GerHobbelt/gumbo-query.git
 	
 [submodule "pytorch"]
 	path = pytorch
-	url = git@github.com:GerHobbelt/pytorch.git
+	url = https://github.com/GerHobbelt/pytorch.git
 	ignore = dirty
 [submodule "glog"]
 	path = glog
-	url = git@github.com:GerHobbelt/glog.git
+	url = https://github.com/GerHobbelt/glog.git
 	
 [submodule "replxx"]
 	path = replxx
-	url = git@github.com:GerHobbelt/replxx.git
+	url = https://github.com/GerHobbelt/replxx.git
 	
 [submodule "tidy-html5"]
 	path = tidy-html5
-	url = git@github.com:GerHobbelt/tidy-html5.git
+	url = https://github.com/GerHobbelt/tidy-html5.git
 	
 [submodule "pmt-png-tools"]
 	path = pmt-png-tools
-	url = git@github.com:GerHobbelt/pmt.git
+	url = https://github.com/GerHobbelt/pmt.git
 	
 [submodule "ScriptX"]
 	path = ScriptX
-	url = git@github.com:GerHobbelt/ScriptX.git
+	url = https://github.com/GerHobbelt/ScriptX.git
 	
 [submodule "QuickJS-C++-Wrapper"]
 	path = QuickJS-C++-Wrapper
-	url = git@github.com:GerHobbelt/quickjscpp.git
+	url = https://github.com/GerHobbelt/quickjscpp.git
 	
 [submodule "libconfig"]
 	path = libconfig
-	url = git@github.com:GerHobbelt/libconfig.git
+	url = https://github.com/GerHobbelt/libconfig.git
 	
 [submodule "OptimizationTemplateLibrary"]
 	path = OptimizationTemplateLibrary
-	url = git@github.com:GerHobbelt/O-T-L.git
+	url = https://github.com/GerHobbelt/O-T-L.git
 	
 [submodule "otl"]
 	path = otl
-	url = git@github.com:GerHobbelt/otl.git
+	url = https://github.com/GerHobbelt/otl.git
 	
 [submodule "brotli"]
 	path = brotli
-	url = git@github.com:GerHobbelt/brotli.git
+	url = https://github.com/GerHobbelt/brotli.git
 	
 [submodule "tomlpp"]
 	path = tomlpp
-	url = git@github.com:GerHobbelt/tomlplusplus.git
+	url = https://github.com/GerHobbelt/tomlplusplus.git
 	
 [submodule "plf_nanotimer"]
 	path = plf_nanotimer
-	url = git@github.com:GerHobbelt/plf_nanotimer.git
+	url = https://github.com/GerHobbelt/plf_nanotimer.git
 	
 [submodule "mime-mega"]
 	path = mime-mega
-	url = git@github.com:GerHobbelt/MegaMimes.git
+	url = https://github.com/GerHobbelt/MegaMimes.git
 	
 [submodule "file"]
 	path = file
-	url = git@github.com:GerHobbelt/file.git
+	url = https://github.com/GerHobbelt/file.git
 	
 [submodule "libyaml"]
 	path = libyaml
-	url = git@github.com:GerHobbelt/libyaml.git
+	url = https://github.com/GerHobbelt/libyaml.git
 	
 [submodule "lmdb"]
 	path = lmdb
-	url = git@github.com:GerHobbelt/lmdb.git
+	url = https://github.com/GerHobbelt/lmdb.git
 	
 [submodule "tlx-btree"]
 	path = tlx-btree
-	url = git@github.com:GerHobbelt/tlx.git
+	url = https://github.com/GerHobbelt/tlx.git
 	
 [submodule "cpp-btree"]
 	path = cpp-btree
-	url = git@github.com:GerHobbelt/cpp-btree.git
+	url = https://github.com/GerHobbelt/cpp-btree.git
 	
 [submodule "libcmime"]
 	path = libcmime
-	url = git@github.com:GerHobbelt/libcmime.git
+	url = https://github.com/GerHobbelt/libcmime.git
 	
 [submodule "gflags"]
 	path = gflags
-	url = git@github.com:GerHobbelt/gflags.git
+	url = https://github.com/GerHobbelt/gflags.git
 	
 [submodule "libidn2"]
 	path = libidn2
-	url = git@github.com:GerHobbelt/libidn2.git
+	url = https://github.com/GerHobbelt/libidn2.git
 	
 [submodule "uint128_t"]
 	path = uint128_t
-	url = git@github.com:GerHobbelt/uint128_t.git
+	url = https://github.com/GerHobbelt/uint128_t.git
 	
 [submodule "cereal"]
 	path = cereal
-	url = git@github.com:GerHobbelt/cereal.git
+	url = https://github.com/GerHobbelt/cereal.git
 	
 [submodule "parallel-hashmap"]
 	path = parallel-hashmap
-	url = git@github.com:GerHobbelt/parallel-hashmap.git
+	url = https://github.com/GerHobbelt/parallel-hashmap.git
 	
 [submodule "tlx"]
 	path = tlx
-	url = git@github.com:GerHobbelt/tlx.git
+	url = https://github.com/GerHobbelt/tlx.git
 	
 [submodule "palmtree"]
 	path = palmtree
-	url = git@github.com:GerHobbelt/palmtree.git
+	url = https://github.com/GerHobbelt/palmtree.git
 	
 [submodule "jemalloc"]
 	path = jemalloc
-	url = git@github.com:GerHobbelt/jemalloc.git
+	url = https://github.com/GerHobbelt/jemalloc.git
 	
 [submodule "gbenchmark"]
 	path = gbenchmark
-	url = git@github.com:GerHobbelt/benchmark.git
+	url = https://github.com/GerHobbelt/benchmark.git
 	
 [submodule "resumable-assert"]
 	path = resumable-assert
-	url = git@github.com:GerHobbelt/resumable-assert.git
+	url = https://github.com/GerHobbelt/resumable-assert.git
 	
 [submodule "bibutils"]
 	path = bibutils
-	url = git@github.com:GerHobbelt/bibutils.git
+	url = https://github.com/GerHobbelt/bibutils.git
 	
 [submodule "bibtex-robust-decoder"]
 	path = bibtex-robust-decoder
-	url = git@github.com:GerHobbelt/bibtex-robust-decoder.git
+	url = https://github.com/GerHobbelt/bibtex-robust-decoder.git
 	
 [submodule "efsw"]
 	path = efsw
-	url = git@github.com:GerHobbelt/efsw.git
+	url = https://github.com/GerHobbelt/efsw.git
 	
 [submodule "url"]
 	path = url
-	url = git@github.com:GerHobbelt/url.git
+	url = https://github.com/GerHobbelt/url.git
 	
 [submodule "breakpad"]
 	path = breakpad
-	url = git@github.com:GerHobbelt/breakpad.git
+	url = https://github.com/GerHobbelt/breakpad.git
 	
 [submodule "libqrencode"]
 	path = libqrencode
-	url = git@github.com:GerHobbelt/libqrencode.git
+	url = https://github.com/GerHobbelt/libqrencode.git
 	
 [submodule "tiny-process-library"]
 	path = tiny-process-library
-	url = git@github.com:GerHobbelt/tiny-process-library.git
+	url = https://github.com/GerHobbelt/tiny-process-library.git
 	
 [submodule "Lightning.NET"]
 	path = Lightning.NET
-	url = git@github.com:GerHobbelt/Lightning.NET.git
+	url = https://github.com/GerHobbelt/Lightning.NET.git
 	
 [submodule "lmdb-store"]
 	path = lmdb-store
-	url = git@github.com:GerHobbelt/lmdb-store.git
+	url = https://github.com/GerHobbelt/lmdb-store.git
 	
 [submodule "lmdb-safe"]
 	path = lmdb-safe
-	url = git@github.com:GerHobbelt/lmdb-safe.git
+	url = https://github.com/GerHobbelt/lmdb-safe.git
 	
 [submodule "lmdb.spreads.net"]
 	path = lmdb.spreads.net
-	url = git@github.com:GerHobbelt/Spreads.LMDB.git
+	url = https://github.com/GerHobbelt/Spreads.LMDB.git
 	
 [submodule "createprocess-windows"]
 	path = createprocess-windows
-	url = git@github.com:GerHobbelt/createprocess-windows.git
+	url = https://github.com/GerHobbelt/createprocess-windows.git
 	
 [submodule "messagebox-windows"]
 	path = messagebox-windows
-	url = git@github.com:GerHobbelt/messagebox-windows.git
+	url = https://github.com/GerHobbelt/messagebox-windows.git
 	
 [submodule "spy-build-sysinfo"]
 	path = spy-build-sysinfo
-	url = git@github.com:GerHobbelt/spy.git
+	url = https://github.com/GerHobbelt/spy.git
 	
 [submodule "cli11"]
 	path = cli11
-	url = git@github.com:GerHobbelt/CLI11.git
+	url = https://github.com/GerHobbelt/CLI11.git
 	
 [submodule "clBLAS"]
 	path = clBLAS
-	url = git@github.com:GerHobbelt/clBLAS.git
+	url = https://github.com/GerHobbelt/clBLAS.git
 	
 [submodule "pcg-c-random"]
 	path = pcg-c-random
-	url = git@github.com:GerHobbelt/pcg-c.git
+	url = https://github.com/GerHobbelt/pcg-c.git
 	
 [submodule "stdext-path"]
 	path = stdext-path
-	url = git@github.com:GerHobbelt/stdext-path.git
+	url = https://github.com/GerHobbelt/stdext-path.git
 	
 [submodule "lmdbxx"]
 	path = lmdbxx
-	url = git@github.com:GerHobbelt/lmdbxx.git
+	url = https://github.com/GerHobbelt/lmdbxx.git
 	
 [submodule "libcpuid"]
 	path = libcpuid
-	url = git@github.com:GerHobbelt/libcpuid.git
+	url = https://github.com/GerHobbelt/libcpuid.git
 	
 [submodule "thread-pool-cpp"]
 	path = thread-pool-cpp
-	url = git@github.com:GerHobbelt/thread-pool-cpp.git
+	url = https://github.com/GerHobbelt/thread-pool-cpp.git
 	
 [submodule "sparsehash"]
 	path = sparsehash
-	url = git@github.com:GerHobbelt/sparsehash.git
+	url = https://github.com/GerHobbelt/sparsehash.git
 	
 [submodule "ncnn"]
 	path = ncnn
-	url = git@github.com:GerHobbelt/ncnn.git
+	url = https://github.com/GerHobbelt/ncnn.git
 	
 [submodule "xxHash"]
 	path = xxHash
-	url = git@github.com:GerHobbelt/xxHash.git
+	url = https://github.com/GerHobbelt/xxHash.git
 	
 [submodule "cpuinfo"]
 	path = cpuinfo
-	url = git@github.com:GerHobbelt/cpuinfo.git
+	url = https://github.com/GerHobbelt/cpuinfo.git
 	
 [submodule "thread-pool"]
 	path = thread-pool
-	url = git@github.com:GerHobbelt/thread-pool.git
+	url = https://github.com/GerHobbelt/thread-pool.git
 	
 [submodule "thread-pool-c"]
 	path = thread-pool-c
-	url = git@github.com:GerHobbelt/C-Thread-Pool.git
+	url = https://github.com/GerHobbelt/C-Thread-Pool.git
 	
 [submodule "sentencepiece"]
 	path = sentencepiece
-	url = git@github.com:GerHobbelt/sentencepiece.git
+	url = https://github.com/GerHobbelt/sentencepiece.git
 	
 [submodule "sentence-tokenizer"]
 	path = sentence-tokenizer
-	url = git@github.com:GerHobbelt/Tokenizer.git
+	url = https://github.com/GerHobbelt/Tokenizer.git
 	
 [submodule "you-token-to-me"]
 	path = you-token-to-me
-	url = git@github.com:GerHobbelt/YouTokenToMe.git
+	url = https://github.com/GerHobbelt/YouTokenToMe.git
 	
 [submodule "libtextcat"]
 	path = libtextcat
-	url = git@github.com:GerHobbelt/libtextcat.git
+	url = https://github.com/GerHobbelt/libtextcat.git
 	
 [submodule "uctodata"]
 	path = uctodata
-	url = git@github.com:GerHobbelt/uctodata.git
+	url = https://github.com/GerHobbelt/uctodata.git
 	
 [submodule "ucto"]
 	path = ucto
-	url = git@github.com:GerHobbelt/ucto.git
+	url = https://github.com/GerHobbelt/ucto.git
 	
 [submodule "libfolia"]
 	path = libfolia
-	url = git@github.com:GerHobbelt/libfolia.git
+	url = https://github.com/GerHobbelt/libfolia.git
 	
 [submodule "fastBPE"]
 	path = fastBPE
-	url = git@github.com:GerHobbelt/fastBPE.git
+	url = https://github.com/GerHobbelt/fastBPE.git
 	
 [submodule "libunifex"]
 	path = libunifex
-	url = git@github.com:GerHobbelt/libunifex.git
+	url = https://github.com/GerHobbelt/libunifex.git
 	
 [submodule "libscanf"]
 	path = libscanf
-	url = git@github.com:GerHobbelt/scnlib.git
+	url = https://github.com/GerHobbelt/scnlib.git
 	
 [submodule "magic_enum"]
 	path = magic_enum
-	url = git@github.com:GerHobbelt/magic_enum.git
+	url = https://github.com/GerHobbelt/magic_enum.git
 	
 [submodule "hedley"]
 	path = hedley
-	url = git@github.com:GerHobbelt/hedley.git
+	url = https://github.com/GerHobbelt/hedley.git
 	
 [submodule "expected-lite"]
 	path = expected-lite
-	url = git@github.com:GerHobbelt/expected-lite.git
+	url = https://github.com/GerHobbelt/expected-lite.git
 	
 [submodule "many-stop-words"]
 	path = many-stop-words
-	url = git@github.com:GerHobbelt/many-stop-words.git
+	url = https://github.com/GerHobbelt/many-stop-words.git
 	
 [submodule "stopwords"]
 	path = stopwords
-	url = git@github.com:GerHobbelt/stopwords.git
+	url = https://github.com/GerHobbelt/stopwords.git
 	
 [submodule "wget"]
 	path = wget
-	url = git@github.com:GerHobbelt/wget.git
+	url = https://github.com/GerHobbelt/wget.git
 	
 [submodule "cppzmq"]
 	path = cppzmq
-	url = git@github.com:GerHobbelt/cppzmq.git
+	url = https://github.com/GerHobbelt/cppzmq.git
 	
 [submodule "linenoise"]
 	path = linenoise
-	url = git@github.com:GerHobbelt/linenoise.git
+	url = https://github.com/GerHobbelt/linenoise.git
 	
 [submodule "libmdbx"]
 	path = libmdbx
-	url = git@github.com:GerHobbelt/libmdbx.git
+	url = https://github.com/GerHobbelt/libmdbx.git
 	
 [submodule "subprocess"]
 	path = subprocess
-	url = git@github.com:GerHobbelt/subprocess.git
+	url = https://github.com/GerHobbelt/subprocess.git
 	
 [submodule "taskflow"]
 	path = taskflow
-	url = git@github.com:GerHobbelt/taskflow.git
+	url = https://github.com/GerHobbelt/taskflow.git
 	
 [submodule "frozen"]
 	path = frozen
-	url = git@github.com:GerHobbelt/frozen.git
+	url = https://github.com/GerHobbelt/frozen.git
 	
 [submodule "cmph-hasher"]
 	path = cmph-hasher
-	url = git@github.com:GerHobbelt/cmph.git
+	url = https://github.com/GerHobbelt/cmph.git
 	
 [submodule "libbloom"]
 	path = libbloom
-	url = git@github.com:GerHobbelt/bloomd.git
+	url = https://github.com/GerHobbelt/bloomd.git
 	
 [submodule "cuckoofilter"]
 	path = cuckoofilter
-	url = git@github.com:GerHobbelt/cuckoofilter.git
+	url = https://github.com/GerHobbelt/cuckoofilter.git
 	
 [submodule "cuckoo-index"]
 	path = cuckoo-index
-	url = git@github.com:GerHobbelt/cuckoo-index.git
+	url = https://github.com/GerHobbelt/cuckoo-index.git
 	
 [submodule "morton_filter"]
 	path = morton_filter
-	url = git@github.com:GerHobbelt/morton_filter.git
+	url = https://github.com/GerHobbelt/morton_filter.git
 	
 [submodule "caffe"]
 	path = caffe
-	url = git@github.com:GerHobbelt/caffe.git
+	url = https://github.com/GerHobbelt/caffe.git
 	
 [submodule "BCF-cuckoo-index"]
 	path = BCF-cuckoo-index
-	url = git@github.com:GerHobbelt/BCF.git
+	url = https://github.com/GerHobbelt/BCF.git
 	
 [submodule "DCF-cuckoo-index"]
 	path = DCF-cuckoo-index
-	url = git@github.com:GerHobbelt/DCF.git
+	url = https://github.com/GerHobbelt/DCF.git
 	
 [submodule "ligra-graph"]
 	path = ligra-graph
-	url = git@github.com:GerHobbelt/ligra.git
+	url = https://github.com/GerHobbelt/ligra.git
 	
 [submodule "emphf-hash"]
 	path = emphf-hash
-	url = git@github.com:GerHobbelt/emphf.git
+	url = https://github.com/GerHobbelt/emphf.git
 	
 [submodule "gperf-hash"]
 	path = gperf-hash
-	url = git@github.com:GerHobbelt/gperf.git
+	url = https://github.com/GerHobbelt/gperf.git
 	
 [submodule "phf-hash"]
 	path = phf-hash
-	url = git@github.com:GerHobbelt/phf.git
+	url = https://github.com/GerHobbelt/phf.git
 	
 [submodule "BBHash"]
 	path = BBHash
-	url = git@github.com:GerHobbelt/BBHash.git
+	url = https://github.com/GerHobbelt/BBHash.git
 	
 [submodule "catboost"]
 	path = catboost
-	url = git@github.com:GerHobbelt/catboost.git
+	url = https://github.com/GerHobbelt/catboost.git
 	
 [submodule "LDCF-hash"]
 	path = LDCF-hash
-	url = git@github.com:GerHobbelt/LDCF.git
+	url = https://github.com/GerHobbelt/LDCF.git
 	
 [submodule "civetweb"]
 	path = civetweb
-	url = git@github.com:GerHobbelt/civetweb.git
+	url = https://github.com/GerHobbelt/civetweb.git
 	
 [submodule "proxygen"]
 	path = proxygen
-	url = git@github.com:GerHobbelt/proxygen.git
+	url = https://github.com/GerHobbelt/proxygen.git
 	
 [submodule "h2o-server"]
 	path = h2o-server
-	url = git@github.com:GerHobbelt/h2o.git
+	url = https://github.com/GerHobbelt/h2o.git
 	ignore = dirty
 [submodule "drogon"]
 	path = drogon
-	url = git@github.com:GerHobbelt/drogon.git
+	url = https://github.com/GerHobbelt/drogon.git
 	ignore = dirty
 [submodule "webview"]
 	path = webview
-	url = git@github.com:GerHobbelt/webview.git
+	url = https://github.com/GerHobbelt/webview.git
 	
 [submodule "wxWidgets"]
 	path = wxWidgets
-	url = git@github.com:GerHobbelt/wxWidgets.git
+	url = https://github.com/GerHobbelt/wxWidgets.git
 	
 [submodule "pcre"]
 	path = pcre
-	url = git@github.com:GerHobbelt/pcre.git
+	url = https://github.com/GerHobbelt/pcre.git
 	
 [submodule "nanosvg"]
 	path = nanosvg
-	url = git@github.com:GerHobbelt/nanosvg.git
+	url = https://github.com/GerHobbelt/nanosvg.git
 	
 [submodule "neutralinoJS"]
 	path = neutralinoJS
-	url = git@github.com:GerHobbelt/neutralinojs.git
+	url = https://github.com/GerHobbelt/neutralinojs.git
 	
 [submodule "neutralinoJS-CLI"]
 	path = neutralinoJS-CLI
-	url = git@github.com:GerHobbelt/neutralinojs-cli.git
+	url = https://github.com/GerHobbelt/neutralinojs-cli.git
 	
 [submodule "wxCharts"]
 	path = wxCharts
-	url = git@github.com:GerHobbelt/wxCharts.git
+	url = https://github.com/GerHobbelt/wxCharts.git
 	
 [submodule "GMMreg"]
 	path = GMMreg
-	url = git@github.com:GerHobbelt/Project_gmmreg.git
+	url = https://github.com/GerHobbelt/Project_gmmreg.git
 	
 [submodule "liblinear"]
 	path = liblinear
-	url = git@github.com:GerHobbelt/liblinear.git
+	url = https://github.com/GerHobbelt/liblinear.git
 	
 [submodule "hmm-scalable"]
 	path = hmm-scalable
-	url = git@github.com:GerHobbelt/hmm-scalable.git
+	url = https://github.com/GerHobbelt/hmm-scalable.git
 	
 [submodule "hmm-stoch"]
 	path = hmm-stoch
-	url = git@github.com:GerHobbelt/StochHMM.git
+	url = https://github.com/GerHobbelt/StochHMM.git
 	
 [submodule "GMM-HMM-kMeans"]
 	path = GMM-HMM-kMeans
-	url = git@github.com:GerHobbelt/KMeans-GMM-HMM.git
+	url = https://github.com/GerHobbelt/KMeans-GMM-HMM.git
 	
 [submodule "libCZMQ"]
 	path = libCZMQ
-	url = git@github.com:GerHobbelt/czmq.git
+	url = https://github.com/GerHobbelt/czmq.git
 	
 [submodule "libbf"]
 	path = libbf
-	url = git@github.com:GerHobbelt/libbf.git
+	url = https://github.com/GerHobbelt/libbf.git
 	
 [submodule "photino.native"]
 	path = photino.native
-	url = git@github.com:GerHobbelt/photino.Native.git
+	url = https://github.com/GerHobbelt/photino.Native.git
 	
 [submodule "wxFormBuilder"]
 	path = wxFormBuilder
-	url = git@github.com:GerHobbelt/wxFormBuilder.git
+	url = https://github.com/GerHobbelt/wxFormBuilder.git
 	
 [submodule "scintilla"]
 	path = scintilla
-	url = git@github.com:GerHobbelt/scintilla.git
+	url = https://github.com/GerHobbelt/scintilla.git
 	
 [submodule "enkiTS-TaskScheduler"]
 	path = enkiTS-TaskScheduler
-	url = git@github.com:GerHobbelt/enkiTS.git
+	url = https://github.com/GerHobbelt/enkiTS.git
 	
 [submodule "promise-cpp"]
 	path = promise-cpp
-	url = git@github.com:GerHobbelt/promise-cpp.git
+	url = https://github.com/GerHobbelt/promise-cpp.git
 	
 [submodule "libq"]
 	path = libq
-	url = git@github.com:GerHobbelt/q.git
+	url = https://github.com/GerHobbelt/q.git
 	
 [submodule "prio_queue"]
 	path = prio_queue
-	url = git@github.com:GerHobbelt/prio_queue.git
+	url = https://github.com/GerHobbelt/prio_queue.git
 	
 [submodule "google-marl"]
 	path = google-marl
-	url = git@github.com:GerHobbelt/marl.git
+	url = https://github.com/GerHobbelt/marl.git
 	
 [submodule "ticpp"]
 	path = ticpp
-	url = git@github.com:GerHobbelt/ticpp.git
+	url = https://github.com/GerHobbelt/ticpp.git
 	
 [submodule "asynqro"]
 	path = asynqro
-	url = git@github.com:GerHobbelt/asynqro.git
+	url = https://github.com/GerHobbelt/asynqro.git
 	
 [submodule "CacheLib"]
 	path = CacheLib
-	url = git@github.com:GerHobbelt/CacheLib.git
+	url = https://github.com/GerHobbelt/CacheLib.git
 	
 [submodule "WinHttpPAL"]
 	path = WinHttpPAL
-	url = git@github.com:GerHobbelt/WinHttpPAL.git
+	url = https://github.com/GerHobbelt/WinHttpPAL.git
 	
 [submodule "fastText"]
 	path = fastText
-	url = git@github.com:GerHobbelt/fastText.git
+	url = https://github.com/GerHobbelt/fastText.git
 	
 [submodule "BlingFire"]
 	path = BlingFire
-	url = git@github.com:GerHobbelt/BlingFire.git
+	url = https://github.com/GerHobbelt/BlingFire.git
 	
 [submodule "mimalloc"]
 	path = mimalloc
-	url = git@github.com:GerHobbelt/mimalloc.git
+	url = https://github.com/GerHobbelt/mimalloc.git
 	
 [submodule "snmalloc"]
 	path = snmalloc
-	url = git@github.com:GerHobbelt/snmalloc.git
+	url = https://github.com/GerHobbelt/snmalloc.git
 	
 [submodule "scantailor"]
 	path = scantailor
-	url = git@github.com:GerHobbelt/scantailor-advanced.git
+	url = https://github.com/GerHobbelt/scantailor-advanced.git
 	
 [submodule "sqlite3pp"]
 	path = sqlite3pp
-	url = git@github.com:GerHobbelt/sqlite3pp.git
+	url = https://github.com/GerHobbelt/sqlite3pp.git
 	
 [submodule "wxPDFView"]
 	path = wxPDFView
-	url = git@github.com:GerHobbelt/wxPDFView.git
+	url = https://github.com/GerHobbelt/wxPDFView.git
 	
 [submodule "hypertextcpp"]
 	path = hypertextcpp
-	url = git@github.com:GerHobbelt/hypertextcpp.git
+	url = https://github.com/GerHobbelt/hypertextcpp.git
 	
 [submodule "uberlog"]
 	path = uberlog
-	url = git@github.com:GerHobbelt/uberlog.git
+	url = https://github.com/GerHobbelt/uberlog.git
 	
 [submodule "wxWebViewChromium"]
 	path = wxWebViewChromium
-	url = git@github.com:GerHobbelt/wxWebViewChromium.git
+	url = https://github.com/GerHobbelt/wxWebViewChromium.git
 	
 [submodule "tsf"]
 	path = tsf
-	url = git@github.com:GerHobbelt/tsf.git
+	url = https://github.com/GerHobbelt/tsf.git
 	
 [submodule "filesystem"]
 	path = filesystem
-	url = git@github.com:GerHobbelt/filesystem.git
+	url = https://github.com/GerHobbelt/filesystem.git
 	
 [submodule "cxxtest_catch_2_gtest"]
 	path = cxxtest_catch_2_gtest
-	url = git@github.com:GerHobbelt/cxxtest_catch_2_gtest.git
+	url = https://github.com/GerHobbelt/cxxtest_catch_2_gtest.git
 	
 [submodule "QuickJS-C++-Wrapper2"]
 	path = QuickJS-C++-Wrapper2
-	url = git@github.com:GerHobbelt/quickjspp.git
+	url = https://github.com/GerHobbelt/quickjspp.git
 	
 [submodule "binlog"]
 	path = binlog
-	url = git@github.com:GerHobbelt/binlog.git
+	url = https://github.com/GerHobbelt/binlog.git
 	
 [submodule "CImg"]
 	path = CImg
-	url = git@github.com:GerHobbelt/CImg.git
+	url = https://github.com/GerHobbelt/CImg.git
 	
 [submodule "wxMEdit"]
 	path = wxMEdit
-	url = git@github.com:GerHobbelt/wxMEdit.git
+	url = https://github.com/GerHobbelt/wxMEdit.git
 	
 [submodule "libgd"]
 	path = libgd
-	url = git@github.com:GerHobbelt/libgd.git
+	url = https://github.com/GerHobbelt/libgd.git
 	
 [submodule "CxImage"]
 	path = CxImage
-	url = git@github.com:GerHobbelt/CxImage.git
+	url = https://github.com/GerHobbelt/CxImage.git
 	
 [submodule "VisualScriptEngine"]
 	path = VisualScriptEngine
-	url = git@github.com:GerHobbelt/VisualScriptEngine.git
+	url = https://github.com/GerHobbelt/VisualScriptEngine.git
 	
 [submodule "wxVisualScriptEngine"]
 	path = wxVisualScriptEngine
-	url = git@github.com:GerHobbelt/VisualScriptEngineWxWidgets.git
+	url = https://github.com/GerHobbelt/VisualScriptEngineWxWidgets.git
 	
 [submodule "wxSQLite3"]
 	path = wxSQLite3
-	url = git@github.com:GerHobbelt/wxsqlite3.git
+	url = https://github.com/GerHobbelt/wxsqlite3.git
 	
 [submodule "wxExamples"]
 	path = wxExamples
-	url = git@github.com:GerHobbelt/Examples_wxWidgets.git
+	url = https://github.com/GerHobbelt/Examples_wxWidgets.git
 	
 [submodule "libwarc"]
 	path = libwarc
-	url = git@github.com:GerHobbelt/libwarc.git
+	url = https://github.com/GerHobbelt/libwarc.git
 	
 [submodule "warc2text"]
 	path = warc2text
-	url = git@github.com:GerHobbelt/warc2text.git
+	url = https://github.com/GerHobbelt/warc2text.git
 	
 [submodule "preprocess-corpuses"]
 	path = preprocess-corpuses
-	url = git@github.com:GerHobbelt/preprocess.git
+	url = https://github.com/GerHobbelt/preprocess.git
 	
 [submodule "cld2-language-detect"]
 	path = cld2-language-detect
-	url = git@github.com:GerHobbelt/cld2.git
+	url = https://github.com/GerHobbelt/cld2.git
 	
 [submodule "uchardet"]
 	path = uchardet
-	url = git@github.com:GerHobbelt/uchardet.git
+	url = https://github.com/GerHobbelt/uchardet.git
 	
 [submodule "libpsl"]
 	path = libpsl
-	url = git@github.com:GerHobbelt/libpsl.git
+	url = https://github.com/GerHobbelt/libpsl.git
 	
 [submodule "upscaledb"]
 	path = upscaledb
-	url = git@github.com:GerHobbelt/hamsterdb.git
+	url = https://github.com/GerHobbelt/hamsterdb.git
 	
 [submodule "manticore-columnar"]
 	path = manticore-columnar
-	url = git@github.com:GerHobbelt/columnar.git
+	url = https://github.com/GerHobbelt/columnar.git
 	
 [submodule "manticoresearch"]
 	path = manticoresearch
-	url = git@github.com:GerHobbelt/manticoresearch.git
+	url = https://github.com/GerHobbelt/manticoresearch.git
 	
 [submodule "manticore-plugins"]
 	path = manticore-plugins
-	url = git@github.com:GerHobbelt/manticore-plugins.git
+	url = https://github.com/GerHobbelt/manticore-plugins.git
 	
 [submodule "libstemmer"]
 	path = libstemmer
-	url = git@github.com:GerHobbelt/libstemmer.git
+	url = https://github.com/GerHobbelt/libstemmer.git
 	
 [submodule "snowball"]
 	path = snowball
-	url = git@github.com:GerHobbelt/snowball.git
+	url = https://github.com/GerHobbelt/snowball.git
 	
 [submodule "csync2"]
 	path = csync2
-	url = git@github.com:GerHobbelt/csync2.git
+	url = https://github.com/GerHobbelt/csync2.git
 	
 [submodule "librsync"]
 	path = librsync
-	url = git@github.com:GerHobbelt/librsync.git
+	url = https://github.com/GerHobbelt/librsync.git
 	
 [submodule "SQLiteCpp"]
 	path = SQLiteCpp
-	url = git@github.com:GerHobbelt/SQLiteCpp.git
+	url = https://github.com/GerHobbelt/SQLiteCpp.git
 	
 [submodule "libcyaml"]
 	path = libcyaml
-	url = git@github.com:GerHobbelt/libcyaml.git
+	url = https://github.com/GerHobbelt/libcyaml.git
 	
 [submodule "libyaml-examples"]
 	path = libyaml-examples
-	url = git@github.com:GerHobbelt/libyaml-examples.git
+	url = https://github.com/GerHobbelt/libyaml-examples.git
 	
 [submodule "libfyaml"]
 	path = libfyaml
-	url = git@github.com:GerHobbelt/libfyaml.git
+	url = https://github.com/GerHobbelt/libfyaml.git
 	
 [submodule "yaml-test-suite"]
 	path = yaml-test-suite
-	url = git@github.com:GerHobbelt/yaml-test-suite.git
+	url = https://github.com/GerHobbelt/yaml-test-suite.git
 	
 [submodule "yaml-cpp"]
 	path = yaml-cpp
-	url = git@github.com:GerHobbelt/yaml-cpp.git
+	url = https://github.com/GerHobbelt/yaml-cpp.git
 	
 [submodule "rapidyaml"]
 	path = rapidyaml
-	url = git@github.com:GerHobbelt/rapidyaml.git
+	url = https://github.com/GerHobbelt/rapidyaml.git
 	
 [submodule "smhasher"]
 	path = smhasher
-	url = git@github.com:GerHobbelt/smhasher.git
+	url = https://github.com/GerHobbelt/smhasher.git
 	
 [submodule "circlehash"]
 	path = circlehash
-	url = git@github.com:GerHobbelt/circlehash.git
+	url = https://github.com/GerHobbelt/circlehash.git
 	
 [submodule "htmlstreamparser"]
 	path = htmlstreamparser
-	url = git@github.com:GerHobbelt/htmlstreamparser.git
+	url = https://github.com/GerHobbelt/htmlstreamparser.git
 	
 [submodule "zsync2"]
 	path = zsync2
-	url = git@github.com:GerHobbelt/zsync2.git
+	url = https://github.com/GerHobbelt/zsync2.git
 	
 [submodule "libcpr"]
 	path = libcpr
-	url = git@github.com:GerHobbelt/cpr.git
+	url = https://github.com/GerHobbelt/cpr.git
 	
 [submodule "glib2"]
 	path = glib2
-	url = git@github.com:GerHobbelt/glib.git
+	url = https://github.com/GerHobbelt/glib.git
 	ignore = dirty
 [submodule "fast_pfor"]
 	path = fast_pfor
-	url = git@github.com:GerHobbelt/FastPFor.git
+	url = https://github.com/GerHobbelt/FastPFor.git
 
 [submodule "multiverso"]
 	path = multiverso
-	url = git@github.com:GerHobbelt/Multiverso.git
+	url = https://github.com/GerHobbelt/Multiverso.git
 
 [submodule "lda-3-variants"]
 	path = lda-3-variants
-	url = git@github.com:GerHobbelt/LDA.git
+	url = https://github.com/GerHobbelt/LDA.git
 
 [submodule "gibbs-lda"]
 	path = gibbs-lda
-	url = git@github.com:GerHobbelt/gibbs-lda.git
+	url = https://github.com/GerHobbelt/gibbs-lda.git
 
 [submodule "portable-memory-mapping"]
 	path = portable-memory-mapping
-	url = git@github.com:GerHobbelt/portable-memory-mapping.git
+	url = https://github.com/GerHobbelt/portable-memory-mapping.git
 
 [submodule "libmio"]
 	path = libmio
-	url = git@github.com:GerHobbelt/mio.git
+	url = https://github.com/GerHobbelt/mio.git
 
 [submodule "libvrb"]
 	path = libvrb
-	url = git@github.com:GerHobbelt/vrb.git
+	url = https://github.com/GerHobbelt/vrb.git
 
 [submodule "fmtlog"]
 	path = fmtlog
-	url = git@github.com:GerHobbelt/fmtlog.git
+	url = https://github.com/GerHobbelt/fmtlog.git
 
 [submodule "libcnl"]
 	path = libcnl
-	url = git@github.com:GerHobbelt/cnl.git
+	url = https://github.com/GerHobbelt/cnl.git
 
 [submodule "libucl"]
 	path = libucl
-	url = git@github.com:GerHobbelt/libucl.git
+	url = https://github.com/GerHobbelt/libucl.git
 
 [submodule "libquill"]
 	path = libquill
-	url = git@github.com:GerHobbelt/quill.git
+	url = https://github.com/GerHobbelt/quill.git
 
 [submodule "NanoLog"]
 	path = NanoLog
-	url = git@github.com:GerHobbelt/NanoLog.git
+	url = https://github.com/GerHobbelt/NanoLog.git
 
 [submodule "libwil"]
 	path = libwil
-	url = git@github.com:GerHobbelt/wil.git
+	url = https://github.com/GerHobbelt/wil.git
 	
 [submodule "libzopfli"]
 	path = libzopfli
-	url = git@github.com:GerHobbelt/zopfli.git
+	url = https://github.com/GerHobbelt/zopfli.git
 
 [submodule "libwildmatch"]
 	path = libwildmatch
-	url = git@github.com:GerHobbelt/wildmatch.git
+	url = https://github.com/GerHobbelt/wildmatch.git
 
 [submodule "libsqlfs"]
 	path = libsqlfs
-	url = git@github.com:GerHobbelt/libsqlfs.git
+	url = https://github.com/GerHobbelt/libsqlfs.git
 
 [submodule "sqlean"]
 	path = sqlean
-	url = git@github.com:GerHobbelt/sqlean.git
+	url = https://github.com/GerHobbelt/sqlean.git
 
 [submodule "sqlite-stats"]
 	path = sqlite-stats
-	url = git@github.com:GerHobbelt/sqlite-stats.git
+	url = https://github.com/GerHobbelt/sqlite-stats.git
 
 [submodule "SQLiteHistograms"]
 	path = SQLiteHistograms
-	url = git@github.com:GerHobbelt/SQLiteHistograms.git
+	url = https://github.com/GerHobbelt/SQLiteHistograms.git
 
 [submodule "sqlite-fts5-snowball"]
 	path = sqlite-fts5-snowball
-	url = git@github.com:GerHobbelt/fts5-snowball.git
+	url = https://github.com/GerHobbelt/fts5-snowball.git
 
 [submodule "sqlite_wrapper"]
 	path = sqlite_wrapper
-	url = git@github.com:GerHobbelt/sqlite_wrapper.git
+	url = https://github.com/GerHobbelt/sqlite_wrapper.git
 
 [submodule "velocypack"]
 	path = velocypack
-	url = git@github.com:GerHobbelt/velocypack.git
+	url = https://github.com/GerHobbelt/velocypack.git
 
 [submodule "libdeflate"]
 	path = libdeflate
-	url = git@github.com:GerHobbelt/libdeflate.git
+	url = https://github.com/GerHobbelt/libdeflate.git
 
 [submodule "libCRCpp"]
 	path = libCRCpp
-	url = git@github.com:GerHobbelt/CRCpp.git
+	url = https://github.com/GerHobbelt/CRCpp.git
 
 [submodule "UIforETW"]
 	path = UIforETW
-	url = git@github.com:GerHobbelt/UIforETW.git
+	url = https://github.com/GerHobbelt/UIforETW.git
 
 [submodule "ms_cpp_client_telemetry"]
 	path = ms_cpp_client_telemetry
-	url = git@github.com:GerHobbelt/cpp_client_telemetry.git
+	url = https://github.com/GerHobbelt/cpp_client_telemetry.git
 
 [submodule "krabsETW"]
 	path = krabsETW
-	url = git@github.com:GerHobbelt/krabsetw.git
+	url = https://github.com/GerHobbelt/krabsetw.git
 
 [submodule "tracelogging-for-ETW"]
 	path = tracelogging-for-ETW
-	url = git@github.com:GerHobbelt/tracelogging.git
+	url = https://github.com/GerHobbelt/tracelogging.git
 
 [submodule "typesense"]
 	path = typesense
-	url = git@github.com:GerHobbelt/typesense.git
+	url = https://github.com/GerHobbelt/typesense.git
 
 [submodule "dtoa-benchmark"]
 	path = dtoa-benchmark
-	url = git@github.com:GerHobbelt/dtoa-benchmark.git
+	url = https://github.com/GerHobbelt/dtoa-benchmark.git
 
 [submodule "Extensible-Storage-Engine"]
 	path = Extensible-Storage-Engine
-	url = git@github.com:GerHobbelt/Extensible-Storage-Engine.git
+	url = https://github.com/GerHobbelt/Extensible-Storage-Engine.git
 
 [submodule "pthreadpool"]
 	path = pthreadpool
-	url = git@github.com:GerHobbelt/pthreadpool.git
+	url = https://github.com/GerHobbelt/pthreadpool.git
 
 [submodule "lrucache11"]
 	path = lrucache11
-	url = git@github.com:GerHobbelt/lrucache11.git
+	url = https://github.com/GerHobbelt/lrucache11.git
 
 [submodule "CTPL-Thread-Pool"]
 	path = CTPL-Thread-Pool
-	url = git@github.com:GerHobbelt/CTPL.git
+	url = https://github.com/GerHobbelt/CTPL.git
 
 [submodule "ThreadPool"]
 	path = ThreadPool
-	url = git@github.com:GerHobbelt/ThreadPool.git
+	url = https://github.com/GerHobbelt/ThreadPool.git
 
 [submodule "portable_concurrency-std-future"]
 	path = portable_concurrency-std-future
-	url = git@github.com:GerHobbelt/portable_concurrency.git
+	url = https://github.com/GerHobbelt/portable_concurrency.git
 
 [submodule "YACLib"]
 	path = YACLib
-	url = git@github.com:GerHobbelt/YACLib.git
+	url = https://github.com/GerHobbelt/YACLib.git
 
 [submodule "promise-hpp"]
 	path = promise-hpp
-	url = git@github.com:GerHobbelt/promise.hpp.git
+	url = https://github.com/GerHobbelt/promise.hpp.git
 
 [submodule "taolog"]
 	path = taolog
-	url = git@github.com:GerHobbelt/taolog.git
+	url = https://github.com/GerHobbelt/taolog.git
 
 [submodule "opentelemetry-cpp"]
 	path = opentelemetry-cpp
-	url = git@github.com:GerHobbelt/opentelemetry-cpp.git
+	url = https://github.com/GerHobbelt/opentelemetry-cpp.git
 
 [submodule "TraceETW"]
 	path = TraceETW
-	url = git@github.com:GerHobbelt/TraceEtw.git
+	url = https://github.com/GerHobbelt/TraceEtw.git
 
 [submodule "Sealighter"]
 	path = Sealighter
-	url = git@github.com:GerHobbelt/Sealighter.git
+	url = https://github.com/GerHobbelt/Sealighter.git
 
 [submodule "Windows10EtwEvents"]
 	path = Windows10EtwEvents
-	url = git@github.com:GerHobbelt/Windows10EtwEvents.git
+	url = https://github.com/GerHobbelt/Windows10EtwEvents.git
 
 [submodule "EtwExplorer"]
 	path = EtwExplorer
-	url = git@github.com:GerHobbelt/EtwExplorer.git
+	url = https://github.com/GerHobbelt/EtwExplorer.git
 
 [submodule "SilkETW"]
 	path = SilkETW
-	url = git@github.com:GerHobbelt/SilkETW.git
+	url = https://github.com/GerHobbelt/SilkETW.git
 
 [submodule "microsoft-performance-toolkit-sdk"]
 	path = microsoft-performance-toolkit-sdk
-	url = git@github.com:GerHobbelt/microsoft-performance-toolkit-sdk.git
+	url = https://github.com/GerHobbelt/microsoft-performance-toolkit-sdk.git
 
 [submodule "pelikan"]
 	path = pelikan
-	url = git@github.com:GerHobbelt/pelikan.git
+	url = https://github.com/GerHobbelt/pelikan.git
 
 [submodule "oppat"]
 	path = oppat
-	url = git@github.com:GerHobbelt/oppat.git
+	url = https://github.com/GerHobbelt/oppat.git
 
 [submodule "compact_enc_det"]
 	path = compact_enc_det
-	url = git@github.com:GerHobbelt/compact_enc_det.git
+	url = https://github.com/GerHobbelt/compact_enc_det.git
 
 [submodule "tink"]
 	path = tink
-	url = git@github.com:GerHobbelt/tink.git
+	url = https://github.com/GerHobbelt/tink.git
 
 [submodule "highwayhash"]
 	path = highwayhash
-	url = git@github.com:GerHobbelt/highwayhash.git
+	url = https://github.com/GerHobbelt/highwayhash.git
 
 [submodule "kgraph"]
 	path = kgraph
-	url = git@github.com:GerHobbelt/kgraph.git
+	url = https://github.com/GerHobbelt/kgraph.git
 
 [submodule "nanoflann"]
 	path = nanoflann
-	url = git@github.com:GerHobbelt/nanoflann.git
+	url = https://github.com/GerHobbelt/nanoflann.git
 
 [submodule "hnswlib"]
 	path = hnswlib
-	url = git@github.com:GerHobbelt/hnswlib.git
+	url = https://github.com/GerHobbelt/hnswlib.git
 
 [submodule "nmslib"]
 	path = nmslib
-	url = git@github.com:GerHobbelt/nmslib.git
+	url = https://github.com/GerHobbelt/nmslib.git
 
 [submodule "annoy"]
 	path = annoy
-	url = git@github.com:GerHobbelt/annoy.git
+	url = https://github.com/GerHobbelt/annoy.git
 
 [submodule "libngt-ann"]
 	path = libngt-ann
-	url = git@github.com:GerHobbelt/NGT.git
+	url = https://github.com/GerHobbelt/NGT.git
 
 [submodule "libsptag"]
 	path = libsptag
-	url = git@github.com:GerHobbelt/SPTAG.git
+	url = https://github.com/GerHobbelt/SPTAG.git
 
 [submodule "CTCWordBeamSearch"]
 	path = CTCWordBeamSearch
-	url = git@github.com:GerHobbelt/CTCWordBeamSearch.git
+	url = https://github.com/GerHobbelt/CTCWordBeamSearch.git
 
 [submodule "faiss"]
 	path = faiss
-	url = git@github.com:GerHobbelt/faiss.git
+	url = https://github.com/GerHobbelt/faiss.git
 
 [submodule "xgboost"]
 	path = xgboost
-	url = git@github.com:GerHobbelt/xgboost.git
+	url = https://github.com/GerHobbelt/xgboost.git
 
 [submodule "pisa"]
 	path = pisa
-	url = git@github.com:GerHobbelt/pisa.git
+	url = https://github.com/GerHobbelt/pisa.git
 
 [submodule "nsync"]
 	path = nsync
-	url = git@github.com:GerHobbelt/nsync.git
+	url = https://github.com/GerHobbelt/nsync.git
 
 [submodule "randen"]
 	path = randen
-	url = git@github.com:GerHobbelt/randen.git
+	url = https://github.com/GerHobbelt/randen.git
 
 [submodule "zfp-compressed-arrays"]
 	path = zfp-compressed-arrays
-	url = git@github.com:GerHobbelt/zfp.git
+	url = https://github.com/GerHobbelt/zfp.git
 
 [submodule "random"]
 	path = random
-	url = git@github.com:GerHobbelt/random.git
+	url = https://github.com/GerHobbelt/random.git
 
 [submodule "wyhash"]
 	path = wyhash
-	url = git@github.com:GerHobbelt/wyhash.git
+	url = https://github.com/GerHobbelt/wyhash.git
 
 [submodule "xnnpack"]
 	path = xnnpack
-	url = git@github.com:GerHobbelt/XNNPACK.git
+	url = https://github.com/GerHobbelt/XNNPACK.git
 
 [submodule "merror"]
 	path = merror
-	url = git@github.com:GerHobbelt/merror.git
+	url = https://github.com/GerHobbelt/merror.git
 
 [submodule "kahypar"]
 	path = kahypar
-	url = git@github.com:GerHobbelt/kahypar.git
+	url = https://github.com/GerHobbelt/kahypar.git
 
 [submodule "flat_hash_map"]
 	path = flat_hash_map
-	url = git@github.com:GerHobbelt/flat_hash_map.git
+	url = https://github.com/GerHobbelt/flat_hash_map.git
 
 [submodule "pagerank"]
 	path = pagerank
-	url = git@github.com:GerHobbelt/pagerank.git
+	url = https://github.com/GerHobbelt/pagerank.git
 
 [submodule "graphit"]
 	path = graphit
-	url = git@github.com:GerHobbelt/graphit.git
+	url = https://github.com/GerHobbelt/graphit.git
 
 [submodule "libgrape-lite"]
 	path = libgrape-lite
-	url = git@github.com:GerHobbelt/libgrape-lite.git
+	url = https://github.com/GerHobbelt/libgrape-lite.git
 
 [submodule "concurrencpp"]
 	path = concurrencpp
-	url = git@github.com:GerHobbelt/concurrencpp.git
+	url = https://github.com/GerHobbelt/concurrencpp.git
 
 [submodule "lerc"]
 	path = lerc
-	url = git@github.com:GerHobbelt/lerc.git
+	url = https://github.com/GerHobbelt/lerc.git
 
 [submodule "stx-error-handling"]
 	path = stx-error-handling
-	url = git@github.com:GerHobbelt/STX.git
+	url = https://github.com/GerHobbelt/STX.git
 
 [submodule "result-cpp"]
 	path = result-cpp
-	url = git@github.com:GerHobbelt/result.git
+	url = https://github.com/GerHobbelt/result.git
 
 [submodule "delegate"]
 	path = delegate
-	url = git@github.com:GerHobbelt/delegate.git
+	url = https://github.com/GerHobbelt/delegate.git
 
 [submodule "robin-map"]
 	path = robin-map
-	url = git@github.com:GerHobbelt/robin-map.git
+	url = https://github.com/GerHobbelt/robin-map.git
 
 [submodule "hopscotch-map"]
 	path = hopscotch-map
-	url = git@github.com:GerHobbelt/hopscotch-map.git
+	url = https://github.com/GerHobbelt/hopscotch-map.git
 
 [submodule "ocreval"]
 	path = ocreval
-	url = git@github.com:GerHobbelt/ocreval.git
+	url = https://github.com/GerHobbelt/ocreval.git
 
 [submodule "asio"]
 	path = asio
-	url = git@github.com:GerHobbelt/asio.git
+	url = https://github.com/GerHobbelt/asio.git
 	
 [submodule "highway"]
 	path = highway
-	url = git@github.com:GerHobbelt/highway.git
+	url = https://github.com/GerHobbelt/highway.git
 
 [submodule "tinycolormap"]
 	path = tinycolormap
-	url = git@github.com:GerHobbelt/tinycolormap.git
+	url = https://github.com/GerHobbelt/tinycolormap.git
 
 [submodule "tesseract-gImgRdrGui"]
 	path = tesseract-gImgRdrGui
-	url = git@github.com:GerHobbelt/gImageReader.git
+	url = https://github.com/GerHobbelt/gImageReader.git
 
 [submodule "pdf2htmlEX"]
 	path = pdf2htmlEX
-	url = git@github.com:GerHobbelt/pdf2htmlEX.git
+	url = https://github.com/GerHobbelt/pdf2htmlEX.git
 
 [submodule "bhtsne--Barnes-Hut-t-SNE"]
 	path = bhtsne--Barnes-Hut-t-SNE
-	url = git@github.com:GerHobbelt/bhtsne.git
+	url = https://github.com/GerHobbelt/bhtsne.git
 
 [submodule "pcg-cpp-random"]
 	path = pcg-cpp-random
-	url = git@github.com:GerHobbelt/pcg-cpp.git
+	url = https://github.com/GerHobbelt/pcg-cpp.git
 
 [submodule "cpp-ipc"]
 	path = cpp-ipc
-	url = git@github.com:GerHobbelt/cpp-ipc.git
+	url = https://github.com/GerHobbelt/cpp-ipc.git
 	
 [submodule "userver"]
 	path = userver
-	url = git@github.com:GerHobbelt/userver.git
+	url = https://github.com/GerHobbelt/userver.git
 
 [submodule "PhotonLibOS"]
 	path = PhotonLibOS
-	url = git@github.com:GerHobbelt/PhotonLibOS.git
+	url = https://github.com/GerHobbelt/PhotonLibOS.git
 
 [submodule "coost"]
 	path = coost
-	url = git@github.com:GerHobbelt/coost.git
+	url = https://github.com/GerHobbelt/coost.git
 
 [submodule "libstb"]
 	path = libstb
-	url = git@github.com:GerHobbelt/stb.git
+	url = https://github.com/GerHobbelt/stb.git
 
 [submodule "bolt"]
 	path = bolt
-	url = git@github.com:GerHobbelt/bolt.git
+	url = https://github.com/GerHobbelt/bolt.git
 
 [submodule "concurrentqueue"]
 	path = concurrentqueue
-	url = git@github.com:GerHobbelt/concurrentqueue.git
+	url = https://github.com/GerHobbelt/concurrentqueue.git
 
 [submodule "libimagequant"]
 	path = libimagequant
-	url = git@github.com:GerHobbelt/libimagequant.git
+	url = https://github.com/GerHobbelt/libimagequant.git
 
 [submodule "palanteer"]
 	path = palanteer
-	url = git@github.com:GerHobbelt/palanteer.git
+	url = https://github.com/GerHobbelt/palanteer.git
 
 [submodule "iceoryx"]
 	path = iceoryx
-	url = git@github.com:GerHobbelt/iceoryx.git
+	url = https://github.com/GerHobbelt/iceoryx.git
 
 [submodule "ecal"]
 	path = ecal
-	url = git@github.com:GerHobbelt/ecal.git
+	url = https://github.com/GerHobbelt/ecal.git
 
 [submodule "recycle"]
 	path = recycle
-	url = git@github.com:GerHobbelt/recycle.git
+	url = https://github.com/GerHobbelt/recycle.git
 
 [submodule "tcp_pubsub"]
 	path = tcp_pubsub
-	url = git@github.com:GerHobbelt/tcp_pubsub.git
+	url = https://github.com/GerHobbelt/tcp_pubsub.git
 
 [submodule "DBoW2"]
 	path = DBoW2
-	url = git@github.com:GerHobbelt/DBoW2.git
+	url = https://github.com/GerHobbelt/DBoW2.git
 
 [submodule "warp-ctc"]
 	path = warp-ctc
-	url = git@github.com:GerHobbelt/warp-ctc.git
+	url = https://github.com/GerHobbelt/warp-ctc.git
 
 [submodule "OpenFST"]
 	path = OpenFST
-	url = git@github.com:GerHobbelt/openfst.git
+	url = https://github.com/GerHobbelt/openfst.git
 
 [submodule "dynet"]
 	path = dynet
-	url = git@github.com:GerHobbelt/dynet.git
+	url = https://github.com/GerHobbelt/dynet.git
 
 [submodule "tensorflow"]
 	path = tensorflow
-	url = git@github.com:GerHobbelt/tensorflow.git
+	url = https://github.com/GerHobbelt/tensorflow.git
 
 [submodule "libchardet"]
 	path = libchardet
-	url = git@github.com:GerHobbelt/libchardet.git
+	url = https://github.com/GerHobbelt/libchardet.git
 
 [submodule "line_detector"]
 	path = line_detector
-	url = git@github.com:GerHobbelt/line_detector.git
+	url = https://github.com/GerHobbelt/line_detector.git
 
 [submodule "refl-cpp"]
 	path = refl-cpp
-	url = git@github.com:GerHobbelt/refl-cpp.git
+	url = https://github.com/GerHobbelt/refl-cpp.git
 
 [submodule "zpp_bits"]
 	path = zpp_bits
-	url = git@github.com:GerHobbelt/zpp_bits.git
+	url = https://github.com/GerHobbelt/zpp_bits.git
 
 [submodule "cppflow"]
 	path = cppflow
-	url = git@github.com:GerHobbelt/cppflow.git
+	url = https://github.com/GerHobbelt/cppflow.git
 
 [submodule "utfcpp"]
 	path = utfcpp
-	url = git@github.com:GerHobbelt/utfcpp.git
+	url = https://github.com/GerHobbelt/utfcpp.git
 
 [submodule "fast_float"]
 	path = fast_float
-	url = git@github.com:GerHobbelt/fast_float.git
+	url = https://github.com/GerHobbelt/fast_float.git
 
 [submodule "libcopp"]
 	path = libcopp
-	url = git@github.com:GerHobbelt/libcopp.git
+	url = https://github.com/GerHobbelt/libcopp.git
 
 [submodule "boost-url"]
 	path = boost-url
-	url = git@github.com:GerHobbelt/boost-url.git
+	url = https://github.com/GerHobbelt/boost-url.git
 	
 [submodule "gdbm"]
 	path = gdbm
-	url = git@github.com:GerHobbelt/gdbm.git
+	url = https://github.com/GerHobbelt/gdbm.git
 	
 [submodule "pevents"]
 	path = pevents
-	url = git@github.com:GerHobbelt/pevents.git
+	url = https://github.com/GerHobbelt/pevents.git
 	
 [submodule "win32-dpi"]
 	path = win32-dpi
-	url = git@github.com:GerHobbelt/win32-dpi.git
+	url = https://github.com/GerHobbelt/win32-dpi.git
 	
 [submodule "libiconv"]
 	path = libiconv
-	url = git@github.com:GerHobbelt/libiconv-win-build.git
+	url = https://github.com/GerHobbelt/libiconv-win-build.git
 	
 [submodule "horsejs"]
 	path = horsejs
-	url = git@github.com:GerHobbelt/horsejs.git
+	url = https://github.com/GerHobbelt/horsejs.git
 	
 [submodule "dirent"]
 	path = dirent
-	url = git@github.com:GerHobbelt/dirent.git
+	url = https://github.com/GerHobbelt/dirent.git
 
 [submodule "swig"]
 	path = swig
-	url = git@github.com:GerHobbelt/swig.git
+	url = https://github.com/GerHobbelt/swig.git
 
 [submodule "cpp_rest_sdk"]
 	path = cpp_rest_sdk
-	url = git@github.com:GerHobbelt/cpprestsdk.git
+	url = https://github.com/GerHobbelt/cpprestsdk.git
 
 [submodule "infoware"]
 	path = infoware
-	url = git@github.com:GerHobbelt/infoware.git
+	url = https://github.com/GerHobbelt/infoware.git
 
 [submodule "libassert"]
 	path = libassert
-	url = git@github.com:GerHobbelt/libassert.git
+	url = https://github.com/GerHobbelt/libassert.git
 
 [submodule "libicns"]
 	path = libicns
-	url = git@github.com:GerHobbelt/libicns.git
+	url = https://github.com/GerHobbelt/libicns.git
 
 [submodule "friso"]
 	path = friso
-	url = git@github.com:GerHobbelt/friso.git
+	url = https://github.com/GerHobbelt/friso.git
 
 [submodule "winflexbison"]
 	path = winflexbison
-	url = git@github.com:GerHobbelt/winflexbison.git
+	url = https://github.com/GerHobbelt/winflexbison.git
 
 [submodule "jq"]
 	path = jq
-	url = git@github.com:GerHobbelt/jq.git
+	url = https://github.com/GerHobbelt/jq.git
 
 [submodule "restc-cpp"]
 	path = restc-cpp
-	url = git@github.com:GerHobbelt/restc-cpp.git
+	url = https://github.com/GerHobbelt/restc-cpp.git
 
 [submodule "libaco"]
 	path = libaco
-	url = git@github.com:GerHobbelt/libaco.git
+	url = https://github.com/GerHobbelt/libaco.git
 
 [submodule "tinn"]
 	path = tinn
-	url = git@github.com:GerHobbelt/tinn.git
+	url = https://github.com/GerHobbelt/tinn.git
 
 [submodule "libcsp"]
 	path = libcsp
-	url = git@github.com:GerHobbelt/libcsp.git
+	url = https://github.com/GerHobbelt/libcsp.git
 
 [submodule "CRoaring"]
 	path = CRoaring
-	url = git@github.com:GerHobbelt/CRoaring.git
+	url = https://github.com/GerHobbelt/CRoaring.git
 
 [submodule "subprocess_h"]
 	path = subprocess_h
-	url = git@github.com:GerHobbelt/subprocess.h.git
+	url = https://github.com/GerHobbelt/subprocess.h.git
 
 [submodule "nameof"]
 	path = nameof
-	url = git@github.com:GerHobbelt/nameof.git
+	url = https://github.com/GerHobbelt/nameof.git
 
 [submodule "libclipboard"]
 	path = libclipboard
-	url = git@github.com:GerHobbelt/libclipboard.git
+	url = https://github.com/GerHobbelt/libclipboard.git
 
 [submodule "librs232"]
 	path = librs232
-	url = git@github.com:GerHobbelt/librs232.git
+	url = https://github.com/GerHobbelt/librs232.git
 
 [submodule "caches"]
 	path = caches
-	url = git@github.com:GerHobbelt/caches.git
+	url = https://github.com/GerHobbelt/caches.git
 
 [submodule "warpLDA"]
 	path = warpLDA
-	url = git@github.com:GerHobbelt/warplda.git
+	url = https://github.com/GerHobbelt/warplda.git
 
 [submodule "ccv-nnc"]
 	path = ccv-nnc
-	url = git@github.com:GerHobbelt/ccv.git
+	url = https://github.com/GerHobbelt/ccv.git
 
 [submodule "localmemcache"]
 	path = localmemcache
-	url = git@github.com:GerHobbelt/localmemcache.git
+	url = https://github.com/GerHobbelt/localmemcache.git
 
 [submodule "libdist"]
 	path = libdist
-	url = git@github.com:GerHobbelt/distlib.git
+	url = https://github.com/GerHobbelt/distlib.git
 
 [submodule "zsv"]
 	path = zsv
-	url = git@github.com:GerHobbelt/zsv.git
+	url = https://github.com/GerHobbelt/zsv.git
 
 [submodule "sqlite_zstd_vfs"]
 	path = sqlite_zstd_vfs
-	url = git@github.com:GerHobbelt/sqlite_zstd_vfs.git
+	url = https://github.com/GerHobbelt/sqlite_zstd_vfs.git
 
 [submodule "libeternaltimestamp"]
 	path = libeternaltimestamp
-	url = git@github.com:GerHobbelt/libeternaltimestamp.git
+	url = https://github.com/GerHobbelt/libeternaltimestamp.git
 
 [submodule "libxslt"]
 	path = libxslt
-	url = git@github.com:GerHobbelt/libxslt.git
+	url = https://github.com/GerHobbelt/libxslt.git
 
 [submodule "tvision"]
 	path = tvision
-	url = git@github.com:GerHobbelt/tvision.git
+	url = https://github.com/GerHobbelt/tvision.git
 	
 [submodule "bibtool"]
 	path = bibtool
-	url = git@github.com:GerHobbelt/bibtool.git
+	url = https://github.com/GerHobbelt/bibtool.git
 	
 [submodule "zotero-translators"]
 	path = zotero-translators
-	url = git@github.com:GerHobbelt/translators.git
+	url = https://github.com/GerHobbelt/translators.git
 	
 [submodule "citeproc-js"]
 	path = citeproc-js
-	url = git@github.com:GerHobbelt/citeproc-js.git
+	url = https://github.com/GerHobbelt/citeproc-js.git
 	
 [submodule "citation-journals"]
 	path = citation-journals
-	url = git@github.com:GerHobbelt/journals.git
+	url = https://github.com/GerHobbelt/journals.git
 	
 [submodule "citation-styles"]
 	path = citation-styles
-	url = git@github.com:GerHobbelt/styles.git
+	url = https://github.com/GerHobbelt/styles.git
 	
 [submodule "zotero-standalone-build"]
 	path = zotero-standalone-build
-	url = git@github.com:GerHobbelt/zotero-standalone-build.git
+	url = https://github.com/GerHobbelt/zotero-standalone-build.git
 	
 [submodule "zotero-web-library"]
 	path = zotero-web-library
-	url = git@github.com:GerHobbelt/web-library.git
+	url = https://github.com/GerHobbelt/web-library.git
 	
 [submodule "zotero"]
 	path = zotero
-	url = git@github.com:GerHobbelt/zotero.git
+	url = https://github.com/GerHobbelt/zotero.git
 	
 [submodule "zotero-connectors"]
 	path = zotero-connectors
-	url = git@github.com:GerHobbelt/zotero-connectors.git
+	url = https://github.com/GerHobbelt/zotero-connectors.git
 	
 [submodule "zotero-word-for-windows-integration"]
 	path = zotero-word-for-windows-integration
-	url = git@github.com:GerHobbelt/zotero-word-for-windows-integration.git
+	url = https://github.com/GerHobbelt/zotero-word-for-windows-integration.git
 	
 [submodule "zotero-libreoffice-integration"]
 	path = zotero-libreoffice-integration
-	url = git@github.com:GerHobbelt/zotero-libreoffice-integration.git
+	url = https://github.com/GerHobbelt/zotero-libreoffice-integration.git
 	
 [submodule "zotero-translation-server"]
 	path = zotero-translation-server
-	url = git@github.com:GerHobbelt/translation-server.git
+	url = https://github.com/GerHobbelt/translation-server.git
 	
 [submodule "zotero-bib"]
 	path = zotero-bib
-	url = git@github.com:GerHobbelt/bib.git
+	url = https://github.com/GerHobbelt/bib.git
 	
 [submodule "zotero-translate"]
 	path = zotero-translate
-	url = git@github.com:GerHobbelt/translate.git
+	url = https://github.com/GerHobbelt/translate.git
 	
 [submodule "zotero-google-docs-integration"]
 	path = zotero-google-docs-integration
-	url = git@github.com:GerHobbelt/zotero-google-docs-integration.git
+	url = https://github.com/GerHobbelt/zotero-google-docs-integration.git
 	
 [submodule "zotero-build"]
 	path = zotero-build
-	url = git@github.com:GerHobbelt/zotero-build.git
+	url = https://github.com/GerHobbelt/zotero-build.git
 	
 [submodule "JabRef-Browser-Extension"]
 	path = JabRef-Browser-Extension
-	url = git@github.com:GerHobbelt/JabRef-Browser-Extension.git
+	url = https://github.com/GerHobbelt/JabRef-Browser-Extension.git
 	
 [submodule "JabRef-abbreviations"]
 	path = JabRef-abbreviations
-	url = git@github.com:GerHobbelt/jabref-abbreviations.git
+	url = https://github.com/GerHobbelt/jabref-abbreviations.git
 	
 [submodule "citation-abbreviations"]
 	path = citation-abbreviations
-	url = git@github.com:GerHobbelt/abbreviations.git
+	url = https://github.com/GerHobbelt/abbreviations.git
 	
 [submodule "npoi"]
 	path = npoi
-	url = git@github.com:GerHobbelt/npoi.git
+	url = https://github.com/GerHobbelt/npoi.git
 	
 [submodule "html2openxml"]
 	path = html2openxml
-	url = git@github.com:GerHobbelt/html2openxml.git
+	url = https://github.com/GerHobbelt/html2openxml.git
 	
 [submodule "ShapeCrawler"]
 	path = ShapeCrawler
-	url = git@github.com:GerHobbelt/ShapeCrawler.git
+	url = https://github.com/GerHobbelt/ShapeCrawler.git
 	
 [submodule "OfficeIMO"]
 	path = OfficeIMO
-	url = git@github.com:GerHobbelt/OfficeIMO.git
+	url = https://github.com/GerHobbelt/OfficeIMO.git
 	
 [submodule "b2xtranslator"]
 	path = b2xtranslator
-	url = git@github.com:GerHobbelt/b2xtranslator.git
+	url = https://github.com/GerHobbelt/b2xtranslator.git
 	
 [submodule "Open-XML-SDK"]
 	path = Open-XML-SDK
-	url = git@github.com:GerHobbelt/Open-XML-SDK.git
+	url = https://github.com/GerHobbelt/Open-XML-SDK.git
 	
 [submodule "MariGold.OpenXHTML"]
 	path = MariGold.OpenXHTML
-	url = git@github.com:GerHobbelt/MariGold.OpenXHTML.git
+	url = https://github.com/GerHobbelt/MariGold.OpenXHTML.git
 	
 [submodule "docxBox"]
 	path = docxBox
-	url = git@github.com:GerHobbelt/docxBox.git
+	url = https://github.com/GerHobbelt/docxBox.git
 	
 [submodule "zotero-scholar-citations"]
 	path = zotero-scholar-citations
-	url = git@github.com:GerHobbelt/zotero-scholar-citations.git
+	url = https://github.com/GerHobbelt/zotero-scholar-citations.git
 	
 [submodule "zotero-shortdoi"]
 	path = zotero-shortdoi
-	url = git@github.com:GerHobbelt/zotero-shortdoi.git
+	url = https://github.com/GerHobbelt/zotero-shortdoi.git
 	
 [submodule "papis-zotero"]
 	path = papis-zotero
-	url = git@github.com:GerHobbelt/papis-zotero.git
+	url = https://github.com/GerHobbelt/papis-zotero.git
 	
 [submodule "zotero-zotfile"]
 	path = zotero-zotfile
-	url = git@github.com:GerHobbelt/zotfile.git
+	url = https://github.com/GerHobbelt/zotfile.git
 	
 [submodule "notcurses"]
 	path = notcurses
-	url = git@github.com:GerHobbelt/notcurses.git
+	url = https://github.com/GerHobbelt/notcurses.git
 	
 [submodule "zotero-better-bibtex"]
 	path = zotero-better-bibtex
-	url = git@github.com:GerHobbelt/zotero-better-bibtex.git
+	url = https://github.com/GerHobbelt/zotero-better-bibtex.git
 	
 [submodule "xsldbg"]
 	path = xsldbg
-	url = git@github.com:GerHobbelt/xsldbg.git
+	url = https://github.com/GerHobbelt/xsldbg.git
 	
 [submodule "ceres-solver"]
 	path = ceres-solver
-	url = git@github.com:GerHobbelt/ceres-solver.git
+	url = https://github.com/GerHobbelt/ceres-solver.git
 	
 [submodule "stateline"]
 	path = stateline
-	url = git@github.com:GerHobbelt/stateline.git
+	url = https://github.com/GerHobbelt/stateline.git
 	
 [submodule "cppjieba"]
 	path = cppjieba
-	url = git@github.com:GerHobbelt/cppjieba.git
+	url = https://github.com/GerHobbelt/cppjieba.git
 	
 [submodule "monolith"]
 	path = monolith
-	url = git@github.com:GerHobbelt/monolith.git
+	url = https://github.com/GerHobbelt/monolith.git
 	
 [submodule "PGM-index"]
 	path = PGM-index
-	url = git@github.com:GerHobbelt/PGM-index.git
+	url = https://github.com/GerHobbelt/PGM-index.git
 	
 [submodule "iresearch"]
 	path = iresearch
-	url = git@github.com:GerHobbelt/iresearch.git
+	url = https://github.com/GerHobbelt/iresearch.git
 	
 [submodule "pHash"]
 	path = pHash
-	url = git@github.com:GerHobbelt/pHash.git
+	url = https://github.com/GerHobbelt/pHash.git
 	
 [submodule "phash-gpl"]
 	path = phash-gpl
-	url = git@github.com:GerHobbelt/phash-gpl.git
+	url = https://github.com/GerHobbelt/phash-gpl.git
 	
 [submodule "ssimulacra2"]
 	path = ssimulacra2
-	url = git@github.com:GerHobbelt/ssimulacra2.git
+	url = https://github.com/GerHobbelt/ssimulacra2.git
 	
 [submodule "arangodb"]
 	path = arangodb
-	url = git@github.com:GerHobbelt/arangodb.git
+	url = https://github.com/GerHobbelt/arangodb.git
 	
 [submodule "completesearch"]
 	path = completesearch
-	url = git@github.com:GerHobbelt/completesearch.git
+	url = https://github.com/GerHobbelt/completesearch.git
 	
 [submodule "qlever"]
 	path = qlever
-	url = git@github.com:GerHobbelt/qlever.git
+	url = https://github.com/GerHobbelt/qlever.git
 	
 [submodule "midas"]
 	path = midas
-	url = git@github.com:GerHobbelt/MIDAS.git
+	url = https://github.com/GerHobbelt/MIDAS.git
 	
 [submodule "pytorch_cpp_demo"]
 	path = pytorch_cpp_demo
-	url = git@github.com:GerHobbelt/pytorch_cpp.git
+	url = https://github.com/GerHobbelt/pytorch_cpp.git
 	
 [submodule "LightGBM"]
 	path = LightGBM
-	url = git@github.com:GerHobbelt/LightGBM.git
+	url = https://github.com/GerHobbelt/LightGBM.git
 	
 [submodule "StarSpace"]
 	path = StarSpace
-	url = git@github.com:GerHobbelt/StarSpace.git
+	url = https://github.com/GerHobbelt/StarSpace.git
 	
 [submodule "sqlite_fts_tokenizer_chinese_simple"]
 	path = sqlite_fts_tokenizer_chinese_simple
-	url = git@github.com:GerHobbelt/simple.git
+	url = https://github.com/GerHobbelt/simple.git
 	
 [submodule "libcppjieba"]
 	path = libcppjieba
-	url = git@github.com:GerHobbelt/libcppjieba.git
+	url = https://github.com/GerHobbelt/libcppjieba.git
 	
 [submodule "pinyin"]
 	path = pinyin
-	url = git@github.com:GerHobbelt/pinyin.git
+	url = https://github.com/GerHobbelt/pinyin.git
 	
 [submodule "libpinyin"]
 	path = libpinyin
-	url = git@github.com:GerHobbelt/libpinyin.git
+	url = https://github.com/GerHobbelt/libpinyin.git
 	
 [submodule "libcsv2"]
 	path = libcsv2
-	url = git@github.com:GerHobbelt/csv2.git
+	url = https://github.com/GerHobbelt/csv2.git
 	
 [submodule "csv-parser"]
 	path = csv-parser
-	url = git@github.com:GerHobbelt/csv-parser.git
+	url = https://github.com/GerHobbelt/csv-parser.git
 	
 [submodule "mammut"]
 	path = mammut
-	url = git@github.com:GerHobbelt/mammut.git
+	url = https://github.com/GerHobbelt/mammut.git
 	
 [submodule "Cysboard"]
 	path = Cysboard
-	url = git@github.com:GerHobbelt/Cysboard.git
+	url = https://github.com/GerHobbelt/Cysboard.git
 	
 [submodule "diffutils"]
 	path = diffutils
-	url = git@github.com:GerHobbelt/diffutils.git
+	url = https://github.com/GerHobbelt/diffutils.git
 	
 [submodule "gtn"]
 	path = gtn
-	url = git@github.com:GerHobbelt/gtn.git
+	url = https://github.com/GerHobbelt/gtn.git
 	
 [submodule "OpenFST-utils"]
 	path = OpenFST-utils
-	url = git@github.com:GerHobbelt/openfst-utils.git
+	url = https://github.com/GerHobbelt/openfst-utils.git
 	
 [submodule "sqlite3-compression-encryption-vfs"]
 	path = sqlite3-compression-encryption-vfs
-	url = git@github.com:GerHobbelt/sqlite3-compression-encryption-vfs.git
+	url = https://github.com/GerHobbelt/sqlite3-compression-encryption-vfs.git
 	
 [submodule "nativefiledialog-extended"]
 	path = nativefiledialog-extended
-	url = git@github.com:GerHobbelt/nativefiledialog-extended.git
+	url = https://github.com/GerHobbelt/nativefiledialog-extended.git
 	
 [submodule "jsoncons"]
 	path = jsoncons
-	url = git@github.com:GerHobbelt/jsoncons.git
+	url = https://github.com/GerHobbelt/jsoncons.git
 	
 [submodule "rclone"]
 	path = rclone
-	url = git@github.com:GerHobbelt/rclone.git
+	url = https://github.com/GerHobbelt/rclone.git
 	
 [submodule "mysql-connector-cpp"]
 	path = mysql-connector-cpp
-	url = git@github.com:GerHobbelt/mysql-connector-cpp.git
+	url = https://github.com/GerHobbelt/mysql-connector-cpp.git
 	
 [submodule "exiv2"]
 	path = exiv2
-	url = git@github.com:GerHobbelt/exiv2.git
+	url = https://github.com/GerHobbelt/exiv2.git
 	
 [submodule "openpbs"]
 	path = openpbs
-	url = git@github.com:GerHobbelt/openpbs.git
+	url = https://github.com/GerHobbelt/openpbs.git
 	
 [submodule "pybind11"]
 	path = pybind11
-	url = git@github.com:GerHobbelt/pybind11.git
+	url = https://github.com/GerHobbelt/pybind11.git
 
 [submodule "RxCpp"]
 	path = RxCpp
-	url = git@github.com:GerHobbelt/RxCpp.git
+	url = https://github.com/GerHobbelt/RxCpp.git
 
 [submodule "zxing-cpp"]
 	path = zxing-cpp
-	url = git@github.com:GerHobbelt/zxing-cpp.git
+	url = https://github.com/GerHobbelt/zxing-cpp.git
 
 [submodule "statsite"]
 	path = statsite
-	url = git@github.com:GerHobbelt/statsite.git
+	url = https://github.com/GerHobbelt/statsite.git
 
 [submodule "QCBOR"]
 	path = QCBOR
-	url = git@github.com:GerHobbelt/QCBOR.git
+	url = https://github.com/GerHobbelt/QCBOR.git
 
 [submodule "libcbor"]
 	path = libcbor
-	url = git@github.com:GerHobbelt/libcbor.git
+	url = https://github.com/GerHobbelt/libcbor.git
 
 [submodule "tinycbor"]
 	path = tinycbor
-	url = git@github.com:GerHobbelt/tinycbor.git
+	url = https://github.com/GerHobbelt/tinycbor.git
 
 [submodule "pcm"]
 	path = pcm
-	url = git@github.com:GerHobbelt/pcm.git
+	url = https://github.com/GerHobbelt/pcm.git
 
 [submodule "safestringlib"]
 	path = safestringlib
-	url = git@github.com:GerHobbelt/safestringlib.git
+	url = https://github.com/GerHobbelt/safestringlib.git
 
 [submodule "libjxl"]
 	path = libjxl
-	url = git@github.com:GerHobbelt/libjxl.git
+	url = https://github.com/GerHobbelt/libjxl.git
 
 [submodule "libheif"]
 	path = libheif
-	url = git@github.com:GerHobbelt/heif.git
+	url = https://github.com/GerHobbelt/heif.git
 
 [submodule "oiio"]
 	path = oiio
-	url = git@github.com:GerHobbelt/oiio.git
+	url = https://github.com/GerHobbelt/oiio.git
 
 [submodule "libheif-alt"]
 	path = libheif-alt
-	url = git@github.com:GerHobbelt/libheif.git
+	url = https://github.com/GerHobbelt/libheif.git
 
 [submodule "libde265"]
 	path = libde265
-	url = git@github.com:GerHobbelt/libde265.git
+	url = https://github.com/GerHobbelt/libde265.git
 
 [submodule "libaom"]
 	path = libaom
-	url = git@github.com:GerHobbelt/libaom.git
+	url = https://github.com/GerHobbelt/libaom.git
 
 [submodule "variadic_table"]
 	path = variadic_table
-	url = git@github.com:GerHobbelt/variadic_table.git
+	url = https://github.com/GerHobbelt/variadic_table.git
 
 [submodule "libmobi"]
 	path = libmobi
-	url = git@github.com:GerHobbelt/libmobi.git
+	url = https://github.com/GerHobbelt/libmobi.git
 
 [submodule "stringi"]
 	path = stringi
-	url = git@github.com:GerHobbelt/stringi.git
+	url = https://github.com/GerHobbelt/stringi.git
 
 [submodule "tinygettext"]
 	path = tinygettext
-	url = git@github.com:GerHobbelt/tinygettext.git
+	url = https://github.com/GerHobbelt/tinygettext.git
 
 [submodule "gettext"]
 	path = gettext
-	url = git@github.com:GerHobbelt/gettext.git
+	url = https://github.com/GerHobbelt/gettext.git
 
 [submodule "libfort"]
 	path = libfort
-	url = git@github.com:GerHobbelt/libfort.git
+	url = https://github.com/GerHobbelt/libfort.git
 
 [submodule "libevt"]
 	path = libevt
-	url = git@github.com:GerHobbelt/libevt.git
+	url = https://github.com/GerHobbelt/libevt.git
 
 [submodule "date"]
 	path = date
-	url = git@github.com:GerHobbelt/date.git
+	url = https://github.com/GerHobbelt/date.git
 
 [submodule "datetimepp"]
 	path = datetimepp
-	url = git@github.com:GerHobbelt/datetimepp.git
+	url = https://github.com/GerHobbelt/datetimepp.git
 
 [submodule "dateutils"]
 	path = dateutils
-	url = git@github.com:GerHobbelt/dateutils.git
+	url = https://github.com/GerHobbelt/dateutils.git
 
 [submodule "cctz"]
 	path = cctz
-	url = git@github.com:GerHobbelt/cctz.git
+	url = https://github.com/GerHobbelt/cctz.git
 
 [submodule "ion-c"]
 	path = ion-c
-	url = git@github.com:GerHobbelt/ion-c.git
+	url = https://github.com/GerHobbelt/ion-c.git
 
 [submodule "libsmile"]
 	path = libsmile
-	url = git@github.com:GerHobbelt/libsmile.git
+	url = https://github.com/GerHobbelt/libsmile.git
 
 [submodule "eventpp"]
 	path = eventpp
-	url = git@github.com:GerHobbelt/eventpp.git
+	url = https://github.com/GerHobbelt/eventpp.git
 
 [submodule "universal-numbers"]
 	path = universal-numbers
-	url = git@github.com:GerHobbelt/universal.git
+	url = https://github.com/GerHobbelt/universal.git
 
 [submodule "libsigcplusplus"]
 	path = libsigcplusplus
-	url = git@github.com:GerHobbelt/libsigcplusplus.git
+	url = https://github.com/GerHobbelt/libsigcplusplus.git
 
 [submodule "Signals"]
 	path = Signals
-	url = git@github.com:GerHobbelt/Signals.git
+	url = https://github.com/GerHobbelt/Signals.git
 
 [submodule "percona-server"]
 	path = percona-server
-	url = git@github.com:GerHobbelt/percona-server.git
+	url = https://github.com/GerHobbelt/percona-server.git
 
 [submodule "comdb2-bdb"]
 	path = comdb2-bdb
-	url = git@github.com:GerHobbelt/comdb2.git
+	url = https://github.com/GerHobbelt/comdb2.git
 
 [submodule "cpython"]
 	path = cpython
-	url = git@github.com:GerHobbelt/cpython.git
+	url = https://github.com/GerHobbelt/cpython.git
 
 [submodule "sqleet"]
 	path = sqleet
-	url = git@github.com:GerHobbelt/sqleet.git
+	url = https://github.com/GerHobbelt/sqleet.git
 
 [submodule "sqlcipher"]
 	path = sqlcipher
-	url = git@github.com:GerHobbelt/sqlcipher.git
+	url = https://github.com/GerHobbelt/sqlcipher.git
 
 [submodule "argparse"]
 	path = argparse
-	url = git@github.com:GerHobbelt/argparse.git
+	url = https://github.com/GerHobbelt/argparse.git
 
 [submodule "sqlpp11"]
 	path = sqlpp11
-	url = git@github.com:GerHobbelt/sqlpp11.git
+	url = https://github.com/GerHobbelt/sqlpp11.git
 
 [submodule "mydumper"]
 	path = mydumper
-	url = git@github.com:GerHobbelt/mydumper.git
+	url = https://github.com/GerHobbelt/mydumper.git
 
 [submodule "GoldFish-CBOR"]
 	path = GoldFish-CBOR
-	url = git@github.com:GerHobbelt/GoldFish.git
+	url = https://github.com/GerHobbelt/GoldFish.git
 
 [submodule "indicators"]
 	path = indicators
-	url = git@github.com:GerHobbelt/indicators.git
+	url = https://github.com/GerHobbelt/indicators.git
 
 [submodule "VQMT"]
 	path = VQMT
-	url = git@github.com:GerHobbelt/VQMT.git
+	url = https://github.com/GerHobbelt/VQMT.git
 
 [submodule "spdlog"]
 	path = spdlog
-	url = git@github.com:GerHobbelt/spdlog.git
+	url = https://github.com/GerHobbelt/spdlog.git
 
 [submodule "spdlog_setup"]
 	path = spdlog_setup
-	url = git@github.com:GerHobbelt/spdlog_setup.git
+	url = https://github.com/GerHobbelt/spdlog_setup.git
 
 [submodule "cpptoml"]
 	path = cpptoml
-	url = git@github.com:GerHobbelt/cpptoml.git
+	url = https://github.com/GerHobbelt/cpptoml.git
 
 [submodule "toml11"]
 	path = toml11
-	url = git@github.com:GerHobbelt/toml11.git
+	url = https://github.com/GerHobbelt/toml11.git
 
 [submodule "folly"]
 	path = folly
-	url = git@github.com:GerHobbelt/folly.git
+	url = https://github.com/GerHobbelt/folly.git
 
 [submodule "BoxFort"]
 	path = BoxFort
-	url = git@github.com:GerHobbelt/BoxFort.git
+	url = https://github.com/GerHobbelt/BoxFort.git
 
 [submodule "debugbreak"]
 	path = debugbreak
-	url = git@github.com:GerHobbelt/debugbreak.git
+	url = https://github.com/GerHobbelt/debugbreak.git
 
 [submodule "Criterion"]
 	path = Criterion
-	url = git@github.com:GerHobbelt/Criterion.git
+	url = https://github.com/GerHobbelt/Criterion.git
 
 [submodule "tabulate"]
 	path = tabulate
-	url = git@github.com:GerHobbelt/tabulate.git
+	url = https://github.com/GerHobbelt/tabulate.git
 
 [submodule "portable-snippets"]
 	path = portable-snippets
-	url = git@github.com:GerHobbelt/portable-snippets.git
+	url = https://github.com/GerHobbelt/portable-snippets.git
 	
 [submodule "salieri"]
 	path = salieri
-	url = git@github.com:GerHobbelt/salieri.git
+	url = https://github.com/GerHobbelt/salieri.git
 	
 [submodule "honggfuzz"]
 	path = honggfuzz
-	url = git@github.com:GerHobbelt/honggfuzz.git
+	url = https://github.com/GerHobbelt/honggfuzz.git
 
 [submodule "rsync"]
 	path = rsync
-	url = git@github.com:GerHobbelt/rsync.git
+	url = https://github.com/GerHobbelt/rsync.git
 
 [submodule "unpaper"]
 	path = unpaper
-	url = git@github.com:GerHobbelt/unpaper.git
+	url = https://github.com/GerHobbelt/unpaper.git
 
 [submodule "shadesmar"]
 	path = shadesmar
-	url = git@github.com:GerHobbelt/shadesmar.git
+	url = https://github.com/GerHobbelt/shadesmar.git
 
 [submodule "libuv"]
 	path = libuv
-	url = git@github.com:GerHobbelt/libuv.git
+	url = https://github.com/GerHobbelt/libuv.git
 
 [submodule "ucx"]
 	path = ucx
-	url = git@github.com:GerHobbelt/ucx.git
+	url = https://github.com/GerHobbelt/ucx.git
 
 [submodule "libffi"]
 	path = libffi
-	url = git@github.com:GerHobbelt/libffi.git
+	url = https://github.com/GerHobbelt/libffi.git
 
 [submodule "fatal"]
 	path = fatal
-	url = git@github.com:GerHobbelt/fatal.git
+	url = https://github.com/GerHobbelt/fatal.git
 
 [submodule "marian"]
 	path = marian
-	url = git@github.com:GerHobbelt/marian.git
+	url = https://github.com/GerHobbelt/marian.git
 
 [submodule "OpenBLAS"]
 	path = OpenBLAS
-	url = git@github.com:GerHobbelt/OpenBLAS.git
+	url = https://github.com/GerHobbelt/OpenBLAS.git
 
 [submodule "NiuTrans.NMT"]
 	path = NiuTrans.NMT
-	url = git@github.com:GerHobbelt/NiuTrans.NMT.git
+	url = https://github.com/GerHobbelt/NiuTrans.NMT.git
 
 [submodule "libeigen"]
 	path = libeigen
-	url = git@github.com:GerHobbelt/eigen-git-mirror.git
+	url = https://github.com/GerHobbelt/eigen-git-mirror.git
 
 [submodule "mxnet"]
 	path = mxnet
-	url = git@github.com:GerHobbelt/mxnet.git
+	url = https://github.com/GerHobbelt/mxnet.git
 
 [submodule "OpenCL-SDK"]
 	path = OpenCL-SDK
-	url = git@github.com:GerHobbelt/OpenCL-SDK.git
+	url = https://github.com/GerHobbelt/OpenCL-SDK.git
 
 [submodule "OpenCL-CTS"]
 	path = OpenCL-CTS
-	url = git@github.com:GerHobbelt/OpenCL-CTS.git
+	url = https://github.com/GerHobbelt/OpenCL-CTS.git
 
 [submodule "OpenCL-Headers"]
 	path = OpenCL-Headers
-	url = git@github.com:GerHobbelt/OpenCL-Headers.git
+	url = https://github.com/GerHobbelt/OpenCL-Headers.git
 
 [submodule "mace"]
 	path = mace
-	url = git@github.com:GerHobbelt/mace.git
+	url = https://github.com/GerHobbelt/mace.git
 
 [submodule "arrayfire"]
 	path = arrayfire
-	url = git@github.com:GerHobbelt/arrayfire.git
+	url = https://github.com/GerHobbelt/arrayfire.git
 
 [submodule "CLBlast"]
 	path = CLBlast
-	url = git@github.com:GerHobbelt/CLBlast.git
+	url = https://github.com/GerHobbelt/CLBlast.git
 
 [submodule "libocca"]
 	path = libocca
-	url = git@github.com:GerHobbelt/occa.git
+	url = https://github.com/GerHobbelt/occa.git
 
 [submodule "pdfgrep"]
 	path = pdfgrep
-	url = git@github.com:GerHobbelt/pdfgrep.git
+	url = https://github.com/GerHobbelt/pdfgrep.git
 
 [submodule "Win32_read_directory_changes"]
 	path = Win32_read_directory_changes
-	url = git@github.com:GerHobbelt/readdirectorychanges.git
+	url = https://github.com/GerHobbelt/readdirectorychanges.git
 
 [submodule "pipes"]
 	path = pipes
-	url = git@github.com:GerHobbelt/pipes.git
+	url = https://github.com/GerHobbelt/pipes.git
 
 [submodule "Win32_read_directory_changes_IOCP"]
 	path = Win32_read_directory_changes_IOCP
-	url = git@github.com:GerHobbelt/ReadDirectoryChangesIOCP.git
+	url = https://github.com/GerHobbelt/ReadDirectoryChangesIOCP.git
 
 [submodule "asyncplusplus"]
 	path = asyncplusplus
-	url = git@github.com:GerHobbelt/asyncplusplus.git
+	url = https://github.com/GerHobbelt/asyncplusplus.git
 
 [submodule "calibre"]
 	path = calibre
-	url = git@github.com:GerHobbelt/calibre.git
+	url = https://github.com/GerHobbelt/calibre.git
 
 [submodule "poppler"]
 	path = poppler
-	url = git@github.com:GerHobbelt/poppler.git
+	url = https://github.com/GerHobbelt/poppler.git
 
 [submodule "xpdf"]
 	path = xpdf
-	url = git@github.com:GerHobbelt/xpdf.git
+	url = https://github.com/GerHobbelt/xpdf.git
 
 [submodule "pdfium"]
 	path = pdfium
-	url = git@github.com:GerHobbelt/pdfium.git
+	url = https://github.com/GerHobbelt/pdfium.git
 
 [submodule "cef-pdf"]
 	path = cef-pdf
-	url = git@github.com:GerHobbelt/cef-pdf.git
+	url = https://github.com/GerHobbelt/cef-pdf.git
 
 [submodule "wxPdfDocument"]
 	path = wxPdfDocument
-	url = git@github.com:GerHobbelt/wxpdfdoc.git
+	url = https://github.com/GerHobbelt/wxpdfdoc.git
 
 [submodule "sumatrapdf"]
 	path = sumatrapdf
-	url = git@github.com:GerHobbelt/sumatrapdf.git
+	url = https://github.com/GerHobbelt/sumatrapdf.git
 
 [submodule "sioyek"]
 	path = sioyek
-	url = git@github.com:GerHobbelt/sioyek.git
+	url = https://github.com/GerHobbelt/sioyek.git
 
 [submodule "tcpshm"]
 	path = tcpshm
-	url = git@github.com:GerHobbelt/tcpshm.git
+	url = https://github.com/GerHobbelt/tcpshm.git
 
 [submodule "libshmcache"]
 	path = libshmcache
-	url = git@github.com:GerHobbelt/libshmcache.git
+	url = https://github.com/GerHobbelt/libshmcache.git
 
 [submodule "pyclustering"]
 	path = pyclustering
-	url = git@github.com:GerHobbelt/pyclustering.git
+	url = https://github.com/GerHobbelt/pyclustering.git
 
 [submodule "sharedhashfile"]
 	path = sharedhashfile
-	url = git@github.com:GerHobbelt/sharedhashfile.git
+	url = https://github.com/GerHobbelt/sharedhashfile.git
 
 [submodule "libdi-dependency-injection"]
 	path = libdi-dependency-injection
-	url = git@github.com:GerHobbelt/di.git
+	url = https://github.com/GerHobbelt/di.git
 
 [submodule "shmdata"]
 	path = shmdata
-	url = git@github.com:GerHobbelt/shmdata.git
+	url = https://github.com/GerHobbelt/shmdata.git
 
 [submodule "xlnt"]
 	path = xlnt
-	url = git@github.com:GerHobbelt/xlnt.git
+	url = https://github.com/GerHobbelt/xlnt.git
 
 [submodule "robin-hood-hashing"]
 	path = robin-hood-hashing
-	url = git@github.com:GerHobbelt/robin-hood-hashing.git
+	url = https://github.com/GerHobbelt/robin-hood-hashing.git
 
 [submodule "picoc"]
 	path = picoc
-	url = git@github.com:GerHobbelt/picoc.git
+	url = https://github.com/GerHobbelt/picoc.git
 
 [submodule "hikyuu"]
 	path = hikyuu
-	url = git@github.com:GerHobbelt/hikyuu.git
+	url = https://github.com/GerHobbelt/hikyuu.git
 
 [submodule "ApprovalTestsCpp"]
 	path = ApprovalTestsCpp
-	url = git@github.com:GerHobbelt/ApprovalTests.cpp.git
+	url = https://github.com/GerHobbelt/ApprovalTests.cpp.git
 
 [submodule "Verify"]
 	path = Verify
-	url = git@github.com:GerHobbelt/Verify.git
+	url = https://github.com/GerHobbelt/Verify.git
 
 [submodule "subprocess-cpp"]
 	path = subprocess-cpp
-	url = git@github.com:GerHobbelt/subprocess-cpp.git
+	url = https://github.com/GerHobbelt/subprocess-cpp.git
 
 [submodule "stan-math"]
 	path = stan-math
-	url = git@github.com:GerHobbelt/stan-math.git
+	url = https://github.com/GerHobbelt/stan-math.git
 
 [submodule "stan"]
 	path = stan
-	url = git@github.com:GerHobbelt/stan.git
+	url = https://github.com/GerHobbelt/stan.git
 
 [submodule "memory"]
 	path = memory
-	url = git@github.com:GerHobbelt/memory.git
+	url = https://github.com/GerHobbelt/memory.git
 
 [submodule "mesh-allocator"]
 	path = mesh-allocator
-	url = git@github.com:GerHobbelt/Mesh.git
+	url = https://github.com/GerHobbelt/Mesh.git
 
 [submodule "snap"]
 	path = snap
-	url = git@github.com:GerHobbelt/snap.git
+	url = https://github.com/GerHobbelt/snap.git
 
 [submodule "nanomsg-nng"]
 	path = nanomsg-nng
-	url = git@github.com:GerHobbelt/nng.git
+	url = https://github.com/GerHobbelt/nng.git
 
 [submodule "basez"]
 	path = basez
-	url = git@github.com:GerHobbelt/basez.git
+	url = https://github.com/GerHobbelt/basez.git
 
 [submodule "libmlpp"]
 	path = libmlpp
-	url = git@github.com:GerHobbelt/MLPP.git
+	url = https://github.com/GerHobbelt/MLPP.git
 
 [submodule "onnxruntime"]
 	path = onnxruntime
-	url = git@github.com:GerHobbelt/onnxruntime.git
+	url = https://github.com/GerHobbelt/onnxruntime.git
 
 [submodule "wil-Win32-Interface-Library"]
 	path = wil-Win32-Interface-Library
-	url = git@github.com:GerHobbelt/wil.git
+	url = https://github.com/GerHobbelt/wil.git
 
 [submodule "PaddlePaddle"]
 	path = PaddlePaddle
-	url = git@github.com:GerHobbelt/Paddle.git
+	url = https://github.com/GerHobbelt/Paddle.git
 
 [submodule "MNN"]
 	path = MNN
-	url = git@github.com:GerHobbelt/MNN.git
+	url = https://github.com/GerHobbelt/MNN.git
 
 [submodule "tesslinesplit"]
 	path = tesslinesplit
-	url = git@github.com:GerHobbelt/tesslinesplit.git
+	url = https://github.com/GerHobbelt/tesslinesplit.git
 
 [submodule "osquery"]
 	path = osquery
-	url = git@github.com:GerHobbelt/osquery.git
+	url = https://github.com/GerHobbelt/osquery.git
 
 [submodule "podofo"]
 	path = podofo
-	url = git@github.com:GerHobbelt/podofo.git
+	url = https://github.com/GerHobbelt/podofo.git
+
+[submodule "cxxtest"]
+	path = cxxtest
+	url = https://github.com/GerHobbelt/cxxtest.git
+
