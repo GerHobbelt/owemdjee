@@ -2397,3 +2397,18 @@
 [submodule "textflowcpp"]
 	path = textflowcpp
 	url = git@github.com:GerHobbelt/textflowcpp.git
+[submodule "transwarp"]
+	path = transwarp
+	url = git@github.com:GerHobbelt/transwarp.git
+[submodule "JamSpell"]
+	path = JamSpell
+	url = git@github.com:GerHobbelt/JamSpell.git
+[submodule "hunspell-dictionarries"]
+	path = hunspell-dictionarries
+	url = git@github.com:GerHobbelt/dictionaries.git
+[submodule "ipa-dict"]
+	path = ipa-dict
+	url = git@github.com:GerHobbelt/ipa-dict.git
+[submodule "nuspell"]
+	path = nuspell
+	url = git@github.com:GerHobbelt/nuspell.git
