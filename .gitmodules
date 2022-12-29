@@ -2412,3 +2412,30 @@
 [submodule "nuspell"]
 	path = nuspell
 	url = git@github.com:GerHobbelt/nuspell.git
+[submodule "CRFpp"]
+	path = CRFpp
+	url = git@github.com:GerHobbelt/crfpp.git
+[submodule "crfsuite"]
+	path = crfsuite
+	url = git@github.com:GerHobbelt/crfsuite.git
+[submodule "DGM-CRF"]
+	path = DGM-CRF
+	url = git@github.com:GerHobbelt/DGM.git
+[submodule "CRFsuite-extended"]
+	path = CRFsuite-extended
+	url = git@github.com:GerHobbelt/CRFSuiteEx.git
+[submodule "word2vec"]
+	path = word2vec
+	url = git@github.com:GerHobbelt/word2vec.git
+[submodule "tensorflow-text"]
+	path = tensorflow-text
+	url = git@github.com:GerHobbelt/tensorflow-text.git
+[submodule "tensorflow-docs"]
+	path = tensorflow-docs
+	url = git@github.com:GerHobbelt/tensorflow-docs.git
+[submodule "tensorflow-io"]
+	path = tensorflow-io
+	url = git@github.com:GerHobbelt/tensorflow-io.git
+[submodule "word2vec-GloVe"]
+	path = word2vec-GloVe
+	url = git@github.com:GerHobbelt/GloVe.git
