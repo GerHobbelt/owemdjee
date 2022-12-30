@@ -1307,6 +1307,9 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **cpuinfo** [📁](./cpuinfo) [🌐](https://github.com/GerHobbelt/cpuinfo) -- CPU & hardware info
 - **cpython** [📁](./cpython) [🌐](https://github.com/GerHobbelt/cpython)
 - **createprocess-windows** [📁](./createprocess-windows) [🌐](https://github.com/GerHobbelt/createprocess-windows) -- drive `CreateProcess` Win32 API
+- **CRFpp** [📁](./CRFpp) [🌐](https://github.com/GerHobbelt/crfpp)
+- **crfsuite** [📁](./crfsuite) [🌐](https://github.com/GerHobbelt/crfsuite)
+- **CRFsuite-extended** [📁](./CRFsuite-extended) [🌐](https://github.com/GerHobbelt/CRFSuiteEx)
 - **Criterion** [📁](./Criterion) [🌐](https://github.com/GerHobbelt/Criterion)
 - **CRoaring** [📁](./CRoaring) [🌐](https://github.com/GerHobbelt/CRoaring) -- portable Roaring bitmaps in C (and C++). Bitsets, also called bitmaps, are commonly used as fast data structures. Unfortunately, they can use too much memory. To compensate, we often use compressed bitmaps. Roaring bitmaps are compressed bitmaps which tend to outperform conventional compressed bitmaps such as WAH, EWAH or Concise. They are used by several major systems such as Apache Lucene and derivative systems such as Solr and Elasticsearch, etc.. The CRoaring library is used in several systems such as Apache Doris.
 - **crow** [📁](./crow) [🌐](https://github.com/GerHobbelt/crow) -- IPC / server framework. Crow is a very fast and easy to use C++ micro web framework (inspired by Python Flask).
@@ -1322,6 +1325,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **cuckoo-index** [📁](./cuckoo-index) [🌐](https://github.com/GerHobbelt/cuckoo-index) -- Cuckoo Index (CI) is a lightweight secondary index structure that represents the many-to-many relationship between keys and partitions of columns in a highly space-efficient way. CI associates variable-sized fingerprints in a Cuckoo filter with compressed bitmaps indicating qualifying partitions. The problem of finding all partitions that possibly contain a given lookup key is traditionally solved by maintaining one filter (e.g., a Bloom filter) per partition that indexes all unique key values contained in this partition. To identify all partitions containing a key, we would need to probe all per-partition filters (which could be many). Depending on the storage medium, a false positive there can be very expensive. Furthermore, secondary columns typically contain many duplicates (also across partitions). Cuckoo Index (CI) addresses these drawbacks of per-partition filters.
 - **cURL** [📁](../../thirdparty/curl) [🌐](https://github.com/GerHobbelt/thirdparty-curl) -- the ubiquitous [libcurl](http://curl.haxx.se/libcurl).
 - **CxImage** [📁](./CxImage) [🌐](https://github.com/GerHobbelt/CxImage) -- venerated library for reading and creating many image file formats
+- **cxxtest** [📁](./cxxtest) [🌐](https://github.com/GerHobbelt/cxxtest)
 - **cxxtest_catch_2_gtest** [📁](./cxxtest_catch_2_gtest) [🌐](https://github.com/GerHobbelt/cxxtest_catch_2_gtest) -- quick & dirty converter from various test suites to googletest, i.e. allows us to use a single test framework, despite some libraries having been set up to use another, e.g. Catch2.
 - **Cysboard** [📁](./Cysboard) [🌐](https://github.com/GerHobbelt/Cysboard)
 - **date** [📁](./date) [🌐](https://github.com/GerHobbelt/date)
@@ -1331,6 +1335,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **DCF-cuckoo-index** [📁](./DCF-cuckoo-index) [🌐](https://github.com/GerHobbelt/DCF) -- the Dynamic Cuckoo Filter (DCF) is an efficient approximate membership test data structure. Different from the classic Bloom filter and its variants, DCF is especially designed for highly dynamic datasets and supports extending and reducing its capacity. The DCF design is the first to achieve both reliable item deletion and flexibly extending/reducing for approximate set representation and membership testing. DCF outperforms the state-of-the-art DBF designs in both speed and memory consumption.
 - **debugbreak** [📁](./debugbreak) [🌐](https://github.com/GerHobbelt/debugbreak)
 - **delegate** [📁](./delegate) [🌐](https://github.com/GerHobbelt/delegate) -- an embedded friendly alternative to `std::function`. The main purpose is to store callable things such as free functions, member functions, and functors. Once stored, the delegate can be called without knowledge of the type of stored thing. The `delegate` guarantees no heap allocation and [is `trivially_copyable`](https://en.cppreference.com/w/cpp/named_req/TriviallyCopyable). It will never throw exceptions itself. Intended use is as general callback storage (think function pointer analog). The price to pay is that the delegate only stores a pointer to referenced functor objects or objects to call member functions on. The user needs to handle the lifetime of a referred object. In addition, the delegation object has a smaller footprint compared to common `std::function` implementations, using only 2 pointers (free function pointer and void pointer). This is small enough so that a delegate will use small object optimization.
+- **DGM-CRF** [📁](./DGM-CRF) [🌐](https://github.com/GerHobbelt/DGM)
 - **diffutils** [📁](./diffutils) [🌐](https://github.com/GerHobbelt/diffutils)
 - **dirent** [📁](./dirent) [🌐](https://github.com/GerHobbelt/dirent) -- POSIX `dirent.h` ported to MS Windows (Win32/Win64); used by several libraries.
 - **djvulibre** [📁](./djvulibre) [🌐](https://github.com/GerHobbelt/djvulibre)
@@ -1412,6 +1417,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **htmlstreamparser** [📁](./htmlstreamparser) [🌐](https://github.com/GerHobbelt/htmlstreamparser) -- used in a demo of zsync2
 - **http-parser** [📁](./http-parser) [🌐](https://github.com/GerHobbelt/http-parser)
 - **hunspell** [📁](./hunspell) [🌐](https://github.com/GerHobbelt/hunspell)
+- **hunspell-dictionarries** [📁](./hunspell-dictionarries) [🌐](https://github.com/GerHobbelt/dictionaries)
 - **hunspell-hyphen** [📁](./hunspell-hyphen) [🌐](https://github.com/GerHobbelt/hyphen)
 - **hyperscan** [📁](./hyperscan) [🌐](https://github.com/GerHobbelt/hyperscan) -- Hyperscan is a high-performance multiple regex matching library.
 - **iceoryx** [📁](./iceoryx) [🌐](https://github.com/GerHobbelt/iceoryx) -- true zero-copy inter-process-communication. iceoryx is an inter-process-communication (IPC) middleware for various operating systems (currently we support Linux, macOS, QNX, FreeBSD and Windows 10). It has its origins in the automotive industry, where large amounts of data have to be transferred between different processes when it comes to driver assistance or automated driving systems. However, the efficient communication mechanisms can also be applied to a wider range of use cases, e.g. in the field of robotics or game development.
@@ -1419,9 +1425,11 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **indicators** [📁](./indicators) [🌐](https://github.com/GerHobbelt/indicators)
 - **infoware** [📁](./infoware) [🌐](https://github.com/GerHobbelt/infoware) -- C++ Library for pulling system and hardware information, without hitting the command line.
 - **ion-c** [📁](./ion-c) [🌐](https://github.com/GerHobbelt/ion-c)
+- **ipa-dict** [📁](./ipa-dict) [🌐](https://github.com/GerHobbelt/ipa-dict)
 - **iresearch** [📁](./iresearch) [🌐](https://github.com/GerHobbelt/iresearch)
 - **JabRef-abbreviations** [📁](./JabRef-abbreviations) [🌐](https://github.com/GerHobbelt/jabref-abbreviations)
 - **JabRef-Browser-Extension** [📁](./JabRef-Browser-Extension) [🌐](https://github.com/GerHobbelt/JabRef-Browser-Extension)
+- **JamSpell** [📁](./JamSpell) [🌐](https://github.com/GerHobbelt/JamSpell)
 - **jasper** [📁](./jasper) [🌐](https://github.com/GerHobbelt/jasper) -- JasPer Image Processing/Coding Tool Kit
 - **jbig2dec** [📁](../../thirdparty/jbig2dec) [🌐](https://github.com/GerHobbelt/jbig2dec) -- a decoder library and example utility implementing the JBIG2 bi-level image compression spec. Also known as ITU T.88 and ISO IEC 14492, and included by reference in Adobe's PDF version 1.4 and later.
 - **jemalloc** [📁](./jemalloc) [🌐](https://github.com/GerHobbelt/jemalloc)
@@ -1573,6 +1581,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **MITIE-nlp** [📁](./MITIE-nlp) [🌐](https://github.com/GerHobbelt/MITIE) -- provides state-of-the-art information extraction tools. Includes tools for performing [named entity extraction](http://blog.dlib.net/2014/04/mitie-completely-free-and-state-of-art.html) and [binary relation detection](http://blog.dlib.net/2014/07/mitie-v02-released-now-includes-python.html) as well as tools for training custom extractors and relation detectors.  MITIE is built on top of [dlib](http://dlib.net), a high-performance machine-learning library, MITIE makes use of several state-of-the-art techniques including the use of distributional word embeddings and Structural Support Vector Machines.
 - **mlpack** [📁](./mlpack) [🌐](https://github.com/GerHobbelt/mlpack) -- an intuitive, fast, and flexible C++ machine learning library, meant to be a machine learning analog to LAPACK, aiming to implement a wide array of machine learning methods and functions as a "swiss army knife" for machine learning researchers.
 - **mmc** [📁](./mmc) [🌐](https://github.com/GerHobbelt/mmc) -- Monte Carlo
+- **MNN** [📁](./MNN) [🌐](https://github.com/GerHobbelt/MNN)
 - **monolith** [📁](./monolith) [🌐](https://github.com/GerHobbelt/monolith)
 - **morton_filter** [📁](./morton_filter) [🌐](https://github.com/GerHobbelt/morton_filter) -- a [Morton filter](https://www.vldb.org/pvldb/vol11/p1041-breslow.pdf) -- a new approximate set membership data structure. A Morton filter is a modified cuckoo filter that is optimized for bandwidth-constrained systems. Morton filters use additional computation in order to reduce their off-chip memory traffic. Like a cuckoo filter, a Morton filter supports insertions, deletions, and lookup operations. It additionally adds high-throughput self-resizing, a feature of quotient filters, which allows a Morton filter to increase its capacity solely by leveraging its internal representation. This capability is in contrast to existing vanilla cuckoo filter implementations, which are static and thus require using a backing data structure that contains the full set of items to resize the filter. Morton filters can also be configured to use less memory than a cuckoo filter for the same error rate while simultaneously delivering insertion, deletion, and lookup throughputs that are, respectively, up to 15.5x, 1.3x, and 2.5x higher than a cuckoo filter. Morton filters in contrast to vanilla cuckoo filters do not require a power of two number of buckets but rather only a number that is a multiple of two. They also use fewer bits per item than a Bloom filter when the target false positive rate is less than around 1% to 3%.
 - **ms_cpp_client_telemetry** [📁](./ms_cpp_client_telemetry) [🌐](https://github.com/GerHobbelt/cpp_client_telemetry) -- 1DS C/C++ SDK enables cross-platform telemetry collection from various Microsoft products. It enables data / telemetry upload to Collector++. 1DS (One Data Strategy), also known as One Observability, is a cross-org initiative with five teams across the company coming together to unify multiple telemetry efforts at Microsoft. Collector++ is the externally-facing destination end-point where telemetry data is uploaded to that subsequently routes the data to Microsoft internal data pipeline.
@@ -1594,10 +1603,12 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **notcurses** [📁](./notcurses) [🌐](https://github.com/GerHobbelt/notcurses) -- a library facilitating complex TUIs on modern terminal emulators, supporting vivid colors, multimedia, threads, and Unicode to the maximum degree possible. Things can be done with Notcurses that simply can't be done with NCURSES. It is furthermore fast as shit. What it is not: a source-compatible X/Open Curses implementation, nor a replacement for NCURSES on existing systems.
 - **npoi** [📁](./npoi) [🌐](https://github.com/GerHobbelt/npoi) -- a .NET library that can read/write Office formats without Microsoft Office installed. No COM+, no interop. With NPOI, you can read/write Office 2003/2007 files very easily.
 - **nsync** [📁](./nsync) [🌐](https://github.com/GerHobbelt/nsync) -- a C library that exports various synchronization primitives. `nsync` may be desirable in place of `pthread` primitives in some cases:  (1) nsync locks are reader-writer locks (but are as efficient as mutexes).  (2) nsync locks and condition variables occupy only two words each.  (3) nsync works on Unix-like systems and Windows.  It should be portable to other platforms straightforwardly.  (4) nsync provides conditional critical sections.  These fill the same role as condition variables, but are usually easier to use, and in most common cases are comparable in speed.  They can be easier to use in two ways:  (A) it's not necessary to surround the "wait" operation in a while loop; instead the condition is passed to the call as a function and arbitrary pointer argument.  (B) it's not necessary to wake or signal explicitly when the condition(s) become true; they are checked automatically. The primary downsides are:  (A) they are not available in most other common synchronization APIs, and so they may be unfamiliar (even though they date back to the 1960s), and (B) if threads routinely wait on many distinct, false conditions associated with the same lock, they may be slower than condition variables. In this case, clients can use condition variables in the normal way; conditional critical sections and condition variables can be used with the same lock.  (5) nsync waits can be cancelled via an object passed to the wait calls, unlike the pthread model in which threads are cancelled.  This difference can be useful if the computation needs multiple threads, or if cancellation affects only sub-operations within a larger operation by the thread.
+- **nuspell** [📁](./nuspell) [🌐](https://github.com/GerHobbelt/nuspell)
 - **ocreval** [📁](./ocreval) [🌐](https://github.com/GerHobbelt/ocreval) -- `ocreval` contains 17 tools for measuring the performance of and experimenting with OCR output. `ocreval` is a modern port of the [ISRI Analytic Tools for OCR Evaluation](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.216.9427&rep=rep1&type=pdf), with UTF-8 support and other improvements.
 - **OfficeIMO** [📁](./OfficeIMO) [🌐](https://github.com/GerHobbelt/OfficeIMO) -- fast and easy to use cross-platform .NET library that creates or modifies Microsoft Word (.docx) files without installing any software. Underneath it uses OpenXML SDK but heavily simplifies it.
 - **olena** [📁](./olena) [🌐](https://github.com/GerHobbelt/olena) -- a platform dedicated to image processing.  At the moment it is mainly composed of a C++ library: Milena.  This library features many tools to easily perform image processing tasks.  Its main characteristic is its genericity: it allows to write an algorithm once and run it over many kinds of images (gray scale, color, 1D, 2D, 3D, ...).
 - **oneTBB** [📁](./oneTBB) [🌐](https://github.com/GerHobbelt/oneTBB) -- Intel's Thread Building Blocks library: used with OpenImageIO, ...
+- **onnxruntime** [📁](./onnxruntime) [🌐](https://github.com/GerHobbelt/onnxruntime)
 - **OpenBLAS** [📁](./OpenBLAS) [🌐](https://github.com/GerHobbelt/OpenBLAS)
 - **OpenCL-CTS** [📁](./OpenCL-CTS) [🌐](https://github.com/GerHobbelt/OpenCL-CTS)
 - **OpenCL-Headers** [📁](./OpenCL-Headers) [🌐](https://github.com/GerHobbelt/OpenCL-Headers)
@@ -1613,7 +1624,9 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **Open-XML-SDK** [📁](./Open-XML-SDK) [🌐](https://github.com/GerHobbelt/Open-XML-SDK) -- the Microsoft Open XML SDK (.NET) provides tools for working with Office Word, Excel, and PowerPoint documents.
 - **oppat** [📁](./oppat) [🌐](https://github.com/GerHobbelt/oppat) -- Open Power/Performance Analysis Tool (OPPAT) is a cross-OS, cross-architecture Power and Performance Analysis Tool. cross-OS: supports Windows ETW trace files and Linux/Android perf/trace-cmd trace files. cross-architecture: supports Intel and ARM chips hardware events (using perf and/or PCM).
 - **OptimizationTemplateLibrary** [📁](./OptimizationTemplateLibrary) [🌐](https://github.com/GerHobbelt/O-T-L) -- Optimization Template Library (OTL)
+- **osquery** [📁](./osquery) [🌐](https://github.com/GerHobbelt/osquery)
 - **otl** [📁](./otl) [🌐](https://github.com/GerHobbelt/otl) -- Oracle Template Library (STL-like wrapper for SQL DB queries; supports many databases besides Oracle)
+- **PaddlePaddle** [📁](./PaddlePaddle) [🌐](https://github.com/GerHobbelt/Paddle)
 - **pagerank** [📁](./pagerank) [🌐](https://github.com/GerHobbelt/pagerank) -- a [pagerank](http://www.ams.org/samplings/feature-column/fcarc-pagerank) implementation in C++ able to handle very big graphs.
 - **palanteer** [📁](./palanteer) [🌐](https://github.com/GerHobbelt/palanteer) -- Visual Python and C++ nanosecond profiler, logger, tests enabler: a set of lean and efficient tools to improve the quality of software, for C++ and Python programs.
 - **palmtree** [📁](./palmtree) [🌐](https://github.com/GerHobbelt/palmtree) -- concurrent lock free B+Tree
@@ -1642,6 +1655,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **pisa** [📁](./pisa) [🌐](https://github.com/GerHobbelt/pisa) -- a text search engine able to run on large-scale collections of documents. It allows researchers to experiment with state-of-the-art techniques, allowing an ideal environment for rapid development. PISA is a text search engine, though the "PISA Project" is a set of tools that help experiment with indexing and query processing. Given a text collection, PISA can build an inverted index over this corpus, allowing the corpus to be searched. The inverted index, put simply, is an efficient data structure that represents the document corpus by storing a list of documents for each unique term (see here). At query time, PISA stores its index in main memory for rapid retrieval.
 - **plf_nanotimer** [📁](./plf_nanotimer) [🌐](https://github.com/GerHobbelt/plf_nanotimer) -- high precision cross-platform performance timer
 - **pmt-png-tools** [📁](./pmt-png-tools) [🌐](https://github.com/GerHobbelt/pmt)
+- **podofo** [📁](./podofo) [🌐](https://github.com/GerHobbelt/podofo)
 - **poppler** [📁](./poppler) [🌐](https://github.com/GerHobbelt/poppler)
 - **portable_concurrency-std-future** [📁](./portable_concurrency-std-future) [🌐](https://github.com/GerHobbelt/portable_concurrency) -- Portable implementation of future/promise API in C++. `std::future` done right.
 - **portable-memory-mapping** [📁](./portable-memory-mapping) [🌐](https://github.com/GerHobbelt/portable-memory-mapping) -- portable Memory Mapping C++ Class (Windows/Linux)
@@ -1738,6 +1752,9 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **tcp_pubsub** [📁](./tcp_pubsub) [🌐](https://github.com/GerHobbelt/tcp_pubsub) -- a minimal publish-subscribe library that transports data via TCP. `tcp_pubsub` does not define a message format but only transports binary blobs. It does however define a protocol around that, which is kept as lightweight as possible.
 - **tcpshm** [📁](./tcpshm) [🌐](https://github.com/GerHobbelt/tcpshm)
 - **tensorflow** [📁](./tensorflow) [🌐](https://github.com/GerHobbelt/tensorflow) -- an end-to-end open source platform for machine learning.
+- **tensorflow-docs** [📁](./tensorflow-docs) [🌐](https://github.com/GerHobbelt/tensorflow-docs)
+- **tensorflow-io** [📁](./tensorflow-io) [🌐](https://github.com/GerHobbelt/tensorflow-io)
+- **tensorflow-text** [📁](./tensorflow-text) [🌐](https://github.com/GerHobbelt/tensorflow-text)
 - **tessconfigs** [📁](../../thirdparty/tessconfigs) [🌐](https://github.com/GerHobbelt/tessconfigs)
 - **tessdata** [📁](../../thirdparty/tessdata) [🌐](https://github.com/GerHobbelt/tessdata)
 - **tessdata_best** [📁](../../thirdparty/tessdata_best) [🌐](https://github.com/GerHobbelt/tessdata_best)
@@ -1748,7 +1765,9 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **tesseract_docs** [📁](../../thirdparty/tesseract_docs) [🌐](https://github.com/GerHobbelt/tesseract_docs)
 - **tesseract-gImgRdrGui** [📁](./tesseract-gImgRdrGui) [🌐](https://github.com/GerHobbelt/gImageReader) -- a Gtk/Qt front-end to tesseract-ocr.
 - **tesseract_langdata** [📁](../../thirdparty/tesseract_langdata) [🌐](https://github.com/GerHobbelt/langdata)
+- **tesslinesplit** [📁](./tesslinesplit) [🌐](https://github.com/GerHobbelt/tesslinesplit)
 - **tesstrain** [📁](../../thirdparty/tesstrain) [🌐](https://github.com/GerHobbelt/tesstrain)
+- **textflowcpp** [📁](./textflowcpp) [🌐](https://github.com/GerHobbelt/textflowcpp)
 - **ThreadPool** [📁](./ThreadPool) [🌐](https://github.com/GerHobbelt/ThreadPool)
 - **thread-pool** [📁](./thread-pool) [🌐](https://github.com/GerHobbelt/thread-pool) -- `BS::thread_pool`: a fast, lightweight, and easy-to-use C++17 thread pool for high-performance scientific computing.
 - **thread-pool-c** [📁](./thread-pool-c) [🌐](https://github.com/GerHobbelt/C-Thread-Pool)
@@ -1769,6 +1788,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **tomlpp** [📁](./tomlpp) [🌐](https://github.com/GerHobbelt/tomlplusplus) -- TOML++
 - **TraceETW** [📁](./TraceETW) [🌐](https://github.com/GerHobbelt/TraceEtw)
 - **tracelogging-for-ETW** [📁](./tracelogging-for-ETW) [🌐](https://github.com/GerHobbelt/tracelogging) -- C++ Wrapper for Windows ETW TraceLogging
+- **transwarp** [📁](./transwarp) [🌐](https://github.com/GerHobbelt/transwarp)
 - **tre** [📁](./tre) [🌐](https://github.com/GerHobbelt/tre)
 - **tsf** [📁](./tsf) [🌐](https://github.com/GerHobbelt/tsf) -- type-safe printf equivalent for C++ (used by the uberlog submodule)
 - **tvision** [📁](./tvision) [🌐](https://github.com/GerHobbelt/tvision) -- a modern port of Borland's Turbo Vision 2.0, the classical framework for text-based user interfaces. Now cross-platform and with Unicode support. (**retro fun**)
@@ -1801,6 +1821,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **websocket-sharp** [📁](./websocket-sharp) [🌐](https://github.com/GerHobbelt/websocket-sharp) -- a C# implementation of the WebSocket protocol client and server.
 - **webview** [📁](./webview) [🌐](https://github.com/GerHobbelt/webview) -- cross-platform embedding of the system-default web browser: a tiny cross-platform webview library for C/C++/Golang to build modern cross-platform GUIs. The goal of the project is to create a common HTML5 UI abstraction layer for the most widely used platforms. It supports two-way JavaScript bindings (to call JavaScript from C/C++/Go and to call C/C++/Go from JavaScript).
 - **wget** [📁](./wget) [🌐](https://github.com/GerHobbelt/wget)
+- **wil-Win32-Interface-Library** [📁](./wil-Win32-Interface-Library) [🌐](https://github.com/GerHobbelt/wil)
 - **win32-dpi** [📁](./win32-dpi) [🌐](https://github.com/GerHobbelt/win32-dpi) -- Win32 DPI-aware window example, showcasing how to write a Win32 DPI-aware GUI application that scales properly on everything starting from Windows XP up to and including latest Windows 11.
 - **Win32_read_directory_changes** [📁](./Win32_read_directory_changes) [🌐](https://github.com/GerHobbelt/readdirectorychanges)
 - **Win32_read_directory_changes_IOCP** [📁](./Win32_read_directory_changes_IOCP) [🌐](https://github.com/GerHobbelt/ReadDirectoryChangesIOCP)
@@ -1808,6 +1829,8 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **winflexbison** [📁](./winflexbison) [🌐](https://github.com/GerHobbelt/winflexbison) -- Flex and Bison for Microsoft Windows :: a Windows port of Flex (the fast lexical analyser) and GNU Bison (parser generator). Both `win_flex` and `win_bison` are based on upstream sources but depend on system libraries only.
 - **winflexbison** [📁](./winflexbison) [🌐](https://github.com/GerHobbelt/winflexbison) -- Flex and Bison for Microsoft Windows. WinFlexBison is a Windows port of Flex (the fast lexical analyser) and GNU Bison (parser generator). Both `win_flex` and `win_bison` are based on upstream sources but depend on system libraries only.
 - **WinHttpPAL** [📁](./WinHttpPAL) [🌐](https://github.com/GerHobbelt/WinHttpPAL) -- implements [WinHttp API](https://docs.microsoft.com/en-us/windows/win32/winhttp/winhttp-start-page) Platform Abstraction Layer for POSIX systems using libcurl
+- **word2vec** [📁](./word2vec) [🌐](https://github.com/GerHobbelt/word2vec)
+- **word2vec-GloVe** [📁](./word2vec-GloVe) [🌐](https://github.com/GerHobbelt/GloVe)
 - **wxCharts** [📁](./wxCharts) [🌐](https://github.com/GerHobbelt/wxCharts) -- charts for wxWidgets
 - **wxExamples** [📁](./wxExamples) [🌐](https://github.com/GerHobbelt/Examples_wxWidgets) -- examples using wxWidgets
 - **wxFormBuilder** [📁](./wxFormBuilder) [🌐](https://github.com/GerHobbelt/wxFormBuilder) -- resource editor and GUI designer for wxWidgets
@@ -1900,359 +1923,6 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - ~~**squash** [🌐](https://github.com/quixdb/squash) -- an abstraction library which provides a single API to access many compression libraries, allowing applications a great deal of flexibility when choosing a compression algorithm, or allowing a choice between several of them.~~
 - ~~**xz-utils** [🌐](https://github.com/xz-mirror/xz)~~
 - ~~**zlog** [🌐](https://github.com/HardySimpson/zlog) -- a reliable, high-performance, thread safe, flexible, clear-model, pure C logging library.~~
-- **ceres-solver** [📁](./ceres-solver) [🌐](https://github.com/GerHobbelt/ceres-solver)
-
-- **stateline** [📁](./stateline) [🌐](https://github.com/GerHobbelt/stateline)
-
-- **cppjieba** [📁](./cppjieba) [🌐](https://github.com/GerHobbelt/cppjieba)
-
-- **monolith** [📁](./monolith) [🌐](https://github.com/GerHobbelt/monolith)
-
-- **PGM-index** [📁](./PGM-index) [🌐](https://github.com/GerHobbelt/PGM-index)
-
-- **iresearch** [📁](./iresearch) [🌐](https://github.com/GerHobbelt/iresearch)
-
-- **pHash** [📁](./pHash) [🌐](https://github.com/GerHobbelt/pHash)
-
-- **phash-gpl** [📁](./phash-gpl) [🌐](https://github.com/GerHobbelt/phash-gpl)
-
-- **ssimulacra2** [📁](./ssimulacra2) [🌐](https://github.com/GerHobbelt/ssimulacra2)
-
-- **arangodb** [📁](./arangodb) [🌐](https://github.com/GerHobbelt/arangodb)
-
-- **completesearch** [📁](./completesearch) [🌐](https://github.com/GerHobbelt/completesearch)
-
-- **qlever** [📁](./qlever) [🌐](https://github.com/GerHobbelt/qlever)
-
-- **midas** [📁](./midas) [🌐](https://github.com/GerHobbelt/MIDAS)
-
-- **pytorch_cpp_demo** [📁](./pytorch_cpp_demo) [🌐](https://github.com/GerHobbelt/pytorch_cpp)
-
-- **LightGBM** [📁](./LightGBM) [🌐](https://github.com/GerHobbelt/LightGBM)
-
-- **StarSpace** [📁](./StarSpace) [🌐](https://github.com/GerHobbelt/StarSpace)
-
-- **sqlite_fts_tokenizer_chinese_simple** [📁](./sqlite_fts_tokenizer_chinese_simple) [🌐](https://github.com/GerHobbelt/simple)
-
-- **libcppjieba** [📁](./libcppjieba) [🌐](https://github.com/GerHobbelt/libcppjieba)
-
-- **pinyin** [📁](./pinyin) [🌐](https://github.com/GerHobbelt/pinyin)
-
-- **libpinyin** [📁](./libpinyin) [🌐](https://github.com/GerHobbelt/libpinyin)
-
-- **libcsv2** [📁](./libcsv2) [🌐](https://github.com/GerHobbelt/csv2)
-
-- **csv-parser** [📁](./csv-parser) [🌐](https://github.com/GerHobbelt/csv-parser)
-
-- **mammut** [📁](./mammut) [🌐](https://github.com/GerHobbelt/mammut)
-
-- **Cysboard** [📁](./Cysboard) [🌐](https://github.com/GerHobbelt/Cysboard)
-
-- **diffutils** [📁](./diffutils) [🌐](https://github.com/GerHobbelt/diffutils)
-
-- **gtn** [📁](./gtn) [🌐](https://github.com/GerHobbelt/gtn)
-
-- **OpenFST-utils** [📁](./OpenFST-utils) [🌐](https://github.com/GerHobbelt/openfst-utils)
-
-- **sqlite3-compression-encryption-vfs** [📁](./sqlite3-compression-encryption-vfs) [🌐](https://github.com/GerHobbelt/sqlite3-compression-encryption-vfs)
-
-- **nativefiledialog-extended** [📁](./nativefiledialog-extended) [🌐](https://github.com/GerHobbelt/nativefiledialog-extended)
-
-- **jsoncons** [📁](./jsoncons) [🌐](https://github.com/GerHobbelt/jsoncons)
-
-- **rclone** [📁](./rclone) [🌐](https://github.com/GerHobbelt/rclone)
-
-- **mysql-connector-cpp** [📁](./mysql-connector-cpp) [🌐](https://github.com/GerHobbelt/mysql-connector-cpp)
-
-- **exiv2** [📁](./exiv2) [🌐](https://github.com/GerHobbelt/exiv2)
-
-- **openpbs** [📁](./openpbs) [🌐](https://github.com/GerHobbelt/openpbs)
-
-- **arangodb** [📁](./arangodb) [🌐](https://github.com/GerHobbelt/arangodb)
-
-- **completesearch** [📁](./completesearch) [🌐](https://github.com/GerHobbelt/completesearch)
-
-- **qlever** [📁](./qlever) [🌐](https://github.com/GerHobbelt/qlever)
-
-- **midas** [📁](./midas) [🌐](https://github.com/GerHobbelt/MIDAS)
-
-- **pytorch_cpp_demo** [📁](./pytorch_cpp_demo) [🌐](https://github.com/GerHobbelt/pytorch_cpp)
-
-- **LightGBM** [📁](./LightGBM) [🌐](https://github.com/GerHobbelt/LightGBM)
-
-- **StarSpace** [📁](./StarSpace) [🌐](https://github.com/GerHobbelt/StarSpace)
-
-- **sqlite_fts_tokenizer_chinese_simple** [📁](./sqlite_fts_tokenizer_chinese_simple) [🌐](https://github.com/GerHobbelt/simple)
-
-- **libcppjieba** [📁](./libcppjieba) [🌐](https://github.com/GerHobbelt/libcppjieba)
-
-- **pinyin** [📁](./pinyin) [🌐](https://github.com/GerHobbelt/pinyin)
-
-- **libpinyin** [📁](./libpinyin) [🌐](https://github.com/GerHobbelt/libpinyin)
-
-- **libcsv2** [📁](./libcsv2) [🌐](https://github.com/GerHobbelt/csv2)
-
-- **csv-parser** [📁](./csv-parser) [🌐](https://github.com/GerHobbelt/csv-parser)
-
-- **mammut** [📁](./mammut) [🌐](https://github.com/GerHobbelt/mammut)
-
-- **Cysboard** [📁](./Cysboard) [🌐](https://github.com/GerHobbelt/Cysboard)
-
-- **diffutils** [📁](./diffutils) [🌐](https://github.com/GerHobbelt/diffutils)
-
-- **gtn** [📁](./gtn) [🌐](https://github.com/GerHobbelt/gtn)
-
-- **OpenFST-utils** [📁](./OpenFST-utils) [🌐](https://github.com/GerHobbelt/openfst-utils)
-
-- **sqlite3-compression-encryption-vfs** [📁](./sqlite3-compression-encryption-vfs) [🌐](https://github.com/GerHobbelt/sqlite3-compression-encryption-vfs)
-
-- **nativefiledialog-extended** [📁](./nativefiledialog-extended) [🌐](https://github.com/GerHobbelt/nativefiledialog-extended)
-
-- **jsoncons** [📁](./jsoncons) [🌐](https://github.com/GerHobbelt/jsoncons)
-
-- **rclone** [📁](./rclone) [🌐](https://github.com/GerHobbelt/rclone)
-
-- **mysql-connector-cpp** [📁](./mysql-connector-cpp) [🌐](https://github.com/GerHobbelt/mysql-connector-cpp)
-
-- **exiv2** [📁](./exiv2) [🌐](https://github.com/GerHobbelt/exiv2)
-
-- **openpbs** [📁](./openpbs) [🌐](https://github.com/GerHobbelt/openpbs)
-
-- **pybind11** [📁](./pybind11) [🌐](https://github.com/GerHobbelt/pybind11)
-
-- **RxCpp** [📁](./RxCpp) [🌐](https://github.com/GerHobbelt/RxCpp)
-
-- **statsite** [📁](./statsite) [🌐](https://github.com/GerHobbelt/statsite)
-
-- **QCBOR** [📁](./QCBOR) [🌐](https://github.com/GerHobbelt/QCBOR)
-
-- **libcbor** [📁](./libcbor) [🌐](https://github.com/GerHobbelt/libcbor)
-
-- **tinycbor** [📁](./tinycbor) [🌐](https://github.com/GerHobbelt/tinycbor)
-
-- **pcm** [📁](./pcm) [🌐](https://github.com/GerHobbelt/pcm)
-
-- **safestringlib** [📁](./safestringlib) [🌐](https://github.com/GerHobbelt/safestringlib)
-
-- **libjxl** [📁](./libjxl) [🌐](https://github.com/GerHobbelt/libjxl)
-
-- **libheif** [📁](./libheif) [🌐](https://github.com/GerHobbelt/heif)
-
-- **libheif-alt** [📁](./libheif-alt) [🌐](https://github.com/GerHobbelt/libheif)
-
-- **libde265** [📁](./libde265) [🌐](https://github.com/GerHobbelt/libde265)
-
-- **libaom** [📁](./libaom) [🌐](https://github.com/GerHobbelt/libaom)
-
-- **variadic_table** [📁](./variadic_table) [🌐](https://github.com/GerHobbelt/variadic_table)
-
-- **libmobi** [📁](./libmobi) [🌐](https://github.com/GerHobbelt/libmobi)
-
-- **stringi** [📁](./stringi) [🌐](https://github.com/GerHobbelt/stringi)
-
-- **tinygettext** [📁](./tinygettext) [🌐](https://github.com/GerHobbelt/tinygettext)
-
-- **gettext** [📁](./gettext) [🌐](https://github.com/GerHobbelt/gettext)
-
-- **libfort** [📁](./libfort) [🌐](https://github.com/GerHobbelt/libfort)
-
-- **libevt** [📁](./libevt) [🌐](https://github.com/GerHobbelt/libevt)
-
-- **date** [📁](./date) [🌐](https://github.com/GerHobbelt/date)
-
-- **datetimepp** [📁](./datetimepp) [🌐](https://github.com/GerHobbelt/datetimepp)
-
-- **dateutils** [📁](./dateutils) [🌐](https://github.com/GerHobbelt/dateutils)
-
-- **cctz** [📁](./cctz) [🌐](https://github.com/GerHobbelt/cctz)
-
-- **ion-c** [📁](./ion-c) [🌐](https://github.com/GerHobbelt/ion-c)
-
-- **libsmile** [📁](./libsmile) [🌐](https://github.com/GerHobbelt/libsmile)
-
-- **eventpp** [📁](./eventpp) [🌐](https://github.com/GerHobbelt/eventpp)
-
-- **universal-numbers** [📁](./universal-numbers) [🌐](https://github.com/GerHobbelt/universal)
-
-- **libsigcplusplus** [📁](./libsigcplusplus) [🌐](https://github.com/GerHobbelt/libsigcplusplus)
-
-- **Signals** [📁](./Signals) [🌐](https://github.com/GerHobbelt/Signals)
-
-- **percona-server** [📁](./percona-server) [🌐](https://github.com/GerHobbelt/percona-server)
-
-- **comdb2-bdb** [📁](./comdb2-bdb) [🌐](https://github.com/GerHobbelt/comdb2)
-
-- **cpython** [📁](./cpython) [🌐](https://github.com/GerHobbelt/cpython)
-
-- **sqleet** [📁](./sqleet) [🌐](https://github.com/GerHobbelt/sqleet)
-
-- **sqlcipher** [📁](./sqlcipher) [🌐](https://github.com/GerHobbelt/sqlcipher)
-
-- **argparse** [📁](./argparse) [🌐](https://github.com/GerHobbelt/argparse)
-
-- **sqlpp11** [📁](./sqlpp11) [🌐](https://github.com/GerHobbelt/sqlpp11)
-
-- **mydumper** [📁](./mydumper) [🌐](https://github.com/GerHobbelt/mydumper)
-
-- **GoldFish-CBOR** [📁](./GoldFish-CBOR) [🌐](https://github.com/GerHobbelt/GoldFish)
-
-- **indicators** [📁](./indicators) [🌐](https://github.com/GerHobbelt/indicators)
-
-- **VQMT** [📁](./VQMT) [🌐](https://github.com/GerHobbelt/VQMT)
-
-- **spdlog** [📁](./spdlog) [🌐](https://github.com/GerHobbelt/spdlog)
-
-- **spdlog_setup** [📁](./spdlog_setup) [🌐](https://github.com/GerHobbelt/spdlog_setup)
-
-- **cpptoml** [📁](./cpptoml) [🌐](https://github.com/GerHobbelt/cpptoml)
-
-- **toml11** [📁](./toml11) [🌐](https://github.com/GerHobbelt/toml11)
-
-- **folly** [📁](./folly) [🌐](https://github.com/GerHobbelt/folly)
-
-- **BoxFort** [📁](./BoxFort) [🌐](https://github.com/GerHobbelt/BoxFort)
-
-- **debugbreak** [📁](./debugbreak) [🌐](https://github.com/GerHobbelt/debugbreak)
-
-- **Criterion** [📁](./Criterion) [🌐](https://github.com/GerHobbelt/Criterion)
-
-- **tabulate** [📁](./tabulate) [🌐](https://github.com/GerHobbelt/tabulate)
-
-- **portable-snippets** [📁](./portable-snippets) [🌐](https://github.com/GerHobbelt/portable-snippets)
-
-- **salieri** [📁](./salieri) [🌐](https://github.com/GerHobbelt/salieri)
-
-- **honggfuzz** [📁](./honggfuzz) [🌐](https://github.com/GerHobbelt/honggfuzz)
-
-- **rsync** [📁](./rsync) [🌐](https://github.com/GerHobbelt/rsync)
-
-- **unpaper** [📁](./unpaper) [🌐](https://github.com/GerHobbelt/unpaper)
-
-- **shadesmar** [📁](./shadesmar) [🌐](https://github.com/GerHobbelt/shadesmar)
-
-- **libuv** [📁](./libuv) [🌐](https://github.com/GerHobbelt/libuv)
-
-- **ucx** [📁](./ucx) [🌐](https://github.com/GerHobbelt/ucx)
-
-- **libffi** [📁](./libffi) [🌐](https://github.com/GerHobbelt/libffi)
-
-- **fatal** [📁](./fatal) [🌐](https://github.com/GerHobbelt/fatal)
-
-- **marian** [📁](./marian) [🌐](https://github.com/GerHobbelt/marian)
-
-- **OpenBLAS** [📁](./OpenBLAS) [🌐](https://github.com/GerHobbelt/OpenBLAS)
-
-- **NiuTrans.NMT** [📁](./NiuTrans.NMT) [🌐](https://github.com/GerHobbelt/NiuTrans.NMT)
-
-- **libeigen** [📁](./libeigen) [🌐](https://github.com/GerHobbelt/eigen-git-mirror)
-
-- **mxnet** [📁](./mxnet) [🌐](https://github.com/GerHobbelt/mxnet)
-
-- **OpenCL-SDK** [📁](./OpenCL-SDK) [🌐](https://github.com/GerHobbelt/OpenCL-SDK)
-
-- **OpenCL-CTS** [📁](./OpenCL-CTS) [🌐](https://github.com/GerHobbelt/OpenCL-CTS)
-
-- **OpenCL-Headers** [📁](./OpenCL-Headers) [🌐](https://github.com/GerHobbelt/OpenCL-Headers)
-
-- **mace** [📁](./mace) [🌐](https://github.com/GerHobbelt/mace)
-
-- **arrayfire** [📁](./arrayfire) [🌐](https://github.com/GerHobbelt/arrayfire)
-
-- **CLBlast** [📁](./CLBlast) [🌐](https://github.com/GerHobbelt/CLBlast)
-
-- **libocca** [📁](./libocca) [🌐](https://github.com/GerHobbelt/occa)
-
-- **pdfgrep** [📁](./pdfgrep) [🌐](https://github.com/GerHobbelt/pdfgrep)
-
-- **Win32_read_directory_changes** [📁](./Win32_read_directory_changes) [🌐](https://github.com/GerHobbelt/readdirectorychanges)
-
-- **pipes** [📁](./pipes) [🌐](https://github.com/GerHobbelt/pipes)
-
-- **Win32_read_directory_changes_IOCP** [📁](./Win32_read_directory_changes_IOCP) [🌐](https://github.com/GerHobbelt/ReadDirectoryChangesIOCP)
-
-- **asyncplusplus** [📁](./asyncplusplus) [🌐](https://github.com/GerHobbelt/asyncplusplus)
-
-- **calibre** [📁](./calibre) [🌐](https://github.com/GerHobbelt/calibre)
-
-- **poppler** [📁](./poppler) [🌐](https://github.com/GerHobbelt/poppler)
-
-- **xpdf** [📁](./xpdf) [🌐](https://github.com/GerHobbelt/xpdf)
-
-- **pdfium** [📁](./pdfium) [🌐](https://github.com/GerHobbelt/pdfium)
-
-- **cef-pdf** [📁](./cef-pdf) [🌐](https://github.com/GerHobbelt/cef-pdf)
-
-- **wxPdfDocument** [📁](./wxPdfDocument) [🌐](https://github.com/GerHobbelt/wxpdfdoc)
-
-- **sumatrapdf** [📁](./sumatrapdf) [🌐](https://github.com/GerHobbelt/sumatrapdf)
-
-- **sioyek** [📁](./sioyek) [🌐](https://github.com/GerHobbelt/sioyek)
-
-- **tcpshm** [📁](./tcpshm) [🌐](https://github.com/GerHobbelt/tcpshm)
-
-- **libshmcache** [📁](./libshmcache) [🌐](https://github.com/GerHobbelt/libshmcache)
-
-- **pyclustering** [📁](./pyclustering) [🌐](https://github.com/GerHobbelt/pyclustering)
-
-- **sharedhashfile** [📁](./sharedhashfile) [🌐](https://github.com/GerHobbelt/sharedhashfile)
-
-- **libdi-dependency-injection** [📁](./libdi-dependency-injection) [🌐](https://github.com/GerHobbelt/di)
-
-- **shmdata** [📁](./shmdata) [🌐](https://github.com/GerHobbelt/shmdata)
-
-- **xlnt** [📁](./xlnt) [🌐](https://github.com/GerHobbelt/xlnt)
-
-- **robin-hood-hashing** [📁](./robin-hood-hashing) [🌐](https://github.com/GerHobbelt/robin-hood-hashing)
-
-- **picoc** [📁](./picoc) [🌐](https://github.com/GerHobbelt/picoc)
-
-- **hikyuu** [📁](./hikyuu) [🌐](https://github.com/GerHobbelt/hikyuu)
-
-- **ApprovalTestsCpp** [📁](./ApprovalTestsCpp) [🌐](https://github.com/GerHobbelt/ApprovalTests.cpp)
-
-- **Verify** [📁](./Verify) [🌐](https://github.com/GerHobbelt/Verify)
-
-- **subprocess-cpp** [📁](./subprocess-cpp) [🌐](https://github.com/GerHobbelt/subprocess-cpp)
-
-- **stan-math** [📁](./stan-math) [🌐](https://github.com/GerHobbelt/stan-math)
-
-- **stan** [📁](./stan) [🌐](https://github.com/GerHobbelt/stan)
-
-- **memory** [📁](./memory) [🌐](https://github.com/GerHobbelt/memory)
-
-- **mesh-allocator** [📁](./mesh-allocator) [🌐](https://github.com/GerHobbelt/Mesh)
-
-- **snap** [📁](./snap) [🌐](https://github.com/GerHobbelt/snap)
-
-- **nanomsg-nng** [📁](./nanomsg-nng) [🌐](https://github.com/GerHobbelt/nng)
-
-- **basez** [📁](./basez) [🌐](https://github.com/GerHobbelt/basez)
-
-- **libmlpp** [📁](./libmlpp) [🌐](https://github.com/GerHobbelt/MLPP)
-
-- **onnxruntime** [📁](./onnxruntime) [🌐](https://github.com/GerHobbelt/onnxruntime)
-
-
-- **wil-Win32-Interface-Library** [📁](./wil-Win32-Interface-Library) [🌐](https://github.com/GerHobbelt/wil)
-
-
-- **PaddlePaddle** [📁](./PaddlePaddle) [🌐](https://github.com/GerHobbelt/Paddle)
-
-
-- **MNN** [📁](./MNN) [🌐](https://github.com/GerHobbelt/MNN)
-
-
-- **tesslinesplit** [📁](./tesslinesplit) [🌐](https://github.com/GerHobbelt/tesslinesplit)
-
-
-- **osquery** [📁](./osquery) [🌐](https://github.com/GerHobbelt/osquery)
-
-
-- **podofo** [📁](./podofo) [🌐](https://github.com/GerHobbelt/podofo)
-
-
-- **cxxtest** [📁](./cxxtest) [🌐](https://github.com/GerHobbelt/cxxtest)
-
 
 
 
@@ -2298,360 +1968,172 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 
 # TBD: Libraries which still need to be moved into the overview / categories above...
 
-
-
-- **ceres-solver** [📁](./ceres-solver) [🌐](https://github.com/GerHobbelt/ceres-solver)
-
-- **stateline** [📁](./stateline) [🌐](https://github.com/GerHobbelt/stateline)
-
-- **cppjieba** [📁](./cppjieba) [🌐](https://github.com/GerHobbelt/cppjieba)
-
-- **monolith** [📁](./monolith) [🌐](https://github.com/GerHobbelt/monolith)
-
-- **PGM-index** [📁](./PGM-index) [🌐](https://github.com/GerHobbelt/PGM-index)
-
-- **iresearch** [📁](./iresearch) [🌐](https://github.com/GerHobbelt/iresearch)
-
-- **pHash** [📁](./pHash) [🌐](https://github.com/GerHobbelt/pHash)
-
-- **phash-gpl** [📁](./phash-gpl) [🌐](https://github.com/GerHobbelt/phash-gpl)
-
-- **ssimulacra2** [📁](./ssimulacra2) [🌐](https://github.com/GerHobbelt/ssimulacra2)
-
-- **arangodb** [📁](./arangodb) [🌐](https://github.com/GerHobbelt/arangodb)
-
-- **completesearch** [📁](./completesearch) [🌐](https://github.com/GerHobbelt/completesearch)
-
-- **qlever** [📁](./qlever) [🌐](https://github.com/GerHobbelt/qlever)
-
-- **midas** [📁](./midas) [🌐](https://github.com/GerHobbelt/MIDAS)
-
-- **pytorch_cpp_demo** [📁](./pytorch_cpp_demo) [🌐](https://github.com/GerHobbelt/pytorch_cpp)
-
-- **LightGBM** [📁](./LightGBM) [🌐](https://github.com/GerHobbelt/LightGBM)
-
-- **StarSpace** [📁](./StarSpace) [🌐](https://github.com/GerHobbelt/StarSpace)
-
-- **sqlite_fts_tokenizer_chinese_simple** [📁](./sqlite_fts_tokenizer_chinese_simple) [🌐](https://github.com/GerHobbelt/simple)
-
-- **libcppjieba** [📁](./libcppjieba) [🌐](https://github.com/GerHobbelt/libcppjieba)
-
-- **pinyin** [📁](./pinyin) [🌐](https://github.com/GerHobbelt/pinyin)
-
-- **libpinyin** [📁](./libpinyin) [🌐](https://github.com/GerHobbelt/libpinyin)
-
-- **libcsv2** [📁](./libcsv2) [🌐](https://github.com/GerHobbelt/csv2)
-
-- **csv-parser** [📁](./csv-parser) [🌐](https://github.com/GerHobbelt/csv-parser)
-
-- **mammut** [📁](./mammut) [🌐](https://github.com/GerHobbelt/mammut)
-
-- **Cysboard** [📁](./Cysboard) [🌐](https://github.com/GerHobbelt/Cysboard)
-
-- **diffutils** [📁](./diffutils) [🌐](https://github.com/GerHobbelt/diffutils)
-
-- **gtn** [📁](./gtn) [🌐](https://github.com/GerHobbelt/gtn)
-
-- **OpenFST-utils** [📁](./OpenFST-utils) [🌐](https://github.com/GerHobbelt/openfst-utils)
-
-- **sqlite3-compression-encryption-vfs** [📁](./sqlite3-compression-encryption-vfs) [🌐](https://github.com/GerHobbelt/sqlite3-compression-encryption-vfs)
-
-- **nativefiledialog-extended** [📁](./nativefiledialog-extended) [🌐](https://github.com/GerHobbelt/nativefiledialog-extended)
-
-- **jsoncons** [📁](./jsoncons) [🌐](https://github.com/GerHobbelt/jsoncons)
-
-- **rclone** [📁](./rclone) [🌐](https://github.com/GerHobbelt/rclone)
-
-- **mysql-connector-cpp** [📁](./mysql-connector-cpp) [🌐](https://github.com/GerHobbelt/mysql-connector-cpp)
-
-- **exiv2** [📁](./exiv2) [🌐](https://github.com/GerHobbelt/exiv2)
-
-- **openpbs** [📁](./openpbs) [🌐](https://github.com/GerHobbelt/openpbs)
-
-- **arangodb** [📁](./arangodb) [🌐](https://github.com/GerHobbelt/arangodb)
-
-- **completesearch** [📁](./completesearch) [🌐](https://github.com/GerHobbelt/completesearch)
-
-- **qlever** [📁](./qlever) [🌐](https://github.com/GerHobbelt/qlever)
-
-- **midas** [📁](./midas) [🌐](https://github.com/GerHobbelt/MIDAS)
-
-- **pytorch_cpp_demo** [📁](./pytorch_cpp_demo) [🌐](https://github.com/GerHobbelt/pytorch_cpp)
-
-- **LightGBM** [📁](./LightGBM) [🌐](https://github.com/GerHobbelt/LightGBM)
-
-- **StarSpace** [📁](./StarSpace) [🌐](https://github.com/GerHobbelt/StarSpace)
-
-- **sqlite_fts_tokenizer_chinese_simple** [📁](./sqlite_fts_tokenizer_chinese_simple) [🌐](https://github.com/GerHobbelt/simple)
-
-- **libcppjieba** [📁](./libcppjieba) [🌐](https://github.com/GerHobbelt/libcppjieba)
-
-- **pinyin** [📁](./pinyin) [🌐](https://github.com/GerHobbelt/pinyin)
-
-- **libpinyin** [📁](./libpinyin) [🌐](https://github.com/GerHobbelt/libpinyin)
-
-- **libcsv2** [📁](./libcsv2) [🌐](https://github.com/GerHobbelt/csv2)
-
-- **csv-parser** [📁](./csv-parser) [🌐](https://github.com/GerHobbelt/csv-parser)
-
-- **mammut** [📁](./mammut) [🌐](https://github.com/GerHobbelt/mammut)
-
-- **Cysboard** [📁](./Cysboard) [🌐](https://github.com/GerHobbelt/Cysboard)
-
-- **diffutils** [📁](./diffutils) [🌐](https://github.com/GerHobbelt/diffutils)
-
-- **gtn** [📁](./gtn) [🌐](https://github.com/GerHobbelt/gtn)
-
-- **OpenFST-utils** [📁](./OpenFST-utils) [🌐](https://github.com/GerHobbelt/openfst-utils)
-
-- **sqlite3-compression-encryption-vfs** [📁](./sqlite3-compression-encryption-vfs) [🌐](https://github.com/GerHobbelt/sqlite3-compression-encryption-vfs)
-
-- **nativefiledialog-extended** [📁](./nativefiledialog-extended) [🌐](https://github.com/GerHobbelt/nativefiledialog-extended)
-
-- **jsoncons** [📁](./jsoncons) [🌐](https://github.com/GerHobbelt/jsoncons)
-
-- **rclone** [📁](./rclone) [🌐](https://github.com/GerHobbelt/rclone)
-
-- **mysql-connector-cpp** [📁](./mysql-connector-cpp) [🌐](https://github.com/GerHobbelt/mysql-connector-cpp)
-
-- **exiv2** [📁](./exiv2) [🌐](https://github.com/GerHobbelt/exiv2)
-
-- **openpbs** [📁](./openpbs) [🌐](https://github.com/GerHobbelt/openpbs)
-
-- **pybind11** [📁](./pybind11) [🌐](https://github.com/GerHobbelt/pybind11)
-
-- **RxCpp** [📁](./RxCpp) [🌐](https://github.com/GerHobbelt/RxCpp)
-
-- **statsite** [📁](./statsite) [🌐](https://github.com/GerHobbelt/statsite)
-
-- **QCBOR** [📁](./QCBOR) [🌐](https://github.com/GerHobbelt/QCBOR)
-
-- **libcbor** [📁](./libcbor) [🌐](https://github.com/GerHobbelt/libcbor)
-
-- **tinycbor** [📁](./tinycbor) [🌐](https://github.com/GerHobbelt/tinycbor)
-
-- **pcm** [📁](./pcm) [🌐](https://github.com/GerHobbelt/pcm)
-
-- **safestringlib** [📁](./safestringlib) [🌐](https://github.com/GerHobbelt/safestringlib)
-
-- **libjxl** [📁](./libjxl) [🌐](https://github.com/GerHobbelt/libjxl)
-
-- **libheif** [📁](./libheif) [🌐](https://github.com/GerHobbelt/heif)
-
-- **libheif-alt** [📁](./libheif-alt) [🌐](https://github.com/GerHobbelt/libheif)
-
-- **libde265** [📁](./libde265) [🌐](https://github.com/GerHobbelt/libde265)
-
-- **libaom** [📁](./libaom) [🌐](https://github.com/GerHobbelt/libaom)
-
-- **variadic_table** [📁](./variadic_table) [🌐](https://github.com/GerHobbelt/variadic_table)
-
-- **libmobi** [📁](./libmobi) [🌐](https://github.com/GerHobbelt/libmobi)
-
-- **stringi** [📁](./stringi) [🌐](https://github.com/GerHobbelt/stringi)
-
-- **tinygettext** [📁](./tinygettext) [🌐](https://github.com/GerHobbelt/tinygettext)
-
-- **gettext** [📁](./gettext) [🌐](https://github.com/GerHobbelt/gettext)
-
-- **libfort** [📁](./libfort) [🌐](https://github.com/GerHobbelt/libfort)
-
-- **libevt** [📁](./libevt) [🌐](https://github.com/GerHobbelt/libevt)
-
-- **date** [📁](./date) [🌐](https://github.com/GerHobbelt/date)
-
-- **datetimepp** [📁](./datetimepp) [🌐](https://github.com/GerHobbelt/datetimepp)
-
-- **dateutils** [📁](./dateutils) [🌐](https://github.com/GerHobbelt/dateutils)
-
-- **cctz** [📁](./cctz) [🌐](https://github.com/GerHobbelt/cctz)
-
-- **ion-c** [📁](./ion-c) [🌐](https://github.com/GerHobbelt/ion-c)
-
-- **libsmile** [📁](./libsmile) [🌐](https://github.com/GerHobbelt/libsmile)
-
-- **eventpp** [📁](./eventpp) [🌐](https://github.com/GerHobbelt/eventpp)
-
-- **universal-numbers** [📁](./universal-numbers) [🌐](https://github.com/GerHobbelt/universal)
-
-- **libsigcplusplus** [📁](./libsigcplusplus) [🌐](https://github.com/GerHobbelt/libsigcplusplus)
-
-- **Signals** [📁](./Signals) [🌐](https://github.com/GerHobbelt/Signals)
-
-- **percona-server** [📁](./percona-server) [🌐](https://github.com/GerHobbelt/percona-server)
-
-- **comdb2-bdb** [📁](./comdb2-bdb) [🌐](https://github.com/GerHobbelt/comdb2)
-
-- **cpython** [📁](./cpython) [🌐](https://github.com/GerHobbelt/cpython)
-
-- **sqleet** [📁](./sqleet) [🌐](https://github.com/GerHobbelt/sqleet)
-
-- **sqlcipher** [📁](./sqlcipher) [🌐](https://github.com/GerHobbelt/sqlcipher)
-
-- **argparse** [📁](./argparse) [🌐](https://github.com/GerHobbelt/argparse)
-
-- **sqlpp11** [📁](./sqlpp11) [🌐](https://github.com/GerHobbelt/sqlpp11)
-
-- **mydumper** [📁](./mydumper) [🌐](https://github.com/GerHobbelt/mydumper)
-
-- **GoldFish-CBOR** [📁](./GoldFish-CBOR) [🌐](https://github.com/GerHobbelt/GoldFish)
-
-- **indicators** [📁](./indicators) [🌐](https://github.com/GerHobbelt/indicators)
-
-- **VQMT** [📁](./VQMT) [🌐](https://github.com/GerHobbelt/VQMT)
-
-- **spdlog** [📁](./spdlog) [🌐](https://github.com/GerHobbelt/spdlog)
-
-- **spdlog_setup** [📁](./spdlog_setup) [🌐](https://github.com/GerHobbelt/spdlog_setup)
-
-- **cpptoml** [📁](./cpptoml) [🌐](https://github.com/GerHobbelt/cpptoml)
-
-- **toml11** [📁](./toml11) [🌐](https://github.com/GerHobbelt/toml11)
-
-- **folly** [📁](./folly) [🌐](https://github.com/GerHobbelt/folly)
-
-- **BoxFort** [📁](./BoxFort) [🌐](https://github.com/GerHobbelt/BoxFort)
-
-- **debugbreak** [📁](./debugbreak) [🌐](https://github.com/GerHobbelt/debugbreak)
-
-- **Criterion** [📁](./Criterion) [🌐](https://github.com/GerHobbelt/Criterion)
-
-- **tabulate** [📁](./tabulate) [🌐](https://github.com/GerHobbelt/tabulate)
-
-- **portable-snippets** [📁](./portable-snippets) [🌐](https://github.com/GerHobbelt/portable-snippets)
-
-- **salieri** [📁](./salieri) [🌐](https://github.com/GerHobbelt/salieri)
-
-- **honggfuzz** [📁](./honggfuzz) [🌐](https://github.com/GerHobbelt/honggfuzz)
-
-- **rsync** [📁](./rsync) [🌐](https://github.com/GerHobbelt/rsync)
-
-- **unpaper** [📁](./unpaper) [🌐](https://github.com/GerHobbelt/unpaper)
-
-- **shadesmar** [📁](./shadesmar) [🌐](https://github.com/GerHobbelt/shadesmar)
-
-- **libuv** [📁](./libuv) [🌐](https://github.com/GerHobbelt/libuv)
-
-- **ucx** [📁](./ucx) [🌐](https://github.com/GerHobbelt/ucx)
-
-- **libffi** [📁](./libffi) [🌐](https://github.com/GerHobbelt/libffi)
-
-- **fatal** [📁](./fatal) [🌐](https://github.com/GerHobbelt/fatal)
-
-- **marian** [📁](./marian) [🌐](https://github.com/GerHobbelt/marian)
-
-- **OpenBLAS** [📁](./OpenBLAS) [🌐](https://github.com/GerHobbelt/OpenBLAS)
-
-- **NiuTrans.NMT** [📁](./NiuTrans.NMT) [🌐](https://github.com/GerHobbelt/NiuTrans.NMT)
-
-- **libeigen** [📁](./libeigen) [🌐](https://github.com/GerHobbelt/eigen-git-mirror)
-
-- **mxnet** [📁](./mxnet) [🌐](https://github.com/GerHobbelt/mxnet)
-
-- **OpenCL-SDK** [📁](./OpenCL-SDK) [🌐](https://github.com/GerHobbelt/OpenCL-SDK)
-
-- **OpenCL-CTS** [📁](./OpenCL-CTS) [🌐](https://github.com/GerHobbelt/OpenCL-CTS)
-
-- **OpenCL-Headers** [📁](./OpenCL-Headers) [🌐](https://github.com/GerHobbelt/OpenCL-Headers)
-
-- **mace** [📁](./mace) [🌐](https://github.com/GerHobbelt/mace)
-
-- **arrayfire** [📁](./arrayfire) [🌐](https://github.com/GerHobbelt/arrayfire)
-
-- **CLBlast** [📁](./CLBlast) [🌐](https://github.com/GerHobbelt/CLBlast)
-
-- **libocca** [📁](./libocca) [🌐](https://github.com/GerHobbelt/occa)
-
-- **pdfgrep** [📁](./pdfgrep) [🌐](https://github.com/GerHobbelt/pdfgrep)
-
-- **Win32_read_directory_changes** [📁](./Win32_read_directory_changes) [🌐](https://github.com/GerHobbelt/readdirectorychanges)
-
-- **pipes** [📁](./pipes) [🌐](https://github.com/GerHobbelt/pipes)
-
-- **Win32_read_directory_changes_IOCP** [📁](./Win32_read_directory_changes_IOCP) [🌐](https://github.com/GerHobbelt/ReadDirectoryChangesIOCP)
-
-- **asyncplusplus** [📁](./asyncplusplus) [🌐](https://github.com/GerHobbelt/asyncplusplus)
-
-- **calibre** [📁](./calibre) [🌐](https://github.com/GerHobbelt/calibre)
-
-- **poppler** [📁](./poppler) [🌐](https://github.com/GerHobbelt/poppler)
-
-- **xpdf** [📁](./xpdf) [🌐](https://github.com/GerHobbelt/xpdf)
-
-- **pdfium** [📁](./pdfium) [🌐](https://github.com/GerHobbelt/pdfium)
-
-- **cef-pdf** [📁](./cef-pdf) [🌐](https://github.com/GerHobbelt/cef-pdf)
-
-- **wxPdfDocument** [📁](./wxPdfDocument) [🌐](https://github.com/GerHobbelt/wxpdfdoc)
-
-- **sumatrapdf** [📁](./sumatrapdf) [🌐](https://github.com/GerHobbelt/sumatrapdf)
-
-- **sioyek** [📁](./sioyek) [🌐](https://github.com/GerHobbelt/sioyek)
-
-- **tcpshm** [📁](./tcpshm) [🌐](https://github.com/GerHobbelt/tcpshm)
-
-- **libshmcache** [📁](./libshmcache) [🌐](https://github.com/GerHobbelt/libshmcache)
-
-- **pyclustering** [📁](./pyclustering) [🌐](https://github.com/GerHobbelt/pyclustering)
-
-- **sharedhashfile** [📁](./sharedhashfile) [🌐](https://github.com/GerHobbelt/sharedhashfile)
-
-- **libdi-dependency-injection** [📁](./libdi-dependency-injection) [🌐](https://github.com/GerHobbelt/di)
-
-- **shmdata** [📁](./shmdata) [🌐](https://github.com/GerHobbelt/shmdata)
-
-- **xlnt** [📁](./xlnt) [🌐](https://github.com/GerHobbelt/xlnt)
-
-- **robin-hood-hashing** [📁](./robin-hood-hashing) [🌐](https://github.com/GerHobbelt/robin-hood-hashing)
-
-- **picoc** [📁](./picoc) [🌐](https://github.com/GerHobbelt/picoc)
-
-- **hikyuu** [📁](./hikyuu) [🌐](https://github.com/GerHobbelt/hikyuu)
-
 - **ApprovalTestsCpp** [📁](./ApprovalTestsCpp) [🌐](https://github.com/GerHobbelt/ApprovalTests.cpp)
-
-- **Verify** [📁](./Verify) [🌐](https://github.com/GerHobbelt/Verify)
-
-- **subprocess-cpp** [📁](./subprocess-cpp) [🌐](https://github.com/GerHobbelt/subprocess-cpp)
-
-- **stan-math** [📁](./stan-math) [🌐](https://github.com/GerHobbelt/stan-math)
-
-- **stan** [📁](./stan) [🌐](https://github.com/GerHobbelt/stan)
-
-- **memory** [📁](./memory) [🌐](https://github.com/GerHobbelt/memory)
-
-- **mesh-allocator** [📁](./mesh-allocator) [🌐](https://github.com/GerHobbelt/Mesh)
-
-- **snap** [📁](./snap) [🌐](https://github.com/GerHobbelt/snap)
-
-- **nanomsg-nng** [📁](./nanomsg-nng) [🌐](https://github.com/GerHobbelt/nng)
-
-- **basez** [📁](./basez) [🌐](https://github.com/GerHobbelt/basez)
-
-- **libmlpp** [📁](./libmlpp) [🌐](https://github.com/GerHobbelt/MLPP)
-
-- **onnxruntime** [📁](./onnxruntime) [🌐](https://github.com/GerHobbelt/onnxruntime)
-
-
-- **wil-Win32-Interface-Library** [📁](./wil-Win32-Interface-Library) [🌐](https://github.com/GerHobbelt/wil)
-
-
-- **PaddlePaddle** [📁](./PaddlePaddle) [🌐](https://github.com/GerHobbelt/Paddle)
-
-
+- **BoxFort** [📁](./BoxFort) [🌐](https://github.com/GerHobbelt/BoxFort)
+- **CLBlast** [📁](./CLBlast) [🌐](https://github.com/GerHobbelt/CLBlast)
+- **CRFpp** [📁](./CRFpp) [🌐](https://github.com/GerHobbelt/crfpp)
+- **CRFsuite-extended** [📁](./CRFsuite-extended) [🌐](https://github.com/GerHobbelt/CRFSuiteEx)
+- **Criterion** [📁](./Criterion) [🌐](https://github.com/GerHobbelt/Criterion)
+- **Cysboard** [📁](./Cysboard) [🌐](https://github.com/GerHobbelt/Cysboard)
+- **DGM-CRF** [📁](./DGM-CRF) [🌐](https://github.com/GerHobbelt/DGM)
+- **GoldFish-CBOR** [📁](./GoldFish-CBOR) [🌐](https://github.com/GerHobbelt/GoldFish)
+- **JamSpell** [📁](./JamSpell) [🌐](https://github.com/GerHobbelt/JamSpell)
+- **LightGBM** [📁](./LightGBM) [🌐](https://github.com/GerHobbelt/LightGBM)
 - **MNN** [📁](./MNN) [🌐](https://github.com/GerHobbelt/MNN)
-
-
-- **tesslinesplit** [📁](./tesslinesplit) [🌐](https://github.com/GerHobbelt/tesslinesplit)
-
-
-- **osquery** [📁](./osquery) [🌐](https://github.com/GerHobbelt/osquery)
-
-
-- **podofo** [📁](./podofo) [🌐](https://github.com/GerHobbelt/podofo)
-
-
+- **NiuTrans.NMT** [📁](./NiuTrans.NMT) [🌐](https://github.com/GerHobbelt/NiuTrans.NMT)
+- **OpenBLAS** [📁](./OpenBLAS) [🌐](https://github.com/GerHobbelt/OpenBLAS)
+- **OpenCL-CTS** [📁](./OpenCL-CTS) [🌐](https://github.com/GerHobbelt/OpenCL-CTS)
+- **OpenCL-Headers** [📁](./OpenCL-Headers) [🌐](https://github.com/GerHobbelt/OpenCL-Headers)
+- **OpenCL-SDK** [📁](./OpenCL-SDK) [🌐](https://github.com/GerHobbelt/OpenCL-SDK)
+- **OpenFST-utils** [📁](./OpenFST-utils) [🌐](https://github.com/GerHobbelt/openfst-utils)
+- **PGM-index** [📁](./PGM-index) [🌐](https://github.com/GerHobbelt/PGM-index)
+- **PaddlePaddle** [📁](./PaddlePaddle) [🌐](https://github.com/GerHobbelt/Paddle)
+- **QCBOR** [📁](./QCBOR) [🌐](https://github.com/GerHobbelt/QCBOR)
+- **RxCpp** [📁](./RxCpp) [🌐](https://github.com/GerHobbelt/RxCpp)
+- **Signals** [📁](./Signals) [🌐](https://github.com/GerHobbelt/Signals)
+- **StarSpace** [📁](./StarSpace) [🌐](https://github.com/GerHobbelt/StarSpace)
+- **VQMT** [📁](./VQMT) [🌐](https://github.com/GerHobbelt/VQMT)
+- **Verify** [📁](./Verify) [🌐](https://github.com/GerHobbelt/Verify)
+- **Win32_read_directory_changes** [📁](./Win32_read_directory_changes) [🌐](https://github.com/GerHobbelt/readdirectorychanges)
+- **Win32_read_directory_changes_IOCP** [📁](./Win32_read_directory_changes_IOCP) [🌐](https://github.com/GerHobbelt/ReadDirectoryChangesIOCP)
+- **arangodb** [📁](./arangodb) [🌐](https://github.com/GerHobbelt/arangodb)
+- **argparse** [📁](./argparse) [🌐](https://github.com/GerHobbelt/argparse)
+- **arrayfire** [📁](./arrayfire) [🌐](https://github.com/GerHobbelt/arrayfire)
+- **asyncplusplus** [📁](./asyncplusplus) [🌐](https://github.com/GerHobbelt/asyncplusplus)
+- **basez** [📁](./basez) [🌐](https://github.com/GerHobbelt/basez)
+- **calibre** [📁](./calibre) [🌐](https://github.com/GerHobbelt/calibre)
+- **cctz** [📁](./cctz) [🌐](https://github.com/GerHobbelt/cctz)
+- **cef-pdf** [📁](./cef-pdf) [🌐](https://github.com/GerHobbelt/cef-pdf)
+- **ceres-solver** [📁](./ceres-solver) [🌐](https://github.com/GerHobbelt/ceres-solver)
+- **comdb2-bdb** [📁](./comdb2-bdb) [🌐](https://github.com/GerHobbelt/comdb2)
+- **completesearch** [📁](./completesearch) [🌐](https://github.com/GerHobbelt/completesearch)
+- **cppjieba** [📁](./cppjieba) [🌐](https://github.com/GerHobbelt/cppjieba)
+- **cpptoml** [📁](./cpptoml) [🌐](https://github.com/GerHobbelt/cpptoml)
+- **cpython** [📁](./cpython) [🌐](https://github.com/GerHobbelt/cpython)
+- **crfsuite** [📁](./crfsuite) [🌐](https://github.com/GerHobbelt/crfsuite)
+- **csv-parser** [📁](./csv-parser) [🌐](https://github.com/GerHobbelt/csv-parser)
 - **cxxtest** [📁](./cxxtest) [🌐](https://github.com/GerHobbelt/cxxtest)
+- **date** [📁](./date) [🌐](https://github.com/GerHobbelt/date)
+- **datetimepp** [📁](./datetimepp) [🌐](https://github.com/GerHobbelt/datetimepp)
+- **dateutils** [📁](./dateutils) [🌐](https://github.com/GerHobbelt/dateutils)
+- **debugbreak** [📁](./debugbreak) [🌐](https://github.com/GerHobbelt/debugbreak)
+- **diffutils** [📁](./diffutils) [🌐](https://github.com/GerHobbelt/diffutils)
+- **eventpp** [📁](./eventpp) [🌐](https://github.com/GerHobbelt/eventpp)
+- **exiv2** [📁](./exiv2) [🌐](https://github.com/GerHobbelt/exiv2)
+- **fatal** [📁](./fatal) [🌐](https://github.com/GerHobbelt/fatal)
+- **folly** [📁](./folly) [🌐](https://github.com/GerHobbelt/folly)
+- **gettext** [📁](./gettext) [🌐](https://github.com/GerHobbelt/gettext)
+- **gtn** [📁](./gtn) [🌐](https://github.com/GerHobbelt/gtn)
+- **hikyuu** [📁](./hikyuu) [🌐](https://github.com/GerHobbelt/hikyuu)
+- **honggfuzz** [📁](./honggfuzz) [🌐](https://github.com/GerHobbelt/honggfuzz)
+- **hunspell-dictionarries** [📁](./hunspell-dictionarries) [🌐](https://github.com/GerHobbelt/dictionaries)
+- **indicators** [📁](./indicators) [🌐](https://github.com/GerHobbelt/indicators)
+- **ion-c** [📁](./ion-c) [🌐](https://github.com/GerHobbelt/ion-c)
+- **ipa-dict** [📁](./ipa-dict) [🌐](https://github.com/GerHobbelt/ipa-dict)
+- **iresearch** [📁](./iresearch) [🌐](https://github.com/GerHobbelt/iresearch)
+- **jsoncons** [📁](./jsoncons) [🌐](https://github.com/GerHobbelt/jsoncons)
+- **jsoncons** [📁](./jsoncons) [🌐](https://github.com/GerHobbelt/jsoncons)
+- **libaom** [📁](./libaom) [🌐](https://github.com/GerHobbelt/libaom)
+- **libcbor** [📁](./libcbor) [🌐](https://github.com/GerHobbelt/libcbor)
+- **libcppjieba** [📁](./libcppjieba) [🌐](https://github.com/GerHobbelt/libcppjieba)
+- **libcsv2** [📁](./libcsv2) [🌐](https://github.com/GerHobbelt/csv2)
+- **libde265** [📁](./libde265) [🌐](https://github.com/GerHobbelt/libde265)
+- **libdi-dependency-injection** [📁](./libdi-dependency-injection) [🌐](https://github.com/GerHobbelt/di)
+- **libeigen** [📁](./libeigen) [🌐](https://github.com/GerHobbelt/eigen-git-mirror)
+- **libevt** [📁](./libevt) [🌐](https://github.com/GerHobbelt/libevt)
+- **libffi** [📁](./libffi) [🌐](https://github.com/GerHobbelt/libffi)
+- **libfort** [📁](./libfort) [🌐](https://github.com/GerHobbelt/libfort)
+- **libheif** [📁](./libheif) [🌐](https://github.com/GerHobbelt/heif)
+- **libheif-alt** [📁](./libheif-alt) [🌐](https://github.com/GerHobbelt/libheif)
+- **libjxl** [📁](./libjxl) [🌐](https://github.com/GerHobbelt/libjxl)
+- **libmlpp** [📁](./libmlpp) [🌐](https://github.com/GerHobbelt/MLPP)
+- **libmobi** [📁](./libmobi) [🌐](https://github.com/GerHobbelt/libmobi)
+- **libocca** [📁](./libocca) [🌐](https://github.com/GerHobbelt/occa)
+- **libpinyin** [📁](./libpinyin) [🌐](https://github.com/GerHobbelt/libpinyin)
+- **libpinyin** [📁](./libpinyin) [🌐](https://github.com/GerHobbelt/libpinyin)
+- **libshmcache** [📁](./libshmcache) [🌐](https://github.com/GerHobbelt/libshmcache)
+- **libsigcplusplus** [📁](./libsigcplusplus) [🌐](https://github.com/GerHobbelt/libsigcplusplus)
+- **libsmile** [📁](./libsmile) [🌐](https://github.com/GerHobbelt/libsmile)
+- **libuv** [📁](./libuv) [🌐](https://github.com/GerHobbelt/libuv)
+- **mace** [📁](./mace) [🌐](https://github.com/GerHobbelt/mace)
+- **mammut** [📁](./mammut) [🌐](https://github.com/GerHobbelt/mammut)
+- **marian** [📁](./marian) [🌐](https://github.com/GerHobbelt/marian)
+- **memory** [📁](./memory) [🌐](https://github.com/GerHobbelt/memory)
+- **mesh-allocator** [📁](./mesh-allocator) [🌐](https://github.com/GerHobbelt/Mesh)
+- **midas** [📁](./midas) [🌐](https://github.com/GerHobbelt/MIDAS)
+- **monolith** [📁](./monolith) [🌐](https://github.com/GerHobbelt/monolith)
+- **mxnet** [📁](./mxnet) [🌐](https://github.com/GerHobbelt/mxnet)
+- **mydumper** [📁](./mydumper) [🌐](https://github.com/GerHobbelt/mydumper)
+- **mysql-connector-cpp** [📁](./mysql-connector-cpp) [🌐](https://github.com/GerHobbelt/mysql-connector-cpp)
+- **nanomsg-nng** [📁](./nanomsg-nng) [🌐](https://github.com/GerHobbelt/nng)
+- **nativefiledialog-extended** [📁](./nativefiledialog-extended) [🌐](https://github.com/GerHobbelt/nativefiledialog-extended)
+- **nuspell** [📁](./nuspell) [🌐](https://github.com/GerHobbelt/nuspell)
+- **onnxruntime** [📁](./onnxruntime) [🌐](https://github.com/GerHobbelt/onnxruntime)
+- **openpbs** [📁](./openpbs) [🌐](https://github.com/GerHobbelt/openpbs)
+- **osquery** [📁](./osquery) [🌐](https://github.com/GerHobbelt/osquery)
+- **pHash** [📁](./pHash) [🌐](https://github.com/GerHobbelt/pHash)
+- **pcm** [📁](./pcm) [🌐](https://github.com/GerHobbelt/pcm)
+- **pdfgrep** [📁](./pdfgrep) [🌐](https://github.com/GerHobbelt/pdfgrep)
+- **pdfium** [📁](./pdfium) [🌐](https://github.com/GerHobbelt/pdfium)
+- **percona-server** [📁](./percona-server) [🌐](https://github.com/GerHobbelt/percona-server)
+- **phash-gpl** [📁](./phash-gpl) [🌐](https://github.com/GerHobbelt/phash-gpl)
+- **picoc** [📁](./picoc) [🌐](https://github.com/GerHobbelt/picoc)
+- **pinyin** [📁](./pinyin) [🌐](https://github.com/GerHobbelt/pinyin)
+- **pipes** [📁](./pipes) [🌐](https://github.com/GerHobbelt/pipes)
+- **podofo** [📁](./podofo) [🌐](https://github.com/GerHobbelt/podofo)
+- **poppler** [📁](./poppler) [🌐](https://github.com/GerHobbelt/poppler)
+- **portable-snippets** [📁](./portable-snippets) [🌐](https://github.com/GerHobbelt/portable-snippets)
+- **pybind11** [📁](./pybind11) [🌐](https://github.com/GerHobbelt/pybind11)
+- **pyclustering** [📁](./pyclustering) [🌐](https://github.com/GerHobbelt/pyclustering)
+- **pytorch_cpp_demo** [📁](./pytorch_cpp_demo) [🌐](https://github.com/GerHobbelt/pytorch_cpp)
+- **qlever** [📁](./qlever) [🌐](https://github.com/GerHobbelt/qlever)
+- **rclone** [📁](./rclone) [🌐](https://github.com/GerHobbelt/rclone)
+- **robin-hood-hashing** [📁](./robin-hood-hashing) [🌐](https://github.com/GerHobbelt/robin-hood-hashing)
+- **rsync** [📁](./rsync) [🌐](https://github.com/GerHobbelt/rsync)
+- **safestringlib** [📁](./safestringlib) [🌐](https://github.com/GerHobbelt/safestringlib)
+- **salieri** [📁](./salieri) [🌐](https://github.com/GerHobbelt/salieri)
+- **shadesmar** [📁](./shadesmar) [🌐](https://github.com/GerHobbelt/shadesmar)
+- **sharedhashfile** [📁](./sharedhashfile) [🌐](https://github.com/GerHobbelt/sharedhashfile)
+- **shmdata** [📁](./shmdata) [🌐](https://github.com/GerHobbelt/shmdata)
+- **sioyek** [📁](./sioyek) [🌐](https://github.com/GerHobbelt/sioyek)
+- **snap** [📁](./snap) [🌐](https://github.com/GerHobbelt/snap)
+- **spdlog** [📁](./spdlog) [🌐](https://github.com/GerHobbelt/spdlog)
+- **spdlog_setup** [📁](./spdlog_setup) [🌐](https://github.com/GerHobbelt/spdlog_setup)
+- **sqlcipher** [📁](./sqlcipher) [🌐](https://github.com/GerHobbelt/sqlcipher)
+- **sqleet** [📁](./sqleet) [🌐](https://github.com/GerHobbelt/sqleet)
+- **sqlite3-compression-encryption-vfs** [📁](./sqlite3-compression-encryption-vfs) [🌐](https://github.com/GerHobbelt/sqlite3-compression-encryption-vfs)
+- **sqlite_fts_tokenizer_chinese_simple** [📁](./sqlite_fts_tokenizer_chinese_simple) [🌐](https://github.com/GerHobbelt/simple)
+- **sqlpp11** [📁](./sqlpp11) [🌐](https://github.com/GerHobbelt/sqlpp11)
+- **ssimulacra2** [📁](./ssimulacra2) [🌐](https://github.com/GerHobbelt/ssimulacra2)
+- **stan** [📁](./stan) [🌐](https://github.com/GerHobbelt/stan)
+- **stan-math** [📁](./stan-math) [🌐](https://github.com/GerHobbelt/stan-math)
+- **stateline** [📁](./stateline) [🌐](https://github.com/GerHobbelt/stateline)
+- **statsite** [📁](./statsite) [🌐](https://github.com/GerHobbelt/statsite)
+- **stringi** [📁](./stringi) [🌐](https://github.com/GerHobbelt/stringi)
+- **subprocess-cpp** [📁](./subprocess-cpp) [🌐](https://github.com/GerHobbelt/subprocess-cpp)
+- **sumatrapdf** [📁](./sumatrapdf) [🌐](https://github.com/GerHobbelt/sumatrapdf)
+- **tabulate** [📁](./tabulate) [🌐](https://github.com/GerHobbelt/tabulate)
+- **tcpshm** [📁](./tcpshm) [🌐](https://github.com/GerHobbelt/tcpshm)
+- **tensorflow-docs** [📁](./tensorflow-docs) [🌐](https://github.com/GerHobbelt/tensorflow-docs)
+- **tensorflow-io** [📁](./tensorflow-io) [🌐](https://github.com/GerHobbelt/tensorflow-io)
+- **tensorflow-text** [📁](./tensorflow-text) [🌐](https://github.com/GerHobbelt/tensorflow-text)
+- **tesslinesplit** [📁](./tesslinesplit) [🌐](https://github.com/GerHobbelt/tesslinesplit)
+- **textflowcpp** [📁](./textflowcpp) [🌐](https://github.com/GerHobbelt/textflowcpp)
+- **tinycbor** [📁](./tinycbor) [🌐](https://github.com/GerHobbelt/tinycbor)
+- **tinygettext** [📁](./tinygettext) [🌐](https://github.com/GerHobbelt/tinygettext)
+- **toml11** [📁](./toml11) [🌐](https://github.com/GerHobbelt/toml11)
+- **transwarp** [📁](./transwarp) [🌐](https://github.com/GerHobbelt/transwarp)
+- **ucx** [📁](./ucx) [🌐](https://github.com/GerHobbelt/ucx)
+- **universal-numbers** [📁](./universal-numbers) [🌐](https://github.com/GerHobbelt/universal)
+- **unpaper** [📁](./unpaper) [🌐](https://github.com/GerHobbelt/unpaper)
+- **variadic_table** [📁](./variadic_table) [🌐](https://github.com/GerHobbelt/variadic_table)
+- **wil-Win32-Interface-Library** [📁](./wil-Win32-Interface-Library) [🌐](https://github.com/GerHobbelt/wil)
+- **word2vec** [📁](./word2vec) [🌐](https://github.com/GerHobbelt/word2vec)
+- **wxPdfDocument** [📁](./wxPdfDocument) [🌐](https://github.com/GerHobbelt/wxpdfdoc)
+- **xlnt** [📁](./xlnt) [🌐](https://github.com/GerHobbelt/xlnt)
+- **xpdf** [📁](./xpdf) [🌐](https://github.com/GerHobbelt/xpdf)
+- **word2vec-GloVe** [📁](./word2vec-GloVe) [🌐](https://github.com/GerHobbelt/GloVe)
+
 
 
 

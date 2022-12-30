@@ -493,7 +493,7 @@
 [submodule "bibtex-robust-decoder"]
 	path = bibtex-robust-decoder
 	url = https://github.com/GerHobbelt/bibtex-robust-decoder.git
-	
+	ignore = dirty
 [submodule "efsw"]
 	path = efsw
 	url = https://github.com/GerHobbelt/efsw.git
@@ -857,7 +857,7 @@
 [submodule "CacheLib"]
 	path = CacheLib
 	url = https://github.com/GerHobbelt/CacheLib.git
-	
+	ignore = dirty
 [submodule "WinHttpPAL"]
 	path = WinHttpPAL
 	url = https://github.com/GerHobbelt/WinHttpPAL.git
@@ -2397,45 +2397,60 @@
 [submodule "textflowcpp"]
 	path = textflowcpp
 	url = git@github.com:GerHobbelt/textflowcpp.git
+
 [submodule "transwarp"]
 	path = transwarp
 	url = git@github.com:GerHobbelt/transwarp.git
+
 [submodule "JamSpell"]
 	path = JamSpell
 	url = git@github.com:GerHobbelt/JamSpell.git
+
 [submodule "hunspell-dictionarries"]
 	path = hunspell-dictionarries
 	url = git@github.com:GerHobbelt/dictionaries.git
+
 [submodule "ipa-dict"]
 	path = ipa-dict
 	url = git@github.com:GerHobbelt/ipa-dict.git
+
 [submodule "nuspell"]
 	path = nuspell
 	url = git@github.com:GerHobbelt/nuspell.git
+
 [submodule "CRFpp"]
 	path = CRFpp
 	url = git@github.com:GerHobbelt/crfpp.git
+
 [submodule "crfsuite"]
 	path = crfsuite
 	url = git@github.com:GerHobbelt/crfsuite.git
+
 [submodule "DGM-CRF"]
 	path = DGM-CRF
 	url = git@github.com:GerHobbelt/DGM.git
+
 [submodule "CRFsuite-extended"]
 	path = CRFsuite-extended
 	url = git@github.com:GerHobbelt/CRFSuiteEx.git
+
 [submodule "word2vec"]
 	path = word2vec
 	url = git@github.com:GerHobbelt/word2vec.git
+
 [submodule "tensorflow-text"]
 	path = tensorflow-text
 	url = git@github.com:GerHobbelt/tensorflow-text.git
+
 [submodule "tensorflow-docs"]
 	path = tensorflow-docs
 	url = git@github.com:GerHobbelt/tensorflow-docs.git
+
 [submodule "tensorflow-io"]
 	path = tensorflow-io
 	url = git@github.com:GerHobbelt/tensorflow-io.git
+
 [submodule "word2vec-GloVe"]
 	path = word2vec-GloVe
 	url = git@github.com:GerHobbelt/GloVe.git
+
