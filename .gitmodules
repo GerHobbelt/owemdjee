@@ -349,7 +349,7 @@
 [submodule "openssl"]
 	path = openssl
 	url = https://github.com/GerHobbelt/openssl.git
-
+	ignore = dirty
 [submodule "oneTBB"]
 	path = oneTBB
 	url = https://github.com/GerHobbelt/oneTBB.git
