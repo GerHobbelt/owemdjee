@@ -2454,3 +2454,12 @@
 	path = word2vec-GloVe
 	url = git@github.com:GerHobbelt/GloVe.git
 
+[submodule "sdhash"]
+	path = sdhash
+	url = git@github.com:GerHobbelt/sdhash.git
+[submodule "probminhash"]
+	path = probminhash
+	url = git@github.com:GerHobbelt/probminhash.git
+[submodule "A-MNS_TemplateMatching"]
+	path = A-MNS_TemplateMatching
+	url = git@github.com:GerHobbelt/A-MNS_TemplateMatching.git
