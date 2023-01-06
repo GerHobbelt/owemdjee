@@ -2463,3 +2463,6 @@
 [submodule "A-MNS_TemplateMatching"]
 	path = A-MNS_TemplateMatching
 	url = git@github.com:GerHobbelt/A-MNS_TemplateMatching.git
+[submodule "ssdeep"]
+	path = ssdeep
+	url = git@github.com:GerHobbelt/ssdeep.git
