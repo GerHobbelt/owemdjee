@@ -23,15 +23,15 @@ while (m) {
 	// https://github.com/GerHobbelt/zlib-ng
 	//console.log({m})
 	let repo = m[3];
-	let url = repo.replace(/git@github.com:GerHobbelt/, `https://github.com/GerHobbelt/`).replace(/\.git$/, '');
+	let url = repo.replace(/git@github.com:GerHobbelt/, `https://github.com/GerHobbelt`).replace(/\.git$/, '');
 	let id = m[1];
 	let localdir = `./${ m[2] }`
 	let key2 = localdir.replace(/[\\\/._-]+/g, '');
 	//console.log({id, key2, localdir, repo, url })
-	
+
 	dict[id.toLowerCase()] = { id, key2, localdir, repo, url };
 	dict[key2.toLowerCase()] = { id, key2, localdir, repo, url };
-	
+
 	m = mod_re.exec(module_spec);
 }
 
@@ -47,10 +47,10 @@ while (m) {
 	let localdir = `../../${ m[2] }`;
 	let key2 = localdir.replace('thirdparty/', '').replace(/[\\\/._-]+/g, '');
 	//console.log({id, key2, localdir, repo, url })
-	
+
 	dict[id.toLowerCase()] = { id, key2, localdir, repo, url };
 	dict[key2.toLowerCase()] = { id, key2, localdir, repo, url };
-	
+
 	m = mod_re.exec(module_spec2);
 }
 
@@ -66,7 +66,7 @@ while (m) {
 	let localdir = m[2];
 	let key2 = localdir.replace('thirdparty/', '').replace(/[\\\/._-]+/g, '');
 	//console.log({id, key2, localdir, repo, url })
-	
+
 	if (dict[id.toLowerCase()] == undefined) {
 		dict[id.toLowerCase()] = { id, key2, localdir, repo, url };
 		//console.log({id, key2, localdir, repo, url })
@@ -75,7 +75,7 @@ while (m) {
 		dict[key2.toLowerCase()] = { id, key2, localdir, repo, url };
 		//console.log({id, key2, localdir, repo, url })
 	}
-	
+
 	m = mod_re.exec(txt);
 }
 
@@ -91,7 +91,7 @@ while (m) {
 	let localdir = null;
 	let key2 = id.replace(/[\\\/._-]+/g, '');
 	//console.log({id, key2, localdir, repo, url })
-	
+
 	if (dict[id.toLowerCase()] == undefined) {
 		dict[id.toLowerCase()] = { id, key2, localdir, repo, url };
 		//console.log({id, key2, localdir, repo, url })
@@ -100,7 +100,7 @@ while (m) {
 		dict[key2.toLowerCase()] = { id, key2, localdir, repo, url };
 		//console.log({id, key2, localdir, repo, url })
 	}
-	
+
 	m = mod_re.exec(txt);
 }
 
@@ -111,15 +111,15 @@ while (m) {
 	m.input = null;
 	console.log({m})
 	let repo = m[3];
-	let url = repo.replace(/git@github.com:GerHobbelt/, `https://github.com/GerHobbelt/`).replace(/\.git$/, '');
+	let url = repo.replace(/git@github.com:GerHobbelt/, `https://github.com/GerHobbelt`).replace(/\.git$/, '');
 	let id = m[1];
 	let localdir = `./${ m[2] }`
 	let key2 = localdir.replace(/[\\\/._-]+/g, '');
 	console.log({id, key2, localdir, repo, url })
-	
+
 	dict[id.toLowerCase()] = { id, key2, localdir, repo, url };
 	dict[key2.toLowerCase()] = { id, key2, localdir, repo, url };
-	
+
 	m = mod_re.exec(txt);
 }
 
@@ -152,18 +152,18 @@ while (modified) {
 			s = `**${ p1 }** [🌐](${ spec.url })`;
 		}
 		//console.log({ s })
-	
+
 		modified = true;
-		
+
 		return s;
 	})
 	.replace(/~~\[([^\s🔗🌐📁🗃️]+)\]\((http[^)]+)\)/g, function r(m, p1, p2) {
 		//console.log({m, p1, p2});
 		let s = `~~**${ p1 }** [🌐](${ p2 })`;
 		//console.log({ s })
-	
+
 		modified = true;
-		
+
 		return s;
 	});
 }
@@ -293,7 +293,7 @@ txt = txt.replace(/(# Libraries we\'re looking at[^\n]+)\n([^]+?)\n((?:#[^\n]+)|
 txt = txt.replace(/([\r\n]+)\s*\[submodule "([^"]+)"\][\s\r\n]+path = ([^\s\r\n]+)[\s\r\n]+url = ([^\s\r\n]+)/g, function r(m, p1, p2, p3, p4) {
 	//console.log({ p1, p2, p3, p4 });
 	let a = p4;
-	
+
 	a = a
 	.replace(/^git@github.com:GerHobbelt\/([^\s]+)\.git$/, 'https://github.com/GerHobbelt/$1')
 
@@ -311,7 +311,7 @@ txt = txt.replace(/([\r\n]+)\s*\[submodule "([^"]+)"\][\s\r\n]+path = ([^\s\r\n]
 
 function collect_descriptions(txt) {
 	let a = {};
-		
+
 	let mod_re = /- \*\*([^*]+)\*\* \[📁\]\(([^ )]+)\) \[🌐\]\(([^ )]+)\)/g;
 	let m = mod_re.exec(txt);
 	while (m) {
@@ -325,16 +325,16 @@ function collect_descriptions(txt) {
 		let match = m[0];
 		let matchPos = m.index + match.length;
 		let dstr = txt.substring(matchPos, matchPos + 1000);
-		
+
 		let desc_re = /^ -- ([^ \r\n][^]+?)\n(:?(:?\s*- (:?~~)?\*\*)|(:?\s*- ~~)|(:?\s*- http)|(:?\s*- other)|(:?\s*- ZeroMQ)|(:?\s*- LMDB)|(:?\s*- see also)|(:?\s*- \[Manticore\])|[#*-]|$)/;
-		
+
 		let d = desc_re.exec(dstr);
 		if (d) {
 			d.input = null;
 			let description = d[1].trim();
-			
+
 			console.log({id, key2, localdir, repo, url, m, matchPos, description, dstr })
-			
+
 			//if (a[id.toLowerCase()] == undefined) {
 			//	a[id.toLowerCase()] = description;
 			//}
@@ -346,10 +346,10 @@ function collect_descriptions(txt) {
 				a[id] = description;
 			}
 		}
-		
+
 		m = mod_re.exec(txt);
 	}
-	
+
 	//console.log({a})
 	return a;
 }
@@ -384,7 +384,7 @@ function check_entries_against_their_categorized_references(txt) {
 	let overview_re_str = '# Libraries in this collection \\(All';
 	let toc_block_re = new RegExp(`(${overview_re_str}[^\\n]+)\\n([^]+?)\\n(#[^\\n]+)`, 'g');
 	let categories_block_re = new RegExp(`^([^]+?)\\n(?:${overview_re_str})`, 'g');
-	
+
 	let tbd_m = tbd_block_re.exec(txt);
 	delete tbd_m.input;
 
@@ -397,22 +397,22 @@ function check_entries_against_their_categorized_references(txt) {
 	let cat_arr = collect_entries(cat_m[1]);
 	let toc_arr = collect_entries(toc_m[2]);
 	let tbd_arr = collect_entries(tbd_m[2]);
-	
+
 	for (const idx in toc_arr) {
 		if (idx in cat_arr) {
 			if (idx in tbd_arr) {
 				delete tbd_arr[idx];
 			}
-		} 
+		}
 		else {
 			tbd_arr[idx] = toc_arr[idx];
 		}
 	}
-	
+
 	//console.log({tbd_arr, dict})
 
 	// now we know which items still need to be CATEGORIZED: regenerate the TBD list for us now:
-	
+
 	txt = txt.replace(tbd_block_re, function r(m, p1, p2, p3) {
 		let tbd_dict = Object.keys(tbd_arr).map((id) => {
 			let idstr = id.substring(1).toLowerCase();
@@ -424,61 +424,25 @@ function check_entries_against_their_categorized_references(txt) {
 
 		tbd_dict = tbd_dict.map((el) => {
 			return `- **${ el.id }** [📁](${ el.localdir }) [🌐](${ el.url })`;
-		});
+		})
+		.sort();
 
 		let s = tbd_dict.join('\n');
-		let tail = `
-		
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-🔗 🌐 📁 🗃️
-
-
-
-
-
-
-
-
-
-`;
+		// 🔗 🌐 📁 🗃️
+		let tail = '\n';
 
 		//console.log({ s, p1, p2, p3 });
-		
+
 		return p1 + '\n\n' + s + '\n\n' + tail;
 	});
-		
+
 	return txt;
 }
 
 
 function collect_entries(txt) {
 	let a = {};
-		
+
 	let mod_re = /- \*\*([^*]+)\*\* \[📁\]\(([^ )]+)\) \[🌐\]\(([^ )]+)\)/g;
 	let m = mod_re.exec(txt);
 	//console.log({m, txt})
@@ -493,16 +457,16 @@ function collect_entries(txt) {
 		let match = m[0];
 		let matchPos = m.index + match.length;
 		let dstr = txt.substring(matchPos, matchPos + 1000);
-		
+
 		let desc_re = /^ -- ([^ \r\n][^]+?)\n(:?(:?\s*- (:?~~)?\*\*)|(:?\s*- ~~)|(:?\s*- http)|(:?\s*- other)|(:?\s*- ZeroMQ)|(:?\s*- LMDB)|(:?\s*- see also)|(:?\s*- \[Manticore\])|[#*-]|$)/;
-		
+
 		let d = desc_re.exec(dstr);
 		if (d) {
 			d.input = null;
 			let description = d[1].trim();
-			
+
 			//console.log({id, key2, localdir, repo, url, m, matchPos, description, dstr })
-			
+
 			//if (a[id.toLowerCase()] == undefined) {
 			//	a[id.toLowerCase()] = description;
 			//}
@@ -517,10 +481,10 @@ function collect_entries(txt) {
 		else {
 			a[id] = true;
 		}
-		
+
 		m = mod_re.exec(txt);
 	}
-	
+
 	//console.log({a})
 	return a;
 }
