@@ -371,6 +371,168 @@ txt = txt.replace(mod_re, (m, p1, p2, p3) => {
 });
 
 
+//------------------------------------------------------------------------------------------
+
+//
+// Check which entries in the 'All' list are NOT listed in any of the sections above it: those entries
+// MUST still be categorized:
+//
+function check_entries_against_their_categorized_references(txt) {
+	let header_re_str = "# TBD: Libraries which still need to be moved";
+	let tbd_block_re = new RegExp(`(${header_re_str}[^\\n]+)\\n([^]+?)(\\n#[^\\n]+)?$`, 'g');
+
+	let overview_re_str = '# Libraries in this collection \\(All';
+	let toc_block_re = new RegExp(`(${overview_re_str}[^\\n]+)\\n([^]+?)\\n(#[^\\n]+)`, 'g');
+	let categories_block_re = new RegExp(`^([^]+?)\\n(?:${overview_re_str})`, 'g');
+	
+	let tbd_m = tbd_block_re.exec(txt);
+	delete tbd_m.input;
+
+	let toc_m = toc_block_re.exec(txt);
+	delete toc_m.input;
+
+	let cat_m = categories_block_re.exec(txt);
+	delete cat_m.input;
+
+	let cat_arr = collect_entries(cat_m[1]);
+	let toc_arr = collect_entries(toc_m[2]);
+	let tbd_arr = collect_entries(tbd_m[2]);
+	
+	for (const idx in toc_arr) {
+		if (idx in cat_arr) {
+			if (idx in tbd_arr) {
+				delete tbd_arr[idx];
+			}
+		} 
+		else {
+			tbd_arr[idx] = toc_arr[idx];
+		}
+	}
+	
+	//console.log({tbd_arr, dict})
+
+	// now we know which items still need to be CATEGORIZED: regenerate the TBD list for us now:
+	
+	txt = txt.replace(tbd_block_re, function r(m, p1, p2, p3) {
+		let tbd_dict = Object.keys(tbd_arr).map((id) => {
+			let idstr = id.substring(1).toLowerCase();
+			let slot = dict[idstr];
+			console.log({id, idstr, slot})
+			return slot;
+		});
+		//console.log({tbd_dict});
+
+		tbd_dict = tbd_dict.map((el) => {
+			return `- **${ el.id }** [📁](${ el.localdir }) [🌐](${ el.url })`;
+		});
+
+		let s = tbd_dict.join('\n');
+		let tail = `
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+🔗 🌐 📁 🗃️
+
+
+
+
+
+
+
+
+
+`;
+
+		//console.log({ s, p1, p2, p3 });
+		
+		return p1 + '\n\n' + s + '\n\n' + tail;
+	});
+		
+	return txt;
+}
+
+
+function collect_entries(txt) {
+	let a = {};
+		
+	let mod_re = /- \*\*([^*]+)\*\* \[📁\]\(([^ )]+)\) \[🌐\]\(([^ )]+)\)/g;
+	let m = mod_re.exec(txt);
+	//console.log({m, txt})
+	while (m) {
+		m.input = null;
+		//console.log({m})
+		let repo = m[3];
+		let url = repo;
+		let id = 'x' + m[1];
+		let localdir = m[2];
+		let key2 = localdir.replace('thirdparty/', '').replace(/[\\\/._-]+/g, '');
+		let match = m[0];
+		let matchPos = m.index + match.length;
+		let dstr = txt.substring(matchPos, matchPos + 1000);
+		
+		let desc_re = /^ -- ([^ \r\n][^]+?)\n(:?(:?\s*- (:?~~)?\*\*)|(:?\s*- ~~)|(:?\s*- http)|(:?\s*- other)|(:?\s*- ZeroMQ)|(:?\s*- LMDB)|(:?\s*- see also)|(:?\s*- \[Manticore\])|[#*-]|$)/;
+		
+		let d = desc_re.exec(dstr);
+		if (d) {
+			d.input = null;
+			let description = d[1].trim();
+			
+			//console.log({id, key2, localdir, repo, url, m, matchPos, description, dstr })
+			
+			//if (a[id.toLowerCase()] == undefined) {
+			//	a[id.toLowerCase()] = description;
+			//}
+			if (a[id] == undefined) {
+				a[id] = description;
+			}
+			else if (a[id].length < description.length) {
+				//console.log("OVERRIDING: ", a[id], " --> ", description);
+				a[id] = description;
+			}
+		}
+		else {
+			a[id] = true;
+		}
+		
+		m = mod_re.exec(txt);
+	}
+	
+	//console.log({a})
+	return a;
+}
+
+
+
+txt = check_entries_against_their_categorized_references(txt);
+
+
+
+
+
 if (origTxt !== txt) {
 	console.log("Updating the README...");
 	fs.writeFileSync("README.md", txt, "utf8");
