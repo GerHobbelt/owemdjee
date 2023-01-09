@@ -2470,3 +2470,50 @@
 	path = ssdeep
 	url = git@github.com:GerHobbelt/ssdeep.git
 
+[submodule "cr"]
+	path = cr
+	url = git@github.com:GerHobbelt/cr.git
+
+[submodule "RuntimeCompiledCPlusPlus"]
+	path = RuntimeCompiledCPlusPlus
+	url = git@github.com:GerHobbelt/RuntimeCompiledCPlusPlus.git
+
+[submodule "koan"]
+	path = koan
+	url = git@github.com:GerHobbelt/koan.git
+
+[submodule "iODBC"]
+	path = iODBC
+	url = git@github.com:GerHobbelt/iODBC.git
+
+[submodule "nanodbc"]
+	path = nanodbc
+	url = git@github.com:GerHobbelt/nanodbc.git
+
+[submodule "unixODBC"]
+	path = unixODBC
+	url = git@github.com:GerHobbelt/unixODBC.git
+
+[submodule "jerryscript"]
+	path = jerryscript
+	url = git@github.com:GerHobbelt/jerryscript.git
+
+[submodule "wxDatabase"]
+	path = wxDatabase
+	url = git@github.com:GerHobbelt/wxDatabase.git
+
+[submodule "sqliteodbc"]
+	path = sqliteodbc
+	url = git@github.com:GerHobbelt/sqliteodbc.git
+
+[submodule "Xoshiro-cpp"]
+	path = Xoshiro-cpp
+	url = git@github.com:GerHobbelt/Xoshiro-cpp.git
+
+[submodule "fastPRNG"]
+	path = fastPRNG
+	url = git@github.com:GerHobbelt/fastPRNG.git
+
+[submodule "libchaos"]
+	path = libchaos
+	url = git@github.com:GerHobbelt/libchaos.git
