@@ -2517,3 +2517,12 @@
 [submodule "libchaos"]
 	path = libchaos
 	url = git@github.com:GerHobbelt/libchaos.git
+[submodule "libevent"]
+	path = libevent
+	url = git@github.com:GerHobbelt/libevent.git
+[submodule "abseil-cpp"]
+	path = abseil-cpp
+	url = git@github.com:GerHobbelt/abseil-cpp.git
+[submodule "libdivsufsort"]
+	path = libdivsufsort
+	url = git@github.com:GerHobbelt/libdivsufsort.git
