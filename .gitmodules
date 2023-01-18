@@ -2526,3 +2526,27 @@
 [submodule "libdivsufsort"]
 	path = libdivsufsort
 	url = git@github.com:GerHobbelt/libdivsufsort.git
+[submodule "fluent-bit"]
+	path = fluent-bit
+	url = git@github.com:GerHobbelt/fluent-bit.git
+[submodule "bitsery"]
+	path = bitsery
+	url = git@github.com:GerHobbelt/bitsery.git
+[submodule "CryptSync"]
+	path = CryptSync
+	url = git@github.com:GerHobbelt/CryptSync.git
+[submodule "taglib"]
+	path = taglib
+	url = git@github.com:GerHobbelt/taglib.git
+[submodule "harbour-core"]
+	path = harbour-core
+	url = git@github.com:GerHobbelt/core.git
+[submodule "id3-tagparser"]
+	path = id3-tagparser
+	url = git@github.com:GerHobbelt/tagparser.git
+[submodule "mmkv"]
+	path = mmkv
+	url = git@github.com:GerHobbelt/MMKV.git
+[submodule "VSNASM"]
+	path = VSNASM
+	url = git@github.com:GerHobbelt/VSNASM.git
