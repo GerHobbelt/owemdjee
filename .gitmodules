@@ -2550,3 +2550,6 @@
 [submodule "VSNASM"]
 	path = VSNASM
 	url = git@github.com:GerHobbelt/VSNASM.git
+[submodule "gperf"]
+	path = gperf
+	url = git@github.com:GerHobbelt/gperf.git
