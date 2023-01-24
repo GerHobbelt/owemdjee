@@ -2550,6 +2550,9 @@
 [submodule "VSNASM"]
 	path = VSNASM
 	url = git@github.com:GerHobbelt/VSNASM.git
-[submodule "gperf"]
-	path = gperf
-	url = git@github.com:GerHobbelt/gperf.git
+[submodule "nghttp3"]
+	path = nghttp3
+	url = git@github.com:GerHobbelt/nghttp3.git
+[submodule "ngtcp2"]
+	path = ngtcp2
+	url = git@github.com:GerHobbelt/ngtcp2.git
