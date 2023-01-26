@@ -2556,3 +2556,6 @@
 [submodule "ngtcp2"]
 	path = ngtcp2
 	url = https://github.com/GerHobbelt/ngtcp2.git
+[submodule "splitmerge"]
+	path = splitmerge
+	url = git@github.com:GerHobbelt/splitmerge.git
