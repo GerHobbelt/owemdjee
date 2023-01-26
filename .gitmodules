@@ -2396,163 +2396,163 @@
 
 [submodule "textflowcpp"]
 	path = textflowcpp
-	url = git@github.com:GerHobbelt/textflowcpp.git
+	url = https://github.com/GerHobbelt/textflowcpp.git
 
 [submodule "transwarp"]
 	path = transwarp
-	url = git@github.com:GerHobbelt/transwarp.git
+	url = https://github.com/GerHobbelt/transwarp.git
 
 [submodule "JamSpell"]
 	path = JamSpell
-	url = git@github.com:GerHobbelt/JamSpell.git
+	url = https://github.com/GerHobbelt/JamSpell.git
 
-[submodule "hunspell-dictionarries"]
-	path = hunspell-dictionarries
-	url = git@github.com:GerHobbelt/dictionaries.git
+[submodule "hunspell-dictionaries"]
+	path = hunspell-dictionaries
+	url = https://github.com/GerHobbelt/dictionaries.git
 
 [submodule "ipa-dict"]
 	path = ipa-dict
-	url = git@github.com:GerHobbelt/ipa-dict.git
+	url = https://github.com/GerHobbelt/ipa-dict.git
 
 [submodule "nuspell"]
 	path = nuspell
-	url = git@github.com:GerHobbelt/nuspell.git
+	url = https://github.com/GerHobbelt/nuspell.git
 
 [submodule "CRFpp"]
 	path = CRFpp
-	url = git@github.com:GerHobbelt/crfpp.git
+	url = https://github.com/GerHobbelt/crfpp.git
 
 [submodule "crfsuite"]
 	path = crfsuite
-	url = git@github.com:GerHobbelt/crfsuite.git
+	url = https://github.com/GerHobbelt/crfsuite.git
 
 [submodule "DGM-CRF"]
 	path = DGM-CRF
-	url = git@github.com:GerHobbelt/DGM.git
+	url = https://github.com/GerHobbelt/DGM.git
 
 [submodule "CRFsuite-extended"]
 	path = CRFsuite-extended
-	url = git@github.com:GerHobbelt/CRFSuiteEx.git
+	url = https://github.com/GerHobbelt/CRFSuiteEx.git
 
 [submodule "word2vec"]
 	path = word2vec
-	url = git@github.com:GerHobbelt/word2vec.git
+	url = https://github.com/GerHobbelt/word2vec.git
 
 [submodule "tensorflow-text"]
 	path = tensorflow-text
-	url = git@github.com:GerHobbelt/tensorflow-text.git
+	url = https://github.com/GerHobbelt/tensorflow-text.git
 
 [submodule "tensorflow-docs"]
 	path = tensorflow-docs
-	url = git@github.com:GerHobbelt/tensorflow-docs.git
+	url = https://github.com/GerHobbelt/tensorflow-docs.git
 
 [submodule "tensorflow-io"]
 	path = tensorflow-io
-	url = git@github.com:GerHobbelt/tensorflow-io.git
+	url = https://github.com/GerHobbelt/tensorflow-io.git
 
 [submodule "word2vec-GloVe"]
 	path = word2vec-GloVe
-	url = git@github.com:GerHobbelt/GloVe.git
+	url = https://github.com/GerHobbelt/GloVe.git
 
 [submodule "sdhash"]
 	path = sdhash
-	url = git@github.com:GerHobbelt/sdhash.git
+	url = https://github.com/GerHobbelt/sdhash.git
 
 [submodule "probminhash"]
 	path = probminhash
-	url = git@github.com:GerHobbelt/probminhash.git
+	url = https://github.com/GerHobbelt/probminhash.git
 
 [submodule "A-MNS_TemplateMatching"]
 	path = A-MNS_TemplateMatching
-	url = git@github.com:GerHobbelt/A-MNS_TemplateMatching.git
+	url = https://github.com/GerHobbelt/A-MNS_TemplateMatching.git
 
 [submodule "ssdeep"]
 	path = ssdeep
-	url = git@github.com:GerHobbelt/ssdeep.git
+	url = https://github.com/GerHobbelt/ssdeep.git
 
 [submodule "cr"]
 	path = cr
-	url = git@github.com:GerHobbelt/cr.git
+	url = https://github.com/GerHobbelt/cr.git
 
 [submodule "RuntimeCompiledCPlusPlus"]
 	path = RuntimeCompiledCPlusPlus
-	url = git@github.com:GerHobbelt/RuntimeCompiledCPlusPlus.git
+	url = https://github.com/GerHobbelt/RuntimeCompiledCPlusPlus.git
 
 [submodule "koan"]
 	path = koan
-	url = git@github.com:GerHobbelt/koan.git
+	url = https://github.com/GerHobbelt/koan.git
 
 [submodule "iODBC"]
 	path = iODBC
-	url = git@github.com:GerHobbelt/iODBC.git
+	url = https://github.com/GerHobbelt/iODBC.git
 
 [submodule "nanodbc"]
 	path = nanodbc
-	url = git@github.com:GerHobbelt/nanodbc.git
+	url = https://github.com/GerHobbelt/nanodbc.git
 
 [submodule "unixODBC"]
 	path = unixODBC
-	url = git@github.com:GerHobbelt/unixODBC.git
+	url = https://github.com/GerHobbelt/unixODBC.git
 
 [submodule "jerryscript"]
 	path = jerryscript
-	url = git@github.com:GerHobbelt/jerryscript.git
+	url = https://github.com/GerHobbelt/jerryscript.git
 
 [submodule "wxDatabase"]
 	path = wxDatabase
-	url = git@github.com:GerHobbelt/wxDatabase.git
+	url = https://github.com/GerHobbelt/wxDatabase.git
 
 [submodule "sqliteodbc"]
 	path = sqliteodbc
-	url = git@github.com:GerHobbelt/sqliteodbc.git
+	url = https://github.com/GerHobbelt/sqliteodbc.git
 
 [submodule "Xoshiro-cpp"]
 	path = Xoshiro-cpp
-	url = git@github.com:GerHobbelt/Xoshiro-cpp.git
+	url = https://github.com/GerHobbelt/Xoshiro-cpp.git
 
 [submodule "fastPRNG"]
 	path = fastPRNG
-	url = git@github.com:GerHobbelt/fastPRNG.git
+	url = https://github.com/GerHobbelt/fastPRNG.git
 
 [submodule "libchaos"]
 	path = libchaos
-	url = git@github.com:GerHobbelt/libchaos.git
+	url = https://github.com/GerHobbelt/libchaos.git
 [submodule "libevent"]
 	path = libevent
-	url = git@github.com:GerHobbelt/libevent.git
+	url = https://github.com/GerHobbelt/libevent.git
 [submodule "abseil-cpp"]
 	path = abseil-cpp
-	url = git@github.com:GerHobbelt/abseil-cpp.git
+	url = https://github.com/GerHobbelt/abseil-cpp.git
 [submodule "libdivsufsort"]
 	path = libdivsufsort
-	url = git@github.com:GerHobbelt/libdivsufsort.git
+	url = https://github.com/GerHobbelt/libdivsufsort.git
 [submodule "fluent-bit"]
 	path = fluent-bit
-	url = git@github.com:GerHobbelt/fluent-bit.git
+	url = https://github.com/GerHobbelt/fluent-bit.git
 [submodule "bitsery"]
 	path = bitsery
-	url = git@github.com:GerHobbelt/bitsery.git
+	url = https://github.com/GerHobbelt/bitsery.git
 [submodule "CryptSync"]
 	path = CryptSync
-	url = git@github.com:GerHobbelt/CryptSync.git
+	url = https://github.com/GerHobbelt/CryptSync.git
 [submodule "taglib"]
 	path = taglib
-	url = git@github.com:GerHobbelt/taglib.git
+	url = https://github.com/GerHobbelt/taglib.git
 [submodule "harbour-core"]
 	path = harbour-core
-	url = git@github.com:GerHobbelt/core.git
+	url = https://github.com/GerHobbelt/core.git
 [submodule "id3-tagparser"]
 	path = id3-tagparser
-	url = git@github.com:GerHobbelt/tagparser.git
+	url = https://github.com/GerHobbelt/tagparser.git
 [submodule "mmkv"]
 	path = mmkv
-	url = git@github.com:GerHobbelt/MMKV.git
+	url = https://github.com/GerHobbelt/MMKV.git
 [submodule "VSNASM"]
 	path = VSNASM
-	url = git@github.com:GerHobbelt/VSNASM.git
+	url = https://github.com/GerHobbelt/VSNASM.git
 [submodule "nghttp3"]
 	path = nghttp3
-	url = git@github.com:GerHobbelt/nghttp3.git
+	url = https://github.com/GerHobbelt/nghttp3.git
 [submodule "ngtcp2"]
 	path = ngtcp2
-	url = git@github.com:GerHobbelt/ngtcp2.git
+	url = https://github.com/GerHobbelt/ngtcp2.git
