@@ -1328,6 +1328,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **csync2** [📁](./csync2) [🌐](https://github.com/GerHobbelt/csync2) -- a cluster synchronization tool. It can be used to keep files on multiple hosts in a cluster in sync. Csync2 can handle complex setups with much more than just 2 hosts, handle file deletions and can detect conflicts.
 - **CTCWordBeamSearch** [📁](./CTCWordBeamSearch) [🌐](https://github.com/GerHobbelt/CTCWordBeamSearch) -- Connectionist Temporal Classification (CTC) decoder with dictionary and Language Model (LM).
 - **CTPL-Thread-Pool** [📁](./CTPL-Thread-Pool) [🌐](https://github.com/GerHobbelt/CTPL) -- Modern and efficient C++ Thread Pool Library. More specifically, there are some threads dedicated to the pool and a container of jobs. The jobs come to the pool dynamically. A job is fetched and deleted from the container when there is an idle thread. The job is then run on that thread.
+- **ctsa** [📁](./ctsa) [🌐](https://github.com/GerHobbelt/ctsa)
 - **cuckoofilter** [📁](./cuckoofilter) [🌐](https://github.com/GerHobbelt/cuckoofilter)
 - **cuckoo-index** [📁](./cuckoo-index) [🌐](https://github.com/GerHobbelt/cuckoo-index) -- Cuckoo Index (CI) is a lightweight secondary index structure that represents the many-to-many relationship between keys and partitions of columns in a highly space-efficient way. CI associates variable-sized fingerprints in a Cuckoo filter with compressed bitmaps indicating qualifying partitions. The problem of finding all partitions that possibly contain a given lookup key is traditionally solved by maintaining one filter (e.g., a Bloom filter) per partition that indexes all unique key values contained in this partition. To identify all partitions containing a key, we would need to probe all per-partition filters (which could be many). Depending on the storage medium, a false positive there can be very expensive. Furthermore, secondary columns typically contain many duplicates (also across partitions). Cuckoo Index (CI) addresses these drawbacks of per-partition filters.
 - **cURL** [📁](../../thirdparty/curl) [🌐](https://github.com/GerHobbelt/thirdparty-curl) -- the ubiquitous [libcurl](http://curl.haxx.se/libcurl).
@@ -1453,6 +1454,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **jsoncons** [📁](./jsoncons) [🌐](https://github.com/GerHobbelt/jsoncons)
 - **json-jansson** [📁](./json-jansson) [🌐](https://github.com/GerHobbelt/jansson)
 - **kahypar** [📁](./kahypar) [🌐](https://github.com/GerHobbelt/kahypar) -- KaHyPar (Karlsruhe Hypergraph Partitioning) is a multilevel hypergraph partitioning framework providing direct k-way and recursive bisection based partitioning algorithms that compute solutions of very high quality.
+- **kfr** [📁](./kfr) [🌐](https://github.com/GerHobbelt/kfr)
 - **kgraph** [📁](./kgraph) [🌐](https://github.com/GerHobbelt/kgraph) -- a library for k-nearest neighbor (k-NN) graph construction and online k-NN search using a k-NN Graph as index. KGraph implements heuristic algorithms that are extremely generic and fast. KGraph works on abstract objects. The only assumption it makes is that a similarity score can be computed on any pair of objects, with a user-provided function.
 - **koan** [📁](./koan) [🌐](https://github.com/GerHobbelt/koan)
 - **krabsETW** [📁](./krabsETW) [🌐](https://github.com/GerHobbelt/krabsetw) -- a C++ library that simplifies interacting with ETW. It allows for any number of traces and providers to be enabled and for client code to register for event notifications from these traces.
@@ -1505,6 +1507,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **libgd** [📁](./libgd) [🌐](https://github.com/GerHobbelt/libgd) -- GD is a library for the dynamic creation of images by programmers. GD has support for: WebP, JPEG, PNG, AVIF, HEIF, TIFF, BMP, GIF, TGA, WBMP, XPM.
 - **libgif** [📁](./libgif) [🌐](https://github.com/GerHobbelt/libgif)
 - **libgrape-lite** [📁](./libgrape-lite) [🌐](https://github.com/GerHobbelt/libgrape-lite) -- a C++ library from Alibaba for parallel graph processing (GRAPE). It differs from prior systems in its ability to parallelize sequential graph algorithms as a whole by following the PIE programming model from GRAPE. Sequential algorithms can be easily "plugged into" `libgrape-lite` with only minor changes and get parallelized to handle large graphs efficiently. `libgrape-lite` is designed to be highly efficient and flexible, to cope with the scale, variety and complexity of real-life graph applications.
+- **libharry** [📁](./libharry) [🌐](https://github.com/GerHobbelt/harry)
 - **libheif** [📁](./libheif) [🌐](https://github.com/GerHobbelt/heif)
 - **libheif-alt** [📁](./libheif-alt) [🌐](https://github.com/GerHobbelt/libheif)
 - **libicns** [📁](./libicns) [🌐](https://github.com/GerHobbelt/libicns) -- a library for manipulation of the Mac OS `icns` resource format, also known as the IconFamily resource type. It can read and write files from the Mac OS X icns format, as well as read from Mac OS resource files and macbinary encoded Mac OS resource forks.
@@ -1623,6 +1626,13 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **nmslib** [📁](./nmslib) [🌐](https://github.com/GerHobbelt/nmslib) -- Non-Metric Space Library (NMSLIB) is an efficient cross-platform similarity search library and a toolkit for evaluation of similarity search methods. The core-library does not have any third-party dependencies. It has been gaining popularity recently. In particular, it has become a part of Amazon Elasticsearch Service. The goal of the project is to create an effective and comprehensive toolkit for searching in generic and non-metric spaces. Even though the library contains a variety of metric-space access methods, our main focus is on generic and approximate search methods, in particular, on methods for non-metric spaces. NMSLIB is possibly the first library with a principled support for non-metric space searching.
 - **notcurses** [📁](./notcurses) [🌐](https://github.com/GerHobbelt/notcurses) -- a library facilitating complex TUIs on modern terminal emulators, supporting vivid colors, multimedia, threads, and Unicode to the maximum degree possible. Things can be done with Notcurses that simply can't be done with NCURSES. It is furthermore fast as shit. What it is not: a source-compatible X/Open Curses implementation, nor a replacement for NCURSES on existing systems.
 - **npoi** [📁](./npoi) [🌐](https://github.com/GerHobbelt/npoi) -- a .NET library that can read/write Office formats without Microsoft Office installed. No COM+, no interop. With NPOI, you can read/write Office 2003/2007 files very easily.
+- **nsis** [📁](./nsis) [🌐](https://github.com/GerHobbelt/nsis)
+- **NSISDotNetChecker** [📁](./NSISDotNetChecker) [🌐](https://github.com/GerHobbelt/NsisDotNetChecker)
+- **NSISFileCheck** [📁](./NSISFileCheck) [🌐](https://github.com/GerHobbelt/nsisfilecheck)
+- **NSISMultiUser** [📁](./NSISMultiUser) [🌐](https://github.com/GerHobbelt/NsisMultiUser)
+- **nsis-nscurl** [📁](./nsis-nscurl) [🌐](https://github.com/GerHobbelt/nsis-nscurl)
+- **NSIS-OBSInstallerUtils** [📁](./NSIS-OBSInstallerUtils) [🌐](https://github.com/GerHobbelt/OBSInstallerUtils)
+- **nsis-stdutils** [📁](./nsis-stdutils) [🌐](https://github.com/GerHobbelt/stdutils)
 - **nsync** [📁](./nsync) [🌐](https://github.com/GerHobbelt/nsync) -- a C library that exports various synchronization primitives. `nsync` may be desirable in place of `pthread` primitives in some cases:  (1) nsync locks are reader-writer locks (but are as efficient as mutexes).  (2) nsync locks and condition variables occupy only two words each.  (3) nsync works on Unix-like systems and Windows.  It should be portable to other platforms straightforwardly.  (4) nsync provides conditional critical sections.  These fill the same role as condition variables, but are usually easier to use, and in most common cases are comparable in speed.  They can be easier to use in two ways:  (A) it's not necessary to surround the "wait" operation in a while loop; instead the condition is passed to the call as a function and arbitrary pointer argument.  (B) it's not necessary to wake or signal explicitly when the condition(s) become true; they are checked automatically. The primary downsides are:  (A) they are not available in most other common synchronization APIs, and so they may be unfamiliar (even though they date back to the 1960s), and (B) if threads routinely wait on many distinct, false conditions associated with the same lock, they may be slower than condition variables. In this case, clients can use condition variables in the normal way; conditional critical sections and condition variables can be used with the same lock.  (5) nsync waits can be cancelled via an object passed to the wait calls, unlike the pthread model in which threads are cancelled.  This difference can be useful if the computation needs multiple threads, or if cancellation affects only sub-operations within a larger operation by the thread.
 - **nuspell** [📁](./nuspell) [🌐](https://github.com/GerHobbelt/nuspell)
 - **ocreval** [📁](./ocreval) [🌐](https://github.com/GerHobbelt/ocreval) -- `ocreval` contains 17 tools for measuring the performance of and experimenting with OCR output. `ocreval` is a modern port of the [ISRI Analytic Tools for OCR Evaluation](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.216.9427&rep=rep1&type=pdf), with UTF-8 support and other improvements.
@@ -1738,6 +1748,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **sparsehash** [📁](./sparsehash) [🌐](https://github.com/GerHobbelt/sparsehash) -- fast hash algorithms
 - **spdlog** [📁](./spdlog) [🌐](https://github.com/GerHobbelt/spdlog)
 - **spdlog_setup** [📁](./spdlog_setup) [🌐](https://github.com/GerHobbelt/spdlog_setup)
+- **splitmerge** [📁](./splitmerge) [🌐](https://github.com/GerHobbelt/splitmerge)
 - **spy-build-sysinfo** [📁](./spy-build-sysinfo) [🌐](https://github.com/GerHobbelt/spy) -- build system info
 - **sqlcipher** [📁](./sqlcipher) [🌐](https://github.com/GerHobbelt/sqlcipher)
 - **sqlean** [📁](./sqlean) [🌐](https://github.com/GerHobbelt/sqlean) -- The ultimate set of SQLite extensions: SQLite has few functions compared to other database management systems. SQLite authors see this as a feature rather than a problem, because SQLite has an extension mechanism in place. There are a lot of SQLite extensions out there, but they are incomplete, inconsistent and scattered across the internet. sqlean brings them together, neatly packaged into domain modules, documented, tested, and built for Linux, Windows and macOS.
@@ -2015,6 +2026,10 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **JamSpell** [📁](./JamSpell) [🌐](https://github.com/GerHobbelt/JamSpell)
 - **LightGBM** [📁](./LightGBM) [🌐](https://github.com/GerHobbelt/LightGBM)
 - **MNN** [📁](./MNN) [🌐](https://github.com/GerHobbelt/MNN)
+- **NSIS-OBSInstallerUtils** [📁](./NSIS-OBSInstallerUtils) [🌐](https://github.com/GerHobbelt/OBSInstallerUtils)
+- **NSISDotNetChecker** [📁](./NSISDotNetChecker) [🌐](https://github.com/GerHobbelt/NsisDotNetChecker)
+- **NSISFileCheck** [📁](./NSISFileCheck) [🌐](https://github.com/GerHobbelt/nsisfilecheck)
+- **NSISMultiUser** [📁](./NSISMultiUser) [🌐](https://github.com/GerHobbelt/NsisMultiUser)
 - **NiuTrans.NMT** [📁](./NiuTrans.NMT) [🌐](https://github.com/GerHobbelt/NiuTrans.NMT)
 - **OpenBLAS** [📁](./OpenBLAS) [🌐](https://github.com/GerHobbelt/OpenBLAS)
 - **OpenCL-CTS** [📁](./OpenCL-CTS) [🌐](https://github.com/GerHobbelt/OpenCL-CTS)
@@ -2054,6 +2069,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **cr** [📁](./cr) [🌐](https://github.com/GerHobbelt/cr)
 - **crfsuite** [📁](./crfsuite) [🌐](https://github.com/GerHobbelt/crfsuite)
 - **csv-parser** [📁](./csv-parser) [🌐](https://github.com/GerHobbelt/csv-parser)
+- **ctsa** [📁](./ctsa) [🌐](https://github.com/GerHobbelt/ctsa)
 - **cxxtest** [📁](./cxxtest) [🌐](https://github.com/GerHobbelt/cxxtest)
 - **date** [📁](./date) [🌐](https://github.com/GerHobbelt/date)
 - **datetimepp** [📁](./datetimepp) [🌐](https://github.com/GerHobbelt/datetimepp)
@@ -2080,6 +2096,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **iresearch** [📁](./iresearch) [🌐](https://github.com/GerHobbelt/iresearch)
 - **jerryscript** [📁](./jerryscript) [🌐](https://github.com/GerHobbelt/jerryscript)
 - **jsoncons** [📁](./jsoncons) [🌐](https://github.com/GerHobbelt/jsoncons)
+- **kfr** [📁](./kfr) [🌐](https://github.com/GerHobbelt/kfr)
 - **koan** [📁](./koan) [🌐](https://github.com/GerHobbelt/koan)
 - **libaom** [📁](./libaom) [🌐](https://github.com/GerHobbelt/libaom)
 - **libcbor** [📁](./libcbor) [🌐](https://github.com/GerHobbelt/libcbor)
@@ -2094,6 +2111,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **libevt** [📁](./libevt) [🌐](https://github.com/GerHobbelt/libevt)
 - **libffi** [📁](./libffi) [🌐](https://github.com/GerHobbelt/libffi)
 - **libfort** [📁](./libfort) [🌐](https://github.com/GerHobbelt/libfort)
+- **libharry** [📁](./libharry) [🌐](https://github.com/GerHobbelt/harry)
 - **libheif** [📁](./libheif) [🌐](https://github.com/GerHobbelt/heif)
 - **libheif-alt** [📁](./libheif-alt) [🌐](https://github.com/GerHobbelt/libheif)
 - **libjxl** [📁](./libjxl) [🌐](https://github.com/GerHobbelt/libjxl)
@@ -2121,6 +2139,9 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **nativefiledialog-extended** [📁](./nativefiledialog-extended) [🌐](https://github.com/GerHobbelt/nativefiledialog-extended)
 - **nghttp3** [📁](./nghttp3) [🌐](https://github.com/GerHobbelt/nghttp3)
 - **ngtcp2** [📁](./ngtcp2) [🌐](https://github.com/GerHobbelt/ngtcp2)
+- **nsis** [📁](./nsis) [🌐](https://github.com/GerHobbelt/nsis)
+- **nsis-nscurl** [📁](./nsis-nscurl) [🌐](https://github.com/GerHobbelt/nsis-nscurl)
+- **nsis-stdutils** [📁](./nsis-stdutils) [🌐](https://github.com/GerHobbelt/stdutils)
 - **nuspell** [📁](./nuspell) [🌐](https://github.com/GerHobbelt/nuspell)
 - **onnxruntime** [📁](./onnxruntime) [🌐](https://github.com/GerHobbelt/onnxruntime)
 - **openpbs** [📁](./openpbs) [🌐](https://github.com/GerHobbelt/openpbs)
@@ -2197,36 +2218,3 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **xpdf** [📁](./xpdf) [🌐](https://github.com/GerHobbelt/xpdf)
 
 
-[submodule "splitmerge"]
-	path = splitmerge
-	url = git@github.com:GerHobbelt/splitmerge.git
-[submodule "kfr"]
-	path = kfr
-	url = git@github.com:GerHobbelt/kfr.git
-[submodule "nsis"]
-	path = nsis
-	url = git@github.com:GerHobbelt/nsis.git
-[submodule "NSISDotNetChecker"]
-	path = NSISDotNetChecker
-	url = git@github.com:GerHobbelt/NsisDotNetChecker.git
-[submodule "nsis-nscurl"]
-	path = nsis-nscurl
-	url = git@github.com:GerHobbelt/nsis-nscurl.git
-[submodule "nsis-stdutils"]
-	path = nsis-stdutils
-	url = git@github.com:GerHobbelt/stdutils.git
-[submodule "NSISMultiUser"]
-	path = NSISMultiUser
-	url = git@github.com:GerHobbelt/NsisMultiUser.git
-[submodule "NSISFileCheck"]
-	path = NSISFileCheck
-	url = git@github.com:GerHobbelt/nsisfilecheck.git
-[submodule "NSIS-OBSInstallerUtils"]
-	path = NSIS-OBSInstallerUtils
-	url = git@github.com:GerHobbelt/OBSInstallerUtils.git
-[submodule "ctsa"]
-	path = ctsa
-	url = git@github.com:GerHobbelt/ctsa.git
-[submodule "libharry"]
-	path = libharry
-	url = git@github.com:GerHobbelt/harry.git
