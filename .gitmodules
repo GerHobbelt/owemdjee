@@ -2559,3 +2559,33 @@
 [submodule "splitmerge"]
 	path = splitmerge
 	url = git@github.com:GerHobbelt/splitmerge.git
+[submodule "kfr"]
+	path = kfr
+	url = git@github.com:GerHobbelt/kfr.git
+[submodule "nsis"]
+	path = nsis
+	url = git@github.com:GerHobbelt/nsis.git
+[submodule "NSISDotNetChecker"]
+	path = NSISDotNetChecker
+	url = git@github.com:GerHobbelt/NsisDotNetChecker.git
+[submodule "nsis-nscurl"]
+	path = nsis-nscurl
+	url = git@github.com:GerHobbelt/nsis-nscurl.git
+[submodule "nsis-stdutils"]
+	path = nsis-stdutils
+	url = git@github.com:GerHobbelt/stdutils.git
+[submodule "NSISMultiUser"]
+	path = NSISMultiUser
+	url = git@github.com:GerHobbelt/NsisMultiUser.git
+[submodule "NSISFileCheck"]
+	path = NSISFileCheck
+	url = git@github.com:GerHobbelt/nsisfilecheck.git
+[submodule "NSIS-OBSInstallerUtils"]
+	path = NSIS-OBSInstallerUtils
+	url = git@github.com:GerHobbelt/OBSInstallerUtils.git
+[submodule "ctsa"]
+	path = ctsa
+	url = git@github.com:GerHobbelt/ctsa.git
+[submodule "libharry"]
+	path = libharry
+	url = git@github.com:GerHobbelt/harry.git
