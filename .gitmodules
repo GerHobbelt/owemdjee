@@ -2589,3 +2589,75 @@
 [submodule "libharry"]
 	path = libharry
 	url = git@github.com:GerHobbelt/harry.git
+[submodule "simd-imgproc"]
+	path = simd-imgproc
+	url = git@github.com:GerHobbelt/Simd.git
+[submodule "libavif"]
+	path = libavif
+	url = git@github.com:GerHobbelt/libavif.git
+[submodule "cairo"]
+	path = cairo
+	url = git@github.com:GerHobbelt/cairo.git
+[submodule "pixman"]
+	path = pixman
+	url = git@github.com:GerHobbelt/pixman.git
+[submodule "pango"]
+	path = pango
+	url = git@github.com:GerHobbelt/pango.git
+[submodule "fribidi"]
+	path = fribidi
+	url = git@github.com:GerHobbelt/fribidi.git
+[submodule "libraqm"]
+	path = libraqm
+	url = git@github.com:GerHobbelt/libraqm.git
+[submodule "fftw3"]
+	path = fftw3
+	url = git@github.com:GerHobbelt/fftw3.git
+[submodule "CLTune"]
+	path = CLTune
+	url = git@github.com:GerHobbelt/CLTune.git
+[submodule "CLBlast-database"]
+	path = CLBlast-database
+	url = git@github.com:GerHobbelt/CLBlast-database.git
+[submodule "libgateY"]
+	path = libgateY
+	url = git@github.com:GerHobbelt/libgateY.git
+[submodule "ColorSpace"]
+	path = ColorSpace
+	url = git@github.com:GerHobbelt/ColorSpace.git
+[submodule "cairo-demos"]
+	path = cairo-demos
+	url = git@github.com:GerHobbelt/cairo-demos.git
+[submodule "cxxopts"]
+	path = cxxopts
+	url = git@github.com:GerHobbelt/cxxopts.git
+[submodule "everything-curl"]
+	path = everything-curl
+	url = git@github.com:GerHobbelt/everything-curl.git
+[submodule "libalg"]
+	path = libalg
+	url = git@github.com:GerHobbelt/alglib.git
+[submodule "curl-impersonate"]
+	path = curl-impersonate
+	url = git@github.com:GerHobbelt/curl-impersonate.git
+[submodule "boringssl"]
+	path = boringssl
+	url = git@github.com:GerHobbelt/boringssl.git
+[submodule "curl-www"]
+	path = curl-www
+	url = git@github.com:GerHobbelt/curl-www.git
+[submodule "doh"]
+	path = doh
+	url = git@github.com:GerHobbelt/doh.git
+[submodule "libpopcnt"]
+	path = libpopcnt
+	url = git@github.com:GerHobbelt/libpopcnt.git
+[submodule "PlatformFolders"]
+	path = PlatformFolders
+	url = git@github.com:GerHobbelt/PlatformFolders.git
+[submodule "libclip"]
+	path = libclip
+	url = git@github.com:GerHobbelt/clip.git
+[submodule "dlfcn-win32"]
+	path = dlfcn-win32
+	url = git@github.com:GerHobbelt/dlfcn-win32.git

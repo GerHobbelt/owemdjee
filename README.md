@@ -1268,11 +1268,14 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **bolt** [📁](./bolt) [🌐](https://github.com/GerHobbelt/bolt) -- a deep learning library with high performance and heterogeneous flexibility.
 - **boost** [📁](./boost) [🌐](https://github.com/GerHobbelt/boost) -- required by several other libraries in this collection
 - **boost-url** [📁](./boost-url) [🌐](https://github.com/GerHobbelt/boost-url) -- a library for manipulating (RFC3986) Uniform Resource Identifiers (URIs) and Locators (URLs).
+- **boringssl** [📁](./boringssl) [🌐](https://github.com/GerHobbelt/boringssl)
 - **BoxFort** [📁](./BoxFort) [🌐](https://github.com/GerHobbelt/BoxFort)
 - **breakpad** [📁](./breakpad) [🌐](https://github.com/GerHobbelt/breakpad) -- a set of client and server components which implement a crash-reporting system.
 - **brotli** [📁](./brotli) [🌐](https://github.com/GerHobbelt/brotli) -- compression
 - **CacheLib** [📁](./CacheLib) [🌐](https://github.com/GerHobbelt/CacheLib) -- provides an in-process high performance caching mechanism, thread-safe API to build high throughput, low overhead caching services, with built-in ability to leverage DRAM and SSD caching transparently.
 - **caffe** [📁](./caffe) [🌐](https://github.com/GerHobbelt/caffe) -- a fast deep learning framework made with expression and modularity in mind, developed by Berkeley AI Research (BAIR)/The Berkeley Vision and Learning Center (BVLC).
+- **cairo** [📁](./cairo) [🌐](https://github.com/GerHobbelt/cairo)
+- **cairo-demos** [📁](./cairo-demos) [🌐](https://github.com/GerHobbelt/cairo-demos)
 - **calibre** [📁](./calibre) [🌐](https://github.com/GerHobbelt/calibre)
 - **catboost** [📁](./catboost) [🌐](https://github.com/GerHobbelt/catboost) -- a fast, scalable, high performance Gradient Boosting on Decision Trees library, used for ranking, classification, regression and other machine learning tasks. Supports computation on CPU and GPU.
 - **c-blosc2** [📁](./c-blosc2) [🌐](https://github.com/GerHobbelt/c-blosc2) -- a high performance compressor optimized for binary data (i.e. floating point numbers, integers and booleans), designed to transmit data to the processor cache faster than the traditional, non-compressed, direct memory fetch approach via a `memcpy()` OS call.
@@ -1291,10 +1294,13 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **civetweb** [📁](./civetweb) [🌐](https://github.com/GerHobbelt/civetweb) -- an easy to use, powerful, C (C/C++) embeddable web server with optional CGI, SSL and Lua support.
 - **clBLAS** [📁](./clBLAS) [🌐](https://github.com/GerHobbelt/clBLAS) -- the OpenCL™ BLAS portion of OpenCL's `clMath`. The complete set of BLAS level 1, 2 & 3 routines is implemented. In addition to GPU devices, the library also supports running on CPU devices to facilitate debugging and multicore programming. The primary goal of `clBLAS` is to make it easier for developers to utilize the inherent performance and power efficiency benefits of heterogeneous computing. `clBLAS` interfaces do not hide nor wrap OpenCL interfaces, but rather leaves OpenCL state management to the control of the user to allow for maximum performance and flexibility. The clBLAS library does generate and enqueue optimized OpenCL kernels, relieving the user from the task of writing, optimizing and maintaining kernel code themselves.
 - **CLBlast** [📁](./CLBlast) [🌐](https://github.com/GerHobbelt/CLBlast)
+- **CLBlast-database** [📁](./CLBlast-database) [🌐](https://github.com/GerHobbelt/CLBlast-database)
 - **cld2-language-detect** [📁](./cld2-language-detect) [🌐](https://github.com/GerHobbelt/cld2) -- CLD2 probabilistically detects over 80 languages in Unicode UTF-8 text, either plain text or HTML/XML. For mixed-language input, CLD2 returns the top three languages found and their approximate percentages of the total text bytes.  Optionally, it also returns a vector of text spans with the language of each identified. The design target is web pages of at least 200 characters (about two sentences); CLD2 is not designed to do well on very short text.
 - **cli11** [📁](./cli11) [🌐](https://github.com/GerHobbelt/CLI11) -- command line options parser
 - **clipp** [📁](./clipp) [🌐](https://github.com/GerHobbelt/clipp) -- commandline parser
+- **CLTune** [📁](./CLTune) [🌐](https://github.com/GerHobbelt/CLTune)
 - **cmph-hasher** [📁](./cmph-hasher) [🌐](https://github.com/GerHobbelt/cmph) -- C Minimal Perfect Hashing Library for both small and (very) large hash sets.
+- **ColorSpace** [📁](./ColorSpace) [🌐](https://github.com/GerHobbelt/ColorSpace)
 - **comdb2-bdb** [📁](./comdb2-bdb) [🌐](https://github.com/GerHobbelt/comdb2)
 - **compact_enc_det** [📁](./compact_enc_det) [🌐](https://github.com/GerHobbelt/compact_enc_det) -- Compact Encoding Detection (CED for short) is a library written in C++ that scans given raw bytes and detect the most likely text encoding.
 - **completesearch** [📁](./completesearch) [🌐](https://github.com/GerHobbelt/completesearch)
@@ -1332,7 +1338,10 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **cuckoofilter** [📁](./cuckoofilter) [🌐](https://github.com/GerHobbelt/cuckoofilter)
 - **cuckoo-index** [📁](./cuckoo-index) [🌐](https://github.com/GerHobbelt/cuckoo-index) -- Cuckoo Index (CI) is a lightweight secondary index structure that represents the many-to-many relationship between keys and partitions of columns in a highly space-efficient way. CI associates variable-sized fingerprints in a Cuckoo filter with compressed bitmaps indicating qualifying partitions. The problem of finding all partitions that possibly contain a given lookup key is traditionally solved by maintaining one filter (e.g., a Bloom filter) per partition that indexes all unique key values contained in this partition. To identify all partitions containing a key, we would need to probe all per-partition filters (which could be many). Depending on the storage medium, a false positive there can be very expensive. Furthermore, secondary columns typically contain many duplicates (also across partitions). Cuckoo Index (CI) addresses these drawbacks of per-partition filters.
 - **cURL** [📁](../../thirdparty/curl) [🌐](https://github.com/GerHobbelt/thirdparty-curl) -- the ubiquitous [libcurl](http://curl.haxx.se/libcurl).
+- **curl-impersonate** [📁](./curl-impersonate) [🌐](https://github.com/GerHobbelt/curl-impersonate)
+- **curl-www** [📁](./curl-www) [🌐](https://github.com/GerHobbelt/curl-www)
 - **CxImage** [📁](./CxImage) [🌐](https://github.com/GerHobbelt/CxImage) -- venerated library for reading and creating many image file formats
+- **cxxopts** [📁](./cxxopts) [🌐](https://github.com/GerHobbelt/cxxopts)
 - **cxxtest** [📁](./cxxtest) [🌐](https://github.com/GerHobbelt/cxxtest)
 - **cxxtest_catch_2_gtest** [📁](./cxxtest_catch_2_gtest) [🌐](https://github.com/GerHobbelt/cxxtest_catch_2_gtest) -- quick & dirty converter from various test suites to googletest, i.e. allows us to use a single test framework, despite some libraries having been set up to use another, e.g. Catch2.
 - **Cysboard** [📁](./Cysboard) [🌐](https://github.com/GerHobbelt/Cysboard)
@@ -1347,8 +1356,10 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **diffutils** [📁](./diffutils) [🌐](https://github.com/GerHobbelt/diffutils)
 - **dirent** [📁](./dirent) [🌐](https://github.com/GerHobbelt/dirent) -- POSIX `dirent.h` ported to MS Windows (Win32/Win64); used by several libraries.
 - **djvulibre** [📁](./djvulibre) [🌐](https://github.com/GerHobbelt/djvulibre)
+- **dlfcn-win32** [📁](./dlfcn-win32) [🌐](https://github.com/GerHobbelt/dlfcn-win32)
 - **dlib** [📁](./dlib) [🌐](https://github.com/GerHobbelt/dlib) -- machine learning algorithms
 - **docxBox** [📁](./docxBox) [🌐](https://github.com/GerHobbelt/docxBox) -- CLI tool for Word DOCX templating and analysis.
+- **doh** [📁](./doh) [🌐](https://github.com/GerHobbelt/doh)
 - **drogon** [📁](./drogon) [🌐](https://github.com/GerHobbelt/drogon) -- a C++14/17-based HTTP application framework to easily build various types of web application server programs.
 - **dtl-diff-template-library** [📁](./dtl-diff-template-library) [🌐](https://github.com/GerHobbelt/dtl)
 - **dtoa-benchmark** [📁](./dtoa-benchmark) [🌐](https://github.com/GerHobbelt/dtoa-benchmark) -- This benchmark evaluates the performance of conversion from double precision IEEE-754 floating point (double) to ASCII string.
@@ -1364,6 +1375,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **enkiTS** [📁](./enkiTS-TaskScheduler) [🌐](https://github.com/GerHobbelt/enkiTS) -- A C++11 Task Scheduler for creating parallel programs.
 - **EtwExplorer** [📁](./EtwExplorer) [🌐](https://github.com/GerHobbelt/EtwExplorer) -- View ETW Provider metadata. Event Tracing for Windows (ETW) is a logging facility built into the Windows OS. Modern providers register a manifest that describes all the events they support, with their properties. Classic providers register a MOF instead.
 - **eventpp** [📁](./eventpp) [🌐](https://github.com/GerHobbelt/eventpp)
+- **everything-curl** [📁](./everything-curl) [🌐](https://github.com/GerHobbelt/everything-curl)
 - **exiv2** [📁](./exiv2) [🌐](https://github.com/GerHobbelt/exiv2)
 - **expected-lite** [📁](./expected-lite) [🌐](https://github.com/GerHobbelt/expected-lite) -- a single-file header-only library to represent value objects that either contain a valid value or an error. The library is a partly implementation of the proposal for [`std::expected`](https://en.cppreference.com/w/cpp/utility/expected) for use with C++11 and later.
 - **Extensible-Storage-Engine** [📁](./Extensible-Storage-Engine) [🌐](https://github.com/GerHobbelt/Extensible-Storage-Engine) -- ESE is an embedded / ISAM-based database engine, that provides rudimentary table and indexed access. However the library provides many other strongly layered and thus reusable sub-facilities as well: A Synchronization / Locking library, a Data-structures / STL-like library, an OS-abstraction layer, and a Cache Manager, as well as the full-blown database engine itself.
@@ -1375,6 +1387,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **fastPRNG** [📁](./fastPRNG) [🌐](https://github.com/GerHobbelt/fastPRNG)
 - **fastText** [📁](./fastText) [🌐](https://github.com/GerHobbelt/fastText) -- [fastText](https://fasttext.cc/) is a library for efficient learning of word representations and sentence classification.
 - **fatal** [📁](./fatal) [🌐](https://github.com/GerHobbelt/fatal)
+- **fftw3** [📁](./fftw3) [🌐](https://github.com/GerHobbelt/fftw3)
 - **file** [📁](./file) [🌐](https://github.com/GerHobbelt/file) -- `file` filetype recognizer tool & mimemagic
 - **filesystem** [📁](./filesystem) [🌐](https://github.com/GerHobbelt/filesystem) -- a header-only single-file `std::filesystem` compatible helper library, based on the C++17 and C++20 specs, but implemented for C++11, C++14, C++17 or C++20 (tightly following the C++17 standard with very few documented exceptions). It is of course in its own namespace `ghc::filesystem` to not interfere with a regular `std::filesystem` should you use it in a mixed C++17 environment (which is possible).
 - **flat_hash_map** [📁](./flat_hash_map) [🌐](https://github.com/GerHobbelt/flat_hash_map) -- a very fast hashtable.
@@ -1384,6 +1397,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **folly** [📁](./folly) [🌐](https://github.com/GerHobbelt/folly)
 - **freeglut** [📁](../../thirdparty/freeglut) [🌐](https://github.com/GerHobbelt/thirdparty-freeglut)
 - **freetype** [📁](../../thirdparty/freetype) [🌐](https://github.com/GerHobbelt/thirdparty-freetype2)
+- **fribidi** [📁](./fribidi) [🌐](https://github.com/GerHobbelt/fribidi)
 - **friso** [📁](./friso) [🌐](https://github.com/GerHobbelt/friso) -- high performance Chinese tokenizer with both GBK and UTF-8 charset support based on MMSEG algorithm.
 - **frozen** [📁](./frozen) [🌐](https://github.com/GerHobbelt/frozen) -- provides 0 cost initialization for immutable containers, fixed-size containers, and various algorithms.
 - **gbenchmark** [📁](./gbenchmark) [🌐](https://github.com/GerHobbelt/benchmark)
@@ -1469,15 +1483,18 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **leptonica** [📁](../../thirdparty/leptonica) [🌐](https://github.com/GerHobbelt/leptonica)
 - **lerc** [📁](./lerc) [🌐](https://github.com/GerHobbelt/lerc) -- LERC (Limited Error Raster Compression) is an open-source image or raster format which supports rapid encoding and decoding for any pixel type (not just RGB or Byte). Users set the maximum compression error per pixel while encoding, so the precision of the original input image is preserved (within user defined error bounds).
 - **libaco** [📁](./libaco) [🌐](https://github.com/GerHobbelt/libaco) --  a blazing fast and lightweight C asymmetric coroutine library 💎 ⛅🚀⛅🌞 Along with the implementation of a production-ready C coroutine library, it has detailed documentation about how to implement a fastest and correct coroutine library, includes a strict mathematical proof. It has no more than 700 LOC but has the full functionality which you may want from a coroutine library. (The phrase "fastest" here means the fastest context switching implementation which complies to the Sys V ABI of Intel386 or AMD64.)
+- **libalg** [📁](./libalg) [🌐](https://github.com/GerHobbelt/alglib)
 - **libaom** [📁](./libaom) [🌐](https://github.com/GerHobbelt/libaom)
 - **libarchive** [📁](./libarchive) [🌐](https://github.com/GerHobbelt/libarchive)
 - **libassert** [📁](./libassert) [🌐](https://github.com/GerHobbelt/libassert) -- the most over-engineered and overpowered C++ assertion library.
 - **libassert** [📁](./libassert) [🌐](https://github.com/GerHobbelt/libassert) -- the most over-engineered and overpowered C++ assertion library. **Library philosophy**: Provide as much helpful diagnostic info as possible.
+- **libavif** [📁](./libavif) [🌐](https://github.com/GerHobbelt/libavif)
 - **libbf** [📁](./libbf) [🌐](https://github.com/GerHobbelt/libbf) -- a small library to handle arbitrary precision binary or decimal floating point numbers
 - **libbloom** [📁](./libbloom) [🌐](https://github.com/GerHobbelt/bloomd) -- a high-performance C server, exposing bloom filters and operations over them. The rate of false positives can be tuned to meet application demands, but reducing the error rate rapidly increases the amount of memory required for the representation. Example: Bloom filters enable you to represent 1MM items with a false positive rate of 0.1% in 2.4MB of RAM.
 - **libcbor** [📁](./libcbor) [🌐](https://github.com/GerHobbelt/libcbor)
 - **libchaos** [📁](./libchaos) [🌐](https://github.com/GerHobbelt/libchaos)
 - **libchardet** [📁](./libchardet) [🌐](https://github.com/GerHobbelt/libchardet) -- is based on Mozilla Universal Charset Detector library and, detects the character set used to encode data.
+- **libclip** [📁](./libclip) [🌐](https://github.com/GerHobbelt/clip)
 - **libcmime** [📁](./libcmime) [🌐](https://github.com/GerHobbelt/libcmime) -- MIME extract/insert/encode/decode: use for MHTML support
 - **libcnl** [📁](./libcnl) [🌐](https://github.com/GerHobbelt/cnl) -- The Compositional Numeric Library (CNL) is a C++ library of fixed-precision numeric classes which enhance integers to deliver safer, simpler, cheaper arithmetic types. CNL is particularly well-suited to: (1) compute on energy-constrained environments where FPUs are absent or costly; (2) compute on energy-intensive environments where arithmetic is the bottleneck such as simulations, machine learning applications and DSPs; and (3) domains such as finance where precision is essential.
 - **libconfig** [📁](./libconfig) [🌐](https://github.com/GerHobbelt/libconfig) -- generic config (file) reader/writer
@@ -1504,6 +1521,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **libfolia** [📁](./libfolia) [🌐](https://github.com/GerHobbelt/libfolia) -- working with the Format for Linguistic Annotation (FoLiA). Provides a high-level API to read, manipulate, and create FoLiA documents.
 - **libfort** [📁](./libfort) [🌐](https://github.com/GerHobbelt/libfort)
 - **libfyaml** [📁](./libfyaml) [🌐](https://github.com/GerHobbelt/libfyaml)
+- **libgateY** [📁](./libgateY) [🌐](https://github.com/GerHobbelt/libgateY)
 - **libgd** [📁](./libgd) [🌐](https://github.com/GerHobbelt/libgd) -- GD is a library for the dynamic creation of images by programmers. GD has support for: WebP, JPEG, PNG, AVIF, HEIF, TIFF, BMP, GIF, TGA, WBMP, XPM.
 - **libgif** [📁](./libgif) [🌐](https://github.com/GerHobbelt/libgif)
 - **libgrape-lite** [📁](./libgrape-lite) [🌐](https://github.com/GerHobbelt/libgrape-lite) -- a C++ library from Alibaba for parallel graph processing (GRAPE). It differs from prior systems in its ability to parallelize sequential graph algorithms as a whole by following the PIE programming model from GRAPE. Sequential algorithms can be easily "plugged into" `libgrape-lite` with only minor changes and get parallelized to handle large graphs efficiently. `libgrape-lite` is designed to be highly efficient and flexible, to cope with the scale, variety and complexity of real-life graph applications.
@@ -1527,10 +1545,12 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **libocca** [📁](./libocca) [🌐](https://github.com/GerHobbelt/occa)
 - **libpinyin** [📁](./libpinyin) [🌐](https://github.com/GerHobbelt/libpinyin)
 - **libpng** [📁](../../thirdparty/libpng) [🌐](https://github.com/GerHobbelt/libpng)
+- **libpopcnt** [📁](./libpopcnt) [🌐](https://github.com/GerHobbelt/libpopcnt)
 - **libpsl** [📁](./libpsl) [🌐](https://github.com/GerHobbelt/libpsl) -- handles the *Public Suffix List* (a collection of Top Level Domains (TLDs) suffixes, e.g. `.com`, `.net`, *Country Top Level Domains* (ccTLDs) like `.de` and `.cn` and *[Brand Top Level Domains](https://icannwiki.org/Brand_TLD)* like `.apple` and `.google`.
 - **libq** [📁](./libq) [🌐](https://github.com/GerHobbelt/q) -- A platform-independent promise library for C++, implementing asynchronous continuations.
 - **libqrencode** [📁](./libqrencode) [🌐](https://github.com/GerHobbelt/libqrencode) -- generate QRcodes from anything (e.g. URLs). `libqrencode` is a fast and compact library for encoding data in a QR Code, a 2D symbology that can be scanned by handy terminals such as a smartphone. The capacity of QR Code is up to 7000 digits or 4000 characters and has high robustness. `libqrencode` supports QR Code model 2, described in JIS (Japanese Industrial Standards) X0510:2004 or ISO/IEC 18004. Most of features in the specification are implemented: Numeric, alphabet, Japanese kanji (Shift-JIS) or any 8 bit code, Optimized encoding of a string, Structured-append of symbols, Micro QR Code (experimental).
 - **libquill** [📁](./libquill) [🌐](https://github.com/GerHobbelt/quill) -- a cross-platform low latency logging library based on C++14.
+- **libraqm** [📁](./libraqm) [🌐](https://github.com/GerHobbelt/libraqm)
 - **librsync** [📁](./librsync) [🌐](https://github.com/GerHobbelt/librsync) -- a library for calculating and applying network deltas. librsync encapsulates the core algorithms of the rsync protocol.
 - **libscanf** [📁](./libscanf) [🌐](https://github.com/GerHobbelt/scnlib)
 - **libshmcache** [📁](./libshmcache) [🌐](https://github.com/GerHobbelt/libshmcache)
@@ -1648,6 +1668,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **opencv_contrib** [📁](./opencv_contrib) [🌐](https://github.com/GerHobbelt/opencv_contrib)
 - **OpenFST** [📁](./OpenFST) [🌐](https://github.com/GerHobbelt/openfst) -- a library for constructing, combining, optimizing, and searching weighted finite-state transducers (FSTs). Weighted finite-state transducers are automata where each transition has an input label, an output label, and a weight. The more familiar finite-state acceptor is represented as a transducer with each transition's input and output label equal. Finite-state acceptors are used to represent sets of strings (specifically, regular or rational sets); finite-state transducers are used to represent binary relations between pairs of strings (specifically, rational transductions). The weights can be used to represent the cost of taking a particular transition. FSTs have key applications in speech recognition and synthesis, machine translation, optical character recognition, pattern matching, string processing, machine learning, information extraction and retrieval among others. Often a weighted transducer is used to represent a probabilistic model (e.g., an n-gram model, pronunciation model). FSTs can be optimized by determinization and minimization, models can be applied to hypothesis sets (also represented as automata) or cascaded by finite-state composition, and the best results can be selected by shortest-path algorithms.
 - **OpenFST-utils** [📁](./OpenFST-utils) [🌐](https://github.com/GerHobbelt/openfst-utils)
+- **OpenImageIO** [🌐](https://github.com/OpenImageIO/oiio) -- a library for reading, writing, and processing images in a wide variety of file formats, using a format-agnostic API, aimed at VFX applications.
 - **openjpeg** [📁](../../thirdparty/openjpeg) [🌐](https://github.com/GerHobbelt/thirdparty-openjpeg)
 - **openpbs** [📁](./openpbs) [🌐](https://github.com/GerHobbelt/openpbs)
 - **OpenSSL** [📁](./openssl) [🌐](https://github.com/GerHobbelt/openssl) -- also used by cURL et al, incidentally.
@@ -1661,6 +1682,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **pagerank** [📁](./pagerank) [🌐](https://github.com/GerHobbelt/pagerank) -- a [pagerank](http://www.ams.org/samplings/feature-column/fcarc-pagerank) implementation in C++ able to handle very big graphs.
 - **palanteer** [📁](./palanteer) [🌐](https://github.com/GerHobbelt/palanteer) -- Visual Python and C++ nanosecond profiler, logger, tests enabler: a set of lean and efficient tools to improve the quality of software, for C++ and Python programs.
 - **palmtree** [📁](./palmtree) [🌐](https://github.com/GerHobbelt/palmtree) -- concurrent lock free B+Tree
+- **pango** [📁](./pango) [🌐](https://github.com/GerHobbelt/pango)
 - **papis-zotero** [📁](./papis-zotero) [🌐](https://github.com/GerHobbelt/papis-zotero) -- Zotero compatiblity scripts for papis. Includes a script that decodes the zotero.sqlite sqlite file that zotero uses to manage documents and creates papis Documents out of it. This script will retrieve the documents from zotero (be it pdf documents or something else) and important information like tags.
 - **parallel-hashmap** [📁](./parallel-hashmap) [🌐](https://github.com/GerHobbelt/parallel-hashmap) -- a set of hash map implementations, as well as a btree alternative to std::map and std::set
 - **pcg-cpp-random** [📁](./pcg-cpp-random) [🌐](https://github.com/GerHobbelt/pcg-cpp) -- a C++ implementation of the PCG family of random number generators, which are fast, statistically excellent, and offer a number of useful features.
@@ -1684,6 +1706,8 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **pinyin** [📁](./pinyin) [🌐](https://github.com/GerHobbelt/pinyin)
 - **pipes** [📁](./pipes) [🌐](https://github.com/GerHobbelt/pipes)
 - **pisa** [📁](./pisa) [🌐](https://github.com/GerHobbelt/pisa) -- a text search engine able to run on large-scale collections of documents. It allows researchers to experiment with state-of-the-art techniques, allowing an ideal environment for rapid development. PISA is a text search engine, though the "PISA Project" is a set of tools that help experiment with indexing and query processing. Given a text collection, PISA can build an inverted index over this corpus, allowing the corpus to be searched. The inverted index, put simply, is an efficient data structure that represents the document corpus by storing a list of documents for each unique term (see here). At query time, PISA stores its index in main memory for rapid retrieval.
+- **pixman** [📁](./pixman) [🌐](https://github.com/GerHobbelt/pixman)
+- **PlatformFolders** [📁](./PlatformFolders) [🌐](https://github.com/GerHobbelt/PlatformFolders)
 - **plf_nanotimer** [📁](./plf_nanotimer) [🌐](https://github.com/GerHobbelt/plf_nanotimer) -- high precision cross-platform performance timer
 - **pmt-png-tools** [📁](./pmt-png-tools) [🌐](https://github.com/GerHobbelt/pmt)
 - **podofo** [📁](./podofo) [🌐](https://github.com/GerHobbelt/podofo)
@@ -1740,6 +1764,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **shoco** [📁](./shoco) [🌐](https://github.com/GerHobbelt/shoco) -- a fast compressor for short strings
 - **Signals** [📁](./Signals) [🌐](https://github.com/GerHobbelt/Signals)
 - **SilkETW** [📁](./SilkETW) [🌐](https://github.com/GerHobbelt/SilkETW) -- SilkETW & SilkService are flexible C# wrappers for ETW, they are meant to abstract away the complexities of ETW and give people a simple interface to perform research and introspection. While both projects have obvious defensive (and offensive) applications they should primarily be considered as research tools.
+- **simd-imgproc** [📁](./simd-imgproc) [🌐](https://github.com/GerHobbelt/Simd)
 - **sioyek** [📁](./sioyek) [🌐](https://github.com/GerHobbelt/sioyek)
 - **smhasher** [📁](./smhasher) [🌐](https://github.com/GerHobbelt/smhasher) -- benchmark and collection of fast hash functions for symbol tables or hash tables.
 - **snap** [📁](./snap) [🌐](https://github.com/GerHobbelt/snap)
@@ -1959,7 +1984,6 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - ~~**lzsse** [🌐](https://github.com/ConorStokes/LZSSE) -- LZSS is designed for a branchless SSE decompression implementation for LZ compressed data.~~
 - ~~**oatpp** [🌐](https://github.com/oatpp/oatpp) -- IPC / server framework~~
 - ~~**OpenEXR** [🌐](https://github.com/AcademySoftwareFoundation/openexr) -- lossless format for multi-layered images. Professional use. (I've used it before; nice file format.)~~
-- **OpenImageIO** [🌐](https://github.com/OpenImageIO/oiio) -- a library for reading, writing, and processing images in a wide variety of file formats, using a format-agnostic API, aimed at VFX applications.
 - ~~**pithy** [🌐](https://github.com/johnezang/pithy) -- fast compression / decompression library, derived from `snappy`.~~
 - ~~**protobuf** [🌐](https://github.com/protocolbuffers/protobuf)~~
 - ~~**snappy** [🌐](https://github.com/google/snappy) -- a fast compressor/decompressor~~
@@ -2016,8 +2040,11 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **ApprovalTestsCpp** [📁](./ApprovalTestsCpp) [🌐](https://github.com/GerHobbelt/ApprovalTests.cpp)
 - **BoxFort** [📁](./BoxFort) [🌐](https://github.com/GerHobbelt/BoxFort)
 - **CLBlast** [📁](./CLBlast) [🌐](https://github.com/GerHobbelt/CLBlast)
+- **CLBlast-database** [📁](./CLBlast-database) [🌐](https://github.com/GerHobbelt/CLBlast-database)
+- **CLTune** [📁](./CLTune) [🌐](https://github.com/GerHobbelt/CLTune)
 - **CRFpp** [📁](./CRFpp) [🌐](https://github.com/GerHobbelt/crfpp)
 - **CRFsuite-extended** [📁](./CRFsuite-extended) [🌐](https://github.com/GerHobbelt/CRFSuiteEx)
+- **ColorSpace** [📁](./ColorSpace) [🌐](https://github.com/GerHobbelt/ColorSpace)
 - **Criterion** [📁](./Criterion) [🌐](https://github.com/GerHobbelt/Criterion)
 - **CryptSync** [📁](./CryptSync) [🌐](https://github.com/GerHobbelt/CryptSync)
 - **Cysboard** [📁](./Cysboard) [🌐](https://github.com/GerHobbelt/Cysboard)
@@ -2038,6 +2065,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **OpenFST-utils** [📁](./OpenFST-utils) [🌐](https://github.com/GerHobbelt/openfst-utils)
 - **PGM-index** [📁](./PGM-index) [🌐](https://github.com/GerHobbelt/PGM-index)
 - **PaddlePaddle** [📁](./PaddlePaddle) [🌐](https://github.com/GerHobbelt/Paddle)
+- **PlatformFolders** [📁](./PlatformFolders) [🌐](https://github.com/GerHobbelt/PlatformFolders)
 - **QCBOR** [📁](./QCBOR) [🌐](https://github.com/GerHobbelt/QCBOR)
 - **RuntimeCompiledCPlusPlus** [📁](./RuntimeCompiledCPlusPlus) [🌐](https://github.com/GerHobbelt/RuntimeCompiledCPlusPlus)
 - **RxCpp** [📁](./RxCpp) [🌐](https://github.com/GerHobbelt/RxCpp)
@@ -2056,6 +2084,9 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **asyncplusplus** [📁](./asyncplusplus) [🌐](https://github.com/GerHobbelt/asyncplusplus)
 - **basez** [📁](./basez) [🌐](https://github.com/GerHobbelt/basez)
 - **bitsery** [📁](./bitsery) [🌐](https://github.com/GerHobbelt/bitsery)
+- **boringssl** [📁](./boringssl) [🌐](https://github.com/GerHobbelt/boringssl)
+- **cairo** [📁](./cairo) [🌐](https://github.com/GerHobbelt/cairo)
+- **cairo-demos** [📁](./cairo-demos) [🌐](https://github.com/GerHobbelt/cairo-demos)
 - **calibre** [📁](./calibre) [🌐](https://github.com/GerHobbelt/calibre)
 - **cctz** [📁](./cctz) [🌐](https://github.com/GerHobbelt/cctz)
 - **cef-pdf** [📁](./cef-pdf) [🌐](https://github.com/GerHobbelt/cef-pdf)
@@ -2070,18 +2101,26 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **crfsuite** [📁](./crfsuite) [🌐](https://github.com/GerHobbelt/crfsuite)
 - **csv-parser** [📁](./csv-parser) [🌐](https://github.com/GerHobbelt/csv-parser)
 - **ctsa** [📁](./ctsa) [🌐](https://github.com/GerHobbelt/ctsa)
+- **curl-impersonate** [📁](./curl-impersonate) [🌐](https://github.com/GerHobbelt/curl-impersonate)
+- **curl-www** [📁](./curl-www) [🌐](https://github.com/GerHobbelt/curl-www)
+- **cxxopts** [📁](./cxxopts) [🌐](https://github.com/GerHobbelt/cxxopts)
 - **cxxtest** [📁](./cxxtest) [🌐](https://github.com/GerHobbelt/cxxtest)
 - **date** [📁](./date) [🌐](https://github.com/GerHobbelt/date)
 - **datetimepp** [📁](./datetimepp) [🌐](https://github.com/GerHobbelt/datetimepp)
 - **dateutils** [📁](./dateutils) [🌐](https://github.com/GerHobbelt/dateutils)
 - **debugbreak** [📁](./debugbreak) [🌐](https://github.com/GerHobbelt/debugbreak)
 - **diffutils** [📁](./diffutils) [🌐](https://github.com/GerHobbelt/diffutils)
+- **dlfcn-win32** [📁](./dlfcn-win32) [🌐](https://github.com/GerHobbelt/dlfcn-win32)
+- **doh** [📁](./doh) [🌐](https://github.com/GerHobbelt/doh)
 - **eventpp** [📁](./eventpp) [🌐](https://github.com/GerHobbelt/eventpp)
+- **everything-curl** [📁](./everything-curl) [🌐](https://github.com/GerHobbelt/everything-curl)
 - **exiv2** [📁](./exiv2) [🌐](https://github.com/GerHobbelt/exiv2)
 - **fastPRNG** [📁](./fastPRNG) [🌐](https://github.com/GerHobbelt/fastPRNG)
 - **fatal** [📁](./fatal) [🌐](https://github.com/GerHobbelt/fatal)
+- **fftw3** [📁](./fftw3) [🌐](https://github.com/GerHobbelt/fftw3)
 - **fluent-bit** [📁](./fluent-bit) [🌐](https://github.com/GerHobbelt/fluent-bit)
 - **folly** [📁](./folly) [🌐](https://github.com/GerHobbelt/folly)
+- **fribidi** [📁](./fribidi) [🌐](https://github.com/GerHobbelt/fribidi)
 - **gettext** [📁](./gettext) [🌐](https://github.com/GerHobbelt/gettext)
 - **gtn** [📁](./gtn) [🌐](https://github.com/GerHobbelt/gtn)
 - **harbour-core** [📁](./harbour-core) [🌐](https://github.com/GerHobbelt/core)
@@ -2098,9 +2137,12 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **jsoncons** [📁](./jsoncons) [🌐](https://github.com/GerHobbelt/jsoncons)
 - **kfr** [📁](./kfr) [🌐](https://github.com/GerHobbelt/kfr)
 - **koan** [📁](./koan) [🌐](https://github.com/GerHobbelt/koan)
+- **libalg** [📁](./libalg) [🌐](https://github.com/GerHobbelt/alglib)
 - **libaom** [📁](./libaom) [🌐](https://github.com/GerHobbelt/libaom)
+- **libavif** [📁](./libavif) [🌐](https://github.com/GerHobbelt/libavif)
 - **libcbor** [📁](./libcbor) [🌐](https://github.com/GerHobbelt/libcbor)
 - **libchaos** [📁](./libchaos) [🌐](https://github.com/GerHobbelt/libchaos)
+- **libclip** [📁](./libclip) [🌐](https://github.com/GerHobbelt/clip)
 - **libcppjieba** [📁](./libcppjieba) [🌐](https://github.com/GerHobbelt/libcppjieba)
 - **libcsv2** [📁](./libcsv2) [🌐](https://github.com/GerHobbelt/csv2)
 - **libde265** [📁](./libde265) [🌐](https://github.com/GerHobbelt/libde265)
@@ -2111,6 +2153,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **libevt** [📁](./libevt) [🌐](https://github.com/GerHobbelt/libevt)
 - **libffi** [📁](./libffi) [🌐](https://github.com/GerHobbelt/libffi)
 - **libfort** [📁](./libfort) [🌐](https://github.com/GerHobbelt/libfort)
+- **libgateY** [📁](./libgateY) [🌐](https://github.com/GerHobbelt/libgateY)
 - **libharry** [📁](./libharry) [🌐](https://github.com/GerHobbelt/harry)
 - **libheif** [📁](./libheif) [🌐](https://github.com/GerHobbelt/heif)
 - **libheif-alt** [📁](./libheif-alt) [🌐](https://github.com/GerHobbelt/libheif)
@@ -2119,6 +2162,8 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **libmobi** [📁](./libmobi) [🌐](https://github.com/GerHobbelt/libmobi)
 - **libocca** [📁](./libocca) [🌐](https://github.com/GerHobbelt/occa)
 - **libpinyin** [📁](./libpinyin) [🌐](https://github.com/GerHobbelt/libpinyin)
+- **libpopcnt** [📁](./libpopcnt) [🌐](https://github.com/GerHobbelt/libpopcnt)
+- **libraqm** [📁](./libraqm) [🌐](https://github.com/GerHobbelt/libraqm)
 - **libshmcache** [📁](./libshmcache) [🌐](https://github.com/GerHobbelt/libshmcache)
 - **libsigcplusplus** [📁](./libsigcplusplus) [🌐](https://github.com/GerHobbelt/libsigcplusplus)
 - **libsmile** [📁](./libsmile) [🌐](https://github.com/GerHobbelt/libsmile)
@@ -2147,6 +2192,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **openpbs** [📁](./openpbs) [🌐](https://github.com/GerHobbelt/openpbs)
 - **osquery** [📁](./osquery) [🌐](https://github.com/GerHobbelt/osquery)
 - **pHash** [📁](./pHash) [🌐](https://github.com/GerHobbelt/pHash)
+- **pango** [📁](./pango) [🌐](https://github.com/GerHobbelt/pango)
 - **pcm** [📁](./pcm) [🌐](https://github.com/GerHobbelt/pcm)
 - **pdfgrep** [📁](./pdfgrep) [🌐](https://github.com/GerHobbelt/pdfgrep)
 - **pdfium** [📁](./pdfium) [🌐](https://github.com/GerHobbelt/pdfium)
@@ -2155,6 +2201,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **picoc** [📁](./picoc) [🌐](https://github.com/GerHobbelt/picoc)
 - **pinyin** [📁](./pinyin) [🌐](https://github.com/GerHobbelt/pinyin)
 - **pipes** [📁](./pipes) [🌐](https://github.com/GerHobbelt/pipes)
+- **pixman** [📁](./pixman) [🌐](https://github.com/GerHobbelt/pixman)
 - **podofo** [📁](./podofo) [🌐](https://github.com/GerHobbelt/podofo)
 - **poppler** [📁](./poppler) [🌐](https://github.com/GerHobbelt/poppler)
 - **portable-snippets** [📁](./portable-snippets) [🌐](https://github.com/GerHobbelt/portable-snippets)
@@ -2172,6 +2219,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **shadesmar** [📁](./shadesmar) [🌐](https://github.com/GerHobbelt/shadesmar)
 - **sharedhashfile** [📁](./sharedhashfile) [🌐](https://github.com/GerHobbelt/sharedhashfile)
 - **shmdata** [📁](./shmdata) [🌐](https://github.com/GerHobbelt/shmdata)
+- **simd-imgproc** [📁](./simd-imgproc) [🌐](https://github.com/GerHobbelt/Simd)
 - **sioyek** [📁](./sioyek) [🌐](https://github.com/GerHobbelt/sioyek)
 - **snap** [📁](./snap) [🌐](https://github.com/GerHobbelt/snap)
 - **spdlog** [📁](./spdlog) [🌐](https://github.com/GerHobbelt/spdlog)
