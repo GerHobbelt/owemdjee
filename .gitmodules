@@ -2517,147 +2517,196 @@
 [submodule "libchaos"]
 	path = libchaos
 	url = https://github.com/GerHobbelt/libchaos.git
+
 [submodule "libevent"]
 	path = libevent
 	url = https://github.com/GerHobbelt/libevent.git
+
 [submodule "abseil-cpp"]
 	path = abseil-cpp
 	url = https://github.com/GerHobbelt/abseil-cpp.git
+
 [submodule "libdivsufsort"]
 	path = libdivsufsort
 	url = https://github.com/GerHobbelt/libdivsufsort.git
+
 [submodule "fluent-bit"]
 	path = fluent-bit
 	url = https://github.com/GerHobbelt/fluent-bit.git
+
 [submodule "bitsery"]
 	path = bitsery
 	url = https://github.com/GerHobbelt/bitsery.git
+
 [submodule "CryptSync"]
 	path = CryptSync
 	url = https://github.com/GerHobbelt/CryptSync.git
+
 [submodule "taglib"]
 	path = taglib
 	url = https://github.com/GerHobbelt/taglib.git
+
 [submodule "harbour-core"]
 	path = harbour-core
 	url = https://github.com/GerHobbelt/core.git
+
 [submodule "id3-tagparser"]
 	path = id3-tagparser
 	url = https://github.com/GerHobbelt/tagparser.git
+
 [submodule "mmkv"]
 	path = mmkv
 	url = https://github.com/GerHobbelt/MMKV.git
+
 [submodule "VSNASM"]
 	path = VSNASM
 	url = https://github.com/GerHobbelt/VSNASM.git
+
 [submodule "nghttp3"]
 	path = nghttp3
 	url = https://github.com/GerHobbelt/nghttp3.git
+
 [submodule "ngtcp2"]
 	path = ngtcp2
 	url = https://github.com/GerHobbelt/ngtcp2.git
+
 [submodule "splitmerge"]
 	path = splitmerge
 	url = git@github.com:GerHobbelt/splitmerge.git
+
 [submodule "kfr"]
 	path = kfr
 	url = git@github.com:GerHobbelt/kfr.git
+
 [submodule "nsis"]
 	path = nsis
 	url = git@github.com:GerHobbelt/nsis.git
+
 [submodule "NSISDotNetChecker"]
 	path = NSISDotNetChecker
 	url = git@github.com:GerHobbelt/NsisDotNetChecker.git
+
 [submodule "nsis-nscurl"]
 	path = nsis-nscurl
 	url = git@github.com:GerHobbelt/nsis-nscurl.git
+
 [submodule "nsis-stdutils"]
 	path = nsis-stdutils
 	url = git@github.com:GerHobbelt/stdutils.git
+
 [submodule "NSISMultiUser"]
 	path = NSISMultiUser
 	url = git@github.com:GerHobbelt/NsisMultiUser.git
+
 [submodule "NSISFileCheck"]
 	path = NSISFileCheck
 	url = git@github.com:GerHobbelt/nsisfilecheck.git
+
 [submodule "NSIS-OBSInstallerUtils"]
 	path = NSIS-OBSInstallerUtils
 	url = git@github.com:GerHobbelt/OBSInstallerUtils.git
+
 [submodule "ctsa"]
 	path = ctsa
 	url = git@github.com:GerHobbelt/ctsa.git
+
 [submodule "libharry"]
 	path = libharry
 	url = git@github.com:GerHobbelt/harry.git
+
 [submodule "simd-imgproc"]
 	path = simd-imgproc
 	url = git@github.com:GerHobbelt/Simd.git
+
 [submodule "libavif"]
 	path = libavif
 	url = git@github.com:GerHobbelt/libavif.git
+
 [submodule "cairo"]
 	path = cairo
 	url = git@github.com:GerHobbelt/cairo.git
+
 [submodule "pixman"]
 	path = pixman
 	url = git@github.com:GerHobbelt/pixman.git
+
 [submodule "pango"]
 	path = pango
 	url = git@github.com:GerHobbelt/pango.git
+
 [submodule "fribidi"]
 	path = fribidi
 	url = git@github.com:GerHobbelt/fribidi.git
+
 [submodule "libraqm"]
 	path = libraqm
 	url = git@github.com:GerHobbelt/libraqm.git
+
 [submodule "fftw3"]
 	path = fftw3
 	url = git@github.com:GerHobbelt/fftw3.git
+
 [submodule "CLTune"]
 	path = CLTune
 	url = git@github.com:GerHobbelt/CLTune.git
+
 [submodule "CLBlast-database"]
 	path = CLBlast-database
 	url = git@github.com:GerHobbelt/CLBlast-database.git
+
 [submodule "libgateY"]
 	path = libgateY
 	url = git@github.com:GerHobbelt/libgateY.git
+
 [submodule "ColorSpace"]
 	path = ColorSpace
 	url = git@github.com:GerHobbelt/ColorSpace.git
+
 [submodule "cairo-demos"]
 	path = cairo-demos
 	url = git@github.com:GerHobbelt/cairo-demos.git
+
 [submodule "cxxopts"]
 	path = cxxopts
 	url = git@github.com:GerHobbelt/cxxopts.git
+
 [submodule "everything-curl"]
 	path = everything-curl
 	url = git@github.com:GerHobbelt/everything-curl.git
+
 [submodule "libalg"]
 	path = libalg
 	url = git@github.com:GerHobbelt/alglib.git
+
 [submodule "curl-impersonate"]
 	path = curl-impersonate
 	url = git@github.com:GerHobbelt/curl-impersonate.git
+
 [submodule "boringssl"]
 	path = boringssl
 	url = git@github.com:GerHobbelt/boringssl.git
+
 [submodule "curl-www"]
 	path = curl-www
 	url = git@github.com:GerHobbelt/curl-www.git
+
 [submodule "doh"]
 	path = doh
 	url = git@github.com:GerHobbelt/doh.git
+
 [submodule "libpopcnt"]
 	path = libpopcnt
 	url = git@github.com:GerHobbelt/libpopcnt.git
+
 [submodule "PlatformFolders"]
 	path = PlatformFolders
 	url = git@github.com:GerHobbelt/PlatformFolders.git
+
 [submodule "libclip"]
 	path = libclip
 	url = git@github.com:GerHobbelt/clip.git
+
 [submodule "dlfcn-win32"]
 	path = dlfcn-win32
 	url = git@github.com:GerHobbelt/dlfcn-win32.git
+
