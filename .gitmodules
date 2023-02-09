@@ -2058,10 +2058,6 @@
 	path = Signals
 	url = https://github.com/GerHobbelt/Signals.git
 
-[submodule "percona-server"]
-	path = percona-server
-	url = https://github.com/GerHobbelt/percona-server.git
-
 [submodule "comdb2-bdb"]
 	path = comdb2-bdb
 	url = https://github.com/GerHobbelt/comdb2.git
