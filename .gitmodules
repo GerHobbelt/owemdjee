@@ -2706,3 +2706,14 @@
 	path = dlfcn-win32
 	url = git@github.com:GerHobbelt/dlfcn-win32.git
 
+[submodule "SymSpell"]
+	path = SymSpell
+	url = git@github.com:GerHobbelt/SymSpell.git
+
+[submodule "wordfreq"]
+	path = wordfreq
+	url = git@github.com:GerHobbelt/wordfreq.git
+
+[submodule "wordfrequency"]
+	path = wordfrequency
+	url = git@github.com:GerHobbelt/FrequencyWords.git
