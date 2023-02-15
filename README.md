@@ -2279,4 +2279,12 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **xlnt** [📁](./xlnt) [🌐](https://github.com/GerHobbelt/xlnt)
 - **xpdf** [📁](./xpdf) [🌐](https://github.com/GerHobbelt/xpdf)
 
+[submodule "libdtm"]
+	path = libdtm
+	url = git@github.com:GerHobbelt/dtm.git
+
+[submodule "prvhash"]
+	path = prvhash
+	url = git@github.com:GerHobbelt/prvhash.git
+
 

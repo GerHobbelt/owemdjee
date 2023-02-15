@@ -2717,3 +2717,11 @@
 [submodule "wordfrequency"]
 	path = wordfrequency
 	url = git@github.com:GerHobbelt/FrequencyWords.git
+
+[submodule "libdtm"]
+	path = libdtm
+	url = git@github.com:GerHobbelt/dtm.git
+
+[submodule "prvhash"]
+	path = prvhash
+	url = git@github.com:GerHobbelt/prvhash.git
