@@ -2725,3 +2725,6 @@
 [submodule "prvhash"]
 	path = prvhash
 	url = git@github.com:GerHobbelt/prvhash.git
+[submodule "vxl"]
+	path = vxl
+	url = git@github.com:GerHobbelt/vxl.git
