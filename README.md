@@ -1529,6 +1529,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **libdi-dependency-injection** [📁](./libdi-dependency-injection) [🌐](https://github.com/GerHobbelt/di) -- \[Boost::ext\].DI :: your C++14 **one header only** Dependency Injection library with no dependencies
 - **libdist** [📁](./libdist) [🌐](https://github.com/GerHobbelt/distlib) -- string distance related functions (Damerau-Levenshtein, Jaro-Winkler, longest common substring & subsequence) implemented as SQLite run-time loadable extension, with UTF-8 support.
 - **libdivsufsort** [📁](./libdivsufsort) [🌐](https://github.com/GerHobbelt/libdivsufsort) -- a software library that implements a lightweight suffix array construction algorithm.
+- **libdtm** [📁](./libdtm) [🌐](https://github.com/GerHobbelt/dtm)
 - **libeigen** [📁](./libeigen) [🌐](https://github.com/GerHobbelt/eigen-git-mirror) -- a C++ template library for linear algebra: matrices, vectors, numerical solvers, and related algorithms.
 - **libeternaltimestamp** [📁](./libeternaltimestamp) [🌐](https://github.com/GerHobbelt/libeternaltimestamp) -- provide/encode/decode 64-bit integer timestamps which can encode *any* date/time in the lifetime of our planet from before the Big Bang up to about 3000 AD in the future.
 - **libevent** [📁](./libevent) [🌐](https://github.com/GerHobbelt/libevent)
@@ -1738,6 +1739,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **promise-cpp** [📁](./promise-cpp) [🌐](https://github.com/GerHobbelt/promise-cpp) -- advanced C++ promise/A+ library in Javascript style
 - **promise-hpp** [📁](./promise-hpp) [🌐](https://github.com/GerHobbelt/promise.hpp) -- C++ asynchronous promises like a Promises/A+
 - **proxygen** [📁](./proxygen) [🌐](https://github.com/GerHobbelt/proxygen) -- the core C++ HTTP abstractions used at Facebook. Internally, it is used as the basis for building many HTTP servers, proxies, and clients, focusing on the common HTTP abstractions and our simple HTTPServer framework. The framework supports HTTP/1.1, SPDY/3, SPDY/3.1, HTTP/2, and HTTP/3.
+- **prvhash** [📁](./prvhash) [🌐](https://github.com/GerHobbelt/prvhash)
 - **pthreadpool** [📁](./pthreadpool) [🌐](https://github.com/GerHobbelt/pthreadpool) -- pthreadpool is a portable and efficient thread pool implementation. It provides similar functionality to `#pragma omp parallel for`, but with additional features.
 - **pthread-win32** [📁](./pthread-win32) [🌐](https://github.com/GerHobbelt/pthread-win32) -- `pthread` for MS Windows
 - **pybind11** [📁](./pybind11) [🌐](https://github.com/GerHobbelt/pybind11)
@@ -1900,6 +1902,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **VisualScriptEngine** [📁](./VisualScriptEngine) [🌐](https://github.com/GerHobbelt/VisualScriptEngine) -- A visual scripting engine designed for embedding. The engine is written in modern C++ and compiles on several platforms with no external dependencies.
 - **VQMT** [📁](./VQMT) [🌐](https://github.com/GerHobbelt/VQMT)
 - **VSNASM** [📁](./VSNASM) [🌐](https://github.com/GerHobbelt/VSNASM)
+- **vxl** [📁](./vxl) [🌐](https://github.com/GerHobbelt/vxl)
 - **warc2text** [📁](./warc2text) [🌐](https://github.com/GerHobbelt/warc2text) -- Extracts plain text, language identification and more metadata from WARC records.
 - **warp-ctc** [📁](./warp-ctc) [🌐](https://github.com/GerHobbelt/warp-ctc) -- A fast parallel implementation of CTC, on both CPU and GPU. Connectionist Temporal Classification (CTC) is a loss function useful for performing supervised learning on sequence data, without needing an alignment between input data and labels. For example, CTC can be used to train end-to-end systems for speech recognition.
 - **warpLDA** [📁](./warpLDA) [🌐](https://github.com/GerHobbelt/warplda) -- a cache efficient implementation for Latent Dirichlet Allocation.
@@ -2169,6 +2172,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **libde265** [📁](./libde265) [🌐](https://github.com/GerHobbelt/libde265)
 - **libdi-dependency-injection** [📁](./libdi-dependency-injection) [🌐](https://github.com/GerHobbelt/di)
 - **libdivsufsort** [📁](./libdivsufsort) [🌐](https://github.com/GerHobbelt/libdivsufsort)
+- **libdtm** [📁](./libdtm) [🌐](https://github.com/GerHobbelt/dtm)
 - **libeigen** [📁](./libeigen) [🌐](https://github.com/GerHobbelt/eigen-git-mirror)
 - **libevent** [📁](./libevent) [🌐](https://github.com/GerHobbelt/libevent)
 - **libevt** [📁](./libevt) [🌐](https://github.com/GerHobbelt/libevt)
@@ -2227,6 +2231,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **poppler** [📁](./poppler) [🌐](https://github.com/GerHobbelt/poppler)
 - **portable-snippets** [📁](./portable-snippets) [🌐](https://github.com/GerHobbelt/portable-snippets)
 - **probminhash** [📁](./probminhash) [🌐](https://github.com/GerHobbelt/probminhash)
+- **prvhash** [📁](./prvhash) [🌐](https://github.com/GerHobbelt/prvhash)
 - **pybind11** [📁](./pybind11) [🌐](https://github.com/GerHobbelt/pybind11)
 - **pyclustering** [📁](./pyclustering) [🌐](https://github.com/GerHobbelt/pyclustering)
 - **pytorch_cpp_demo** [📁](./pytorch_cpp_demo) [🌐](https://github.com/GerHobbelt/pytorch_cpp)
@@ -2278,6 +2283,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **unixODBC** [📁](./unixODBC) [🌐](https://github.com/GerHobbelt/unixODBC)
 - **unpaper** [📁](./unpaper) [🌐](https://github.com/GerHobbelt/unpaper)
 - **variadic_table** [📁](./variadic_table) [🌐](https://github.com/GerHobbelt/variadic_table)
+- **vxl** [📁](./vxl) [🌐](https://github.com/GerHobbelt/vxl)
 - **wil-Win32-Interface-Library** [📁](./wil-Win32-Interface-Library) [🌐](https://github.com/GerHobbelt/wil)
 - **word2vec** [📁](./word2vec) [🌐](https://github.com/GerHobbelt/word2vec)
 - **word2vec-GloVe** [📁](./word2vec-GloVe) [🌐](https://github.com/GerHobbelt/GloVe)
@@ -2287,13 +2293,5 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **wxPdfDocument** [📁](./wxPdfDocument) [🌐](https://github.com/GerHobbelt/wxpdfdoc)
 - **xlnt** [📁](./xlnt) [🌐](https://github.com/GerHobbelt/xlnt)
 - **xpdf** [📁](./xpdf) [🌐](https://github.com/GerHobbelt/xpdf)
-
-[submodule "libdtm"]
-	path = libdtm
-	url = git@github.com:GerHobbelt/dtm.git
-
-[submodule "prvhash"]
-	path = prvhash
-	url = git@github.com:GerHobbelt/prvhash.git
 
 
