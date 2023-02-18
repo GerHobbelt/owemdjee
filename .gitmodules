@@ -2729,3 +2729,23 @@
 [submodule "vxl"]
 	path = vxl
 	url = git@github.com:GerHobbelt/vxl.git
+
+[submodule "metalink-cli"]
+	path = metalink-cli
+	url = git@github.com:GerHobbelt/command.git
+
+[submodule "libmetalink"]
+	path = libmetalink
+	url = git@github.com:GerHobbelt/libmetalink.git
+
+[submodule "metalink-mini-downloader"]
+	path = metalink-mini-downloader
+	url = git@github.com:GerHobbelt/mini-downloader.git
+
+[submodule "wget2"]
+	path = wget2
+	url = git@github.com:GerHobbelt/wget2.git
+
+[submodule "wxCurl"]
+	path = wxCurl
+	url = git@github.com:GerHobbelt/wxCurl.git

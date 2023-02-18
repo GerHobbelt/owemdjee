@@ -1555,6 +1555,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **libjxl** [📁](./libjxl) [🌐](https://github.com/GerHobbelt/libjxl) -- JPEG XL reference implementation
 - **liblinear** [📁](./liblinear) [🌐](https://github.com/GerHobbelt/liblinear) -- a simple package for solving large-scale regularized linear classification, regression and outlier detection.
 - **libmdbx** [📁](./libmdbx) [🌐](https://github.com/GerHobbelt/libmdbx) -- one of the fastest embeddable key-value ACID database without WAL. `libmdbx` surpasses the legendary LMDB in terms of reliability, features and performance.
+- **libmetalink** [📁](./libmetalink) [🌐](https://github.com/GerHobbelt/libmetalink)
 - **libmio** [📁](./libmio) [🌐](https://github.com/GerHobbelt/mio) -- An easy to use header-only cross-platform C++11 memory mapping library. `mio` has been created with the goal to be easily includable (i.e. no dependencies) in any C++ project that needs memory mapped file IO without the need to pull in Boost.
 - **libmlpp** [📁](./libmlpp) [🌐](https://github.com/GerHobbelt/MLPP) -- ML++ :: The intent with this machine-learning library is for it to act as a crossroad between low-level developers and machine learning engineers.
 - **libmobi** [📁](./libmobi) [🌐](https://github.com/GerHobbelt/libmobi) -- a library for handling Mobipocket/Kindle (MOBI) ebook format documents.
@@ -1629,6 +1630,8 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - ~~**merror** [📁](./merror) [🌐](https://github.com/GerHobbelt/merror) -- a library for error handling in C++ without exceptions.~~
 - **mesh-allocator** [📁](./mesh-allocator) [🌐](https://github.com/GerHobbelt/Mesh)
 - **messagebox-windows** [📁](./messagebox-windows) [🌐](https://github.com/GerHobbelt/messagebox-windows) -- drive `MessageBox` and `MessageBeep` Win32 APIs
+- **metalink-cli** [📁](./metalink-cli) [🌐](https://github.com/GerHobbelt/command)
+- **metalink-mini-downloader** [📁](./metalink-mini-downloader) [🌐](https://github.com/GerHobbelt/mini-downloader)
 - **mht-rip** [📁](./mht-rip) [🌐](https://github.com/GerHobbelt/mht-rip) -- as I have several HTML pages stored in this MHTML format. See also CHM: `CHM-lib`
 - **microsoft-performance-toolkit-sdk** [📁](./microsoft-performance-toolkit-sdk) [🌐](https://github.com/GerHobbelt/microsoft-performance-toolkit-sdk) -- The Microsoft Performance Toolkit is a collection of cross-platform tools developers can use to create and extend performance analysis applications. It serves as the runtime of the Windows Performance Analyzer, a Windows program included in the Windows Performance Toolkit. By using the Microsoft Performance Toolkit SDK, Windows Performance Analyzer - or any performance analysis application - can be configured to process and display performance data from arbitrary sources.
 - **midas** [📁](./midas) [🌐](https://github.com/GerHobbelt/MIDAS)
@@ -1909,6 +1912,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **websocket-sharp** [📁](./websocket-sharp) [🌐](https://github.com/GerHobbelt/websocket-sharp) -- a C# implementation of the WebSocket protocol client and server.
 - **webview** [📁](./webview) [🌐](https://github.com/GerHobbelt/webview) -- cross-platform embedding of the system-default web browser: a tiny cross-platform webview library for C/C++/Golang to build modern cross-platform GUIs. The goal of the project is to create a common HTML5 UI abstraction layer for the most widely used platforms. It supports two-way JavaScript bindings (to call JavaScript from C/C++/Go and to call C/C++/Go from JavaScript).
 - **wget** [📁](./wget) [🌐](https://github.com/GerHobbelt/wget)
+- **wget2** [📁](./wget2) [🌐](https://github.com/GerHobbelt/wget2)
 - **wil-Win32-Interface-Library** [📁](./wil-Win32-Interface-Library) [🌐](https://github.com/GerHobbelt/wil)
 - **win32-dpi** [📁](./win32-dpi) [🌐](https://github.com/GerHobbelt/win32-dpi) -- Win32 DPI-aware window example, showcasing how to write a Win32 DPI-aware GUI application that scales properly on everything starting from Windows XP up to and including latest Windows 11.
 - **Win32_read_directory_changes** [📁](./Win32_read_directory_changes) [🌐](https://github.com/GerHobbelt/readdirectorychanges)
@@ -1922,6 +1926,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **wordfreq** [📁](./wordfreq) [🌐](https://github.com/GerHobbelt/wordfreq)
 - **wordfrequency** [📁](./wordfrequency) [🌐](https://github.com/GerHobbelt/FrequencyWords)
 - **wxCharts** [📁](./wxCharts) [🌐](https://github.com/GerHobbelt/wxCharts) -- charts for wxWidgets
+- **wxCurl** [📁](./wxCurl) [🌐](https://github.com/GerHobbelt/wxCurl)
 - **wxDatabase** [📁](./wxDatabase) [🌐](https://github.com/GerHobbelt/wxDatabase)
 - **wxExamples** [📁](./wxExamples) [🌐](https://github.com/GerHobbelt/Examples_wxWidgets) -- examples using wxWidgets
 - **wxFormBuilder** [📁](./wxFormBuilder) [🌐](https://github.com/GerHobbelt/wxFormBuilder) -- resource editor and GUI designer for wxWidgets
@@ -2183,6 +2188,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **libheif** [📁](./libheif) [🌐](https://github.com/GerHobbelt/heif)
 - **libheif-alt** [📁](./libheif-alt) [🌐](https://github.com/GerHobbelt/libheif)
 - **libjxl** [📁](./libjxl) [🌐](https://github.com/GerHobbelt/libjxl)
+- **libmetalink** [📁](./libmetalink) [🌐](https://github.com/GerHobbelt/libmetalink)
 - **libmlpp** [📁](./libmlpp) [🌐](https://github.com/GerHobbelt/MLPP)
 - **libmobi** [📁](./libmobi) [🌐](https://github.com/GerHobbelt/libmobi)
 - **libocca** [📁](./libocca) [🌐](https://github.com/GerHobbelt/occa)
@@ -2198,6 +2204,8 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **marian** [📁](./marian) [🌐](https://github.com/GerHobbelt/marian)
 - **memory** [📁](./memory) [🌐](https://github.com/GerHobbelt/memory)
 - **mesh-allocator** [📁](./mesh-allocator) [🌐](https://github.com/GerHobbelt/Mesh)
+- **metalink-cli** [📁](./metalink-cli) [🌐](https://github.com/GerHobbelt/command)
+- **metalink-mini-downloader** [📁](./metalink-mini-downloader) [🌐](https://github.com/GerHobbelt/mini-downloader)
 - **midas** [📁](./midas) [🌐](https://github.com/GerHobbelt/MIDAS)
 - **mmkv** [📁](./mmkv) [🌐](https://github.com/GerHobbelt/MMKV)
 - **monolith** [📁](./monolith) [🌐](https://github.com/GerHobbelt/monolith)
@@ -2284,11 +2292,13 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **unpaper** [📁](./unpaper) [🌐](https://github.com/GerHobbelt/unpaper)
 - **variadic_table** [📁](./variadic_table) [🌐](https://github.com/GerHobbelt/variadic_table)
 - **vxl** [📁](./vxl) [🌐](https://github.com/GerHobbelt/vxl)
+- **wget2** [📁](./wget2) [🌐](https://github.com/GerHobbelt/wget2)
 - **wil-Win32-Interface-Library** [📁](./wil-Win32-Interface-Library) [🌐](https://github.com/GerHobbelt/wil)
 - **word2vec** [📁](./word2vec) [🌐](https://github.com/GerHobbelt/word2vec)
 - **word2vec-GloVe** [📁](./word2vec-GloVe) [🌐](https://github.com/GerHobbelt/GloVe)
 - **wordfreq** [📁](./wordfreq) [🌐](https://github.com/GerHobbelt/wordfreq)
 - **wordfrequency** [📁](./wordfrequency) [🌐](https://github.com/GerHobbelt/FrequencyWords)
+- **wxCurl** [📁](./wxCurl) [🌐](https://github.com/GerHobbelt/wxCurl)
 - **wxDatabase** [📁](./wxDatabase) [🌐](https://github.com/GerHobbelt/wxDatabase)
 - **wxPdfDocument** [📁](./wxPdfDocument) [🌐](https://github.com/GerHobbelt/wxpdfdoc)
 - **xlnt** [📁](./xlnt) [🌐](https://github.com/GerHobbelt/xlnt)
