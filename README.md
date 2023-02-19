@@ -2304,4 +2304,198 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **xlnt** [📁](./xlnt) [🌐](https://github.com/GerHobbelt/xlnt)
 - **xpdf** [📁](./xpdf) [🌐](https://github.com/GerHobbelt/xpdf)
 
+- **A-MNS_TemplateMatching** [📁](./A-MNS_TemplateMatching) [🌐](https://github.com/GerHobbelt/A-MNS_TemplateMatching) -- the official code for the PatternRecognition2020 paper: Fast and robust template matching with majority neighbour similarity and annulus projection transformation. (Authors: Jinxiang Lai, Liang Lei, Kaiyuan Deng, Runming Yan, Yang Ruan, Zhou Jinyun)
+
+- **ApprovalTestsCpp** [📁](./ApprovalTestsCpp) [🌐](https://github.com/GerHobbelt/ApprovalTests.cpp) -- Approval Tests, also known as **Golden Master Tests** or **Snapshot Testing**, are an alternative to asserts. They are great for testing objects with lots of fields, or lists of objects.
+
+- **CLBlast** [📁](./CLBlast) [🌐](https://github.com/GerHobbelt/CLBlast) -- the tuned OpenCL BLAS library. CLBlast is a modern, lightweight, performant and tunable OpenCL BLAS library written in C++11. It is designed to leverage the full performance potential of a wide variety of OpenCL devices from different vendors, including desktop and laptop GPUs, embedded GPUs, and other accelerators. CLBlast implements BLAS routines: basic linear algebra subprograms operating on vectors and matrices. See [the CLBlast website](https://cnugteren.github.io/clblast) for performance reports on various devices as well as the latest CLBlast news. The library is not tuned for all possible OpenCL devices: __if out-of-the-box performance is poor, please run the tuners first__. 
+
+- **CLBlast-database** [📁](./CLBlast-database) [🌐](https://github.com/GerHobbelt/CLBlast-database) -- the tuning database for CLBlast. This repository contains the full database of tuning results for the [CLBlast OpenCL BLAS library](https://github.com/CNugteren/CLBlast). Tuning results are obtained using CLBlast and the [CLTune auto-tuner](https://github.com/CNugteren/CLTune). 
+
+- **CLTune** [📁](./CLTune) [🌐](https://github.com/GerHobbelt/CLTune) -- automatic OpenCL kernel tuning. CLTune is a C++ library which can be used to automatically tune your OpenCL and CUDA kernels. The only thing you'll need to provide is a tuneable kernel and a list of allowed parameters and values. For example, if you would perform loop unrolling or local memory tiling through a pre-processor define, just remove the define from your kernel code, pass the kernel to CLTune and tell it what the name of your parameter(s) are and what values you want to try. CLTune will take care of the rest: it will iterate over all possible permutations, test them, and report the best combination.
+
+
+- **CRFpp** [📁](./CRFpp) [🌐](https://github.com/GerHobbelt/crfpp) -- CRF++ is a simple, customizable, and open source implementation of <a href="http://www.cis.upenn.edu/~pereira/papers/crf.pdf">Conditional Random Fields (CRFs)</a> for segmenting/labeling sequential data. CRF++ is designed for generic purpose and will be applied to a variety of NLP tasks, such as Named Entity Recognition, Information Extraction and Text Chunking.
+
+
+
+- **CRFsuite-extended** [📁](./CRFsuite-extended) [🌐](https://github.com/GerHobbelt/CRFSuiteEx) -- CRFSuite is a fork of [Naoaki Okazaki's](http://www.chokkan.org/) implementation of conditional random fields (CRFs). This version of `CRFSuite` has been extended with the following variants of CRFs:
+
+  * tree-structured CRFs;
+  * semi-Markov CRFs of arbitrary orders;
+  * linear-chain CRFs  of arbitrary orders.
+
+- **ColorSpace** [📁](./ColorSpace) [🌐](https://github.com/GerHobbelt/ColorSpace) -- C++ library for converting between color spaces and comparing colors.
+
+  Currently Supported Color Spaces:
+
+  * CMY
+  * CMYK
+  * HSL
+  * HSB
+  * HSV
+  * CIE L\*AB
+  * Hunter LAB
+  * LCH
+  * LUV
+  * RGB
+  * XYZ
+  * YXY
+
+  Currently Supported Comparisons:
+
+  * Euclidean
+  * CIE1976
+  * CIE94
+  * CIE2000
+  * CMC
+
+- **Criterion** [📁](./Criterion) [🌐](https://github.com/GerHobbelt/Criterion) -- a dead-simple, yet extensible, C and C++ unit testing framework.
+
+- **CryptSync** [📁](./CryptSync) [🌐](https://github.com/GerHobbelt/CryptSync) -- a small utility that synchronizes two folders while encrypting the contents in one folder. That means one of the two folders has all files unencrypted (the files you work with) and the other folder has all the files encrypted. The synchronization works both ways: a change in one folder gets synchronized to the other folder. If a file is added or modified in the unencrypted folder, it gets encrypted. If a file is added or modified in the encrypted folder, it gets decrypted to the other folder. This is best used together with cloud storage tools like OneDrive, DropBox or Google Drive.
+
+- **Cysboard** [📁](./Cysboard) [🌐](https://github.com/GerHobbelt/Cysboard) -- a lightweight system monitor similar to `conky` but with html and css for themes.
+
+- **DGM-CRF** [📁](./DGM-CRF) [🌐](https://github.com/GerHobbelt/DGM) -- DGM (Direct Graphical Models) is a cross-platform C++ library implementing various tasks in probabilistic graphical models with pairwise and complete (dense) dependencies. The library aims to be used for the Markov and Conditional Random Fields (MRF / CRF), Markov Chains, Bayesian Networks, _etc_. 
+
+- **GoldFish-CBOR** [📁](./GoldFish-CBOR) [🌐](https://github.com/GerHobbelt/GoldFish) -- a fast JSON and CBOR streaming library, without using memory. GoldFish can parse and generate very large [JSON](http://json.org) or [CBOR](http://cbor.io) documents. It has some similarities to a [SAX](https://en.wikipedia.org/wiki/Simple_API_for_XML) parser, but doesn't use an event driven API, instead the user of the GoldFish interface is in control. GoldFish intends to be the easiest and one of the fastest JSON and CBOR streaming parser and serializer to use.
+
+- **JamSpell** [📁](./JamSpell) [🌐](https://github.com/GerHobbelt/JamSpell) -- a spell checking library, which considers words surroundings (context) for better correction (**accuracy**) and is **fast** (near 5K words per second)
+
+- **LightGBM** [📁](./LightGBM) [🌐](https://github.com/GerHobbelt/LightGBM) -- LightGBM (Light Gradient Boosting Machine) is a gradient boosting framework that uses tree based learning algorithms. It is designed to be distributed and efficient with the following advantages:
+
+  - Faster training speed and higher efficiency.
+  - Lower memory usage.
+  - Better accuracy.
+  - Support of parallel, distributed, and GPU learning.
+  - Capable of handling large-scale data.
+
+- **MNN** [📁](./MNN) [🌐](https://github.com/GerHobbelt/MNN) -- a highly efficient and lightweight deep learning framework. It supports inference and training of deep learning models, and has industry leading performance for inference and training on-device. At present, MNN has been integrated in more than 30 apps of Alibaba Inc, such as Taobao, Tmall, Youku, Dingtalk, Xianyu and etc., covering more than 70 usage scenarios such as live broadcast, short video capture, search recommendation, product searching by image, interactive marketing, equity distribution, security risk control. In addition, MNN is also used on embedded devices, such as IoT. Inside Alibaba, [MNN](https://mp.weixin.qq.com/s/5I1ISpx8lQqvCS8tGd6EJw) works as the basic module of the compute container in the [Walle](https://mp.weixin.qq.com/s/qpeCETty0BqqNJV9CMJafA) System, the first end-to-end, general-purpose, and large-scale production system for device-cloud collaborative machine learning, which has been published in the top system conference OSDI’22.
+
+- **NSIS-OBSInstallerUtils** [📁](./NSIS-OBSInstallerUtils) [🌐](https://github.com/GerHobbelt/OBSInstallerUtils) -- designed to be used with NSIS (Unicode version). It provides the following features:
+
+  ```
+  OBSInstallerUtils::IsProcessRunning
+  OBSInstallerUtils::IsDLLLoaded
+  OBSInstallerUtils::AddInUseFileCheck
+  OBSInstallerUtils::ResetInUseFileChecks
+  OBSInstallerUtils::GetAppNameForInUseFiles
+  OBSInstallerUtils::KillProcess
+  OBSInstallerUtils::AddAllApplicationPackages
+  ```
+
+- **NSISDotNetChecker** [📁](./NSISDotNetChecker) [🌐](https://github.com/GerHobbelt/NsisDotNetChecker) -- .NET Framework Checker NSIS plugin, used to detect if the required .NET Framework is installed and if it is not - plugin will download and install the required package. The plugin's C++ source code is based on the [work of Aaron Stebner](http://blogs.msdn.com/b/astebner/archive/2009/06/16/9763379.aspx).
+
+- **NSISFileCheck** [📁](./NSISFileCheck) [🌐](https://github.com/GerHobbelt/nsisfilecheck) -- NSIS FileCheck is a [NSIS (Nullsoft Scriptable Install System)](https://en.wikipedia.org/wiki/Nullsoft_Scriptable_Install_System) plugin that enables:
+
+  - Calculating a file's hash (SHA1, SHA2)
+  - Verifying a file's Authenticode code signature (including details)
+  - Obtaining a file's string version info
+
+- **NSISMultiUser** [📁](./NSISMultiUser) [🌐](https://github.com/GerHobbelt/NsisMultiUser) -- NSIS Multi User Plugin allows "per-user" (no admin required) and "per-machine" (asks elevation *only when necessary*) installations. This plugin was inspired by [MultiUser.nsh (by Joost Verburg)](http://nsis.sourceforge.net/Docs/MultiUser/Readme.html), but supports a lot of new features and is easier to use.
+
+- **NiuTrans.NMT** [📁](./NiuTrans.NMT) [🌐](https://github.com/GerHobbelt/NiuTrans.NMT) -- a lightweight and efficient Transformer-based neural machine translation system. Its main features are:
+  
+  * Few dependencies. It is implemented with pure C++, and all dependencies are optional.
+  * High efficiency. It is heavily optimized for fast decoding, see [our WMT paper](https://arxiv.org/pdf/2109.08003.pdf) for more details.
+  * Flexible running modes. The system can run with various systems and devices (Linux vs. Windows, CPUs vs. GPUs, and FP32 vs. FP16, etc.).
+  * Framework agnostic. It supports various models trained with other tools, e.g., fairseq models.
+
+- **OpenBLAS** [📁](./OpenBLAS) [🌐](https://github.com/GerHobbelt/OpenBLAS) -- an optimized BLAS (Basic Linear Algebra Subprograms) library based on GotoBLAS2 1.13 BSD version.
+
+- **OpenCL-CTS** [📁](./OpenCL-CTS) [🌐](https://github.com/GerHobbelt/OpenCL-CTS) -- the OpenCL Conformance Test Suite (CTS) for all versions of the Khronos [OpenCL](https://www.khronos.org/opencl/) standard.
+
+- **OpenCL-Headers** [📁](./OpenCL-Headers) [🌐](https://github.com/GerHobbelt/OpenCL-Headers) -- C language headers for the OpenCL API.
+
+- **OpenCL-SDK** [📁](./OpenCL-SDK) [🌐](https://github.com/GerHobbelt/OpenCL-SDK) -- the Khronos OpenCL SDK. It brings together all the components needed to develop OpenCL applications.
+
+- **OpenFST-utils** [📁](./OpenFST-utils) [🌐](https://github.com/GerHobbelt/openfst-utils) -- a set of useful programs for manipulating Finite State Transducer with the OpenFst library.
+
+- **PGM-index** [📁](./PGM-index) [🌐](https://github.com/GerHobbelt/PGM-index) -- the Piecewise Geometric Model index (PGM-index) is a data structure that enables fast lookup, predecessor, range searches and updates in arrays of billions of items using orders of magnitude less space than traditional indexes while providing the same worst-case query time guarantees.
+
+- **PaddlePaddle** [📁](./PaddlePaddle) [🌐](https://github.com/GerHobbelt/Paddle) -- the first independent R&D deep learning platform in China. It is an industrial platform with advanced technologies and rich features that cover core deep learning frameworks, basic model libraries, end-to-end development kits, tools & components as well as service platforms. PaddlePaddle is originated from industrial practices with dedication and commitments to industrialization. It has been widely adopted by a wide range of sectors including manufacturing, agriculture, enterprise service, and so on while serving more than 4.7 million developers, 180,000 companies and generating 560,000 models. With such advantages, PaddlePaddle has helped an increasing number of partners commercialize AI.
+
+- **PlatformFolders** [📁](./PlatformFolders) [🌐](https://github.com/GerHobbelt/PlatformFolders) -- a C++ library to look for directories like `My Documents`, `~/.config`, `%APPDATA%`, etc. so that you do not need to write platform-specific code.
+
+- **QCBOR** [📁](./QCBOR) [🌐](https://github.com/GerHobbelt/QCBOR) -- a powerful, commercial-quality CBOR encoder/decoder that implements these RFCs:
+
+  * [RFC8949](https://tools.ietf.org/html/rfc8949) The CBOR Standard. (Everything except sorting of encoded maps)
+  * [RFC7049](https://tools.ietf.org/html/rfc7049) The previous CBOR standard. Replaced by RFC 8949.
+  * [RFC8742](https://tools.ietf.org/html/rfc8742) CBOR Sequences
+  * [RFC8943](https://tools.ietf.org/html/rfc8943) CBOR Dates
+
+- **RuntimeCompiledCPlusPlus** [📁](./RuntimeCompiledCPlusPlus) [🌐](https://github.com/GerHobbelt/RuntimeCompiledCPlusPlus) -- Runtime-Compiled C++ (RCC++) is a way to reliably make major changes to your C++ code at runtime and see the results immediately. It's aimed at games development but could be useful in any industry where turnaround times are a bottleneck. RCC++ is primarily designed to shorten iteration times in development - developers can build their project, run it, make changes during runtime and see the results almost immediately. If needed, shipping code can [disable runtime compilation](https://github.com/RuntimeCompiledCPlusPlus/RuntimeCompiledCPlusPlus/wiki/Disabling-runtime-compilation) in a number of ways. RCC++ is not intended as a method to allow end users of a shipped binary to compile modifications, though with some work it can be used this way.
+
+- **RxCpp** [📁](./RxCpp) [🌐](https://github.com/GerHobbelt/RxCpp) -- the Reactive Extensions for C++ (__RxCpp__) is a library of algorithms for values-distributed-in-time. The [__Range-v3__](https://github.com/ericniebler/range-v3) library does the same for values-distributed-in-space.
+
+- **Signals** [📁](./Signals) [🌐](https://github.com/GerHobbelt/Signals) -- a lightweight "signals and slots" implementation using fast delegates. When GUI programming in C++, delegates and the signals and slots paradigm can vastly simplify your code. It implements the Observer pattern while avoiding all the boilerplate code. I needed a lightweight and efficient implementation that I could just drop into my projects and use without adding weird macros, inheriting from crazy templates or having external dependencies. I wanted something simpler and more efficient than libsigc++, sigslot, and boost.signals.
+
+- **StarSpace** [📁](./StarSpace) [🌐](https://github.com/GerHobbelt/StarSpace) -- a general-purpose neural model for efficient learning of entity embeddings for solving a wide variety of problems.
+- **SymSpell** [📁](./SymSpell) [🌐](https://github.com/GerHobbelt/SymSpell) -- spelling correction & Fuzzy search: **1 million times faster** through Symmetric Delete spelling correction algorithm.
+ 
+The Symmetric Delete spelling correction algorithm reduces the complexity of edit candidate generation and dictionary lookup for a given Damerau-Levenshtein distance. It is six orders of magnitude faster ([than the standard approach with deletes + transposes + replaces + inserts](http://norvig.com/spell-correct.html)) and language independent.
+
+  - Opposite to other algorithms only deletes are required, no transposes + replaces + inserts.
+  - Transposes + replaces + inserts of the input term are transformed into deletes of the dictionary term.
+  - Replaces and inserts are expensive and language dependent: e.g. Chinese has 70,000 Unicode Han characters!
+
+  The speed comes from the inexpensive **delete-only edit candidate generation** and the **pre-calculation**. An average 5 letter word has about **3 million possible spelling errors** within a maximum edit distance of 3, but SymSpell needs to generate **only 25 deletes** to cover them all, both at pre-calculation and at lookup time. Magic!
+
+- **VQMT** [📁](./VQMT) [🌐](https://github.com/GerHobbelt/VQMT) -- VQMT (Video Quality Measurement Tool) provides fast implementations of the following objective metrics:
+
+  * **PSNR**: Peak Signal-to-Noise Ratio,
+  * **SSIM**: Structural Similarity,
+  * **MS-SSIM**: Multi-Scale Structural Similarity,
+  * **VIFp**: Visual Information Fidelity, pixel domain version
+  * **PSNR-HVS**: Peak Signal-to-Noise Ratio taking into account Contrast Sensitivity Function (CSF),
+  * **PSNR-HVS-M**: Peak Signal-to-Noise Ratio taking into account Contrast Sensitivity Function (CSF) and between-coefficient contrast masking of DCT basis functions.
+
+  The above metrics are implemented in C++ with the help of OpenCV and are based on the original Matlab implementations provided by their developers.
+
+- **VSNASM** [📁](./VSNASM) [🌐](https://github.com/GerHobbelt/VSNASM) -- a set of build customisations that can be used within Visual Studio to compile assembly code using NASM. Visual Studio integration for the NASM assembler.
+
+- **Verify** [📁](./Verify) [🌐](https://github.com/GerHobbelt/Verify) -- a snapshot tool that simplifies the assertion of complex data models and documents. Verify is called on the test result during the assertion phase. It serializes that result and stores it in a file that matches the test name. On the next test execution, the result is again serialized and compared to the existing file. The test will fail if the two snapshots do not match: either the change is unexpected, or the reference snapshot needs to be updated to the new result.
+
+- **Win32_read_directory_changes** [📁](./Win32_read_directory_changes) [🌐](https://github.com/GerHobbelt/readdirectorychanges) -- sample code which goes with [Understanding ReadDirectoryChangesW](http://qualapps.blogspot.com/2010/05/understanding-readdirectorychangesw.html)
+
+- **Win32_read_directory_changes_IOCP** [📁](./Win32_read_directory_changes_IOCP) [🌐](https://github.com/GerHobbelt/ReadDirectoryChangesIOCP) -- inspired by jimbeveridge's artical [Understanding ReadDirectoryChangesW](http://qualapps.blogspot.com/2010/05/understanding-readdirectorychangesw.html)! The project shows how to read directory changes by IO completion port on windows platform.
+
+- **Xoshiro-cpp** [📁](./Xoshiro-cpp) [🌐](https://github.com/GerHobbelt/Xoshiro-cpp) -- a header-only pseudorandom number generator library for modern C++. Based on **David Blackman and Sebastiano Vigna's [xoshiro/xoroshiro generators](http://prng.di.unimi.it/)**.
+- **abseil-cpp** [📁](./abseil-cpp) [🌐](https://github.com/GerHobbelt/abseil-cpp) -- the Abseil C++ library code. Abseil is an open-source collection of C++ code (compliant to C++11) designed to augment the C++ standard library.
+- **arangodb** [📁](./arangodb) [🌐](https://github.com/GerHobbelt/arangodb) -- a scalable open-source multi-model database natively supporting graph, document and search. All supported data models & access patterns can be combined in queries allowing for maximal flexibility. ArangoDB runs on prem, in the cloud – anywhere.
+- **argparse** [📁](./argparse) [🌐](https://github.com/GerHobbelt/argparse) -- command line parser supporting a variety of argument types including positional, optional, and compound arguments. 
+- **arrayfire** [📁](./arrayfire) [🌐](https://github.com/GerHobbelt/arrayfire) -- a general-purpose tensor library that simplifies the process of software development for the parallel architectures found in CPUs, GPUs, and other hardware acceleration devices. 
+- **asyncplusplus** [📁](./asyncplusplus) [🌐](https://github.com/GerHobbelt/asyncplusplus) -- Async++ is a lightweight concurrency framework for C++11. The concept was inspired by the [Microsoft PPL library](http://msdn.microsoft.com/en-us/library/dd492418.aspx) and the [N3428](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3428.pdf) C++ standard proposal.
+- **basez** [📁](./basez) [🌐](https://github.com/GerHobbelt/basez) -- BaseZ encodes data into/decodes data from base16, base32, base32hex, base64 or base64url stream per RFC 4648; MIME base64 Content-Transfer-Encoding per RFC 2045; or PEM Printable Encoding per RFC 1421.
+- **bitsery** [📁](./bitsery) [🌐](https://github.com/GerHobbelt/bitsery) -- a C++ binary serialization library designed around the networking requirements for real-time data delivery, especially for games. All cross-platform requirements are enforced at compile time, so serialized data do not store any meta-data information and is as small as possible.
+- **boringssl** [📁](./boringssl) [🌐](https://github.com/GerHobbelt/boringssl) -- BoringSSL is a fork of OpenSSL that is designed to meet Google's needs.
+- **cairo** [📁](./cairo) [🌐](https://github.com/GerHobbelt/cairo) -- a 2D graphics library with support for multiple output devices. Currently supported output targets include the X Window System (via both Xlib and XCB), quartz, win32, and image buffers, as well as PDF, PostScript, and SVG file output. Experimental backends include OpenGL.
+- **cairo-demos** [📁](./cairo-demos) [🌐](https://github.com/GerHobbelt/cairo-demos) -- Cairo demonstration programs.
+- **calibre** [📁](./calibre) [🌐](https://github.com/GerHobbelt/calibre) -- calibre is an e-book manager. It can view, convert, edit and catalog e-books in all of the major e-book formats. It can also talk to e-book reader devices. It can go out to the internet and fetch metadata for your books. It can download newspapers and convert them into e-books for convenient reading. It is cross platform, running on Linux, Windows and macOS.
+- **cctz** [📁](./cctz) [🌐](https://github.com/GerHobbelt/cctz) -- CCTZ cooperates with `<chrono>` to give C++ programmers all the necessary tools for computing with dates, times, and time zones in a simple and correct manner. The libraries in CCTZ are:
+
+  * **The Civil-Time Library** &mdash; This is a header-only library that supports computing with human-scale time, such as dates (which are     represented by the `cctz::civil_day` class).
+  * **The Time-Zone Library** &mdash; This library uses the IANA time zone database that is installed on the system to convert between *absolute time* and *civil time*.
+  
+  These libraries are currently known to work on **Linux**, **Mac OS X**, and **Android**. They will also work on **Windows** if you install the zoneinfo files. We are interested, though, in an implementation of the cctz::TimeZoneIf interface that calls the Windows time APIs instead.
+
+- **cef-pdf** [📁](./cef-pdf) [🌐](https://github.com/GerHobbelt/cef-pdf) -- a command line utility (with embedded HTTP server as an optional mode) for creating PDF documents from HTML content. It uses Google Chrome browser's [Chromium Embedded Framework (CEF)](https://bitbucket.org/chromiumembedded/cef/overview) library for all it's internal work; loading urls, rendering HTML & CSS pages and PDF printing, therefore, it produces perfect, accurate, excellent quality PDF documents.
+- **ceres-solver** [📁](./ceres-solver) [🌐](https://github.com/GerHobbelt/ceres-solver) -- Ceres Solver is an open source C++ library for modeling and solving large, complicated optimization problems. It is a feature rich, mature and performant library which has been used in production at Google since 2010. Ceres Solver can solve two kinds of problems.
+
+  1. Non-linear Least Squares problems with bounds constraints.
+  2. General unconstrained optimization problems.
+
+- **comdb2-bdb** [📁](./comdb2-bdb) [🌐](https://github.com/GerHobbelt/comdb2) -- Comdb2 is a clustered RDBMS built on Optimistic Concurrency Control techniques. It provides multiple isolation levels, including Snapshot and Serializable Isolation. Read/Write transactions run on any node, with the client library transparently negotiating connections to lowest cost (latency) node which is available. Work on Comdb2 was started at Bloomberg LP in 2004 and it has been under heavy development since.
+- **completesearch** [📁](./completesearch) [🌐](https://github.com/GerHobbelt/completesearch) -- CompleteSearch is a fast and interactive search engine for *context-sensitive prefix search* on a given collection of documents. It does not only provide search results, like a regular search engine, but also completions for the last (maybe only partially typed) query word that lead to a hit. This can be used to provide very efficient support for a variety of features: query autocompletion, faceted search, synonym search, error-tolerant search, semantic search.
+
+- **cpptoml** [📁](./cpptoml) [🌐](https://github.com/GerHobbelt/cpptoml) -- a library for parsing [TOML][toml] configuration files. This includes support for the new DateTime format, inline tables, multi-line basic and raw strings, digit separators, hexadecimal integers octal integers, binary integers, and float special values.
+
+
+
+
+
+
+
+
+
 
