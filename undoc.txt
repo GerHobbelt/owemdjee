@@ -121,7 +121,6 @@
 - **libharry** [📁](./libharry) [🌐](https://github.com/GerHobbelt/harry)
 - **libheif** [📁](./libheif) [🌐](https://github.com/GerHobbelt/heif)
 - **libheif-alt** [📁](./libheif-alt) [🌐](https://github.com/GerHobbelt/libheif)
-- **libjxl** [📁](./libjxl) [🌐](https://github.com/GerHobbelt/libjxl)
 - **libmetalink** [📁](./libmetalink) [🌐](https://github.com/GerHobbelt/libmetalink)
 - **libmlpp** [📁](./libmlpp) [🌐](https://github.com/GerHobbelt/MLPP)
 - **libmobi** [📁](./libmobi) [🌐](https://github.com/GerHobbelt/libmobi)
