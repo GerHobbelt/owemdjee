@@ -2749,3 +2749,6 @@
 [submodule "wxCurl"]
 	path = wxCurl
 	url = git@github.com:GerHobbelt/wxCurl.git
+[submodule "ugrep"]
+	path = ugrep
+	url = git@github.com:GerHobbelt/ugrep.git
