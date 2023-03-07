@@ -1552,6 +1552,9 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **libimagequant** [📁](./libimagequant) [🌐](https://github.com/GerHobbelt/libimagequant) -- Palette quantization library that powers `pngquant` and other PNG optimizers. `libimagequant` converts RGBA images to palette-based 8-bit indexed images, including alpha component. It's ideal for generating tiny PNG images and nice-looking GIFs. Image encoding/decoding isn't handled by the library itself, bring your own encoder.
 - **libjpeg** [📁](../../thirdparty/libjpeg) [🌐](https://github.com/GerHobbelt/thirdparty-libjpeg) -- the Independent JPEG Group's JPEG software
 - **libjpeg-turbo** [📁](./libjpeg-turbo) [🌐](https://github.com/GerHobbelt/libjpeg-turbo) -- a JPEG image codec that uses SIMD instructions to accelerate baseline JPEG compression and decompression on x86, x86-64, Arm, PowerPC, and MIPS systems, as well as progressive JPEG compression on x86, x86-64, and Arm systems.  On such systems, libjpeg-turbo is generally 2-6x as fast as libjpeg, all else being equal.  On other types of systems, libjpeg-turbo can still outperform libjpeg by a significant amount, by virtue of its highly-optimized Huffman coding routines.  In many cases, the performance of libjpeg-turbo rivals that of proprietary high-speed JPEG codecs.
+- ~~**libjxl** [📁](./libjxl) [🌐](https://github.com/GerHobbelt/libjxl) -- JPEG XL reference implementation~~
+  - **reason**: due to historical reasons on my side, this code is tracked at https://github.com/GerHobbelt/jpeg-xl: see there for future track/update work of the JPEG-XL library.
+
 - **liblinear** [📁](./liblinear) [🌐](https://github.com/GerHobbelt/liblinear) -- a simple package for solving large-scale regularized linear classification, regression and outlier detection.
 - **libmdbx** [📁](./libmdbx) [🌐](https://github.com/GerHobbelt/libmdbx) -- one of the fastest embeddable key-value ACID database without WAL. `libmdbx` surpasses the legendary LMDB in terms of reliability, features and performance.
 - **libmetalink** [📁](./libmetalink) [🌐](https://github.com/GerHobbelt/libmetalink)
@@ -2044,8 +2047,6 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - ~~**Imath** [🌐](https://github.com/AcademySoftwareFoundation/Imath) -- float16 support lib for OpenEXR format~~
 - ~~**inih** [🌐](https://github.com/benhoyt/inih) -- a simple `.INI` file parser in C, good for embedded systems~~
 - ~~**iniparser** [🌐](https://github.com/ndevilla/iniparser) -- an `.INI` file parser~~
-- ~~**libjxl** [📁](./libjxl) [🌐](https://github.com/GerHobbelt/libjxl) -- JPEG XL reference implementation~~
-  - **reason**: due to historical reasons on my side, this code is tracked at https://github.com/GerHobbelt/jpeg-xl: see there for future track/update work of the JPEG-XL library.
 - ~~**libmicrohttpd** [🌐](https://github.com/Karlson2k/libmicrohttpd) -- GNU libmicrohttpd is a C library that provides a compact API and implementation of an HTTP 1.1 web server (HTTP 1.0 is also supported).~~
 - ~~**libsmile** [🌐](https://github.com/pierre/libsmile) -- ["Smile" format](https://en.wikipedia.org/wiki/Smile_%28data_interchange_format%29), i.e. a compact binary JSON format~~
 - ~~**lizard** [🌐](https://github.com/inikep/lizard) -- Lizard (formerly LZ5) is an efficient compressor with very fast decompression.~~
@@ -2192,6 +2193,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **fatal** [📁](./fatal) [🌐](https://github.com/GerHobbelt/fatal)
 - **fftw3** [📁](./fftw3) [🌐](https://github.com/GerHobbelt/fftw3)
 - **fluent-bit** [📁](./fluent-bit) [🌐](https://github.com/GerHobbelt/fluent-bit)
+- **fmem** [📁](./fmem) [🌐](https://github.com/GerHobbelt/fmem)
 - **folly** [📁](./folly) [🌐](https://github.com/GerHobbelt/folly)
 - **fribidi** [📁](./fribidi) [🌐](https://github.com/GerHobbelt/fribidi)
 - **gettext** [📁](./gettext) [🌐](https://github.com/GerHobbelt/gettext)
@@ -2330,6 +2332,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **toml11** [📁](./toml11) [🌐](https://github.com/GerHobbelt/toml11)
 - **transwarp** [📁](./transwarp) [🌐](https://github.com/GerHobbelt/transwarp)
 - **ucx** [📁](./ucx) [🌐](https://github.com/GerHobbelt/ucx)
+- **ugrep** [📁](./ugrep) [🌐](https://github.com/GerHobbelt/ugrep)
 - **universal-numbers** [📁](./universal-numbers) [🌐](https://github.com/GerHobbelt/universal)
 - **unixODBC** [📁](./unixODBC) [🌐](https://github.com/GerHobbelt/unixODBC)
 - **unpaper** [📁](./unpaper) [🌐](https://github.com/GerHobbelt/unpaper)

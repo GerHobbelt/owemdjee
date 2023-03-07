@@ -82,6 +82,7 @@
 - **fatal** [📁](./fatal) [🌐](https://github.com/GerHobbelt/fatal)
 - **fftw3** [📁](./fftw3) [🌐](https://github.com/GerHobbelt/fftw3)
 - **fluent-bit** [📁](./fluent-bit) [🌐](https://github.com/GerHobbelt/fluent-bit)
+- **fmem** [📁](./fmem) [🌐](https://github.com/GerHobbelt/fmem)
 - **folly** [📁](./folly) [🌐](https://github.com/GerHobbelt/folly)
 - **fribidi** [📁](./fribidi) [🌐](https://github.com/GerHobbelt/fribidi)
 - **gettext** [📁](./gettext) [🌐](https://github.com/GerHobbelt/gettext)
@@ -220,6 +221,7 @@
 - **toml11** [📁](./toml11) [🌐](https://github.com/GerHobbelt/toml11)
 - **transwarp** [📁](./transwarp) [🌐](https://github.com/GerHobbelt/transwarp)
 - **ucx** [📁](./ucx) [🌐](https://github.com/GerHobbelt/ucx)
+- **ugrep** [📁](./ugrep) [🌐](https://github.com/GerHobbelt/ugrep)
 - **universal-numbers** [📁](./universal-numbers) [🌐](https://github.com/GerHobbelt/universal)
 - **unixODBC** [📁](./unixODBC) [🌐](https://github.com/GerHobbelt/unixODBC)
 - **unpaper** [📁](./unpaper) [🌐](https://github.com/GerHobbelt/unpaper)
@@ -236,3 +238,5 @@
 - **wxPdfDocument** [📁](./wxPdfDocument) [🌐](https://github.com/GerHobbelt/wxpdfdoc)
 - **xlnt** [📁](./xlnt) [🌐](https://github.com/GerHobbelt/xlnt)
 - **xpdf** [📁](./xpdf) [🌐](https://github.com/GerHobbelt/xpdf)
+
+
