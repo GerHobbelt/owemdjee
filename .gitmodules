@@ -2757,3 +2757,31 @@
 [submodule "fmem"]
 	path = fmem
 	url = git@github.com:GerHobbelt/fmem.git
+
+[submodule "jbig2enc"]
+	path = jbig2enc
+	url = git@github.com:GerHobbelt/jbig2enc.git
+
+[submodule "cpplocate"]
+	path = cpplocate
+	url = git@github.com:GerHobbelt/cpplocate.git
+
+[submodule "ogdf"]
+	path = ogdf
+	url = git@github.com:GerHobbelt/ogdf.git
+
+[submodule "libfann"]
+	path = libfann
+	url = git@github.com:GerHobbelt/fann.git
+
+[submodule "IdGenerator"]
+	path = IdGenerator
+	url = git@github.com:GerHobbelt/IdGenerator.git
+
+[submodule "archive-hocr-tools"]
+	path = archive-hocr-tools
+	url = git@github.com:GerHobbelt/archive-hocr-tools.git
+
+[submodule "grok-jpeg2000"]
+	path = grok-jpeg2000
+	url = git@github.com:GerHobbelt/grok.git
