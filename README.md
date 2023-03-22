@@ -116,7 +116,7 @@ The other JavaScript engines considered are of varying size, performance and com
 
 # Libraries we're looking at for this *intent*:
 
-- ## IPC: flatbuffer et al for protocol design
+## IPC: flatbuffer et al for protocol design
 
 - **bebop** [📁](./bebop) [🌐](https://github.com/GerHobbelt/bebop) -- an extremely simple, fast, efficient, cross-platform serialization format. Bebop is a schema-based binary serialization technology, similar to Protocol Buffers or MessagePack. In particular, Bebop tries to be a good fit for client–server or distributed web apps that need something faster, more concise, and more type-safe than JSON or MessagePack, while also avoiding some of the complexity of Protocol Buffers, FlatBuffers and the like.
 

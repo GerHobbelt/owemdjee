@@ -174,6 +174,62 @@ txt = txt
 .replace(/\(git@github.com:GerHobbelt\/([^\s]+)\.git\)/g, '(https://github.com/GerHobbelt/$1)')
 
 
+txt = txt.replace(/([\r\n]+)\s*\[submodule "([^"]+)"\][\s\r\n]+path = ([^\s\r\n]+)[\s\r\n]+url = ([^\s\r\n]+)/g, function r(m, p1, p2, p3, p4) {
+	//console.log({ p1, p2, p3, p4 });
+	let a = p4;
+
+	a = a
+	.replace(/^git@github.com:GerHobbelt\/([^\s]+)\.git$/, 'https://github.com/GerHobbelt/$1')
+
+	let rv = p1 + `- **${ p2 }** [📁](./${ p3 }) [🌐](${ a })\n`;
+	//console.log({ a, rv })
+	return rv;
+})
+
+
+
+txt = process_all_supersections(txt);
+
+function process_all_supersections(txt) {
+	txt = '\n' + txt.trim() + '\n';
+	
+	let sections = txt.split(/\n---+\n/);
+	
+	txt = sections.map(process_all_sections).join('\n\n---\n\n');
+	
+	return txt;
+}
+
+function process_all_sections(txt) {
+	txt = '\n' + txt.trim() + '\n';
+	
+	let sections = txt.split(/\n#/);
+	
+	txt = sections.map(process_single_section).join('\n\n\n\n') + '\n\n\n\n';
+	
+	return txt;
+}
+
+function process_single_section(txt) {
+	txt = txt.trim();
+	if (txt.length === 0)
+		return txt;
+	
+	txt = '#' + txt + '\n';
+	
+	console.log({txt});
+	
+	let m = /^(#+)([^\n]+)\n/g.exec(txt);
+	let level = m[1].length;
+	let level_str = m[1];
+	let title = m[2].trim();
+	let content = txt.substr(m[0].length).trim();
+
+	content = sort_subsection(/\n- /, content, '- ', '    ');
+	
+	return `${ level_str } ${ title }\n\n${ content }`;
+}
+
 
 // sort the overview list alphabetically:
 function sort_section(start_re_str, txt) {
@@ -185,10 +241,6 @@ function sort_section(start_re_str, txt) {
 	});
 	return txt;
 }
-
-txt = sort_section('# Libraries in this collection \\(All', txt);
-txt = sort_section('## Libraries not available in this collection but already part', txt);
-
 
 
 // sort the overview list alphabetically:
@@ -271,10 +323,13 @@ function process_subsection(l) {
 
 	s = s.trimRight();
 
-	//console.log({ rv, s });
+	//console.log("process_subsection:", { rv, s });
+
 	return s;
 }
 
+
+/*
 txt = txt.replace(/(# Libraries we\'re looking at[^\n]+)\n([^]+?)\n((?:#[^\n]+)|---)/, function r(m, p1, p2, p3) {
 	// split up in subsections
 	p2 = p2.replace(/\t/g, '    ');
@@ -287,20 +342,7 @@ txt = txt.replace(/(# Libraries we\'re looking at[^\n]+)\n([^]+?)\n((?:#[^\n]+)|
 	//console.log({ p1, p3 });
 	return p1 + '\n\n- ' + b.join('\n\n- ') + '\n\n\n\n' + p3;
 })
-
-
-
-txt = txt.replace(/([\r\n]+)\s*\[submodule "([^"]+)"\][\s\r\n]+path = ([^\s\r\n]+)[\s\r\n]+url = ([^\s\r\n]+)/g, function r(m, p1, p2, p3, p4) {
-	//console.log({ p1, p2, p3, p4 });
-	let a = p4;
-
-	a = a
-	.replace(/^git@github.com:GerHobbelt\/([^\s]+)\.git$/, 'https://github.com/GerHobbelt/$1')
-
-	let rv = p1 + `- **${ p2 }** [📁](./${ p3 }) [🌐](${ a })\n`;
-	//console.log({ a, rv })
-	return rv;
-})
+*/
 
 
 
@@ -404,7 +446,7 @@ function reindent_text(txt, indent) {
 	txt = lines.join('\n');
 	//console.log("reindented:", {txt, indent, base_indent, re, re_str});
 	
-	return txt;
+	return txt + '\n';
 }
 
 mod_re = /- \*\*([^*]+)\*\* \[📁\]\(([^ )]+)\) \[🌐\]\(([^ )]+)\)\s*[\n]/g;
@@ -438,17 +480,17 @@ function check_entries_against_their_categorized_references(txt) {
 	let categories_block_re = new RegExp(`^([^]+?)\\n(?:${overview_re_str})`, 'g');
 
 	let tbd_m = tbd_block_re.exec(txt);
-	delete tbd_m.input;
+	delete tbd_m?.input;
 
 	let toc_m = toc_block_re.exec(txt);
-	delete toc_m.input;
+	delete toc_m?.input;
 
 	let cat_m = categories_block_re.exec(txt);
-	delete cat_m.input;
+	delete cat_m?.input;
 
-	let cat_arr = collect_entries(cat_m[1]);
-	let toc_arr = collect_entries(toc_m[2]);
-	let tbd_arr = collect_entries(tbd_m[2]);
+	let cat_arr = collect_entries(cat_m ? cat_m[1] : '');
+	let toc_arr = collect_entries(toc_m ? toc_m[2] : '');
+	let tbd_arr = collect_entries(tbd_m ? tbd_m[2] : '');
 
 	for (const idx in toc_arr) {
 		if (idx in cat_arr) {
