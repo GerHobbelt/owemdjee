@@ -422,8 +422,10 @@ See also [lzbench](https://github.com/inikep/lzbench).
 - **hocr-spec** [📁](./hocr-spec) [🌐](https://github.com/GerHobbelt/hocr-spec) -- the [hOCR](https://en.wikipedia.org/wiki/HOCR) Embedded OCR Workflow and Output Format specification originally written by [Thomas Breuel](https://github.com/tmbdev).
 - **hocr-tools** [📁](./hocr-tools) [🌐](https://github.com/GerHobbelt/hocr-tools) --   a [Public Specification](http://hocr.info) and tools for the hOCR Format.
   
-  	hOCR is a format for representing OCR output, including layout information, character confidences, bounding boxes, and style information. It embeds this information invisibly in standard HTML. By building on standard HTML, it automatically inherits well-defined support for most scripts, languages, and common layout options. Furthermore, unlike previous OCR formats, the recognized text and OCR-related information co-exist in the same file and survives editing and manipulation. hOCR markup is independent of the presentation.
-  
+  hOCR is a format for representing OCR output, including layout information, character confidences, bounding boxes, and style information. It embeds this information invisibly in standard HTML. By building on standard HTML, it automatically inherits well-defined support for most scripts, languages, and common layout options. Furthermore, unlike previous OCR formats, the recognized text and OCR-related information co-exist in the same file and survives editing and manipulation. hOCR markup is independent of the presentation.
+
+
+
 
 ## Pattern Recognition
 
@@ -449,15 +451,14 @@ See also [lzbench](https://github.com/inikep/lzbench).
 - **dtl-diff-template-library** [📁](./dtl-diff-template-library) [🌐](https://github.com/GerHobbelt/dtl) -- `dtl` is the diff template library written in C++.
 - **google-diff-match-patch** [📁](./google-diff-match-patch) [🌐](https://github.com/GerHobbelt/diff-match-patch) --   Diff Match and Patch offers robust algorithms to perform the operations required for synchronizing plain text.
   
-  	1. Diff:
-  	   * Compare two blocks of plain text and efficiently return a list of differences.
-  	2. Match:
-  	   * Given a search string, find its best fuzzy match in a block of plain text. Weighted for both accuracy and location.
-  	3. Patch:
-  	   * Apply a list of patches onto plain text. Use best-effort to apply patch even when the underlying text doesn't match.
+  1. Diff:
+     * Compare two blocks of plain text and efficiently return a list of differences.
+  2. Match:
+     * Given a search string, find its best fuzzy match in a block of plain text. Weighted for both accuracy and location.
+  3. Patch:
+     * Apply a list of patches onto plain text. Use best-effort to apply patch even when the underlying text doesn't match.
   
-  	Originally built in 2006 to power Google Docs.
-  
+  Originally built in 2006 to power Google Docs.
 
 - **HDiffPatch** [📁](./HDiffPatch) [🌐](https://github.com/GerHobbelt/HDiffPatch) -- a library and command-line tools for Diff & Patch between binary files or directories(folders); cross-platform; runs fast; create small delta/differential; support large files and limit memory requires when diff & patch.
 - **libdist** [📁](./libdist) [🌐](https://github.com/GerHobbelt/distlib) -- string distance related functions (Damerau-Levenshtein, Jaro-Winkler, longest common substring & subsequence) implemented as SQLite run-time loadable extension, with UTF-8 support.
@@ -956,7 +957,6 @@ The additional (and more important) reason to ditch CPython from the R&D set is 
 - **asio** [📁](./asio) [🌐](https://github.com/GerHobbelt/asio) --   a cross-platform C++ library for network and low-level I/O programming that provides developers with a consistent asynchronous model using a modern C++ approach.
   
   Note: (older) Boost.Asio is also included in Boost.
-  
 
 - **coost** [📁](./coost) [🌐](https://github.com/GerHobbelt/coost) -- A tiny boost library in C++11. `coost` (formerly known as `cocoyaxi`) is an elegant and efficient cross-platform C++ base library, it is not as heavy as `boost`, but still provides enough powerful features.
 - **delegate** [📁](./delegate) [🌐](https://github.com/GerHobbelt/delegate) -- an embedded friendly alternative to `std::function`. The main purpose is to store callable things such as free functions, member functions, and functors. Once stored, the delegate can be called without knowledge of the type of stored thing. The `delegate` guarantees no heap allocation and [is `trivially_copyable`](https://en.cppreference.com/w/cpp/named_req/TriviallyCopyable). It will never throw exceptions itself. Intended use is as general callback storage (think function pointer analog). The price to pay is that the delegate only stores a pointer to referenced functor objects or objects to call member functions on. The user needs to handle the lifetime of a referred object. In addition, the delegation object has a smaller footprint compared to common `std::function` implementations, using only 2 pointers (free function pointer and void pointer). This is small enough so that a delegate will use small object optimization.
@@ -1194,19 +1194,21 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **gbenchmark** [📁](./gbenchmark) [🌐](https://github.com/GerHobbelt/benchmark) -- a library to benchmark code snippets, similar to unit tests.
 - **googletest** [📁](./googletest) [🌐](https://github.com/GerHobbelt/googletest) --   unit test framework: see the [GoogleTest User's Guide](https://google.github.io/googletest/) for documentation. We recommend starting with the [GoogleTest Primer](https://google.github.io/googletest/primer.html).
   
-  	Features:
+  Features:
   
-  	*   An [xUnit](https://en.wikipedia.org/wiki/XUnit) test framework.
-  	*   Test discovery.
-  	*   A rich set of assertions.
-  	*   User-defined assertions.
-  	*   Death tests.
-  	*   Fatal and non-fatal failures.
-  	*   Value-parameterized tests.
-  	*   Type-parameterized tests.
-  	*   Various options for running the tests.
-  	*   XML test report generation.
-  
+  * An [xUnit](https://en.wikipedia.org/wiki/XUnit) test framework.
+  * Test discovery.
+  * A rich set of assertions.
+  * User-defined assertions.
+  * Death tests.
+  * Fatal and non-fatal failures.
+  * Value-parameterized tests.
+  * Type-parameterized tests.
+  * Various options for running the tests.
+  * XML test report generation.
+
+
+
 
 ## logging & debugging
 
@@ -1328,8 +1330,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **citation-abbreviations** [📁](./citation-abbreviations) [🌐](https://github.com/GerHobbelt/abbreviations) -- Journal Title Abbreviations
 - **JabRef-abbreviations** [📁](./JabRef-abbreviations) [🌐](https://github.com/GerHobbelt/jabref-abbreviations) --   Jabref journal name abbreviations: some journal require you to use the abbreviated names for journals. If you have to change this manually, it's quite cumbersome to do. Luckily there exist tools to help. [Jabref](http://jabref.sourceforge.net) is open source bibliography reference manager. It has an option to abbreviate journal names. However, when it comes to Physics journals, the internal list is far from complete.
   
-  	The original list of abbreviations is located at [ISI](https://images.webofknowledge.com/WOK46/help/WOS/A_abrvjt.html).
-  
+  The original list of abbreviations is located at [ISI](https://images.webofknowledge.com/WOK46/help/WOS/A_abrvjt.html).
 
 - **JabRef-Browser-Extension** [📁](./JabRef-Browser-Extension) [🌐](https://github.com/GerHobbelt/JabRef-Browser-Extension)
 - **papis-zotero** [📁](./papis-zotero) [🌐](https://github.com/GerHobbelt/papis-zotero) -- Zotero compatiblity scripts for papis. Includes a script that decodes the zotero.sqlite sqlite file that zotero uses to manage documents and creates papis Documents out of it. This script will retrieve the documents from zotero (be it pdf documents or something else) and important information like tags.
@@ -1361,8 +1362,10 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **citeproc-js** [📁](./citeproc-js) [🌐](https://github.com/GerHobbelt/citeproc-js) -- a JavaScript implementation of the Citation Style Language (CSL) https://citeproc-js.readthedocs.io
 - **JabRef-abbreviations** [📁](./JabRef-abbreviations) [🌐](https://github.com/GerHobbelt/jabref-abbreviations) --   Jabref journal name abbreviations: some journal require you to use the abbreviated names for journals. If you have to change this manually, it's quite cumbersome to do. Luckily there exist tools to help. [Jabref](http://jabref.sourceforge.net) is open source bibliography reference manager. It has an option to abbreviate journal names. However, when it comes to Physics journals, the internal list is far from complete.
   
-  	The original list of abbreviations is located at [ISI](https://images.webofknowledge.com/WOK46/help/WOS/A_abrvjt.html).
-  
+  The original list of abbreviations is located at [ISI](https://images.webofknowledge.com/WOK46/help/WOS/A_abrvjt.html).
+
+
+
 
 ## Microsoft Word, Google Docs, LibreOffice: application integration
 
@@ -1465,7 +1468,6 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **abseil-cpp** [📁](./abseil-cpp) [🌐](https://github.com/GerHobbelt/abseil-cpp) -- a collection of C++ code (compliant to C++11) designed to augment the C++ standard library.
 - **adaptiveqf** [📁](./adaptiveqf) [🌐](https://github.com/GerHobbelt/adaptiveqf) --   [Adaptive Quotient Filter (AQF)](https://arxiv.org/abs/2107.02866) supports approximate membership testing and counting the occurrences of items in a data set. Like other AMQs, the AQF has a chance for false positives
   during queries. However, the AQF has the ability to adapt to false positives after they have occurred so they are not repeated. At the same time, the AQF maintains the benefits of a quotient filter, as it is small and fast, has good locality of reference, scales out of RAM to SSD, and supports deletions, counting, resizing, merging, and highly concurrent access.
-  
 
 - **A-MNS_TemplateMatching** [📁](./A-MNS_TemplateMatching) [🌐](https://github.com/GerHobbelt/A-MNS_TemplateMatching) -- the official code for the PatternRecognition2020 paper: Fast and robust template matching with majority neighbour similarity and annulus projection transformation.
 - **annoy** [📁](./annoy) [🌐](https://github.com/GerHobbelt/annoy) -- ANNOY (<b>A</b>pproximate <b>N</b>earest <b>N</b>eighbors <b>O</b>h <b>Y</b>eah) is a C++ library to search for points in space that are close to a given query point. It also creates large read-only file-based data structures that are `mmap`-ped into memory so that many processes may share the same data. ANNOY is almost as fast as the fastest libraries, but what really sets Annoy apart is: it has the ability to use static files as indexes, enabling you to share an index across processes. ANNOY also decouples creating indexes from loading them, so you can pass around indexes as files and map them into memory quickly. ANNOY tries to minimize its memory footprint: the indexes are quite small. This is useful when you want to find nearest neighbors using multiple CPU's. Spotify uses ANNOY for music recommendations.
@@ -1477,7 +1479,6 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **asio** [📁](./asio) [🌐](https://github.com/GerHobbelt/asio) --   a cross-platform C++ library for network and low-level I/O programming that provides developers with a consistent asynchronous model using a modern C++ approach.
   
   Note: (older) Boost.Asio is also included in Boost.
-  
 
 - **asyncplusplus** [📁](./asyncplusplus) [🌐](https://github.com/GerHobbelt/asyncplusplus) -- Async++ is a lightweight concurrency framework for C++11.
 - **asynqro** [📁](./asynqro) [🌐](https://github.com/GerHobbelt/asynqro) -- Futures and thread pool for C++: Asynqro gives developers a rich monadic Future API (inspired by Future API in Scala language), a clean API, refined task scheduling logic and is not tied to any framework.
@@ -1657,48 +1658,45 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **GoldFish-CBOR** [📁](./GoldFish-CBOR) [🌐](https://github.com/GerHobbelt/GoldFish) -- a fast JSON and CBOR streaming library, without using memory. GoldFish can parse and generate very large [JSON](http://json.org) or [CBOR](http://cbor.io) documents. It has some similarities to a [SAX](https://en.wikipedia.org/wiki/Simple_API_for_XML) parser, but doesn't use an event driven API, instead the user of the GoldFish interface is in control. GoldFish intends to be the easiest and one of the fastest JSON and CBOR streaming parser and serializer to use.
 - **google-diff-match-patch** [📁](./google-diff-match-patch) [🌐](https://github.com/GerHobbelt/diff-match-patch) --   Diff Match and Patch offers robust algorithms to perform the operations required for synchronizing plain text.
   
-  	1. Diff:
-  	   * Compare two blocks of plain text and efficiently return a list of differences.
-  	2. Match:
-  	   * Given a search string, find its best fuzzy match in a block of plain text. Weighted for both accuracy and location.
-  	3. Patch:
-  	   * Apply a list of patches onto plain text. Use best-effort to apply patch even when the underlying text doesn't match.
+  1. *Diff*:
+     Compare two blocks of plain text and efficiently return a list of differences.
+  2. *Match*:
+     Given a search string, find its best fuzzy match in a block of plain text. Weighted for both accuracy and location.
+  3. *Patch*:
+     Apply a list of patches onto plain text. Use best-effort to apply patch even when the underlying text doesn't match.
   
-  	Originally built in 2006 to power Google Docs.
-  
+  Originally built in 2006 to power Google Docs.
 
 - **google::marl** [📁](./google-marl) [🌐](https://github.com/GerHobbelt/marl) -- a hybrid thread / fiber task scheduler written in C++ 11. Marl uses a combination of fibers and threads to allow efficient execution of tasks that can block, while keeping a fixed number of hardware threads.
 - **googletest** [📁](./googletest) [🌐](https://github.com/GerHobbelt/googletest) --   unit test framework: see the [GoogleTest User's Guide](https://google.github.io/googletest/) for documentation. We recommend starting with the [GoogleTest Primer](https://google.github.io/googletest/primer.html).
   
-  	Features:
+  Features:
   
-  	*   An [xUnit](https://en.wikipedia.org/wiki/XUnit) test framework.
-  	*   Test discovery.
-  	*   A rich set of assertions.
-  	*   User-defined assertions.
-  	*   Death tests.
-  	*   Fatal and non-fatal failures.
-  	*   Value-parameterized tests.
-  	*   Type-parameterized tests.
-  	*   Various options for running the tests.
-  	*   XML test report generation.
-  
+  * An [xUnit](https://en.wikipedia.org/wiki/XUnit) test framework.
+  * Test discovery.
+  * A rich set of assertions.
+  * User-defined assertions.
+  * Death tests.
+  * Fatal and non-fatal failures.
+  * Value-parameterized tests.
+  * Type-parameterized tests.
+  * Various options for running the tests.
+  * XML test report generation.
 
 - **gperf-hash** [📁](./gperf-hash) [🌐](https://github.com/GerHobbelt/gperf) -- This is GNU gperf, a program that generates C/C++ perfect hash functions for sets of key words.
 - **GraphicsMagick** [📁](./GraphicsMagick) [🌐](https://github.com/GerHobbelt/graphicsmagick) -- provides a comprehensive collection of utilities, programming interfaces, and GUIs, to support file format conversion, image processing, and 2D vector rendering. GraphicsMagick is originally based on ImageMagick from ImageMagick Studio (which was originally written by John Cristy at Dupont). The goal of GraphicsMagick is to provide the highest quality product possible while encouraging open and active participation from all interested developers.
 - **graphit** [📁](./graphit) [🌐](https://github.com/GerHobbelt/graphit) -- a High-Performance Domain Specific Language for Graph Analytics.
 - **grok-jpeg2000** [📁](./grok-jpeg2000) [🌐](https://github.com/GerHobbelt/grok) --   World's Leading Open Source JPEG 2000 Codec
   
-  	Features:
+  Features:
   
-  	* support for new **High Throughput JPEG 2000 (HTJ2K)** standard
-  	* fast random-access sub-image decoding using `TLM` and `PLT` markers
-  	* full encode/decode support for `ICC` colour profiles
-  	* full encode/decode support for `XML`,`IPTC`, `XMP` and `EXIF` meta-data
-  	* full encode/decode support for `monochrome`, `sRGB`, `palette`, `YCC`, `extended YCC`, `CIELab` and `CMYK` colour spaces
-  	* full encode/decode support for `JPEG`,`PNG`,`BMP`,`TIFF`,`RAW`,`PNM` and `PAM` image formats
-  	* full encode/decode support for 1-16 bit precision images
-  
+  * support for new **High Throughput JPEG 2000 (HTJ2K)** standard
+  * fast random-access sub-image decoding using `TLM` and `PLT` markers
+  * full encode/decode support for `ICC` colour profiles
+  * full encode/decode support for `XML`,`IPTC`, `XMP` and `EXIF` meta-data
+  * full encode/decode support for `monochrome`, `sRGB`, `palette`, `YCC`, `extended YCC`, `CIELab` and `CMYK` colour spaces
+  * full encode/decode support for `JPEG`,`PNG`,`BMP`,`TIFF`,`RAW`,`PNM` and `PAM` image formats
+  * full encode/decode support for 1-16 bit precision images
 
 - **gtn** [📁](./gtn) [🌐](https://github.com/GerHobbelt/gtn) -- GTN (Automatic Differentiation with WFSTs) is a framework for automatic differentiation with weighted finite-state transducers. The goal of GTN is to make adding and experimenting with structure in learning algorithms much simpler. This structure is encoded as weighted automata, either acceptors (WFSAs) or transducers (WFSTs). With `gtn` you can dynamically construct complex graphs from operations on simpler graphs. Automatic differentiation gives gradients with respect to any input or intermediate graph with a single call to `gtn.backward`.
 - **gumbo-libxml** [📁](./gumbo-libxml) [🌐](https://github.com/GerHobbelt/gumbo-libxml) -- LibXML2 bindings for the Gumbo HTML5 parser: this provides a libxml2 API on top of the Gumbo parser.  It lets you use a modern parser - Gumbo now passes all html5lib tests, including the template tag, and should be fully conformant with the HTML5 spec - with the full ecosystem of libxml tools, including XPath, tree modification, DTD validation, etc.
@@ -1719,8 +1717,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **hocr-spec** [📁](./hocr-spec) [🌐](https://github.com/GerHobbelt/hocr-spec) -- the [hOCR](https://en.wikipedia.org/wiki/HOCR) Embedded OCR Workflow and Output Format specification originally written by [Thomas Breuel](https://github.com/tmbdev).
 - **hocr-tools** [📁](./hocr-tools) [🌐](https://github.com/GerHobbelt/hocr-tools) --   a [Public Specification](http://hocr.info) and tools for the hOCR Format.
   
-  	hOCR is a format for representing OCR output, including layout information, character confidences, bounding boxes, and style information. It embeds this information invisibly in standard HTML. By building on standard HTML, it automatically inherits well-defined support for most scripts, languages, and common layout options. Furthermore, unlike previous OCR formats, the recognized text and OCR-related information co-exist in the same file and survives editing and manipulation. hOCR markup is independent of the presentation.
-  
+  hOCR is a format for representing OCR output, including layout information, character confidences, bounding boxes, and style information. It embeds this information invisibly in standard HTML. By building on standard HTML, it automatically inherits well-defined support for most scripts, languages, and common layout options. Furthermore, unlike previous OCR formats, the recognized text and OCR-related information co-exist in the same file and survives editing and manipulation. hOCR markup is independent of the presentation.
 
 - **honggfuzz** [📁](./honggfuzz) [🌐](https://github.com/GerHobbelt/honggfuzz) -- a security oriented, feedback-driven, evolutionary, easy-to-use fuzzer with interesting analysis options.
 - **hopscotch-map** [📁](./hopscotch-map) [🌐](https://github.com/GerHobbelt/hopscotch-map) -- a C++ implementation of a fast hash map and hash set using hopscotch hashing and open-addressing to resolve collisions. It is a cache-friendly data structure offering better performances than `std::unordered_map` in most cases and is closely similar to `google::dense_hash_map` while using less memory and providing more functionalities.
@@ -1745,8 +1742,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **iresearch** [📁](./iresearch) [🌐](https://github.com/GerHobbelt/iresearch)
 - **JabRef-abbreviations** [📁](./JabRef-abbreviations) [🌐](https://github.com/GerHobbelt/jabref-abbreviations) --   Jabref journal name abbreviations: some journal require you to use the abbreviated names for journals. If you have to change this manually, it's quite cumbersome to do. Luckily there exist tools to help. [Jabref](http://jabref.sourceforge.net) is open source bibliography reference manager. It has an option to abbreviate journal names. However, when it comes to Physics journals, the internal list is far from complete.
   
-  	The original list of abbreviations is located at [ISI](https://images.webofknowledge.com/WOK46/help/WOS/A_abrvjt.html).
-  
+  The original list of abbreviations is located at [ISI](https://images.webofknowledge.com/WOK46/help/WOS/A_abrvjt.html).
 
 - **JabRef-Browser-Extension** [📁](./JabRef-Browser-Extension) [🌐](https://github.com/GerHobbelt/JabRef-Browser-Extension)
 - **JamSpell** [📁](./JamSpell) [🌐](https://github.com/GerHobbelt/JamSpell) -- a spell checking library, which considers words surroundings (context) for better correction (**accuracy**) and is **fast** (near 5K words per second)
@@ -1756,17 +1752,16 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **jemalloc** [📁](./jemalloc) [🌐](https://github.com/GerHobbelt/jemalloc) -- a general purpose malloc(3) implementation that emphasizes fragmentation avoidance and scalable concurrency support.  jemalloc first came into use as the FreeBSD libc allocator in 2005, and since then it has found its way into numerous applications that rely on its predictable behavior.  In 2010 jemalloc development efforts broadened to include developer support features such as heap profiling and extensive monitoring/tuning hooks.
 - **jerryscript** [📁](./jerryscript) [🌐](https://github.com/GerHobbelt/jerryscript) --   [JerryScript](https://github.com/jerryscript-project/jerryscript/) is a lightweight JavaScript engine for resource-constrained devices such as microcontrollers. It can run on devices with less than 64 KB of RAM and less than 200 KB of flash memory.
   
-  	Key characteristics of JerryScript:
+  Key characteristics of JerryScript:
   
-  	* Full ECMAScript 5.1 standard compliance
-  	* 160K binary size when compiled for ARM Thumb-2
-  	* Heavily optimized for low memory consumption
-  	* Written in C99 for maximum portability
-  	* Snapshot support for precompiling JavaScript source code to byte code
-  	* Mature C API, easy to embed in applications
+  * Full ECMAScript 5.1 standard compliance
+  * 160K binary size when compiled for ARM Thumb-2
+  * Heavily optimized for low memory consumption
+  * Written in C99 for maximum portability
+  * Snapshot support for precompiling JavaScript source code to byte code
+  * Mature C API, easy to embed in applications
   
-  	Additional information can be found at the [project page](http://jerryscript.net) and [Wiki](https://github.com/jerryscript-project/jerryscript/wiki).
-  
+  Additional information can be found at the [project page](http://jerryscript.net) and [Wiki](https://github.com/jerryscript-project/jerryscript/wiki).
 
 - **jpeginfo** [📁](../../thirdparty/jpeginfo) [🌐](https://github.com/GerHobbelt/jpeginfo)
 - **jpeg-xl** [📁](./jpeg-xl) [🌐](https://github.com/GerHobbelt/jpeg-xl) - [JPEG-XL]https://gitlab.com/wg1/jpeg-xl) support
@@ -2547,15 +2542,15 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **gettext** [📁](./gettext) [🌐](https://github.com/GerHobbelt/gettext) -- the GNU gettext package.  It is interesting for authors or maintainers of other packages or programs which they want to see internationalized.  As one step the handling of messages in different languages should be implemented.  For this task GNU gettext provides the needed tools and library functions. It is also interesting for translators, because GNU gettext provides the 'msgmerge' program, which prepares a message catalog before a translation update.
 - **grok-jpeg2000** [📁](./grok-jpeg2000) [🌐](https://github.com/GerHobbelt/grok) --   World's Leading Open Source JPEG 2000 Codec
   
-  	Features:
+  Features:
   
-  	* support for new **High Throughput JPEG 2000 (HTJ2K)** standard
-  	* fast random-access sub-image decoding using `TLM` and `PLT` markers
-  	* full encode/decode support for `ICC` colour profiles
-  	* full encode/decode support for `XML`,`IPTC`, `XMP` and `EXIF` meta-data
-  	* full encode/decode support for `monochrome`, `sRGB`, `palette`, `YCC`, `extended YCC`, `CIELab` and `CMYK` colour spaces
-  	* full encode/decode support for `JPEG`,`PNG`,`BMP`,`TIFF`,`RAW`,`PNM` and `PAM` image formats
-  	* full encode/decode support for 1-16 bit precision images
+  * support for new **High Throughput JPEG 2000 (HTJ2K)** standard
+  * fast random-access sub-image decoding using `TLM` and `PLT` markers
+  * full encode/decode support for `ICC` colour profiles
+  * full encode/decode support for `XML`,`IPTC`, `XMP` and `EXIF` meta-data
+  * full encode/decode support for `monochrome`, `sRGB`, `palette`, `YCC`, `extended YCC`, `CIELab` and `CMYK` colour spaces
+  * full encode/decode support for `JPEG`,`PNG`,`BMP`,`TIFF`,`RAW`,`PNM` and `PAM` image formats
+  * full encode/decode support for 1-16 bit precision images
   
 
 - **gtn** [📁](./gtn) [🌐](https://github.com/GerHobbelt/gtn) -- GTN (Automatic Differentiation with WFSTs) is a framework for automatic differentiation with weighted finite-state transducers. The goal of GTN is to make adding and experimenting with structure in learning algorithms much simpler. This structure is encoded as weighted automata, either acceptors (WFSAs) or transducers (WFSTs). With `gtn` you can dynamically construct complex graphs from operations on simpler graphs. Automatic differentiation gives gradients with respect to any input or intermediate graph with a single call to `gtn.backward`.
@@ -2573,16 +2568,16 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **jbig2enc** [📁](./jbig2enc) [🌐](https://github.com/GerHobbelt/jbig2enc)
 - **jerryscript** [📁](./jerryscript) [🌐](https://github.com/GerHobbelt/jerryscript) --   [JerryScript](https://github.com/jerryscript-project/jerryscript/) is a lightweight JavaScript engine for resource-constrained devices such as microcontrollers. It can run on devices with less than 64 KB of RAM and less than 200 KB of flash memory.
   
-  	Key characteristics of JerryScript:
+  Key characteristics of JerryScript:
   
-  	* Full ECMAScript 5.1 standard compliance
-  	* 160K binary size when compiled for ARM Thumb-2
-  	* Heavily optimized for low memory consumption
-  	* Written in C99 for maximum portability
-  	* Snapshot support for precompiling JavaScript source code to byte code
-  	* Mature C API, easy to embed in applications
+  * Full ECMAScript 5.1 standard compliance
+  * 160K binary size when compiled for ARM Thumb-2
+  * Heavily optimized for low memory consumption
+  * Written in C99 for maximum portability
+  * Snapshot support for precompiling JavaScript source code to byte code
+  * Mature C API, easy to embed in applications
   
-  	Additional information can be found at the [project page](http://jerryscript.net) and [Wiki](https://github.com/jerryscript-project/jerryscript/wiki).
+  Additional information can be found at the [project page](http://jerryscript.net) and [Wiki](https://github.com/jerryscript-project/jerryscript/wiki).
   
 
 - **jsoncons** [📁](./jsoncons) [🌐](https://github.com/GerHobbelt/jsoncons) -- a C++, header-only library for constructing [JSON](http://www.json.org) and JSON-like data formats such as [CBOR](http://cbor.io/). Compared to other JSON libraries, jsoncons has been designed to handle very large JSON texts. At its heart are SAX-style parsers and serializers. It supports reading an entire JSON text in memory in a variant-like structure. But it also supports efficient access to the underlying data using StAX-style pull parsing and push serializing. It supports incremental parsing into a user's preferred form, using information about user types provided by specializations of `json_type_traits`.

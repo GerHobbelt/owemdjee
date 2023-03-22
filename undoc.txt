@@ -35,7 +35,6 @@ DIR: **./QuickJS** -- - **QuickJS** [📁](./QuickJS) [🌐](https://github.com/
 DIR: **./QuickJS-C++-Wrapper** -- - **QuickJS-C++-Wrapper** [📁](./QuickJS-C++-Wrapper) [🌐](https://github.com/GerHobbelt/quickjscpp)
 DIR: **./QuickJS-C++-Wrapper2** -- - **QuickJS-C++-Wrapper2** [📁](./QuickJS-C++-Wrapper2) [🌐](https://github.com/GerHobbelt/quickjspp)
 DIR: **./stx-error-handling** -- - **stx-error-handling** [📁](./stx-error-handling) [🌐](https://github.com/GerHobbelt/STX)
-DIR: **./libaco** -- - **libaco** [📁](./libaco) [🌐](https://github.com/GerHobbelt/libaco)
 DIR: **./nsync** -- - **nsync** [📁](./nsync) [🌐](https://github.com/GerHobbelt/nsync)
 DIR: **./pevents** -- - **pevents** [📁](./pevents) [🌐](https://github.com/GerHobbelt/pevents)
 DIR: **./ThreadPool** -- - **ThreadPool** [📁](./ThreadPool) [🌐](https://github.com/GerHobbelt/ThreadPool)
