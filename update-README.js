@@ -225,54 +225,120 @@ function process_single_section(txt) {
 	let title = m[2].trim();
 	let content = txt.substr(m[0].length).trim();
 
-	content = sort_subsection(/\n- /, content, '- ', '    ');
+	content = process_content_part(content);
 	
 	return `${ level_str } ${ title }\n\n${ content }`;
 }
 
-
-// sort the overview list alphabetically:
-function sort_section(start_re_str, txt) {
-	txt = txt.replace(new RegExp(`(${start_re_str}[^\\n]+)\\n([^]+?)\\n(#[^\\n]+)`, 'g'), function r(m, p1, p2, p3) {
-		let s = sort_subsection(/\n- /, p2, '- ', '    ');
-
-		//console.log({ s, p1, p3 });
-		return p1 + '\n\n' + s + '\n\n\n\n\n\n\n\n' + p3;
+function process_content_part(txt) {
+	txt = txt.trim();
+	if (txt.length === 0)
+		return txt;
+	
+	// detect paragraphs & lists. Sort the lists, if any.
+	let lines = txt.split('\n');
+	let category = lines.map((line) => {
+		if (line.trim().length === 0)
+			return 1;		// vspace
+		if (/^[-] /.test(line))
+			return 2; 		// item (start)
+		if (/^\s/.test(line))
+			return 3;		// item (continued)
+		
+		return 4;			// paragraph line
 	});
-	return txt;
+	
+	let chunks = [];
+	let chunk;
+	let list;
+	let mode = -1;
+	for (let i = 0; i < category.length; i++) {
+		let line_mode = category[i];
+		
+		switch (category[i]) {
+		case 4:		// paragraph gathering
+			if (mode === 2) {
+				// push previous item into the list
+				let part = chunk.join('\n').trim();
+				list.push(part);
+				part = sort_subsection(list);
+				chunks.push(part);
+			}
+			if (mode !== 4) {
+				chunk = [];
+				list = [];
+				mode = 4;
+			}
+			chunk.push(lines[i]);
+			break;
+			
+		case 2:		// item (start)
+			if (mode === 4) {
+				let part = chunk.join('\n');
+				chunks.push(part);
+			}
+			if (mode === 2) {
+				// push previous item into the list
+				let part = chunk.join('\n').trim();
+				list.push(part);
+				chunk = [];
+			}
+			if (mode !== 2) {
+				chunk = [];
+				list = [];
+				mode = 2;
+			}
+			chunk.push(lines[i]);
+			break;
+			
+		default:
+			chunk.push(lines[i]);
+			break;
+		}
+	}
+
+	if (mode === 2) {
+		// push previous item into the list
+		let part = chunk.join('\n').trim();
+		list.push(part);
+		part = sort_subsection(list);
+		chunks.push(part);
+	}
+	else if (mode === 4) {
+		let part = chunk.join('\n');
+		chunks.push(part);
+	}
+	
+	return chunks.join('\n\n');
 }
 
 
+
+
 // sort the overview list alphabetically:
-function sort_subsection(item_re, p2, rebuild_prefix, indent_prefix) {
-	p2 = '\n' + p2 + '\n';
-	let a = p2.split(item_re).map((l) => l.trim()).filter((l) => l.length !== 0);
+function sort_subsection(list) {
+	let a = list.map((l) => l.trim()).filter((l) => l.length !== 0);
 	let b = a.map((l, i) => {
-		let re = new RegExp(`\n${indent_prefix}`, 'g');
+		l = reindent_text(l, 2).trim();
 		let key = l.replace(/[^a-z0-9 ]/gi, '').toLowerCase();
 
-		// unindent sublevel:
-		let old_l = l;
-		//console.log({ subline: 1, l });
-		l = l.replace(re, '\n');
-		if (l !== old_l) {
-			//console.log({ subline_DEINDENT: 1, re, indent_prefix, old_l, l });
-		}
-
 		// see if it has a sublist to sort
-		l = process_subsection(l);
+		//l = process_content_part(l);
 
 		// re-indent sublevel:
+		let indent_prefix = '';
 		l = l.replace(/\n/g, `\n${indent_prefix}`);
-		if (l !== old_l) {
-			//console.log({ subline_sorted: 1, l });
-		}
 
 		return { line: key, index: i, origline: l };
 	});
 	b.sort((a, b) => {
-		let ad = (a.origline.indexOf('[📁]') > 0);
-		let bd = (b.origline.indexOf('[📁]') > 0);
+		let ad = (a.origline.indexOf('- ~~') === 0);
+		let bd = (b.origline.indexOf('- ~~') === 0);
+		if (ad !== bd)
+			return bd > ad ? -1 : 1;
+
+		ad = (a.origline.indexOf('[📁]') > 0);
+		bd = (b.origline.indexOf('[📁]') > 0);
 		if (ad !== bd)
 			return bd > ad ? 1 : -1;
 
@@ -286,27 +352,27 @@ function sort_subsection(item_re, p2, rebuild_prefix, indent_prefix) {
 	})
 
 	// re-merge the list; make sure multiline entries have an extra empty line at the end to clearly visualize them (as was done by hand before)
-	let s = b.map((l) => rebuild_prefix + l.origline + (l.origline.indexOf('\n') > 0 ? '\n' : '')).join('\n');
+	let s = b.map((l) => '' + l.origline + (l.origline.indexOf('\n') > 0 ? '\n' : '')).join('\n');
 
 	//console.log({ b, s });
 	return s;
 }
 
 function process_subsection(l) {
-	var rv = /^([^]+?)(\n  [-+*] [^]+?)(\n  [^-+*\s]+[^]+)?$/.exec(l + '\n');
+	var rv = /^([^]+?)(\n  [-] [^]+?)(\n  [^-\s]+[^]+)?$/.exec(l + '\n');
 	let s = l;
 	if (rv) {
 		rv[0] = null;
-		rv[2] = rv[2].replace(/\n  [-+*] /g, '\n    - ');
+		rv[2] = rv[2].replace(/\n  [-] /g, '\n    - ');
 		if (!rv[3])
 			rv[3] = '';
 		rv.input = null;
 	}
 	else {
-		rv = /^([^]+?)(\n    [-+*] [^]+?)(\n    [^-+*\s]+[^]+)?$/.exec(l + '\n');
+		rv = /^([^]+?)(\n    [-] [^]+?)(\n    [^-\s]+[^]+)?$/.exec(l + '\n');
 		if (rv) {
 			rv[0] = null;
-			rv[2] = rv[2].replace(/\n    [-+*] /g, '\n    - ');
+			rv[2] = rv[2].replace(/\n    [-] /g, '\n    - ');
 			if (!rv[3])
 				rv[3] = '';
 			rv.input = null;
@@ -410,7 +476,7 @@ function find_indent_level(txt, pos) {
 
 function reindent_text(txt, indent) {
 	if (txt.indexOf('\n') < 0)
-		return null;
+		return txt;
 	
 	let lines = txt.split('\n');
 	let base_indent = -1;
@@ -459,7 +525,7 @@ txt = txt.replace(mod_re, (m, p1, p2, p3, pos) => {
 		let indent = find_indent_level(txt, pos);
 		let descr2 = reindent_text(descr, indent + 2);
 		//console.log({m, p1, p2, p3, key2, descr, pos, indent, descr2});
-		return `${ m.trim() } -- ${ descr2 || descr }\n`;
+		return `${ m.trim() } -- ${ descr2 }\n`;
 	}
 	return m;
 });
