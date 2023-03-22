@@ -396,9 +396,11 @@ function collect_descriptions(txt) {
 		let matchPos = m.index + match.length;
 		let dstr = txt.substring(matchPos, matchPos + 1000);
 
-		let desc_re = /^ -- ([^ \r\n][^]+?)\n(:?(:?\s*- (:?~~)?\*\*)|(:?\s*- ~~)|(:?\s*- http)|(:?\s*- other)|(:?\s*- ZeroMQ)|(:?\s*- LMDB)|(:?\s*- see also)|(:?\s*- \[Manticore\])|[#*-]|$)/;
+		let desc_re = /^ +-- +([^ \r\n][^]+?)\n(:?(:?\s*- (:?~~)?\*\*)|(:?\s*- ~~)|(:?\s*- http)|(:?\s*- other)|(:?\s*- ZeroMQ)|(:?\s*- LMDB)|(:?\s*- see also)|(:?\s*- \[Manticore\])|[#*-]|$)/;
 
 		let d = desc_re.exec(dstr);
+		if (id === 'xdoca')
+			console.log({id, dstr, d});
 		if (d) {
 			d.input = null;
 			let description = d[1].trim();
