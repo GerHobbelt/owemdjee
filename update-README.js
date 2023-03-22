@@ -109,13 +109,13 @@ mod_re = /\s*\[submodule "([^"]+)"\][\s\r\n]+path = ([^\s\r\n]+)[\s\r\n]+url = (
 m = mod_re.exec(txt);
 while (m) {
 	m.input = null;
-	console.log({m})
+	//console.log({m})
 	let repo = m[3];
 	let url = repo.replace(/git@github.com:GerHobbelt/, `https://github.com/GerHobbelt`).replace(/\.git$/, '');
 	let id = m[1];
 	let localdir = `./${ m[2] }`
 	let key2 = localdir.replace(/[\\\/._-]+/g, '');
-	console.log({id, key2, localdir, repo, url })
+	//console.log({id, key2, localdir, repo, url })
 
 	dict[id.toLowerCase()] = { id, key2, localdir, repo, url };
 	dict[key2.toLowerCase()] = { id, key2, localdir, repo, url };
@@ -333,7 +333,7 @@ function collect_descriptions(txt) {
 			d.input = null;
 			let description = d[1].trim();
 
-			console.log({id, key2, localdir, repo, url, m, matchPos, description, dstr })
+			//console.log({id, key2, localdir, repo, url, m, matchPos, description, dstr })
 
 			//if (a[id.toLowerCase()] == undefined) {
 			//	a[id.toLowerCase()] = description;
@@ -356,16 +356,68 @@ function collect_descriptions(txt) {
 
 let descr_arr = collect_descriptions(txt);
 
+function find_indent_level(txt, pos) {
+	let mark = pos;
+	for (pos--; pos >= 0; pos--) {
+		if (txt[pos] === '\n')
+			break;
+	}
+	pos++;
+	return mark - pos;
+}
+
+function reindent_text(txt, indent) {
+	if (txt.indexOf('\n') < 0)
+		return null;
+	
+	let lines = txt.split('\n');
+	let base_indent = -1;
+	let base_indent_str = '';
+	for (let i = 1; i < lines.length; i++) {
+		let m = /^( +)([^ \n]+)/.exec(lines[i]);
+		//console.log({line: lines[i], m});
+		if (m) {
+			let s = m[1];
+			let l = s.length;
+			if (base_indent === -1) {
+				base_indent = l;
+				base_indent_str = s;
+			}
+			else if (l < base_indent) {
+				base_indent = l;
+				base_indent_str = s;
+			}
+		}
+	}
+	//console.log({txt, base_indent, base_indent_str});
+	if (base_indent === -1) {
+		base_indent = 0;
+	}
+	
+	let re_str = (new Array(indent + 1)).join(' ');
+	let re = new RegExp('^' + base_indent_str);
+	
+	for (let i = 0; i < lines.length; i++) {
+		lines[i] = lines[i].replace(re, re_str);
+	}
+	
+	txt = lines.join('\n');
+	//console.log("reindented:", {txt, indent, base_indent, re, re_str});
+	
+	return txt;
+}
 
 mod_re = /- \*\*([^*]+)\*\* \[📁\]\(([^ )]+)\) \[🌐\]\(([^ )]+)\)\s*[\n]/g;
-txt = txt.replace(mod_re, (m, p1, p2, p3) => {
+txt = txt.replace(mod_re, (m, p1, p2, p3, pos) => {
 	let id = 'x' + p1;
 	let localdir = p2;
 	let key2 = localdir.replace('thirdparty/', '').replace(/[\\\/._-]+/g, '');
 	let descr = descr_arr[id];
 	if (descr) {
-		console.log({m, p1, p2, p3, key2, descr});
-		return `${ m.trim() } -- ${ descr }\n`;
+		let indent = find_indent_level(txt, pos);
+		let descr2 = reindent_text(descr, indent + 2);
+		//console.log({m, p1, p2, p3, key2, descr, pos, indent, descr2});
+		return `${ m.trim() } -- ${ descr2 || descr }\n`;
 	}
 	return m;
 });
@@ -417,7 +469,7 @@ function check_entries_against_their_categorized_references(txt) {
 		let tbd_dict = Object.keys(tbd_arr).map((id) => {
 			let idstr = id.substring(1).toLowerCase();
 			let slot = dict[idstr];
-			console.log({id, idstr, slot})
+			//console.log({id, idstr, slot})
 			return slot;
 		});
 		//console.log({tbd_dict});

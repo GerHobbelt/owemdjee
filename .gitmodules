@@ -2785,39 +2785,55 @@
 [submodule "grok-jpeg2000"]
 	path = grok-jpeg2000
 	url = git@github.com:GerHobbelt/grok.git
+
 [submodule "xor-and-binary-fuse-filter"]
 	path = xor-and-binary-fuse-filter
 	url = git@github.com:GerHobbelt/xor_singleheader.git
+
 [submodule "fastfilter_cpp"]
 	path = fastfilter_cpp
 	url = git@github.com:GerHobbelt/fastfilter_cpp.git
+
 [submodule "pmdk"]
 	path = pmdk
 	url = git@github.com:GerHobbelt/pmdk.git
+
 [submodule "libpmemobj-cpp"]
 	path = libpmemobj-cpp
 	url = git@github.com:GerHobbelt/libpmemobj-cpp.git
+
 [submodule "adaptiveqf"]
 	path = adaptiveqf
 	url = git@github.com:GerHobbelt/adaptiveqf.git
+
 [submodule "iceberghashtable"]
 	path = iceberghashtable
 	url = git@github.com:GerHobbelt/iceberghashtable.git
+
 [submodule "cqf"]
 	path = cqf
 	url = git@github.com:GerHobbelt/cqf.git
+
 [submodule "pmdk-tests"]
 	path = pmdk-tests
 	url = git@github.com:GerHobbelt/pmdk-tests.git
+
 [submodule "vmem"]
 	path = vmem
 	url = git@github.com:GerHobbelt/vmem.git
+
 [submodule "pmemkv-bench"]
 	path = pmemkv-bench
 	url = git@github.com:GerHobbelt/pmemkv-bench.git
+
 [submodule "pmemkv"]
 	path = pmemkv
 	url = git@github.com:GerHobbelt/pmemkv.git
+
 [submodule "vmemcache"]
 	path = vmemcache
 	url = git@github.com:GerHobbelt/vmemcache.git
+
+[submodule "doxa"]
+	path = doxa
+	url = git@github.com:GerHobbelt/Doxa.git
