@@ -196,6 +196,8 @@ function process_all_supersections(txt) {
 	let sections = txt.split(/\n---+\n/);
 	
 	txt = sections.map(process_all_sections).join('\n\n---\n\n');
+
+	txt = txt.trim() + '\n\n';
 	
 	return txt;
 }
@@ -274,7 +276,7 @@ function process_content_part(txt) {
 			
 		case 2:		// item (start)
 			if (mode === 4) {
-				let part = chunk.join('\n');
+				let part = chunk.join('\n').trim();
 				chunks.push(part);
 			}
 			if (mode === 2) {
@@ -305,7 +307,7 @@ function process_content_part(txt) {
 		chunks.push(part);
 	}
 	else if (mode === 4) {
-		let part = chunk.join('\n');
+		let part = chunk.join('\n').trim();
 		chunks.push(part);
 	}
 	
@@ -320,14 +322,14 @@ function sort_subsection(list) {
 	let a = list.map((l) => l.trim()).filter((l) => l.length !== 0);
 	let b = a.map((l, i) => {
 		l = reindent_text(l, 2).trim();
-		let key = l.replace(/[^a-z0-9 ]/gi, '').toLowerCase();
+		let key = l.replace(/\n[^]*$/, '');
+		let itemkey = key.replace(/--[^]*$/, '');
+		if (itemkey.length > 0)
+			key = itemkey;
+		key = key.replace(/[^a-z0-9 ]/gi, '').toLowerCase();
 
 		// see if it has a sublist to sort
 		//l = process_content_part(l);
-
-		// re-indent sublevel:
-		let indent_prefix = '';
-		l = l.replace(/\n/g, `\n${indent_prefix}`);
 
 		return { line: key, index: i, origline: l };
 	});
@@ -357,58 +359,6 @@ function sort_subsection(list) {
 	//console.log({ b, s });
 	return s;
 }
-
-function process_subsection(l) {
-	var rv = /^([^]+?)(\n  [-] [^]+?)(\n  [^-\s]+[^]+)?$/.exec(l + '\n');
-	let s = l;
-	if (rv) {
-		rv[0] = null;
-		rv[2] = rv[2].replace(/\n  [-] /g, '\n    - ');
-		if (!rv[3])
-			rv[3] = '';
-		rv.input = null;
-	}
-	else {
-		rv = /^([^]+?)(\n    [-] [^]+?)(\n    [^-\s]+[^]+)?$/.exec(l + '\n');
-		if (rv) {
-			rv[0] = null;
-			rv[2] = rv[2].replace(/\n    [-] /g, '\n    - ');
-			if (!rv[3])
-				rv[3] = '';
-			rv.input = null;
-		}
-		else {
-			rv = null;
-		}
-	}
-
-	if (rv) {
-		s = sort_subsection(/\n    - /, rv[2], '    - ', '    ');
-		s = `${rv[1]}\n${s}\n\n${rv[3]}`;
-	}
-
-	s = s.trimRight();
-
-	//console.log("process_subsection:", { rv, s });
-
-	return s;
-}
-
-
-/*
-txt = txt.replace(/(# Libraries we\'re looking at[^\n]+)\n([^]+?)\n((?:#[^\n]+)|---)/, function r(m, p1, p2, p3) {
-	// split up in subsections
-	p2 = p2.replace(/\t/g, '    ');
-	let a = p2.split(/\n- /).map((l) => l.trim()).filter((l) => l.length !== 0);
-	let b = a.map((l) => {
-		l = process_subsection(l);
-		return l + (l.indexOf('\n') > 0 ? '\n' : '');
-	})
-
-	//console.log({ p1, p3 });
-	return p1 + '\n\n- ' + b.join('\n\n- ') + '\n\n\n\n' + p3;
-})
-*/
 
 
 
@@ -546,17 +496,17 @@ function check_entries_against_their_categorized_references(txt) {
 	let categories_block_re = new RegExp(`^([^]+?)\\n(?:${overview_re_str})`, 'g');
 
 	let tbd_m = tbd_block_re.exec(txt);
-	delete tbd_m?.input;
+	delete tbd_m.input;
 
 	let toc_m = toc_block_re.exec(txt);
-	delete toc_m?.input;
+	delete toc_m.input;
 
 	let cat_m = categories_block_re.exec(txt);
-	delete cat_m?.input;
+	delete cat_m.input;
 
-	let cat_arr = collect_entries(cat_m ? cat_m[1] : '');
-	let toc_arr = collect_entries(toc_m ? toc_m[2] : '');
-	let tbd_arr = collect_entries(tbd_m ? tbd_m[2] : '');
+	let cat_arr = collect_entries(cat_m[1]);
+	let toc_arr = collect_entries(toc_m[2]);
+	let tbd_arr = collect_entries(tbd_m[2]);
 
 	for (const idx in toc_arr) {
 		if (idx in cat_arr) {
@@ -618,7 +568,7 @@ function collect_entries(txt) {
 		let matchPos = m.index + match.length;
 		let dstr = txt.substring(matchPos, matchPos + 1000);
 
-		let desc_re = /^ -- ([^ \r\n][^]+?)\n(:?(:?\s*- (:?~~)?\*\*)|(:?\s*- ~~)|(:?\s*- http)|(:?\s*- other)|(:?\s*- ZeroMQ)|(:?\s*- LMDB)|(:?\s*- see also)|(:?\s*- \[Manticore\])|[#*-]|$)/;
+		let desc_re = /^ +-- +([^ \r\n][^]+?)\n(:?(:?\s*- (:?~~)?\*\*)|(:?\s*- ~~)|(:?\s*- http)|(:?\s*- other)|(:?\s*- ZeroMQ)|(:?\s*- LMDB)|(:?\s*- see also)|(:?\s*- \[Manticore\])|[#*-]|$)/;
 
 		let d = desc_re.exec(dstr);
 		if (d) {
