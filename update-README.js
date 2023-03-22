@@ -193,6 +193,9 @@ txt = txt.replace(/([\r\n]+)\s*\[submodule "([^"]+)"\][\s\r\n]+path = ([^\s\r\n]
 
 txt = process_all_supersections(txt);
 
+let descr_arr = collect_descriptions(txt);
+
+
 function process_all_supersections(txt) {
 	txt = '\n' + txt.trim() + '\n';
 	
@@ -381,12 +384,13 @@ function sort_subsection(list) {
 
 function collect_descriptions(txt) {
 	let a = {};
+	let debug = /doxa/.test(txt);
 
 	let mod_re = /- \*\*([^*]+)\*\* \[📁\]\(([^ )]+)\) \[🌐\]\(([^ )]+)\)/g;
 	let m = mod_re.exec(txt);
 	while (m) {
 		m.input = null;
-		//console.log({m})
+		if (debug && 0) console.log({m})
 		let repo = m[3];
 		let url = repo;
 		let id = 'x' + m[1];
@@ -394,12 +398,12 @@ function collect_descriptions(txt) {
 		let key2 = localdir.replace('thirdparty/', '').replace(/[\\\/._-]+/g, '');
 		let match = m[0];
 		let matchPos = m.index + match.length;
-		let dstr = txt.substring(matchPos, matchPos + 1000);
+		let dstr = txt.substring(matchPos, matchPos + 4000);
 
 		let desc_re = /^ +-- +([^ \r\n][^]+?)\n(:?(:?\s*- (:?~~)?\*\*)|(:?\s*- ~~)|(:?\s*- http)|(:?\s*- other)|(:?\s*- ZeroMQ)|(:?\s*- LMDB)|(:?\s*- see also)|(:?\s*- \[Manticore\])|[#*-]|$)/;
 
 		let d = desc_re.exec(dstr);
-		if (id === 'xdoca')
+		if (id === 'xdoxa')
 			console.log({id, dstr, d});
 		if (d) {
 			d.input = null;
@@ -428,7 +432,6 @@ function collect_descriptions(txt) {
 	return a;
 }
 
-let descr_arr = collect_descriptions(txt);
 
 function find_indent_level(txt, pos) {
 	let mark = pos;
