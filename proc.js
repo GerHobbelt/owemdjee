@@ -7,25 +7,22 @@ let src = fs.readFileSync('undoc.txt', 'utf8');
 
 let lines = src.split('\n').map((l) => l.trim()).filter((l) => l.length > 0);
 
-let repos = lines.map((l) => l.replace(/^.*?\*\*([^*]+)\*\*.*$/, '$1'))
+let repos = lines.map((l) => l.replace(/^DIR: \*\*([^*]+)\*\*.*$/, '$1'));
 
 
 console.log({lines, repos})
 
 
 let content = lines.map((l, i) => {
-	let repo = repos[i];
-	
-	let f = `${ repo }/README.md`;
+	let repo_path = repos[i];
+
+	l = l.replace(/^.*?-- /, '');
+
+	let f = `${ repo_path }/README.md`;
 	if (fs.existsSync(f)) {
-		console.log("README found!", {l, repo, f})
-		return {l, repo, f};
+		console.log("README found!", {l, repo_path, f})
+		return {l, repo_path, f};
 	}
-	let repo_path = l.replace(/^.*\]\((\.\/[^)]+)\).*$/, '$1');
-	let repo_path2 = l.replace(/^.*\]\((\.\.\/[^)]+)\).*$/, '$1');
-	if (repo_path2.length < repo_path.length)
-		repo_path = repo_path2;
-	
 	const exts = [ 'md', 'rst', 'markdown', 'txt', 'html', null ];
 	for (let ext of exts) {
 		if (ext == null)
@@ -34,13 +31,13 @@ let content = lines.map((l, i) => {
 		
 		f = `${ repo_path }/README${ ext }`;
 		if (fs.existsSync(f)) {
-			console.log("README found!", {l, repo, repo_path, f})
-			return {l, repo, repo_path, f};
+			console.log("README found!", {l, repo_path, f})
+			return {l, repo_path, f};
 		}
 	}
 	
-	console.log("*** no README found ***", {l, repo})
-	return {l, repo};
+	console.log("*** no README found ***", {l, repo_path})
+	return {l, repo_path};
 })
 .map((rec) => {
 	if (rec.f) {
@@ -48,6 +45,15 @@ let content = lines.map((l, i) => {
 	}
 	return rec;
 });
+
+content.sort((a, b) => {
+	if (!!a.content !== !!b.content)
+		return !!a.content > !!b.content ? 1 : -1;
+
+	let rv = a.l.localeCompare(b.l);
+	return rv;
+});
+
 
 let output = content.map((rec) => {
 	if (rec.content) {

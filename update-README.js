@@ -7,6 +7,9 @@ const fs = require("fs");
 
 let txt = fs.readFileSync("README.md", "utf8");
 const origTxt = txt;
+
+txt = txt.replace(/\t/g, '    ');
+
 let module_spec = fs.readFileSync(".gitmodules", "utf8");
 let module_spec2 = fs.readFileSync("../../.gitmodules", "utf8");
 
@@ -219,7 +222,7 @@ function process_single_section(txt) {
 	
 	txt = '#' + txt + '\n';
 	
-	console.log({txt});
+	//console.log({txt});
 	
 	let m = /^(#+)([^\n]+)\n/g.exec(txt);
 	let level = m[1].length;
@@ -329,7 +332,16 @@ function sort_subsection(list) {
 		key = key.replace(/[^a-z0-9 ]/gi, '').toLowerCase();
 
 		// see if it has a sublist to sort
-		//l = process_content_part(l);
+		if (l.indexOf('\n') > 0) {
+			let content = l.substr(2);    // skip '- ' item prefix.
+			content = reindent_text(content, 0);
+
+			content = process_content_part(content);
+			
+			content = content.trim().split('\n').join('\n  ');
+
+			l = '- ' + content;
+		}
 
 		return { line: key, index: i, origline: l };
 	});
@@ -390,6 +402,8 @@ function collect_descriptions(txt) {
 		if (d) {
 			d.input = null;
 			let description = d[1].trim();
+
+			description = reindent_text(description, 0);
 
 			//console.log({id, key2, localdir, repo, url, m, matchPos, description, dstr })
 
@@ -465,20 +479,6 @@ function reindent_text(txt, indent) {
 	return txt + '\n';
 }
 
-mod_re = /- \*\*([^*]+)\*\* \[📁\]\(([^ )]+)\) \[🌐\]\(([^ )]+)\)\s*[\n]/g;
-txt = txt.replace(mod_re, (m, p1, p2, p3, pos) => {
-	let id = 'x' + p1;
-	let localdir = p2;
-	let key2 = localdir.replace('thirdparty/', '').replace(/[\\\/._-]+/g, '');
-	let descr = descr_arr[id];
-	if (descr) {
-		let indent = find_indent_level(txt, pos);
-		let descr2 = reindent_text(descr, indent + 2);
-		//console.log({m, p1, p2, p3, key2, descr, pos, indent, descr2});
-		return `${ m.trim() } -- ${ descr2 }\n`;
-	}
-	return m;
-});
 
 
 //------------------------------------------------------------------------------------------
@@ -604,8 +604,44 @@ function collect_entries(txt) {
 txt = check_entries_against_their_categorized_references(txt);
 
 
+mod_re = /- \*\*([^*]+)\*\* \[📁\]\(([^ )]+)\) \[🌐\]\(([^ )]+)\)\s*[\n]/g;
+txt = txt.replace(mod_re, (m, p1, p2, p3, pos) => {
+	let id = 'x' + p1;
+	let localdir = p2;
+	let key2 = localdir.replace('thirdparty/', '').replace(/[\\\/._-]+/g, '');
+	let descr = descr_arr[id];
+	if (descr) {
+		let indent = find_indent_level(txt, pos);
+		let descr_indented = reindent_text(descr, indent + 2);
+		//console.log({m, p1, p2, p3, key2, descr, pos, indent, descr_indented});
+		return `${ m.trim() } -- ${ descr_indented }\n`;
+	}
+	return m;
+});
 
 
+mod_re = /- \*\*([^*]+)\*\* (?:\[📁\]\(([^ )]+)\) )?\[🌐\]\(([^ )]+)\)/g;
+
+let undoc = [];
+let undoc_dedup = {};
+txt = txt.replace(mod_re, (m, p1, p2, p3, pos) => {
+	//console.log({m, p1, p2, p3, pos});
+	let id = 'x' + p1;
+	let localdir = p2;
+	if (!undoc_dedup[id]) {
+		undoc_dedup[id] = true;
+		let descr = descr_arr[id];
+		if (!descr) {
+			undoc.push(`DIR: **${ localdir || id }** -- ${ m }`);
+		}
+	}
+	return m;
+});
+
+if (undoc.length > 0) {
+	console.log("Updating the UNDOC.TXT list...");
+	fs.writeFileSync("undoc.txt", undoc.join('\n') + '\n', "utf8");
+}
 
 if (origTxt !== txt) {
 	console.log("Updating the README...");
