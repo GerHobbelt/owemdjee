@@ -2822,3 +2822,31 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **xpdf** [📁](./xpdf) [🌐](https://github.com/GerHobbelt/xpdf)
 
 
+[submodule "fmemopen_windows"]
+	path = fmemopen_windows
+	url = git@github.com:GerHobbelt/fmemopen_windows.git
+
+[submodule "Capture2Text"]
+	path = Capture2Text
+	url = git@github.com:GerHobbelt/Capture2Text.git
+
+[submodule "LeptonicaDocsSite"]
+	path = LeptonicaDocsSite
+	url = git@github.com:GerHobbelt/LeptonicaDocsSite.git
+
+[submodule "UnofficialLeptDocs"]
+	path = UnofficialLeptDocs
+	url = git@github.com:GerHobbelt/UnofficialLeptDocs.git
+
+[submodule "rotate_detection"]
+	path = rotate_detection
+	url = git@github.com:GerHobbelt/rotate_detection.git
+
+[submodule "easyloggingpp"]
+	path = easyloggingpp
+	url = git@github.com:GerHobbelt/easyloggingpp.git
+
+[submodule "twain_library"]
+	path = twain_library
+	url = git@github.com:GerHobbelt/twain_library.git
+
