@@ -2865,3 +2865,7 @@
 [submodule "twain_library"]
 	path = twain_library
 	url = git@github.com:GerHobbelt/twain_library.git
+
+[submodule "libprecog"]
+	path = libprecog
+	url = git@github.com:GerHobbelt/PRLib.git
