@@ -570,7 +570,7 @@ i.e. breaking text into words when you _receive a textstream without spaces_. Al
 - **libwildmatch** [📁](./libwildmatch) [🌐](https://github.com/GerHobbelt/wildmatch) -- wildmatch is a BSD-licensed C/C++ library for git/rsync-style pattern matching.
 - **pcre** [📁](./pcre) [🌐](https://github.com/GerHobbelt/pcre) -- PCRE2 : Perl-Compatible Regular Expressions. The PCRE2 library is a set of C functions that implement regular expression pattern matching using the same syntax and semantics as Perl 5. PCRE2 has its own native API, as well as a set of wrapper functions that correspond to the POSIX regular expression API. It comes in three forms, for processing 8-bit, 16-bit, or 32-bit code units, in either literal or UTF encoding.
 - **re2** [📁](./re2) [🌐](https://github.com/GerHobbelt/re2) -- RE2, a regular expression library.
-- **tre** [📁](./tre) [🌐](https://github.com/GerHobbelt/tre)
+- **tre** [📁](./tre) [🌐](https://github.com/GerHobbelt/tre) -- TRE is a lightweight, robust, and efficient POSIX compliant regexp matching library with some exciting features such as approximate (fuzzy) matching. The matching algorithm used in TRE uses linear worst-case time in the length of the text being searched, and quadratic worst-case time in the length of the used regular expression.
 - **yara-pattern-matcher** [📁](./yara-pattern-matcher) [🌐](https://github.com/GerHobbelt/yara) -- for automated and user-specified pattern recognition in custom document & metadata *cleaning* / processing tasks
 
 
@@ -686,7 +686,7 @@ See also [image formats (visual) quality comparison](https://eclipseo.github.io/
 - **many-stop-words** [📁](./many-stop-words) [🌐](https://github.com/GerHobbelt/many-stop-words) -- Many Stop Words is a simple Python package that provides a single function for loading sets of stop words for different languages.
 - **sentencepiece** [📁](./sentencepiece) [🌐](https://github.com/GerHobbelt/sentencepiece) -- text tokenization
 - **sentence-tokenizer** [📁](./sentence-tokenizer) [🌐](https://github.com/GerHobbelt/Tokenizer) -- text tokenization
-- **stopwords** [📁](./stopwords) [🌐](https://github.com/GerHobbelt/stopwords)
+- **stopwords** [📁](./stopwords) [🌐](https://github.com/GerHobbelt/stopwords) -- default English stop words from different sources.
 - **ucto** [📁](./ucto) [🌐](https://github.com/GerHobbelt/ucto) -- text tokenization
   
   - **libfolia** [📁](./libfolia) [🌐](https://github.com/GerHobbelt/libfolia) -- working with the Format for Linguistic Annotation (FoLiA). Provides a high-level API to read, manipulate, and create FoLiA documents.
@@ -704,9 +704,9 @@ See also [image formats (visual) quality comparison](https://eclipseo.github.io/
 - **ligra-graph** [📁](./ligra-graph) [🌐](https://github.com/GerHobbelt/ligra) -- LIGRA: a Lightweight Graph Processing Framework for Shared Memory; works on both uncompressed and compressed graphs and hypergraphs.
 - **otl** [📁](./otl) [🌐](https://github.com/GerHobbelt/otl) -- Oracle Template Library (STL-like wrapper for SQL DB queries; supports many databases besides Oracle)
 - **sqlean** [📁](./sqlean) [🌐](https://github.com/GerHobbelt/sqlean) -- The ultimate set of SQLite extensions: SQLite has few functions compared to other database management systems. SQLite authors see this as a feature rather than a problem, because SQLite has an extension mechanism in place. There are a lot of SQLite extensions out there, but they are incomplete, inconsistent and scattered across the internet. sqlean brings them together, neatly packaged into domain modules, documented, tested, and built for Linux, Windows and macOS.
-- **sqlite** [📁](./sqlite) [🌐](https://github.com/GerHobbelt/sqlite)
+- **sqlite** [📁](./sqlite) [🌐](https://github.com/GerHobbelt/sqlite) -- the complete [SQLite database engine](https://sqlite.org/).
 - **sqlite3pp** [📁](./sqlite3pp) [🌐](https://github.com/GerHobbelt/sqlite3pp) -- a minimal ORM wrapper for SQLite et al.
-- **sqlite-amalgamation** [📁](./sqlite-amalgamation) [🌐](https://github.com/GerHobbelt/sqlite-amalgamation)
+- **sqlite-amalgamation** [📁](./sqlite-amalgamation) [🌐](https://github.com/GerHobbelt/sqlite-amalgamation) -- the [SQLite](http://www.sqlite.org/download.html) amalgamation, which is the recommended method of building SQLite into larger projects.
 - **SQLiteCpp** [📁](./SQLiteCpp) [🌐](https://github.com/GerHobbelt/SQLiteCpp) -- a smart and easy to use C++ SQLite3 wrapper. SQLiteC++ offers an encapsulation around the native C APIs of SQLite, with a few intuitive and well documented C++ classes.
 - **sqlite-fts5-snowball** [📁](./sqlite-fts5-snowball) [🌐](https://github.com/GerHobbelt/fts5-snowball) -- a simple extension for use with FTS5 within SQLite. It allows FTS5 to use Martin Porter's Snowball stemmers (libstemmer), which are available in several languages. Check http://snowballstem.org/ for more information about them.
 - **SQLiteHistograms** [📁](./SQLiteHistograms) [🌐](https://github.com/GerHobbelt/SQLiteHistograms) -- an SQLite extension library for creating histogram tables, tables of ratio between histograms and interpolation tables of scatter point tables.
@@ -749,8 +749,8 @@ See also [image formats (visual) quality comparison](https://eclipseo.github.io/
   - **libfolia** [📁](./libfolia) [🌐](https://github.com/GerHobbelt/libfolia) -- working with the Format for Linguistic Annotation (FoLiA). Provides a high-level API to read, manipulate, and create FoLiA documents.
   - **uctodata** [📁](./uctodata) [🌐](https://github.com/GerHobbelt/uctodata) -- data for `ucto` library
 
-- **unicode-cldr** [📁](./unicode-cldr) [🌐](https://github.com/GerHobbelt/cldr)
-- **unicode-icu** [📁](./unicode-icu) [🌐](https://github.com/GerHobbelt/icu)
+- **unicode-cldr** [📁](./unicode-cldr) [🌐](https://github.com/GerHobbelt/cldr) -- Unicode CLDR Project: provides key building blocks for software to support the world's languages, with the largest and most extensive standard repository of locale data available. This data is used by a wide spectrum of companies for their software internationalization and localization, adapting software to the conventions of different languages for such common software tasks.
+- **unicode-icu** [📁](./unicode-icu) [🌐](https://github.com/GerHobbelt/icu) -- the [International Components for Unicode](https://icu.unicode.org/).
 - **utfcpp** [📁](./utfcpp) [🌐](https://github.com/GerHobbelt/utfcpp) -- UTF-8 with C++ in a Portable Way
 - **you-token-to-me** [📁](./you-token-to-me) [🌐](https://github.com/GerHobbelt/YouTokenToMe) -- text tokenization
 - see also https://github.com/fxsjy/jieba for a Chinese text tokenizer (done in Python)
@@ -824,7 +824,7 @@ for round-trip annotation and other "external application editing" of known docu
   
   - **svg-charter** [📁](./svg-charter) [🌐](https://github.com/GerHobbelt/charter) -- SVG chart renderer
     
-    - **tinyexpr** [📁](./tinyexpr) [🌐](https://github.com/GerHobbelt/tinyexpr)
+    - **tinyexpr** [📁](./tinyexpr) [🌐](https://github.com/GerHobbelt/tinyexpr) -- a very small recursive descent parser and evaluation engine for math expressions.
 
 - **warc2text** [📁](./warc2text) [🌐](https://github.com/GerHobbelt/warc2text) -- Extracts plain text, language identification and more metadata from WARC records.
 - **xml-pugixml** [📁](./xml-pugixml) [🌐](https://github.com/GerHobbelt/pugixml) -- light-weight, simple and fast XML parser for C++ with XPath support.
@@ -854,7 +854,7 @@ for round-trip annotation and other "external application editing" of known docu
   
   - **svg-charter** [📁](./svg-charter) [🌐](https://github.com/GerHobbelt/charter) -- SVG chart renderer
     
-    - **tinyexpr** [📁](./tinyexpr) [🌐](https://github.com/GerHobbelt/tinyexpr)
+    - **tinyexpr** [📁](./tinyexpr) [🌐](https://github.com/GerHobbelt/tinyexpr) -- a very small recursive descent parser and evaluation engine for math expressions.
 
 
 
@@ -1005,7 +1005,7 @@ The additional (and more important) reason to ditch CPython from the R&D set is 
 - **recycle** [📁](./recycle) [🌐](https://github.com/GerHobbelt/recycle) -- an implementation of a simple resource pool for recycling resources in C++.
 - **refl-cpp** [📁](./refl-cpp) [🌐](https://github.com/GerHobbelt/refl-cpp) -- static reflection for C++17 (compile-time enumeration, attributes, proxies, overloads, template functions, metaprogramming).
 - **result-cpp** [📁](./result-cpp) [🌐](https://github.com/GerHobbelt/result) -- `Result<T, E>` is a modern, simple, and light-weight error-handling alternative to C++ exceptions with a rich feature-set.
-- **stx-error-handling** [📁](./stx-error-handling) [🌐](https://github.com/GerHobbelt/STX)
+- **stx-error-handling** [📁](./stx-error-handling) [🌐](https://github.com/GerHobbelt/STX) -- C++ 17 & C++ 20 error-handling and utility extensions.
 - **swig**  [📁](./swig) [🌐](https://github.com/GerHobbelt/swig) -- a software development tool (code generator) that connects programs written in C and C++ with a variety of high-level programming languages.
 - **tinycolormap** [📁](./tinycolormap) [🌐](https://github.com/GerHobbelt/tinycolormap) -- a header-only, single-file library for colormaps written in C++11.
 - ~~**merror** [📁](./merror) [🌐](https://github.com/GerHobbelt/merror) -- a library for error handling in C++ without exceptions.~~
@@ -1098,10 +1098,9 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **concurrentqueue** [📁](./concurrentqueue) [🌐](https://github.com/GerHobbelt/concurrentqueue) -- moodycamel::ConcurrentQueue, an industrial-strength and fast multi-producer, multi-consumer lock-free concurrent queue for C++11.
 - **CTPL-Thread-Pool** [📁](./CTPL-Thread-Pool) [🌐](https://github.com/GerHobbelt/CTPL) -- Modern and efficient C++ Thread Pool Library. More specifically, there are some threads dedicated to the pool and a container of jobs. The jobs come to the pool dynamically. A job is fetched and deleted from the container when there is an idle thread. The job is then run on that thread.
 - **pthreadpool** [📁](./pthreadpool) [🌐](https://github.com/GerHobbelt/pthreadpool) -- pthreadpool is a portable and efficient thread pool implementation. It provides similar functionality to `#pragma omp parallel for`, but with additional features.
-- **ThreadPool** [📁](./ThreadPool) [🌐](https://github.com/GerHobbelt/ThreadPool)
-- **thread-pool** [📁](./thread-pool) [🌐](https://github.com/GerHobbelt/thread-pool) -- `BS::thread_pool`: a fast, lightweight, and easy-to-use C++17 thread pool for high-performance scientific computing.
-- **thread-pool-c** [📁](./thread-pool-c) [🌐](https://github.com/GerHobbelt/C-Thread-Pool)
-- **thread-pool-cpp** [📁](./thread-pool-cpp) [🌐](https://github.com/GerHobbelt/thread-pool-cpp)
+- **ThreadPool** [📁](./ThreadPool) [🌐](https://github.com/GerHobbelt/ThreadPool) -- a simple C++11 Thread Pool implementation.
+- **thread-pool-c** [📁](./thread-pool-c) [🌐](https://github.com/GerHobbelt/C-Thread-Pool) -- a minimal but advanced threadpool implementation.
+- **thread-pool-cpp** [📁](./thread-pool-cpp) [🌐](https://github.com/GerHobbelt/thread-pool-cpp) -- highly scalable and fast thread pool. It implements both work-stealing and work-distribution balancing startegies. It implements cooperative scheduling strategy.
 - **YACLib** [📁](./YACLib) [🌐](https://github.com/GerHobbelt/YACLib) -- YACLib is a lightweight C++ library for concurrent and parallel task execution.
 
 
@@ -1135,8 +1134,8 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
   
   - **taolog** [📁](./taolog) [🌐](https://github.com/GerHobbelt/taolog) -- A Win32 logger based on DebugView & ETW.
 
-- **stx-error-handling** [📁](./stx-error-handling) [🌐](https://github.com/GerHobbelt/STX)
-- **TraceETW** [📁](./TraceETW) [🌐](https://github.com/GerHobbelt/TraceEtw)
+- **stx-error-handling** [📁](./stx-error-handling) [🌐](https://github.com/GerHobbelt/STX) -- C++ 17 & C++ 20 error-handling and utility extensions.
+- **TraceETW** [📁](./TraceETW) [🌐](https://github.com/GerHobbelt/TraceEtw) -- [Event Tracing for Windows (ETW)](http://msdn.microsoft.com/en-us/library/windows/desktop/aa363668(v=vs.85).aspx) is  powerful but notoriously complex. In C#, [EventSource](http://msdn.microsoft.com/en-us/library/system.diagnostics.tracing.eventsource(v=vs.110).aspx) made that technology much more approachable. This project aims at providing a similar solution for C++, both for Desktop apps and for Windows/Windows Phone Universal Store apps.
 - ~~**merror** [📁](./merror) [🌐](https://github.com/GerHobbelt/merror) -- a library for error handling in C++ without exceptions.~~
   
   - **removed**; reason: code is non-portable to compilers other than GCC, or at least would require more effort than we're willing to expend on this.
@@ -1151,7 +1150,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **drogon** [📁](./drogon) [🌐](https://github.com/GerHobbelt/drogon) -- a C++14/17-based HTTP application framework to easily build various types of web application server programs.
 - **h2o-server** [📁](./h2o-server) [🌐](https://github.com/GerHobbelt/h2o) -- an optimized HTTP/1, HTTP/2, HTTP/3 server.
 - **proxygen** [📁](./proxygen) [🌐](https://github.com/GerHobbelt/proxygen) -- the core C++ HTTP abstractions used at Facebook. Internally, it is used as the basis for building many HTTP servers, proxies, and clients, focusing on the common HTTP abstractions and our simple HTTPServer framework. The framework supports HTTP/1.1, SPDY/3, SPDY/3.1, HTTP/2, and HTTP/3.
-- **wget** [📁](./wget) [🌐](https://github.com/GerHobbelt/wget)
+- **wget** [📁](./wget) [🌐](https://github.com/GerHobbelt/wget) -- GNU Wget is a free utility for non-interactive download of files from the Web.  It supports HTTP, HTTPS, and FTP protocols, as well as retrieval through HTTP proxies.
 - ~~**libmicrohttpd** [🌐](https://github.com/Karlson2k/libmicrohttpd)~~
   
   - **removed**; reason: we've decided on using `crow` as the main server framework. Second choices are `civetweb` and `h2o`. This GNU library is way too 'Unix-is-the-world' oriented for a smooth portable dev experience.
@@ -1304,15 +1303,15 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 
 - **langdata_LSTM** [📁](../../thirdparty/langdata_LSTM) [🌐](https://github.com/GerHobbelt/langdata_lstm) -- tesseract data
 - **tessconfigs** [📁](../../thirdparty/tessconfigs) [🌐](https://github.com/GerHobbelt/tessconfigs)
-- **tessdata** [📁](../../thirdparty/tessdata) [🌐](https://github.com/GerHobbelt/tessdata)
-- **tessdata_best** [📁](../../thirdparty/tessdata_best) [🌐](https://github.com/GerHobbelt/tessdata_best)
+- **tessdata** [📁](../../thirdparty/tessdata) [🌐](https://github.com/GerHobbelt/tessdata) -- trained models for Tesseract. These have models for legacy tesseract engine (--oem 0) as well as the new LSTM neural net based engine (--oem 1). The LSTM models (--oem 1) in these files have been updated to the integerized versions of [tessdata_best](https://github.com/tesseract-ocr/tessdata_best) on GitHub. So, they should be faster but probably a little less accurate than tessdata_best.
+- **tessdata_best** [📁](../../thirdparty/tessdata_best) [🌐](https://github.com/GerHobbelt/tessdata_best) -- the best trained models for the [Tesseract Open Source OCR Engine](https://github.com/tesseract-ocr/tesseract). These models only work with the LSTM OCR engine of Tesseract 4 / 5.
 - **tessdata_contrib** [📁](../../thirdparty/tessdata_contrib) [🌐](https://github.com/GerHobbelt/tessdata_contrib)
-- **tessdata_fast** [📁](../../thirdparty/tessdata_fast) [🌐](https://github.com/GerHobbelt/tessdata_fast)
-- **tessdoc** [📁](../../thirdparty/tessdoc) [🌐](https://github.com/GerHobbelt/tessdoc)
-- **tesseract** [📁](../../thirdparty/tesseract) [🌐](https://github.com/GerHobbelt/tesseract)
-- **tesseract_docs** [📁](../../thirdparty/tesseract_docs) [🌐](https://github.com/GerHobbelt/tesseract_docs)
-- **tesseract_langdata** [📁](../../thirdparty/tesseract_langdata) [🌐](https://github.com/GerHobbelt/langdata)
-- **tesstrain** [📁](../../thirdparty/tesstrain) [🌐](https://github.com/GerHobbelt/tesstrain)
+- **tessdata_fast** [📁](../../thirdparty/tessdata_fast) [🌐](https://github.com/GerHobbelt/tessdata_fast) -- fast integer versions of trained models for the [Tesseract Open Source OCR Engine](https://github.com/tesseract-ocr/tesseract). These models only work with the LSTM OCR engine of Tesseract 4 / 5.
+- **tessdoc** [📁](../../thirdparty/tessdoc) [🌐](https://github.com/GerHobbelt/tessdoc) -- user manual for Tesseract versions `5.x`.
+- **tesseract** [📁](../../thirdparty/tesseract) [🌐](https://github.com/GerHobbelt/tesseract) -- `tesseract-ocr` with `--visible-pdf-image` and other tweaks.
+- **tesseract_docs** [📁](../../thirdparty/tesseract_docs) [🌐](https://github.com/GerHobbelt/tesseract_docs) -- various documents related to Tesseract OCR.
+- **tesseract_langdata** [📁](../../thirdparty/tesseract_langdata) [🌐](https://github.com/GerHobbelt/langdata) -- source training data for Tesseract for lots of languages.
+- **tesstrain** [📁](../../thirdparty/tesstrain) [🌐](https://github.com/GerHobbelt/tesstrain) -- training workflow for Tesseract 4.
 
 
 
@@ -1340,7 +1339,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **libpng** [📁](../../thirdparty/libpng) [🌐](https://github.com/GerHobbelt/libpng)
 - **libtiff** [📁](../../thirdparty/libtiff) [🌐](https://github.com/GerHobbelt/libtiff) -- TIFF Software Distribution
 - **openjpeg** [📁](../../thirdparty/openjpeg) [🌐](https://github.com/GerHobbelt/thirdparty-openjpeg) -- OPENJPEG Library and Applications -- OpenJPEG is an open-source JPEG 2000 codec written in C language. It has been developed in order to promote the use of [JPEG 2000](http://www.jpeg.org/jpeg2000), a still-image compression standard from the Joint Photographic Experts Group ([JPEG](http://www.jpeg.org)).  Since April 2015, it is officially recognized by ISO/IEC and ITU-T as a [JPEG 2000 Reference Software](http://www.itu.int/rec/T-REC-T.804-201504-I!Amd2).
-- **zlib** [📁](../../thirdparty/zlib) [🌐](https://github.com/GerHobbelt/thirdparty-zlib)
+- **zlib** [📁](../../thirdparty/zlib) [🌐](https://github.com/GerHobbelt/thirdparty-zlib) -- zlib-ng: zlib data compression library for the next generation systems.
 
 
 
@@ -1485,10 +1484,10 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **snmalloc** [📁](./snmalloc) [🌐](https://github.com/GerHobbelt/snmalloc) -- a high-performance allocator.
 - **svg-charter** [📁](./svg-charter) [🌐](https://github.com/GerHobbelt/charter) -- SVG chart renderer
 - **ticpp** [📁](./ticpp) [🌐](https://github.com/GerHobbelt/ticpp) -- TinyXML++: XML read/write (is part of wxFormbuilder).
-- **tinyexpr** [📁](./tinyexpr) [🌐](https://github.com/GerHobbelt/tinyexpr)
+- **tinyexpr** [📁](./tinyexpr) [🌐](https://github.com/GerHobbelt/tinyexpr) -- a very small recursive descent parser and evaluation engine for math expressions.
 - **tlx** [📁](./tlx) [🌐](https://github.com/GerHobbelt/tlx) -- a collection of C++ helpers and extensions universally needed, but not found in the STL.
 - **tsf** [📁](./tsf) [🌐](https://github.com/GerHobbelt/tsf) -- type-safe printf equivalent for C++ (used by the uberlog submodule)
-- **uint128_t** [📁](./uint128_t) [🌐](https://github.com/GerHobbelt/uint128_t)
+- **uint128_t** [📁](./uint128_t) [🌐](https://github.com/GerHobbelt/uint128_t) -- an unsigned 128 bit integer type for C++.
 - **winflexbison** [📁](./winflexbison) [🌐](https://github.com/GerHobbelt/winflexbison) -- Flex and Bison for Microsoft Windows :: a Windows port of Flex (the fast lexical analyser) and GNU Bison (parser generator). Both `win_flex` and `win_bison` are based on upstream sources but depend on system libraries only.
 - ~~**Catch2** [🌐](https://github.com/catchorg/Catch2)~~
   
@@ -2224,7 +2223,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **prvhash** [📁](./prvhash) [🌐](https://github.com/GerHobbelt/prvhash) -- PRVHASH is a hash function that generates a [uniform pseudo-random number sequence](https://en.wikipedia.org/wiki/Pseudorandom_number_generator) derived from the message. PRVHASH is conceptually similar (in the sense of using a pseudo-random number sequence as a hash) to [`keccak`](https://en.wikipedia.org/wiki/SHA-3) and [`RadioGatun`](https://en.wikipedia.org/wiki/RadioGat%C3%BAn) schemes, but is a completely different implementation of such concept. PRVHASH is both a ["randomness extractor"](https://en.wikipedia.org/wiki/Randomness_extractor) and an "extendable-output function" (XOF).
 - **pthreadpool** [📁](./pthreadpool) [🌐](https://github.com/GerHobbelt/pthreadpool) -- pthreadpool is a portable and efficient thread pool implementation. It provides similar functionality to `#pragma omp parallel for`, but with additional features.
 - **pthread-win32** [📁](./pthread-win32) [🌐](https://github.com/GerHobbelt/pthread-win32) -- `pthread` for MS Windows
-- **pybind11** [📁](./pybind11) [🌐](https://github.com/GerHobbelt/pybind11)
+- **pybind11** [📁](./pybind11) [🌐](https://github.com/GerHobbelt/pybind11) -- a lightweight header-only library that exposes C++ types in Python and vice versa, mainly to create Python bindings of existing C++ code.
 - **pyclustering** [📁](./pyclustering) [🌐](https://github.com/GerHobbelt/pyclustering) -- a Python, C++ data mining library (clustering algorithm, oscillatory networks, neural networks). The library provides Python and C++ implementations (C++ pyclustering library) of each algorithm or model.
 - **pytorch** [📁](./pytorch) [🌐](https://github.com/GerHobbelt/pytorch) -- PyTorch library in C++
 - **pytorch_cpp_demo** [📁](./pytorch_cpp_demo) [🌐](https://github.com/GerHobbelt/pytorch_cpp) -- Deep Learning sample programs of PyTorch written in C++.
@@ -2235,7 +2234,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
   - [RFC8943](https://tools.ietf.org/html/rfc8943) CBOR Dates
   - [RFC8949](https://tools.ietf.org/html/rfc8949) The CBOR Standard. (Everything except sorting of encoded maps)
 
-- **qlever** [📁](./qlever) [🌐](https://github.com/GerHobbelt/qlever)
+- **qlever** [📁](./qlever) [🌐](https://github.com/GerHobbelt/qlever) -- a SPARQL engine that can efficiently index and query very large knowledge graphs with up to 100 billion triples on a single standard PC or server. In particular, QLever is fast for queries that involve large intermediate or final results, which are notoriously hard for engines like Blazegraph or Virtuoso.
 - **QuickJS** [📁](./QuickJS) [🌐](https://github.com/GerHobbelt/quickjs) -- a small and embeddable Javascript engine. It supports the <a href="https://tc39.github.io/ecma262/">ES2020</a> specification including modules, asynchronous generators, proxies and BigInt. It optionally supports mathematical extensions such as big decimal floating point numbers (BigDecimal), big binary floating point numbers (BigFloat) and operator overloading.
 - **QuickJS-C++-Wrapper** [📁](./QuickJS-C++-Wrapper) [🌐](https://github.com/GerHobbelt/quickjscpp) -- quickjscpp is a header-only wrapper around the [quickjs](https://bellard.org/quickjs/) JavaScript engine, which allows easy integration into C++11 code. This wrapper also automatically tracks the lifetime of values and objects, is exception-safe, and automates clean-up.
 - **QuickJS-C++-Wrapper2** [📁](./QuickJS-C++-Wrapper2) [🌐](https://github.com/GerHobbelt/quickjspp) -- QuickJSPP is QuickJS wrapper for C++. It allows you to easily embed Javascript engine into your program.
@@ -2256,111 +2255,110 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **rsync** [📁](./rsync) [🌐](https://github.com/GerHobbelt/rsync) -- Rsync is a fast and extraordinarily versatile file copying tool for both remote and local files. Rsync uses a delta-transfer algorithm which provides a very fast method for bringing remote files into sync.
 - **RuntimeCompiledCPlusPlus** [📁](./RuntimeCompiledCPlusPlus) [🌐](https://github.com/GerHobbelt/RuntimeCompiledCPlusPlus) -- Runtime-Compiled C++ (RCC++) is a way to reliably make major changes to your C++ code at runtime and see the results immediately. It's aimed at games development but could be useful in any industry where turnaround times are a bottleneck. RCC++ is primarily designed to shorten iteration times in development - developers can build their project, run it, make changes during runtime and see the results almost immediately. If needed, shipping code can [disable runtime compilation](https://github.com/RuntimeCompiledCPlusPlus/RuntimeCompiledCPlusPlus/wiki/Disabling-runtime-compilation) in a number of ways. RCC++ is not intended as a method to allow end users of a shipped binary to compile modifications, though with some work it can be used this way.
 - **RxCpp** [📁](./RxCpp) [🌐](https://github.com/GerHobbelt/RxCpp) -- the Reactive Extensions for C++ (__RxCpp__) is a library of algorithms for values-distributed-in-time. The [__Range-v3__](https://github.com/ericniebler/range-v3) library does the same for values-distributed-in-space.
-- **safestringlib** [📁](./safestringlib) [🌐](https://github.com/GerHobbelt/safestringlib)
-- **salieri** [📁](./salieri) [🌐](https://github.com/GerHobbelt/salieri)
+- **safestringlib** [📁](./safestringlib) [🌐](https://github.com/GerHobbelt/safestringlib) -- The Safe String Library is based on the Safe C Library by Cisco, and provides routines for safe string operations (like `strcpy`) and memory routines (like `memcpy`) that are recommended for Linux/Android operating systems, and will also work for Windows. This library is especially useful for cross-platform situations where one library for these routines is preferred.
+- **salieri** [📁](./salieri) [🌐](https://github.com/GerHobbelt/salieri) -- provides function arguments' in/out annotation definitions for Microsoft's [source-code annotation language (SAL)](https://msdn.microsoft.com/en-us/library/hh916383.aspx). SAL provides lots of annotations you can use to describe the behavior
 - **scantailor** [📁](./scantailor) [🌐](https://github.com/GerHobbelt/scantailor-advanced) -- [scantailor_advanced](https://github.com/4lex4/scantailor-advanced) is the [ScanTailor](https://github.com/scantailor/scantailor) version that merges the features of the *ScanTailor Featured* and *ScanTailor Enhanced* versions, brings new ones and fixes. ScanTailor is an interactive post-processing tool for scanned pages. It performs operations such as page splitting, deskewing, adding/removing borders, selecting content, ... and many others.
 - **ScriptX** [📁](./ScriptX) [🌐](https://github.com/GerHobbelt/ScriptX) -- wrapper for V8, QuickJS, Lua, Python, ...
 - **sdhash** [📁](./sdhash) [🌐](https://github.com/GerHobbelt/sdhash) -- a tool which allows two arbitrary blobs of data to be compared for similarity based on common strings of binary data. It is designed to provide quick results during triage and initial investigation phases.
 - **Sealighter** [📁](./Sealighter) [🌐](https://github.com/GerHobbelt/Sealighter) -- Sysmon-Like research tool for ETW: helps non-developers dive into researching Event Tracing for Windows (ETW) and Windows PreProcessor Tracing (WPP).
 - **sentencepiece** [📁](./sentencepiece) [🌐](https://github.com/GerHobbelt/sentencepiece) -- text tokenization
 - **sentence-tokenizer** [📁](./sentence-tokenizer) [🌐](https://github.com/GerHobbelt/Tokenizer) -- text tokenization
-- **shadesmar** [📁](./shadesmar) [🌐](https://github.com/GerHobbelt/shadesmar)
+- **shadesmar** [📁](./shadesmar) [🌐](https://github.com/GerHobbelt/shadesmar) -- an IPC library that uses the system's shared memory to pass messages. Supports publish-subscribe and RPC.
 - **ShapeCrawler** [📁](./ShapeCrawler) [🌐](https://github.com/GerHobbelt/ShapeCrawler) -- a .NET library for manipulating PowerPoint presentations.
-- **sharedhashfile** [📁](./sharedhashfile) [🌐](https://github.com/GerHobbelt/sharedhashfile)
-- **shmdata** [📁](./shmdata) [🌐](https://github.com/GerHobbelt/shmdata)
+- **sharedhashfile** [📁](./sharedhashfile) [🌐](https://github.com/GerHobbelt/sharedhashfile) -- share hash tables with stable key hints stored in memory mapped files between arbitrary processes.
+- **shmdata** [📁](./shmdata) [🌐](https://github.com/GerHobbelt/shmdata) -- shares streams of framed data between processes (1 writer to many readers) via shared memory. It supports any kind of data stream:  it has been used with multichannel audio, video frames, 3D models, OSC messages, and various others types of data. Shmdata is very fast and allows processes to access data streams without the need for extra copies.
 - **shoco** [📁](./shoco) [🌐](https://github.com/GerHobbelt/shoco) -- a fast compressor for short strings
 - **Signals** [📁](./Signals) [🌐](https://github.com/GerHobbelt/Signals) -- a lightweight "signals and slots" implementation using fast delegates. When GUI programming in C++, delegates and the signals and slots paradigm can vastly simplify your code. It implements the Observer pattern while avoiding all the boilerplate code. I needed a lightweight and efficient implementation that I could just drop into my projects and use without adding weird macros, inheriting from crazy templates or having external dependencies. I wanted something simpler and more efficient than libsigc++, sigslot, and boost.signals.
 - **SilkETW** [📁](./SilkETW) [🌐](https://github.com/GerHobbelt/SilkETW) -- SilkETW & SilkService are flexible C# wrappers for ETW, they are meant to abstract away the complexities of ETW and give people a simple interface to perform research and introspection. While both projects have obvious defensive (and offensive) applications they should primarily be considered as research tools.
-- **simd-imgproc** [📁](./simd-imgproc) [🌐](https://github.com/GerHobbelt/Simd)
-- **sioyek** [📁](./sioyek) [🌐](https://github.com/GerHobbelt/sioyek)
+- **simd-imgproc** [📁](./simd-imgproc) [🌐](https://github.com/GerHobbelt/Simd) -- Simd Library for image processing and machine learning.
+- **sioyek** [📁](./sioyek) [🌐](https://github.com/GerHobbelt/sioyek) -- a PDF viewer with a focus on textbooks and research papers.
 - **smhasher** [📁](./smhasher) [🌐](https://github.com/GerHobbelt/smhasher) -- benchmark and collection of fast hash functions for symbol tables or hash tables.
-- **snap** [📁](./snap) [🌐](https://github.com/GerHobbelt/snap)
+- **snap** [📁](./snap) [🌐](https://github.com/GerHobbelt/snap) -- Stanford Network Analysis Platform (SNAP) is a general purpose, high performance system for analysis and manipulation of large networks. SNAP scales to massive graphs with hundreds of millions of nodes and billions of edges.
 - **snmalloc** [📁](./snmalloc) [🌐](https://github.com/GerHobbelt/snmalloc) -- a high-performance allocator.
 - **snowball** [📁](./snowball) [🌐](https://github.com/GerHobbelt/snowball) -- SnowBell stemming compiler (code generator)
 - **sparsehash** [📁](./sparsehash) [🌐](https://github.com/GerHobbelt/sparsehash) -- fast hash algorithms
-- **spdlog** [📁](./spdlog) [🌐](https://github.com/GerHobbelt/spdlog)
+- **spdlog** [📁](./spdlog) [🌐](https://github.com/GerHobbelt/spdlog) -- very fast, header-only/compiled, C++ logging library.
 - **spdlog_setup** [📁](./spdlog_setup) [🌐](https://github.com/GerHobbelt/spdlog_setup) -- file-based setup library for convenience in initializing spdlog.
-- **splitmerge** [📁](./splitmerge) [🌐](https://github.com/GerHobbelt/splitmerge)
+- **splitmerge** [📁](./splitmerge) [🌐](https://github.com/GerHobbelt/splitmerge) -- simple binary file splitter and (re)merger tool.
 - **spy-build-sysinfo** [📁](./spy-build-sysinfo) [🌐](https://github.com/GerHobbelt/spy) -- build system info
-- **sqlcipher** [📁](./sqlcipher) [🌐](https://github.com/GerHobbelt/sqlcipher)
+- **sqlcipher** [📁](./sqlcipher) [🌐](https://github.com/GerHobbelt/sqlcipher) -- SQLCipher is a standalone fork of the [SQLite](https://www.sqlite.org/) database library that adds 256 bit AES encryption of database files and other security features.
 - **sqlean** [📁](./sqlean) [🌐](https://github.com/GerHobbelt/sqlean) -- The ultimate set of SQLite extensions: SQLite has few functions compared to other database management systems. SQLite authors see this as a feature rather than a problem, because SQLite has an extension mechanism in place. There are a lot of SQLite extensions out there, but they are incomplete, inconsistent and scattered across the internet. sqlean brings them together, neatly packaged into domain modules, documented, tested, and built for Linux, Windows and macOS.
-- **sqleet** [📁](./sqleet) [🌐](https://github.com/GerHobbelt/sqleet)
-- **sqlite** [📁](./sqlite) [🌐](https://github.com/GerHobbelt/sqlite)
-- **sqlite3-compression-encryption-vfs** [📁](./sqlite3-compression-encryption-vfs) [🌐](https://github.com/GerHobbelt/sqlite3-compression-encryption-vfs)
+- **sqleet** [📁](./sqleet) [🌐](https://github.com/GerHobbelt/sqleet) -- an encryption extension for [SQLite3](https://www.sqlite.org/). The encryption is transparent (*on-the-fly*) and based on modern cryptographic algorithms designed for high performance in software and robust side-channel resistance.
+- **sqlite** [📁](./sqlite) [🌐](https://github.com/GerHobbelt/sqlite) -- the complete [SQLite database engine](https://sqlite.org/).
+- **sqlite3-compression-encryption-vfs** [📁](./sqlite3-compression-encryption-vfs) [🌐](https://github.com/GerHobbelt/sqlite3-compression-encryption-vfs) -- CEVFS: Compression & Encryption VFS for SQLite 3 is a SQLite 3 Virtual File System for compressing and encrypting data at the pager level. Once set up, you use SQLite as you normally would and the compression and encryption is transparently handled during database read/write operations via the SQLite pager.
 - **sqlite3pp** [📁](./sqlite3pp) [🌐](https://github.com/GerHobbelt/sqlite3pp) -- a minimal ORM wrapper for SQLite et al.
-- **sqlite-amalgamation** [📁](./sqlite-amalgamation) [🌐](https://github.com/GerHobbelt/sqlite-amalgamation)
+- **sqlite-amalgamation** [📁](./sqlite-amalgamation) [🌐](https://github.com/GerHobbelt/sqlite-amalgamation) -- the [SQLite](http://www.sqlite.org/download.html) amalgamation, which is the recommended method of building SQLite into larger projects.
 - **SQLiteCpp** [📁](./SQLiteCpp) [🌐](https://github.com/GerHobbelt/SQLiteCpp) -- a smart and easy to use C++ SQLite3 wrapper. SQLiteC++ offers an encapsulation around the native C APIs of SQLite, with a few intuitive and well documented C++ classes.
 - **sqlite-fts5-snowball** [📁](./sqlite-fts5-snowball) [🌐](https://github.com/GerHobbelt/fts5-snowball) -- a simple extension for use with FTS5 within SQLite. It allows FTS5 to use Martin Porter's Snowball stemmers (libstemmer), which are available in several languages. Check http://snowballstem.org/ for more information about them.
 - **sqlite_fts_tokenizer_chinese_simple** [📁](./sqlite_fts_tokenizer_chinese_simple) [🌐](https://github.com/GerHobbelt/simple)
 - **SQLiteHistograms** [📁](./SQLiteHistograms) [🌐](https://github.com/GerHobbelt/SQLiteHistograms) -- an SQLite extension library for creating histogram tables, tables of ratio between histograms and interpolation tables of scatter point tables.
-- **sqliteodbc** [📁](./sqliteodbc) [🌐](https://github.com/GerHobbelt/sqliteodbc)
+- **sqliteodbc** [📁](./sqliteodbc) [🌐](https://github.com/GerHobbelt/sqliteodbc) -- SQLite ODBC Driver for the wonderful SQLite 2.8.* and SQLite 3.* Database Engine/Library.
 - **sqlite-stats** [📁](./sqlite-stats) [🌐](https://github.com/GerHobbelt/sqlite-stats) -- provides common statistical functions for SQLite.
 - **sqlite_wrapper** [📁](./sqlite_wrapper) [🌐](https://github.com/GerHobbelt/sqlite_wrapper) -- an easy-to-use, lightweight and concurrency-friendly SQLite wrapper written in C++17.
 - **sqlite_zstd_vfs** [📁](./sqlite_zstd_vfs) [🌐](https://github.com/GerHobbelt/sqlite_zstd_vfs) -- SQLite VFS extension providing streaming storage compression using Zstandard (Zstd), transparently compressing pages of the main database file as they're written out and later decompressing them as they're read in. It runs page de/compression on background threads and occasionally generates dictionaries to improve subsequent compression.
-- **sqlpp11** [📁](./sqlpp11) [🌐](https://github.com/GerHobbelt/sqlpp11)
+- **sqlpp11** [📁](./sqlpp11) [🌐](https://github.com/GerHobbelt/sqlpp11) -- a type safe embedded domain specific language for SQL queries and results in C++.
 - **ssdeep** [📁](./ssdeep) [🌐](https://github.com/GerHobbelt/ssdeep) -- fuzzy hashing library, can be used to assist with identifying almost identical files using context triggered piecewise hashing.
-- **ssimulacra2** [📁](./ssimulacra2) [🌐](https://github.com/GerHobbelt/ssimulacra2)
-- **stan** [📁](./stan) [🌐](https://github.com/GerHobbelt/stan)
-- **stan-math** [📁](./stan-math) [🌐](https://github.com/GerHobbelt/stan-math)
+- **ssimulacra2** [📁](./ssimulacra2) [🌐](https://github.com/GerHobbelt/ssimulacra2) -- Structural SIMilarity Unveiling Local And Compression Related Artifacts metric developed by Jon Sneyers. SSIMULACRA 2 is based on the concept of the multi-scale structural similarity index measure (MS-SSIM), computed in a perceptually relevant color space, adding two other (asymmetric) error maps, and aggregating using two different norms.
+- **stan** [📁](./stan) [🌐](https://github.com/GerHobbelt/stan) -- Stan is a C++ package providing (1) full Bayesian inference using the No-U-Turn sampler (NUTS), a variant of Hamiltonian Monte Carlo (HMC), (2) approximate Bayesian inference using automatic differentiation variational inference (ADVI), and (3) penalized maximum likelihood estimation (MLE) using L-BFGS optimization. It is built on top of the [Stan Math library](https://github.com/stan-dev/math).
+- **stan-math** [📁](./stan-math) [🌐](https://github.com/GerHobbelt/stan-math) -- the Stan Math Library is a C++, reverse-mode automatic differentiation library designed to be usable, extensive and extensible, efficient, scalable, stable, portable, and redistributable in order to facilitate the construction and utilization of algorithms that utilize derivatives.
 - **StarSpace** [📁](./StarSpace) [🌐](https://github.com/GerHobbelt/StarSpace) -- a general-purpose neural model for efficient learning of entity embeddings for solving a wide variety of problems.
-- **stateline** [📁](./stateline) [🌐](https://github.com/GerHobbelt/stateline)
-- **statsite** [📁](./statsite) [🌐](https://github.com/GerHobbelt/statsite)
+- **stateline** [📁](./stateline) [🌐](https://github.com/GerHobbelt/stateline) -- a framework for distributed Markov Chain Monte Carlo (MCMC) sampling written in C++. It implements random walk Metropolis-Hastings with parallel tempering to improve chain mixing, provides an adaptive proposal distribution to speed up convergence, and allows the user to factorise their likelihoods (eg. over sensors or data).
+- **statsite** [📁](./statsite) [🌐](https://github.com/GerHobbelt/statsite) -- a metrics aggregation server. Statsite is based heavily on Etsy's StatsD <https://github.com/etsy/statsd>, and is wire compatible.
 - **stdext-path** [📁](./stdext-path) [🌐](https://github.com/GerHobbelt/stdext-path) -- path manipulations (`dirname` et al)
-- **stopwords** [📁](./stopwords) [🌐](https://github.com/GerHobbelt/stopwords)
-- **stringi** [📁](./stringi) [🌐](https://github.com/GerHobbelt/stringi)
-- **stx-error-handling** [📁](./stx-error-handling) [🌐](https://github.com/GerHobbelt/STX)
+- **stopwords** [📁](./stopwords) [🌐](https://github.com/GerHobbelt/stopwords) -- default English stop words from different sources.
+- **stringi** [📁](./stringi) [🌐](https://github.com/GerHobbelt/stringi) -- fast and portable character string processing in R (with the Unicode ICU).
+- **stx-error-handling** [📁](./stx-error-handling) [🌐](https://github.com/GerHobbelt/STX) -- C++ 17 & C++ 20 error-handling and utility extensions.
 - **subprocess** [📁](./subprocess) [🌐](https://github.com/GerHobbelt/subprocess) -- cross platform subprocess library for C++ similar to design of Python `subprocess`.
-- **subprocess-cpp** [📁](./subprocess-cpp) [🌐](https://github.com/GerHobbelt/subprocess-cpp)
+- **subprocess-cpp** [📁](./subprocess-cpp) [🌐](https://github.com/GerHobbelt/subprocess-cpp) -- a no nonsense library for writing shell commands in C++.
 - **subprocess_h** [📁](./subprocess_h) [🌐](https://github.com/GerHobbelt/subprocess.h) -- 🐜 a simple one header solution to launching processes and interacting with them for C/C++.
-- **sumatrapdf** [📁](./sumatrapdf) [🌐](https://github.com/GerHobbelt/sumatrapdf)
+- **sumatrapdf** [📁](./sumatrapdf) [🌐](https://github.com/GerHobbelt/sumatrapdf) -- SumatraPDF is a multi-format (PDF, EPUB, MOBI, CBZ, CBR, FB2, CHM, XPS, DjVu) reader for Windows.
 - **svg-charter** [📁](./svg-charter) [🌐](https://github.com/GerHobbelt/charter) -- SVG chart renderer
 - **swig**  [📁](./swig) [🌐](https://github.com/GerHobbelt/swig) -- a software development tool (code generator) that connects programs written in C and C++ with a variety of high-level programming languages.
-- **SymSpell** [📁](./SymSpell) [🌐](https://github.com/GerHobbelt/SymSpell)
+- **SymSpell** [📁](./SymSpell) [🌐](https://github.com/GerHobbelt/SymSpell) -- spelling correction & fuzzy search: **1 million times faster** through Symmetric Delete spelling correction algorithm. The Symmetric Delete spelling correction algorithm reduces the complexity of edit candidate generation and dictionary lookup for a given Damerau-Levenshtein distance. It is six orders of magnitude faster ([than the standard approach with deletes + transposes + replaces + inserts](http://norvig.com/spell-correct.html)) and language independent.
 - **tabulate** [📁](./tabulate) [🌐](https://github.com/GerHobbelt/tabulate)
-- **taglib** [📁](./taglib) [🌐](https://github.com/GerHobbelt/taglib)
+- **taglib** [📁](./taglib) [🌐](https://github.com/GerHobbelt/taglib) -- TagLib is a library for reading and editing the metadata of several popular audio formats. Currently it supports both ID3v1 and [ID3v2][] for MP3 files, [Ogg Vorbis][] comments and ID3 tags in [FLAC][], MPC, Speex, WavPack, TrueAudio, WAV, AIFF, MP4, APE, and ASF files.
 - **taolog** [📁](./taolog) [🌐](https://github.com/GerHobbelt/taolog) -- a Win32 logger based on DebugView & ETW.
 - **taskflow** [📁](./taskflow) [🌐](https://github.com/GerHobbelt/taskflow) -- quickly write parallel and heterogeneous task programs in modern C++. Taskflow is faster, more expressive, and easier for drop-in integration than many of existing task programming frameworks in handling complex parallel workloads.
 - **tcp_pubsub** [📁](./tcp_pubsub) [🌐](https://github.com/GerHobbelt/tcp_pubsub) -- a minimal publish-subscribe library that transports data via TCP. `tcp_pubsub` does not define a message format but only transports binary blobs. It does however define a protocol around that, which is kept as lightweight as possible.
 - **tcpshm** [📁](./tcpshm) [🌐](https://github.com/GerHobbelt/tcpshm) -- a connection-oriented persistent message queue framework based on TCP or SHM IPC for Linux. TCPSHM provides a reliable and efficient solution based on a sequence number and acknowledge mechanism, that every sent out msg is persisted in a send queue until sender got ack that it's been consumed by the receiver, so that disconnects/crashes are tolerated and the recovery process is purely automatic.
 - **tensorflow** [📁](./tensorflow) [🌐](https://github.com/GerHobbelt/tensorflow) -- an end-to-end open source platform for machine learning.
-- **tensorflow-docs** [📁](./tensorflow-docs) [🌐](https://github.com/GerHobbelt/tensorflow-docs)
-- **tensorflow-io** [📁](./tensorflow-io) [🌐](https://github.com/GerHobbelt/tensorflow-io)
-- **tensorflow-text** [📁](./tensorflow-text) [🌐](https://github.com/GerHobbelt/tensorflow-text)
+- **tensorflow-docs** [📁](./tensorflow-docs) [🌐](https://github.com/GerHobbelt/tensorflow-docs) -- TensorFlow documentation
+- **tensorflow-io** [📁](./tensorflow-io) [🌐](https://github.com/GerHobbelt/tensorflow-io) -- TensorFlow I/O is a collection of file systems and file formats that are not available in TensorFlow's built-in support. A full list of supported file systems and file formats by TensorFlow I/O can be found [here](https://www.tensorflow.org/io/api_docs/python/tfio).
+- **tensorflow-text** [📁](./tensorflow-text) [🌐](https://github.com/GerHobbelt/tensorflow-text) -- TensorFlow Text provides a collection of text related classes and ops ready to use with TensorFlow 2.0. The library can perform the preprocessing regularly required by text-based models, and includes other features useful for sequence modeling not provided by core TensorFlow.
 - **tessconfigs** [📁](../../thirdparty/tessconfigs) [🌐](https://github.com/GerHobbelt/tessconfigs)
-- **tessdata** [📁](../../thirdparty/tessdata) [🌐](https://github.com/GerHobbelt/tessdata)
-- **tessdata_best** [📁](../../thirdparty/tessdata_best) [🌐](https://github.com/GerHobbelt/tessdata_best)
+- **tessdata** [📁](../../thirdparty/tessdata) [🌐](https://github.com/GerHobbelt/tessdata) -- trained models for Tesseract. These have models for legacy tesseract engine (--oem 0) as well as the new LSTM neural net based engine (--oem 1). The LSTM models (--oem 1) in these files have been updated to the integerized versions of [tessdata_best](https://github.com/tesseract-ocr/tessdata_best) on GitHub. So, they should be faster but probably a little less accurate than tessdata_best.
+- **tessdata_best** [📁](../../thirdparty/tessdata_best) [🌐](https://github.com/GerHobbelt/tessdata_best) -- the best trained models for the [Tesseract Open Source OCR Engine](https://github.com/tesseract-ocr/tesseract). These models only work with the LSTM OCR engine of Tesseract 4 / 5.
 - **tessdata_contrib** [📁](../../thirdparty/tessdata_contrib) [🌐](https://github.com/GerHobbelt/tessdata_contrib)
-- **tessdata_fast** [📁](../../thirdparty/tessdata_fast) [🌐](https://github.com/GerHobbelt/tessdata_fast)
-- **tessdoc** [📁](../../thirdparty/tessdoc) [🌐](https://github.com/GerHobbelt/tessdoc)
-- **tesseract** [📁](../../thirdparty/tesseract) [🌐](https://github.com/GerHobbelt/tesseract)
-- **tesseract_docs** [📁](../../thirdparty/tesseract_docs) [🌐](https://github.com/GerHobbelt/tesseract_docs)
+- **tessdata_fast** [📁](../../thirdparty/tessdata_fast) [🌐](https://github.com/GerHobbelt/tessdata_fast) -- fast integer versions of trained models for the [Tesseract Open Source OCR Engine](https://github.com/tesseract-ocr/tesseract). These models only work with the LSTM OCR engine of Tesseract 4 / 5.
+- **tessdoc** [📁](../../thirdparty/tessdoc) [🌐](https://github.com/GerHobbelt/tessdoc) -- user manual for Tesseract versions `5.x`.
+- **tesseract** [📁](../../thirdparty/tesseract) [🌐](https://github.com/GerHobbelt/tesseract) -- `tesseract-ocr` with `--visible-pdf-image` and other tweaks.
+- **tesseract_docs** [📁](../../thirdparty/tesseract_docs) [🌐](https://github.com/GerHobbelt/tesseract_docs) -- various documents related to Tesseract OCR.
 - **tesseract-gImgRdrGui** [📁](./tesseract-gImgRdrGui) [🌐](https://github.com/GerHobbelt/gImageReader) -- a Gtk/Qt front-end to tesseract-ocr.
-- **tesseract_langdata** [📁](../../thirdparty/tesseract_langdata) [🌐](https://github.com/GerHobbelt/langdata)
+- **tesseract_langdata** [📁](../../thirdparty/tesseract_langdata) [🌐](https://github.com/GerHobbelt/langdata) -- source training data for Tesseract for lots of languages.
 - **tesslinesplit** [📁](./tesslinesplit) [🌐](https://github.com/GerHobbelt/tesslinesplit) -- a standalone program for using Tesseract's line segmentation algorithm to split up document images.
-- **tesstrain** [📁](../../thirdparty/tesstrain) [🌐](https://github.com/GerHobbelt/tesstrain)
+- **tesstrain** [📁](../../thirdparty/tesstrain) [🌐](https://github.com/GerHobbelt/tesstrain) -- training workflow for Tesseract 4.
 - **textflowcpp** [📁](./textflowcpp) [🌐](https://github.com/GerHobbelt/textflowcpp) -- a simple way to wrap a string at different line lengths, optionally with indents.
-- **ThreadPool** [📁](./ThreadPool) [🌐](https://github.com/GerHobbelt/ThreadPool)
-- **thread-pool** [📁](./thread-pool) [🌐](https://github.com/GerHobbelt/thread-pool) -- `BS::thread_pool`: a fast, lightweight, and easy-to-use C++17 thread pool for high-performance scientific computing.
-- **thread-pool-c** [📁](./thread-pool-c) [🌐](https://github.com/GerHobbelt/C-Thread-Pool)
-- **thread-pool-cpp** [📁](./thread-pool-cpp) [🌐](https://github.com/GerHobbelt/thread-pool-cpp)
+- **ThreadPool** [📁](./ThreadPool) [🌐](https://github.com/GerHobbelt/ThreadPool) -- a simple C++11 Thread Pool implementation.
+- **thread-pool-c** [📁](./thread-pool-c) [🌐](https://github.com/GerHobbelt/C-Thread-Pool) -- a minimal but advanced threadpool implementation.
+- **thread-pool-cpp** [📁](./thread-pool-cpp) [🌐](https://github.com/GerHobbelt/thread-pool-cpp) -- highly scalable and fast thread pool. It implements both work-stealing and work-distribution balancing startegies. It implements cooperative scheduling strategy.
 - **thunderSVM** [📁](./thunderSVM) [🌐](https://github.com/GerHobbelt/thundersvm) -- ThunderSVM exploits GPUs and multi-core CPUs to achieve high efficiency, supporting all functionalities of LibSVM such as one-class SVMs, SVC, SVR and probabilistic SVMs.
 - **ticpp** [📁](./ticpp) [🌐](https://github.com/GerHobbelt/ticpp) -- TinyXML++: XML read/write
 - **tidy-html5** [📁](./tidy-html5) [🌐](https://github.com/GerHobbelt/tidy-html5) -- clean up HTML documents before archiving/processing
 - **tink** [📁](./tink) [🌐](https://github.com/GerHobbelt/tink) -- A multi-language, cross-platform library that provides cryptographic APIs that are secure, easy to use correctly, and hard(er) to misuse.
 - **tinn** [📁](./tinn) [🌐](https://github.com/GerHobbelt/tinn) -- Tinn (Tiny Neural Network) is a 200 line dependency free neural network library written in C99.
-- **tinycbor** [📁](./tinycbor) [🌐](https://github.com/GerHobbelt/tinycbor)
+- **tinycbor** [📁](./tinycbor) [🌐](https://github.com/GerHobbelt/tinycbor) -- Concise Binary Object Representation (CBOR) library for serializing data to disk or message channel.
 - **tinycolormap** [📁](./tinycolormap) [🌐](https://github.com/GerHobbelt/tinycolormap) -- a header-only, single-file library for colormaps written in C++11.
-- **tinyexpr** [📁](./tinyexpr) [🌐](https://github.com/GerHobbelt/tinyexpr)
-- **tinygettext** [📁](./tinygettext) [🌐](https://github.com/GerHobbelt/tinygettext)
+- **tinyexpr** [📁](./tinyexpr) [🌐](https://github.com/GerHobbelt/tinyexpr) -- a very small recursive descent parser and evaluation engine for math expressions.
+- **tinygettext** [📁](./tinygettext) [🌐](https://github.com/GerHobbelt/tinygettext) -- a minimal replacement for gettext written in C++. It can read `.po` files directly and doesn't need `.mo` files generated from `.po`. It also can read the `.po` files from arbitrary locations, so it's better suited for non-Unix systems and situations in which one wants to store or distribute `.po` files separately from the software itself.
 - **tiny-process-library** [📁](./tiny-process-library) [🌐](https://github.com/GerHobbelt/tiny-process-library) -- small platform independent library making it simple to create and stop new processes, as well as writing to stdin and reading from stdout and stderr of a new process.
 - **tlx** [📁](./tlx) [🌐](https://github.com/GerHobbelt/tlx) -- a collection of C++ helpers and extensions universally needed, but not found in the STL.
 - **tlx-btree** [📁](./tlx-btree) [🌐](https://github.com/GerHobbelt/tlx) -- in-memory B+-tree: an alternative for the priority queue as we expect the queue to grow huge, given past experience with Qiqqa.
 - **toml11** [📁](./toml11) [🌐](https://github.com/GerHobbelt/toml11) -- a C++11 header-only TOML parser/encoder depending only on C++ standard library, compatible to the latest version of [TOML v1.0.0](https://toml.io/en/v1.0.0), including UTF-8 support.
 - **tomlpp** [📁](./tomlpp) [🌐](https://github.com/GerHobbelt/tomlplusplus) -- TOML++
-- **TraceETW** [📁](./TraceETW) [🌐](https://github.com/GerHobbelt/TraceEtw)
+- **TraceETW** [📁](./TraceETW) [🌐](https://github.com/GerHobbelt/TraceEtw) -- [Event Tracing for Windows (ETW)](http://msdn.microsoft.com/en-us/library/windows/desktop/aa363668(v=vs.85).aspx) is  powerful but notoriously complex. In C#, [EventSource](http://msdn.microsoft.com/en-us/library/system.diagnostics.tracing.eventsource(v=vs.110).aspx) made that technology much more approachable. This project aims at providing a similar solution for C++, both for Desktop apps and for Windows/Windows Phone Universal Store apps.
 - **tracelogging-for-ETW** [📁](./tracelogging-for-ETW) [🌐](https://github.com/GerHobbelt/tracelogging) -- C++ Wrapper for Windows ETW TraceLogging
 - **transwarp** [📁](./transwarp) [🌐](https://github.com/GerHobbelt/transwarp) -- a header-only C++ library for task concurrency. It allows you to easily create a graph of tasks where every task can be executed synchronously. transwarp is written in C++17 and only depends on the standard library.
-- **tre** [📁](./tre) [🌐](https://github.com/GerHobbelt/tre)
+- **tre** [📁](./tre) [🌐](https://github.com/GerHobbelt/tre) -- TRE is a lightweight, robust, and efficient POSIX compliant regexp matching library with some exciting features such as approximate (fuzzy) matching. The matching algorithm used in TRE uses linear worst-case time in the length of the text being searched, and quadratic worst-case time in the length of the used regular expression.
 - **tsf** [📁](./tsf) [🌐](https://github.com/GerHobbelt/tsf) -- type-safe printf equivalent for C++ (used by the uberlog submodule)
 - **tvision** [📁](./tvision) [🌐](https://github.com/GerHobbelt/tvision) -- a modern port of Borland's Turbo Vision 2.0, the classical framework for text-based user interfaces. Now cross-platform and with Unicode support. (**retro fun**)
 - **txiki** [📁](./txiki.js) [🌐](https://github.com/GerHobbelt/txiki.js) -- uses QuickJS as its kernel
@@ -2370,13 +2368,13 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **ucto** [📁](./ucto) [🌐](https://github.com/GerHobbelt/ucto) -- text tokenization
 - **uctodata** [📁](./uctodata) [🌐](https://github.com/GerHobbelt/uctodata) -- data for `ucto` library
 - **ucx** [📁](./ucx) [🌐](https://github.com/GerHobbelt/ucx) -- Unified Communication X (UCX) is an optimized production proven-communication framework for modern, high-bandwidth and low-latency networks. UCX exposes a set of abstract communication primitives that utilize the best of available hardware resources and offloads. These include RDMA (InfiniBand and RoCE), TCP, GPUs, shared memory, and network atomic operations.
-- **ugrep** [📁](./ugrep) [🌐](https://github.com/GerHobbelt/ugrep)
+- **ugrep** [📁](./ugrep) [🌐](https://github.com/GerHobbelt/ugrep) -- search for anything in everything... ultra fast. "*`grep` for arbitrary binary files*."
 - **UIforETW** [📁](./UIforETW) [🌐](https://github.com/GerHobbelt/UIforETW) -- Bruce Dawson's user interface for recording ETW (Event Tracing for Windows) traces, which allow amazingly deep investigations of performance problems on Windows.
-- **uint128_t** [📁](./uint128_t) [🌐](https://github.com/GerHobbelt/uint128_t)
-- **unicode-cldr** [📁](./unicode-cldr) [🌐](https://github.com/GerHobbelt/cldr)
-- **unicode-icu** [📁](./unicode-icu) [🌐](https://github.com/GerHobbelt/icu)
+- **uint128_t** [📁](./uint128_t) [🌐](https://github.com/GerHobbelt/uint128_t) -- an unsigned 128 bit integer type for C++.
+- **unicode-cldr** [📁](./unicode-cldr) [🌐](https://github.com/GerHobbelt/cldr) -- Unicode CLDR Project: provides key building blocks for software to support the world's languages, with the largest and most extensive standard repository of locale data available. This data is used by a wide spectrum of companies for their software internationalization and localization, adapting software to the conventions of different languages for such common software tasks.
+- **unicode-icu** [📁](./unicode-icu) [🌐](https://github.com/GerHobbelt/icu) -- the [International Components for Unicode](https://icu.unicode.org/).
 - **universal-numbers** [📁](./universal-numbers) [🌐](https://github.com/GerHobbelt/universal) -- a header-only C++ template library for universal number arithmetic. The goal of the Universal Numbers Library is to offer applications alternatives to IEEE floating-point that are more efficient and mathematically robust. The Universal library is a ready-to-use header-only library that provides plug-in replacement for native types, and provides a low-friction environment to start exploring alternatives to IEEE floating-point in your own algorithms.
-- **unixODBC** [📁](./unixODBC) [🌐](https://github.com/GerHobbelt/unixODBC)
+- **unixODBC** [📁](./unixODBC) [🌐](https://github.com/GerHobbelt/unixODBC) -- an Open Source ODBC sub-system and an ODBC SDK for Linux, Mac OSX, and UNIX.
 - **unpaper** [📁](./unpaper) [🌐](https://github.com/GerHobbelt/unpaper) -- a post-processing tool for scanned sheets of paper, especially for book pages that have been scanned from previously created photocopies.  The main purpose is to make scanned book pages better readable on screen after conversion to PDF. The program also tries to detect misaligned centering and rotation of ages and will automatically straighten each page by rotating it to the correct angle (a.k.a. deskewing).
 - **upscaledb** [📁](./upscaledb) [🌐](https://github.com/GerHobbelt/hamsterdb) -- a.k.a. hamsterdb: a thread-safe key/value database engine. It supports a B+Tree index structure, uses memory mapped I/O (if available), fast Cursors and variable length keys and can create In-Memory Databases.
 - **upskirt-markdown** [📁](./upskirt-markdown) [🌐](https://github.com/GerHobbelt/soldout) -- MarkDown renderer
@@ -2387,8 +2385,8 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **velocypack** [📁](./velocypack) [🌐](https://github.com/GerHobbelt/velocypack) -- a fast and compact format for serialization and storage.  These days, JSON (JavaScript Object Notation, see ECMA-404) is used in many cases where data has to be exchanged. Lots of protocols between different services use it, databases store JSON (document stores naturally, but others increasingly as well). It is popular, because it is simple, human-readable, and yet surprisingly versatile, despite its limitations. At the same time there is a plethora of alternatives ranging from XML over Universal Binary JSON, MongoDB's BSON, MessagePack, BJSON (binary JSON), Apache Thrift till Google's protocol buffers and ArangoDB's shaped JSON. When looking into this, we were surprised to find that none of these formats manages to combine compactness, platform independence, fast access to sub-objects and rapid conversion from and to JSON.
 - **Verify** [📁](./Verify) [🌐](https://github.com/GerHobbelt/Verify) -- a snapshot tool that simplifies the assertion of complex data models and documents. Verify is called on the test result during the assertion phase. It serializes that result and stores it in a file that matches the test name. On the next test execution, the result is again serialized and compared to the existing file. The test will fail if the two snapshots do not match: either the change is unexpected, or the reference snapshot needs to be updated to the new result.
 - **VisualScriptEngine** [📁](./VisualScriptEngine) [🌐](https://github.com/GerHobbelt/VisualScriptEngine) -- A visual scripting engine designed for embedding. The engine is written in modern C++ and compiles on several platforms with no external dependencies.
-- **vmem** [📁](./vmem) [🌐](https://github.com/GerHobbelt/vmem)
-- **vmemcache** [📁](./vmemcache) [🌐](https://github.com/GerHobbelt/vmemcache)
+- **vmem** [📁](./vmem) [🌐](https://github.com/GerHobbelt/vmem) -- **libvmem** and **libvmmalloc** are a couple of libraries for using persistent memory for malloc-like volatile uses.  They have historically been a part of [PMDK](https://pmem.io/pmdk) despite being solely for volatile uses. You may want consider using [memkind](https://github.com/memkind/memkind) instead in code that benefits from extra features like NUMA awareness.
+- **vmemcache** [📁](./vmemcache) [🌐](https://github.com/GerHobbelt/vmemcache) -- **libvmemcache** is an embeddable and lightweight in-memory buffered LRU caching solution. It's designed to fully take advantage of large capacity memory, such as Persistent Memory with DAX, through memory mapping in an efficient and scalable way.
 - **VQMT** [📁](./VQMT) [🌐](https://github.com/GerHobbelt/VQMT) -- VQMT (Video Quality Measurement Tool) provides fast implementations of the following objective metrics:
   
   - **MS-SSIM**: Multi-Scale Structural Similarity,
@@ -2407,7 +2405,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **warpLDA** [📁](./warpLDA) [🌐](https://github.com/GerHobbelt/warplda) -- a cache efficient implementation for Latent Dirichlet Allocation.
 - **websocket-sharp** [📁](./websocket-sharp) [🌐](https://github.com/GerHobbelt/websocket-sharp) -- a C# implementation of the WebSocket protocol client and server.
 - **webview** [📁](./webview) [🌐](https://github.com/GerHobbelt/webview) -- cross-platform embedding of the system-default web browser: a tiny cross-platform webview library for C/C++/Golang to build modern cross-platform GUIs. The goal of the project is to create a common HTML5 UI abstraction layer for the most widely used platforms. It supports two-way JavaScript bindings (to call JavaScript from C/C++/Go and to call C/C++/Go from JavaScript).
-- **wget** [📁](./wget) [🌐](https://github.com/GerHobbelt/wget)
+- **wget** [📁](./wget) [🌐](https://github.com/GerHobbelt/wget) -- GNU Wget is a free utility for non-interactive download of files from the Web.  It supports HTTP, HTTPS, and FTP protocols, as well as retrieval through HTTP proxies.
 - **wget2** [📁](./wget2) [🌐](https://github.com/GerHobbelt/wget2) -- GNU Wget2 is the successor of GNU Wget, a file and recursive website downloader. Designed and written from scratch it wraps around libwget, that provides the basic functions needed by a web client. Wget2 works multi-threaded and uses many features to allow fast operation. In many cases Wget2 downloads much faster than Wget1.x due to HTTP2, HTTP compression, parallel connections and use of If-Modified-Since HTTP header.
 - **wil-Win32-Interface-Library** [📁](./wil-Win32-Interface-Library) [🌐](https://github.com/GerHobbelt/wil) -- The Windows Implementation Libraries (WIL) is a header-only C++ library created to make life easier for developers on Windows through readable type-safe C++ interfaces for common Windows coding patterns.
 - **win32-dpi** [📁](./win32-dpi) [🌐](https://github.com/GerHobbelt/win32-dpi) -- Win32 DPI-aware window example, showcasing how to write a Win32 DPI-aware GUI application that scales properly on everything starting from Windows XP up to and including latest Windows 11.
@@ -2438,9 +2436,9 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **xml-pugixml** [📁](./xml-pugixml) [🌐](https://github.com/GerHobbelt/pugixml) -- light-weight, simple and fast XML parser for C++ with XPath support.
 - **XMP-Toolkit-SDK** [📁](./XMP-Toolkit-SDK) [🌐](https://github.com/GerHobbelt/XMP-Toolkit-SDK)
 - **xnnpack** [📁](./xnnpack) [🌐](https://github.com/GerHobbelt/XNNPACK) -- a highly optimized library of floating-point neural network inference operators for ARM, WebAssembly, and x86 platforms. XNNPACK is not intended for direct use by deep learning practitioners and researchers; instead it provides low-level performance primitives for accelerating high-level machine learning frameworks, such as TensorFlow Lite, TensorFlow.js, PyTorch, and MediaPipe.
-- **xor-and-binary-fuse-filter** [📁](./xor-and-binary-fuse-filter) [🌐](https://github.com/GerHobbelt/xor_singleheader)
+- **xor-and-binary-fuse-filter** [📁](./xor-and-binary-fuse-filter) [🌐](https://github.com/GerHobbelt/xor_singleheader) -- XOR and Binary Fuse Filter library: Bloom filters are used to quickly check whether an element is part of a set. Xor filters and binary fuse filters are faster and more concise alternative to Bloom filters. They are also smaller than cuckoo filters. They are used in [production systems](https://github.com/datafuselabs/databend).
 - **Xoshiro-cpp** [📁](./Xoshiro-cpp) [🌐](https://github.com/GerHobbelt/Xoshiro-cpp) -- a header-only pseudorandom number generator library for modern C++. Based on **David Blackman and Sebastiano Vigna's [xoshiro/xoroshiro generators](http://prng.di.unimi.it/)**.
-- **xpdf** [📁](./xpdf) [🌐](https://github.com/GerHobbelt/xpdf)
+- **xpdf** [📁](./xpdf) [🌐](https://github.com/GerHobbelt/xpdf) -- Xpdf is an open source viewer for Portable Document Format (PDF) files.
 - **xsimd** [📁](./xsimd) [🌐](https://github.com/GerHobbelt/xsimd) -- SIMD (Single Instruction, Multiple Data) instructions differ between microprocessor vendors and compilers. `xsimd` provides a unified means for using these features for library authors. It enables manipulation of batches of numbers with the same arithmetic operators as for single values. It also provides accelerated implementation of common mathematical functions operating on batches.
 - **xsldbg** [📁](./xsldbg) [🌐](https://github.com/GerHobbelt/xsldbg) -- a debugger for xsl/xslt stylesheets which has functionality similar to a Unix/Linux "gdb", using libxml2 and libxslt.
 - **xtensor** [📁](./xtensor) [🌐](https://github.com/GerHobbelt/xtensor) -- C++ tensors with broadcasting and lazy computing. `xtensor` is a C++ library meant for numerical analysis with multi-dimensional array expressions.
@@ -2455,7 +2453,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **you-token-to-me** [📁](./you-token-to-me) [🌐](https://github.com/GerHobbelt/YouTokenToMe) -- text tokenization
 - **yyjson** [📁](./yyjson) [🌐](https://github.com/GerHobbelt/yyjson) -- allegedly the fastest JSON library in C.
 - **zfp-compressed-arrays** [📁](./zfp-compressed-arrays) [🌐](https://github.com/GerHobbelt/zfp) -- zfp is a compressed format for representing multidimensional floating-point and integer arrays. zfp provides compressed-array classes that support high throughput read and write random access to individual array elements. zfp also supports serial and parallel (OpenMP and CUDA) compression of whole arrays, e.g., for applications that read and write large data sets to and from disk.
-- **zlib** [📁](../../thirdparty/zlib) [🌐](https://github.com/GerHobbelt/thirdparty-zlib)
+- **zlib** [📁](../../thirdparty/zlib) [🌐](https://github.com/GerHobbelt/thirdparty-zlib) -- zlib-ng: zlib data compression library for the next generation systems.
 - **zotero** [📁](./zotero) [🌐](https://github.com/GerHobbelt/zotero)
 - **zotero-better-bibtex** [📁](./zotero-better-bibtex) [🌐](https://github.com/GerHobbelt/zotero-better-bibtex) -- Better BibTeX (BBT) is an extension for Zotero and Juris-M that makes it easier to manage bibliographic data, especially for people authoring documents using text-based toolchains (e.g. based on LaTeX / Markdown).
 - **zotero-bib** [📁](./zotero-bib) [🌐](https://github.com/GerHobbelt/bib) -- Zotero Translation Client is a library that can process URLs and identifiers (such as ISBN or DOI) into CSL-JSON bibliography items using a translation server.
@@ -2554,16 +2552,16 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **mujs** [📁](../../thirdparty/mujs) [🌐](https://github.com/GerHobbelt/mujs) -- a lightweight ES5 Javascript interpreter designed for embedding in other software to extend them with scripting capabilities.
 - **openjpeg** [📁](../../thirdparty/openjpeg) [🌐](https://github.com/GerHobbelt/thirdparty-openjpeg) -- OPENJPEG Library and Applications -- OpenJPEG is an open-source JPEG 2000 codec written in C language. It has been developed in order to promote the use of [JPEG 2000](http://www.jpeg.org/jpeg2000), a still-image compression standard from the Joint Photographic Experts Group ([JPEG](http://www.jpeg.org)).  Since April 2015, it is officially recognized by ISO/IEC and ITU-T as a [JPEG 2000 Reference Software](http://www.itu.int/rec/T-REC-T.804-201504-I!Amd2).
 - **tessconfigs** [📁](../../thirdparty/tessconfigs) [🌐](https://github.com/GerHobbelt/tessconfigs)
-- **tessdata** [📁](../../thirdparty/tessdata) [🌐](https://github.com/GerHobbelt/tessdata)
-- **tessdata_best** [📁](../../thirdparty/tessdata_best) [🌐](https://github.com/GerHobbelt/tessdata_best)
+- **tessdata** [📁](../../thirdparty/tessdata) [🌐](https://github.com/GerHobbelt/tessdata) -- trained models for Tesseract. These have models for legacy tesseract engine (--oem 0) as well as the new LSTM neural net based engine (--oem 1). The LSTM models (--oem 1) in these files have been updated to the integerized versions of [tessdata_best](https://github.com/tesseract-ocr/tessdata_best) on GitHub. So, they should be faster but probably a little less accurate than tessdata_best.
+- **tessdata_best** [📁](../../thirdparty/tessdata_best) [🌐](https://github.com/GerHobbelt/tessdata_best) -- the best trained models for the [Tesseract Open Source OCR Engine](https://github.com/tesseract-ocr/tesseract). These models only work with the LSTM OCR engine of Tesseract 4 / 5.
 - **tessdata_contrib** [📁](../../thirdparty/tessdata_contrib) [🌐](https://github.com/GerHobbelt/tessdata_contrib)
-- **tessdata_fast** [📁](../../thirdparty/tessdata_fast) [🌐](https://github.com/GerHobbelt/tessdata_fast)
-- **tessdoc** [📁](../../thirdparty/tessdoc) [🌐](https://github.com/GerHobbelt/tessdoc)
-- **tesseract** [📁](../../thirdparty/tesseract) [🌐](https://github.com/GerHobbelt/tesseract)
-- **tesseract_docs** [📁](../../thirdparty/tesseract_docs) [🌐](https://github.com/GerHobbelt/tesseract_docs)
-- **tesseract_langdata** [📁](../../thirdparty/tesseract_langdata) [🌐](https://github.com/GerHobbelt/langdata)
-- **tesstrain** [📁](../../thirdparty/tesstrain) [🌐](https://github.com/GerHobbelt/tesstrain)
-- **zlib** [📁](../../thirdparty/zlib) [🌐](https://github.com/GerHobbelt/thirdparty-zlib)
+- **tessdata_fast** [📁](../../thirdparty/tessdata_fast) [🌐](https://github.com/GerHobbelt/tessdata_fast) -- fast integer versions of trained models for the [Tesseract Open Source OCR Engine](https://github.com/tesseract-ocr/tesseract). These models only work with the LSTM OCR engine of Tesseract 4 / 5.
+- **tessdoc** [📁](../../thirdparty/tessdoc) [🌐](https://github.com/GerHobbelt/tessdoc) -- user manual for Tesseract versions `5.x`.
+- **tesseract** [📁](../../thirdparty/tesseract) [🌐](https://github.com/GerHobbelt/tesseract) -- `tesseract-ocr` with `--visible-pdf-image` and other tweaks.
+- **tesseract_docs** [📁](../../thirdparty/tesseract_docs) [🌐](https://github.com/GerHobbelt/tesseract_docs) -- various documents related to Tesseract OCR.
+- **tesseract_langdata** [📁](../../thirdparty/tesseract_langdata) [🌐](https://github.com/GerHobbelt/langdata) -- source training data for Tesseract for lots of languages.
+- **tesstrain** [📁](../../thirdparty/tesstrain) [🌐](https://github.com/GerHobbelt/tesstrain) -- training workflow for Tesseract 4.
+- **zlib** [📁](../../thirdparty/zlib) [🌐](https://github.com/GerHobbelt/thirdparty-zlib) -- zlib-ng: zlib data compression library for the next generation systems.
 
 
 
@@ -2583,6 +2581,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **CryptSync** [📁](./CryptSync) [🌐](https://github.com/GerHobbelt/CryptSync) -- a small utility that synchronizes two folders while encrypting the contents in one folder. That means one of the two folders has all files unencrypted (the files you work with) and the other folder has all the files encrypted. This is best used together with cloud storage tools like OneDrive, DropBox or Google Drive.
 - **Cysboard** [📁](./Cysboard) [🌐](https://github.com/GerHobbelt/Cysboard) -- a lightweight system monitor similar to conky but with html and css for themes.
 - **DGM-CRF** [📁](./DGM-CRF) [🌐](https://github.com/GerHobbelt/DGM) -- DGM (Direct Graphical Models) is a cross-platform C++ library implementing various tasks in probabilistic graphical models with pairwise and complete (dense) dependencies. The library aims to be used for the Markov and Conditional Random Fields (MRF / CRF), Markov Chains, Bayesian Networks, _etc_.
+- **FreeFileSync** [📁](./FreeFileSync) [🌐](https://github.com/GerHobbelt/FreeFileSync)
 - **GoldFish-CBOR** [📁](./GoldFish-CBOR) [🌐](https://github.com/GerHobbelt/GoldFish) -- a fast JSON and CBOR streaming library, without using memory. GoldFish can parse and generate very large [JSON](http://json.org) or [CBOR](http://cbor.io) documents. It has some similarities to a [SAX](https://en.wikipedia.org/wiki/Simple_API_for_XML) parser, but doesn't use an event driven API, instead the user of the GoldFish interface is in control. GoldFish intends to be the easiest and one of the fastest JSON and CBOR streaming parser and serializer to use.
 - **IdGenerator** [📁](./IdGenerator) [🌐](https://github.com/GerHobbelt/IdGenerator)
 - **JamSpell** [📁](./JamSpell) [🌐](https://github.com/GerHobbelt/JamSpell) -- a spell checking library, which considers words surroundings (context) for better correction (**accuracy**) and is **fast** (near 5K words per second)
@@ -2647,7 +2646,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **RxCpp** [📁](./RxCpp) [🌐](https://github.com/GerHobbelt/RxCpp) -- the Reactive Extensions for C++ (__RxCpp__) is a library of algorithms for values-distributed-in-time. The [__Range-v3__](https://github.com/ericniebler/range-v3) library does the same for values-distributed-in-space.
 - **Signals** [📁](./Signals) [🌐](https://github.com/GerHobbelt/Signals) -- a lightweight "signals and slots" implementation using fast delegates. When GUI programming in C++, delegates and the signals and slots paradigm can vastly simplify your code. It implements the Observer pattern while avoiding all the boilerplate code. I needed a lightweight and efficient implementation that I could just drop into my projects and use without adding weird macros, inheriting from crazy templates or having external dependencies. I wanted something simpler and more efficient than libsigc++, sigslot, and boost.signals.
 - **StarSpace** [📁](./StarSpace) [🌐](https://github.com/GerHobbelt/StarSpace) -- a general-purpose neural model for efficient learning of entity embeddings for solving a wide variety of problems.
-- **SymSpell** [📁](./SymSpell) [🌐](https://github.com/GerHobbelt/SymSpell)
+- **SymSpell** [📁](./SymSpell) [🌐](https://github.com/GerHobbelt/SymSpell) -- spelling correction & fuzzy search: **1 million times faster** through Symmetric Delete spelling correction algorithm. The Symmetric Delete spelling correction algorithm reduces the complexity of edit candidate generation and dictionary lookup for a given Damerau-Levenshtein distance. It is six orders of magnitude faster ([than the standard approach with deletes + transposes + replaces + inserts](http://norvig.com/spell-correct.html)) and language independent.
 - **UnofficialLeptDocs** [📁](./UnofficialLeptDocs) [🌐](https://github.com/GerHobbelt/UnofficialLeptDocs)
 - **VQMT** [📁](./VQMT) [🌐](https://github.com/GerHobbelt/VQMT) -- VQMT (Video Quality Measurement Tool) provides fast implementations of the following objective metrics:
 - **VSNASM** [📁](./VSNASM) [🌐](https://github.com/GerHobbelt/VSNASM) -- a set of build customisations that can be used within Visual Studio to compile assembly code using NASM. Visual Studio integration for the NASM assembler.
@@ -2700,6 +2699,8 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **datetimepp** [📁](./datetimepp) [🌐](https://github.com/GerHobbelt/datetimepp) -- datetime++ is an attempt to port [Python Datetime](https://docs.python.org/3/library/datetime.html) to C++. Finally easy datetime management in C++ !
 - **dateutils** [📁](./dateutils) [🌐](https://github.com/GerHobbelt/dateutils) -- a bunch of tools that revolve around fiddling with dates and times on the command line with a strong focus on use cases that arise when dealing with large amounts of financial data.
 - **debugbreak** [📁](./debugbreak) [🌐](https://github.com/GerHobbelt/debugbreak) -- allows you to put breakpoints in your C/C++ code with a call to **`debug_break()`**.
+- **density** [📁](./density) [🌐](https://github.com/GerHobbelt/density)
+- **densityxx** [📁](./densityxx) [🌐](https://github.com/GerHobbelt/densityxx)
 - **diffutils** [📁](./diffutils) [🌐](https://github.com/GerHobbelt/diffutils) -- the GNU diff, diff3, sdiff, and cmp utilities. Their features are a superset of the Unix features and they are significantly faster.
 - **dlfcn-win32** [📁](./dlfcn-win32) [🌐](https://github.com/GerHobbelt/dlfcn-win32) -- an implementation of `dlfcn` for Windows. `dlfcn` is a set of functions that allows runtime dynamic library loading. It is standardized in the POSIX. Windows also provide similar routines, but not in a POSIX-compatible way. This library attempts to implement a wrapper around the Windows functions to make programs written for POSIX that use dlfcn work in Windows without any modifications.
 - **doh** [📁](./doh) [🌐](https://github.com/GerHobbelt/doh) -- a libcurl-using application that resolves a host name using DNS-over-HTTPS (DoH).
@@ -2744,10 +2745,12 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **eventpp** [📁](./eventpp) [🌐](https://github.com/GerHobbelt/eventpp) -- a C++ event library for callbacks, event dispatcher, and event queue. With eventpp you can easily implement signal and slot mechanism, publisher and subscriber pattern, or observer pattern.
 - **everything-curl** [📁](./everything-curl) [🌐](https://github.com/GerHobbelt/everything-curl) -- *Everything curl* is an extensive guide for all things curl. The project, the command-line tool, the library, how everything started and how it came to be the useful tool it is today. It explains how we work on developing it further, what it takes to use it, how you can contribute with code or bug reports and why millions of existing users use it.
 - **exiv2** [📁](./exiv2) [🌐](https://github.com/GerHobbelt/exiv2) -- a C++ library and a command-line utility to read, write, delete and modify Exif, IPTC, XMP and ICC image metadata.
+- **fast-lzma2** [📁](./fast-lzma2) [🌐](https://github.com/GerHobbelt/fast-lzma2)
 - **fastPRNG** [📁](./fastPRNG) [🌐](https://github.com/GerHobbelt/fastPRNG) -- a single header-only FAST 32/64 bit PRNG (pseudo-random generator), highly optimized to obtain faster code from compilers, it's based on **xoshiro** / **xoroshiro** ([**Blackman/Vigna**](http://prng.di.unimi.it/)), **xorshift** and other [**Marsaglia**](https://en.wikipedia.org/wiki/George_Marsaglia) algorithms.
 - **fastfilter_cpp** [📁](./fastfilter_cpp) [🌐](https://github.com/GerHobbelt/fastfilter_cpp) -- Fast Filter: Fast approximate membership filter implementations (C++, research library)
 - **fatal** [📁](./fatal) [🌐](https://github.com/GerHobbelt/fatal) -- Fatal (Facebook Template Library) is a library for fast prototyping software in modern C++. It provides facilities heavily based on template meta-programming, while keeping most of the complexity under-the-hood, to enhance the expressive power of C++. Fatal also provides lessons on how to write meta-programs, as well as on how to make the best use of the library, starting at beginner levels.
 - **fftw3** [📁](./fftw3) [🌐](https://github.com/GerHobbelt/fftw3) -- the FFTW library for computing Fourier transforms (version 3.x), maintained by the FFTW authors.
+- **filecopyex3** [📁](./filecopyex3) [🌐](https://github.com/GerHobbelt/filecopyex3)
 - **fluent-bit** [📁](./fluent-bit) [🌐](https://github.com/GerHobbelt/fluent-bit) -- [Fluent Bit](http://fluentbit.io) is a fast Log Processor and Forwarder for Linux, Windows, Embedded Linux, MacOS and BSD family operating systems. It's part of the Graduated [Fluentd](http://fluentd.org) Ecosystem and a [CNCF](https://cncf.io) sub-project. Fluent Bit allows to collect log events or metrics from different sources, process them and deliver them to different backends such as [Fluentd](http://fluentd.org), Elasticsearch, Splunk, DataDog, Kafka, New Relic, Azure services, AWS services, Google services, NATS, InfluxDB or any custom HTTP end-point.
 - **fmem** [📁](./fmem) [🌐](https://github.com/GerHobbelt/fmem) -- a cross-platform library for opening memory-backed libc streams (a la UNIX `fmemopen()`).
 - **fmemopen_windows** [📁](./fmemopen_windows) [🌐](https://github.com/GerHobbelt/fmemopen_windows) -- provides **FILE\*** handler based on memory backend for fread,fwrite etc. just like `fmemopen` on linux, but now on MS Windows.
@@ -2863,6 +2866,9 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
   * Threading and synchronization primitives
   
 
+- **lizard** [📁](./lizard) [🌐](https://github.com/GerHobbelt/lizard)
+- **lzbench** [📁](./lzbench) [🌐](https://github.com/GerHobbelt/lzbench)
+- **lzham_codec** [📁](./lzham_codec) [🌐](https://github.com/GerHobbelt/lzham_codec)
 - **mace** [📁](./mace) [🌐](https://github.com/GerHobbelt/mace) -- **Mobile AI Compute Engine** (or **MACE** for short) is a deep learning inference framework optimized for mobile heterogeneous computing on Android, iOS, Linux and Windows devices. The design focuses on the following
 - **mammut** [📁](./mammut) [🌐](https://github.com/GerHobbelt/mammut) -- provides an object oriented abstraction of architectural features normally exposed by means of `sysfs` files or CPU registries. It also provides the possibility to manage remote machines by using a client server mechanism.
 - **marian** [📁](./marian) [🌐](https://github.com/GerHobbelt/marian) -- an efficient Neural Machine Translation framework written in pure C++ with minimal dependencies.
@@ -2912,7 +2918,9 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **ogdf** [📁](./ogdf) [🌐](https://github.com/GerHobbelt/ogdf) -- OGDF stands both for **O**pen **G**raph **D**rawing **F**ramework (the original name) and **O**pen **G**raph algorithms and **D**ata structures **F**ramework. OGDF is a self-contained C++ library for graph algorithms, in particular for (but not restricted to) automatic graph drawing. It offers sophisticated algorithms and data structures to use within your own applications or scientific projects.
 - **onnxruntime** [📁](./onnxruntime) [🌐](https://github.com/GerHobbelt/onnxruntime) -- a cross-platform inference and training machine-learning accelerator. **ONNX Runtime inference** can enable faster customer experiences and lower costs, supporting models from deep learning frameworks such as PyTorch and TensorFlow/Keras as well as classical machine learning libraries such as scikit-learn, LightGBM, XGBoost, etc. ONNX Runtime is compatible with different hardware, drivers, and operating systems, and provides optimal performance by leveraging hardware accelerators where applicable alongside graph optimizations and transforms. [Learn more &rarr;](https://www.onnxruntime.ai/docs/#onnx-runtime-for-inferencing)
 - **openpbs** [📁](./openpbs) [🌐](https://github.com/GerHobbelt/openpbs) -- in May 2020, OpenPBS became the new name for the PBS Professional Open Source Project. OpenPBS® software optimizes job scheduling and workload management in high-performance computing (HPC) environments – clusters, clouds, and supercomputers – improving system efficiency and people’s productivity.  Built by HPC people for HPC people, OpenPBS is fast, scalable, secure, and resilient, and supports all modern infrastructure, middleware, and applications.
+- **openvino** [📁](./openvino) [🌐](https://github.com/GerHobbelt/openvino)
 - **osquery** [📁](./osquery) [🌐](https://github.com/GerHobbelt/osquery) -- a SQL powered operating system instrumentation, monitoring, and analytics framework. `osquery` exposes an operating system as a high-performance relational database.  This allows you to write SQL-based queries to explore operating system data.  With osquery, SQL tables represent abstract concepts such as running processes, loaded kernel modules, open network connections, browser plugins, hardware events or file hashes.
+- **p7zip** [📁](./p7zip) [🌐](https://github.com/GerHobbelt/p7zip)
 - **pHash** [📁](./pHash) [🌐](https://github.com/GerHobbelt/pHash) -- the open source perceptual hash library. Potential applications include copyright protection, similarity search for media files, or even digital forensics. For example, YouTube could maintain a database of hashes that have been submitted by the major movie producers of movies to which they hold the copyright. If a user then uploads the same video to YouTube, the hash will be almost identical, and it can be flagged as a possible copyright violation. The audio hash could be used to automatically tag MP3 files with proper ID3 information, while the text hash could be used for plagiarism detection.
 - **pango** [📁](./pango) [🌐](https://github.com/GerHobbelt/pango) -- a library for layout and rendering of text, with an emphasis on internationalization. Pango can be used anywhere that text layout is needed.
 - **pcm** [📁](./pcm) [🌐](https://github.com/GerHobbelt/pcm) -- Intel&reg; Performance Counter Monitor (Intel&reg; PCM) is an application programming interface (API) and a set of tools based on the API to monitor performance and energy metrics of Intel&reg; Core&trade;, Xeon&reg;, Atom&trade; and Xeon Phi&trade; processors. PCM works on Linux, Windows, Mac OS X, FreeBSD, DragonFlyBSD and ChromeOS operating systems.
@@ -2933,62 +2941,66 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **portable-snippets** [📁](./portable-snippets) [🌐](https://github.com/GerHobbelt/portable-snippets) -- a collection of public domain (CC0) code snippets written in C for performing various common tasks which are typically OS, architecture, and/or compiler-dependent.  Basically, our goal is to move those annoying preprocessor conditionals from your code to ours.
 - **probminhash** [📁](./probminhash) [🌐](https://github.com/GerHobbelt/probminhash) -- a class of Locality-Sensitive Hash Algorithms for the (Probability) Jaccard Similarity
 - **prvhash** [📁](./prvhash) [🌐](https://github.com/GerHobbelt/prvhash) -- PRVHASH is a hash function that generates a [uniform pseudo-random number sequence](https://en.wikipedia.org/wiki/Pseudorandom_number_generator) derived from the message. PRVHASH is conceptually similar (in the sense of using a pseudo-random number sequence as a hash) to [`keccak`](https://en.wikipedia.org/wiki/SHA-3) and [`RadioGatun`](https://en.wikipedia.org/wiki/RadioGat%C3%BAn) schemes, but is a completely different implementation of such concept. PRVHASH is both a ["randomness extractor"](https://en.wikipedia.org/wiki/Randomness_extractor) and an "extendable-output function" (XOF).
-- **pybind11** [📁](./pybind11) [🌐](https://github.com/GerHobbelt/pybind11)
+- **pybind11** [📁](./pybind11) [🌐](https://github.com/GerHobbelt/pybind11) -- a lightweight header-only library that exposes C++ types in Python and vice versa, mainly to create Python bindings of existing C++ code.
 - **pyclustering** [📁](./pyclustering) [🌐](https://github.com/GerHobbelt/pyclustering) -- a Python, C++ data mining library (clustering algorithm, oscillatory networks, neural networks). The library provides Python and C++ implementations (C++ pyclustering library) of each algorithm or model.
 - **pytorch_cpp_demo** [📁](./pytorch_cpp_demo) [🌐](https://github.com/GerHobbelt/pytorch_cpp) -- Deep Learning sample programs of PyTorch written in C++.
-- **qlever** [📁](./qlever) [🌐](https://github.com/GerHobbelt/qlever)
+- **qlever** [📁](./qlever) [🌐](https://github.com/GerHobbelt/qlever) -- a SPARQL engine that can efficiently index and query very large knowledge graphs with up to 100 billion triples on a single standard PC or server. In particular, QLever is fast for queries that involve large intermediate or final results, which are notoriously hard for engines like Blazegraph or Virtuoso.
+- **qpdf** [📁](./qpdf) [🌐](https://github.com/GerHobbelt/qpdf)
 - **rclone** [📁](./rclone) [🌐](https://github.com/GerHobbelt/rclone) -- Rclone *("rsync for cloud storage")* is a command-line program to sync files and directories to and from different cloud storage providers. See [the full list of all storage providers and their features](https://rclone.org/overview/).
 - **robin-hood-hashing** [📁](./robin-hood-hashing) [🌐](https://github.com/GerHobbelt/robin-hood-hashing) -- robin_hood unordered map & set.
 - **rotate_detection** [📁](./rotate_detection) [🌐](https://github.com/GerHobbelt/rotate_detection) -- angle rotation detection on scanned documents. Designed for embedding in systems using tesseract OCR. The detection algorithm based on [Rényi entropy](https://en.wikipedia.org/wiki/R%C3%A9nyi_entropy).
 - **rsync** [📁](./rsync) [🌐](https://github.com/GerHobbelt/rsync) -- Rsync is a fast and extraordinarily versatile file copying tool for both remote and local files. Rsync uses a delta-transfer algorithm which provides a very fast method for bringing remote files into sync.
-- **safestringlib** [📁](./safestringlib) [🌐](https://github.com/GerHobbelt/safestringlib)
-- **salieri** [📁](./salieri) [🌐](https://github.com/GerHobbelt/salieri)
+- **safestringlib** [📁](./safestringlib) [🌐](https://github.com/GerHobbelt/safestringlib) -- The Safe String Library is based on the Safe C Library by Cisco, and provides routines for safe string operations (like `strcpy`) and memory routines (like `memcpy`) that are recommended for Linux/Android operating systems, and will also work for Windows. This library is especially useful for cross-platform situations where one library for these routines is preferred.
+- **salieri** [📁](./salieri) [🌐](https://github.com/GerHobbelt/salieri) -- provides function arguments' in/out annotation definitions for Microsoft's [source-code annotation language (SAL)](https://msdn.microsoft.com/en-us/library/hh916383.aspx). SAL provides lots of annotations you can use to describe the behavior
 - **sdhash** [📁](./sdhash) [🌐](https://github.com/GerHobbelt/sdhash) -- a tool which allows two arbitrary blobs of data to be compared for similarity based on common strings of binary data. It is designed to provide quick results during triage and initial investigation phases.
-- **shadesmar** [📁](./shadesmar) [🌐](https://github.com/GerHobbelt/shadesmar)
-- **sharedhashfile** [📁](./sharedhashfile) [🌐](https://github.com/GerHobbelt/sharedhashfile)
-- **shmdata** [📁](./shmdata) [🌐](https://github.com/GerHobbelt/shmdata)
-- **simd-imgproc** [📁](./simd-imgproc) [🌐](https://github.com/GerHobbelt/Simd)
-- **sioyek** [📁](./sioyek) [🌐](https://github.com/GerHobbelt/sioyek)
-- **snap** [📁](./snap) [🌐](https://github.com/GerHobbelt/snap)
-- **spdlog** [📁](./spdlog) [🌐](https://github.com/GerHobbelt/spdlog)
+- **shadesmar** [📁](./shadesmar) [🌐](https://github.com/GerHobbelt/shadesmar) -- an IPC library that uses the system's shared memory to pass messages. Supports publish-subscribe and RPC.
+- **sharedhashfile** [📁](./sharedhashfile) [🌐](https://github.com/GerHobbelt/sharedhashfile) -- share hash tables with stable key hints stored in memory mapped files between arbitrary processes.
+- **shmdata** [📁](./shmdata) [🌐](https://github.com/GerHobbelt/shmdata) -- shares streams of framed data between processes (1 writer to many readers) via shared memory. It supports any kind of data stream:  it has been used with multichannel audio, video frames, 3D models, OSC messages, and various others types of data. Shmdata is very fast and allows processes to access data streams without the need for extra copies.
+- **simd-imgproc** [📁](./simd-imgproc) [🌐](https://github.com/GerHobbelt/Simd) -- Simd Library for image processing and machine learning.
+- **sioyek** [📁](./sioyek) [🌐](https://github.com/GerHobbelt/sioyek) -- a PDF viewer with a focus on textbooks and research papers.
+- **snap** [📁](./snap) [🌐](https://github.com/GerHobbelt/snap) -- Stanford Network Analysis Platform (SNAP) is a general purpose, high performance system for analysis and manipulation of large networks. SNAP scales to massive graphs with hundreds of millions of nodes and billions of edges.
+- **snappy** [📁](./snappy) [🌐](https://github.com/GerHobbelt/snappy)
+- **spdlog** [📁](./spdlog) [🌐](https://github.com/GerHobbelt/spdlog) -- very fast, header-only/compiled, C++ logging library.
 - **spdlog_setup** [📁](./spdlog_setup) [🌐](https://github.com/GerHobbelt/spdlog_setup) -- file-based setup library for convenience in initializing spdlog.
-- **splitmerge** [📁](./splitmerge) [🌐](https://github.com/GerHobbelt/splitmerge)
-- **sqlcipher** [📁](./sqlcipher) [🌐](https://github.com/GerHobbelt/sqlcipher)
-- **sqleet** [📁](./sqleet) [🌐](https://github.com/GerHobbelt/sqleet)
-- **sqlite3-compression-encryption-vfs** [📁](./sqlite3-compression-encryption-vfs) [🌐](https://github.com/GerHobbelt/sqlite3-compression-encryption-vfs)
+- **splitmerge** [📁](./splitmerge) [🌐](https://github.com/GerHobbelt/splitmerge) -- simple binary file splitter and (re)merger tool.
+- **spookyhash** [📁](./spookyhash) [🌐](https://github.com/GerHobbelt/spookyhash)
+- **sqlcipher** [📁](./sqlcipher) [🌐](https://github.com/GerHobbelt/sqlcipher) -- SQLCipher is a standalone fork of the [SQLite](https://www.sqlite.org/) database library that adds 256 bit AES encryption of database files and other security features.
+- **sqleet** [📁](./sqleet) [🌐](https://github.com/GerHobbelt/sqleet) -- an encryption extension for [SQLite3](https://www.sqlite.org/). The encryption is transparent (*on-the-fly*) and based on modern cryptographic algorithms designed for high performance in software and robust side-channel resistance.
+- **sqlite3-compression-encryption-vfs** [📁](./sqlite3-compression-encryption-vfs) [🌐](https://github.com/GerHobbelt/sqlite3-compression-encryption-vfs) -- CEVFS: Compression & Encryption VFS for SQLite 3 is a SQLite 3 Virtual File System for compressing and encrypting data at the pager level. Once set up, you use SQLite as you normally would and the compression and encryption is transparently handled during database read/write operations via the SQLite pager.
 - **sqlite_fts_tokenizer_chinese_simple** [📁](./sqlite_fts_tokenizer_chinese_simple) [🌐](https://github.com/GerHobbelt/simple)
-- **sqliteodbc** [📁](./sqliteodbc) [🌐](https://github.com/GerHobbelt/sqliteodbc)
-- **sqlpp11** [📁](./sqlpp11) [🌐](https://github.com/GerHobbelt/sqlpp11)
+- **sqliteodbc** [📁](./sqliteodbc) [🌐](https://github.com/GerHobbelt/sqliteodbc) -- SQLite ODBC Driver for the wonderful SQLite 2.8.* and SQLite 3.* Database Engine/Library.
+- **sqlpp11** [📁](./sqlpp11) [🌐](https://github.com/GerHobbelt/sqlpp11) -- a type safe embedded domain specific language for SQL queries and results in C++.
+- **squash** [📁](./squash) [🌐](https://github.com/GerHobbelt/squash)
 - **ssdeep** [📁](./ssdeep) [🌐](https://github.com/GerHobbelt/ssdeep) -- fuzzy hashing library, can be used to assist with identifying almost identical files using context triggered piecewise hashing.
-- **ssimulacra2** [📁](./ssimulacra2) [🌐](https://github.com/GerHobbelt/ssimulacra2)
-- **stan** [📁](./stan) [🌐](https://github.com/GerHobbelt/stan)
-- **stan-math** [📁](./stan-math) [🌐](https://github.com/GerHobbelt/stan-math)
-- **stateline** [📁](./stateline) [🌐](https://github.com/GerHobbelt/stateline)
-- **statsite** [📁](./statsite) [🌐](https://github.com/GerHobbelt/statsite)
-- **stringi** [📁](./stringi) [🌐](https://github.com/GerHobbelt/stringi)
-- **subprocess-cpp** [📁](./subprocess-cpp) [🌐](https://github.com/GerHobbelt/subprocess-cpp)
-- **sumatrapdf** [📁](./sumatrapdf) [🌐](https://github.com/GerHobbelt/sumatrapdf)
+- **ssimulacra2** [📁](./ssimulacra2) [🌐](https://github.com/GerHobbelt/ssimulacra2) -- Structural SIMilarity Unveiling Local And Compression Related Artifacts metric developed by Jon Sneyers. SSIMULACRA 2 is based on the concept of the multi-scale structural similarity index measure (MS-SSIM), computed in a perceptually relevant color space, adding two other (asymmetric) error maps, and aggregating using two different norms.
+- **stan** [📁](./stan) [🌐](https://github.com/GerHobbelt/stan) -- Stan is a C++ package providing (1) full Bayesian inference using the No-U-Turn sampler (NUTS), a variant of Hamiltonian Monte Carlo (HMC), (2) approximate Bayesian inference using automatic differentiation variational inference (ADVI), and (3) penalized maximum likelihood estimation (MLE) using L-BFGS optimization. It is built on top of the [Stan Math library](https://github.com/stan-dev/math).
+- **stan-math** [📁](./stan-math) [🌐](https://github.com/GerHobbelt/stan-math) -- the Stan Math Library is a C++, reverse-mode automatic differentiation library designed to be usable, extensive and extensible, efficient, scalable, stable, portable, and redistributable in order to facilitate the construction and utilization of algorithms that utilize derivatives.
+- **stateline** [📁](./stateline) [🌐](https://github.com/GerHobbelt/stateline) -- a framework for distributed Markov Chain Monte Carlo (MCMC) sampling written in C++. It implements random walk Metropolis-Hastings with parallel tempering to improve chain mixing, provides an adaptive proposal distribution to speed up convergence, and allows the user to factorise their likelihoods (eg. over sensors or data).
+- **statsite** [📁](./statsite) [🌐](https://github.com/GerHobbelt/statsite) -- a metrics aggregation server. Statsite is based heavily on Etsy's StatsD <https://github.com/etsy/statsd>, and is wire compatible.
+- **stringi** [📁](./stringi) [🌐](https://github.com/GerHobbelt/stringi) -- fast and portable character string processing in R (with the Unicode ICU).
+- **subprocess-cpp** [📁](./subprocess-cpp) [🌐](https://github.com/GerHobbelt/subprocess-cpp) -- a no nonsense library for writing shell commands in C++.
+- **sumatrapdf** [📁](./sumatrapdf) [🌐](https://github.com/GerHobbelt/sumatrapdf) -- SumatraPDF is a multi-format (PDF, EPUB, MOBI, CBZ, CBR, FB2, CHM, XPS, DjVu) reader for Windows.
 - **tabulate** [📁](./tabulate) [🌐](https://github.com/GerHobbelt/tabulate)
-- **taglib** [📁](./taglib) [🌐](https://github.com/GerHobbelt/taglib)
+- **taglib** [📁](./taglib) [🌐](https://github.com/GerHobbelt/taglib) -- TagLib is a library for reading and editing the metadata of several popular audio formats. Currently it supports both ID3v1 and [ID3v2][] for MP3 files, [Ogg Vorbis][] comments and ID3 tags in [FLAC][], MPC, Speex, WavPack, TrueAudio, WAV, AIFF, MP4, APE, and ASF files.
 - **tcpshm** [📁](./tcpshm) [🌐](https://github.com/GerHobbelt/tcpshm) -- a connection-oriented persistent message queue framework based on TCP or SHM IPC for Linux. TCPSHM provides a reliable and efficient solution based on a sequence number and acknowledge mechanism, that every sent out msg is persisted in a send queue until sender got ack that it's been consumed by the receiver, so that disconnects/crashes are tolerated and the recovery process is purely automatic.
-- **tensorflow-docs** [📁](./tensorflow-docs) [🌐](https://github.com/GerHobbelt/tensorflow-docs)
-- **tensorflow-io** [📁](./tensorflow-io) [🌐](https://github.com/GerHobbelt/tensorflow-io)
-- **tensorflow-text** [📁](./tensorflow-text) [🌐](https://github.com/GerHobbelt/tensorflow-text)
+- **tensorflow-docs** [📁](./tensorflow-docs) [🌐](https://github.com/GerHobbelt/tensorflow-docs) -- TensorFlow documentation
+- **tensorflow-io** [📁](./tensorflow-io) [🌐](https://github.com/GerHobbelt/tensorflow-io) -- TensorFlow I/O is a collection of file systems and file formats that are not available in TensorFlow's built-in support. A full list of supported file systems and file formats by TensorFlow I/O can be found [here](https://www.tensorflow.org/io/api_docs/python/tfio).
+- **tensorflow-text** [📁](./tensorflow-text) [🌐](https://github.com/GerHobbelt/tensorflow-text) -- TensorFlow Text provides a collection of text related classes and ops ready to use with TensorFlow 2.0. The library can perform the preprocessing regularly required by text-based models, and includes other features useful for sequence modeling not provided by core TensorFlow.
 - **tesslinesplit** [📁](./tesslinesplit) [🌐](https://github.com/GerHobbelt/tesslinesplit) -- a standalone program for using Tesseract's line segmentation algorithm to split up document images.
 - **textflowcpp** [📁](./textflowcpp) [🌐](https://github.com/GerHobbelt/textflowcpp) -- a simple way to wrap a string at different line lengths, optionally with indents.
-- **tinycbor** [📁](./tinycbor) [🌐](https://github.com/GerHobbelt/tinycbor)
-- **tinygettext** [📁](./tinygettext) [🌐](https://github.com/GerHobbelt/tinygettext)
+- **tinycbor** [📁](./tinycbor) [🌐](https://github.com/GerHobbelt/tinycbor) -- Concise Binary Object Representation (CBOR) library for serializing data to disk or message channel.
+- **tinygettext** [📁](./tinygettext) [🌐](https://github.com/GerHobbelt/tinygettext) -- a minimal replacement for gettext written in C++. It can read `.po` files directly and doesn't need `.mo` files generated from `.po`. It also can read the `.po` files from arbitrary locations, so it's better suited for non-Unix systems and situations in which one wants to store or distribute `.po` files separately from the software itself.
 - **toml11** [📁](./toml11) [🌐](https://github.com/GerHobbelt/toml11) -- a C++11 header-only TOML parser/encoder depending only on C++ standard library, compatible to the latest version of [TOML v1.0.0](https://toml.io/en/v1.0.0), including UTF-8 support.
 - **transwarp** [📁](./transwarp) [🌐](https://github.com/GerHobbelt/transwarp) -- a header-only C++ library for task concurrency. It allows you to easily create a graph of tasks where every task can be executed synchronously. transwarp is written in C++17 and only depends on the standard library.
-- **twain_library** [📁](./twain_library) [🌐](https://github.com/GerHobbelt/twain_library)
+- **twain_library** [📁](./twain_library) [🌐](https://github.com/GerHobbelt/twain_library) -- the DTWAIN Library, **Version 5.x**, from Dynarithmic Software.  DTWAIN is an open source programmer's library that will allow applications to acquire images from TWAIN-enabled devices using a simple Application Programmer's Interface (API).
 - **ucx** [📁](./ucx) [🌐](https://github.com/GerHobbelt/ucx) -- Unified Communication X (UCX) is an optimized production proven-communication framework for modern, high-bandwidth and low-latency networks. UCX exposes a set of abstract communication primitives that utilize the best of available hardware resources and offloads. These include RDMA (InfiniBand and RoCE), TCP, GPUs, shared memory, and network atomic operations.
-- **ugrep** [📁](./ugrep) [🌐](https://github.com/GerHobbelt/ugrep)
+- **ugrep** [📁](./ugrep) [🌐](https://github.com/GerHobbelt/ugrep) -- search for anything in everything... ultra fast. "*`grep` for arbitrary binary files*."
 - **universal-numbers** [📁](./universal-numbers) [🌐](https://github.com/GerHobbelt/universal) -- a header-only C++ template library for universal number arithmetic. The goal of the Universal Numbers Library is to offer applications alternatives to IEEE floating-point that are more efficient and mathematically robust. The Universal library is a ready-to-use header-only library that provides plug-in replacement for native types, and provides a low-friction environment to start exploring alternatives to IEEE floating-point in your own algorithms.
-- **unixODBC** [📁](./unixODBC) [🌐](https://github.com/GerHobbelt/unixODBC)
+- **unixODBC** [📁](./unixODBC) [🌐](https://github.com/GerHobbelt/unixODBC) -- an Open Source ODBC sub-system and an ODBC SDK for Linux, Mac OSX, and UNIX.
 - **unpaper** [📁](./unpaper) [🌐](https://github.com/GerHobbelt/unpaper) -- a post-processing tool for scanned sheets of paper, especially for book pages that have been scanned from previously created photocopies.  The main purpose is to make scanned book pages better readable on screen after conversion to PDF. The program also tries to detect misaligned centering and rotation of ages and will automatically straighten each page by rotating it to the correct angle (a.k.a. deskewing).
 - **variadic_table** [📁](./variadic_table) [🌐](https://github.com/GerHobbelt/variadic_table) -- for "pretty-printing" a formatted table of data to the console. It uses "variadic templates" to allow you to specify the types of data in each column.
-- **vmem** [📁](./vmem) [🌐](https://github.com/GerHobbelt/vmem)
-- **vmemcache** [📁](./vmemcache) [🌐](https://github.com/GerHobbelt/vmemcache)
+- **vmem** [📁](./vmem) [🌐](https://github.com/GerHobbelt/vmem) -- **libvmem** and **libvmmalloc** are a couple of libraries for using persistent memory for malloc-like volatile uses.  They have historically been a part of [PMDK](https://pmem.io/pmdk) despite being solely for volatile uses. You may want consider using [memkind](https://github.com/memkind/memkind) instead in code that benefits from extra features like NUMA awareness.
+- **vmemcache** [📁](./vmemcache) [🌐](https://github.com/GerHobbelt/vmemcache) -- **libvmemcache** is an embeddable and lightweight in-memory buffered LRU caching solution. It's designed to fully take advantage of large capacity memory, such as Persistent Memory with DAX, through memory mapping in an efficient and scalable way.
 - **vxl** [📁](./vxl) [🌐](https://github.com/GerHobbelt/vxl) -- VXL (the Vision-something-Libraries) is a collection of C++ libraries designed for computer vision research and implementation. It was created from TargetJr and the IUE with the aim of making a light, fast and consistent system.
 - **wget2** [📁](./wget2) [🌐](https://github.com/GerHobbelt/wget2) -- GNU Wget2 is the successor of GNU Wget, a file and recursive website downloader. Designed and written from scratch it wraps around libwget, that provides the basic functions needed by a web client. Wget2 works multi-threaded and uses many features to allow fast operation. In many cases Wget2 downloads much faster than Wget1.x due to HTTP2, HTTP compression, parallel connections and use of If-Modified-Since HTTP header.
 - **wil-Win32-Interface-Library** [📁](./wil-Win32-Interface-Library) [🌐](https://github.com/GerHobbelt/wil) -- The Windows Implementation Libraries (WIL) is a header-only C++ library created to make life easier for developers on Windows through readable type-safe C++ interfaces for common Windows coding patterns.
@@ -3000,7 +3012,5 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **wxDatabase** [📁](./wxDatabase) [🌐](https://github.com/GerHobbelt/wxDatabase) -- wxDatabase is built on the excellent work of Joseph Blough called DatabaseLayer. The wxDatabase classes provide a database independent interface similar to JDBC (but only VERY basic functionality). So far, the only database backends supported are SQLite3, MySQL, PostGreSQL, ODBC, and TDS.
 - **wxPdfDocument** [📁](./wxPdfDocument) [🌐](https://github.com/GerHobbelt/wxpdfdoc) -- **wxPdfDocument** allows wxWidgets applications to generate PDF documents. The code is a port of FPDF - a free PHP class for generating PDF files - to C++ using the wxWidgets library. Several add-on PHP scripts found on the FPDF web site are incorporated into wxPdfDocument.
 - **xlnt** [📁](./xlnt) [🌐](https://github.com/GerHobbelt/xlnt) -- a modern C++ library for manipulating spreadsheets in memory and reading/writing them from/to XLSX files as described in [ECMA 376 4th edition](http://www.ecma-international.org/publications/standards/Ecma-376.htm).
-- **xor-and-binary-fuse-filter** [📁](./xor-and-binary-fuse-filter) [🌐](https://github.com/GerHobbelt/xor_singleheader)
-- **xpdf** [📁](./xpdf) [🌐](https://github.com/GerHobbelt/xpdf)
-
-
+- **xor-and-binary-fuse-filter** [📁](./xor-and-binary-fuse-filter) [🌐](https://github.com/GerHobbelt/xor_singleheader) -- XOR and Binary Fuse Filter library: Bloom filters are used to quickly check whether an element is part of a set. Xor filters and binary fuse filters are faster and more concise alternative to Bloom filters. They are also smaller than cuckoo filters. They are used in [production systems](https://github.com/datafuselabs/databend).
+- **xpdf** [📁](./xpdf) [🌐](https://github.com/GerHobbelt/xpdf) -- Xpdf is an open source viewer for Portable Document Format (PDF) files.

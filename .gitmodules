@@ -2869,3 +2869,59 @@
 [submodule "libprecog"]
 	path = libprecog
 	url = git@github.com:GerHobbelt/PRLib.git
+
+[submodule "snappy"]
+	path = snappy
+	url = git@github.com:GerHobbelt/snappy.git
+
+[submodule "squash"]
+	path = squash
+	url = git@github.com:GerHobbelt/squash.git
+
+[submodule "density"]
+	path = density
+	url = git@github.com:GerHobbelt/density.git
+
+[submodule "densityxx"]
+	path = densityxx
+	url = git@github.com:GerHobbelt/densityxx.git
+
+[submodule "spookyhash"]
+	path = spookyhash
+	url = git@github.com:GerHobbelt/spookyhash.git
+
+[submodule "lzbench"]
+	path = lzbench
+	url = git@github.com:GerHobbelt/lzbench.git
+
+[submodule "fast-lzma2"]
+	path = fast-lzma2
+	url = git@github.com:GerHobbelt/fast-lzma2.git
+
+[submodule "lizard"]
+	path = lizard
+	url = git@github.com:GerHobbelt/lizard.git
+
+[submodule "lzham_codec"]
+	path = lzham_codec
+	url = git@github.com:GerHobbelt/lzham_codec.git
+
+[submodule "p7zip"]
+	path = p7zip
+	url = git@github.com:GerHobbelt/p7zip.git
+
+[submodule "FreeFileSync"]
+	path = FreeFileSync
+	url = git@github.com:GerHobbelt/FreeFileSync.git
+
+[submodule "filecopyex3"]
+	path = filecopyex3
+	url = git@github.com:GerHobbelt/filecopyex3.git
+
+[submodule "qpdf"]
+	path = qpdf
+	url = git@github.com:GerHobbelt/qpdf.git
+
+[submodule "openvino"]
+	path = openvino
+	url = git@github.com:GerHobbelt/openvino.git
