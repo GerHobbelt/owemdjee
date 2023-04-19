@@ -1148,7 +1148,10 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **civetweb** [📁](./civetweb) [🌐](https://github.com/GerHobbelt/civetweb) -- an easy to use, powerful, C (C/C++) embeddable web server with optional CGI, SSL and Lua support.
 - **crow** [📁](./crow) [🌐](https://github.com/GerHobbelt/crow) -- IPC / server framework
 - **drogon** [📁](./drogon) [🌐](https://github.com/GerHobbelt/drogon) -- a C++14/17-based HTTP application framework to easily build various types of web application server programs.
-- **h2o-server** [📁](./h2o-server) [🌐](https://github.com/GerHobbelt/h2o) -- an optimized HTTP/1, HTTP/2, HTTP/3 server.
+- ~~**h2o-server** [📁](./h2o-server) [🌐](https://github.com/GerHobbelt/h2o) -- an optimized HTTP/1, HTTP/2, HTTP/3 server.~~
+  
+  - **removed**; reason: we've decided on using `crow` as the main server framework. Second choice is `civetweb`. As we're looking for a non-public-facing web server, we don't need h2o and it's complexity.
+
 - **proxygen** [📁](./proxygen) [🌐](https://github.com/GerHobbelt/proxygen) -- the core C++ HTTP abstractions used at Facebook. Internally, it is used as the basis for building many HTTP servers, proxies, and clients, focusing on the common HTTP abstractions and our simple HTTPServer framework. The framework supports HTTP/1.1, SPDY/3, SPDY/3.1, HTTP/2, and HTTP/3.
 - **wget** [📁](./wget) [🌐](https://github.com/GerHobbelt/wget) -- GNU Wget is a free utility for non-interactive download of files from the Web.  It supports HTTP, HTTPS, and FTP protocols, as well as retrieval through HTTP proxies.
 - ~~**libmicrohttpd** [🌐](https://github.com/Karlson2k/libmicrohttpd)~~
@@ -1780,7 +1783,10 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **gumbo-libxml** [📁](./gumbo-libxml) [🌐](https://github.com/GerHobbelt/gumbo-libxml) -- LibXML2 bindings for the Gumbo HTML5 parser: this provides a libxml2 API on top of the Gumbo parser.  It lets you use a modern parser - Gumbo now passes all html5lib tests, including the template tag, and should be fully conformant with the HTML5 spec - with the full ecosystem of libxml tools, including XPath, tree modification, DTD validation, etc.
 - **gumbo-parser** [📁](../../thirdparty/gumbo-parser) [🌐](https://github.com/GerHobbelt/gumbo-parser) -- HTML parser
 - **gumbo-query** [📁](./gumbo-query) [🌐](https://github.com/GerHobbelt/gumbo-query) -- HTML DOM access in C/C++
-- **h2o-server** [📁](./h2o-server) [🌐](https://github.com/GerHobbelt/h2o) -- an optimized HTTP/1, HTTP/2, HTTP/3 server.
+- ~~**h2o-server** [📁](./h2o-server) [🌐](https://github.com/GerHobbelt/h2o) -- an optimized HTTP/1, HTTP/2, HTTP/3 server.~~
+  
+  - **removed**; reason: we've decided on using `crow` as the main server framework. Second choice is `civetweb`. As we're looking for a non-public-facing web server, we don't need h2o and it's complexity.
+
 - **harbour-core** [📁](./harbour-core) [🌐](https://github.com/GerHobbelt/core) -- Harbour is the free software implementation of a multi-platform, multi-threading, object-oriented, scriptable programming language, backward compatible with Clipper/xBase. Harbour consists of a compiler and runtime libraries with multiple UI and database backends, its own make system and a large collection of libraries and interfaces to many popular APIs.
 - **harfbuzz** [📁](../../thirdparty/harfbuzz) [🌐](https://github.com/GerHobbelt/thirdparty-harfbuzz) -- a text shaping engine. It primarily supports [OpenType][1], but also [Apple Advanced Typography][2].
 - **HDiffPatch** [📁](./HDiffPatch) [🌐](https://github.com/GerHobbelt/HDiffPatch) -- a library and command-line tools for Diff & Patch between binary files or directories(folders); cross-platform; runs fast; create small delta/differential; support large files and limit memory requires when diff & patch.

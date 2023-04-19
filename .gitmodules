@@ -750,10 +750,6 @@
 	path = proxygen
 	url = https://github.com/GerHobbelt/proxygen.git
 	
-[submodule "h2o-server"]
-	path = h2o-server
-	url = https://github.com/GerHobbelt/h2o.git
-	ignore = dirty
 [submodule "drogon"]
 	path = drogon
 	url = https://github.com/GerHobbelt/drogon.git
