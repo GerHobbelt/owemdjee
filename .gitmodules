@@ -2925,3 +2925,6 @@
 [submodule "openvino"]
 	path = openvino
 	url = git@github.com:GerHobbelt/openvino.git
+[submodule "vcopy"]
+	path = vcopy
+	url = git@github.com:GerHobbelt/vcopy.git
