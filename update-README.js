@@ -135,11 +135,18 @@ console.log("===================================================================
 // Before we go and parse the README and re-order / organize the items in the lists in there, we MUST protect the (partial) TOCs we generated using Obidian tooling:
 txt = txt
 .replace(/^(\s*)[-*]\s+\[(.+)\]\(#(.+)\)\s*$/gm, function tocr(m, p1, p2, p3) {
-	let hashtag = p3
+	let title = (p2 == 'TOC' ? p3 : p2);
+	let hashtag = title
 	.replace(/%[0-9A-F][0-9A-F]/g, '-')
-	.replace(/[^a-zA-Z0-9]+/g, '-')
+	.replace(/\.\.\./g, '\x01')
+	.replace(/--/g, '\x02')
+	.replace(/[^a-zA-Z0-9\&\/'\x01]+/g, '-')
 	.replace(/^-+/, '')
 	.replace(/-+$/, '')
+	.replace(/[\&\/']/g, '')
+	.replace(/\x01/g, '-')
+	.replace(/\x02/g, '--')
+	.replace(/-+$/, '-')
 	.toLowerCase();
 
 	let rv = `${ p1 }* [${ p2 }](#${ hashtag })`;
