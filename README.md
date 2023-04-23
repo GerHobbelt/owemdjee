@@ -2,8 +2,20 @@
 
 Data Science & Image Processing amalgam library in C/C++.
 
-This place is a gathering spot & integration workplace for the C & C++ libraries we choose to use.  Think "Façade Pattern' and you're getting warm. :wink:
+This place is a gathering spot & integration workplace for the C & C++ libraries we choose to use.  Think "*Façade Pattern*" and you're getting warm. 😉
 The heavy data lifting will be done in the referenced libraries, while this lib will provide some glue and common ground for them to work in/with.
+
+
+-   [TOC](#owemdjee)
+    -   [Reason for this repo](#Reason%20for%20this%20repo)
+        -   [And?](#And?)
+        -   [Critique?](#Critique?)
+        -   [Why is this repo a *solution*? And does it scale?](#Why%20is%20this%20repo%20a%20*solution*?%20And%20does%20it%20scale?)
+-   [Intent](#Intent)
+    -   [Inter-process communications (IPC)](#Inter-process%20communications%20(IPC))
+    -   [Programming Languages used: *intent and purposes*](#Programming%20Languages%20used:%20*intent%20and%20purposes*)
+    -   [Scripting the System: Languages Considered for Scripting by Users](#Scripting%20the%20System:%20Languages%20Considered%20for%20Scripting%20by%20Users)
+-   [Libraries we're looking at for this *intent*:](#Libraries%20we're%20looking%20at%20for%20this%20*intent*:)
 
 
 
@@ -65,6 +77,17 @@ For that purpose, this repo is a *solution*, though -- granted -- a *sub-optimal
 
 
 # Intent
+
+
+
+<!--```toc
+```-->
+
+-   [TOC](#Intent)
+    -   [Inter-process communications (IPC)](#Inter-process%20communications%20(IPC))
+    -   [Programming Languages used: *intent and purposes*](#Programming%20Languages%20used:%20*intent%20and%20purposes*)
+    -   [Scripting the System: Languages Considered for Scripting by Users](#Scripting%20the%20System:%20Languages%20Considered%20for%20Scripting%20by%20Users)
+
 
 
 
@@ -137,6 +160,91 @@ The other JavaScript engines considered are of varying size, performance and com
 
 
 # Libraries we're looking at for this *intent*:
+
+
+
+<!--```toc
+```-->
+
+-   [TOC](#Libraries%20we're%20looking%20at%20for%20this%20*intent*:)
+    -   [IPC: flatbuffer et al for protocol design](#IPC:%20flatbuffer%20et%20al%20for%20protocol%20design)
+    -   [IPC: websockets, etc.: all communication means](#IPC:%20websockets,%20etc.:%20all%20communication%20means)
+        -   [ZeroMQ a.k.a. ØMQ](#ZeroMQ%20a.k.a.%20%C3%98MQ)
+        -   [memory mapping](#memory%20mapping)
+    -   [IPC: JSON for protocol design](#IPC:%20JSON%20for%20protocol%20design)
+    -   [~~IPC: YAML, TOML, etc. for protocol design~~](#~~IPC:%20YAML,%20TOML,%20etc.%20for%20protocol%20design~~)
+    -   [Content Hashing (cryptographic strength i.e. *"guaranteed"* collision-free)](#Content%20Hashing%20(cryptographic%20strength%20i.e.%20*%22guaranteed%22*%20collision-free))
+    -   [Hash-like Filters & Fast Hashing for Hash Tables et al (64 bits and less, mostly)](#Hash-like%20Filters%20&%20Fast%20Hashing%20for%20Hash%20Tables%20et%20al%20(64%20bits%20and%20less,%20mostly))
+    -   [Intermediate Data Storage / Caching / Hierarchical Data Stores (binary hOCR; document text revisions; ...)](#Intermediate%20Data%20Storage%20/%20Caching%20/%20Hierarchical%20Data%20Stores%20(binary%20hOCR;%20document%20text%20revisions;%20...))
+        -   [RAM-/disk-based large queues and stores: B+tree, LSM-tree, ...](#RAM-/disk-based%20large%20queues%20and%20stores:%20B+tree,%20LSM-tree,%20...)
+        -   [~~HDF5 file format~~](#~~HDF5%20file%20format~~)
+    -   [Data Storage / Caching / IPC: loss-less data compression](#Data%20Storage%20/%20Caching%20/%20IPC:%20loss-less%20data%20compression)
+    -   [File / Directory Tree Synchronization (local and remote)](#File%20/%20Directory%20Tree%20Synchronization%20(local%20and%20remote))
+    -   [OCR: hOCR output format, other output formats? (dedicated binary?)](#OCR:%20hOCR%20output%20format,%20other%20output%20formats?%20(dedicated%20binary?))
+    -   [Pattern Recognition](#Pattern%20Recognition)
+        -   [BLAS, LAPACK, ...](#BLAS,%20LAPACK,%20...)
+        -   [_delta features_ & other feature extraction (see Qiqqa research notes)](#_delta%20features_%20&%20other%20feature%20extraction%20(see%20Qiqqa%20research%20notes))
+        -   [fuzzy matching](#fuzzy%20matching)
+        -   [GMM/HMM/kM](#GMM/HMM/kM)
+        -   [graph analysis, graph databases](#graph%20analysis,%20graph%20databases)
+        -   [NN, ...](#NN,%20...)
+        -   [similarity search](#similarity%20search)
+        -   [text tokenization](#text%20tokenization)
+        -   [regex matchers (manual edit - pattern recognition)](#regex%20matchers%20(manual%20edit%20-%20pattern%20recognition))
+        -   [OCR: quality improvements, language detect, ...](#OCR:%20quality%20improvements,%20language%20detect,%20...)
+        -   [OCR page image preprocessing, \[scanner\] tooling: getting the pages to the OCR engine](#OCR%20page%20image%20preprocessing,%20\[scanner]%20tooling:%20getting%20the%20pages%20to%20the%20OCR%20engine)
+        -   [image export, image / \[scanned\] document import](#image%20export,%20image%20/%20\[scanned]%20document%20import)
+        -   [Monte Carlo simulations, LDA, keyword inference/extraction, etc.](#Monte%20Carlo%20simulations,%20LDA,%20keyword%20inference/extraction,%20etc.)
+            -   [text tokenization (as a preprocessing step for LDA et al):](#text%20tokenization%20(as%20a%20preprocessing%20step%20for%20LDA%20et%20al):)
+    -   [database "backend storage"](#database%20%22backend%20storage%22)
+        -   [LMDB, NoSQL and key/value stores](#LMDB,%20NoSQL%20and%20key/value%20stores)
+    -   [metadata & text (OCR et al) -- language detect, suggesting fixes, ...](#metadata%20&%20text%20(OCR%20et%20al)%20--%20language%20detect,%20suggesting%20fixes,%20...)
+    -   [PDF (XML) metadata editing](#PDF%20(XML)%20metadata%20editing)
+    -   [web scraping (document extraction, cleaning, metadata extraction, BibTeX, ...)](#web%20scraping%20(document%20extraction,%20cleaning,%20metadata%20extraction,%20BibTeX,%20...))
+    -   [file format support](#file%20format%20support)
+    -   [BibTeX and similar library metadata formats' support](#BibTeX%20and%20similar%20library%20metadata%20formats'%20support)
+    -   [export / output file formats, text formatting, etc.](#export%20/%20output%20file%20formats,%20text%20formatting,%20etc.)
+    -   [FTS (*Full Text Search*) and related: SOLR/Lucene et al: document content search](#FTS%20(*Full%20Text%20Search*)%20and%20related:%20SOLR/Lucene%20et%20al:%20document%20content%20search)
+        -   [stemmers](#stemmers)
+        -   [language detection / inference](#language%20detection%20/%20inference)
+    -   [scripting *user-tunable tasks* such as OCR preprocessing, metadata extraction, metadata cleaning & other \[post-\]processing, ...](#scripting%20*user-tunable%20tasks*%20such%20as%20OCR%20preprocessing,%20metadata%20extraction,%20metadata%20cleaning%20&%20other%20\[post-]processing,%20...)
+    -   [multi-processing core technologies](#multi-processing%20core%20technologies)
+        -   [CLI: commandline parsing & perusing](#CLI:%20commandline%20parsing%20&%20perusing)
+        -   [CPU features & capabilities detection](#CPU%20features%20&%20capabilities%20detection)
+        -   [misc. core functionality](#misc.%20core%20functionality)
+        -   [multi-processing: invoking external applications](#multi-processing:%20invoking%20external%20applications)
+        -   [multi-processing: Promise/A+](#multi-processing:%20Promise/A+)
+        -   [multi-processing: running tasks in parallel: multi-processing, multithreading, async, ...](#multi-processing:%20running%20tasks%20in%20parallel:%20multi-processing,%20multithreading,%20async,%20...)
+        -   [multi-processing: task schedulers](#multi-processing:%20task%20schedulers)
+        -   [multi-processing: thread pools](#multi-processing:%20thread%20pools)
+        -   [run-time library core features: logging, formatting, ...](#run-time%20library%20core%20features:%20logging,%20formatting,%20...)
+    -   [web servers, generic sockets I/O (IPC)](#web%20servers,%20generic%20sockets%20I/O%20(IPC))
+    -   [socket I/O: websockets](#socket%20I/O:%20websockets)
+    -   [disk I/O, monitoring import locations, ...](#disk%20I/O,%20monitoring%20import%20locations,%20...)
+    -   [configuration / parameterization](#configuration%20/%20parameterization)
+        -   [TOML](#TOML)
+        -   [YAML](#YAML)
+        -   [INI](#INI)
+    -   [testing & fuzzing](#testing%20&%20fuzzing)
+    -   [logging & debugging](#logging%20&%20debugging)
+        -   [ETW (Event Tracing for Microsoft Windows)](#ETW%20(Event%20Tracing%20for%20Microsoft%20Windows))
+    -   [telemetry](#telemetry)
+    -   [OCR core (*tesseract*)](#OCR%20core%20(*tesseract*))
+    -   [PDF render & metadata core (*mupdf*)](#PDF%20render%20&%20metadata%20core%20(*mupdf*))
+    -   [UI / GUI](#UI%20/%20GUI)
+    -   [checking out the competition / compatriots for Qiqqa + re-use useful components](#checking%20out%20the%20competition%20/%20compatriots%20for%20Qiqqa%20+%20re-use%20useful%20components)
+    -   [citations output (CSL)](#citations%20output%20(CSL))
+    -   [Microsoft Word, Google Docs, LibreOffice: application integration](#Microsoft%20Word,%20Google%20Docs,%20LibreOffice:%20application%20integration)
+    -   [XML & XSLT tooling](#XML%20&%20XSLT%20tooling)
+    -   [Microsoft DOCX ~ OpenXML & other XML & XSLT tooling](#Microsoft%20DOCX%20~%20OpenXML%20&%20other%20XML%20&%20XSLT%20tooling)
+    -   [misc / other](#misc%20/%20other)
+    -   [sub-dependencies (libraries which are required by any of the above)](#sub-dependencies%20(libraries%20which%20are%20required%20by%20any%20of%20the%20above))
+-   [Libraries in this collection (All of the above, listed in alphabetical order)](#Libraries%20in%20this%20collection%20(All%20of%20the%20above,%20listed%20in%20alphabetical%20order))
+-   [TBD: Libraries which still need to be moved into the overview / categories above...](#TBD:%20Libraries%20which%20still%20need%20to%20be%20moved%20into%20the%20overview%20/%20categories%20above...)
+
+
+
+
 
 
 
@@ -1257,12 +1365,12 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **libassert** [📁](./libassert) [🌐](https://github.com/GerHobbelt/libassert) -- the most over-engineered and overpowered C++ assertion library. **Library philosophy**: Provide as much helpful diagnostic info as possible.
 - **microsoft-performance-toolkit-sdk** [📁](./microsoft-performance-toolkit-sdk) [🌐](https://github.com/GerHobbelt/microsoft-performance-toolkit-sdk) -- The Microsoft Performance Toolkit is a collection of cross-platform tools developers can use to create and extend performance analysis applications. It serves as the runtime of the Windows Performance Analyzer, a Windows program included in the Windows Performance Toolkit. By using the Microsoft Performance Toolkit SDK, Windows Performance Analyzer - or any performance analysis application - can be configured to process and display performance data from arbitrary sources.
 - **MuPDF itself**  [📁](../../) [🌐](https://github.com/GerHobbelt/mupdf) -- this MuPDF fork is geared towards use with [Qiqqa (document and citation manager)](https://github.com/jimmejardine/qiqqa-open-source/). It is based on [the original MuPDF work done by Artifex](https://artifex.com/products/mupdf/), _closely tracks the developments overthere_ and augments the codebase with other C/C++ based tools, which are useful in and around the Qiqqa document processes, such as
-
-  -  text extraction
-  -  metadata extraction (including annotations)
-  -  OCR (_text recognition_ as an required extension of _text extraction_ when you have image-based PDFs, which happens quite often in the wild)
-  -  Qiqqa database support (SQLite I/O; we do include the generic SQLite tools as well to "open up" the Qiqqa _core components_ for advanced usage and users who wish to perform custom actions on the collected and managed data)
   
+  * text extraction
+  * metadata extraction (including annotations)
+  * OCR (_text recognition_ as an required extension of _text extraction_ when you have image-based PDFs, which happens quite often in the wild)
+  * Qiqqa database support (SQLite I/O; we do include the generic SQLite tools as well to "open up" the Qiqqa _core components_ for advanced usage and users who wish to perform custom actions on the collected and managed data)
+
 - **oppat** [📁](./oppat) [🌐](https://github.com/GerHobbelt/oppat) -- Open Power/Performance Analysis Tool (OPPAT) is a cross-OS, cross-architecture Power and Performance Analysis Tool. cross-OS: supports Windows ETW trace files and Linux/Android perf/trace-cmd trace files. cross-architecture: supports Intel and ARM chips hardware events (using perf and/or PCM).
 - **palanteer** [📁](./palanteer) [🌐](https://github.com/GerHobbelt/palanteer) -- Visual Python and C++ nanosecond profiler, logger, tests enabler: a set of lean and efficient tools to improve the quality of software, for C++ and Python programs.
 - **plf_nanotimer** [📁](./plf_nanotimer) [🌐](https://github.com/GerHobbelt/plf_nanotimer) -- high precision cross-platform performance timer
@@ -1395,9 +1503,9 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **zotero-google-docs-integration** [📁](./zotero-google-docs-integration) [🌐](https://github.com/GerHobbelt/zotero-google-docs-integration) -- a Zotero integration plugin that communicates between Google Docs and Zotero via the Connector.
 - **zotero-libreoffice-integration** [📁](./zotero-libreoffice-integration) [🌐](https://github.com/GerHobbelt/zotero-libreoffice-integration) -- comprises extensions for LibreOffice/OpenOffice.org/NeoOffice and Zotero communicating using local web servers.
 - **zotero-scholar-citations** [📁](./zotero-scholar-citations) [🌐](https://github.com/GerHobbelt/zotero-scholar-citations) -- an add-on for Zotero. The add-on automatically fetches numbers of citations of your Zotero items from Google Scholar and makes it possible to sort your items by the citations. Moreover, it allows batch updating the citations, as they may change over time. 
+  
+  **When updating multiple citations in a batch, it may happen that citation queries are blocked by Google Scholar for multiple automated requests. If a blockage happens, the add-on opens a browser window and directs it to http://scholar.google.com/, where you should see a Captcha displayed by Google Scholar, which you need to enter to get unblocked and then re-try updating the citations. It may happen that Google Scholar displays a message like the following "*We're sorry... but your computer or network may be sending automated queries. To protect our users, we can't process your request right now.*" In that case, the only solution is to wait for a while until Google unblocks you.**
 
-   **When updating multiple citations in a batch, it may happen that citation queries are blocked by Google Scholar for multiple automated requests. If a blockage happens, the add-on opens a browser window and directs it to http://scholar.google.com/, where you should see a Captcha displayed by Google Scholar, which you need to enter to get unblocked and then re-try updating the citations. It may happen that Google Scholar displays a message like the following "*We're sorry... but your computer or network may be sending automated queries. To protect our users, we can't process your request right now.*" In that case, the only solution is to wait for a while until Google unblocks you.**
-   
 - **zotero-shortdoi** [📁](./zotero-shortdoi) [🌐](https://github.com/GerHobbelt/zotero-shortdoi) -- an add-on for Zotero. The add-on can auto-fetch DOI names for journal articles using the CrossRef API, as well as look up shortDOI names using http://shortdoi.org. The add-on additionally verifies that stored DOIs are valid and marks invalid DOIs.
 - **zotero-standalone-build** [📁](./zotero-standalone-build) [🌐](https://github.com/GerHobbelt/zotero-standalone-build) -- build scripts used to bundle the Zotero core into distributable bundles for Mac, Windows, and Linux.
 - **zotero-translate** [📁](./zotero-translate) [🌐](https://github.com/GerHobbelt/translate) -- browser-based standalone zotero translator.
@@ -1798,7 +1906,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **hedley** [📁](./hedley) [🌐](https://github.com/GerHobbelt/hedley) -- a C/C++ header file designed to smooth over some platform-specific annoyances.
 - **highway** [📁](./highway) [🌐](https://github.com/GerHobbelt/highway) -- dependency of JpegXL
 - **highwayhash** [📁](./highwayhash) [🌐](https://github.com/GerHobbelt/highwayhash) -- Fast strong hash functions: SipHash/HighwayHash
-- **hikyuu** [📁](./hikyuu) [🌐](https://github.com/GerHobbelt/hikyuu)
+- **hikyuu** [📁](./hikyuu) [🌐](https://github.com/GerHobbelt/hikyuu) -- Hikyuu Quant Framework is an open source quantitative trading research framework based on C++/Python, which is used for strategy analysis and backtesting. Its core idea is based on the current mature systematic trading method, which abstracts the entire systematic trading into judging strategies based on market environment, system effective conditions, signal indicators, stop loss/take profit strategies, fund management strategies, profit target strategies, slippage There are seven components of the price difference algorithm. You can build the strategy asset library of these components separately, and freely combine them in actual research to observe the effectiveness, stability of the system and the effect of a single type of strategy.
 - **hmm-scalable** [📁](./hmm-scalable) [🌐](https://github.com/GerHobbelt/hmm-scalable) -- a Tool for fitting Hidden Markov Models models at scale. In particular, it is targeting a specific kind of HMM used in education called Bayesian Knowledge Tracing (BKT) model.
 - **hmm-stoch** [📁](./hmm-stoch) [🌐](https://github.com/GerHobbelt/StochHMM) -- StochHMM - A Flexible hidden Markov model application and C++ library that implements HMM from simple text files.   It implements traditional HMM algorithms in addition to providing additional flexibility.  The additional flexibility is achieved by allowing researchers to integrate additional data sources and application code into the HMM framework.
 - **hnswlib** [📁](./hnswlib) [🌐](https://github.com/GerHobbelt/hnswlib) -- fast approximate nearest neighbor search. Header-only C++ HNSW implementation with python bindings.
@@ -1821,7 +1929,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **iceberghashtable** [📁](./iceberghashtable) [🌐](https://github.com/GerHobbelt/iceberghashtable) -- [IcebergDB: High Performance Hash Tables Through Stability and Low Associativity](https://arxiv.org/abs/2210.04068) is a fast, concurrent, and resizeable hash table implementation. It supports insertions, deletions and queries for 64-bit keys and values.
 - **iceoryx** [📁](./iceoryx) [🌐](https://github.com/GerHobbelt/iceoryx) -- true zero-copy inter-process-communication. iceoryx is an inter-process-communication (IPC) middleware for various operating systems (currently we support Linux, macOS, QNX, FreeBSD and Windows 10). It has its origins in the automotive industry, where large amounts of data have to be transferred between different processes when it comes to driver assistance or automated driving systems. However, the efficient communication mechanisms can also be applied to a wider range of use cases, e.g. in the field of robotics or game development.
 - **id3-tagparser** [📁](./id3-tagparser) [🌐](https://github.com/GerHobbelt/tagparser) -- a C++ library for reading and writing MP4 (iTunes), ID3, Vorbis, Opus, FLAC and Matroska tags.
-- **IdGenerator** [📁](./IdGenerator) [🌐](https://github.com/GerHobbelt/IdGenerator)
+- **IdGenerator** [📁](./IdGenerator) [🌐](https://github.com/GerHobbelt/IdGenerator) -- a digital ID generator using the snowflake algorithm, developed in response to the performance problems that often occur. Example use is when you, as an architecture designer, want to solve the problem of unique database primary keys, especially in multi-database distributed systems. You want the primary key of the data table to use the least storage space, while the index speed and the Select, Insert, and Update queries are fast. Meanwhile there may be more than 50 application instances, and each concurrent request can reach 10W/s. You do not want to rely on the auto-increment operation of redis to obtain continuous primary key IDs, because continuous IDs pose business data security risks.
 - **ImageMagick** [📁](./ImageMagick) [🌐](https://github.com/GerHobbelt/ImageMagick) -- [ImageMagick®](https://imagemagick.org/) can create, edit, compose, or convert digital images. It can read and write images in a variety of formats (over 200) including PNG, JPEG, GIF, WebP, HEIC, SVG, PDF, DPX, EXR, and TIFF. ImageMagick can resize, flip, mirror, rotate, distort, shear and transform images, adjust image colors, apply various special effects, or draw text, lines, polygons, ellipses, and Bézier curves.
 - **indicators** [📁](./indicators) [🌐](https://github.com/GerHobbelt/indicators) -- thread-safe progress bars and spinners for console applications.
 - **infoware** [📁](./infoware) [🌐](https://github.com/GerHobbelt/infoware) -- C++ Library for pulling system and hardware information, without hitting the command line.
@@ -1928,7 +2036,12 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **libdtm** [📁](./libdtm) [🌐](https://github.com/GerHobbelt/dtm) -- LibDTM (Dynamic Topic Models and the Document Influence Model) implements topics that change over time (Dynamic Topic Models) and a model of how individual documents predict that change. This code is the result of work by David M. Blei and Sean M. Gerrish.
 - **libeigen** [📁](./libeigen) [🌐](https://github.com/GerHobbelt/eigen-git-mirror) -- a C++ template library for linear algebra: matrices, vectors, numerical solvers, and related algorithms.
 - **libeternaltimestamp** [📁](./libeternaltimestamp) [🌐](https://github.com/GerHobbelt/libeternaltimestamp) -- provide/encode/decode 64-bit integer timestamps which can encode *any* date/time in the lifetime of our planet from before the Big Bang up to about 3000 AD in the future.
-- **libevent** [📁](./libevent) [🌐](https://github.com/GerHobbelt/libevent)
+- **libevent** [📁](./libevent) [🌐](https://github.com/GerHobbelt/libevent) -- _libevent_ is meant to replace the event loop found in event driven network servers.
+  
+  Currently, _libevent_ supports _[/dev/poll](http://download.oracle.com/docs/cd/E19253-01/816-5177/6mbbc4g9n/index.html)_, _[kqueue(2)](http://www.freebsd.org/cgi/man.cgi?query=kqueue&apropos=0&sektion=0&format=html)_, _[event ports](http://developers.sun.com/solaris/articles/event_completion.html)_, [POSIX _select(2)_](http://manpages.debian.net/cgi-bin/man.cgi?query=select), [Windows _select()_](http://msdn.microsoft.com/en-us/library/ms740141(v=vs.85).aspx), [_poll(2)_](http://manpages.debian.net/cgi-bin/man.cgi?query=poll), and _[epoll(4)](http://www.xmailserver.org/linux-patches/epoll.txt)_. The internal event mechanism is completely independent of the exposed event API, and a simple update of libevent can provide new functionality without having to redesign the applications. As a result, _Libevent_ allows for portable application development and provides the most scalable event notification mechanism available on an operating system. Libevent can also be used for multi-threaded applications, either by isolating each `event_base` so that only a single thread accesses it, or by locked access to a single shared `event_base`. _Libevent_ should compile on Linux, *BSD, Mac OS X, Solaris, Windows, and more.
+  
+  Libevent additionally provides a sophisticated framework for buffered network IO, with support for sockets, filters, rate-limiting, SSL, zero-copy file transmission, and IOCP. Libevent includes support for several useful protocols, including DNS, HTTP, and a minimal RPC framework.
+
 - **libevt** [📁](./libevt) [🌐](https://github.com/GerHobbelt/libevt) -- a library to access the Windows Event Log (EVT) format.
 - **libexpat** [📁](./libexpat) [🌐](https://github.com/GerHobbelt/libexpat) -- XML read/write
 - **libfann** [📁](./libfann) [🌐](https://github.com/GerHobbelt/fann) -- FANN: Fast Artificial Neural Network Library, a free open source neural network library, which implements multilayer artificial neural networks in C with support for both fully connected and sparsely connected networks. Cross-platform execution in both fixed and floating point are supported. It includes a framework for easy handling of training data sets. It is easy to use, versatile, well documented, and fast.
@@ -2197,7 +2310,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **pcre** [📁](./pcre) [🌐](https://github.com/GerHobbelt/pcre) -- PCRE2 : Perl-Compatible Regular Expressions. The PCRE2 library is a set of C functions that implement regular expression pattern matching using the same syntax and semantics as Perl 5. PCRE2 has its own native API, as well as a set of wrapper functions that correspond to the POSIX regular expression API. It comes in three forms, for processing 8-bit, 16-bit, or 32-bit code units, in either literal or UTF encoding.
 - **pdf2htmlEX** [📁](./pdf2htmlEX) [🌐](https://github.com/GerHobbelt/pdf2htmlEX) -- convert PDF to HTML without losing text or format.
 - **pdfgrep** [📁](./pdfgrep) [🌐](https://github.com/GerHobbelt/pdfgrep) -- a tool to search text in PDF files. It works similarly to *grep*.
-- **pdfium** [📁](./pdfium) [🌐](https://github.com/GerHobbelt/pdfium)
+- **pdfium** [📁](./pdfium) [🌐](https://github.com/GerHobbelt/pdfium) -- the PDF library used by the Chromium project.
 - **pelikan** [📁](./pelikan) [🌐](https://github.com/GerHobbelt/pelikan) -- Pelikan is Twitter's unified cache backend.
 - **percona-server** [📁](./percona-server) [🌐](https://github.com/GerHobbelt/percona-server) -- Percona Server for MySQL is a free, fully compatible, enhanced, and open source drop-in replacement for any MySQL database. It provides superior performance, scalability, and instrumentation.
 - **pevents** [📁](./pevents) [🌐](https://github.com/GerHobbelt/pevents) -- Win32 events for *nix/POSIX platforms, built on top of `pthreads`. `pevents` provides most of the functionality of both manual- and auto-reset events on Windows, most-notably including simultaneous waits on multiple events (à la `WaitForMultipleObjects`). `pevents` also doubles as a thin, sane wrapper for `CreateEvent()` & co. on Windows, meaning you can use `pevents` directly in your cross-platform code without `#ifdef`s for Windows/pthreads. While POSIX condition variables (pthread_cond_t) and WIN32 events both provide the essential building blocks of the synchronization primitives required to write multithreaded code with signaling, the nature of the differences between the two have lent their way towards creating different synchronization and multithreaded-programming paradigms. The only features not included are only named events and support for security attributes. To the author's best knowledge, this is the only implementation of WIN32 events available for Linux and other posix platforms that provides support for simultaneously waiting on multiple events. Depending on your needs, we've been told that pevents may be used as a lightweight alternative to libuv/libev while still allowing your code to embrace asynchronous event handling with ease.
@@ -2209,7 +2322,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **PhotonLibOS** [📁](./PhotonLibOS) [🌐](https://github.com/GerHobbelt/PhotonLibOS) -- a high-efficiency LibOS framework, based on a set of carefully selected C++ libs. The role of LibOS is to connect user apps and the kernel. Photon's API is as consistent as possible with C++ std and glibc semantics. This flattens the learning curve for lib users and brings convenience when migrating legacy codebases. Photon's runtime is driven by a coroutine lib. Out tests show that it has the best I/O performance in the open source world by the year of 2022, even among different programing languages.
 - **picoc** [📁](./picoc) [🌐](https://github.com/GerHobbelt/picoc) -- PicoC is a very small C interpreter for scripting. It was originally written as a script language for a UAV's on-board flight system. It's also very suitable for other robotic, embedded and non-embedded applications. The core C source code is around 3500 lines of code. It's not intended to be a complete implementation of ISO C but it has all the essentials.
 - **picohttpparser** [📁](./picohttpparser) [🌐](https://github.com/GerHobbelt/picohttpparser) -- PicoHTTPParser is a tiny, primitive, fast HTTP request/response parser. Unlike most parsers, it is stateless and does not allocate memory by itself. All it does is accept pointer to buffer and the output structure, and setups the pointers in the latter to point at the necessary portions of the buffer.
-- **pinyin** [📁](./pinyin) [🌐](https://github.com/GerHobbelt/pinyin)
+- **pinyin** [📁](./pinyin) [🌐](https://github.com/GerHobbelt/pinyin) -- pīnyīn is a tool for converting Chinese characters to *pinyin*. It can be used for Chinese phonetic notation, sorting, and retrieval.
 - **pipes** [📁](./pipes) [🌐](https://github.com/GerHobbelt/pipes) -- Pipes are small components for writing expressive code when working on collections. Pipes chain together into a pipeline that receives data from a source, operates on that data, and send the results to a destination. This is a header-only library, implemented in C++14.
 - **pisa** [📁](./pisa) [🌐](https://github.com/GerHobbelt/pisa) -- a text search engine able to run on large-scale collections of documents. It allows researchers to experiment with state-of-the-art techniques, allowing an ideal environment for rapid development. PISA is a text search engine, though the "PISA Project" is a set of tools that help experiment with indexing and query processing. Given a text collection, PISA can build an inverted index over this corpus, allowing the corpus to be searched. The inverted index, put simply, is an efficient data structure that represents the document corpus by storing a list of documents for each unique term (see here). At query time, PISA stores its index in main memory for rapid retrieval.
 - **pixman** [📁](./pixman) [🌐](https://github.com/GerHobbelt/pixman) -- a library that provides low-level pixel manipulation features such as image compositing and trapezoid rasterization.
@@ -2326,7 +2439,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **svg-charter** [📁](./svg-charter) [🌐](https://github.com/GerHobbelt/charter) -- SVG chart renderer
 - **swig**  [📁](./swig) [🌐](https://github.com/GerHobbelt/swig) -- a software development tool (code generator) that connects programs written in C and C++ with a variety of high-level programming languages.
 - **SymSpell** [📁](./SymSpell) [🌐](https://github.com/GerHobbelt/SymSpell) -- spelling correction & fuzzy search: **1 million times faster** through Symmetric Delete spelling correction algorithm. The Symmetric Delete spelling correction algorithm reduces the complexity of edit candidate generation and dictionary lookup for a given Damerau-Levenshtein distance. It is six orders of magnitude faster ([than the standard approach with deletes + transposes + replaces + inserts](http://norvig.com/spell-correct.html)) and language independent.
-- **tabulate** [📁](./tabulate) [🌐](https://github.com/GerHobbelt/tabulate)
+- **tabulate** [📁](./tabulate) [🌐](https://github.com/GerHobbelt/tabulate) -- Table Maker for Modern C++, for when you want to display table formatted data in the terminal/console text window.
 - **taglib** [📁](./taglib) [🌐](https://github.com/GerHobbelt/taglib) -- TagLib is a library for reading and editing the metadata of several popular audio formats. Currently it supports both ID3v1 and [ID3v2][] for MP3 files, [Ogg Vorbis][] comments and ID3 tags in [FLAC][], MPC, Speex, WavPack, TrueAudio, WAV, AIFF, MP4, APE, and ASF files.
 - **taolog** [📁](./taolog) [🌐](https://github.com/GerHobbelt/taolog) -- a Win32 logger based on DebugView & ETW.
 - **taskflow** [📁](./taskflow) [🌐](https://github.com/GerHobbelt/taskflow) -- quickly write parallel and heterogeneous task programs in modern C++. Taskflow is faster, more expressive, and easier for drop-in integration than many of existing task programming frameworks in handling complex parallel workloads.
@@ -2509,7 +2622,6 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **FreeFileSync** [📁](./FreeFileSync) [🌐](https://github.com/GerHobbelt/FreeFileSync) -- a folder comparison and synchronization application that creates and manages backup copies of all your important files. Instead of copying every file every time, FreeFileSync determines the differences between a source and a target folder and transfers only the minimum amount of data needed. FreeFileSync is available for Windows, macOS, and Linux.
 - **GoldFish-CBOR** [📁](./GoldFish-CBOR) [🌐](https://github.com/GerHobbelt/GoldFish) -- a fast JSON and CBOR streaming library, without using memory. GoldFish can parse and generate very large [JSON](http://json.org) or [CBOR](http://cbor.io) documents. It has some similarities to a [SAX](https://en.wikipedia.org/wiki/Simple_API_for_XML) parser, but doesn't use an event driven API, instead the user of the GoldFish interface is in control. GoldFish intends to be the easiest and one of the fastest JSON and CBOR streaming parser and serializer to use.
 - **IdGenerator** [📁](./IdGenerator) [🌐](https://github.com/GerHobbelt/IdGenerator) -- a digital ID generator using the snowflake algorithm, developed in response to the performance problems that often occur. Example use is when you, as an architecture designer, want to solve the problem of unique database primary keys, especially in multi-database distributed systems. You want the primary key of the data table to use the least storage space, while the index speed and the Select, Insert, and Update queries are fast. Meanwhile there may be more than 50 application instances, and each concurrent request can reach 10W/s. You do not want to rely on the auto-increment operation of redis to obtain continuous primary key IDs, because continuous IDs pose business data security risks.
-
 - **JamSpell** [📁](./JamSpell) [🌐](https://github.com/GerHobbelt/JamSpell) -- a spell checking library, which considers words surroundings (context) for better correction (**accuracy**) and is **fast** (near 5K words per second)
 - **LeptonicaDocsSite** [📁](./LeptonicaDocsSite) [🌐](https://github.com/GerHobbelt/LeptonicaDocsSite) -- unofficial Reference Documentation for the Leptonica image processing library ([www.leptonica.org](http://www.leptonica.org)).
 - **LightGBM** [📁](./LightGBM) [🌐](https://github.com/GerHobbelt/LightGBM) --   LightGBM (Light Gradient Boosting Machine) is a gradient boosting framework that uses tree based learning algorithms. It is designed to be distributed and efficient with the following advantages:
@@ -2755,10 +2867,11 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **libdtm** [📁](./libdtm) [🌐](https://github.com/GerHobbelt/dtm) -- LibDTM (Dynamic Topic Models and the Document Influence Model) implements topics that change over time (Dynamic Topic Models) and a model of how individual documents predict that change. This code is the result of work by David M. Blei and Sean M. Gerrish.
 - **libeigen** [📁](./libeigen) [🌐](https://github.com/GerHobbelt/eigen-git-mirror) -- a C++ template library for linear algebra: matrices, vectors, numerical solvers, and related algorithms.
 - **libevent** [📁](./libevent) [🌐](https://github.com/GerHobbelt/libevent) -- _libevent_ is meant to replace the event loop found in event driven network servers.
-
-   Currently, _libevent_ supports _[/dev/poll](http://download.oracle.com/docs/cd/E19253-01/816-5177/6mbbc4g9n/index.html)_, _[kqueue(2)](http://www.freebsd.org/cgi/man.cgi?query=kqueue&apropos=0&sektion=0&format=html)_, _[event ports](http://developers.sun.com/solaris/articles/event_completion.html)_, [POSIX _select(2)_](http://manpages.debian.net/cgi-bin/man.cgi?query=select), [Windows _select()_](http://msdn.microsoft.com/en-us/library/ms740141(v=vs.85).aspx), [_poll(2)_](http://manpages.debian.net/cgi-bin/man.cgi?query=poll), and _[epoll(4)](http://www.xmailserver.org/linux-patches/epoll.txt)_. The internal event mechanism is completely independent of the exposed event API, and a simple update of libevent can provide new functionality without having to redesign the applications. As a result, _Libevent_ allows for portable application development and provides the most scalable event notification mechanism available on an operating system. Libevent can also be used for multi-threaded applications, either by isolating each `event_base` so that only a single thread accesses it, or by locked access to a single shared `event_base`. _Libevent_ should compile on Linux, *BSD, Mac OS X, Solaris, Windows, and more.
-
-   Libevent additionally provides a sophisticated framework for buffered network IO, with support for sockets, filters, rate-limiting, SSL, zero-copy file transmission, and IOCP. Libevent includes support for several useful protocols, including DNS, HTTP, and a minimal RPC framework.
+  
+  Currently, _libevent_ supports _[/dev/poll](http://download.oracle.com/docs/cd/E19253-01/816-5177/6mbbc4g9n/index.html)_, _[kqueue(2)](http://www.freebsd.org/cgi/man.cgi?query=kqueue&apropos=0&sektion=0&format=html)_, _[event ports](http://developers.sun.com/solaris/articles/event_completion.html)_, [POSIX _select(2)_](http://manpages.debian.net/cgi-bin/man.cgi?query=select), [Windows _select()_](http://msdn.microsoft.com/en-us/library/ms740141(v=vs.85).aspx), [_poll(2)_](http://manpages.debian.net/cgi-bin/man.cgi?query=poll), and _[epoll(4)](http://www.xmailserver.org/linux-patches/epoll.txt)_. The internal event mechanism is completely independent of the exposed event API, and a simple update of libevent can provide new functionality without having to redesign the applications. As a result, _Libevent_ allows for portable application development and provides the most scalable event notification mechanism available on an operating system. Libevent can also be used for multi-threaded applications, either by isolating each `event_base` so that only a single thread accesses it, or by locked access to a single shared `event_base`. _Libevent_ should compile on Linux, *BSD, Mac OS X, Solaris, Windows, and more.
+  
+  Libevent additionally provides a sophisticated framework for buffered network IO, with support for sockets, filters, rate-limiting, SSL, zero-copy file transmission, and IOCP. Libevent includes support for several useful protocols, including DNS, HTTP, and a minimal RPC framework.
+  
 
 - **libevt** [📁](./libevt) [🌐](https://github.com/GerHobbelt/libevt) -- a library to access the Windows Event Log (EVT) format.
 - **libfann** [📁](./libfann) [🌐](https://github.com/GerHobbelt/fann) -- FANN: Fast Artificial Neural Network Library, a free open source neural network library, which implements multilayer artificial neural networks in C with support for both fully connected and sparsely connected networks. Cross-platform execution in both fixed and floating point are supported. It includes a framework for easy handling of training data sets. It is easy to use, versatile, well documented, and fast.
@@ -2805,6 +2918,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
   - LIZv1 : compression levels -20...-29 are designed to give better ratio than [LZ4] keeping 75% decompression speed
   - LIZv1 + Huffman : compression levels -40...-49 give the best ratio (comparable to [zlib] and low levels of [zstd]/[brotli]) at decompression speed of 1000 MB/s
   
+
 - **lzbench** [📁](./lzbench) [🌐](https://github.com/GerHobbelt/lzbench) -- an in-memory benchmark of open-source LZ77/LZSS/LZMA compressors. It joins all compressors into a single exe.
 - **lzham_codec** [📁](./lzham_codec) [🌐](https://github.com/GerHobbelt/lzham_codec) -- LZHAM is a lossless data compression codec, with a compression ratio similar to LZMA but with 1.5x-8x faster decompression speed.
 - **mace** [📁](./mace) [🌐](https://github.com/GerHobbelt/mace) -- **Mobile AI Compute Engine** (or **MACE** for short) is a deep learning inference framework optimized for mobile heterogeneous computing on Android, iOS, Linux and Windows devices. The design focuses on the following
@@ -2835,12 +2949,14 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
   - The pricing problem uses highly optimized dynamic programming in a DAG (in `minimum::algorithms`).
   - The [Ryan-Foster rule](https://strandmark.wordpress.com/2018/01/24/visualizing-the-ryan-foster-rule/) is used to iteratively work towards an integer solution. There is no time to branch and bound for big problems.
   
+
 - **mxnet** [📁](./mxnet) [🌐](https://github.com/GerHobbelt/mxnet) -- Apache MXNet is a deep learning framework designed for both *efficiency* and *flexibility*. It allows you to ***mix*** [symbolic and imperative programming](https://mxnet.apache.org/api/architecture/program_model) to ***maximize*** efficiency and productivity.
 - **mydumper** [📁](./mydumper) [🌐](https://github.com/GerHobbelt/mydumper) --   a MySQL Logical Backup Tool. It has 2 tools:
   
   * `mydumper` which is responsible to export a consistent backup of MySQL databases
   * `myloader` reads the backup from mydumper, connects the to destination database and imports the backup.
   
+
 - **mysql-connector-cpp** [📁](./mysql-connector-cpp) [🌐](https://github.com/GerHobbelt/mysql-connector-cpp) -- MySQL Connector/C++ is a release of MySQL Connector/C++, [the C++ interface](https://dev.mysql.com/doc/dev/connector-cpp/8.0/) for communicating with MySQL servers.
 - **nanodbc** [📁](./nanodbc) [🌐](https://github.com/GerHobbelt/nanodbc) -- a small C++ wrapper for the native C ODBC API.
 - **nanomsg-nng** [📁](./nanomsg-nng) [🌐](https://github.com/GerHobbelt/nng) -- a rewrite of the Scalability Protocols library known as https://github.com/nanomsg/nanomsg[libnanomsg], which adds significant new capabilities, while retaining compatibility with the original. NNG is a lightweight, broker-less library, offering a simple API to solve common recurring messaging problems, such as publish/subscribe, RPC-style request/reply, or service discovery.
@@ -2866,7 +2982,6 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **phash-gpl** [📁](./phash-gpl) [🌐](https://github.com/GerHobbelt/phash-gpl) -- pHash&trade; Perceptual Hashing Library is a collection of perceptual hashing algorithms for image, audo, video and text media.
 - **picoc** [📁](./picoc) [🌐](https://github.com/GerHobbelt/picoc) -- PicoC is a very small C interpreter for scripting. It was originally written as a script language for a UAV's on-board flight system. It's also very suitable for other robotic, embedded and non-embedded applications. The core C source code is around 3500 lines of code. It's not intended to be a complete implementation of ISO C but it has all the essentials.
 - **pinyin** [📁](./pinyin) [🌐](https://github.com/GerHobbelt/pinyin) -- pīnyīn is a tool for converting Chinese characters to *pinyin*. It can be used for Chinese phonetic notation, sorting, and retrieval.
-
 - **pipes** [📁](./pipes) [🌐](https://github.com/GerHobbelt/pipes) -- Pipes are small components for writing expressive code when working on collections. Pipes chain together into a pipeline that receives data from a source, operates on that data, and send the results to a destination. This is a header-only library, implemented in C++14.
 - **pixman** [📁](./pixman) [🌐](https://github.com/GerHobbelt/pixman) -- a library that provides low-level pixel manipulation features such as image compositing and trapezoid rasterization.
 - **pmdk** [📁](./pmdk) [🌐](https://github.com/GerHobbelt/pmdk) -- the **Persistent Memory Development Kit (PMDK)** is a collection of libraries and tools for System Administrators and Application Developers to simplify managing and accessing persistent memory devices.
