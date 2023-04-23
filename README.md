@@ -2,7 +2,7 @@
 
 Data Science &amp; Image Processing amalgam library in C/C++.
 
-This place is a gathering spot & integration workplace for the C & C++ libraries we choose to use.  Think "Façade Pattern' and you're getting warm. :wink:
+This place is a gathering spot & integration workplace for the C & C++ libraries we choose to use.  Think "*Façade Pattern*" and you're getting warm. :wink:
 The heavy data lifting will be done in the referenced libraries, while this lib will provide some glue and common ground for them to work in/with.
 
 
