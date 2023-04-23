@@ -6,16 +6,18 @@ This place is a gathering spot & integration workplace for the C & C++ libraries
 The heavy data lifting will be done in the referenced libraries, while this lib will provide some glue and common ground for them to work in/with.
 
 
--   [TOC](#owemdjee)
-    -   [Reason for this repo](#reason-for-this-repo)
-        -   [And?](#and)
-        -   [Critique?](#critique)
-        -   [Why is this repo a *solution*? And does it scale?](#why-is-this-repo-a-solution-and-does-it-scale)
--   [Intent](#intent)
-    -   [Inter-process communications (IPC)](#inter-process-communications-ipc)
-    -   [Programming Languages used: *intent and purposes*](#programming-languages-used-intent-and-purposes)
-    -   [Scripting the System: Languages Considered for Scripting by Users](#scripting-the-system-Languages-Considered-for-Scripting-by-Users)
--   [Libraries we're looking at for this *intent*:](#Libraries%20we're%20looking%20at%20for%20this%20*intent*:)
+*   [TOC](#owemdjee)
+    *   [Reason for this repo](#reason-for-this-repo)
+        *   [And?](#and)
+        *   [Critique?](#critique)
+        *   [Why is this repo a *solution*? And does it scale?](#why-is-this-repo-a-solution-and-does-it-scale)
+
+* [Intent](#intent)
+  *   [Inter-process communications (IPC)](#inter-process-communications-ipc)
+  *   [Programming Languages used: *intent and purposes*](#programming-languages-used-intent-and-purposes)
+  *   [Scripting the System: Languages Considered for Scripting by Users](#scripting-the-system-Languages-Considered-for-Scripting-by-Users)
+
+*   [Libraries we're looking at for this *intent*:](#Libraries%20we're%20looking%20at%20for%20this%20*intent*:)
 
 
 
@@ -78,18 +80,13 @@ For that purpose, this repo is a *solution*, though -- granted -- a *sub-optimal
 
 # Intent
 
-
-
 <!--```toc
 ```-->
 
--   [TOC](#Intent)
-    -   [Inter-process communications (IPC)](#Inter-process%20communications%20(IPC))
-    -   [Programming Languages used: *intent and purposes*](#Programming%20Languages%20used:%20*intent%20and%20purposes*)
-    -   [Scripting the System: Languages Considered for Scripting by Users](#Scripting%20the%20System:%20Languages%20Considered%20for%20Scripting%20by%20Users)
-
-
-
+*   [TOC](#Intent)
+    *   [Inter-process communications (IPC)](#Inter-process%20communications%20(IPC))
+    *   [Programming Languages used: *intent and purposes*](#Programming%20Languages%20used:%20*intent%20and%20purposes*)
+    *   [Scripting the System: Languages Considered for Scripting by Users](#Scripting%20the%20System:%20Languages%20Considered%20for%20Scripting%20by%20Users)
 
 
 
@@ -161,92 +158,86 @@ The other JavaScript engines considered are of varying size, performance and com
 
 # Libraries we're looking at for this *intent*:
 
-
-
 <!--```toc
 ```-->
 
--   [TOC](#Libraries%20we're%20looking%20at%20for%20this%20*intent*:)
-    -   [IPC: flatbuffer et al for protocol design](#IPC:%20flatbuffer%20et%20al%20for%20protocol%20design)
-    -   [IPC: websockets, etc.: all communication means](#IPC:%20websockets,%20etc.:%20all%20communication%20means)
-        -   [ZeroMQ a.k.a. ØMQ](#ZeroMQ%20a.k.a.%20%C3%98MQ)
-        -   [memory mapping](#memory%20mapping)
-    -   [IPC: JSON for protocol design](#IPC:%20JSON%20for%20protocol%20design)
-    -   [~~IPC: YAML, TOML, etc. for protocol design~~](#~~IPC:%20YAML,%20TOML,%20etc.%20for%20protocol%20design~~)
-    -   [Content Hashing (cryptographic strength i.e. *"guaranteed"* collision-free)](#Content%20Hashing%20(cryptographic%20strength%20i.e.%20*%22guaranteed%22*%20collision-free))
-    -   [Hash-like Filters & Fast Hashing for Hash Tables et al (64 bits and less, mostly)](#Hash-like%20Filters%20&%20Fast%20Hashing%20for%20Hash%20Tables%20et%20al%20(64%20bits%20and%20less,%20mostly))
-    -   [Intermediate Data Storage / Caching / Hierarchical Data Stores (binary hOCR; document text revisions; ...)](#Intermediate%20Data%20Storage%20/%20Caching%20/%20Hierarchical%20Data%20Stores%20(binary%20hOCR;%20document%20text%20revisions;%20...))
-        -   [RAM-/disk-based large queues and stores: B+tree, LSM-tree, ...](#RAM-/disk-based%20large%20queues%20and%20stores:%20B+tree,%20LSM-tree,%20...)
-        -   [~~HDF5 file format~~](#~~HDF5%20file%20format~~)
-    -   [Data Storage / Caching / IPC: loss-less data compression](#Data%20Storage%20/%20Caching%20/%20IPC:%20loss-less%20data%20compression)
-    -   [File / Directory Tree Synchronization (local and remote)](#File%20/%20Directory%20Tree%20Synchronization%20(local%20and%20remote))
-    -   [OCR: hOCR output format, other output formats? (dedicated binary?)](#OCR:%20hOCR%20output%20format,%20other%20output%20formats?%20(dedicated%20binary?))
-    -   [Pattern Recognition](#Pattern%20Recognition)
-        -   [BLAS, LAPACK, ...](#BLAS,%20LAPACK,%20...)
-        -   [_delta features_ & other feature extraction (see Qiqqa research notes)](#_delta%20features_%20&%20other%20feature%20extraction%20(see%20Qiqqa%20research%20notes))
-        -   [fuzzy matching](#fuzzy%20matching)
-        -   [GMM/HMM/kM](#GMM/HMM/kM)
-        -   [graph analysis, graph databases](#graph%20analysis,%20graph%20databases)
-        -   [NN, ...](#NN,%20...)
-        -   [similarity search](#similarity%20search)
-        -   [text tokenization](#text%20tokenization)
-        -   [regex matchers (manual edit - pattern recognition)](#regex%20matchers%20(manual%20edit%20-%20pattern%20recognition))
-        -   [OCR: quality improvements, language detect, ...](#OCR:%20quality%20improvements,%20language%20detect,%20...)
-        -   [OCR page image preprocessing, \[scanner\] tooling: getting the pages to the OCR engine](#OCR%20page%20image%20preprocessing,%20\[scanner]%20tooling:%20getting%20the%20pages%20to%20the%20OCR%20engine)
-        -   [image export, image / \[scanned\] document import](#image%20export,%20image%20/%20\[scanned]%20document%20import)
-        -   [Monte Carlo simulations, LDA, keyword inference/extraction, etc.](#Monte%20Carlo%20simulations,%20LDA,%20keyword%20inference/extraction,%20etc.)
-            -   [text tokenization (as a preprocessing step for LDA et al):](#text%20tokenization%20(as%20a%20preprocessing%20step%20for%20LDA%20et%20al):)
-    -   [database "backend storage"](#database%20%22backend%20storage%22)
-        -   [LMDB, NoSQL and key/value stores](#LMDB,%20NoSQL%20and%20key/value%20stores)
-    -   [metadata & text (OCR et al) -- language detect, suggesting fixes, ...](#metadata%20&%20text%20(OCR%20et%20al)%20--%20language%20detect,%20suggesting%20fixes,%20...)
-    -   [PDF (XML) metadata editing](#PDF%20(XML)%20metadata%20editing)
-    -   [web scraping (document extraction, cleaning, metadata extraction, BibTeX, ...)](#web%20scraping%20(document%20extraction,%20cleaning,%20metadata%20extraction,%20BibTeX,%20...))
-    -   [file format support](#file%20format%20support)
-    -   [BibTeX and similar library metadata formats' support](#BibTeX%20and%20similar%20library%20metadata%20formats'%20support)
-    -   [export / output file formats, text formatting, etc.](#export%20/%20output%20file%20formats,%20text%20formatting,%20etc.)
-    -   [FTS (*Full Text Search*) and related: SOLR/Lucene et al: document content search](#FTS%20(*Full%20Text%20Search*)%20and%20related:%20SOLR/Lucene%20et%20al:%20document%20content%20search)
-        -   [stemmers](#stemmers)
-        -   [language detection / inference](#language%20detection%20/%20inference)
-    -   [scripting *user-tunable tasks* such as OCR preprocessing, metadata extraction, metadata cleaning & other \[post-\]processing, ...](#scripting%20*user-tunable%20tasks*%20such%20as%20OCR%20preprocessing,%20metadata%20extraction,%20metadata%20cleaning%20&%20other%20\[post-]processing,%20...)
-    -   [multi-processing core technologies](#multi-processing%20core%20technologies)
-        -   [CLI: commandline parsing & perusing](#CLI:%20commandline%20parsing%20&%20perusing)
-        -   [CPU features & capabilities detection](#CPU%20features%20&%20capabilities%20detection)
-        -   [misc. core functionality](#misc.%20core%20functionality)
-        -   [multi-processing: invoking external applications](#multi-processing:%20invoking%20external%20applications)
-        -   [multi-processing: Promise/A+](#multi-processing:%20Promise/A+)
-        -   [multi-processing: running tasks in parallel: multi-processing, multithreading, async, ...](#multi-processing:%20running%20tasks%20in%20parallel:%20multi-processing,%20multithreading,%20async,%20...)
-        -   [multi-processing: task schedulers](#multi-processing:%20task%20schedulers)
-        -   [multi-processing: thread pools](#multi-processing:%20thread%20pools)
-        -   [run-time library core features: logging, formatting, ...](#run-time%20library%20core%20features:%20logging,%20formatting,%20...)
-    -   [web servers, generic sockets I/O (IPC)](#web%20servers,%20generic%20sockets%20I/O%20(IPC))
-    -   [socket I/O: websockets](#socket%20I/O:%20websockets)
-    -   [disk I/O, monitoring import locations, ...](#disk%20I/O,%20monitoring%20import%20locations,%20...)
-    -   [configuration / parameterization](#configuration%20/%20parameterization)
-        -   [TOML](#TOML)
-        -   [YAML](#YAML)
-        -   [INI](#INI)
-    -   [testing & fuzzing](#testing%20&%20fuzzing)
-    -   [logging & debugging](#logging%20&%20debugging)
-        -   [ETW (Event Tracing for Microsoft Windows)](#ETW%20(Event%20Tracing%20for%20Microsoft%20Windows))
-    -   [telemetry](#telemetry)
-    -   [OCR core (*tesseract*)](#OCR%20core%20(*tesseract*))
-    -   [PDF render & metadata core (*mupdf*)](#PDF%20render%20&%20metadata%20core%20(*mupdf*))
-    -   [UI / GUI](#UI%20/%20GUI)
-    -   [checking out the competition / compatriots for Qiqqa + re-use useful components](#checking%20out%20the%20competition%20/%20compatriots%20for%20Qiqqa%20+%20re-use%20useful%20components)
-    -   [citations output (CSL)](#citations%20output%20(CSL))
-    -   [Microsoft Word, Google Docs, LibreOffice: application integration](#Microsoft%20Word,%20Google%20Docs,%20LibreOffice:%20application%20integration)
-    -   [XML & XSLT tooling](#XML%20&%20XSLT%20tooling)
-    -   [Microsoft DOCX ~ OpenXML & other XML & XSLT tooling](#Microsoft%20DOCX%20~%20OpenXML%20&%20other%20XML%20&%20XSLT%20tooling)
-    -   [misc / other](#misc%20/%20other)
-    -   [sub-dependencies (libraries which are required by any of the above)](#sub-dependencies%20(libraries%20which%20are%20required%20by%20any%20of%20the%20above))
--   [Libraries in this collection (All of the above, listed in alphabetical order)](#Libraries%20in%20this%20collection%20(All%20of%20the%20above,%20listed%20in%20alphabetical%20order))
--   [TBD: Libraries which still need to be moved into the overview / categories above...](#TBD:%20Libraries%20which%20still%20need%20to%20be%20moved%20into%20the%20overview%20/%20categories%20above...)
+*   [TOC](#Libraries%20we're%20looking%20at%20for%20this%20*intent*:)
+    *   [IPC: flatbuffer et al for protocol design](#IPC:%20flatbuffer%20et%20al%20for%20protocol%20design)
+    *   [IPC: websockets, etc.: all communication means](#IPC:%20websockets,%20etc.:%20all%20communication%20means)
+        *   [ZeroMQ a.k.a. ØMQ](#ZeroMQ%20a.k.a.%20%C3%98MQ)
+        *   [memory mapping](#memory%20mapping)
+    *   [IPC: JSON for protocol design](#IPC:%20JSON%20for%20protocol%20design)
+    *   [~~IPC: YAML, TOML, etc. for protocol design~~](#~~IPC:%20YAML,%20TOML,%20etc.%20for%20protocol%20design~~)
+    *   [Content Hashing (cryptographic strength i.e. *"guaranteed"* collision-free)](#Content%20Hashing%20(cryptographic%20strength%20i.e.%20*%22guaranteed%22*%20collision-free))
+    *   [Hash-like Filters & Fast Hashing for Hash Tables et al (64 bits and less, mostly)](#Hash-like%20Filters%20&%20Fast%20Hashing%20for%20Hash%20Tables%20et%20al%20(64%20bits%20and%20less,%20mostly))
+    *   [Intermediate Data Storage / Caching / Hierarchical Data Stores (binary hOCR; document text revisions; ...)](#Intermediate%20Data%20Storage%20/%20Caching%20/%20Hierarchical%20Data%20Stores%20(binary%20hOCR;%20document%20text%20revisions;%20...))
+        *   [RAM-/disk-based large queues and stores: B+tree, LSM-tree, ...](#RAM-/disk-based%20large%20queues%20and%20stores:%20B+tree,%20LSM-tree,%20...)
+        *   [~~HDF5 file format~~](#~~HDF5%20file%20format~~)
+    *   [Data Storage / Caching / IPC: loss-less data compression](#Data%20Storage%20/%20Caching%20/%20IPC:%20loss-less%20data%20compression)
+    *   [File / Directory Tree Synchronization (local and remote)](#File%20/%20Directory%20Tree%20Synchronization%20(local%20and%20remote))
+    *   [OCR: hOCR output format, other output formats? (dedicated binary?)](#OCR:%20hOCR%20output%20format,%20other%20output%20formats?%20(dedicated%20binary?))
+    *   [Pattern Recognition](#Pattern%20Recognition)
+        *   [BLAS, LAPACK, ...](#BLAS,%20LAPACK,%20...)
+        *   [_delta features_ & other feature extraction (see Qiqqa research notes)](#_delta%20features_%20&%20other%20feature%20extraction%20(see%20Qiqqa%20research%20notes))
+        *   [fuzzy matching](#fuzzy%20matching)
+        *   [GMM/HMM/kM](#GMM/HMM/kM)
+        *   [graph analysis, graph databases](#graph%20analysis,%20graph%20databases)
+        *   [NN, ...](#NN,%20...)
+        *   [similarity search](#similarity%20search)
+        *   [text tokenization](#text%20tokenization)
+        *   [regex matchers (manual edit - pattern recognition)](#regex%20matchers%20(manual%20edit%20-%20pattern%20recognition))
+        *   [OCR: quality improvements, language detect, ...](#OCR:%20quality%20improvements,%20language%20detect,%20...)
+        *   [OCR page image preprocessing, \[scanner\] tooling: getting the pages to the OCR engine](#OCR%20page%20image%20preprocessing,%20\[scanner]%20tooling:%20getting%20the%20pages%20to%20the%20OCR%20engine)
+        *   [image export, image / \[scanned\] document import](#image%20export,%20image%20/%20\[scanned]%20document%20import)
+        *   [Monte Carlo simulations, LDA, keyword inference/extraction, etc.](#Monte%20Carlo%20simulations,%20LDA,%20keyword%20inference/extraction,%20etc.)
+            *   [text tokenization (as a preprocessing step for LDA et al):](#text%20tokenization%20(as%20a%20preprocessing%20step%20for%20LDA%20et%20al):)
+    *   [database "backend storage"](#database%20%22backend%20storage%22)
+        *   [LMDB, NoSQL and key/value stores](#LMDB,%20NoSQL%20and%20key/value%20stores)
+    *   [metadata & text (OCR et al) -- language detect, suggesting fixes, ...](#metadata%20&%20text%20(OCR%20et%20al)%20--%20language%20detect,%20suggesting%20fixes,%20...)
+    *   [PDF (XML) metadata editing](#PDF%20(XML)%20metadata%20editing)
+    *   [web scraping (document extraction, cleaning, metadata extraction, BibTeX, ...)](#web%20scraping%20(document%20extraction,%20cleaning,%20metadata%20extraction,%20BibTeX,%20...))
+    *   [file format support](#file%20format%20support)
+    *   [BibTeX and similar library metadata formats' support](#BibTeX%20and%20similar%20library%20metadata%20formats'%20support)
+    *   [export / output file formats, text formatting, etc.](#export%20/%20output%20file%20formats,%20text%20formatting,%20etc.)
+    *   [FTS (*Full Text Search*) and related: SOLR/Lucene et al: document content search](#FTS%20(*Full%20Text%20Search*)%20and%20related:%20SOLR/Lucene%20et%20al:%20document%20content%20search)
+        *   [stemmers](#stemmers)
+        *   [language detection / inference](#language%20detection%20/%20inference)
+    *   [scripting *user-tunable tasks* such as OCR preprocessing, metadata extraction, metadata cleaning & other \[post-\]processing, ...](#scripting%20*user-tunable%20tasks*%20such%20as%20OCR%20preprocessing,%20metadata%20extraction,%20metadata%20cleaning%20&%20other%20\[post-]processing,%20...)
+    *   [multi-processing core technologies](#multi-processing%20core%20technologies)
+        *   [CLI: commandline parsing & perusing](#CLI:%20commandline%20parsing%20&%20perusing)
+        *   [CPU features & capabilities detection](#CPU%20features%20&%20capabilities%20detection)
+        *   [misc. core functionality](#misc.%20core%20functionality)
+        *   [multi-processing: invoking external applications](#multi-processing:%20invoking%20external%20applications)
+        *   [multi-processing: Promise/A+](#multi-processing:%20Promise/A+)
+        *   [multi-processing: running tasks in parallel: multi-processing, multithreading, async, ...](#multi-processing:%20running%20tasks%20in%20parallel:%20multi-processing,%20multithreading,%20async,%20...)
+        *   [multi-processing: task schedulers](#multi-processing:%20task%20schedulers)
+        *   [multi-processing: thread pools](#multi-processing:%20thread%20pools)
+        *   [run-time library core features: logging, formatting, ...](#run-time%20library%20core%20features:%20logging,%20formatting,%20...)
+    *   [web servers, generic sockets I/O (IPC)](#web%20servers,%20generic%20sockets%20I/O%20(IPC))
+    *   [socket I/O: websockets](#socket%20I/O:%20websockets)
+    *   [disk I/O, monitoring import locations, ...](#disk%20I/O,%20monitoring%20import%20locations,%20...)
+    *   [configuration / parameterization](#configuration%20/%20parameterization)
+        *   [TOML](#TOML)
+        *   [YAML](#YAML)
+        *   [INI](#INI)
+    *   [testing & fuzzing](#testing%20&%20fuzzing)
+    *   [logging & debugging](#logging%20&%20debugging)
+        *   [ETW (Event Tracing for Microsoft Windows)](#ETW%20(Event%20Tracing%20for%20Microsoft%20Windows))
+    *   [telemetry](#telemetry)
+    *   [OCR core (*tesseract*)](#OCR%20core%20(*tesseract*))
+    *   [PDF render & metadata core (*mupdf*)](#PDF%20render%20&%20metadata%20core%20(*mupdf*))
+    *   [UI / GUI](#UI%20/%20GUI)
+    *   [checking out the competition / compatriots for Qiqqa + re-use useful components](#checking%20out%20the%20competition%20/%20compatriots%20for%20Qiqqa%20+%20re-use%20useful%20components)
+    *   [citations output (CSL)](#citations%20output%20(CSL))
+    *   [Microsoft Word, Google Docs, LibreOffice: application integration](#Microsoft%20Word,%20Google%20Docs,%20LibreOffice:%20application%20integration)
+    *   [XML & XSLT tooling](#XML%20&%20XSLT%20tooling)
+    *   [Microsoft DOCX ~ OpenXML & other XML & XSLT tooling](#Microsoft%20DOCX%20~%20OpenXML%20&%20other%20XML%20&%20XSLT%20tooling)
+    *   [misc / other](#misc%20/%20other)
+    *   [sub-dependencies (libraries which are required by any of the above)](#sub-dependencies%20(libraries%20which%20are%20required%20by%20any%20of%20the%20above))
 
+*   [Libraries in this collection (All of the above, listed in alphabetical order)](#Libraries%20in%20this%20collection%20(All%20of%20the%20above,%20listed%20in%20alphabetical%20order))
 
-
-
-
-
+*   [TBD: Libraries which still need to be moved into the overview / categories above...](#TBD:%20Libraries%20which%20still%20need%20to%20be%20moved%20into%20the%20overview%20/%20categories%20above...)
 
 
 
@@ -778,10 +769,10 @@ See also [image formats (visual) quality comparison](https://eclipseo.github.io/
 - **warpLDA** [📁](./warpLDA) [🌐](https://github.com/GerHobbelt/warplda) -- a cache efficient implementation for Latent Dirichlet Allocation.
 - other *topic modeling* code on the Net:
   
-  - [David Blei's list of topic modeling OSS software](http://www.cs.columbia.edu/~blei/topicmodeling_software.html) + [github repo list](https://github.com/blei-lab)
-  - [Hierarchical Dirichlet Process (with Split-Merge Operations), Chong Wang](https://github.com/renaud/hdp-faster)
-  - [Hierarchical Latent Tree Analysis (HLTA)](https://github.com/kmpoon/hlta)
-  - [Leonard Poon - various works](https://github.com/kmpoon?tab=repositories)
+  * [David Blei's list of topic modeling OSS software](http://www.cs.columbia.edu/~blei/topicmodeling_software.html) + [github repo list](https://github.com/blei-lab)
+  * [Hierarchical Dirichlet Process (with Split-Merge Operations), Chong Wang](https://github.com/renaud/hdp-faster)
+  * [Hierarchical Latent Tree Analysis (HLTA)](https://github.com/kmpoon/hlta)
+  * [Leonard Poon - various works](https://github.com/kmpoon?tab=repositories)
 
 
 
@@ -2353,10 +2344,10 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **pytorch_cpp_demo** [📁](./pytorch_cpp_demo) [🌐](https://github.com/GerHobbelt/pytorch_cpp) -- Deep Learning sample programs of PyTorch written in C++.
 - **QCBOR** [📁](./QCBOR) [🌐](https://github.com/GerHobbelt/QCBOR) -- a powerful, commercial-quality CBOR encoder/decoder that implements these RFCs:
   
-  - [RFC7049](https://tools.ietf.org/html/rfc7049) The previous CBOR standard. Replaced by RFC 8949.
-  - [RFC8742](https://tools.ietf.org/html/rfc8742) CBOR Sequences
-  - [RFC8943](https://tools.ietf.org/html/rfc8943) CBOR Dates
-  - [RFC8949](https://tools.ietf.org/html/rfc8949) The CBOR Standard. (Everything except sorting of encoded maps)
+  * [RFC7049](https://tools.ietf.org/html/rfc7049) The previous CBOR standard. Replaced by RFC 8949.
+  * [RFC8742](https://tools.ietf.org/html/rfc8742) CBOR Sequences
+  * [RFC8943](https://tools.ietf.org/html/rfc8943) CBOR Dates
+  * [RFC8949](https://tools.ietf.org/html/rfc8949) The CBOR Standard. (Everything except sorting of encoded maps)
 
 - **qlever** [📁](./qlever) [🌐](https://github.com/GerHobbelt/qlever) -- a SPARQL engine that can efficiently index and query very large knowledge graphs with up to 100 billion triples on a single standard PC or server. In particular, QLever is fast for queries that involve large intermediate or final results, which are notoriously hard for engines like Blazegraph or Virtuoso.
 - **QuickJS** [📁](./QuickJS) [🌐](https://github.com/GerHobbelt/quickjs) -- a small and embeddable Javascript engine. It supports the <a href="https://tc39.github.io/ecma262/">ES2020</a> specification including modules, asynchronous generators, proxies and BigInt. It optionally supports mathematical extensions such as big decimal floating point numbers (BigDecimal), big binary floating point numbers (BigFloat) and operator overloading.
@@ -2674,10 +2665,10 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **PlatformFolders** [📁](./PlatformFolders) [🌐](https://github.com/GerHobbelt/PlatformFolders) -- a C++ library to look for directories like `My Documents`, `~/.config`, `%APPDATA%`, etc. so that you do not need to write platform-specific code.
 - **QCBOR** [📁](./QCBOR) [🌐](https://github.com/GerHobbelt/QCBOR) --   a powerful, commercial-quality CBOR encoder/decoder that implements these RFCs:
   
-  - [RFC7049](https://tools.ietf.org/html/rfc7049) The previous CBOR standard. Replaced by RFC 8949.
-  - [RFC8742](https://tools.ietf.org/html/rfc8742) CBOR Sequences
-  - [RFC8943](https://tools.ietf.org/html/rfc8943) CBOR Dates
-  - [RFC8949](https://tools.ietf.org/html/rfc8949) The CBOR Standard. (Everything except sorting of encoded maps)
+  * [RFC7049](https://tools.ietf.org/html/rfc7049) The previous CBOR standard. Replaced by RFC 8949.
+  * [RFC8742](https://tools.ietf.org/html/rfc8742) CBOR Sequences
+  * [RFC8943](https://tools.ietf.org/html/rfc8943) CBOR Dates
+  * [RFC8949](https://tools.ietf.org/html/rfc8949) The CBOR Standard. (Everything except sorting of encoded maps)
   
 
 - **RuntimeCompiledCPlusPlus** [📁](./RuntimeCompiledCPlusPlus) [🌐](https://github.com/GerHobbelt/RuntimeCompiledCPlusPlus) -- Runtime-Compiled C++ (RCC++) is a way to reliably make major changes to your C++ code at runtime and see the results immediately. It's aimed at games development but could be useful in any industry where turnaround times are a bottleneck. RCC++ is primarily designed to shorten iteration times in development - developers can build their project, run it, make changes during runtime and see the results almost immediately. If needed, shipping code can [disable runtime compilation](https://github.com/RuntimeCompiledCPlusPlus/RuntimeCompiledCPlusPlus/wiki/Disabling-runtime-compilation) in a number of ways. RCC++ is not intended as a method to allow end users of a shipped binary to compile modifications, though with some work it can be used this way.
@@ -2866,7 +2857,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **libdivsufsort** [📁](./libdivsufsort) [🌐](https://github.com/GerHobbelt/libdivsufsort) -- a software library that implements a lightweight suffix array construction algorithm.
 - **libdtm** [📁](./libdtm) [🌐](https://github.com/GerHobbelt/dtm) -- LibDTM (Dynamic Topic Models and the Document Influence Model) implements topics that change over time (Dynamic Topic Models) and a model of how individual documents predict that change. This code is the result of work by David M. Blei and Sean M. Gerrish.
 - **libeigen** [📁](./libeigen) [🌐](https://github.com/GerHobbelt/eigen-git-mirror) -- a C++ template library for linear algebra: matrices, vectors, numerical solvers, and related algorithms.
-- **libevent** [📁](./libevent) [🌐](https://github.com/GerHobbelt/libevent) -- _libevent_ is meant to replace the event loop found in event driven network servers.
+- **libevent** [📁](./libevent) [🌐](https://github.com/GerHobbelt/libevent) --   _libevent_ is meant to replace the event loop found in event driven network servers.
   
   Currently, _libevent_ supports _[/dev/poll](http://download.oracle.com/docs/cd/E19253-01/816-5177/6mbbc4g9n/index.html)_, _[kqueue(2)](http://www.freebsd.org/cgi/man.cgi?query=kqueue&apropos=0&sektion=0&format=html)_, _[event ports](http://developers.sun.com/solaris/articles/event_completion.html)_, [POSIX _select(2)_](http://manpages.debian.net/cgi-bin/man.cgi?query=select), [Windows _select()_](http://msdn.microsoft.com/en-us/library/ms740141(v=vs.85).aspx), [_poll(2)_](http://manpages.debian.net/cgi-bin/man.cgi?query=poll), and _[epoll(4)](http://www.xmailserver.org/linux-patches/epoll.txt)_. The internal event mechanism is completely independent of the exposed event API, and a simple update of libevent can provide new functionality without having to redesign the applications. As a result, _Libevent_ allows for portable application development and provides the most scalable event notification mechanism available on an operating system. Libevent can also be used for multi-threaded applications, either by isolating each `event_base` so that only a single thread accesses it, or by locked access to a single shared `event_base`. _Libevent_ should compile on Linux, *BSD, Mac OS X, Solaris, Windows, and more.
   

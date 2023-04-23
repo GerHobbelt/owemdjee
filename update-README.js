@@ -131,6 +131,17 @@ while (m) {
 console.log("===================================================================================================================\n\n");
 //process.exit(1);
 
+
+// Before we go and parse the README and re-order / organize the items in the lists in there, we MUST protect the (partial) TOCs we generated using Obidian tooling:
+txt = txt
+.replace(/^\s*-\s+\[.+\]\(.+\)\s*$/gm, function tocr(m) {
+	let rv = m
+	.replace(/^(\s+)-(\s)/, '$1*$2');
+	return rv;
+});
+
+
+
 let modified = true;
 while (modified) {
 	modified = false;
