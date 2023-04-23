@@ -135,20 +135,24 @@ console.log("===================================================================
 // Before we go and parse the README and re-order / organize the items in the lists in there, we MUST protect the (partial) TOCs we generated using Obidian tooling:
 txt = txt
 .replace(/^(\s*)[-*]\s+\[(.+)\]\(#(.+)\)\s*$/gm, function tocr(m, p1, p2, p3) {
-	let title = (p2 == 'TOC' ? p3 : p2);
-	let hashtag = title
-	.toLowerCase()
-	.replace(/%[0-9A-F][0-9A-F]/g, '-')
-	.replace(/\.\.\./g, '\x01')
-	.replace(/--/g, '\x02')
-	.replace(/(\w)\./g, '$1')
-	.replace(/[^a-zA-Z0-9\&\/'\x01\x02+~ø]+/g, '-')
-	.replace(/^-+/, '')
-	.replace(/-+$/, '')
-	.replace(/[\&\/'+~]/g, '')
-	.replace(/\x01/g, '-')
-	.replace(/\x02/g, '--')
-	.replace(/-+$/, '-');
+	// we only edit/regenerate the hash link when we feel the need:
+	let hashtag = p3;
+	if (/[ %\/]/.test(p3)) {
+		let title = (p2 == 'TOC' ? p3 : p2);
+		hashtag = title
+		.toLowerCase()
+		.replace(/%[0-9A-F][0-9A-F]/g, '-')
+		.replace(/\.\.\./g, '\x01')
+		.replace(/--/g, '\x02')
+		.replace(/(\w)\./g, '$1')
+		.replace(/[^a-zA-Z0-9\&\/'\x01\x02+~ø]+/g, '-')
+		.replace(/^-+/, '')
+		.replace(/-+$/, '')
+		.replace(/[\&\/'+~]/g, '')
+		.replace(/\x01/g, '-')
+		.replace(/\x02/g, '--')
+		.replace(/-+$/, '-');
+	}
 
 	let rv = `${ p1 }* [${ p2 }](#${ hashtag })`;
 	return rv;

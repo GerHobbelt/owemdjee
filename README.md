@@ -15,7 +15,7 @@ The heavy data lifting will be done in the referenced libraries, while this lib 
   * [Inter-process communications (IPC)](#inter-process-communications-ipc)
   * [Programming Languages used: *intent and purposes*](#programming-languages-used-intent-and-purposes)
   * [Scripting the System: Languages Considered for Scripting by Users](#scripting-the-system-languages-considered-for-scripting-by-users)
-* [Libraries we're looking at for this *intent*:](#libraries-were-looking-at-for-this-intent)
+* [Libraries we're looking at for this *intent*](#libraries-were-looking-at-for-this-intent)
 
 
 
@@ -188,7 +188,7 @@ The other JavaScript engines considered are of varying size, performance and com
         * [OCR page image preprocessing, \[scanner\] tooling: getting the pages to the OCR engine](#ocr-page-image-preprocessing-scanner-tooling-getting-the-pages-to-the-ocr-engine)
         * [image export, image / \[scanned\] document import](#image-export-image--scanned-document-import)
         * [Monte Carlo simulations, LDA, keyword inference/extraction, etc.](#monte-carlo-simulations-lda-keyword-inferenceextraction-etc)
-            * [text tokenization (as a preprocessing step for LDA et al):](#text-tokenization-as-a-preprocessing-step-for-lda-et-al)
+            * [text tokenization (as a preprocessing step for LDA et al)](#text-tokenization-as-a-preprocessing-step-for-lda-et-al)
     * [database "backend storage"](#database-backend-storage)
         * [LMDB, NoSQL and key/value stores](#lmdb-nosql-and-keyvalue-stores)
     * [metadata & text (OCR et al) -- language detect, suggesting fixes, ...](#metadata--text-ocr-et-al----language-detect-suggesting-fixes-)
@@ -233,7 +233,7 @@ The other JavaScript engines considered are of varying size, performance and com
     * [misc / other](#misc--other)
     * [sub-dependencies (libraries which are required by any of the above)](#sub-dependencies-libraries-which-are-required-by-any-of-the-above)
 * [Libraries in this collection (All of the above, listed in alphabetical order)](#libraries-in-this-collection-all-of-the-above-listed-in-alphabetical-order)
-* [TBD: Libraries which still need to be moved into the overview / categories above...](#tbd-libraries-which-still-need-to-be-moved-into-the-overview--categories-above-)
+* [TBD: Libraries which still need to be moved into the overview / categories above...](#tbd-libraries-which-still-need-to-be-moved-into-the-overview--categories-above)
 
 
 
