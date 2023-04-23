@@ -7,14 +7,14 @@ The heavy data lifting will be done in the referenced libraries, while this lib 
 
 
 -   [TOC](#owemdjee)
-    -   [Reason for this repo](#Reason%20for%20this%20repo)
-        -   [And?](#And?)
-        -   [Critique?](#Critique?)
-        -   [Why is this repo a *solution*? And does it scale?](#Why%20is%20this%20repo%20a%20*solution*?%20And%20does%20it%20scale?)
--   [Intent](#Intent)
-    -   [Inter-process communications (IPC)](#Inter-process%20communications%20(IPC))
-    -   [Programming Languages used: *intent and purposes*](#Programming%20Languages%20used:%20*intent%20and%20purposes*)
-    -   [Scripting the System: Languages Considered for Scripting by Users](#Scripting%20the%20System:%20Languages%20Considered%20for%20Scripting%20by%20Users)
+    -   [Reason for this repo](#reason-for-this-repo)
+        -   [And?](#and)
+        -   [Critique?](#critique)
+        -   [Why is this repo a *solution*? And does it scale?](#why-is-this-repo-a-solution-and-does-it-scale)
+-   [Intent](#intent)
+    -   [Inter-process communications (IPC)](#inter-process-communications-ipc)
+    -   [Programming Languages used: *intent and purposes*](#programming-languages-used-intent-and-purposes)
+    -   [Scripting the System: Languages Considered for Scripting by Users](#scripting-the-system-Languages-Considered-for-Scripting-by-Users)
 -   [Libraries we're looking at for this *intent*:](#Libraries%20we're%20looking%20at%20for%20this%20*intent*:)
 
 
