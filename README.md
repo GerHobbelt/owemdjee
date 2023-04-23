@@ -227,7 +227,7 @@ The other JavaScript engines considered are of varying size, performance and com
     * [OCR core (*tesseract*)](#ocr-core-tesseract)
     * [PDF render & metadata core (*mupdf*)](#pdf-render--metadata-core-mupdf)
     * [UI / GUI](#ui--gui)
-    * [Application Installers (NSIS, et al)](#application-installers-nsis-et-al]
+    * [Application Installers (NSIS, et al)](#application-installers-nsis-et-al)
     * [checking out the competition / compatriots for Qiqqa + re-use useful components](#checking-out-the-competition--compatriots-for-qiqqa--re-use-useful-components)
     * [citations output (CSL)](#citations-output-csl)
     * [Microsoft Word, Google Docs, LibreOffice: application integration](#microsoft-word-google-docs-libreoffice-application-integration)
