@@ -137,18 +137,18 @@ txt = txt
 .replace(/^(\s*)[-*]\s+\[(.+)\]\(#(.+)\)\s*$/gm, function tocr(m, p1, p2, p3) {
 	let title = (p2 == 'TOC' ? p3 : p2);
 	let hashtag = title
+	.toLowerCase()
 	.replace(/%[0-9A-F][0-9A-F]/g, '-')
 	.replace(/\.\.\./g, '\x01')
 	.replace(/--/g, '\x02')
 	.replace(/(\w)\./g, '$1')
-	.replace(/[^a-zA-Z0-9\&\/'\x01\x02+~]+/g, '-')
+	.replace(/[^a-zA-Z0-9\&\/'\x01\x02+~ø]+/g, '-')
 	.replace(/^-+/, '')
 	.replace(/-+$/, '')
 	.replace(/[\&\/'+~]/g, '')
 	.replace(/\x01/g, '-')
 	.replace(/\x02/g, '--')
-	.replace(/-+$/, '-')
-	.toLowerCase();
+	.replace(/-+$/, '-');
 
 	let rv = `${ p1 }* [${ p2 }](#${ hashtag })`;
 	return rv;
