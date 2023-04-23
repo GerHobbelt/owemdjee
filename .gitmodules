@@ -2921,6 +2921,15 @@
 [submodule "openvino"]
 	path = openvino
 	url = git@github.com:GerHobbelt/openvino.git
+
 [submodule "vcopy"]
 	path = vcopy
 	url = git@github.com:GerHobbelt/vcopy.git
+
+[submodule "fswatch"]
+	path = fswatch
+	url = git@github.com:GerHobbelt/fswatch.git
+
+[submodule "vtm"]
+	path = vtm
+	url = git@github.com:GerHobbelt/vtm.git
