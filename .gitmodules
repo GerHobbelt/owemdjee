@@ -2933,3 +2933,6 @@
 [submodule "vtm"]
 	path = vtm
 	url = git@github.com:GerHobbelt/vtm.git
+[submodule "libdivide"]
+	path = libdivide
+	url = git@github.com:GerHobbelt/libdivide.git
