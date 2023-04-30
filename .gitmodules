@@ -2936,3 +2936,6 @@
 [submodule "libdivide"]
 	path = libdivide
 	url = git@github.com:GerHobbelt/libdivide.git
+[submodule "hsluv-c"]
+	path = hsluv-c
+	url = git@github.com:GerHobbelt/hsluv-c.git
