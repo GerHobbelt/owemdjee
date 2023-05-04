@@ -2940,3 +2940,6 @@
 [submodule "hsluv-c"]
 	path = hsluv-c
 	url = git@github.com:GerHobbelt/hsluv-c.git
+[submodule "libsql"]
+	path = libsql
+	url = git@github.com:GerHobbelt/libsql.git
