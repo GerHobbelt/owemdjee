@@ -270,6 +270,7 @@ The other JavaScript engines considered are of varying size, performance and com
   
   - **removed**; reason: see `flatbuffers`. When we don't dig `flatbuffers`, then `flatcc` is automatically pretty useless to us. Let's rephrase that professionally: "`flatcc` has moved out of scope for our project."
 
+- **libsmile** [📁](./libsmile) [🌐](https://github.com/GerHobbelt/libsmile) -- C implementation of the Smile binary format (https://github.com/FasterXML/smile-format-specification).
 - ~~**libsmile** [🌐](https://github.com/pierre/libsmile) -- ["Smile" format](https://en.wikipedia.org/wiki/Smile_%28data_interchange_format%29), i.e. a compact binary JSON format~~
   
   - **removed**; reason: for binary format record serialization we will be using `bebop` exclusively. All other communications will be JSON/JSON5/XML based.
@@ -1925,6 +1926,26 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 
 
 
+### Language translation
+
+- **gettext** [📁](./gettext) [🌐](https://github.com/GerHobbelt/gettext) -- the GNU gettext package.  It is interesting for authors or maintainers of other packages or programs which they want to see internationalized.  As one step the handling of messages in different languages should be implemented.  For this task GNU gettext provides the needed tools and library functions. It is also interesting for translators, because GNU gettext provides the 'msgmerge' program, which prepares a message catalog before a translation update.
+- **marian** [📁](./marian) [🌐](https://github.com/GerHobbelt/marian) -- an efficient Neural Machine Translation framework written in pure C++ with minimal dependencies.
+- **NiuTrans.NMT** [📁](./NiuTrans.NMT) [🌐](https://github.com/GerHobbelt/NiuTrans.NMT) --   a lightweight and efficient Transformer-based neural machine translation system. Its main features are:
+  
+  - Few dependencies. It is implemented with pure C++, and all dependencies are optional.
+  - Flexible running modes. The system can run with various systems and devices (Linux vs. Windows, CPUs vs. GPUs, and FP32 vs. FP16, etc.).
+  - Framework agnostic. It supports various models trained with other tools, e.g., fairseq models.
+  - High efficiency. It is heavily optimized for fast decoding, see [our WMT paper](https://arxiv.org/pdf/2109.08003.pdf) for more details.
+
+- **OpenFST** [📁](./OpenFST) [🌐](https://github.com/GerHobbelt/openfst) -- a library for constructing, combining, optimizing, and searching weighted finite-state transducers (FSTs). Weighted finite-state transducers are automata where each transition has an input label, an output label, and a weight. The more familiar finite-state acceptor is represented as a transducer with each transition's input and output label equal. Finite-state acceptors are used to represent sets of strings (specifically, regular or rational sets); finite-state transducers are used to represent binary relations between pairs of strings (specifically, rational transductions). The weights can be used to represent the cost of taking a particular transition. FSTs have key applications in speech recognition and synthesis, machine translation, optical character recognition, pattern matching, string processing, machine learning, information extraction and retrieval among others. Often a weighted transducer is used to represent a probabilistic model (e.g., an n-gram model, pronunciation model). FSTs can be optimized by determinization and minimization, models can be applied to hypothesis sets (also represented as automata) or cascaded by finite-state composition, and the best results can be selected by shortest-path algorithms.
+- **OpenFST-utils** [📁](./OpenFST-utils) [🌐](https://github.com/GerHobbelt/openfst-utils) -- a set of useful programs for manipulating Finite State Transducer with the OpenFst library.
+- **tinygettext** [📁](./tinygettext) [🌐](https://github.com/GerHobbelt/tinygettext) -- a minimal replacement for gettext written in C++. It can read `.po` files directly and doesn't need `.mo` files generated from `.po`. It also can read the `.po` files from arbitrary locations, so it's better suited for non-Unix systems and situations in which one wants to store or distribute `.po` files separately from the software itself.
+- **zotero-translate** [📁](./zotero-translate) [🌐](https://github.com/GerHobbelt/translate) -- browser-based standalone zotero translator.
+- **zotero-translation-server** [📁](./zotero-translation-server) [🌐](https://github.com/GerHobbelt/translation-server) -- lets you use Zotero translators without the Zotero client.
+- **zotero-translators** [📁](./zotero-translators) [🌐](https://github.com/GerHobbelt/translators) -- Zotero Translators : automatically detect journal articles, library records, news items, and other objects you might like to save to your Zotero library. Zotero uses so-called “translators” to detect and import data from websites. There are currently more than 600 different translators, facilitating data import from countless sites.
+
+
+
 ## Application Installers (NSIS, et al)
 
 - **libmetalink** [📁](./libmetalink) [🌐](https://github.com/GerHobbelt/libmetalink) -- a library to read Metalink XML download description format. It supports both [_Metalink version 3_](http://www.metalinker.org/Metalink_3.0_Spec.pdf) and [_Metalink version 4 (RFC 5854)_](https://tools.ietf.org/html/rfc5854).
@@ -2115,6 +2136,11 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 
 - ~~**Imath** [🌐](https://github.com/AcademySoftwareFoundation/Imath) -- float16 support lib for OpenEXR format~~
 - ~~**protobuf** [🌐](https://github.com/protocolbuffers/protobuf)~~
+- **cairo** [📁](./cairo) [🌐](https://github.com/GerHobbelt/cairo) -- Cairo: Multi-platform 2D graphics library with support for multiple output devices. Cairo is designed to produce consistent output on all output media while taking advantage of display hardware acceleration when available.
+- **cairo-demos** [📁](./cairo-demos) [🌐](https://github.com/GerHobbelt/cairo-demos) -- several simple programs intended to demonstrate some of the features of the Cairo graphics library (http://cairographics.org).
+- **fftw3** [📁](./fftw3) [🌐](https://github.com/GerHobbelt/fftw3) -- the FFTW library for computing Fourier transforms (version 3.x), maintained by the FFTW authors.
+- **libsmile** [📁](./libsmile) [🌐](https://github.com/GerHobbelt/libsmile) -- C implementation of the Smile binary format (https://github.com/FasterXML/smile-format-specification).
+- **pango** [📁](./pango) [🌐](https://github.com/GerHobbelt/pango) -- a library for layout and rendering of text, with an emphasis on internationalization. Pango can be used anywhere that text layout is needed.
 
 
 
@@ -3143,12 +3169,15 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **cairo-demos** [📁](./cairo-demos) [🌐](https://github.com/GerHobbelt/cairo-demos) -- several simple programs intended to demonstrate some of the features of the Cairo graphics library (http://cairographics.org).
 - **calibre** [📁](./calibre) [🌐](https://github.com/GerHobbelt/calibre) -- an e-book manager. It can view, convert, edit and catalog e-books in all of the major e-book formats. It can also talk to e-book reader devices. It can go out to the internet and fetch metadata for your books. It can download newspapers and convert them into e-books for convenient reading. It is cross platform, running on Linux, Windows and macOS.
 - **cef-pdf** [📁](./cef-pdf) [🌐](https://github.com/GerHobbelt/cef-pdf) -- a command line utility (with embedded HTTP server as an optional mode) for creating PDF documents from HTML content. It uses Google Chrome browser's [Chromium Embedded Framework (CEF)](https://bitbucket.org/chromiumembedded/cef/overview) library for all it's internal work; loading urls, rendering HTML & CSS pages and PDF printing, therefore, it produces perfect, accurate, excellent quality PDF documents.
+- **cpp-terminal** [📁](./cpp-terminal) [🌐](https://github.com/GerHobbelt/cpp-terminal)
 - **fftw3** [📁](./fftw3) [🌐](https://github.com/GerHobbelt/fftw3) -- the FFTW library for computing Fourier transforms (version 3.x), maintained by the FFTW authors.
-- **gettext** [📁](./gettext) [🌐](https://github.com/GerHobbelt/gettext) -- the GNU gettext package.  It is interesting for authors or maintainers of other packages or programs which they want to see internationalized.  As one step the handling of messages in different languages should be implemented.  For this task GNU gettext provides the needed tools and library functions. It is also interesting for translators, because GNU gettext provides the 'msgmerge' program, which prepares a message catalog before a translation update.
 - **hsluv-c** [📁](./hsluv-c) [🌐](https://github.com/GerHobbelt/hsluv-c)
 - **ion-c** [📁](./ion-c) [🌐](https://github.com/GerHobbelt/ion-c) -- a C implementation of the [Ion data notation](http://amzn.github.io/ion-docs).
 - **libdivide** [📁](./libdivide) [🌐](https://github.com/GerHobbelt/libdivide)
 - **libsmile** [📁](./libsmile) [🌐](https://github.com/GerHobbelt/libsmile) -- C implementation of the Smile binary format (https://github.com/FasterXML/smile-format-specification).
+- **libsql** [📁](./libsql) [🌐](https://github.com/GerHobbelt/libsql)
 - **pango** [📁](./pango) [🌐](https://github.com/GerHobbelt/pango) -- a library for layout and rendering of text, with an emphasis on internationalization. Pango can be used anywhere that text layout is needed.
 - **simd-imgproc** [📁](./simd-imgproc) [🌐](https://github.com/GerHobbelt/Simd) -- Simd Library for image processing and machine learning.
-- **tinygettext** [📁](./tinygettext) [🌐](https://github.com/GerHobbelt/tinygettext) -- a minimal replacement for gettext written in C++. It can read `.po` files directly and doesn't need `.mo` files generated from `.po`. It also can read the `.po` files from arbitrary locations, so it's better suited for non-Unix systems and situations in which one wants to store or distribute `.po` files separately from the software itself.
+- **unqlite** [📁](./unqlite) [🌐](https://github.com/GerHobbelt/unqlite)
+
+
