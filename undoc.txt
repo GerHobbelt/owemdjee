@@ -1,7 +1,6 @@
 DIR: **xSWIG** -- - **SWIG** [🌐](https://swig.readthedocs.io/en/latest/Manual/SWIG.html)
 DIR: **../../thirdparty/jpeginfo** -- - **jpeginfo** [📁](../../thirdparty/jpeginfo) [🌐](https://github.com/GerHobbelt/jpeginfo)
 DIR: **./jpeg-xl** -- - **jpeg-xl** [📁](./jpeg-xl) [🌐](https://github.com/GerHobbelt/jpeg-xl)
-DIR: **../../thirdparty/libpng** -- - **libpng** [📁](../../thirdparty/libpng) [🌐](https://github.com/GerHobbelt/libpng)
 DIR: **./pmt-png-tools** -- - **pmt-png-tools** [📁](./pmt-png-tools) [🌐](https://github.com/GerHobbelt/pmt)
 DIR: **xOpenImageIO** -- - **OpenImageIO** [🌐](https://github.com/OpenImageIO/oiio)
 DIR: **./lda-Familia** -- - **lda-Familia** [📁](./lda-Familia) [🌐](https://github.com/GerHobbelt/Familia)
