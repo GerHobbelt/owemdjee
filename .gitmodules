@@ -117,22 +117,22 @@ ignore = dirty
 	path = BLAKE3
 	url = https://github.com/GerHobbelt/BLAKE3.git
 	
-ignore = dirty
+
 [submodule "cryptopp"]
 	path = cryptopp
 	url = https://github.com/GerHobbelt/cryptopp.git
 	
-ignore = dirty
+
 [submodule "sqlite"]
 	path = sqlite
 	url = https://github.com/GerHobbelt/sqlite.git
 	
-ignore = dirty
+
 [submodule "libwebp"]
 	path = libwebp
 	url = https://github.com/GerHobbelt/libwebp.git
 	
-ignore = dirty
+
 [submodule "libgif"]
 	path = libgif
 	url = https://github.com/GerHobbelt/libgif.git
@@ -147,7 +147,7 @@ ignore = dirty
 	path = pthread-win32
 	url = https://github.com/GerHobbelt/pthread-win32.git
 	
-ignore = dirty
+
 [submodule "jasper"]
 	path = jasper
 	url = https://github.com/GerHobbelt/jasper.git
@@ -177,7 +177,7 @@ ignore = dirty
 	path = glob
 	url = https://github.com/GerHobbelt/glob.git
 	
-ignore = dirty
+
 [submodule "libvips"]
 	path = libvips
 	url = https://github.com/GerHobbelt/libvips.git
@@ -197,12 +197,12 @@ ignore = dirty
 	path = jpeg-xl
 	url = https://github.com/GerHobbelt/jpeg-xl.git
 	
-ignore = dirty
+
 [submodule "libjpeg-turbo"]
 	path = libjpeg-turbo
 	url = https://github.com/GerHobbelt/libjpeg-turbo.git
 	
-ignore = dirty
+
 [submodule "XMP-Toolkit-SDK"]
 	path = XMP-Toolkit-SDK
 	url = https://github.com/GerHobbelt/XMP-Toolkit-SDK.git
@@ -232,7 +232,7 @@ ignore = dirty
 	path = sqlite-amalgamation
 	url = https://github.com/GerHobbelt/sqlite-amalgamation.git
 	
-ignore = dirty
+
 [submodule "QuickJS"]
 	path = QuickJS
 	url = https://github.com/GerHobbelt/quickjs.git
@@ -272,7 +272,7 @@ ignore = dirty
 	path = fmt
 	url = https://github.com/GerHobbelt/fmt.git
 	
-ignore = dirty
+
 [submodule "xml-pugixml"]
 	path = xml-pugixml
 	url = https://github.com/GerHobbelt/pugixml.git
@@ -372,7 +372,7 @@ ignore = dirty
 	path = zstd
 	url = https://github.com/GerHobbelt/zstd.git
 	
-ignore = dirty
+
 [submodule "libwebsocketpp"]
 	path = libwebsocketpp
 	url = https://github.com/GerHobbelt/websocketpp.git
@@ -387,7 +387,7 @@ ignore = dirty
 	path = crow
 	url = https://github.com/GerHobbelt/crow.git
 	
-ignore = dirty
+
 [submodule "lda"]
 	path = lda
 	url = https://github.com/GerHobbelt/lda-c.git
@@ -492,7 +492,7 @@ ignore = dirty
 	path = QuickJS-C++-Wrapper
 	url = https://github.com/GerHobbelt/quickjscpp.git
 	
-ignore = dirty
+
 [submodule "libconfig"]
 	path = libconfig
 	url = https://github.com/GerHobbelt/libconfig.git
@@ -512,7 +512,7 @@ ignore = dirty
 	path = brotli
 	url = https://github.com/GerHobbelt/brotli.git
 	
-ignore = dirty
+
 [submodule "tomlpp"]
 	path = tomlpp
 	url = https://github.com/GerHobbelt/tomlplusplus.git
@@ -522,7 +522,7 @@ ignore = dirty
 	path = plf_nanotimer
 	url = https://github.com/GerHobbelt/plf_nanotimer.git
 	
-ignore = dirty
+
 [submodule "mime-mega"]
 	path = mime-mega
 	url = https://github.com/GerHobbelt/MegaMimes.git
@@ -1298,11 +1298,6 @@ ignore = dirty
 	url = https://github.com/GerHobbelt/smhasher.git
 	
 ignore = dirty
-[submodule "circlehash"]
-	path = circlehash
-	url = https://github.com/GerHobbelt/circlehash.git
-	
-ignore = dirty
 [submodule "htmlstreamparser"]
 	path = htmlstreamparser
 	url = https://github.com/GerHobbelt/htmlstreamparser.git
@@ -1392,12 +1387,12 @@ ignore = dirty
 	path = libzopfli
 	url = https://github.com/GerHobbelt/zopfli.git
 
-ignore = dirty
+
 [submodule "libwildmatch"]
 	path = libwildmatch
 	url = https://github.com/GerHobbelt/wildmatch.git
 
-ignore = dirty
+
 [submodule "libsqlfs"]
 	path = libsqlfs
 	url = https://github.com/GerHobbelt/libsqlfs.git
@@ -2057,7 +2052,7 @@ ignore = dirty
 	path = libeternaltimestamp
 	url = https://github.com/GerHobbelt/libeternaltimestamp.git
 
-ignore = dirty
+
 [submodule "libxslt"]
 	path = libxslt
 	url = https://github.com/GerHobbelt/libxslt.git
@@ -3657,7 +3652,7 @@ ignore = dirty
 	path = vcopy
 	url = git@github.com:GerHobbelt/vcopy.git
 
-ignore = dirty
+
 [submodule "fswatch"]
 	path = fswatch
 	url = git@github.com:GerHobbelt/fswatch.git
