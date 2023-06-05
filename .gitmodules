@@ -237,7 +237,7 @@ ignore = dirty
 	path = QuickJS
 	url = https://github.com/GerHobbelt/quickjs.git
 	
-ignore = dirty
+
 [submodule "ECMA262"]
 	path = ECMA262
 	url = https://github.com/GerHobbelt/ecma262.git
