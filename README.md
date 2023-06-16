@@ -3179,12 +3179,17 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 
 - **calibre** [📁](./calibre) [🌐](https://github.com/GerHobbelt/calibre) -- an e-book manager. It can view, convert, edit and catalog e-books in all of the major e-book formats. It can also talk to e-book reader devices. It can go out to the internet and fetch metadata for your books. It can download newspapers and convert them into e-books for convenient reading. It is cross platform, running on Linux, Windows and macOS.
 - **cef-pdf** [📁](./cef-pdf) [🌐](https://github.com/GerHobbelt/cef-pdf) -- a command line utility (with embedded HTTP server as an optional mode) for creating PDF documents from HTML content. It uses Google Chrome browser's [Chromium Embedded Framework (CEF)](https://bitbucket.org/chromiumembedded/cef/overview) library for all it's internal work; loading urls, rendering HTML & CSS pages and PDF printing, therefore, it produces perfect, accurate, excellent quality PDF documents.
+- **cld1-language-detect** [📁](./cld1-language-detect) [🌐](https://github.com/GerHobbelt/cld)
+- **cld3-language-detect** [📁](./cld3-language-detect) [🌐](https://github.com/GerHobbelt/cld3)
 - **cpp-terminal** [📁](./cpp-terminal) [🌐](https://github.com/GerHobbelt/cpp-terminal)
+- **guetzli** [📁](./guetzli) [🌐](https://github.com/GerHobbelt/guetzli)
 - **hsluv-c** [📁](./hsluv-c) [🌐](https://github.com/GerHobbelt/hsluv-c)
 - **ion-c** [📁](./ion-c) [🌐](https://github.com/GerHobbelt/ion-c) -- a C implementation of the [Ion data notation](http://amzn.github.io/ion-docs).
 - **libdivide** [📁](./libdivide) [🌐](https://github.com/GerHobbelt/libdivide)
 - **libsql** [📁](./libsql) [🌐](https://github.com/GerHobbelt/libsql)
 - **simd-imgproc** [📁](./simd-imgproc) [🌐](https://github.com/GerHobbelt/Simd) -- Simd Library for image processing and machine learning.
+- **termcolor** [📁](./termcolor) [🌐](https://github.com/GerHobbelt/termcolor)
+- **tinydir** [📁](./tinydir) [🌐](https://github.com/GerHobbelt/tinydir)
 - **unqlite** [📁](./unqlite) [🌐](https://github.com/GerHobbelt/unqlite)
 
 

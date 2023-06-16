@@ -12,3 +12,8 @@ DIR: **./hsluv-c** -- - **hsluv-c** [📁](./hsluv-c) [🌐](https://github.com/
 DIR: **./libdivide** -- - **libdivide** [📁](./libdivide) [🌐](https://github.com/GerHobbelt/libdivide)
 DIR: **./libsql** -- - **libsql** [📁](./libsql) [🌐](https://github.com/GerHobbelt/libsql)
 DIR: **./unqlite** -- - **unqlite** [📁](./unqlite) [🌐](https://github.com/GerHobbelt/unqlite)
+DIR: **./cld1-language-detect** -- - **cld1-language-detect** [📁](./cld1-language-detect) [🌐](https://github.com/GerHobbelt/cld)
+DIR: **./cld3-language-detect** -- - **cld3-language-detect** [📁](./cld3-language-detect) [🌐](https://github.com/GerHobbelt/cld3)
+DIR: **./guetzli** -- - **guetzli** [📁](./guetzli) [🌐](https://github.com/GerHobbelt/guetzli)
+DIR: **./termcolor** -- - **termcolor** [📁](./termcolor) [🌐](https://github.com/GerHobbelt/termcolor)
+DIR: **./tinydir** -- - **tinydir** [📁](./tinydir) [🌐](https://github.com/GerHobbelt/tinydir)

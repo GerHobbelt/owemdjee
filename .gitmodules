@@ -3688,4 +3688,28 @@ ignore = dirty
 	url = git@github.com:GerHobbelt/cpp-terminal.git
 
 ignore = dirty
+[submodule "termcolor"]
+	path = termcolor
+	url = git@github.com:GerHobbelt/termcolor.git
 
+ignore = dirty
+[submodule "cld3-language-detect"]
+	path = cld3-language-detect
+	url = git@github.com:GerHobbelt/cld3.git
+
+ignore = dirty
+[submodule "cld1-language-detect"]
+	path = cld1-language-detect
+	url = git@github.com:GerHobbelt/cld.git
+
+ignore = dirty
+[submodule "guetzli"]
+	path = guetzli
+	url = git@github.com:GerHobbelt/guetzli.git
+
+ignore = dirty
+[submodule "tinydir"]
+	path = tinydir
+	url = git@github.com:GerHobbelt/tinydir.git
+
+ignore = dirty
