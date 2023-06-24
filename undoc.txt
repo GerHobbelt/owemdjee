@@ -17,3 +17,5 @@ DIR: **./cld3-language-detect** -- - **cld3-language-detect** [📁](./cld3-lang
 DIR: **./guetzli** -- - **guetzli** [📁](./guetzli) [🌐](https://github.com/GerHobbelt/guetzli)
 DIR: **./termcolor** -- - **termcolor** [📁](./termcolor) [🌐](https://github.com/GerHobbelt/termcolor)
 DIR: **./tinydir** -- - **tinydir** [📁](./tinydir) [🌐](https://github.com/GerHobbelt/tinydir)
+DIR: **./unicode-icu-data** -- - **unicode-icu-data** [📁](./unicode-icu-data) [🌐](https://github.com/GerHobbelt/icu-data)
+DIR: **./unicode-icu-demos** -- - **unicode-icu-demos** [📁](./unicode-icu-demos) [🌐](https://github.com/GerHobbelt/icu-demos)

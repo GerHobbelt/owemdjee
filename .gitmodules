@@ -3713,3 +3713,19 @@ ignore = dirty
 	url = git@github.com:GerHobbelt/tinydir.git
 
 ignore = dirty
+[submodule "unicode-icu-data"]
+	path = unicode-icu-data
+	url = git@github.com:GerHobbelt/icu-data.git
+
+ignore = dirty
+[submodule "unicode-icu-demos"]
+	path = unicode-icu-demos
+	url = git@github.com:GerHobbelt/icu-demos.git
+
+ignore = dirty
+[submodule "unicode-cldr-data"]
+	path = unicode-cldr-data
+	url = git@github.com:GerHobbelt/cldr-json.git
+[submodule "RE-flex"]
+	path = RE-flex
+	url = git@github.com:GerHobbelt/RE-flex.git
