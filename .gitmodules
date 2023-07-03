@@ -3726,6 +3726,10 @@ ignore = dirty
 [submodule "unicode-cldr-data"]
 	path = unicode-cldr-data
 	url = git@github.com:GerHobbelt/cldr-json.git
+
+ignore = dirty
 [submodule "RE-flex"]
 	path = RE-flex
 	url = git@github.com:GerHobbelt/RE-flex.git
+
+ignore = dirty
