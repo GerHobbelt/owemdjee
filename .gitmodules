@@ -3733,3 +3733,8 @@ ignore = dirty
 	url = git@github.com:GerHobbelt/RE-flex.git
 
 ignore = dirty
+[submodule "pdiff"]
+	path = pdiff
+	url = git@github.com:GerHobbelt/pdiff.git
+
+ignore = dirty
