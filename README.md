@@ -3356,6 +3356,22 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
   - **removed**; reason: see `lzo2` above. LZ4 either overtakes this one or is on par (anno 2022 AD) and I don't see a lot happening here, so the coolness factor is slowly fading. See also [How do I decide between LZ4 and Snappy compression?](https://stackoverflow.com/questions/67537111/how-do-i-decide-between-lz4-and-snappy-compression)
 
 
+---
+
+
+
+
+
+# Libraries in this collection (All of the above, listed in **_directory_** order)
+
+
+
+
+
+
+
+
+---
 
 
 # TBD: Libraries which still need to be moved into the overview / categories above...
@@ -3416,5 +3432,10 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **unicode-cldr-data** [📁](./unicode-cldr-data) [🌐](https://github.com/GerHobbelt/cldr-json) -- the JSON distribution of CLDR locale data for internationalization. While XML (not JSON) is the "official" format for all CLDR data, this data is programatically generated from the corresponding XML, using the CLDR tooling. This JSON data is generated using only data that has achieved draft="contributed" or draft="approved" status in the CLDR. This is the same threshhold as is used by the ICU (International Components for Unicode).
 - **waifu2x-ncnn-vulkan** [📁](./waifu2x-ncnn-vulkan) [🌐](https://github.com/GerHobbelt/waifu2x-ncnn-vulkan)
 - **win-iconv** [📁](./win-iconv) [🌐](https://github.com/GerHobbelt/win-iconv)
+
+[submodule "pylene"]
+	path = pylene
+	url = git@github.com:GerHobbelt/pylene.git
+	
 
 

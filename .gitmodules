@@ -3741,102 +3741,175 @@ ignore = dirty
 [submodule "minifb"]
 	path = minifb
 	url = git@github.com:GerHobbelt/minifb.git
+	
+ignore = dirty
 [submodule "simdjson"]
 	path = simdjson
 	url = git@github.com:GerHobbelt/simdjson.git
+	
+ignore = dirty
 [submodule "groonga"]
 	path = groonga
 	url = git@github.com:GerHobbelt/groonga.git
+	
+ignore = dirty
 [submodule "ivf-hnsw"]
 	path = ivf-hnsw
 	url = git@github.com:GerHobbelt/ivf-hnsw.git
+	
+ignore = dirty
 [submodule "n2-kNN"]
 	path = n2-kNN
 	url = git@github.com:GerHobbelt/n2.git
+	
+ignore = dirty
 [submodule "online-hnsw"]
 	path = online-hnsw
 	url = git@github.com:GerHobbelt/online-hnsw.git
+	
+ignore = dirty
 [submodule "libbloomfilters"]
 	path = libbloomfilters
 	url = git@github.com:GerHobbelt/libbloomfilters.git
+	
+ignore = dirty
 [submodule "BitFunnel"]
 	path = BitFunnel
 	url = git@github.com:GerHobbelt/BitFunnel.git
+	
+ignore = dirty
 [submodule "bloom"]
 	path = bloom
 	url = git@github.com:GerHobbelt/bloom.git
+	
+ignore = dirty
 [submodule "strtk"]
 	path = strtk
 	url = git@github.com:GerHobbelt/strtk.git
+	
+ignore = dirty
 [submodule "exprtk"]
 	path = exprtk
 	url = git@github.com:GerHobbelt/exprtk.git
+	
+ignore = dirty
 [submodule "oidn-OpenImageDenoise"]
 	path = oidn-OpenImageDenoise
 	url = git@github.com:GerHobbelt/oidn.git
+	
+ignore = dirty
 [submodule "waifu2x-ncnn-vulkan"]
 	path = waifu2x-ncnn-vulkan
 	url = git@github.com:GerHobbelt/waifu2x-ncnn-vulkan.git
+	
+ignore = dirty
 [submodule "farver-OKlab"]
 	path = farver-OKlab
 	url = git@github.com:GerHobbelt/farver.git
+	
+ignore = dirty
 [submodule "gmic-community"]
 	path = gmic-community
 	url = git@github.com:GerHobbelt/gmic-community.git
+	
+ignore = dirty
 [submodule "gmic"]
 	path = gmic
 	url = git@github.com:GerHobbelt/gmic.git
+	
+ignore = dirty
 [submodule "scws-chinese-word-segmentation"]
 	path = scws-chinese-word-segmentation
 	url = git@github.com:GerHobbelt/scws.git
+	
+ignore = dirty
 [submodule "win-iconv"]
 	path = win-iconv
 	url = git@github.com:GerHobbelt/win-iconv.git
+	
+ignore = dirty
 [submodule "lexbor"]
 	path = lexbor
 	url = git@github.com:GerHobbelt/lexbor.git
+	
+ignore = dirty
 [submodule "easyexif"]
 	path = easyexif
 	url = git@github.com:GerHobbelt/easyexif.git
+	
+ignore = dirty
 [submodule "libusb"]
 	path = libusb
 	url = git@github.com:GerHobbelt/libusb.git
+	
+ignore = dirty
 [submodule "ADE-graph-management"]
 	path = ADE-graph-management
 	url = git@github.com:GerHobbelt/ade.git
+	
+ignore = dirty
 [submodule "opencv_extra"]
 	path = opencv_extra
 	url = git@github.com:GerHobbelt/opencv_extra.git
+	
+ignore = dirty
 [submodule "spdlog_sqlite_sink"]
 	path = spdlog_sqlite_sink
 	url = git@github.com:GerHobbelt/sqlite_sink.git
+	
+ignore = dirty
 [submodule "loguru"]
 	path = loguru
 	url = git@github.com:GerHobbelt/loguru.git
+	
+ignore = dirty
 [submodule "g3log"]
 	path = g3log
 	url = git@github.com:GerHobbelt/g3log.git
+	
+ignore = dirty
 [submodule "quill-logging"]
 	path = quill-logging
 	url = git@github.com:GerHobbelt/quill.git
+	
+ignore = dirty
 [submodule "reckless"]
 	path = reckless
 	url = git@github.com:GerHobbelt/reckless.git
+	
+ignore = dirty
 [submodule "OpenColorIO"]
 	path = OpenColorIO
 	url = git@github.com:GerHobbelt/OpenColorIO.git
+	
+ignore = dirty
 [submodule "graph-coloring"]
 	path = graph-coloring
 	url = git@github.com:GerHobbelt/graph-coloring.git
+	
+ignore = dirty
 [submodule "libprecog-data"]
 	path = libprecog-data
 	url = git@github.com:GerHobbelt/libprecog-data.git
+	
+ignore = dirty
 [submodule "libprecog-manuals"]
 	path = libprecog-manuals
 	url = git@github.com:GerHobbelt/libprecog-manuals.git
+	
+ignore = dirty
 [submodule "libpillowfight"]
 	path = libpillowfight
 	url = git@github.com:GerHobbelt/libpillowfight.git
+	
+ignore = dirty
 [submodule "pecos"]
 	path = pecos
 	url = git@github.com:GerHobbelt/pecos.git
+	
+ignore = dirty
+[submodule "pylene"]
+	path = pylene
+	url = git@github.com:GerHobbelt/pylene.git
+	
+ignore = dirty
