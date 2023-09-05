@@ -5,6 +5,15 @@
 const path = require("path");
 const fs = require("fs");
 
+
+
+
+
+
+
+
+
+
 let txt = fs.readFileSync("README.md", "utf8");
 const origTxt = txt;
 
@@ -223,6 +232,63 @@ txt = txt.replace(/([\r\n]+)\s*\[submodule "([^"]+)"\][\s\r\n]+path = ([^\s\r\n]
 txt = process_all_supersections(txt);
 
 let descr_arr = collect_descriptions(txt);
+
+txt = check_entries_against_their_categorized_references(txt);
+
+
+mod_re = /- \*\*([^*]+)\*\* \[📁\]\(([^ )]+)\) \[🌐\]\(([^ )]+)\)\s*[\n]/g;
+txt = txt.replace(mod_re, (m, p1, p2, p3, pos) => {
+	let id = 'x' + p1;
+	let localdir = p2;
+	let key2 = localdir.replace('thirdparty/', '').replace(/[\\\/._-]+/g, '');
+	let descr = descr_arr[id];
+	if (descr) {
+		let indent = find_indent_level(txt, pos);
+		let descr_indented = reindent_text(descr, indent + 2);
+		//console.log({m, p1, p2, p3, key2, descr, pos, indent, descr_indented});
+		return `${ m.trim() } -- ${ descr_indented }\n`;
+	}
+	return m;
+});
+
+
+mod_re = /- \*\*([^*]+)\*\* (?:\[📁\]\(([^ )]+)\) )?\[🌐\]\(([^ )]+)\)/g;
+
+let undoc = [];
+let undoc_dedup = {};
+txt = txt.replace(mod_re, (m, p1, p2, p3, pos) => {
+	//console.log({m, p1, p2, p3, pos});
+	let id = 'x' + p1;
+	let localdir = p2;
+	if (!undoc_dedup[id]) {
+		undoc_dedup[id] = true;
+		let descr = descr_arr[id];
+		if (!descr) {
+			undoc.push(`DIR: **${ localdir || id }** -- ${ m }`);
+		}
+	}
+	return m;
+});
+
+if (undoc.length > 0) {
+	console.log("Updating the UNDOC.TXT list...");
+	fs.writeFileSync("undoc.txt", undoc.join('\n') + '\n', "utf8");
+}
+
+if (origTxt !== txt) {
+	console.log("Updating the README...");
+	fs.writeFileSync("README.md", txt, "utf8");
+}
+
+
+
+
+
+
+
+
+
+
 
 
 function process_all_supersections(txt) {
@@ -634,51 +700,4 @@ function collect_entries(txt) {
 }
 
 
-
-txt = check_entries_against_their_categorized_references(txt);
-
-
-mod_re = /- \*\*([^*]+)\*\* \[📁\]\(([^ )]+)\) \[🌐\]\(([^ )]+)\)\s*[\n]/g;
-txt = txt.replace(mod_re, (m, p1, p2, p3, pos) => {
-	let id = 'x' + p1;
-	let localdir = p2;
-	let key2 = localdir.replace('thirdparty/', '').replace(/[\\\/._-]+/g, '');
-	let descr = descr_arr[id];
-	if (descr) {
-		let indent = find_indent_level(txt, pos);
-		let descr_indented = reindent_text(descr, indent + 2);
-		//console.log({m, p1, p2, p3, key2, descr, pos, indent, descr_indented});
-		return `${ m.trim() } -- ${ descr_indented }\n`;
-	}
-	return m;
-});
-
-
-mod_re = /- \*\*([^*]+)\*\* (?:\[📁\]\(([^ )]+)\) )?\[🌐\]\(([^ )]+)\)/g;
-
-let undoc = [];
-let undoc_dedup = {};
-txt = txt.replace(mod_re, (m, p1, p2, p3, pos) => {
-	//console.log({m, p1, p2, p3, pos});
-	let id = 'x' + p1;
-	let localdir = p2;
-	if (!undoc_dedup[id]) {
-		undoc_dedup[id] = true;
-		let descr = descr_arr[id];
-		if (!descr) {
-			undoc.push(`DIR: **${ localdir || id }** -- ${ m }`);
-		}
-	}
-	return m;
-});
-
-if (undoc.length > 0) {
-	console.log("Updating the UNDOC.TXT list...");
-	fs.writeFileSync("undoc.txt", undoc.join('\n') + '\n', "utf8");
-}
-
-if (origTxt !== txt) {
-	console.log("Updating the README...");
-	fs.writeFileSync("README.md", txt, "utf8");
-}
 
