@@ -3738,3 +3738,105 @@ ignore = dirty
 	url = git@github.com:GerHobbelt/pdiff.git
 
 ignore = dirty
+[submodule "minifb"]
+	path = minifb
+	url = git@github.com:GerHobbelt/minifb.git
+[submodule "simdjson"]
+	path = simdjson
+	url = git@github.com:GerHobbelt/simdjson.git
+[submodule "groonga"]
+	path = groonga
+	url = git@github.com:GerHobbelt/groonga.git
+[submodule "ivf-hnsw"]
+	path = ivf-hnsw
+	url = git@github.com:GerHobbelt/ivf-hnsw.git
+[submodule "n2-kNN"]
+	path = n2-kNN
+	url = git@github.com:GerHobbelt/n2.git
+[submodule "online-hnsw"]
+	path = online-hnsw
+	url = git@github.com:GerHobbelt/online-hnsw.git
+[submodule "libbloomfilters"]
+	path = libbloomfilters
+	url = git@github.com:GerHobbelt/libbloomfilters.git
+[submodule "BitFunnel"]
+	path = BitFunnel
+	url = git@github.com:GerHobbelt/BitFunnel.git
+[submodule "bloom"]
+	path = bloom
+	url = git@github.com:GerHobbelt/bloom.git
+[submodule "strtk"]
+	path = strtk
+	url = git@github.com:GerHobbelt/strtk.git
+[submodule "exprtk"]
+	path = exprtk
+	url = git@github.com:GerHobbelt/exprtk.git
+[submodule "oidn-OpenImageDenoise"]
+	path = oidn-OpenImageDenoise
+	url = git@github.com:GerHobbelt/oidn.git
+[submodule "waifu2x-ncnn-vulkan"]
+	path = waifu2x-ncnn-vulkan
+	url = git@github.com:GerHobbelt/waifu2x-ncnn-vulkan.git
+[submodule "farver-OKlab"]
+	path = farver-OKlab
+	url = git@github.com:GerHobbelt/farver.git
+[submodule "gmic-community"]
+	path = gmic-community
+	url = git@github.com:GerHobbelt/gmic-community.git
+[submodule "gmic"]
+	path = gmic
+	url = git@github.com:GerHobbelt/gmic.git
+[submodule "scws-chinese-word-segmentation"]
+	path = scws-chinese-word-segmentation
+	url = git@github.com:GerHobbelt/scws.git
+[submodule "win-iconv"]
+	path = win-iconv
+	url = git@github.com:GerHobbelt/win-iconv.git
+[submodule "lexbor"]
+	path = lexbor
+	url = git@github.com:GerHobbelt/lexbor.git
+[submodule "easyexif"]
+	path = easyexif
+	url = git@github.com:GerHobbelt/easyexif.git
+[submodule "libusb"]
+	path = libusb
+	url = git@github.com:GerHobbelt/libusb.git
+[submodule "ADE-graph-management"]
+	path = ADE-graph-management
+	url = git@github.com:GerHobbelt/ade.git
+[submodule "opencv_extra"]
+	path = opencv_extra
+	url = git@github.com:GerHobbelt/opencv_extra.git
+[submodule "spdlog_sqlite_sink"]
+	path = spdlog_sqlite_sink
+	url = git@github.com:GerHobbelt/sqlite_sink.git
+[submodule "loguru"]
+	path = loguru
+	url = git@github.com:GerHobbelt/loguru.git
+[submodule "g3log"]
+	path = g3log
+	url = git@github.com:GerHobbelt/g3log.git
+[submodule "quill-logging"]
+	path = quill-logging
+	url = git@github.com:GerHobbelt/quill.git
+[submodule "reckless"]
+	path = reckless
+	url = git@github.com:GerHobbelt/reckless.git
+[submodule "OpenColorIO"]
+	path = OpenColorIO
+	url = git@github.com:GerHobbelt/OpenColorIO.git
+[submodule "graph-coloring"]
+	path = graph-coloring
+	url = git@github.com:GerHobbelt/graph-coloring.git
+[submodule "libprecog-data"]
+	path = libprecog-data
+	url = git@github.com:GerHobbelt/libprecog-data.git
+[submodule "libprecog-manuals"]
+	path = libprecog-manuals
+	url = git@github.com:GerHobbelt/libprecog-manuals.git
+[submodule "libpillowfight"]
+	path = libpillowfight
+	url = git@github.com:GerHobbelt/libpillowfight.git
+[submodule "pecos"]
+	path = pecos
+	url = git@github.com:GerHobbelt/pecos.git
