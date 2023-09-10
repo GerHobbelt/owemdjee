@@ -192,6 +192,7 @@ The other JavaScript engines considered are of varying size, performance and com
         * [Random generators & all things random](#random-generators--all-things-random)
     * [database "backend storage"](#database-backend-storage)
         * [LMDB, NoSQL and key/value stores](#lmdb-nosql-and-keyvalue-stores)
+	* [SQLite specific modules & related materials](#sqLite-specific-modules-related-materials)
     * [metadata & text (OCR et al) -- language detect, suggesting fixes, ...](#metadata--text-ocr-et-al----language-detect-suggesting-fixes-)
     * [PDF (XML) metadata editing](#pdf-xml-metadata-editing)
     * [web scraping (document extraction, cleaning, metadata extraction, BibTeX, ...)](#web-scraping-document-extraction-cleaning-metadata-extraction-bibtex-)
@@ -202,6 +203,7 @@ The other JavaScript engines considered are of varying size, performance and com
         * [stemmers](#stemmers)
         * [language detection / inference](#language-detection--inference)
     * [scripting *user-tunable tasks* such as OCR preprocessing, metadata extraction, metadata cleaning & other \[post-\]processing, ...](#scripting-user-tunable-tasks-such-as-ocr-preprocessing-metadata-extraction-metadata-cleaning--other-post-processing-)
+      * [QuickJS specific modules & related materials](#quickjs-specific-modules-related-materials)
     * [multi-processing core technologies](#multi-processing-core-technologies)
         * [CLI: commandline parsing & perusing](#cli-commandline-parsing--perusing)
         * [CPU features & capabilities detection](#cpu-features--capabilities-detection)
@@ -245,6 +247,7 @@ The other JavaScript engines considered are of varying size, performance and com
 - **bebop** [📁](./bebop) [🌐](https://github.com/GerHobbelt/bebop) -- an extremely simple, fast, efficient, cross-platform serialization format. Bebop is a schema-based binary serialization technology, similar to Protocol Buffers or MessagePack. In particular, Bebop tries to be a good fit for client–server or distributed web apps that need something faster, more concise, and more type-safe than JSON or MessagePack, while also avoiding some of the complexity of Protocol Buffers, FlatBuffers and the like.
 - **bitsery** [📁](./bitsery) [🌐](https://github.com/GerHobbelt/bitsery) -- header only C++ binary serialization library, designed around the networking requirements for real-time data delivery, especially for games. All cross-platform requirements are enforced at compile time, so serialized data do not store any meta-data information and is as small as possible.
 - **cereal** [📁](./cereal) [🌐](https://github.com/GerHobbelt/cereal) -- C++11 serialization library
+- **libnop** [📁](./libnop) [🌐](https://github.com/GerHobbelt/libnop) -- libnop (C++ Native Object Protocols) is a header-only library for serializing and deserializing C++ data types without external code generators or runtime support libraries. The only mandatory requirement is a compiler that supports the C++14 standard.
 - **GoldFish-CBOR** [📁](./GoldFish-CBOR) [🌐](https://github.com/GerHobbelt/GoldFish) -- a fast JSON and CBOR streaming library, without using memory. GoldFish can parse and generate very large [JSON](http://json.org) or [CBOR](http://cbor.io) documents. It has some similarities to a [SAX](https://en.wikipedia.org/wiki/Simple_API_for_XML) parser, but doesn't use an event driven API, instead the user of the GoldFish interface is in control. GoldFish intends to be the easiest and one of the fastest JSON and CBOR streaming parser and serializer to use.
 - **ion-c** [📁](./ion-c) [🌐](https://github.com/GerHobbelt/ion-c) -- a C implementation of the [Ion data notation](http://amzn.github.io/ion-docs). Amazon Ion is a richly-typed, self-describing, hierarchical data serialization format offering interchangeable binary and text representations. The text format (a superset of JSON) is easy to read and author, supporting rapid prototyping. The binary representation is efficient to store, transmit, and skip-scan parse. The rich type system provides unambiguous semantics for long-term preservation of data which can survive multiple generations of software evolution.
 - **libsmile** [📁](./libsmile) [🌐](https://github.com/GerHobbelt/libsmile) -- C implementation of the Smile binary format (https://github.com/FasterXML/smile-format-specification).
@@ -760,6 +763,7 @@ Fit patterns, e.g. match & transform a point cloud or image onto a template --> 
 - **thunderSVM** [📁](./thunderSVM) [🌐](https://github.com/GerHobbelt/thundersvm) -- ThunderSVM exploits GPUs and multi-core CPUs to achieve high efficiency, supporting all functionalities of LibSVM such as one-class SVMs, SVC, SVR and probabilistic SVMs.
 - **tinn** [📁](./tinn) [🌐](https://github.com/GerHobbelt/tinn) -- Tinn (Tiny Neural Network) is a 200 line dependency free neural network library written in C99.
 - **vxl** [📁](./vxl) [🌐](https://github.com/GerHobbelt/vxl) -- VXL (the Vision-something-Libraries) is a collection of C++ libraries designed for computer vision research and implementation. It was created from TargetJr and the IUE with the aim of making a light, fast and consistent system.
+- **waifu2x-ncnn-vulkan** [📁](./waifu2x-ncnn-vulkan) [🌐](https://github.com/GerHobbelt/waifu2x-ncnn-vulkan) -- waifu2x ncnn Vulkan: an [ncnn project](https://github.com/Tencent/ncnn) implementation of the waifu2x converter. Runs fast on Intel / AMD / Nvidia / Apple-Silicon with Vulkan API.
 - **warp-ctc** [📁](./warp-ctc) [🌐](https://github.com/GerHobbelt/warp-ctc) -- A fast parallel implementation of CTC, on both CPU and GPU. Connectionist Temporal Classification (CTC) is a loss function useful for performing supervised learning on sequence data, without needing an alignment between input data and labels. For example, CTC can be used to train end-to-end systems for speech recognition.
 - **xnnpack** [📁](./xnnpack) [🌐](https://github.com/GerHobbelt/XNNPACK) -- a highly optimized library of floating-point neural network inference operators for ARM, WebAssembly, and x86 platforms. XNNPACK is not intended for direct use by deep learning practitioners and researchers; instead it provides low-level performance primitives for accelerating high-level machine learning frameworks, such as TensorFlow Lite, TensorFlow.js, PyTorch, and MediaPipe.
 - **xtensor** [📁](./xtensor) [🌐](https://github.com/GerHobbelt/xtensor) -- C++ tensors with broadcasting and lazy computing. `xtensor` is a C++ library meant for numerical analysis with multi-dimensional array expressions.
@@ -780,6 +784,7 @@ Fit patterns, e.g. match & transform a point cloud or image onto a template --> 
 - **libharry** [📁](./libharry) [🌐](https://github.com/GerHobbelt/harry) -- Harry - A Tool for Measuring String Similarity
 - **libngt-ann** [📁](./libngt-ann) [🌐](https://github.com/GerHobbelt/NGT) -- Yahoo's Neighborhood Graph and Tree for Indexing High-dimensional Data. NGT provides commands and a library for performing high-speed approximate nearest neighbor searches against a large volume of data (several million to several 10 million items of data) in high dimensional vector data space (several ten to several thousand dimensions).
 - **libsptag** [📁](./libsptag) [🌐](https://github.com/GerHobbelt/SPTAG) -- a library for fast approximate nearest neighbor search.  SPTAG (Space Partition Tree And Graph) is a library for large scale vector approximate nearest neighbor search scenario released by [Microsoft Research (MSR)](https://www.msra.cn/) and [Microsoft Bing](http://bing.com).
+- **n2-kNN** [📁](./n2-kNN) [🌐](https://github.com/GerHobbelt/n2) -- N2: Lightweight approximate **N**\ earest **N**\ eighbor algorithm library. N2 stands for two N's, which comes from \'Approximate ``N``\ earest ``N``\ eighbor Algorithm\'. Before N2, there has been other great approximate nearest neighbor libraries such as `Annoy` and `NMSLIB`. However, each of them had different strengths and weaknesses regarding usability, performance, etc. N2 has been developed aiming to bring the strengths of existing aKNN libraries and supplement their weaknesses.
 - **nanoflann** [📁](./nanoflann) [🌐](https://github.com/GerHobbelt/nanoflann) -- a C++11 header-only library for building KD-Trees of datasets with different topologies: R^2, R^3 (point clouds), SO(2) and SO(3) (2D and 3D rotation groups). No support for approximate NN is provided. This library is a fork of the `flann` library by Marius Muja and David G. Lowe, and born as a child project of `MRPT`.
 - **nmslib** [📁](./nmslib) [🌐](https://github.com/GerHobbelt/nmslib) -- Non-Metric Space Library (NMSLIB) is an efficient cross-platform similarity search library and a toolkit for evaluation of similarity search methods. The core-library does not have any third-party dependencies. It has been gaining popularity recently. In particular, it has become a part of Amazon Elasticsearch Service. The goal of the project is to create an effective and comprehensive toolkit for searching in generic and non-metric spaces. Even though the library contains a variety of metric-space access methods, our main focus is on generic and approximate search methods, in particular, on methods for non-metric spaces. NMSLIB is possibly the first library with a principled support for non-metric space searching.
 - **pagerank** [📁](./pagerank) [🌐](https://github.com/GerHobbelt/pagerank) -- a [pagerank](http://www.ams.org/samplings/feature-column/fcarc-pagerank) implementation in C++ able to handle very big graphs.
@@ -922,6 +927,8 @@ i.e. breaking text into words when you _receive a textstream without spaces_. Al
   
   * Portable Any-Map: PBM (P4), 8-bit PGM (P5), PPM (P6), PAM (P7)
 
+- **gmic** [📁](./gmic) [🌐](https://github.com/GerHobbelt/gmic) -- a Full-Featured Open-Source Framework for Image Processing. It provides several different **[user interfaces](https://en.wikipedia.org/wiki/User_interface)** to convert/manipulate/filter/visualize **generic image datasets**, ranging from _1d scalar signals_ to _3d+t sequences of multi-spectral volumetric images_, hence including _2d color images_.
+- **gmic-community** [📁](./gmic-community) [🌐](https://github.com/GerHobbelt/gmic-community) -- community contributions for the GMIC Full-Featured Open-Source Framework for Image Processing. It provides several different **[user interfaces](https://en.wikipedia.org/wiki/User_interface)** to convert/manipulate/filter/visualize **generic image datasets**, ranging from _1d scalar signals_ to _3d+t sequences of multi-spectral volumetric images_, hence including _2d color images_.
 - **GraphicsMagick** [📁](./GraphicsMagick) [🌐](https://github.com/GerHobbelt/graphicsmagick) -- provides a comprehensive collection of utilities, programming interfaces, and GUIs, to support file format conversion, image processing, and 2D vector rendering. GraphicsMagick is originally based on ImageMagick from ImageMagick Studio (which was originally written by John Cristy at Dupont). The goal of GraphicsMagick is to provide the highest quality product possible while encouraging open and active participation from all interested developers.
 - **guetzli** [📁](./guetzli) [🌐](https://github.com/GerHobbelt/guetzli) -- a JPEG encoder that aims for excellent compression density at high visual quality. Guetzli-generated images are typically 20-30% smaller than images of equivalent quality generated by libjpeg. Guetzli generates only sequential (nonprogressive) JPEGs due to faster decompression speeds they offer.
 - **hsluv-c** [📁](./hsluv-c) [🌐](https://github.com/GerHobbelt/hsluv-c) -- HSLuv (revision 4) is a human-friendly alternative to HSL. HSLuv is very similar to CIELUV, a color space designed for perceptual uniformity based on human experiments. When accessed by polar coordinates, it becomes functionally similar to HSL with a single problem: its chroma component doesn't fit into a specific range. HSLuv extends CIELUV with a new saturation component that allows you to span all the available chroma as a neat percentage.
@@ -947,12 +954,17 @@ i.e. breaking text into words when you _receive a textstream without spaces_. Al
 
 - **libimagequant** [📁](./libimagequant) [🌐](https://github.com/GerHobbelt/libimagequant) -- Palette quantization library that powers `pngquant` and other PNG optimizers. `libimagequant` converts RGBA images to palette-based 8-bit indexed images, including alpha component. It's ideal for generating tiny PNG images and nice-looking GIFs. Image encoding/decoding isn't handled by the library itself, bring your own encoder.
 - **libprecog** [📁](./libprecog) [🌐](https://github.com/GerHobbelt/PRLib) -- PRLib - Pre-Recognition Library. The main aim of the library is to prepare images for OCR (text recogntion). Image processing can really help to improve recognition quality.
+- **libprecog-data** [📁](./libprecog-data) [🌐](https://github.com/GerHobbelt/libprecog-data) -- `PRLib` (a.k.a. `libprecog`) test data.
+- **libprecog-manuals** [📁](./libprecog-manuals) [🌐](https://github.com/GerHobbelt/libprecog-manuals) -- `PRLib` (a.k.a. `libprecog`) related papers.
 - **libraqm** [📁](./libraqm) [🌐](https://github.com/GerHobbelt/libraqm) -- a small library that encapsulates the logic for complex text layout and provides a convenient API.
 - **libvips** [📁](./libvips) [🌐](https://github.com/GerHobbelt/libvips) -- a demand-driven, horizontally threaded image processing library which has around 300 operations covering arithmetic, histograms, convolution, morphological operations, frequency filtering, colour, resampling, statistics and others. It supports a large range of numeric types, from 8-bit int to 128-bit complex. Images can have any number of bands. It supports a good range of image formats, including JPEG, JPEG2000, JPEG-XL, TIFF, PNG, WebP, HEIC, AVIF, FITS, Matlab, OpenEXR, PDF, SVG, HDR, PPM / PGM / PFM, CSV, GIF, Analyze, NIfTI, DeepZoom, and OpenSlide. It can also load images via ImageMagick or GraphicsMagick, letting it work with formats like DICOM.
+- **oidn-OpenImageDenoise** [📁](./oidn-OpenImageDenoise) [🌐](https://github.com/GerHobbelt/oidn) -- Intel® Open Image Denoise is an open source library of high-performance, high-quality denoising filters for images rendered with ray tracing.
 - **olena** [📁](./olena) [🌐](https://github.com/GerHobbelt/olena) -- a platform dedicated to image processing.  At the moment it is mainly composed of a C++ library: Milena.  This library features many tools to easily perform image processing tasks.  Its main characteristic is its genericity: it allows to write an algorithm once and run it over many kinds of images (gray scale, color, 1D, 2D, 3D, ...).
 - **opencv** [📁](./opencv) [🌐](https://github.com/GerHobbelt/opencv) -- OpenCV: Open Source Computer Vision Library
 - **opencv_contrib** [📁](./opencv_contrib) [🌐](https://github.com/GerHobbelt/opencv_contrib) -- OpenCV's extra modules. This is where you'll find new, bleeding edge OpenCV module development.
+- **opencv_extra** [📁](./opencv_extra) [🌐](https://github.com/GerHobbelt/opencv_extra) -- extra data for OpenCV: Open Source Computer Vision Library
 - **pixman** [📁](./pixman) [🌐](https://github.com/GerHobbelt/pixman) -- a library that provides low-level pixel manipulation features such as image compositing and trapezoid rasterization.
+- **pylene** [📁](./pylene) [🌐](https://github.com/GerHobbelt/pylene) -- Pylene is a fork of [Olena](http://www.lrde.epita.fr/olena), an image processing library targeting genericity and efficiency. It provided mostly Mathematical Morphology building blocs for image processing pipelines.
 - **rotate_detection** [📁](./rotate_detection) [🌐](https://github.com/GerHobbelt/rotate_detection) -- angle rotation detection on scanned documents. Designed for embedding in systems using tesseract OCR. The detection algorithm based on [Rényi entropy](https://en.wikipedia.org/wiki/R%C3%A9nyi_entropy).
 - **scantailor** [📁](./scantailor) [🌐](https://github.com/GerHobbelt/scantailor-advanced) -- [scantailor_advanced](https://github.com/4lex4/scantailor-advanced) is the [ScanTailor](https://github.com/scantailor/scantailor) version that merges the features of the *ScanTailor Featured* and *ScanTailor Enhanced* versions, brings new ones and fixes. ScanTailor is an interactive post-processing tool for scanned pages. It performs operations such as page splitting, deskewing, adding/removing borders, selecting content, ... and many others.
 - **simd-imgproc** [📁](./simd-imgproc) [🌐](https://github.com/GerHobbelt/Simd) --   The Simd Library is an image processing and machine learning library designed for C and C++ programmers. It provides many useful high performance algorithms for image processing such as: pixel format conversion, image scaling and filtration, extraction of statistic information from images, motion detection, object detection (HAAR and LBP classifier cascades) and classification, neural network.
@@ -1018,6 +1030,7 @@ i.e. breaking text into words when you _receive a textstream without spaces_. Al
   
   The primary target audience for OIIO is VFX studios and developers of tools such as renderers, compositors, viewers, and other image-related software you'd find in a production pipeline.
 
+- **mozjpeg** [📁](./mozjpeg) [🌐](https://github.com/GerHobbelt/mozjpeg) -- the Mozilla JPEG Encoder Project improves JPEG compression efficiency achieving higher visual quality and smaller file sizes at the same time. It is compatible with the JPEG standard, and the vast majority of the world's deployed JPEG decoders. MozJPEG is a patch for [libjpeg-turbo](https://github.com/libjpeg-turbo/libjpeg-turbo).
 - **openjpeg** [📁](../../thirdparty/openjpeg) [🌐](https://github.com/GerHobbelt/thirdparty-openjpeg) -- OPENJPEG Library and Applications -- OpenJPEG is an open-source JPEG 2000 codec written in C language. It has been developed in order to promote the use of [JPEG 2000](http://www.jpeg.org/jpeg2000), a still-image compression standard from the Joint Photographic Experts Group ([JPEG](http://www.jpeg.org)).  Since April 2015, it is officially recognized by ISO/IEC and ITU-T as a [JPEG 2000 Reference Software](http://www.itu.int/rec/T-REC-T.804-201504-I!Amd2).
 - **pmt-png-tools** [📁](./pmt-png-tools) [🌐](https://github.com/GerHobbelt/pmt)
 - **twain_library** [📁](./twain_library) [🌐](https://github.com/GerHobbelt/twain_library) -- the DTWAIN Library, **Version 5.x**, from Dynarithmic Software.  DTWAIN is an open source programmer's library that will allow applications to acquire images from TWAIN-enabled devices using a simple Application Programmer's Interface (API).
@@ -1060,6 +1073,7 @@ See also [image formats (visual) quality comparison](https://eclipseo.github.io/
 - **randen** [📁](./randen) [🌐](https://github.com/GerHobbelt/randen) -- What if we could default to attack-resistant random generators without excessive CPU cost? We introduce 'Randen', a new generator with security guarantees; it outperforms MT19937, pcg64_c32, Philox, ISAAC and ChaCha8 in real-world benchmarks. This is made possible by AES hardware acceleration and a large Feistel permutation.
 - **stan** [📁](./stan) [🌐](https://github.com/GerHobbelt/stan) -- Stan is a C++ package providing (1) full Bayesian inference using the No-U-Turn sampler (NUTS), a variant of Hamiltonian Monte Carlo (HMC), (2) approximate Bayesian inference using automatic differentiation variational inference (ADVI), and (3) penalized maximum likelihood estimation (MLE) using L-BFGS optimization. It is built on top of the [Stan Math library](https://github.com/stan-dev/math).
 - **stateline** [📁](./stateline) [🌐](https://github.com/GerHobbelt/stateline) -- a framework for distributed Markov Chain Monte Carlo (MCMC) sampling written in C++. It implements random walk Metropolis-Hastings with parallel tempering to improve chain mixing, provides an adaptive proposal distribution to speed up convergence, and allows the user to factorise their likelihoods (eg. over sensors or data).
+- **waifu2x-ncnn-vulkan** [📁](./waifu2x-ncnn-vulkan) [🌐](https://github.com/GerHobbelt/waifu2x-ncnn-vulkan) -- waifu2x ncnn Vulkan: an [ncnn project](https://github.com/Tencent/ncnn) implementation of the waifu2x converter. Runs fast on Intel / AMD / Nvidia / Apple-Silicon with Vulkan API.
 - **warpLDA** [📁](./warpLDA) [🌐](https://github.com/GerHobbelt/warplda) -- a cache efficient implementation for Latent Dirichlet Allocation.
 - other *topic modeling* code on the Net:
   
@@ -1100,6 +1114,8 @@ See also [image formats (visual) quality comparison](https://eclipseo.github.io/
   But despite having its code available, SQLite famously doesn't accept external contributors, so community improvements cannot be widely enjoyed.
   There have been other forks in the past, but they all focus on a specific technical difference. We aim to be a community where people can contribute from many different angles and motivations.
   We want to see a world where everyone can benefit from all of the great ideas and hard work that the SQLite community contributes back to the codebase.
+
+- **libsl3** [📁](./libsl3) [🌐](https://github.com/GerHobbelt/libsl3) -- a C++ interface for SQLite 3.x. libsl3 is designed to enable comfortable and efficient communication with a SQLite database based on its natural language, which is SQL.
 
 - **libsqlfs** [📁](./libsqlfs) [🌐](https://github.com/GerHobbelt/libsqlfs) -- a POSIX style file system on top of an SQLite database.  It allows applications to have access to a full read/write file system in a single file, complete with its own file hierarchy and name space.  This is useful for applications which needs structured storage, such as embedding documents within documents, or management of configuration data or preferences.
 - **ligra-graph** [📁](./ligra-graph) [🌐](https://github.com/GerHobbelt/ligra) -- LIGRA: a Lightweight Graph Processing Framework for Shared Memory; works on both uncompressed and compressed graphs and hypergraphs.
@@ -1199,6 +1215,49 @@ See also [image formats (visual) quality comparison](https://eclipseo.github.io/
   - Zero configuration.
 
 
+### SQLite specific modules & related materials
+
+- **libsql** [📁](./libsql) [🌐](https://github.com/GerHobbelt/libsql) --   libSQL is an open source, open contribution fork of SQLite. We aim to evolve it to suit many more use cases than SQLite was originally designed for, and plan to use third-party OSS code wherever it makes sense.
+  
+  SQLite has solidified its place in modern technology stacks, embedded in nearly any computing device you can think of. Its open source nature and public domain availability make it a popular choice for modification to meet specific use cases.
+  But despite having its code available, SQLite famously doesn't accept external contributors, so community improvements cannot be widely enjoyed.
+  There have been other forks in the past, but they all focus on a specific technical difference. We aim to be a community where people can contribute from many different angles and motivations.
+  We want to see a world where everyone can benefit from all of the great ideas and hard work that the SQLite community contributes back to the codebase.
+
+- **libsl3** [📁](./libsl3) [🌐](https://github.com/GerHobbelt/libsl3) -- a C++ interface for SQLite 3.x. libsl3 is designed to enable comfortable and efficient communication with a SQLite database based on its natural language, which is SQL.
+
+- **libsqlfs** [📁](./libsqlfs) [🌐](https://github.com/GerHobbelt/libsqlfs) -- a POSIX style file system on top of an SQLite database.  It allows applications to have access to a full read/write file system in a single file, complete with its own file hierarchy and name space.  This is useful for applications which needs structured storage, such as embedding documents within documents, or management of configuration data or preferences.
+- **sqlcipher** [📁](./sqlcipher) [🌐](https://github.com/GerHobbelt/sqlcipher) -- SQLCipher is a standalone fork of the [SQLite](https://www.sqlite.org/) database library that adds 256 bit AES encryption of database files and other security features.
+- **sqlean** [📁](./sqlean) [🌐](https://github.com/GerHobbelt/sqlean) -- The ultimate set of SQLite extensions: SQLite has few functions compared to other database management systems. SQLite authors see this as a feature rather than a problem, because SQLite has an extension mechanism in place. There are a lot of SQLite extensions out there, but they are incomplete, inconsistent and scattered across the internet. sqlean brings them together, neatly packaged into domain modules, documented, tested, and built for Linux, Windows and macOS.
+- **sqleet** [📁](./sqleet) [🌐](https://github.com/GerHobbelt/sqleet) -- an encryption extension for [SQLite3](https://www.sqlite.org/). The encryption is transparent (*on-the-fly*) and based on modern cryptographic algorithms designed for high performance in software and robust side-channel resistance.
+- **sqlite** [📁](./sqlite) [🌐](https://github.com/GerHobbelt/sqlite) -- the complete [SQLite database engine](https://sqlite.org/).
+- **sqlite3-compression-encryption-vfs** [📁](./sqlite3-compression-encryption-vfs) [🌐](https://github.com/GerHobbelt/sqlite3-compression-encryption-vfs) -- CEVFS: Compression & Encryption VFS for SQLite 3 is a SQLite 3 Virtual File System for compressing and encrypting data at the pager level. Once set up, you use SQLite as you normally would and the compression and encryption is transparently handled during database read/write operations via the SQLite pager.
+- **sqlite3pp** [📁](./sqlite3pp) [🌐](https://github.com/GerHobbelt/sqlite3pp) -- a minimal ORM wrapper for SQLite et al.
+- **sqlite-amalgamation** [📁](./sqlite-amalgamation) [🌐](https://github.com/GerHobbelt/sqlite-amalgamation) -- the [SQLite](http://www.sqlite.org/download.html) amalgamation, which is the recommended method of building SQLite into larger projects.
+- **SQLiteCpp** [📁](./SQLiteCpp) [🌐](https://github.com/GerHobbelt/SQLiteCpp) -- a smart and easy to use C++ SQLite3 wrapper. SQLiteC++ offers an encapsulation around the native C APIs of SQLite, with a few intuitive and well documented C++ classes.
+- **sqlite-fts5-snowball** [📁](./sqlite-fts5-snowball) [🌐](https://github.com/GerHobbelt/fts5-snowball) -- a simple extension for use with FTS5 within SQLite. It allows FTS5 to use Martin Porter's Snowball stemmers (libstemmer), which are available in several languages. Check http://snowballstem.org/ for more information about them.
+- **sqlite_fts_tokenizer_chinese_simple** [📁](./sqlite_fts_tokenizer_chinese_simple) [🌐](https://github.com/GerHobbelt/simple)
+- **SQLiteHistograms** [📁](./SQLiteHistograms) [🌐](https://github.com/GerHobbelt/SQLiteHistograms) -- an SQLite extension library for creating histogram tables, tables of ratio between histograms and interpolation tables of scatter point tables.
+- **sqliteodbc** [📁](./sqliteodbc) [🌐](https://github.com/GerHobbelt/sqliteodbc) -- SQLite ODBC Driver for the wonderful SQLite 2.8.* and SQLite 3.* Database Engine/Library.
+- **sqlite-stats** [📁](./sqlite-stats) [🌐](https://github.com/GerHobbelt/sqlite-stats) -- provides common statistical functions for SQLite.
+- **sqlite_wrapper** [📁](./sqlite_wrapper) [🌐](https://github.com/GerHobbelt/sqlite_wrapper) -- an easy-to-use, lightweight and concurrency-friendly SQLite wrapper written in C++17.
+- **sqlite_zstd_vfs** [📁](./sqlite_zstd_vfs) [🌐](https://github.com/GerHobbelt/sqlite_zstd_vfs) -- SQLite VFS extension providing streaming storage compression using Zstandard (Zstd), transparently compressing pages of the main database file as they're written out and later decompressing them as they're read in. It runs page de/compression on background threads and occasionally generates dictionaries to improve subsequent compression.
+
+- **libdist** [📁](./libdist) [🌐](https://github.com/GerHobbelt/distlib) -- string distance related functions (Damerau-Levenshtein, Jaro-Winkler, longest common substring & subsequence) implemented as SQLite run-time loadable extension, with UTF-8 support.
+- **lib_nas_lockfile** [📁](./lib_nas_lockfile) [🌐](https://github.com/GerHobbelt/lib_nas_lockfile) -- lockfile management on NAS and other disparate network filesystem storage. To be combined with SQLite to create a proper Qiqqa Sync operation.
+- **libsql** [📁](./libsql) [🌐](https://github.com/GerHobbelt/libsql) --   libSQL is an open source, open contribution fork of SQLite. We aim to evolve it to suit many more use cases than SQLite was originally designed for, and plan to use third-party OSS code wherever it makes sense.
+  
+  SQLite has solidified its place in modern technology stacks, embedded in nearly any computing device you can think of. Its open source nature and public domain availability make it a popular choice for modification to meet specific use cases.
+  But despite having its code available, SQLite famously doesn't accept external contributors, so community improvements cannot be widely enjoyed.
+  There have been other forks in the past, but they all focus on a specific technical difference. We aim to be a community where people can contribute from many different angles and motivations.
+  We want to see a world where everyone can benefit from all of the great ideas and hard work that the SQLite community contributes back to the codebase.
+
+- **libsl3** [📁](./libsl3) [🌐](https://github.com/GerHobbelt/libsl3) -- a C++ interface for SQLite 3.x. libsl3 is designed to enable comfortable and efficient communication with a SQLite database based on its natural language, which is SQL.
+
+- **libsqlfs** [📁](./libsqlfs) [🌐](https://github.com/GerHobbelt/libsqlfs) -- a POSIX style file system on top of an SQLite database.  It allows applications to have access to a full read/write file system in a single file, complete with its own file hierarchy and name space.  This is useful for applications which needs structured storage, such as embedding documents within documents, or management of configuration data or preferences.
+
+
+
 
 
 ## metadata & text (OCR et al) -- language detect, suggesting fixes, ...
@@ -1252,7 +1311,7 @@ for round-trip annotation and other "external application editing" of known docu
 - **qpdf** [📁](./qpdf) [🌐](https://github.com/GerHobbelt/qpdf) -- QPDF is a command-line tool and C++ library that performs content-preserving transformations on PDF files. It supports linearization, encryption, and numerous other features. It can also be used for splitting and merging files, creating PDF files, and inspecting files for study or analysis. QPDF does not render PDFs or perform text extraction, and it does not contain higher-level interfaces for working with page contents. It is a low-level tool for working with the structure of PDF files and can be a valuable tool for anyone who wants to do programmatic or command-line-based manipulation of PDF files.
 - **sioyek** [📁](./sioyek) [🌐](https://github.com/GerHobbelt/sioyek) -- a PDF viewer with a focus on textbooks and research papers.
 - **sumatrapdf** [📁](./sumatrapdf) [🌐](https://github.com/GerHobbelt/sumatrapdf) -- SumatraPDF is a multi-format (PDF, EPUB, MOBI, CBZ, CBR, FB2, CHM, XPS, DjVu) reader for Windows.
-- **XMP-Toolkit-SDK** [📁](./XMP-Toolkit-SDK) [🌐](https://github.com/GerHobbelt/XMP-Toolkit-SDK)
+- **XMP-Toolkit-SDK** [📁](./XMP-Toolkit-SDK) [🌐](https://github.com/GerHobbelt/XMP-Toolkit-SDK) -- the XMP Toolkit allows you to integrate XMP functionality into your product, supplying an API for locating, adding, or updating the XMP metadata in a file.
 - **xpdf** [📁](./xpdf) [🌐](https://github.com/GerHobbelt/xpdf) -- Xpdf is an open source viewer for Portable Document Format (PDF) files.
 
 
@@ -1261,6 +1320,7 @@ for round-trip annotation and other "external application editing" of known docu
 
 (see also investigation notes in Qiqqa docs)
 
+- **faup** [📁](./faup) [🌐](https://github.com/GerHobbelt/faup) -- **Faup** stands for Finally An Url Parser and is a library and command line tool to parse URLs and normalize fields with two constraints: (1) work with real-life urls (resilient to badly formated ones), and (2) be fast: no allocation for string parsing and read characters only once.
 - **boost-url** [📁](./boost-url) [🌐](https://github.com/GerHobbelt/boost-url) -- a library for manipulating (RFC3986) Uniform Resource Identifiers (URIs) and Locators (URLs).
 - **cURL** [📁](../../thirdparty/curl) [🌐](https://github.com/GerHobbelt/thirdparty-curl) -- the ubiquitous [libcurl](http://curl.haxx.se/libcurl).
 - **curl-impersonate** [📁](./curl-impersonate) [🌐](https://github.com/GerHobbelt/curl-impersonate) -- a special build of [curl](https://github.com/curl/curl) that can impersonate the four major browsers: Chrome, Edge, Safari & Firefox. curl-impersonate is able to perform TLS and HTTP handshakes that are identical to that of a real browser.
@@ -1271,6 +1331,12 @@ for round-trip annotation and other "external application editing" of known docu
 - **gumbo-libxml** [📁](./gumbo-libxml) [🌐](https://github.com/GerHobbelt/gumbo-libxml) -- LibXML2 bindings for the Gumbo HTML5 parser: this provides a libxml2 API on top of the Gumbo parser.  It lets you use a modern parser - Gumbo now passes all html5lib tests, including the template tag, and should be fully conformant with the HTML5 spec - with the full ecosystem of libxml tools, including XPath, tree modification, DTD validation, etc.
 - **gumbo-parser** [📁](../../thirdparty/gumbo-parser) [🌐](https://github.com/GerHobbelt/gumbo-parser) -- HTML parser
 - **gumbo-query** [📁](./gumbo-query) [🌐](https://github.com/GerHobbelt/gumbo-query) -- HTML DOM access in C/C++
+
+- **LLhttp-parser** [📁](./LLhttp-parser) [🌐](https://github.com/GerHobbelt/llhttp) -- a port and replacement of [http_parser](https://github.com/nodejs/http-parser) to TypeScript. [llparse](https://github.com/nodejs/llparse) is used to generate the output C source file, which could be compiled and linked with the embedder's program (like Node.js).
+
+- **qs_parse** [📁](./qs_parse) [🌐](https://github.com/GerHobbelt/qs_parse) -- a set of simple and easy functions for parsing URL query strings, such as those generated in an HTTP GET form submission.
+- **url-parser** [📁](./url-parser) [🌐](https://github.com/GerHobbelt/url.h) -- parse URLs much like Node's [url](http://nodejs.org/api/url.html) module.
+
 - **htmlstreamparser** [📁](./htmlstreamparser) [🌐](https://github.com/GerHobbelt/htmlstreamparser) -- used in a demo of zsync2
 - **http-parser** [📁](./http-parser) [🌐](https://github.com/GerHobbelt/http-parser) -- a parser for HTTP messages written in C. It parses both requests and responses. The parser is designed to be used in performance HTTP applications. It does not make any syscalls nor allocations, it does not buffer data, it can be interrupted at anytime. Depending on your architecture, it only requires about 40 bytes of data per message stream (in a web server that is per connection).
 - **libcpr** [📁](./libcpr) [🌐](https://github.com/GerHobbelt/cpr) -- wrapper library for cURL. C++ Requests is a simple wrapper around [libcurl](http://curl.haxx.se/libcurl) inspired by the excellent [Python Requests](https://github.com/kennethreitz/requests) project. Despite its name, libcurl's easy interface is anything but, and making mistakes misusing it is a common source of error and frustration. Using the more expressive language facilities of C++11, this library captures the essence of making network calls into a few concise idioms.
@@ -1295,7 +1361,6 @@ for round-trip annotation and other "external application editing" of known docu
 ## file format support
 
 - **basez** [📁](./basez) [🌐](https://github.com/GerHobbelt/basez) -- encode data into/decode data from base16, base32, base32hex, base64 or base64url stream per RFC 4648; MIME base64 Content-Transfer-Encoding per RFC 2045; or PEM Printable Encoding per RFC 1421.
-- **boost-url** [📁](./boost-url) [🌐](https://github.com/GerHobbelt/boost-url) -- a library for manipulating (RFC3986) Uniform Resource Identifiers (URIs) and Locators (URLs).
 - **CHM-lib** [📁](./CHM-lib) [🌐](https://github.com/GerHobbelt/CHMLib) -- as I have several HTML pages stored in this format. See also MHTML: `mht-rip`
 - **csv-parser** [📁](./csv-parser) [🌐](https://github.com/GerHobbelt/csv-parser) -- Vince's CSV Parser: there's plenty of other CSV parsers in the wild, but I had a hard time finding what I wanted. Inspired by Python's `csv` module, I wanted a library with **simple, intuitive syntax**. Furthermore, I wanted support for special use cases such as calculating statistics on very large files. Thus, this library was created with these following goals in mind.
 - **djvulibre** [📁](./djvulibre) [🌐](https://github.com/GerHobbelt/djvulibre) -- DjVu (pronounced "déjà vu") a set of compression technologies, a file format, and a software platform for the delivery over the Web of digital documents, scanned documents, and high resolution images.
@@ -1304,6 +1369,11 @@ for round-trip annotation and other "external application editing" of known docu
 - **gumbo-libxml** [📁](./gumbo-libxml) [🌐](https://github.com/GerHobbelt/gumbo-libxml) -- LibXML2 bindings for the Gumbo HTML5 parser: this provides a libxml2 API on top of the Gumbo parser.  It lets you use a modern parser - Gumbo now passes all html5lib tests, including the template tag, and should be fully conformant with the HTML5 spec - with the full ecosystem of libxml tools, including XPath, tree modification, DTD validation, etc.
 - **gumbo-parser** [📁](../../thirdparty/gumbo-parser) [🌐](https://github.com/GerHobbelt/gumbo-parser) -- HTML parser
 - **gumbo-query** [📁](./gumbo-query) [🌐](https://github.com/GerHobbelt/gumbo-query) -- HTML DOM access in C/C++
+
+- **LLhttp-parser** [📁](./LLhttp-parser) [🌐](https://github.com/GerHobbelt/llhttp) -- a port and replacement of [http_parser](https://github.com/nodejs/http-parser) to TypeScript. [llparse](https://github.com/nodejs/llparse) is used to generate the output C source file, which could be compiled and linked with the embedder's program (like Node.js).
+- **qs_parse** [📁](./qs_parse) [🌐](https://github.com/GerHobbelt/qs_parse) -- a set of simple and easy functions for parsing URL query strings, such as those generated in an HTTP GET form submission.
+- **url-parser** [📁](./url-parser) [🌐](https://github.com/GerHobbelt/url.h) -- parse URLs much like Node's [url](http://nodejs.org/api/url.html) module.
+
 - **http-parser** [📁](./http-parser) [🌐](https://github.com/GerHobbelt/http-parser) -- a parser for HTTP messages written in C. It parses both requests and responses. The parser is designed to be used in performance HTTP applications. It does not make any syscalls nor allocations, it does not buffer data, it can be interrupted at anytime. Depending on your architecture, it only requires about 40 bytes of data per message stream (in a web server that is per connection).
 - **id3-tagparser** [📁](./id3-tagparser) [🌐](https://github.com/GerHobbelt/tagparser) -- a C++ library for reading and writing MP4 (iTunes), ID3, Vorbis, Opus, FLAC and Matroska tags.
 - **jq** [📁](./jq) [🌐](https://github.com/GerHobbelt/jq) -- a lightweight and flexible command-line JSON processor.
@@ -1461,6 +1531,8 @@ We'll be using SOLR mostly, but here might be some interface libraries and an in
   - **QuickJS-C++-Wrapper** [📁](./QuickJS-C++-Wrapper) [🌐](https://github.com/GerHobbelt/quickjscpp) -- quickjscpp is a header-only wrapper around the [quickjs](https://bellard.org/quickjs/) JavaScript engine, which allows easy integration into C++11 code. This wrapper also automatically tracks the lifetime of values and objects, is exception-safe, and automates clean-up.
   - **QuickJS-C++-Wrapper2** [📁](./QuickJS-C++-Wrapper2) [🌐](https://github.com/GerHobbelt/quickjspp) -- QuickJSPP is QuickJS wrapper for C++. It allows you to easily embed Javascript engine into your program.
   - **txiki** [📁](./txiki.js) [🌐](https://github.com/GerHobbelt/txiki.js) -- uses QuickJS as its kernel
+- **txiki** [📁](./txiki.js) [🌐](https://github.com/GerHobbelt/txiki.js) -- a small and powerful JavaScript runtime. It's built on the shoulders of giants: it uses [QuickJS] as its JavaScript engine, [libuv] as the platform layer, [wasm3] as the WebAssembly engine and [curl] as the HTTP / WebSocket client.
+- **yasl** [📁](./yasl) [🌐](https://github.com/GerHobbelt/yasl) -- Bytecode Interpreter for Yet Another Scripting Language (YASL).
 
 - **replxx** [📁](./replxx) [🌐](https://github.com/GerHobbelt/replxx) -- REPL CLI component: `readline` simile for REPL/interactive runs in a CLI
 - **ScriptX** [📁](./ScriptX) [🌐](https://github.com/GerHobbelt/ScriptX) -- wrapper for V8, QuickJS, Lua, Python, ...
@@ -1480,6 +1552,25 @@ The additional (and more important) reason to ditch CPython from the R&D set is 
 - ~~**luaJIT** [🌐](https://github.com/LuaJIT/LuaJIT)~~
   
   - **removed**; reason: see the `lua` entry above.
+
+
+
+
+
+
+### QuickJS specific modules & related materials
+
+- **QuickJS** [📁](./QuickJS) [🌐](https://github.com/GerHobbelt/quickjs) -- a small and embeddable Javascript engine. It supports the <a href="https://tc39.github.io/ecma262/">ES2020</a> specification including modules, asynchronous generators, proxies and BigInt. It optionally supports mathematical extensions such as big decimal floating point numbers (BigDecimal), big binary floating point numbers (BigFloat) and operator overloading.
+  
+- **libbf** [📁](./libbf) [🌐](https://github.com/GerHobbelt/libbf) -- a small library to handle arbitrary precision binary or decimal floating point numbers
+- **QuickJS-C++-Wrapper** [📁](./QuickJS-C++-Wrapper) [🌐](https://github.com/GerHobbelt/quickjscpp) -- quickjscpp is a header-only wrapper around the [quickjs](https://bellard.org/quickjs/) JavaScript engine, which allows easy integration into C++11 code. This wrapper also automatically tracks the lifetime of values and objects, is exception-safe, and automates clean-up.
+- **QuickJS-C++-Wrapper2** [📁](./QuickJS-C++-Wrapper2) [🌐](https://github.com/GerHobbelt/quickjspp) -- QuickJSPP is QuickJS wrapper for C++. It allows you to easily embed Javascript engine into your program.
+- **txiki** [📁](./txiki.js) [🌐](https://github.com/GerHobbelt/txiki.js) -- uses QuickJS as its kernel
+- **txiki** [📁](./txiki.js) [🌐](https://github.com/GerHobbelt/txiki.js) -- a small and powerful JavaScript runtime. It's built on the shoulders of giants: it uses [QuickJS] as its JavaScript engine, [libuv] as the platform layer, [wasm3] as the WebAssembly engine and [curl] as the HTTP / WebSocket client.
+
+- **ScriptX** [📁](./ScriptX) [🌐](https://github.com/GerHobbelt/ScriptX) -- wrapper for V8, QuickJS, Lua, Python, ...
+
+
 
 
 
@@ -1883,6 +1974,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
   2. `Design-by-contract` `CHECK(...)` functionality
   3. Fatal crash handling for graceful shutdown of the logged process without loosing any log details up to the point of the crash.
 
+- **libdiagnostics** [📁](./libdiagnostics) [🌐](https://github.com/GerHobbelt/libdiagnostics) -- a C/C++ diagnostics logging library with support for writing HTML and store images and misc binary data to disk alongside. or when a mere logfile doesn't suffice.
 - **glog** [📁](./glog) [🌐](https://github.com/GerHobbelt/glog) -- Google Logging is a C++98 library that implements application-level logging. The library provides logging APIs based on C++-style streams and various helper macros.
 - **libassert** [📁](./libassert) [🌐](https://github.com/GerHobbelt/libassert) -- the most over-engineered and overpowered C++ assertion library. **Library philosophy**: Provide as much helpful diagnostic info as possible.
 - **libevt** [📁](./libevt) [🌐](https://github.com/GerHobbelt/libevt) -- a library to access the Windows Event Log (EVT) format.
@@ -1986,6 +2078,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **libjpeg** [📁](../../thirdparty/libjpeg) [🌐](https://github.com/GerHobbelt/thirdparty-libjpeg) -- the Independent JPEG Group's JPEG software
 - **libpng** [📁](../../thirdparty/libpng) [🌐](https://github.com/GerHobbelt/libpng) -- LIBPNG: Portable Network Graphics support, official libpng repository.
 - **libtiff** [📁](../../thirdparty/libtiff) [🌐](https://github.com/GerHobbelt/libtiff) -- TIFF Software Distribution
+- **mozjpeg** [📁](./mozjpeg) [🌐](https://github.com/GerHobbelt/mozjpeg) -- the Mozilla JPEG Encoder Project improves JPEG compression efficiency achieving higher visual quality and smaller file sizes at the same time. It is compatible with the JPEG standard, and the vast majority of the world's deployed JPEG decoders. MozJPEG is a patch for [libjpeg-turbo](https://github.com/libjpeg-turbo/libjpeg-turbo).
 - **openjpeg** [📁](../../thirdparty/openjpeg) [🌐](https://github.com/GerHobbelt/thirdparty-openjpeg) -- OPENJPEG Library and Applications -- OpenJPEG is an open-source JPEG 2000 codec written in C language. It has been developed in order to promote the use of [JPEG 2000](http://www.jpeg.org/jpeg2000), a still-image compression standard from the Joint Photographic Experts Group ([JPEG](http://www.jpeg.org)).  Since April 2015, it is officially recognized by ISO/IEC and ITU-T as a [JPEG 2000 Reference Software](http://www.itu.int/rec/T-REC-T.804-201504-I!Amd2).
 - **zlib** [📁](../../thirdparty/zlib) [🌐](https://github.com/GerHobbelt/thirdparty-zlib) -- zlib-ng: zlib data compression library for the next generation systems.
 
@@ -2159,6 +2252,9 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 
 ## misc / other
 
+- **omaha** [📁](./omaha) [🌐](https://github.com/GerHobbelt/omaha) -- Omaha is the open-source version of Google Update, a program to install requested software and keep it up to date.  The Google-branded version of Omaha is used to support software patching (both background updating, and on-demand update checks) for Google Chrome, Earth, and a variety of other Google products on Windows 7, 8, and 10.
+- **visible-url-detector** [📁](./visible-url-detector) [🌐](https://github.com/GerHobbelt/visible-url-detector) -- console app for listing active tab from browsers (Windows)
+- **doxygen-awesome-css** [📁](./doxygen-awesome-css) [🌐](https://github.com/GerHobbelt/doxygen-awesome-css)
 - **BoxFort** [📁](./BoxFort) [🌐](https://github.com/GerHobbelt/BoxFort) -- a simple, cross-platform sandboxing C library powering [Criterion](https://github.com/Snaipe/Criterion). BoxFort provides a simple API to run user code in isolated processes. The main goal of this project **is not** security, but portable code isolation -- if you want complete system isolation, consider using properly configured containers.
 - **cpp-terminal** [📁](./cpp-terminal) [🌐](https://github.com/GerHobbelt/cpp-terminal) -- CPP-Terminal is a small C++ library for writing platform independent terminal-based applications. It follows the "Zero-overhead principle" and limits externally included files to the C++ STL. Being crossplatform we support Windows, Linux and MacOS and provide a unified API across all platforms. Our main features are consisting of Colors, Keyboard input, terminal resize handling, as well as other common terminal functionality. It's also possible to open a managed terminal from a windows GUI application.
 - **Cysboard** [📁](./Cysboard) [🌐](https://github.com/GerHobbelt/Cysboard) -- a lightweight system monitor similar to `conky` but with html and css for themes.
@@ -2213,6 +2309,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 
 ## sub-dependencies (libraries which are required by any of the above)
 
+- **libdiagnostics** [📁](./libdiagnostics) [🌐](https://github.com/GerHobbelt/libdiagnostics) -- a C/C++ diagnostics logging library with support for writing HTML and store images and misc binary data to disk alongside. or when a mere logfile doesn't suffice.
 - **abseil-cpp** [📁](./abseil-cpp) [🌐](https://github.com/GerHobbelt/abseil-cpp) -- a collection of C++ code (compliant to C++11) designed to augment the C++ standard library.
 - **boost** [📁](./boost) [🌐](https://github.com/GerHobbelt/boost) -- required by several other libraries in this collection
 - **cairo** [📁](./cairo) [🌐](https://github.com/GerHobbelt/cairo) -- Cairo: Multi-platform 2D graphics library with support for multiple output devices. Cairo is designed to produce consistent output on all output media while taking advantage of display hardware acceleration when available.
@@ -2317,6 +2414,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **ccv-nnc** [📁](./ccv-nnc) [🌐](https://github.com/GerHobbelt/ccv) -- C-based/Cached/Core Computer Vision Library. A Modern Computer Vision Library.
 - **cef-pdf** [📁](./cef-pdf) [🌐](https://github.com/GerHobbelt/cef-pdf) -- a command line utility (with embedded HTTP server as an optional mode) for creating PDF documents from HTML content. It uses Google Chrome browser's [Chromium Embedded Framework (CEF)](https://bitbucket.org/chromiumembedded/cef/overview) library for all it's internal work; loading urls, rendering HTML & CSS pages and PDF printing, therefore, it produces perfect, accurate, excellent quality PDF documents.
 - **cereal** [📁](./cereal) [🌐](https://github.com/GerHobbelt/cereal) -- C++11 serialization library
+- **libnop** [📁](./libnop) [🌐](https://github.com/GerHobbelt/libnop) -- libnop (C++ Native Object Protocols) is a header-only library for serializing and deserializing C++ data types without external code generators or runtime support libraries. The only mandatory requirement is a compiler that supports the C++14 standard.
 - **ceres-solver** [📁](./ceres-solver) [🌐](https://github.com/GerHobbelt/ceres-solver) -- a library for modeling and solving large, complicated optimization problems. It is a feature rich, mature and performant library which has been used in production at Google since 2010. Ceres Solver can solve two kinds of problems: (1) Non-linear Least Squares problems with bounds constraints, and (2) General unconstrained optimization problems.
 - **CHM-lib** [📁](./CHM-lib) [🌐](https://github.com/GerHobbelt/CHMLib) -- as I have several HTML pages stored in this format. See also MHTML: `mht-rip`
 - **CImg** [📁](./CImg) [🌐](https://github.com/GerHobbelt/CImg) -- a **small** C++ toolkit for **image processing**.
@@ -2443,6 +2541,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
   
   * Portable Any-Map: PBM (P4), 8-bit PGM (P5), PPM (P6), PAM (P7)
 
+- **doxygen-awesome-css** [📁](./doxygen-awesome-css) [🌐](https://github.com/GerHobbelt/doxygen-awesome-css)
 - **drogon** [📁](./drogon) [🌐](https://github.com/GerHobbelt/drogon) -- a C++14/17-based HTTP application framework to easily build various types of web application server programs.
 - **dtl-diff-template-library** [📁](./dtl-diff-template-library) [🌐](https://github.com/GerHobbelt/dtl) -- `dtl` is the diff template library written in C++.
 - **dtoa-benchmark** [📁](./dtoa-benchmark) [🌐](https://github.com/GerHobbelt/dtoa-benchmark) -- This benchmark evaluates the performance of conversion from double precision IEEE-754 floating point (double) to ASCII string.
@@ -2477,6 +2576,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **fastPRNG** [📁](./fastPRNG) [🌐](https://github.com/GerHobbelt/fastPRNG) -- a single header-only FAST 32/64 bit PRNG (pseudo-random generator), highly optimized to obtain faster code from compilers, it's based on **xoshiro** / **xoroshiro** ([**Blackman/Vigna**](http://prng.di.unimi.it/)), **xorshift** and other [**Marsaglia**](https://en.wikipedia.org/wiki/George_Marsaglia) algorithms.
 - **fastText** [📁](./fastText) [🌐](https://github.com/GerHobbelt/fastText) -- [fastText](https://fasttext.cc/) is a library for efficient learning of word representations and sentence classification.
 - **fatal** [📁](./fatal) [🌐](https://github.com/GerHobbelt/fatal) -- Fatal (Facebook Template Library) is a library for fast prototyping software in modern C++. It provides facilities heavily based on template meta-programming, while keeping most of the complexity under-the-hood, to enhance the expressive power of C++. Fatal also provides lessons on how to write meta-programs, as well as on how to make the best use of the library, starting at beginner levels.
+- **faup** [📁](./faup) [🌐](https://github.com/GerHobbelt/faup) -- **Faup** stands for Finally An Url Parser and is a library and command line tool to parse URLs and normalize fields with two constraints: (1) work with real-life urls (resilient to badly formated ones), and (2) be fast: no allocation for string parsing and read characters only once.
 - **fftw3** [📁](./fftw3) [🌐](https://github.com/GerHobbelt/fftw3) -- the FFTW library for computing Fourier transforms (version 3.x), maintained by the FFTW authors.
 - **file** [📁](./file) [🌐](https://github.com/GerHobbelt/file) -- `file` filetype recognizer tool & mimemagic
 - **filecopyex3** [📁](./filecopyex3) [🌐](https://github.com/GerHobbelt/filecopyex3) -- a FAR plugin designed to bring to life all kinds of perverted fantasies on the topic of file copying, each of which will speed up the process by 5% :smile:. At the moment, it has implemented the main features that are sometimes quite lacking in standard copiers.
@@ -2564,6 +2664,11 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **groonga** [📁](./groonga) [🌐](https://github.com/GerHobbelt/groonga) -- an open-source fulltext search engine and column store.
 - **gtn** [📁](./gtn) [🌐](https://github.com/GerHobbelt/gtn) -- GTN (Automatic Differentiation with WFSTs) is a framework for automatic differentiation with weighted finite-state transducers. The goal of GTN is to make adding and experimenting with structure in learning algorithms much simpler. This structure is encoded as weighted automata, either acceptors (WFSAs) or transducers (WFSTs). With `gtn` you can dynamically construct complex graphs from operations on simpler graphs. Automatic differentiation gives gradients with respect to any input or intermediate graph with a single call to `gtn.backward`.
 - **guetzli** [📁](./guetzli) [🌐](https://github.com/GerHobbelt/guetzli) -- a JPEG encoder that aims for excellent compression density at high visual quality. Guetzli-generated images are typically 20-30% smaller than images of equivalent quality generated by libjpeg. Guetzli generates only sequential (nonprogressive) JPEGs due to faster decompression speeds they offer.
+
+- **LLhttp-parser** [📁](./LLhttp-parser) [🌐](https://github.com/GerHobbelt/llhttp) -- a port and replacement of [http_parser](https://github.com/nodejs/http-parser) to TypeScript. [llparse](https://github.com/nodejs/llparse) is used to generate the output C source file, which could be compiled and linked with the embedder's program (like Node.js).
+- **qs_parse** [📁](./qs_parse) [🌐](https://github.com/GerHobbelt/qs_parse) -- a set of simple and easy functions for parsing URL query strings, such as those generated in an HTTP GET form submission.
+- **url-parser** [📁](./url-parser) [🌐](https://github.com/GerHobbelt/url.h) -- parse URLs much like Node's [url](http://nodejs.org/api/url.html) module.
+
 - **gumbo-libxml** [📁](./gumbo-libxml) [🌐](https://github.com/GerHobbelt/gumbo-libxml) -- LibXML2 bindings for the Gumbo HTML5 parser: this provides a libxml2 API on top of the Gumbo parser.  It lets you use a modern parser - Gumbo now passes all html5lib tests, including the template tag, and should be fully conformant with the HTML5 spec - with the full ecosystem of libxml tools, including XPath, tree modification, DTD validation, etc.
 - **gumbo-parser** [📁](../../thirdparty/gumbo-parser) [🌐](https://github.com/GerHobbelt/gumbo-parser) -- HTML parser
 - **gumbo-query** [📁](./gumbo-query) [🌐](https://github.com/GerHobbelt/gumbo-query) -- HTML DOM access in C/C++
@@ -2713,6 +2818,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **libCZMQ** [📁](./libCZMQ) [🌐](https://github.com/GerHobbelt/czmq) -- High-level C binding for ØMQ. (http://czmq.zeromq.org/)
 - **libde265** [📁](./libde265) [🌐](https://github.com/GerHobbelt/libde265) -- libde265 is an open source implementation of the h.265 video codec. It is written from scratch and has a plain C API to enable a simple integration into other software. libde265 supports WPP and tile-based multithreading and includes SSE optimizations. The decoder includes all features of the Main profile and correctly decodes almost all conformance streams (see [[wiki page](https://github.com/strukturag/libde265/wiki/Decoder-conformance)]).
 - **libdeflate** [📁](./libdeflate) [🌐](https://github.com/GerHobbelt/libdeflate) -- heavily optimized library for DEFLATE/zlib/gzip compression and decompression.
+- **libdiagnostics** [📁](./libdiagnostics) [🌐](https://github.com/GerHobbelt/libdiagnostics) -- a C/C++ diagnostics logging library with support for writing HTML and store images and misc binary data to disk alongside. or when a mere logfile doesn't suffice.
 - **libdi-dependency-injection** [📁](./libdi-dependency-injection) [🌐](https://github.com/GerHobbelt/di) -- \[Boost::ext\].DI :: your C++14 **one header only** Dependency Injection library with no dependencies
 - **libdist** [📁](./libdist) [🌐](https://github.com/GerHobbelt/distlib) -- string distance related functions (Damerau-Levenshtein, Jaro-Winkler, longest common substring & subsequence) implemented as SQLite run-time loadable extension, with UTF-8 support.
 - **libdivide** [📁](./libdivide) [🌐](https://github.com/GerHobbelt/libdivide) -- a header-only C/C++ library for optimizing integer division. Integer division is one of the slowest instructions on most CPUs e.g. on current x64 CPUs a 64-bit integer division has a latency of up to 90 clock cycles whereas a multiplication has a latency of only 3 clock cycles. libdivide allows you to replace expensive integer divsion instructions by a sequence of shift, add and multiply instructions that will calculate the integer division much faster. On current CPUs you can get a **speedup of up to 10x** for 64-bit integer division and a speedup of up to to 5x for 32-bit integer division when using libdivide.
@@ -2754,44 +2860,27 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **libmobi** [📁](./libmobi) [🌐](https://github.com/GerHobbelt/libmobi) -- a library for handling Mobipocket/Kindle (MOBI) ebook format documents.
 - **lib_nas_lockfile** [📁](./lib_nas_lockfile) [🌐](https://github.com/GerHobbelt/lib_nas_lockfile) -- lockfile management on NAS and other disparate network filesystem storage. To be combined with SQLite to create a proper Qiqqa Sync operation.
 - **libngt-ann** [📁](./libngt-ann) [🌐](https://github.com/GerHobbelt/NGT) -- Yahoo's Neighborhood Graph and Tree for Indexing High-dimensional Data. NGT provides commands and a library for performing high-speed approximate nearest neighbor searches against a large volume of data (several million to several 10 million items of data) in high dimensional vector data space (several ten to several thousand dimensions).
+- **libnop** [📁](./libnop) [🌐](https://github.com/GerHobbelt/libnop) -- libnop (C++ Native Object Protocols) is a header-only library for serializing and deserializing C++ data types without external code generators or runtime support libraries. The only mandatory requirement is a compiler that supports the C++14 standard.
 - **libocca** [📁](./libocca) [🌐](https://github.com/GerHobbelt/occa) -- a portable and vendor neutral framework for parallel programming on heterogeneous platforms. The OCCA API provides unified models for heterogeneous programming concepts&mdash;such as a device, memory, or kernel&mdash;while the OCCA Kernel Language (OKL) enables the creation of portable device kernels using a directive-based extension to the C-language.
-- **libpillowfight** [📁](./libpillowfight) [🌐](https://github.com/GerHobbelt/libpillowfight) -- simple C Library containing various image processing algorithms. Available algorithms:
-
-* [Unpaper](https://github.com/Flameeyes/unpaper)'s algorithms
-  * Blackfilter
-  * Noisefilter
-  * Blurfilter
-  * Masks
-  * Grayfilter
-  * Border
-* Canny edge detection
-* Sobel operator
-* Gaussian blur
-* ACE (Automatic Color Equalization ; Parallelized implementation)
-* SWT (Stroke Width Transformation)
-* Compare: Compare two images (grayscale) and makes the pixels that are different
-  really visible (red).
-* Scan borders: Tries to detect the borders of a page in an image coming from
-  a scanner.
-
-- **libpillowfight** [📁](./libpillowfight) [🌐](https://github.com/GerHobbelt/libpillowfight) -- simple C Library containing various image processing algorithms. Available algorithms:
+- **libpillowfight** [📁](./libpillowfight) [🌐](https://github.com/GerHobbelt/libpillowfight) -- simple C Library containing various image processing algorithms. 
   
-  * [Unpaper](https://github.com/Flameeyes/unpaper)'s algorithms
-    * Blackfilter
-    * Noisefilter
-    * Blurfilter
-    * Masks
-    * Grayfilter
-    * Border
-  * Canny edge detection
-  * Sobel operator
-  * Gaussian blur
-  * ACE (Automatic Color Equalization ; Parallelized implementation)
-  * SWT (Stroke Width Transformation)
-  * Compare: Compare two images (grayscale) and makes the pixels that are different
-    really visible (red).
-  * Scan borders: Tries to detect the borders of a page in an image coming from
-    a scanner.
+  Available algorithms:
+  
+  - ACE (Automatic Color Equalization; Parallelized implementation)
+  - Canny edge detection
+  - Compare: Compare two images (grayscale) and makes the pixels that are different really visible (red).
+  - Gaussian blur
+  - Scan borders: Tries to detect the borders of a page in an image coming from a scanner.
+  - Sobel operator
+  - SWT (Stroke Width Transformation)
+  - [Unpaper](https://github.com/Flameeyes/unpaper)'s algorithms
+    
+    - Blackfilter
+    - Blurfilter
+    - Border
+    - Grayfilter
+    - Masks
+    - Noisefilter
 
 - **libpinyin** [📁](./libpinyin) [🌐](https://github.com/GerHobbelt/libpinyin) -- the libpinyin project aims to provide the algorithms core for intelligent sentence-based Chinese pinyin input methods.
 - **libpmemobj-cpp** [📁](./libpmemobj-cpp) [🌐](https://github.com/GerHobbelt/libpmemobj-cpp) -- a C++ binding for **libpmemobj** (a library which is a part of [PMDK collection](https://github.com/pmem/pmdk)).
@@ -2810,6 +2899,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **libscanf** [📁](./libscanf) [🌐](https://github.com/GerHobbelt/scnlib) -- a modern C++ library for replacing `scanf` and `std::istream`. This library attempts to move us ever so closer to replacing `iostream`s and C stdio altogether. It's faster than `iostream` (see Benchmarks) and type-safe, unlike `scanf`. Think [{fmt}](https://github.com/fmtlib/fmt) but in the other direction.
 - **libshmcache** [📁](./libshmcache) [🌐](https://github.com/GerHobbelt/libshmcache) -- a local share memory cache for multi processes. it is a high performance library because read mechanism is lockless. libshmcache is 100+ times faster than a remote interface such as redis.
 - **libsigcplusplus** [📁](./libsigcplusplus) [🌐](https://github.com/GerHobbelt/libsigcplusplus) -- libsigc++ : The Typesafe Callback Framework for C++. It allows you to define signals and to connect those signals to any callback function, either global or a member function, regardless of whether it is static or virtual.
+- **libsl3** [📁](./libsl3) [🌐](https://github.com/GerHobbelt/libsl3) -- a C++ interface for SQLite 3.x. libsl3 is designed to enable comfortable and efficient communication with a SQLite database based on its natural language, which is SQL.
 - **libsmile** [📁](./libsmile) [🌐](https://github.com/GerHobbelt/libsmile) -- C implementation of the Smile binary format (https://github.com/FasterXML/smile-format-specification).
 - **libsptag** [📁](./libsptag) [🌐](https://github.com/GerHobbelt/SPTAG) -- a library for fast approximate nearest neighbor search.  SPTAG (Space Partition Tree And Graph) is a library for large scale vector approximate nearest neighbor search scenario released by [Microsoft Research (MSR)](https://www.msra.cn/) and [Microsoft Bing](http://bing.com).
 - **libsql** [📁](./libsql) [🌐](https://github.com/GerHobbelt/libsql) --   libSQL is an open source, open contribution fork of SQLite. We aim to evolve it to suit many more use cases than SQLite was originally designed for, and plan to use third-party OSS code wherever it makes sense.
@@ -2881,6 +2971,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
   - LIZv1 : compression levels -20...-29 are designed to give better ratio than [LZ4] keeping 75% decompression speed
   - LIZv1 + Huffman : compression levels -40...-49 give the best ratio (comparable to [zlib] and low levels of [zstd]/[brotli]) at decompression speed of 1000 MB/s
 
+- **LLhttp-parser** [📁](./LLhttp-parser) [🌐](https://github.com/GerHobbelt/llhttp) -- a port and replacement of [http_parser](https://github.com/nodejs/http-parser) to TypeScript. [llparse](https://github.com/nodejs/llparse) is used to generate the output C source file, which could be compiled and linked with the embedder's program (like Node.js).
 - **lmdb** [📁](./lmdb) [🌐](https://github.com/GerHobbelt/lmdb) -- OpenLDAP [LMDB](http://www.lmdb.tech/doc/index.html) is an outrageously fast key/value store with semantics that make it highly interesting for many applications.  Of specific note, besides speed, is the full support for transactions and good read/write concurrency.  LMDB is also famed for its robustness **when used correctly**.
 - **lmdb-safe** [📁](./lmdb-safe) [🌐](https://github.com/GerHobbelt/lmdb-safe) -- A safe modern & performant C++ wrapper of LMDB. LMDB is an outrageously fast key/value store with semantics that make it highly interesting for many applications. Of specific note, besides speed, is the full support for transactions and good read/write concurrency. LMDB is also famed for its robustness.. **when used correctly**. The design of LMDB is elegant and simple, which aids both the performance and stability. The downside of this elegant design is a nontrivial set of rules that need to be followed to not break things. In other words, LMDB delivers great things but only if you use it exactly right. This is by conscious design. The `lmdb-safe` library aims to deliver the full LMDB performance while programmatically making sure the LMDB semantics are adhered to, with very limited overhead.
 - **lmdb.spreads.net** [📁](./lmdb.spreads.net) [🌐](https://github.com/GerHobbelt/Spreads.LMDB) -- low-level zero-overhead and [the fastest](https://github.com/Spreads/Spreads.LMDB/commit/4085dde649ef9ebb64310f2627299762dd62d5ce) LMDB .NET wrapper with some additional native methods useful for [Spreads](https://github.com/Spreads/).
@@ -2964,6 +3055,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
   - The [Ryan-Foster rule](https://strandmark.wordpress.com/2018/01/24/visualizing-the-ryan-foster-rule/) is used to iteratively work towards an integer solution. There is no time to branch and bound for big problems.
 
 - **morton_filter** [📁](./morton_filter) [🌐](https://github.com/GerHobbelt/morton_filter) -- a [Morton filter](https://www.vldb.org/pvldb/vol11/p1041-breslow.pdf) -- a new approximate set membership data structure. A Morton filter is a modified cuckoo filter that is optimized for bandwidth-constrained systems. Morton filters use additional computation in order to reduce their off-chip memory traffic. Like a cuckoo filter, a Morton filter supports insertions, deletions, and lookup operations. It additionally adds high-throughput self-resizing, a feature of quotient filters, which allows a Morton filter to increase its capacity solely by leveraging its internal representation. This capability is in contrast to existing vanilla cuckoo filter implementations, which are static and thus require using a backing data structure that contains the full set of items to resize the filter. Morton filters can also be configured to use less memory than a cuckoo filter for the same error rate while simultaneously delivering insertion, deletion, and lookup throughputs that are, respectively, up to 15.5x, 1.3x, and 2.5x higher than a cuckoo filter. Morton filters in contrast to vanilla cuckoo filters do not require a power of two number of buckets but rather only a number that is a multiple of two. They also use fewer bits per item than a Bloom filter when the target false positive rate is less than around 1% to 3%.
+- **mozjpeg** [📁](./mozjpeg) [🌐](https://github.com/GerHobbelt/mozjpeg) -- the Mozilla JPEG Encoder Project improves JPEG compression efficiency achieving higher visual quality and smaller file sizes at the same time. It is compatible with the JPEG standard, and the vast majority of the world's deployed JPEG decoders. MozJPEG is a patch for [libjpeg-turbo](https://github.com/libjpeg-turbo/libjpeg-turbo).
 - **ms_cpp_client_telemetry** [📁](./ms_cpp_client_telemetry) [🌐](https://github.com/GerHobbelt/cpp_client_telemetry) -- 1DS C/C++ SDK enables cross-platform telemetry collection from various Microsoft products. It enables data / telemetry upload to Collector++. 1DS (One Data Strategy), also known as One Observability, is a cross-org initiative with five teams across the company coming together to unify multiple telemetry efforts at Microsoft. Collector++ is the externally-facing destination end-point where telemetry data is uploaded to that subsequently routes the data to Microsoft internal data pipeline.
 - **mujs** [📁](../../thirdparty/mujs) [🌐](https://github.com/GerHobbelt/mujs) -- a lightweight ES5 Javascript interpreter designed for embedding in other software to extend them with scripting capabilities.
 - **multiverso** [📁](./multiverso) [🌐](https://github.com/GerHobbelt/Multiverso) -- a parameter server based framework for training machine learning models on big data with numbers of machines. It is currently a standard C++ library and provides a series of friendly programming interfaces. Now machine learning researchers and practitioners do not need to worry about the system routine issues such as distributed model storage and operation, inter-process and inter-thread communication, multi-threading management, and so on. Instead, they are able to focus on the core machine learning logics: data, model, and training.
@@ -2974,7 +3066,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
   * `myloader` reads the backup from mydumper, connects the to destination database and imports the backup.
 
 - **mysql-connector-cpp** [📁](./mysql-connector-cpp) [🌐](https://github.com/GerHobbelt/mysql-connector-cpp) -- MySQL Connector/C++ is a release of MySQL Connector/C++, [the C++ interface](https://dev.mysql.com/doc/dev/connector-cpp/8.0/) for communicating with MySQL servers.
-- **n2-kNN** [📁](./n2-kNN) [🌐](https://github.com/GerHobbelt/n2) -- N2: Lightweight approximate **N**\ earest **N**\ eighbor algorithm library. N2 stands for two N's, which comes from \'Approximate ``N``\ earest ``N``\ eighbor Algorithm\'. Before N2, there has been other great approximate nearest neighbor libraries such as `Annoy`_ and `NMSLIB`_. However, each of them had different strengths and weaknesses regarding usability, performance, etc. N2 has been developed aiming to bring the strengths of
+- **n2-kNN** [📁](./n2-kNN) [🌐](https://github.com/GerHobbelt/n2) -- N2: Lightweight approximate **N**\ earest **N**\ eighbor algorithm library. N2 stands for two N's, which comes from \'Approximate ``N``\ earest ``N``\ eighbor Algorithm\'. Before N2, there has been other great approximate nearest neighbor libraries such as `Annoy` and `NMSLIB`. However, each of them had different strengths and weaknesses regarding usability, performance, etc. N2 has been developed aiming to bring the strengths of existing aKNN libraries and supplement their weaknesses.
 - **nameof** [📁](./nameof) [🌐](https://github.com/GerHobbelt/nameof) -- header-only C++17 library providing nameof macros and functions to simply obtain the name of a variable, type, function, macro, and enum.
 - **nanodbc** [📁](./nanodbc) [🌐](https://github.com/GerHobbelt/nanodbc) -- a small C++ wrapper for the native C ODBC API.
 - **nanoflann** [📁](./nanoflann) [🌐](https://github.com/GerHobbelt/nanoflann) -- a C++11 header-only library for building KD-Trees of datasets with different topologies: R^2, R^3 (point clouds), SO(2) and SO(3) (2D and 3D rotation groups). No support for approximate NN is provided. This library is a fork of the `flann` library by Marius Muja and David G. Lowe, and born as a child project of `MRPT`.
@@ -3027,6 +3119,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **ogdf** [📁](./ogdf) [🌐](https://github.com/GerHobbelt/ogdf) -- OGDF stands both for **O**pen **G**raph **D**rawing **F**ramework (the original name) and **O**pen **G**raph algorithms and **D**ata structures **F**ramework. OGDF is a self-contained C++ library for graph algorithms, in particular for (but not restricted to) automatic graph drawing. It offers sophisticated algorithms and data structures to use within your own applications or scientific projects.
 - **oidn-OpenImageDenoise** [📁](./oidn-OpenImageDenoise) [🌐](https://github.com/GerHobbelt/oidn) -- Intel® Open Image Denoise is an open source library of high-performance, high-quality denoising filters for images rendered with ray tracing.
 - **olena** [📁](./olena) [🌐](https://github.com/GerHobbelt/olena) -- a platform dedicated to image processing.  At the moment it is mainly composed of a C++ library: Milena.  This library features many tools to easily perform image processing tasks.  Its main characteristic is its genericity: it allows to write an algorithm once and run it over many kinds of images (gray scale, color, 1D, 2D, 3D, ...).
+- **omaha** [📁](./omaha) [🌐](https://github.com/GerHobbelt/omaha) -- Omaha is the open-source version of Google Update, a program to install requested software and keep it up to date.  The Google-branded version of Omaha is used to support software patching (both background updating, and on-demand update checks) for Google Chrome, Earth, and a variety of other Google products on Windows 7, 8, and 10.
 - **oneTBB** [📁](./oneTBB) [🌐](https://github.com/GerHobbelt/oneTBB) -- Intel's Thread Building Blocks library: used with OpenImageIO, ...
 - **online-hnsw** [📁](./online-hnsw) [🌐](https://github.com/GerHobbelt/online-hnsw) -- Online HNSW: an implementation of the HNSW index for approximate nearest neighbors search for C++14, that supports incremental insertion and removal of elements.
 - **onnxruntime** [📁](./onnxruntime) [🌐](https://github.com/GerHobbelt/onnxruntime) -- a cross-platform inference and training machine-learning accelerator. **ONNX Runtime inference** can enable faster customer experiences and lower costs, supporting models from deep learning frameworks such as PyTorch and TensorFlow/Keras as well as classical machine learning libraries such as scikit-learn, LightGBM, XGBoost, etc. ONNX Runtime is compatible with different hardware, drivers, and operating systems, and provides optimal performance by leveraging hardware accelerators where applicable alongside graph optimizations and transforms. [Learn more &rarr;](https://www.onnxruntime.ai/docs/#onnx-runtime-for-inferencing)
@@ -3050,8 +3143,9 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
   The primary target audience for OIIO is VFX studios and developers of tools such as renderers, compositors, viewers, and other image-related software you'd find in a production pipeline.
 
 - **openjpeg** [📁](../../thirdparty/openjpeg) [🌐](https://github.com/GerHobbelt/thirdparty-openjpeg) -- OPENJPEG Library and Applications -- OpenJPEG is an open-source JPEG 2000 codec written in C language. It has been developed in order to promote the use of [JPEG 2000](http://www.jpeg.org/jpeg2000), a still-image compression standard from the Joint Photographic Experts Group ([JPEG](http://www.jpeg.org)).  Since April 2015, it is officially recognized by ISO/IEC and ITU-T as a [JPEG 2000 Reference Software](http://www.itu.int/rec/T-REC-T.804-201504-I!Amd2).
+- **mozjpeg** [📁](./mozjpeg) [🌐](https://github.com/GerHobbelt/mozjpeg) -- the Mozilla JPEG Encoder Project improves JPEG compression efficiency achieving higher visual quality and smaller file sizes at the same time. It is compatible with the JPEG standard, and the vast majority of the world's deployed JPEG decoders. MozJPEG is a patch for [libjpeg-turbo](https://github.com/libjpeg-turbo/libjpeg-turbo).
 - **openpbs** [📁](./openpbs) [🌐](https://github.com/GerHobbelt/openpbs) -- in May 2020, OpenPBS became the new name for the PBS Professional Open Source Project. OpenPBS® software optimizes job scheduling and workload management in high-performance computing (HPC) environments – clusters, clouds, and supercomputers – improving system efficiency and people’s productivity.  Built by HPC people for HPC people, OpenPBS is fast, scalable, secure, and resilient, and supports all modern infrastructure, middleware, and applications.
-- **OpenSSL** [📁](./openssl) [🌐](https://github.com/GerHobbelt/openssl) -- also used by cURL et al, incidentally.
+- **openssl** [📁](./openssl) [🌐](https://github.com/GerHobbelt/openssl) -- OpenSSL is a robust, commercial-grade, full-featured Open Source Toolkit for the Transport Layer Security (TLS) protocol formerly known as the Secure Sockets Layer (SSL) protocol. The protocol implementation is based on a full-strength general purpose cryptographic library, which can also be used stand-alone.
 - **opentelemetry-cpp** [📁](./opentelemetry-cpp) [🌐](https://github.com/GerHobbelt/opentelemetry-cpp) -- The OpenTelemetry C++ Client
 - **openvino** [📁](./openvino) [🌐](https://github.com/GerHobbelt/openvino) -- OpenVINO™ is an open-source toolkit for optimizing and deploying AI inference, includind several components: namely [Model Optimizer], [OpenVINO™ Runtime], [Post-Training Optimization Tool], as well as CPU, GPU, GNA, multi device and heterogeneous plugins to accelerate deep learning inference on Intel® CPUs and Intel® Processor Graphics. It supports pre-trained models from [Open Model Zoo], along with 100+ open source and public models in popular formats such as TensorFlow, ONNX, PaddlePaddle, MXNet, Caffe, Kaldi.
 - **Open-XML-SDK** [📁](./Open-XML-SDK) [🌐](https://github.com/GerHobbelt/Open-XML-SDK) -- the Microsoft Open XML SDK (.NET) provides tools for working with Office Word, Excel, and PowerPoint documents.
@@ -3114,6 +3208,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **pthread-win32** [📁](./pthread-win32) [🌐](https://github.com/GerHobbelt/pthread-win32) -- `pthread` for MS Windows
 - **pybind11** [📁](./pybind11) [🌐](https://github.com/GerHobbelt/pybind11) -- a lightweight header-only library that exposes C++ types in Python and vice versa, mainly to create Python bindings of existing C++ code.
 - **pyclustering** [📁](./pyclustering) [🌐](https://github.com/GerHobbelt/pyclustering) -- a Python, C++ data mining library (clustering algorithm, oscillatory networks, neural networks). The library provides Python and C++ implementations (C++ pyclustering library) of each algorithm or model.
+- **pylene** [📁](./pylene) [🌐](https://github.com/GerHobbelt/pylene) -- Pylene is a fork of [Milena](http://www.lrde.epita.fr/olena), an image processing library targeting genericity and efficiency. It provided mostly Mathematical Morphology building blocs for image processing pipelines.
 - **pytorch** [📁](./pytorch) [🌐](https://github.com/GerHobbelt/pytorch) -- PyTorch library in C++
 - **pytorch_cpp_demo** [📁](./pytorch_cpp_demo) [🌐](https://github.com/GerHobbelt/pytorch_cpp) -- Deep Learning sample programs of PyTorch written in C++.
 - **QCBOR** [📁](./QCBOR) [🌐](https://github.com/GerHobbelt/QCBOR) -- a powerful, commercial-quality CBOR encoder/decoder that implements these RFCs:
@@ -3125,6 +3220,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 
 - **qlever** [📁](./qlever) [🌐](https://github.com/GerHobbelt/qlever) -- a SPARQL engine that can efficiently index and query very large knowledge graphs with up to 100 billion triples on a single standard PC or server. In particular, QLever is fast for queries that involve large intermediate or final results, which are notoriously hard for engines like Blazegraph or Virtuoso.
 - **qpdf** [📁](./qpdf) [🌐](https://github.com/GerHobbelt/qpdf) -- QPDF is a command-line tool and C++ library that performs content-preserving transformations on PDF files. It supports linearization, encryption, and numerous other features. It can also be used for splitting and merging files, creating PDF files, and inspecting files for study or analysis. QPDF does not render PDFs or perform text extraction, and it does not contain higher-level interfaces for working with page contents. It is a low-level tool for working with the structure of PDF files and can be a valuable tool for anyone who wants to do programmatic or command-line-based manipulation of PDF files.
+- **qs_parse** [📁](./qs_parse) [🌐](https://github.com/GerHobbelt/qs_parse) -- a set of simple and easy functions for parsing URL query strings, such as those generated in an HTTP GET form submission.
 - **QuickJS** [📁](./QuickJS) [🌐](https://github.com/GerHobbelt/quickjs) -- a small and embeddable Javascript engine. It supports the <a href="https://tc39.github.io/ecma262/">ES2020</a> specification including modules, asynchronous generators, proxies and BigInt. It optionally supports mathematical extensions such as big decimal floating point numbers (BigDecimal), big binary floating point numbers (BigFloat) and operator overloading.
 - **QuickJS-C++-Wrapper** [📁](./QuickJS-C++-Wrapper) [🌐](https://github.com/GerHobbelt/quickjscpp) -- quickjscpp is a header-only wrapper around the [quickjs](https://bellard.org/quickjs/) JavaScript engine, which allows easy integration into C++11 code. This wrapper also automatically tracks the lifetime of values and objects, is exception-safe, and automates clean-up.
 - **QuickJS-C++-Wrapper2** [📁](./QuickJS-C++-Wrapper2) [🌐](https://github.com/GerHobbelt/quickjspp) -- QuickJSPP is QuickJS wrapper for C++. It allows you to easily embed Javascript engine into your program.
@@ -3177,6 +3273,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **sioyek** [📁](./sioyek) [🌐](https://github.com/GerHobbelt/sioyek) -- a PDF viewer with a focus on textbooks and research papers.
 - **smhasher** [📁](./smhasher) [🌐](https://github.com/GerHobbelt/smhasher) -- benchmark and collection of fast hash functions for symbol tables or hash tables.
 - **snap** [📁](./snap) [🌐](https://github.com/GerHobbelt/snap) -- Stanford Network Analysis Platform (SNAP) is a general purpose, high performance system for analysis and manipulation of large networks. SNAP scales to massive graphs with hundreds of millions of nodes and billions of edges.
+- **snappy** [📁](./snappy) [🌐](https://github.com/GerHobbelt/snappy) -- an up-to-date fork of google/snappy, a fast compression/decompression library. It does not aim for maximum compression, or compatibility with any other compression library; instead, it aims for very high speeds and reasonable compression.
 - **snmalloc** [📁](./snmalloc) [🌐](https://github.com/GerHobbelt/snmalloc) -- a high-performance allocator.
 - **snowball** [📁](./snowball) [🌐](https://github.com/GerHobbelt/snowball) -- SnowBell stemming compiler (code generator)
 - **sparsehash** [📁](./sparsehash) [🌐](https://github.com/GerHobbelt/sparsehash) -- fast hash algorithms
@@ -3275,6 +3372,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **tvision** [📁](./tvision) [🌐](https://github.com/GerHobbelt/tvision) -- a modern port of Borland's Turbo Vision 2.0, the classical framework for text-based user interfaces. Now cross-platform and with Unicode support. (**retro fun**)
 - **twain_library** [📁](./twain_library) [🌐](https://github.com/GerHobbelt/twain_library) -- the DTWAIN Library, **Version 5.x**, from Dynarithmic Software.  DTWAIN is an open source programmer's library that will allow applications to acquire images from TWAIN-enabled devices using a simple Application Programmer's Interface (API).
 - **txiki** [📁](./txiki.js) [🌐](https://github.com/GerHobbelt/txiki.js) -- uses QuickJS as its kernel
+- **txiki** [📁](./txiki.js) [🌐](https://github.com/GerHobbelt/txiki.js) -- a small and powerful JavaScript runtime. It's built on the shoulders of giants: it uses [QuickJS] as its JavaScript engine, [libuv] as the platform layer, [wasm3] as the WebAssembly engine and [curl] as the HTTP / WebSocket client.
 - **typesense** [📁](./typesense) [🌐](https://github.com/GerHobbelt/typesense) -- a fast, typo-tolerant search engine for building delightful search experiences. Open Source alternative to Algolia and an Easier-to-Use alternative to ElasticSearch. ⚡🔍✨ Fast, typo tolerant, in-memory fuzzy Search Engine for building delightful search experiences.
 - **uberlog** [📁](./uberlog) [🌐](https://github.com/GerHobbelt/uberlog) -- a cross platform C++ logging system that is focused on fast and small, writing to a shared memory ring buffer.
 - **uchardet** [📁](./uchardet) [🌐](https://github.com/GerHobbelt/uchardet) -- [uchardet](https://www.freedesktop.org/wiki/Software/uchardet/) is an encoding and language detector library, which attempts to determine the encoding of the text. It can reliably detect many charsets. Moreover it also works as a very good and fast language detector.
@@ -3318,13 +3416,17 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 
 - **upscaledb** [📁](./upscaledb) [🌐](https://github.com/GerHobbelt/hamsterdb) -- a.k.a. hamsterdb: a thread-safe key/value database engine. It supports a B+Tree index structure, uses memory mapped I/O (if available), fast Cursors and variable length keys and can create In-Memory Databases.
 - **upskirt-markdown** [📁](./upskirt-markdown) [🌐](https://github.com/GerHobbelt/soldout) -- MarkDown renderer
+- **URI-Encode-C** [📁](./URI-Encode-C) [🌐](https://github.com/GerHobbelt/URI-Encode-C) -- an optimized C library for percent encoding/decoding text, i.e. a URI encoder/decoder written in C based on [RFC3986](https://tools.ietf.org/html/rfc3986).
 - **url** [📁](./url) [🌐](https://github.com/GerHobbelt/url) -- URI parsing and other utility functions
+- **URL-Detector** [📁](./URL-Detector) [🌐](https://github.com/GerHobbelt/URL-Detector) -- Url Detector is a library created by the Linkedin Security Team to detect and extract urls in a long piece of text. Keep in mind that for security purposes, its better to overdetect urls: instead of complying with RFC 3986 (http://www.ietf.org/rfc/rfc3986.txt), we try to detect based on browser behavior, optimizing detection for urls that are visitable through the address bar of Chrome, Firefox, Internet Explorer, and Safari. It is also able to identify the parts of the identified urls.
+- **url-parser** [📁](./url-parser) [🌐](https://github.com/GerHobbelt/url.h) -- parse URLs much like Node's [url](http://nodejs.org/api/url.html) module.
 - **userver** [📁](./userver) [🌐](https://github.com/GerHobbelt/userver) -- an open source asynchronous framework with a rich set of abstractions for fast and comfortable creation of C++ microservices, services and utilities. The framework solves the problem of efficient I/O interactions transparently for the developers. Operations that would typically suspend the thread of execution do not suspend it. Instead of that, the thread processes other requests and tasks and returns to the handling of the operation only when it is guaranteed to execute immediately. As a result you get straightforward source code and avoid CPU-consuming context switches from OS, efficiently utilizing the CPU with a small amount of execution threads.
 - **utfcpp** [📁](./utfcpp) [🌐](https://github.com/GerHobbelt/utfcpp) -- UTF-8 with C++ in a Portable Way
 - **variadic_table** [📁](./variadic_table) [🌐](https://github.com/GerHobbelt/variadic_table) -- for "pretty-printing" a formatted table of data to the console. It uses "variadic templates" to allow you to specify the types of data in each column.
 - **vcopy** [📁](./vcopy) [🌐](https://github.com/GerHobbelt/vcopy) -- tool to safely copy files across various (local) hardware under circumstances where there may be another file writer active at the same time and/or the (USB?) connection is sometimes flakey or system I/O drivers buggered.
 - **velocypack** [📁](./velocypack) [🌐](https://github.com/GerHobbelt/velocypack) -- a fast and compact format for serialization and storage.  These days, JSON (JavaScript Object Notation, see ECMA-404) is used in many cases where data has to be exchanged. Lots of protocols between different services use it, databases store JSON (document stores naturally, but others increasingly as well). It is popular, because it is simple, human-readable, and yet surprisingly versatile, despite its limitations. At the same time there is a plethora of alternatives ranging from XML over Universal Binary JSON, MongoDB's BSON, MessagePack, BJSON (binary JSON), Apache Thrift till Google's protocol buffers and ArangoDB's shaped JSON. When looking into this, we were surprised to find that none of these formats manages to combine compactness, platform independence, fast access to sub-objects and rapid conversion from and to JSON.
 - **Verify** [📁](./Verify) [🌐](https://github.com/GerHobbelt/Verify) -- a snapshot tool that simplifies the assertion of complex data models and documents. Verify is called on the test result during the assertion phase. It serializes that result and stores it in a file that matches the test name. On the next test execution, the result is again serialized and compared to the existing file. The test will fail if the two snapshots do not match: either the change is unexpected, or the reference snapshot needs to be updated to the new result.
+- **visible-url-detector** [📁](./visible-url-detector) [🌐](https://github.com/GerHobbelt/visible-url-detector) -- console app for listing active tab from browsers (Windows)
 - **VisualScriptEngine** [📁](./VisualScriptEngine) [🌐](https://github.com/GerHobbelt/VisualScriptEngine) -- A visual scripting engine designed for embedding. The engine is written in modern C++ and compiles on several platforms with no external dependencies.
 - **vmem** [📁](./vmem) [🌐](https://github.com/GerHobbelt/vmem) -- **libvmem** and **libvmmalloc** are a couple of libraries for using persistent memory for malloc-like volatile uses.  They have historically been a part of [PMDK](https://pmem.io/pmdk) despite being solely for volatile uses. You may want consider using [memkind](https://github.com/memkind/memkind) instead in code that benefits from extra features like NUMA awareness.
 - **vmemcache** [📁](./vmemcache) [🌐](https://github.com/GerHobbelt/vmemcache) -- **libvmemcache** is an embeddable and lightweight in-memory buffered LRU caching solution. It's designed to fully take advantage of large capacity memory, such as Persistent Memory with DAX, through memory mapping in an efficient and scalable way.
@@ -3342,7 +3444,8 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **VSNASM** [📁](./VSNASM) [🌐](https://github.com/GerHobbelt/VSNASM) -- a set of build customisations that can be used within Visual Studio to compile assembly code using NASM. Visual Studio integration for the NASM assembler.
 - **vtm** [📁](./vtm) [🌐](https://github.com/GerHobbelt/vtm) -- Terminal multiplexer with window manager and session sharing. Text-based desktop environment inside your terminal. Includes `destopio`, a text/terminal oriented layout engine.
 - **vxl** [📁](./vxl) [🌐](https://github.com/GerHobbelt/vxl) -- VXL (the Vision-something-Libraries) is a collection of C++ libraries designed for computer vision research and implementation. It was created from TargetJr and the IUE with the aim of making a light, fast and consistent system.
-- **waifu2x-ncnn-vulkan** [📁](./waifu2x-ncnn-vulkan) [🌐](https://github.com/GerHobbelt/waifu2x-ncnn-vulkan)
+- **waifu2x-ncnn-vulkan** [📁](./waifu2x-ncnn-vulkan) [🌐](https://github.com/GerHobbelt/waifu2x-ncnn-vulkan) -- waifu2x ncnn Vulkan: an [ncnn project](https://github.com/Tencent/ncnn) implementation of the waifu2x converter. Runs fast on Intel / AMD / Nvidia / Apple-Silicon with Vulkan API.
+- **waifu2x-ncnn-vulkan** [📁](./waifu2x-ncnn-vulkan) [🌐](https://github.com/GerHobbelt/waifu2x-ncnn-vulkan) -- waifu2x ncnn Vulkan: an [ncnn project](https://github.com/Tencent/ncnn) implementation of the waifu2x converter. Runs fast on Intel / AMD / Nvidia / Apple-Silicon with Vulkan API.
 - **warc2text** [📁](./warc2text) [🌐](https://github.com/GerHobbelt/warc2text) -- Extracts plain text, language identification and more metadata from WARC records.
 - **warp-ctc** [📁](./warp-ctc) [🌐](https://github.com/GerHobbelt/warp-ctc) -- A fast parallel implementation of CTC, on both CPU and GPU. Connectionist Temporal Classification (CTC) is a loss function useful for performing supervised learning on sequence data, without needing an alignment between input data and labels. For example, CTC can be used to train end-to-end systems for speech recognition.
 - **warpLDA** [📁](./warpLDA) [🌐](https://github.com/GerHobbelt/warplda) -- a cache efficient implementation for Latent Dirichlet Allocation.
@@ -3378,7 +3481,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **xgboost** [📁](./xgboost) [🌐](https://github.com/GerHobbelt/xgboost) -- an optimized distributed gradient boosting library designed to be highly efficient, flexible and portable. It implements machine learning algorithms under the Gradient Boosting framework. XGBoost provides a parallel tree boosting (also known as GBDT, GBM) that solve many data science problems in a fast and accurate way. The same code runs on major distributed environment (Kubernetes, Hadoop, SGE, MPI, Dask) and can solve problems beyond billions of examples.
 - **xlnt** [📁](./xlnt) [🌐](https://github.com/GerHobbelt/xlnt) -- a modern C++ library for manipulating spreadsheets in memory and reading/writing them from/to XLSX files as described in [ECMA 376 4th edition](http://www.ecma-international.org/publications/standards/Ecma-376.htm).
 - **xml-pugixml** [📁](./xml-pugixml) [🌐](https://github.com/GerHobbelt/pugixml) -- light-weight, simple and fast XML parser for C++ with XPath support.
-- **XMP-Toolkit-SDK** [📁](./XMP-Toolkit-SDK) [🌐](https://github.com/GerHobbelt/XMP-Toolkit-SDK)
+- **XMP-Toolkit-SDK** [📁](./XMP-Toolkit-SDK) [🌐](https://github.com/GerHobbelt/XMP-Toolkit-SDK) -- the XMP Toolkit allows you to integrate XMP functionality into your product, supplying an API for locating, adding, or updating the XMP metadata in a file.
 - **xnnpack** [📁](./xnnpack) [🌐](https://github.com/GerHobbelt/XNNPACK) -- a highly optimized library of floating-point neural network inference operators for ARM, WebAssembly, and x86 platforms. XNNPACK is not intended for direct use by deep learning practitioners and researchers; instead it provides low-level performance primitives for accelerating high-level machine learning frameworks, such as TensorFlow Lite, TensorFlow.js, PyTorch, and MediaPipe.
 - **xor-and-binary-fuse-filter** [📁](./xor-and-binary-fuse-filter) [🌐](https://github.com/GerHobbelt/xor_singleheader) -- XOR and Binary Fuse Filter library: Bloom filters are used to quickly check whether an element is part of a set. Xor filters and binary fuse filters are faster and more concise alternative to Bloom filters. They are also smaller than cuckoo filters. They are used in [production systems](https://github.com/datafuselabs/databend).
 - **Xoshiro-cpp** [📁](./Xoshiro-cpp) [🌐](https://github.com/GerHobbelt/Xoshiro-cpp) -- a header-only pseudorandom number generator library for modern C++. Based on **David Blackman and Sebastiano Vigna's [xoshiro/xoroshiro generators](http://prng.di.unimi.it/)**.
@@ -3394,6 +3497,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **yaml-cpp** [📁](./yaml-cpp) [🌐](https://github.com/GerHobbelt/yaml-cpp) -- a YAML parser and emitter in C++ matching the YAML 1.2 spec.
 - **yaml-test-suite** [📁](./yaml-test-suite) [🌐](https://github.com/GerHobbelt/yaml-test-suite) -- comprehensive Test Suite for YAML
 - **yara-pattern-matcher** [📁](./yara-pattern-matcher) [🌐](https://github.com/GerHobbelt/yara) -- for automated and user-specified pattern recognition in custom document & metadata *cleaning* / processing tasks
+- **yasl** [📁](./yasl) [🌐](https://github.com/GerHobbelt/yasl) -- Bytecode Interpreter for Yet Another Scripting Language (YASL).
 - **you-token-to-me** [📁](./you-token-to-me) [🌐](https://github.com/GerHobbelt/YouTokenToMe) -- text tokenization
 - **yyjson** [📁](./yyjson) [🌐](https://github.com/GerHobbelt/yyjson) -- allegedly the fastest JSON library in C.
 - **zfp-compressed-arrays** [📁](./zfp-compressed-arrays) [🌐](https://github.com/GerHobbelt/zfp) -- zfp is a compressed format for representing multidimensional floating-point and integer arrays. zfp provides compressed-array classes that support high throughput read and write random access to individual array elements. zfp also supports serial and parallel (OpenMP and CUDA) compression of whole arrays, e.g., for applications that read and write large data sets to and from disk.
@@ -3417,31 +3521,6 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **zpp_bits** [📁](./zpp_bits) [🌐](https://github.com/GerHobbelt/zpp_bits) -- A modern, *fast*, C++20 binary serialization and RPC library, with just one header file.See also the [benchmark](https://github.com/GerHobbelt/zpp_bits#benchmark).
 - **zstd** [📁](./zstd) [🌐](https://github.com/GerHobbelt/zstd) -- Zstandard, a.k.a. `zstd`, is a fast lossless compression algorithm, targeting real-time compression scenarios at zlib-level and better compression ratios.
 - **zsv** [📁](./zsv) [🌐](https://github.com/GerHobbelt/zsv) -- the world's fastest (SIMD) CSV parser, with an extensible CLI for SQL querying, format conversion and more.
-
-existing aKNN libraries and supplement their weaknesses.
-
-- **oidn-OpenImageDenoise** [📁](./oidn-OpenImageDenoise) [🌐](https://github.com/GerHobbelt/oidn) -- Intel® Open Image Denoise is an open source library of high-performance, high-quality denoising filters for images rendered with ray tracing.
-- **online-hnsw** [📁](./online-hnsw) [🌐](https://github.com/GerHobbelt/online-hnsw) -- Online HNSW: an implementation of the HNSW index for approximate nearest neighbors search for C++14, that supports incremental insertion and removal of elements.
-- **OpenColorIO** [📁](./OpenColorIO) [🌐](https://github.com/GerHobbelt/OpenColorIO) -- OpenColorIO (OCIO) is a complete color management solution geared towards motion picture production with an emphasis on visual effects and computer animation. OCIO provides a straightforward and consistent user experience across all supporting applications while allowing for sophisticated back-end configuration options suitable for high-end production usage. OCIO is compatible with the Academy Color Encoding Specification (ACES) and is LUT-format agnostic, supporting many popular formats.
-- **opencv_extra** [📁](./opencv_extra) [🌐](https://github.com/GerHobbelt/opencv_extra) -- extra data for OpenCV: Open Source Computer Vision Library
-- **openssl** [📁](./openssl) [🌐](https://github.com/GerHobbelt/openssl) -- OpenSSL is a robust, commercial-grade, full-featured Open Source Toolkit for the Transport Layer Security (TLS) protocol formerly known as the Secure Sockets Layer (SSL) protocol. The protocol implementation is based on a full-strength general purpose cryptographic library, which can also be used stand-alone.
-- **pdiff** [📁](./pdiff) [🌐](https://github.com/GerHobbelt/pdiff) -- perceptualdiff (pdiff): a program that compares two images using a perceptually based image metric.
-- **pecos** [📁](./pecos) [🌐](https://github.com/GerHobbelt/pecos) -- PECOS (Predictions for Enormous and Correlated Output Spaces) is a versatile and modular machine learning (ML) framework for fast learning and inference on problems with large output spaces, such as extreme multi-label ranking (XMR) and large-scale retrieval. PECOS' design is intentionally agnostic to the specific nature of the inputs and outputs as it is envisioned to be a general-purpose framework for multiple distinct applications. Given an input, PECOS identifies a small set (10-100) of relevant outputs from amongst an extremely large (~100MM) candidate set and ranks these outputs in terms of relevance.
-- **pylene** [📁](./pylene) [🌐](https://github.com/GerHobbelt/pylene) -- Pylene is a fork of [Milena](http://www.lrde.epita.fr/olena), an image processing library targeting genericity and efficiency. It provided mostly Mathematical Morphology building blocs for image processing pipelines.
-- **quill-logging** [📁](./quill-logging) [🌐](https://github.com/GerHobbelt/quill) -- asynchronous cross-platform low latency logging library based on C++14/C++17.
-- **reckless** [📁](./reckless) [🌐](https://github.com/GerHobbelt/reckless) -- Reckless is an extremely low-latency, high-throughput logging library.
-- **simdjson** [📁](./simdjson) [🌐](https://github.com/GerHobbelt/simdjson) -- simdjson : Parsing gigabytes of JSON per second. For NDJSON files, we can exceed 3 GB/s with our multithreaded parsing functions](https://github.com/simdjson/simdjson/blob/master/doc/parse_many.md).
-- **spdlog_sqlite_sink** [📁](./spdlog_sqlite_sink) [🌐](https://github.com/GerHobbelt/sqlite_sink) -- SQLite 3 database sink for `spdlog`: a simple custom sink made for spdlog that writes to SQLite database.
-- **strtk** [📁](./strtk) [🌐](https://github.com/GerHobbelt/strtk) -- the C++ String Toolkit Library (StrTk) consists of robust, optimized and portable string processing algorithms for the C++ language. StrTk is designed to be easy to use and integrate within existing code bases. Furthermore the library has a rich set of features  that makes light work of any kind of string processing task.
-- **thread-pool** [📁](./thread-pool) [🌐](https://github.com/GerHobbelt/thread-pool) -- `BS::thread_pool`: a fast, lightweight, and easy-to-use C++17 thread pool library (by Barak Shoshany)
-- **txiki.js** [📁](./txiki.js) [🌐](https://github.com/GerHobbelt/txiki.js) -- a small and powerful JavaScript runtime. It's built on the shoulders of giants: it uses [QuickJS] as its JavaScript engine, [libuv] as the platform layer, [wasm3] as the WebAssembly engine and [curl] as the HTTP / WebSocket client.
-- **waifu2x-ncnn-vulkan** [📁](./waifu2x-ncnn-vulkan) [🌐](https://github.com/GerHobbelt/waifu2x-ncnn-vulkan)
-
-
-
-# waifu2x ncnn Vulkan: an [ncnn project](https://github.com/Tencent/ncnn) implementation of the waifu2x converter. Runs fast on Intel / AMD / Nvidia / Apple-Silicon with Vulkan API.
-
-- **win-iconv** [📁](./win-iconv) [🌐](https://github.com/GerHobbelt/win-iconv) -- an `iconv` implementation using Win32 API to convert.
 - **zsync2** [📁](./zsync2) [🌐](https://github.com/GerHobbelt/zsync2) -- the advanced file download/sync tool zsync. zsync is a well known tool for downloading and updating local files from HTTP servers using the well known algorithms rsync.
 - **zxing-cpp** [📁](./zxing-cpp) [🌐](https://github.com/GerHobbelt/zxing-cpp) -- ZXing-C++ ("zebra crossing") is a multi-format linear/matrix (1D/2D) barcode image processing library implemented in C++. Supported formats include: UPC-A, UPC-E, EAN-8, EAN-13, Code 39, Code 128, QR Code, PDF417, DataMatrix, CodaBar, DataBar, ITF.
 - ~~**circlehash** [📁](./circlehash) [🌐](https://github.com/GerHobbelt/circlehash) -- a family of non-cryptographic hash functions that pass every test in SMHasher.~~
@@ -3467,15 +3546,17 @@ existing aKNN libraries and supplement their weaknesses.
 
 - **ADE-graph-management** [📁](./ADE-graph-management) [🌐](https://github.com/GerHobbelt/ade) -- ADE Framework is a graph construction, manipulation, and processing framework.  ADE Framework is suitable for organizing data flow processing and execution.
 - **BitFunnel** [📁](./BitFunnel) [🌐](https://github.com/GerHobbelt/BitFunnel) -- the BitFunnel search index is used by [Bing's](http://www.bing.com) super-fresh, news, and media indexes. The algorithm is described in [BitFunnel: Revisiting Signatures for
+- **LLhttp-parser** [📁](./LLhttp-parser) [🌐](https://github.com/GerHobbelt/llhttp) -- a port and replacement of [http_parser](https://github.com/nodejs/http-parser) to TypeScript. [llparse](https://github.com/nodejs/llparse) is used to generate the output C source file, which could be compiled and linked with the embedder's program (like Node.js).
 - **OpenColorIO** [📁](./OpenColorIO) [🌐](https://github.com/GerHobbelt/OpenColorIO) -- OpenColorIO (OCIO) is a complete color management solution geared towards motion picture production with an emphasis on visual effects and computer animation. OCIO provides a straightforward and consistent user experience across all supporting applications while allowing for sophisticated back-end configuration options suitable for high-end production usage. OCIO is compatible with the Academy Color Encoding Specification (ACES) and is LUT-format agnostic, supporting many popular formats.
+- **URI-Encode-C** [📁](./URI-Encode-C) [🌐](https://github.com/GerHobbelt/URI-Encode-C) -- an optimized C library for percent encoding/decoding text, i.e. a URI encoder/decoder written in C based on [RFC3986](https://tools.ietf.org/html/rfc3986).
+- **URL-Detector** [📁](./URL-Detector) [🌐](https://github.com/GerHobbelt/URL-Detector) -- Url Detector is a library created by the Linkedin Security Team to detect and extract urls in a long piece of text. Keep in mind that for security purposes, its better to overdetect urls: instead of complying with RFC 3986 (http://www.ietf.org/rfc/rfc3986.txt), we try to detect based on browser behavior, optimizing detection for urls that are visitable through the address bar of Chrome, Firefox, Internet Explorer, and Safari. It is also able to identify the parts of the identified urls.
 - **bloom** [📁](./bloom) [🌐](https://github.com/GerHobbelt/bloom) -- C++ Bloom Filter Library, which offers optimal parameter selection based on expected false positive rate, union, intersection and difference operations between bloom filters and compression of in-use table (increase of false positive probability vs space).
+- **doxygen-awesome-css** [📁](./doxygen-awesome-css) [🌐](https://github.com/GerHobbelt/doxygen-awesome-css)
 - **easyexif** [📁](./easyexif) [🌐](https://github.com/GerHobbelt/easyexif) -- EasyEXIF is a tiny, lightweight C++ library that parses basic (EXIF) information out of JPEG files. It uses only the std::string library and is otherwise pure C++. You pass it the binary contents of a JPEG file, and it parses several of the most important EXIF fields for you.
 - **enkiTS-TaskScheduler** [📁](./enkiTS-TaskScheduler) [🌐](https://github.com/GerHobbelt/enkiTS) -- a permissively licensed C++11 Task Scheduler for creating parallel programs. The primary goal of enkiTS is to help developers create programs which handle both data and task level parallelism to utilize the full performance of multicore CPUs, whilst being lightweight (only a small amount of code) and easy to use.
 - **exprtk** [📁](./exprtk) [🌐](https://github.com/GerHobbelt/exprtk) -- C++ Mathematical Expression Toolkit Library is a simple to use, easy to integrate and extremely efficient run-time mathematical expression parsing and evaluation engine. The parsing engine supports numerous forms of functional and logic processing semantics and is easily extensible.
 - **farver-OKlab** [📁](./farver-OKlab) [🌐](https://github.com/GerHobbelt/farver) -- provides very fast, vectorised functions for conversion of colours between different colour spaces, colour comparisons (distance between colours), encoding/decoding, and channel manipulation in colour strings.
-- **gmic** [📁](./gmic) [🌐](https://github.com/GerHobbelt/gmic) -- a Full-Featured Open-Source Framework for Image Processing. It provides several different **[user interfaces](https://en.wikipedia.org/wiki/User_interface)** to convert/manipulate/filter/visualize **generic image datasets**, ranging from _1d scalar signals_ to _3d+t sequences of multi-spectral volumetric images_, hence including _2d color images_.
-- **gmic-community** [📁](./gmic-community) [🌐](https://github.com/GerHobbelt/gmic-community) -- community contributions for the GMIC Full-Featured Open-Source Framework for Image Processing. It provides several different **[user interfaces](https://en.wikipedia.org/wiki/User_interface)** to convert/manipulate/filter/visualize **generic image datasets**, ranging from _1d scalar signals_ to _3d+t sequences of multi-spectral volumetric images_, hence including _2d color images_.
-- **google-marl** [📁](./google-marl) [🌐](https://github.com/GerHobbelt/marl)
+- **faup** [📁](./faup) [🌐](https://github.com/GerHobbelt/faup) -- **Faup** stands for Finally An Url Parser and is a library and command line tool to parse URLs and normalize fields with two constraints: (1) work with real-life urls (resilient to badly formated ones), and (2) be fast: no allocation for string parsing and read characters only once.
 - **graph-coloring** [📁](./graph-coloring) [🌐](https://github.com/GerHobbelt/graph-coloring) --   a C++ Graph Coloring Package. This project has two primary uses:
   
   * As an executable for finding the chromatic number for an input graph (in edge list or edge matrix format)
@@ -3496,46 +3577,51 @@ existing aKNN libraries and supplement their weaknesses.
   - Stable
   
 
-- **libpillowfight** [📁](./libpillowfight) [🌐](https://github.com/GerHobbelt/libpillowfight) -- simple C Library containing various image processing algorithms. Available algorithms:
+- **libdiagnostics** [📁](./libdiagnostics) [🌐](https://github.com/GerHobbelt/libdiagnostics) -- a C/C++ diagnostics logging library with support for writing HTML and store images and misc binary data to disk alongside. or when a mere logfile doesn't suffice.
+- **libnop** [📁](./libnop) [🌐](https://github.com/GerHobbelt/libnop) -- libnop (C++ Native Object Protocols) is a header-only library for serializing and deserializing C++ data types without external code generators or runtime support libraries. The only mandatory requirement is a compiler that supports the C++14 standard.
+- **libpillowfight** [📁](./libpillowfight) [🌐](https://github.com/GerHobbelt/libpillowfight) -- simple C Library containing various image processing algorithms. 
 
-* [Unpaper](https://github.com/Flameeyes/unpaper)'s algorithms
-  * Blackfilter
-  * Noisefilter
-  * Blurfilter
-  * Masks
-  * Grayfilter
-  * Border
-* Canny edge detection
-* Sobel operator
-* Gaussian blur
-* ACE (Automatic Color Equalization ; Parallelized implementation)
-* SWT (Stroke Width Transformation)
-* Compare: Compare two images (grayscale) and makes the pixels that are different
-  really visible (red).
-* Scan borders: Tries to detect the borders of a page in an image coming from
-  a scanner.
+Available algorithms:
+
+- ACE (Automatic Color Equalization; Parallelized implementation)
+- Canny edge detection
+- Compare: Compare two images (grayscale) and makes the pixels that are different really visible (red).
+- Gaussian blur
+- Scan borders: Tries to detect the borders of a page in an image coming from a scanner.
+- Sobel operator
+- SWT (Stroke Width Transformation)
+- [Unpaper](https://github.com/Flameeyes/unpaper)'s algorithms
+  
+  - Blackfilter
+  - Blurfilter
+  - Border
+  - Grayfilter
+  - Masks
+  - Noisefilter
 
 
-- **libprecog-data** [📁](./libprecog-data) [🌐](https://github.com/GerHobbelt/libprecog-data) -- `PRLib` (a.k.a. `libprecog`) test data.
-- **libprecog-manuals** [📁](./libprecog-manuals) [🌐](https://github.com/GerHobbelt/libprecog-manuals) -- `PRLib` (a.k.a. `libprecog`) related papers.
+- **libsl3** [📁](./libsl3) [🌐](https://github.com/GerHobbelt/libsl3) -- a C++ interface for SQLite 3.x. libsl3 is designed to enable comfortable and efficient communication with a SQLite database based on its natural language, which is SQL.
 - **libusb** [📁](./libusb) [🌐](https://github.com/GerHobbelt/libusb) -- a library for USB device access from Linux, macOS, Windows, OpenBSD/NetBSD, Solaris userspace, etc.; libusb is abstracted internally in such a way that it can hopefully be ported to other operating systems.
 - **merror** [📁](./merror) [🌐](https://github.com/GerHobbelt/merror) -- **MError** C++ Macro Error Handling Library is a library for error handling in C++ without exceptions. It requires C++17 and only works for gcc or clang compilers.
 - **minifb** [📁](./minifb) [🌐](https://github.com/GerHobbelt/minifb) -- MiniFB (Mini FrameBuffer) is a small cross platform library that makes it easy to render (32-bit) pixels in a window.
-- **n2-kNN** [📁](./n2-kNN) [🌐](https://github.com/GerHobbelt/n2) -- N2: Lightweight approximate **N**\ earest **N**\ eighbor algorithm library. N2 stands for two N's, which comes from \'Approximate ``N``\ earest ``N``\ eighbor Algorithm\'. Before N2, there has been other great approximate nearest neighbor libraries such as `Annoy`_ and `NMSLIB`_. However, each of them had different strengths and weaknesses regarding usability, performance, etc. N2 has been developed aiming to bring the strengths of
-- **oidn-OpenImageDenoise** [📁](./oidn-OpenImageDenoise) [🌐](https://github.com/GerHobbelt/oidn) -- Intel® Open Image Denoise is an open source library of high-performance, high-quality denoising filters for images rendered with ray tracing.
+- **mozjpeg** [📁](./mozjpeg) [🌐](https://github.com/GerHobbelt/mozjpeg) -- the Mozilla JPEG Encoder Project improves JPEG compression efficiency achieving higher visual quality and smaller file sizes at the same time. It is compatible with the JPEG standard, and the vast majority of the world's deployed JPEG decoders. MozJPEG is a patch for [libjpeg-turbo](https://github.com/libjpeg-turbo/libjpeg-turbo).
+- **omaha** [📁](./omaha) [🌐](https://github.com/GerHobbelt/omaha) -- Omaha is the open-source version of Google Update, a program to install requested software and keep it up to date.  The Google-branded version of Omaha is used to support software patching (both background updating, and on-demand update checks) for Google Chrome, Earth, and a variety of other Google products on Windows 7, 8, and 10.
 - **online-hnsw** [📁](./online-hnsw) [🌐](https://github.com/GerHobbelt/online-hnsw) -- Online HNSW: an implementation of the HNSW index for approximate nearest neighbors search for C++14, that supports incremental insertion and removal of elements.
-- **opencv_extra** [📁](./opencv_extra) [🌐](https://github.com/GerHobbelt/opencv_extra) -- extra data for OpenCV: Open Source Computer Vision Library
 - **openssl** [📁](./openssl) [🌐](https://github.com/GerHobbelt/openssl) -- OpenSSL is a robust, commercial-grade, full-featured Open Source Toolkit for the Transport Layer Security (TLS) protocol formerly known as the Secure Sockets Layer (SSL) protocol. The protocol implementation is based on a full-strength general purpose cryptographic library, which can also be used stand-alone.
 - **pdiff** [📁](./pdiff) [🌐](https://github.com/GerHobbelt/pdiff) -- perceptualdiff (pdiff): a program that compares two images using a perceptually based image metric.
 - **pecos** [📁](./pecos) [🌐](https://github.com/GerHobbelt/pecos) -- PECOS (Predictions for Enormous and Correlated Output Spaces) is a versatile and modular machine learning (ML) framework for fast learning and inference on problems with large output spaces, such as extreme multi-label ranking (XMR) and large-scale retrieval. PECOS' design is intentionally agnostic to the specific nature of the inputs and outputs as it is envisioned to be a general-purpose framework for multiple distinct applications. Given an input, PECOS identifies a small set (10-100) of relevant outputs from amongst an extremely large (~100MM) candidate set and ranks these outputs in terms of relevance.
-- **pylene** [📁](./pylene) [🌐](https://github.com/GerHobbelt/pylene) -- Pylene is a fork of [Milena](http://www.lrde.epita.fr/olena), an image processing library targeting genericity and efficiency. It provided mostly Mathematical Morphology building blocs for image processing pipelines.
+- **qs_parse** [📁](./qs_parse) [🌐](https://github.com/GerHobbelt/qs_parse) -- a set of simple and easy functions for parsing URL query strings, such as those generated in an HTTP GET form submission.
 - **scws-chinese-word-segmentation** [📁](./scws-chinese-word-segmentation) [🌐](https://github.com/GerHobbelt/scws)
 - **simdjson** [📁](./simdjson) [🌐](https://github.com/GerHobbelt/simdjson) -- simdjson : Parsing gigabytes of JSON per second. For NDJSON files, we can exceed 3 GB/s with our multithreaded parsing functions](https://github.com/simdjson/simdjson/blob/master/doc/parse_many.md).
 - **snappy** [📁](./snappy) [🌐](https://github.com/GerHobbelt/snappy) -- an up-to-date fork of google/snappy, a fast compression/decompression library. It does not aim for maximum compression, or compatibility with any other compression library; instead, it aims for very high speeds and reasonable compression.
 - **strtk** [📁](./strtk) [🌐](https://github.com/GerHobbelt/strtk) -- the C++ String Toolkit Library (StrTk) consists of robust, optimized and portable string processing algorithms for the C++ language. StrTk is designed to be easy to use and integrate within existing code bases. Furthermore the library has a rich set of features  that makes light work of any kind of string processing task.
 - **swig** [📁](./swig) [🌐](https://github.com/GerHobbelt/swig) -- SWIG (Simplified Wrapper and Interface Generator) is a software development tool (code generator) that connects programs written in C and C++ with a variety of high-level programming languages. It is used for building scripting language interfaces to C and C++ programs. SWIG simplifies development by largely automating the task of scripting language integration, allowing developers and users to focus on more important problems.
 - **thread-pool** [📁](./thread-pool) [🌐](https://github.com/GerHobbelt/thread-pool) -- `BS::thread_pool`: a fast, lightweight, and easy-to-use C++17 thread pool library (by Barak Shoshany)
-- **txiki.js** [📁](./txiki.js) [🌐](https://github.com/GerHobbelt/txiki.js) -- a small and powerful JavaScript runtime. It's built on the shoulders of giants: it uses [QuickJS] as its JavaScript engine, [libuv] as the platform layer, [wasm3] as the WebAssembly engine and [curl] as the HTTP / WebSocket client.
+- **txiki** [📁](./txiki.js) [🌐](https://github.com/GerHobbelt/txiki.js) -- a small and powerful JavaScript runtime. It's built on the shoulders of giants: it uses [QuickJS] as its JavaScript engine, [libuv] as the platform layer, [wasm3] as the WebAssembly engine and [curl] as the HTTP / WebSocket client.
 - **unicode-cldr-data** [📁](./unicode-cldr-data) [🌐](https://github.com/GerHobbelt/cldr-json) -- the JSON distribution of CLDR locale data for internationalization. While XML (not JSON) is the "official" format for all CLDR data, this data is programatically generated from the corresponding XML, using the CLDR tooling. This JSON data is generated using only data that has achieved draft="contributed" or draft="approved" status in the CLDR. This is the same threshhold as is used by the ICU (International Components for Unicode).
-- **waifu2x-ncnn-vulkan** [📁](./waifu2x-ncnn-vulkan) [🌐](https://github.com/GerHobbelt/waifu2x-ncnn-vulkan)
+- **qs_parse** [📁](./qs_parse) [🌐](https://github.com/GerHobbelt/qs_parse) -- a set of simple and easy functions for parsing URL query strings, such as those generated in an HTTP GET form submission.
+- **url-parser** [📁](./url-parser) [🌐](https://github.com/GerHobbelt/url.h) -- parse URLs much like Node's [url](http://nodejs.org/api/url.html) module.
+- **visible-url-detector** [📁](./visible-url-detector) [🌐](https://github.com/GerHobbelt/visible-url-detector) -- console app for listing active tab from browsers (Windows)
 - **win-iconv** [📁](./win-iconv) [🌐](https://github.com/GerHobbelt/win-iconv) -- an `iconv` implementation using Win32 API to convert.
+- **txiki** [📁](./txiki.js) [🌐](https://github.com/GerHobbelt/txiki.js) -- a small and powerful JavaScript runtime. It's built on the shoulders of giants: it uses [QuickJS] as its JavaScript engine, [libuv] as the platform layer, [wasm3] as the WebAssembly engine and [curl] as the HTTP / WebSocket client.
+- **yasl** [📁](./yasl) [🌐](https://github.com/GerHobbelt/yasl) -- Bytecode Interpreter for Yet Another Scripting Language (YASL).
