@@ -1,6 +1,3 @@
-DIR: **./scws-chinese-word-segmentation** -- - **scws-chinese-word-segmentation** [📁](./scws-chinese-word-segmentation) [🌐](https://github.com/GerHobbelt/scws)
+DIR: **./libinsane** -- - **libinsane** [📁](./libinsane) [🌐](https://github.com/GerHobbelt/libinsane)
 DIR: **../../thirdparty/jpeginfo** -- - **jpeginfo** [📁](../../thirdparty/jpeginfo) [🌐](https://github.com/GerHobbelt/jpeginfo)
 DIR: **./pmt-png-tools** -- - **pmt-png-tools** [📁](./pmt-png-tools) [🌐](https://github.com/GerHobbelt/pmt)
-DIR: **./sqlite_fts_tokenizer_chinese_simple** -- - **sqlite_fts_tokenizer_chinese_simple** [📁](./sqlite_fts_tokenizer_chinese_simple) [🌐](https://github.com/GerHobbelt/simple)
-DIR: **./zotero** -- - **zotero** [📁](./zotero) [🌐](https://github.com/GerHobbelt/zotero)
-DIR: **./doxygen-awesome-css** -- - **doxygen-awesome-css** [📁](./doxygen-awesome-css) [🌐](https://github.com/GerHobbelt/doxygen-awesome-css)
