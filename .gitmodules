@@ -4001,3 +4001,18 @@ ignore = dirty
 	path = Imath
 	url = git@github.com:GerHobbelt/Imath.git
 
+
+[submodule "LSWMS"]
+	path = LSWMS
+	url = git@github.com:GerHobbelt/LSWMS.git
+
+
+[submodule "bbe"]
+	path = bbe
+	url = git@github.com:GerHobbelt/bbe.git
+
+
+[submodule "getopt"]
+	path = getopt
+	url = git@github.com:GerHobbelt/getopt_port.git
+
