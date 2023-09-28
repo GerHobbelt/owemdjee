@@ -4016,3 +4016,9 @@ ignore = dirty
 	path = getopt
 	url = git@github.com:GerHobbelt/getopt_port.git
 
+
+[submodule "itpp"]
+	path = itpp
+	url = git@github.com:GerHobbelt/itpp.git
+
+
