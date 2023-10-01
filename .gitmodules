@@ -3916,7 +3916,7 @@ ignore = dirty
 	path = doxygen-awesome-css
 	url = git@github.com:GerHobbelt/doxygen-awesome-css.git
 
-
+ignore = dirty
 [submodule "yasl"]
 	path = yasl
 	url = git@github.com:GerHobbelt/yasl.git
@@ -3936,7 +3936,7 @@ ignore = dirty
 	path = mozjpeg
 	url = git@github.com:GerHobbelt/mozjpeg.git
 	
-
+ignore = dirty
 [submodule "URL-Detector"]
 	path = URL-Detector
 	url = git@github.com:GerHobbelt/URL-Detector.git
@@ -3981,12 +3981,12 @@ ignore = dirty
 	path = FFmpeg
 	url = git@github.com:GerHobbelt/FFmpeg.git
 
-
+ignore = dirty
 [submodule "Pillow"]
 	path = Pillow
 	url = git@github.com:GerHobbelt/Pillow.git
 
-
+ignore = dirty
 [submodule "libinsane"]
 	path = libinsane
 	url = git@github.com:GerHobbelt/libinsane.git
@@ -3996,12 +3996,12 @@ ignore = dirty
 	path = OpenEXR
 	url = git@github.com:GerHobbelt/openexr.git
 
-
+ignore = dirty
 [submodule "Imath"]
 	path = Imath
 	url = git@github.com:GerHobbelt/Imath.git
 
-
+ignore = dirty
 [submodule "LSWMS"]
 	path = LSWMS
 	url = git@github.com:GerHobbelt/LSWMS.git
@@ -4011,7 +4011,7 @@ ignore = dirty
 	path = bbe
 	url = git@github.com:GerHobbelt/bbe.git
 
-
+ignore = dirty
 [submodule "getopt"]
 	path = getopt
 	url = git@github.com:GerHobbelt/getopt_port.git
@@ -4040,5 +4040,45 @@ ignore = dirty
 [submodule "enca"]
 	path = enca
 	url = git@github.com:GerHobbelt/enca.git
+
+
+[submodule "armadillo"]
+	path = armadillo
+	url = git@github.com:GerHobbelt/armadillo-code.git
+
+
+[submodule "kalman-cpp"]
+	path = kalman-cpp
+	url = git@github.com:GerHobbelt/kalman-cpp.git
+
+
+[submodule "optim"]
+	path = optim
+	url = git@github.com:GerHobbelt/optim.git
+
+
+[submodule "autodiff"]
+	path = autodiff
+	url = git@github.com:GerHobbelt/autodiff.git
+
+
+[submodule "stats"]
+	path = stats
+	url = git@github.com:GerHobbelt/stats.git
+
+
+[submodule "gcem"]
+	path = gcem
+	url = git@github.com:GerHobbelt/gcem.git
+
+
+[submodule "h5cpp"]
+	path = h5cpp
+	url = git@github.com:GerHobbelt/h5cpp.git
+
+
+[submodule "ensmallen"]
+	path = ensmallen
+	url = git@github.com:GerHobbelt/ensmallen.git
 
 
