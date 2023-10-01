@@ -4082,3 +4082,8 @@ ignore = dirty
 	url = git@github.com:GerHobbelt/ensmallen.git
 
 
+[submodule "BaseMatrixOps"]
+	path = BaseMatrixOps
+	url = git@github.com:GerHobbelt/BaseMatrixOps.git
+
+
