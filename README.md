@@ -251,6 +251,10 @@ The other JavaScript engines considered are of varying size, performance and com
 - **ion-c** [📁](./ion-c) [🌐](https://github.com/GerHobbelt/ion-c) -- a C implementation of the [Ion data notation](http://amzn.github.io/ion-docs). Amazon Ion is a richly-typed, self-describing, hierarchical data serialization format offering interchangeable binary and text representations. The text format (a superset of JSON) is easy to read and author, supporting rapid prototyping. The binary representation is efficient to store, transmit, and skip-scan parse. The rich type system provides unambiguous semantics for long-term preservation of data which can survive multiple generations of software evolution.
 - **libnop** [📁](./libnop) [🌐](https://github.com/GerHobbelt/libnop) -- libnop (C++ Native Object Protocols) is a header-only library for serializing and deserializing C++ data types without external code generators or runtime support libraries. The only mandatory requirement is a compiler that supports the C++14 standard.
 - **libsmile** [📁](./libsmile) [🌐](https://github.com/GerHobbelt/libsmile) -- C implementation of the Smile binary format (https://github.com/FasterXML/smile-format-specification).
+- **protobuf** [📁](./protobuf) [🌐](https://github.com/GerHobbelt/protobuf) -- Protocol Buffers - Google's data interchange format that is a language-neutral, platform-neutral, extensible mechanism for serializing structured data.
+  
+  - **☹discouraged🤧**; reason: relatively slow run-time and (in my opinion) rather ugly & convoluted approach at build time. Has too much of a Java/CorporateProgramming smell, which has not lessened over the years, unfortunately.
+
 - **swig** [📁](./swig) [🌐](https://github.com/GerHobbelt/swig) -- SWIG (Simplified Wrapper and Interface Generator) is a software development tool (code generator) that connects programs written in C and C++ with a variety of high-level programming languages. It is used for building scripting language interfaces to C and C++ programs. SWIG simplifies development by largely automating the task of scripting language integration, allowing developers and users to focus on more important problems.
   
   *[SWIG 🌐](https://swig.readthedocs.io/en/latest/Manual/SWIG.html) was not considered initially; more suitable for RPC than what we have in mind, which is purely data messages enchange. MAY be of use for transitional applications which are mixed-(programming-)language based, e.g. where we want to mix C/C++ and C# in a single Test Application.*
@@ -278,10 +282,6 @@ The other JavaScript engines considered are of varying size, performance and com
 - ~~**libsmile** [🌐](https://github.com/pierre/libsmile) -- ["Smile" format](https://en.wikipedia.org/wiki/Smile_%28data_interchange_format%29), i.e. a compact binary JSON format~~
   
   - **removed**; reason: for binary format record serialization we will be using `bebop` exclusively. All other communications will be JSON/JSON5/XML based.
-
-- ~~**protobuf** [🌐](https://github.com/protocolbuffers/protobuf)~~
-  
-  - **removed**; reason: relatively slow run-time and (in my opinion) rather ugly & convoluted approach at build time. Has too much of a Java/CorporateProgramming smell, which has not lessened over the years, unfortunately.
 
 
 
@@ -620,6 +620,8 @@ See also [lzbench](https://github.com/inikep/lzbench).
 - **CLBlast** [📁](./CLBlast) [🌐](https://github.com/GerHobbelt/CLBlast) -- the tuned OpenCL BLAS library. CLBlast is a modern, lightweight, performant and tunable OpenCL BLAS library written in C++11. It is designed to leverage the full performance potential of a wide variety of OpenCL devices from different vendors, including desktop and laptop GPUs, embedded GPUs, and other accelerators. CLBlast implements BLAS routines: basic linear algebra subprograms operating on vectors and matrices.
 - **CLBlast-database** [📁](./CLBlast-database) [🌐](https://github.com/GerHobbelt/CLBlast-database) -- the full database of tuning results for the [CLBlast OpenCL BLAS library](https://github.com/CNugteren/CLBlast). Tuning results are obtained using CLBlast and the [CLTune auto-tuner](https://github.com/CNugteren/CLTune).
 - **CLTune** [📁](./CLTune) [🌐](https://github.com/GerHobbelt/CLTune) -- automatic OpenCL kernel tuning for CLBlast: CLTune is a C++ library which can be used to automatically tune your OpenCL and CUDA kernels. The only thing you'll need to provide is a tuneable kernel and a list of allowed parameters and values.
+- **exprtk** [📁](./exprtk) [🌐](https://github.com/GerHobbelt/exprtk) -- C++ Mathematical Expression Toolkit Library is a simple to use, easy to integrate and extremely efficient run-time mathematical expression parsing and evaluation engine. The parsing engine supports numerous forms of functional and logic processing semantics and is easily extensible.
+- **fastapprox** [📁](./fastapprox) [🌐](https://github.com/GerHobbelt/fastapprox) -- approximate and vectorized versions of common mathematical functions (e.g. exponential, logarithm, and power, lgamma and digamma, cosh, sinh, tanh, cos, sin, tan, sigmoid and erf, Lambert W)
 - **Imath** [📁](./Imath) [🌐](https://github.com/GerHobbelt/Imath) -- a basic, light-weight, and efficient C++ representation of 2D and 3D vectors and matrices and other simple but useful mathematical objects, functions, and data types common in computer graphics applications, including the “half” 16-bit floating-point type.
 - **itpp** [📁](./itpp) [🌐](https://github.com/GerHobbelt/itpp) -- IT++ is a C++ library of mathematical, signal processing and communication classes and functions. Its main use is in simulation of communication systems and for performing research in the area of communications. The kernel of the library consists of generic vector and matrix classes, and a set of accompanying routines. Such a kernel makes IT++ similar to MATLAB or GNU Octave. The IT++ library originates from the former department of Information Theory at the Chalmers University of Technology, Gothenburg, Sweden.
 - **lapack** [📁](./lapack) [🌐](https://github.com/GerHobbelt/lapack) -- [CBLAS](http://www.netlib.org/blas/) + [LAPACK](http://www.netlib.org/lapack/index.html) optimized linear algebra libs
@@ -635,6 +637,7 @@ See also [lzbench](https://github.com/inikep/lzbench).
 - **OpenCL-Headers** [📁](./OpenCL-Headers) [🌐](https://github.com/GerHobbelt/OpenCL-Headers) -- C language headers for the OpenCL API.
 - **OpenCL-SDK** [📁](./OpenCL-SDK) [🌐](https://github.com/GerHobbelt/OpenCL-SDK) -- the Khronos OpenCL SDK. It brings together all the components needed to develop OpenCL applications.
 - **stan-math** [📁](./stan-math) [🌐](https://github.com/GerHobbelt/stan-math) -- the Stan Math Library is a C++, reverse-mode automatic differentiation library designed to be usable, extensive and extensible, efficient, scalable, stable, portable, and redistributable in order to facilitate the construction and utilization of algorithms that utilize derivatives.
+- **tinyexpr** [📁](./tinyexpr) [🌐](https://github.com/GerHobbelt/tinyexpr) -- a very small recursive descent parser and evaluation engine for math expressions.
 - **universal-numbers** [📁](./universal-numbers) [🌐](https://github.com/GerHobbelt/universal) -- a header-only C++ template library for universal number arithmetic. The goal of the Universal Numbers Library is to offer applications alternatives to IEEE floating-point that are more efficient and mathematically robust. The Universal library is a ready-to-use header-only library that provides plug-in replacement for native types, and provides a low-friction environment to start exploring alternatives to IEEE floating-point in your own algorithms.
 - **xsimd** [📁](./xsimd) [🌐](https://github.com/GerHobbelt/xsimd) -- SIMD (Single Instruction, Multiple Data) instructions differ between microprocessor vendors and compilers. `xsimd` provides a unified means for using these features for library authors. It enables manipulation of batches of numbers with the same arithmetic operators as for single values. It also provides accelerated implementation of common mathematical functions operating on batches.
 
@@ -1097,7 +1100,7 @@ i.e. breaking text into words when you _receive a textstream without spaces_. Al
 
 - **openjpeg** [📁](../../thirdparty/openjpeg) [🌐](https://github.com/GerHobbelt/thirdparty-openjpeg) -- OPENJPEG Library and Applications -- OpenJPEG is an open-source JPEG 2000 codec written in C language. It has been developed in order to promote the use of [JPEG 2000](http://www.jpeg.org/jpeg2000), a still-image compression standard from the Joint Photographic Experts Group ([JPEG](http://www.jpeg.org)).  Since April 2015, it is officially recognized by ISO/IEC and ITU-T as a [JPEG 2000 Reference Software](http://www.itu.int/rec/T-REC-T.804-201504-I!Amd2).
 - **pdiff** [📁](./pdiff) [🌐](https://github.com/GerHobbelt/pdiff) -- perceptualdiff (pdiff): a program that compares two images using a perceptually based image metric.
-- **pmt-png-tools** [📁](./pmt-png-tools) [🌐](https://github.com/GerHobbelt/pmt)
+- **pmt-png-tools** [📁](./pmt-png-tools) [🌐](https://github.com/GerHobbelt/pmt) -- pngcrush and other PNG and MNG tools
 - **twain_library** [📁](./twain_library) [🌐](https://github.com/GerHobbelt/twain_library) -- the DTWAIN Library, **Version 5.x**, from Dynarithmic Software.  DTWAIN is an open source programmer's library that will allow applications to acquire images from TWAIN-enabled devices using a simple Application Programmer's Interface (API).
 - **Imath** [🌐](https://github.com/AcademySoftwareFoundation/Imath) -- float16 support lib for OpenEXR format
   
@@ -1330,6 +1333,7 @@ See also [image formats (visual) quality comparison](https://eclipseo.github.io/
   - Supports 'utf8' encoding.
   - The project comes with a relatively complete unit test, and the stability of the core function Chinese word segmentation (utf8) has been tested by the online environment.
 
+- **enca** [📁](./enca) [🌐](https://github.com/GerHobbelt/enca) -- Enca (Extremely Naive Charset Analyser) consists of two main components: `libenca`, an encoding detection library, and `enca`, a command line frontend, integrating libenca and several charset conversion libraries and tools (GNU `recode`, UNIX98 `iconv`, perl `Unicode::Map`, `cstocs`).
 - **fastBPE** [📁](./fastBPE) [🌐](https://github.com/GerHobbelt/fastBPE) -- text tokenization / ngrams
 - **fastText** [📁](./fastText) [🌐](https://github.com/GerHobbelt/fastText) -- [fastText](https://fasttext.cc/) is a library for efficient learning of word representations and sentence classification.
 - **libchardet** [📁](./libchardet) [🌐](https://github.com/GerHobbelt/libchardet) -- is based on Mozilla Universal Charset Detector library and, detects the character set used to encode data.
@@ -2372,6 +2376,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
   On MS Windows the Windows API is used instead of escape codes but some limitations apply (not everything is supported). That's why it's recommended to enter virtual terminal processing mode and set the TERMCOLOR_USE_ANSI_ESCAPE_SEQUENCES macro to trick termcolor to use ANSI color codes.
 
 - **tinydir** [📁](./tinydir) [🌐](https://github.com/GerHobbelt/tinydir) -- lightweight, portable and easy to integrate C directory and file reader. TinyDir wraps `dirent` for POSIX and `FindFirstFile` for Windows. Windows unicode is supported.
+- **tinyexpr** [📁](./tinyexpr) [🌐](https://github.com/GerHobbelt/tinyexpr) -- a very small recursive descent parser and evaluation engine for math expressions.
 - **visible-url-detector** [📁](./visible-url-detector) [🌐](https://github.com/GerHobbelt/visible-url-detector) -- console app for listing active tab from browsers (Windows)
 - **VSNASM** [📁](./VSNASM) [🌐](https://github.com/GerHobbelt/VSNASM) -- a set of build customisations that can be used within Visual Studio to compile assembly code using NASM. Visual Studio integration for the NASM assembler.
 - **wil-Win32-Interface-Library** [📁](./wil-Win32-Interface-Library) [🌐](https://github.com/GerHobbelt/wil) -- The Windows Implementation Libraries (WIL) is a header-only C++ library created to make life easier for developers on Windows through readable type-safe C++ interfaces for common Windows coding patterns.
@@ -2408,6 +2413,10 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **OpenSSL** [📁](./openssl) [🌐](https://github.com/GerHobbelt/openssl) -- also used by cURL et al, incidentally.
 - **pango** [📁](./pango) [🌐](https://github.com/GerHobbelt/pango) -- a library for layout and rendering of text, with an emphasis on internationalization. Pango can be used anywhere that text layout is needed.
 - **pcre** [📁](./pcre) [🌐](https://github.com/GerHobbelt/pcre) -- PCRE2 : Perl-Compatible Regular Expressions. The PCRE2 library is a set of C functions that implement regular expression pattern matching using the same syntax and semantics as Perl 5. PCRE2 has its own native API, as well as a set of wrapper functions that correspond to the POSIX regular expression API. It comes in three forms, for processing 8-bit, 16-bit, or 32-bit code units, in either literal or UTF encoding.
+- **protobuf** [📁](./protobuf) [🌐](https://github.com/GerHobbelt/protobuf) -- Protocol Buffers - Google's data interchange format that is a language-neutral, platform-neutral, extensible mechanism for serializing structured data.
+  
+  - **☹discouraged🤧**; reason: relatively slow run-time and (in my opinion) rather ugly & convoluted approach at build time. Has too much of a Java/CorporateProgramming smell, which has not lessened over the years, unfortunately.
+
 - **scintilla** [📁](./scintilla) [🌐](https://github.com/GerHobbelt/scintilla) -- text editor (part of wxWidgets)
 - **snmalloc** [📁](./snmalloc) [🌐](https://github.com/GerHobbelt/snmalloc) -- a high-performance allocator.
 - **svg-charter** [📁](./svg-charter) [🌐](https://github.com/GerHobbelt/charter) -- SVG chart renderer
@@ -2422,7 +2431,6 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
   
   - **removed**; reason: we've decided to standardize on a single unittest library (which is well supported in Microsoft Visual Studio, including the Test Explorer view there); where necessary, we'll have to provide a translation layer instead when existing submodules use different test rigs originally.
 
-- ~~**protobuf** [🌐](https://github.com/protocolbuffers/protobuf)~~
 
 
 
@@ -2593,6 +2601,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **ECMA262** [📁](./ECMA262) [🌐](https://github.com/GerHobbelt/ecma262) -- ECMAScript :: the source for the current draft of ECMA-262, the ECMAScript® Language Specification.
 - **efsw** [📁](./efsw) [🌐](https://github.com/GerHobbelt/efsw) -- cross-platform file system watcher and notifier
 - **emphf-hash** [📁](./emphf-hash) [🌐](https://github.com/GerHobbelt/emphf) -- an efficient external-memory algorithm for the construction of minimal perfect hash functions for large-scale key sets, focusing on speed and low memory usage (2.61 N bits plus a small constant factor).
+- **enca** [📁](./enca) [🌐](https://github.com/GerHobbelt/enca) -- Enca (Extremely Naive Charset Analyser) consists of two main components: `libenca`, an encoding detection library, and `enca`, a command line frontend, integrating libenca and several charset conversion libraries and tools (GNU `recode`, UNIX98 `iconv`, perl `Unicode::Map`, `cstocs`).
 - **enkiTS** [📁](./enkiTS-TaskScheduler) [🌐](https://github.com/GerHobbelt/enkiTS) -- A C++11 Task Scheduler for creating parallel programs.
 - **EtwExplorer** [📁](./EtwExplorer) [🌐](https://github.com/GerHobbelt/EtwExplorer) -- View ETW Provider metadata. Event Tracing for Windows (ETW) is a logging facility built into the Windows OS. Modern providers register a manifest that describes all the events they support, with their properties. Classic providers register a MOF instead.
 - **eventpp** [📁](./eventpp) [🌐](https://github.com/GerHobbelt/eventpp) -- a C++ event library for callbacks, event dispatcher, and event queue. With eventpp you can easily implement signal and slot mechanism, publisher and subscriber pattern, or observer pattern.
@@ -2604,6 +2613,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **extract** [📁](../../thirdparty/extract) [🌐](https://github.com/GerHobbelt/thirdparty_extract) -- clone of git://git.ghostscript.com/extract.git
 - **faiss** [📁](./faiss) [🌐](https://github.com/GerHobbelt/faiss) -- a library for efficient similarity search and clustering of dense vectors. It contains algorithms that search in sets of vectors of any size, up to ones that possibly do not fit in RAM. It also contains supporting code for evaluation and parameter tuning. Faiss is written in C++ with complete wrappers for Python/numpy. Some of the most useful algorithms are implemented on the GPU. It is developed primarily at Facebook AI Research.
 - **farver-OKlab** [📁](./farver-OKlab) [🌐](https://github.com/GerHobbelt/farver) -- provides very fast, vectorised functions for conversion of colours between different colour spaces, colour comparisons (distance between colours), encoding/decoding, and channel manipulation in colour strings.
+- **fastapprox** [📁](./fastapprox) [🌐](https://github.com/GerHobbelt/fastapprox) -- approximate and vectorized versions of common mathematical functions (e.g. exponential, logarithm, and power, lgamma and digamma, cosh, sinh, tanh, cos, sin, tan, sigmoid and erf, Lambert W)
 - **fastBPE** [📁](./fastBPE) [🌐](https://github.com/GerHobbelt/fastBPE) -- text tokenization / ngrams
 - **fastfilter_cpp** [📁](./fastfilter_cpp) [🌐](https://github.com/GerHobbelt/fastfilter_cpp) -- Fast Filter: Fast approximate membership filter implementations (C++, research library)
 - **fast_float** [📁](./fast_float) [🌐](https://github.com/GerHobbelt/fast_float) -- fast and exact implementation of the C++ `from_chars` functions for float and double types: 4x faster than `strtod`
@@ -3201,7 +3211,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **pmdk-tests** [📁](./pmdk-tests) [🌐](https://github.com/GerHobbelt/pmdk-tests) -- tests for [Persistent Memory Development Kit](https://github.com/pmem/pmdk)
 - **pmemkv** [📁](./pmemkv) [🌐](https://github.com/GerHobbelt/pmemkv) -- `pmemkv` is a local/embedded key-value datastore optimized for persistent memory. Rather than being tied to a single language or backing implementation, `pmemkv` provides different options for language bindings and storage engines.
 - **pmemkv-bench** [📁](./pmemkv-bench) [🌐](https://github.com/GerHobbelt/pmemkv-bench) -- benchmark for [libpmemkv](https://github.com/pmem/pmemkv/) and its underlying libraries, based on [leveldb's db_bench](https://github.com/google/leveldb). The `pmemkv_bench` utility provides some standard read, write & remove benchmarks. It's based on the `db_bench` utility included with LevelDB and RocksDB, although the list of supported parameters is slightly different.
-- **pmt-png-tools** [📁](./pmt-png-tools) [🌐](https://github.com/GerHobbelt/pmt)
+- **pmt-png-tools** [📁](./pmt-png-tools) [🌐](https://github.com/GerHobbelt/pmt) -- pngcrush and other PNG and MNG tools
 - **podofo** [📁](./podofo) [🌐](https://github.com/GerHobbelt/podofo) -- a library to work with the PDF file format and includes also a few tools. The name comes from the first two letters of PDF (<b>Po</b>rtable <b>Do</b>cument <b>Fo</b>rmat). The PoDoFo library is a free portable C++ library which includes classes to parse a PDF file and modify its contents into memory. The changes can be written back to disk easily. PoDoFo is designed to avoid loading large PDF objects into memory until they are required and can write large streams immediately to disk, so it is possible to manipulate quite large files with it.
 - **poppler** [📁](./poppler) [🌐](https://github.com/GerHobbelt/poppler) -- Poppler is a library for rendering PDF files, and examining or modifying their structure.  Poppler originally came from the XPDF sources.
 - **portable_concurrency-std-future** [📁](./portable_concurrency-std-future) [🌐](https://github.com/GerHobbelt/portable_concurrency) -- Portable implementation of future/promise API in C++. `std::future` done right.
@@ -3212,6 +3222,10 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **probminhash** [📁](./probminhash) [🌐](https://github.com/GerHobbelt/probminhash) -- a class of Locality-Sensitive Hash Algorithms for the (Probability) Jaccard Similarity
 - **promise-cpp** [📁](./promise-cpp) [🌐](https://github.com/GerHobbelt/promise-cpp) -- advanced C++ promise/A+ library in Javascript style
 - **promise-hpp** [📁](./promise-hpp) [🌐](https://github.com/GerHobbelt/promise.hpp) -- C++ asynchronous promises like a Promises/A+
+- **protobuf** [📁](./protobuf) [🌐](https://github.com/GerHobbelt/protobuf) -- Protocol Buffers - Google's data interchange format that is a language-neutral, platform-neutral, extensible mechanism for serializing structured data.
+  
+  - **☹discouraged🤧**; reason: relatively slow run-time and (in my opinion) rather ugly & convoluted approach at build time. Has too much of a Java/CorporateProgramming smell, which has not lessened over the years, unfortunately.
+
 - **proxygen** [📁](./proxygen) [🌐](https://github.com/GerHobbelt/proxygen) -- the core C++ HTTP abstractions used at Facebook. Internally, it is used as the basis for building many HTTP servers, proxies, and clients, focusing on the common HTTP abstractions and our simple HTTPServer framework. The framework supports HTTP/1.1, SPDY/3, SPDY/3.1, HTTP/2, and HTTP/3.
 - **prvhash** [📁](./prvhash) [🌐](https://github.com/GerHobbelt/prvhash) -- PRVHASH is a hash function that generates a [uniform pseudo-random number sequence](https://en.wikipedia.org/wiki/Pseudorandom_number_generator) derived from the message. PRVHASH is conceptually similar (in the sense of using a pseudo-random number sequence as a hash) to [`keccak`](https://en.wikipedia.org/wiki/SHA-3) and [`RadioGatun`](https://en.wikipedia.org/wiki/RadioGat%C3%BAn) schemes, but is a completely different implementation of such concept. PRVHASH is both a ["randomness extractor"](https://en.wikipedia.org/wiki/Randomness_extractor) and an "extendable-output function" (XOF).
 - **pthreadpool** [📁](./pthreadpool) [🌐](https://github.com/GerHobbelt/pthreadpool) -- pthreadpool is a portable and efficient thread pool implementation. It provides similar functionality to `#pragma omp parallel for`, but with additional features.

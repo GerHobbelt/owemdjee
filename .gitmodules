@@ -4025,3 +4025,20 @@ ignore = dirty
 [submodule "fontconfig"]
 	path = fontconfig
 	url = git@github.com:GerHobbelt/fontconfig.git
+	
+	
+[submodule "protobuf"]
+	path = protobuf
+	url = git@github.com:GerHobbelt/protobuf.git
+	
+	
+[submodule "fastapprox"]
+	path = fastapprox
+	url = git@github.com:GerHobbelt/fastapprox.git
+
+
+[submodule "enca"]
+	path = enca
+	url = git@github.com:GerHobbelt/enca.git
+
+
