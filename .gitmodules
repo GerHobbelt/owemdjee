@@ -1,5 +1,5 @@
 [submodule "xtensor"]
-        path = xtensor
+    path = xtensor
 	url = https://github.com/GerHobbelt/xtensor.git
 	
 ignore = dirty
@@ -72,7 +72,7 @@ ignore = dirty
 	path = yyjson
 	url = https://github.com/GerHobbelt/yyjson.git
 	
-ignore = dirty
+
 [submodule "bebop"]
 	path = bebop
 	url = https://github.com/GerHobbelt/bebop.git
@@ -137,7 +137,7 @@ ignore = dirty
 	path = libgif
 	url = https://github.com/GerHobbelt/libgif.git
 	
-ignore = dirty
+
 [submodule "upskirt-markdown"]
 	path = upskirt-markdown
 	url = https://github.com/GerHobbelt/soldout.git
@@ -157,7 +157,7 @@ ignore = dirty
 	path = lz4
 	url = https://github.com/GerHobbelt/lz4.git
 	
-ignore = dirty
+
 [submodule "opencv_contrib"]
 	path = opencv_contrib
 	url = https://github.com/GerHobbelt/opencv_contrib.git
@@ -172,7 +172,7 @@ ignore = dirty
 	path = re2
 	url = https://github.com/GerHobbelt/re2.git
 	
-ignore = dirty
+
 [submodule "glob"]
 	path = glob
 	url = https://github.com/GerHobbelt/glob.git
@@ -182,7 +182,7 @@ ignore = dirty
 	path = libvips
 	url = https://github.com/GerHobbelt/libvips.git
 	
-ignore = dirty
+
 [submodule "GraphicsMagick"]
 	path = GraphicsMagick
 	url = https://github.com/GerHobbelt/graphicsmagick.git
@@ -192,7 +192,7 @@ ignore = dirty
 	path = googletest
 	url = https://github.com/GerHobbelt/googletest.git
 	
-ignore = dirty
+
 [submodule "jpeg-xl"]
 	path = jpeg-xl
 	url = https://github.com/GerHobbelt/jpeg-xl.git
@@ -302,7 +302,7 @@ ignore = dirty
 	path = google-diff-match-patch
 	url = https://github.com/GerHobbelt/diff-match-patch.git
 	
-ignore = dirty
+
 [submodule "txiki.js"]
 	path = txiki.js
 	url = https://github.com/GerHobbelt/txiki.js.git
@@ -497,7 +497,7 @@ ignore = dirty
 	path = libconfig
 	url = https://github.com/GerHobbelt/libconfig.git
 	
-ignore = dirty
+
 [submodule "OptimizationTemplateLibrary"]
 	path = OptimizationTemplateLibrary
 	url = https://github.com/GerHobbelt/O-T-L.git
@@ -517,7 +517,7 @@ ignore = dirty
 	path = tomlpp
 	url = https://github.com/GerHobbelt/tomlplusplus.git
 	
-ignore = dirty
+
 [submodule "plf_nanotimer"]
 	path = plf_nanotimer
 	url = https://github.com/GerHobbelt/plf_nanotimer.git
@@ -532,12 +532,12 @@ ignore = dirty
 	path = file
 	url = https://github.com/GerHobbelt/file.git
 	
-ignore = dirty
+
 [submodule "libyaml"]
 	path = libyaml
 	url = https://github.com/GerHobbelt/libyaml.git
 	
-ignore = dirty
+
 [submodule "lmdb"]
 	path = lmdb
 	url = https://github.com/GerHobbelt/lmdb.git
@@ -567,7 +567,7 @@ ignore = dirty
 	path = libidn2
 	url = https://github.com/GerHobbelt/libidn2.git
 	
-ignore = dirty
+
 [submodule "uint128_t"]
 	path = uint128_t
 	url = https://github.com/GerHobbelt/uint128_t.git
@@ -577,7 +577,7 @@ ignore = dirty
 	path = cereal
 	url = https://github.com/GerHobbelt/cereal.git
 	
-ignore = dirty
+
 [submodule "parallel-hashmap"]
 	path = parallel-hashmap
 	url = https://github.com/GerHobbelt/parallel-hashmap.git
@@ -602,21 +602,21 @@ ignore = dirty
 	path = gbenchmark
 	url = https://github.com/GerHobbelt/benchmark.git
 	
-ignore = dirty
+
 [submodule "resumable-assert"]
 	path = resumable-assert
 	url = https://github.com/GerHobbelt/resumable-assert.git
 	
-ignore = dirty
+
 [submodule "bibutils"]
 	path = bibutils
 	url = https://github.com/GerHobbelt/bibutils.git
 	
-ignore = dirty
+
 [submodule "bibtex-robust-decoder"]
 	path = bibtex-robust-decoder
 	url = https://github.com/GerHobbelt/bibtex-robust-decoder.git
-	ignore = dirty
+
 ignore = dirty
 [submodule "efsw"]
 	path = efsw
@@ -697,7 +697,7 @@ ignore = dirty
 	path = stdext-path
 	url = https://github.com/GerHobbelt/stdext-path.git
 	
-ignore = dirty
+
 [submodule "lmdbxx"]
 	path = lmdbxx
 	url = https://github.com/GerHobbelt/lmdbxx.git
@@ -792,7 +792,7 @@ ignore = dirty
 	path = libscanf
 	url = https://github.com/GerHobbelt/scnlib.git
 	
-ignore = dirty
+
 [submodule "magic_enum"]
 	path = magic_enum
 	url = https://github.com/GerHobbelt/magic_enum.git
@@ -807,7 +807,7 @@ ignore = dirty
 	path = expected-lite
 	url = https://github.com/GerHobbelt/expected-lite.git
 	
-ignore = dirty
+
 [submodule "many-stop-words"]
 	path = many-stop-words
 	url = https://github.com/GerHobbelt/many-stop-words.git
@@ -822,7 +822,7 @@ ignore = dirty
 	path = wget
 	url = https://github.com/GerHobbelt/wget.git
 	
-ignore = dirty
+
 [submodule "cppzmq"]
 	path = cppzmq
 	url = https://github.com/GerHobbelt/cppzmq.git
@@ -947,7 +947,7 @@ ignore = dirty
 	path = webview
 	url = https://github.com/GerHobbelt/webview.git
 	
-ignore = dirty
+
 [submodule "wxWidgets"]
 	path = wxWidgets
 	url = https://github.com/GerHobbelt/wxWidgets.git
@@ -957,12 +957,12 @@ ignore = dirty
 	path = pcre
 	url = https://github.com/GerHobbelt/pcre.git
 	
-ignore = dirty
+
 [submodule "nanosvg"]
 	path = nanosvg
 	url = https://github.com/GerHobbelt/nanosvg.git
 	
-ignore = dirty
+
 [submodule "neutralinoJS"]
 	path = neutralinoJS
 	url = https://github.com/GerHobbelt/neutralinojs.git
@@ -987,7 +987,7 @@ ignore = dirty
 	path = liblinear
 	url = https://github.com/GerHobbelt/liblinear.git
 	
-ignore = dirty
+
 [submodule "hmm-scalable"]
 	path = hmm-scalable
 	url = https://github.com/GerHobbelt/hmm-scalable.git
@@ -1037,7 +1037,7 @@ ignore = dirty
 	path = promise-cpp
 	url = https://github.com/GerHobbelt/promise-cpp.git
 	
-ignore = dirty
+
 [submodule "libq"]
 	path = libq
 	url = https://github.com/GerHobbelt/q.git
@@ -1052,7 +1052,7 @@ ignore = dirty
 	path = google-marl
 	url = https://github.com/GerHobbelt/marl.git
 	
-ignore = dirty
+
 [submodule "ticpp"]
 	path = ticpp
 	url = https://github.com/GerHobbelt/ticpp.git
@@ -1102,7 +1102,7 @@ ignore = dirty
 	path = sqlite3pp
 	url = https://github.com/GerHobbelt/sqlite3pp.git
 	
-ignore = dirty
+
 [submodule "wxPDFView"]
 	path = wxPDFView
 	url = https://github.com/GerHobbelt/wxPDFView.git
@@ -1117,7 +1117,7 @@ ignore = dirty
 	path = uberlog
 	url = https://github.com/GerHobbelt/uberlog.git
 	
-ignore = dirty
+
 [submodule "wxWebViewChromium"]
 	path = wxWebViewChromium
 	url = https://github.com/GerHobbelt/wxWebViewChromium.git
@@ -1132,7 +1132,7 @@ ignore = dirty
 	path = filesystem
 	url = https://github.com/GerHobbelt/filesystem.git
 	
-ignore = dirty
+
 [submodule "cxxtest_catch_2_gtest"]
 	path = cxxtest_catch_2_gtest
 	url = https://github.com/GerHobbelt/cxxtest_catch_2_gtest.git
@@ -1147,7 +1147,7 @@ ignore = dirty
 	path = binlog
 	url = https://github.com/GerHobbelt/binlog.git
 	
-ignore = dirty
+
 [submodule "CImg"]
 	path = CImg
 	url = https://github.com/GerHobbelt/CImg.git
@@ -1192,7 +1192,7 @@ ignore = dirty
 	path = libwarc
 	url = https://github.com/GerHobbelt/libwarc.git
 	
-ignore = dirty
+
 [submodule "warc2text"]
 	path = warc2text
 	url = https://github.com/GerHobbelt/warc2text.git
@@ -1262,12 +1262,12 @@ ignore = dirty
 	path = SQLiteCpp
 	url = https://github.com/GerHobbelt/SQLiteCpp.git
 	
-ignore = dirty
+
 [submodule "libcyaml"]
 	path = libcyaml
 	url = https://github.com/GerHobbelt/libcyaml.git
 	
-ignore = dirty
+
 [submodule "libyaml-examples"]
 	path = libyaml-examples
 	url = https://github.com/GerHobbelt/libyaml-examples.git
@@ -1277,22 +1277,22 @@ ignore = dirty
 	path = libfyaml
 	url = https://github.com/GerHobbelt/libfyaml.git
 	
-ignore = dirty
+
 [submodule "yaml-test-suite"]
 	path = yaml-test-suite
 	url = https://github.com/GerHobbelt/yaml-test-suite.git
 	
-ignore = dirty
+
 [submodule "yaml-cpp"]
 	path = yaml-cpp
 	url = https://github.com/GerHobbelt/yaml-cpp.git
 	
-ignore = dirty
+
 [submodule "rapidyaml"]
 	path = rapidyaml
 	url = https://github.com/GerHobbelt/rapidyaml.git
 	
-ignore = dirty
+
 [submodule "smhasher"]
 	path = smhasher
 	url = https://github.com/GerHobbelt/smhasher.git
@@ -1302,7 +1302,7 @@ ignore = dirty
 	path = htmlstreamparser
 	url = https://github.com/GerHobbelt/htmlstreamparser.git
 	
-ignore = dirty
+
 [submodule "zsync2"]
 	path = zsync2
 	url = https://github.com/GerHobbelt/zsync2.git
@@ -1312,11 +1312,11 @@ ignore = dirty
 	path = libcpr
 	url = https://github.com/GerHobbelt/cpr.git
 	
-ignore = dirty
+
 [submodule "glib2"]
 	path = glib2
 	url = https://github.com/GerHobbelt/glib.git
-	ignore = dirty
+
 ignore = dirty
 [submodule "fast_pfor"]
 	path = fast_pfor
@@ -1372,7 +1372,7 @@ ignore = dirty
 	path = NanoLog
 	url = https://github.com/GerHobbelt/NanoLog.git
 
-ignore = dirty
+
 [submodule "libwil"]
 	path = libwil
 	url = https://github.com/GerHobbelt/wil.git
@@ -1402,12 +1402,12 @@ ignore = dirty
 	path = sqlite-stats
 	url = https://github.com/GerHobbelt/sqlite-stats.git
 
-ignore = dirty
+
 [submodule "SQLiteHistograms"]
 	path = SQLiteHistograms
 	url = https://github.com/GerHobbelt/SQLiteHistograms.git
 
-ignore = dirty
+
 [submodule "sqlite-fts5-snowball"]
 	path = sqlite-fts5-snowball
 	url = https://github.com/GerHobbelt/fts5-snowball.git
@@ -1417,7 +1417,7 @@ ignore = dirty
 	path = sqlite_wrapper
 	url = https://github.com/GerHobbelt/sqlite_wrapper.git
 
-ignore = dirty
+
 [submodule "velocypack"]
 	path = velocypack
 	url = https://github.com/GerHobbelt/velocypack.git
@@ -1427,7 +1427,7 @@ ignore = dirty
 	path = libdeflate
 	url = https://github.com/GerHobbelt/libdeflate.git
 
-ignore = dirty
+
 [submodule "libCRCpp"]
 	path = libCRCpp
 	url = https://github.com/GerHobbelt/CRCpp.git
@@ -1507,7 +1507,7 @@ ignore = dirty
 	path = taolog
 	url = https://github.com/GerHobbelt/taolog.git
 
-ignore = dirty
+
 [submodule "opentelemetry-cpp"]
 	path = opentelemetry-cpp
 	url = https://github.com/GerHobbelt/opentelemetry-cpp.git
@@ -1567,7 +1567,7 @@ ignore = dirty
 	path = highwayhash
 	url = https://github.com/GerHobbelt/highwayhash.git
 
-ignore = dirty
+
 [submodule "kgraph"]
 	path = kgraph
 	url = https://github.com/GerHobbelt/kgraph.git
@@ -1797,7 +1797,7 @@ ignore = dirty
 	path = libimagequant
 	url = https://github.com/GerHobbelt/libimagequant.git
 
-ignore = dirty
+
 [submodule "palanteer"]
 	path = palanteer
 	url = https://github.com/GerHobbelt/palanteer.git
@@ -1807,7 +1807,7 @@ ignore = dirty
 	path = iceoryx
 	url = https://github.com/GerHobbelt/iceoryx.git
 
-ignore = dirty
+
 [submodule "ecal"]
 	path = ecal
 	url = https://github.com/GerHobbelt/ecal.git
@@ -1877,12 +1877,12 @@ ignore = dirty
 	path = utfcpp
 	url = https://github.com/GerHobbelt/utfcpp.git
 
-ignore = dirty
+
 [submodule "fast_float"]
 	path = fast_float
 	url = https://github.com/GerHobbelt/fast_float.git
 
-ignore = dirty
+
 [submodule "libcopp"]
 	path = libcopp
 	url = https://github.com/GerHobbelt/libcopp.git
@@ -1907,7 +1907,7 @@ ignore = dirty
 	path = win32-dpi
 	url = https://github.com/GerHobbelt/win32-dpi.git
 	
-ignore = dirty
+
 [submodule "libiconv"]
 	path = libiconv
 	url = https://github.com/GerHobbelt/libiconv-win-build.git
@@ -1942,7 +1942,7 @@ ignore = dirty
 	path = libassert
 	url = https://github.com/GerHobbelt/libassert.git
 
-ignore = dirty
+
 [submodule "libicns"]
 	path = libicns
 	url = https://github.com/GerHobbelt/libicns.git
@@ -2317,27 +2317,27 @@ ignore = dirty
 	path = libcppjieba
 	url = https://github.com/GerHobbelt/libcppjieba.git
 	
-ignore = dirty
+
 [submodule "pinyin"]
 	path = pinyin
 	url = https://github.com/GerHobbelt/pinyin.git
 	
-ignore = dirty
+
 [submodule "libpinyin"]
 	path = libpinyin
 	url = https://github.com/GerHobbelt/libpinyin.git
 	
-ignore = dirty
+
 [submodule "libcsv2"]
 	path = libcsv2
 	url = https://github.com/GerHobbelt/csv2.git
 	
-ignore = dirty
+
 [submodule "csv-parser"]
 	path = csv-parser
 	url = https://github.com/GerHobbelt/csv-parser.git
 	
-ignore = dirty
+
 [submodule "mammut"]
 	path = mammut
 	url = https://github.com/GerHobbelt/mammut.git
@@ -2352,7 +2352,7 @@ ignore = dirty
 	path = diffutils
 	url = https://github.com/GerHobbelt/diffutils.git
 	
-ignore = dirty
+
 [submodule "gtn"]
 	path = gtn
 	url = https://github.com/GerHobbelt/gtn.git
@@ -2392,7 +2392,7 @@ ignore = dirty
 	path = exiv2
 	url = https://github.com/GerHobbelt/exiv2.git
 	
-ignore = dirty
+
 [submodule "openpbs"]
 	path = openpbs
 	url = https://github.com/GerHobbelt/openpbs.git
@@ -2412,7 +2412,7 @@ ignore = dirty
 	path = zxing-cpp
 	url = https://github.com/GerHobbelt/zxing-cpp.git
 
-ignore = dirty
+
 [submodule "statsite"]
 	path = statsite
 	url = https://github.com/GerHobbelt/statsite.git
@@ -2422,12 +2422,12 @@ ignore = dirty
 	path = QCBOR
 	url = https://github.com/GerHobbelt/QCBOR.git
 
-ignore = dirty
+
 [submodule "libcbor"]
 	path = libcbor
 	url = https://github.com/GerHobbelt/libcbor.git
 
-ignore = dirty
+
 [submodule "tinycbor"]
 	path = tinycbor
 	url = https://github.com/GerHobbelt/tinycbor.git
@@ -2447,7 +2447,7 @@ ignore = dirty
 	path = libjxl
 	url = https://github.com/GerHobbelt/libjxl.git
 
-ignore = dirty
+
 [submodule "libheif"]
 	path = libheif
 	url = https://github.com/GerHobbelt/heif.git
@@ -2462,7 +2462,7 @@ ignore = dirty
 	path = libheif-alt
 	url = https://github.com/GerHobbelt/libheif.git
 
-ignore = dirty
+
 [submodule "libde265"]
 	path = libde265
 	url = https://github.com/GerHobbelt/libde265.git
@@ -2522,7 +2522,7 @@ ignore = dirty
 	path = dateutils
 	url = https://github.com/GerHobbelt/dateutils.git
 
-ignore = dirty
+
 [submodule "cctz"]
 	path = cctz
 	url = https://github.com/GerHobbelt/cctz.git
@@ -2537,7 +2537,7 @@ ignore = dirty
 	path = libsmile
 	url = https://github.com/GerHobbelt/libsmile.git
 
-ignore = dirty
+
 [submodule "eventpp"]
 	path = eventpp
 	url = https://github.com/GerHobbelt/eventpp.git
@@ -2587,7 +2587,7 @@ ignore = dirty
 	path = sqlpp11
 	url = https://github.com/GerHobbelt/sqlpp11.git
 
-ignore = dirty
+
 [submodule "mydumper"]
 	path = mydumper
 	url = https://github.com/GerHobbelt/mydumper.git
@@ -2627,7 +2627,7 @@ ignore = dirty
 	path = toml11
 	url = https://github.com/GerHobbelt/toml11.git
 
-ignore = dirty
+
 [submodule "folly"]
 	path = folly
 	url = https://github.com/GerHobbelt/folly.git
@@ -3137,7 +3137,7 @@ ignore = dirty
 	path = abseil-cpp
 	url = https://github.com/GerHobbelt/abseil-cpp.git
 
-ignore = dirty
+
 [submodule "libdivsufsort"]
 	path = libdivsufsort
 	url = https://github.com/GerHobbelt/libdivsufsort.git
@@ -3547,22 +3547,22 @@ ignore = dirty
 	path = LeptonicaDocsSite
 	url = git@github.com:GerHobbelt/LeptonicaDocsSite.git
 
-ignore = dirty
+
 [submodule "UnofficialLeptDocs"]
 	path = UnofficialLeptDocs
 	url = git@github.com:GerHobbelt/UnofficialLeptDocs.git
 
-ignore = dirty
+
 [submodule "rotate_detection"]
 	path = rotate_detection
 	url = git@github.com:GerHobbelt/rotate_detection.git
 
-ignore = dirty
+
 [submodule "easyloggingpp"]
 	path = easyloggingpp
 	url = git@github.com:GerHobbelt/easyloggingpp.git
 
-ignore = dirty
+
 [submodule "twain_library"]
 	path = twain_library
 	url = git@github.com:GerHobbelt/twain_library.git
@@ -3577,7 +3577,7 @@ ignore = dirty
 	path = snappy
 	url = git@github.com:GerHobbelt/snappy.git
 
-ignore = dirty
+
 [submodule "squash"]
 	path = squash
 	url = git@github.com:GerHobbelt/squash.git
@@ -3832,7 +3832,7 @@ ignore = dirty
 	path = easyexif
 	url = git@github.com:GerHobbelt/easyexif.git
 	
-ignore = dirty
+
 [submodule "libusb"]
 	path = libusb
 	url = git@github.com:GerHobbelt/libusb.git
@@ -3852,47 +3852,47 @@ ignore = dirty
 	path = spdlog_sqlite_sink
 	url = git@github.com:GerHobbelt/sqlite_sink.git
 	
-ignore = dirty
+
 [submodule "loguru"]
 	path = loguru
 	url = git@github.com:GerHobbelt/loguru.git
 	
-ignore = dirty
+
 [submodule "g3log"]
 	path = g3log
 	url = git@github.com:GerHobbelt/g3log.git
 	
-ignore = dirty
+
 [submodule "quill-logging"]
 	path = quill-logging
 	url = git@github.com:GerHobbelt/quill.git
 	
-ignore = dirty
+
 [submodule "reckless"]
 	path = reckless
 	url = git@github.com:GerHobbelt/reckless.git
 	
-ignore = dirty
+
 [submodule "OpenColorIO"]
 	path = OpenColorIO
 	url = git@github.com:GerHobbelt/OpenColorIO.git
 	
-ignore = dirty
+
 [submodule "graph-coloring"]
 	path = graph-coloring
 	url = git@github.com:GerHobbelt/graph-coloring.git
 	
-ignore = dirty
+
 [submodule "libprecog-data"]
 	path = libprecog-data
 	url = git@github.com:GerHobbelt/libprecog-data.git
 	
-ignore = dirty
+
 [submodule "libprecog-manuals"]
 	path = libprecog-manuals
 	url = git@github.com:GerHobbelt/libprecog-manuals.git
 	
-ignore = dirty
+
 [submodule "libpillowfight"]
 	path = libpillowfight
 	url = git@github.com:GerHobbelt/libpillowfight.git
@@ -3926,17 +3926,17 @@ ignore = dirty
 	path = libdiagnostics
 	url = git@github.com:GerHobbelt/libdiagnostics.git
 	
-ignore = dirty
+
 [submodule "LLhttp-parser"]
 	path = LLhttp-parser
 	url = git@github.com:GerHobbelt/llhttp.git
 	
-ignore = dirty
+
 [submodule "mozjpeg"]
 	path = mozjpeg
 	url = git@github.com:GerHobbelt/mozjpeg.git
 	
-ignore = dirty
+
 [submodule "URL-Detector"]
 	path = URL-Detector
 	url = git@github.com:GerHobbelt/URL-Detector.git
