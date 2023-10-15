@@ -4087,3 +4087,23 @@ ignore = dirty
 	url = git@github.com:GerHobbelt/BaseMatrixOps.git
 
 
+[submodule "thrift"]
+	path = thrift
+	url = git@github.com:GerHobbelt/thrift.git
+
+
+[submodule "siridb-server"]
+	path = siridb-server
+	url = git@github.com:GerHobbelt/siridb-server.git
+
+
+[submodule "libsiridb"]
+	path = libsiridb
+	url = git@github.com:GerHobbelt/libsiridb.git
+
+
+[submodule "sdsl-lite"]
+	path = sdsl-lite
+	url = git@github.com:GerHobbelt/sdsl-lite.git
+
+
