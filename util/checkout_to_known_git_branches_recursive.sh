@@ -32,7 +32,7 @@ checkout_to_known_git_branches_recursive.sh options
 
 Options:
 
--h      : print this help 
+-h      : print this help
 -l      : LIST the branch/commit for each git repository (directory) registered in this script.
 -c      : CHECKOUT each git repository to the BRANCH registered in this script.
 -r      : CHECKOUT/REVERT each git repository to the COMMIT registered in this script.
@@ -40,7 +40,7 @@ Options:
 Note:
 
 Use the '-r' option to set each repository to an exact commit position, which is useful if,
-for instance, you wish to reproduce this registered previous software state (which may 
+for instance, you wish to reproduce this registered previous software state (which may
 represent a software release) which you wish to analyze/debug.
 
 EOH
@@ -65,14 +65,40 @@ git_repo_checkout_branch() {
       printf "%-43s :: %s / %s\n" "$1" "$2" "$3"
       if test "$mode" = "c" ; then
         if test -n "$3" ; then
-          # make sure the branch is created locally and is a tracking branch:
-          git branch --track "$3" "remotes/origin/$3"                          2> /dev/null  > /dev/null
-          git branch --set-upstream-to=remotes/origin/$3 master                2> /dev/null  > /dev/null
-          git checkout "$3"
+          # make sure the branch is created locally and is a tracking branch, if it isn't already:
+          # https://www.cyberciti.biz/faq/bash-remove-whitespace-from-string/
+          current_branch=$( git branch --show-current )
+          if test -z "$current_branch" -o "$current_branch" != "$3" ; then
+            git checkout "$3"
+          fi
+
+          shopt -s extglob
+          remote_branch=$( git branch -vv --list $3 '--format=%(upstream)' )
+          # Trim leading whitespaces
+          remote_branch="${remote_branch##*( )}"
+          # Trim trailing whitespaces
+          remote_branch="${remote_branch%%*( )}"
+          echo "=${remote_branch}="
+          shopt -u extglob
+
+          if test -z "$remote_branch" ; then
+            echo "No remote branch registered for local branch: $3 --> setting up the remote."
+            git branch --track "$3" "remotes/origin/$3"                          2> /dev/null  > /dev/null
+            git branch --set-upstream-to=remotes/origin/$3 $3                    2> /dev/null  > /dev/null
+            git checkout "$3"
+          fi
         else
-          git checkout master
-          if test $? -ne 0 ; then
-            git checkout main
+          current_branch=$( git branch --show-current )
+          echo "=${current_branch}="
+          if test -z "$current_branch" -o "$current_branch" != "master" ; then
+            # checkout to the first of `master` or `main` in case we're not checked out to either right now:
+            if test "$current_branch" != "main" -a "$current_branch" != "master" ; then
+              echo "Checking out to master/main:"
+              git checkout master
+              if test $? -ne 0 ; then
+                git checkout main
+              fi
+            fi
           fi
         fi
       else
@@ -102,837 +128,1105 @@ pushd $(dirname $0)                                                            2
 # The registered repositories:
 #
 
-git_repo_checkout_branch "../BBHash"                              9d77145609b0bfd38434f5e02ba35de04a8a8fde master    
-git_repo_checkout_branch "../BCF-cuckoo-index"                    bedd812460398bf66b545e901ff1607e6b8b29b0 master    
-git_repo_checkout_branch "../BLAKE3"                              2248d094e4d1a73202123a64fc35761145eb6204 master    
-git_repo_checkout_branch "../BlingFire"                           2061d6d8df42560a804ac1b29d73f76638b05a9c master    
-git_repo_checkout_branch "../BoxFort"                             a26074c5cc900fabc85424253f0f64e3b9c661c3 master    
-git_repo_checkout_branch "../CHM-lib"                             e2c49317fbef3a3bd83057edb88cbff802c9bd01 master    
-git_repo_checkout_branch "../CImg"                                7f3157a043b81c751ea4e3ed9eae3e98a71594c3 master    
-git_repo_checkout_branch "../CLBlast"                             03cffa83c5f7742f8ec0c5e762bb7048e38952f3 master    
-git_repo_checkout_branch "../CRoaring"                            b9e137425be17a55eea0635c87f01acefcdeeda1 master    
-git_repo_checkout_branch "../CTCWordBeamSearch"                   43567e5b06dd43bdcbec452f5099171c81f5e737 master    
-git_repo_checkout_branch "../CTPL-Thread-Pool"                    437e135dbd94eb65b45533d9ce8ee28b5bd37b6d master    
-git_repo_checkout_branch "../CacheLib"                            e8cebcf277ec2dcd991dea7b6aaac5f86ad3018b main      
-git_repo_checkout_branch "../CacheLib/cachelib/external/fbthrift" 1d7f1f037bba42e20a0cf01b5116d2a46725aaaa           
-git_repo_checkout_branch "../CacheLib/cachelib/external/fizz"     a35716af6772f0fda9cddf5543c3bd70cfe4f3af           
-git_repo_checkout_branch "../CacheLib/cachelib/external/folly"    c99ac9a9c9146449230f75d93192b7ae9e4d38bd           
-git_repo_checkout_branch "../CacheLib/cachelib/external/wangle"   3fda4a43cc072f8e90d77807476f590cb5ce07ea           
-git_repo_checkout_branch "../Criterion"                           f6097bcf699e436e4033e10e2a5f0e13d1b46e92 bleeding  
-git_repo_checkout_branch "../CxImage"                             0b203969f6e17a4ad824a1de92fe2d37f708248b master    
-git_repo_checkout_branch "../Cysboard"                            a5bc7707ec9a0a4bd101bf099e6b2b1b2861dc96 master    
-git_repo_checkout_branch "../DBoW2"                               3924753db6145f12618e7de09b7e6b258db93c6e master    
-git_repo_checkout_branch "../DCF-cuckoo-index"                    f943929afe9d8f973e9f847995d9c2c2095c566c master    
-git_repo_checkout_branch "../ECMA262"                             26061c0e5e4b62fae91a7127b46c1efa8b94c4b4 master    
-git_repo_checkout_branch "../EtwExplorer"                         e00f57a891d26855c954bf4152fbc653c183ba3b master    
-git_repo_checkout_branch "../Extensible-Storage-Engine"           933dc839b5a97b9a5b3e04824bdd456daf75a57d main      
-git_repo_checkout_branch "../GMM-HMM-kMeans"                      6d8660d02f773f88e93cc8b7b28ef139496b81c1 master    
-git_repo_checkout_branch "../GMMreg"                              b18d1c9cec54ce84df950f5821b24b8e4d03d519 master    
-git_repo_checkout_branch "../GoldFish-CBOR"                       4ba6a01c7714fee78ce311ef8910f2065e80c8a5 master    
-git_repo_checkout_branch "../GraphicsMagick"                      1738f4529293f7357536cc312b7b36376397834f master    
-git_repo_checkout_branch "../HDiffPatch"                          4a449e3b1aeb8238e423873ec181b5a1a3ed949e master    
-git_repo_checkout_branch "../ImageMagick"                         8ba9e67d34fb860fc4e02d752885bbe8a8e17070 main      
-git_repo_checkout_branch "../JabRef-Browser-Extension"            bc1a09e49a6885468997de60e65eefec2d158f0b main      
-git_repo_checkout_branch "../JabRef-abbreviations"                c8397f02dddd4ec71253201e6363d432c9d1b406 master    
-git_repo_checkout_branch "../LDCF-hash"                           e5c1dacc8dc0d13568d908e2d38e6f37f2c8ef72 master    
-git_repo_checkout_branch "../LightGBM"                            0c0eb2a6a1ba111f0896dd16a579342fa16f7629 master    
-git_repo_checkout_branch "../LightLDA"                            644fe4810290821a8f141592f266e6da77e2147c master    
-git_repo_checkout_branch "../LightLDA/multiverso"                 3c03cce205c3eb33ebf83b417ac0748daa9efdd1 master    
-git_repo_checkout_branch "../Lightning.NET"                       5a7582873724e1542cb603784861e97f31bd0383 master    
-git_repo_checkout_branch "../MITIE-nlp"                           bf8c532c9bbd23f2aea7c3b88a3ebfe03c1e0878 master    
-git_repo_checkout_branch "../MariGold.OpenXHTML"                  e5fc8e210dda6ce042e04eeb162f8a53de043754 master    
-git_repo_checkout_branch "../NanoLog"                             2a94d70f9d1db4da416053b1b926387fa068a59b master    
-git_repo_checkout_branch "../NiuTrans.NMT"                        f3ef9094a7c6e282e30f3057373fe154ed95acdc master    
-git_repo_checkout_branch "../OfficeIMO"                           7010fd22e141db5880094a6d61ee953cd3b2c2e3 master    
-git_repo_checkout_branch "../Open-XML-SDK"                        7d013115e7ef0cd133d570cdcf6755bf7974cfd6 main      
-git_repo_checkout_branch "../OpenBLAS"                            4743d80c22e08fccc93b709a7a4bd7b030adb8b6 develop   
-git_repo_checkout_branch "../OpenCL-CTS"                          133834615ef69f865b6c10065d50a0d5d0ff8adb main      
-git_repo_checkout_branch "../OpenCL-Headers"                      b590a6bfe034ea3a418b7b523e3490956bcb367a main      
-git_repo_checkout_branch "../OpenCL-SDK"                          81ebd78c33680960c5a4edf9509e2107b6204534 main      
-git_repo_checkout_branch "../OpenFST"                             0e2ebdf25ee26656570947ea72e149b5216424ac master    
-git_repo_checkout_branch "../OpenFST-utils"                       62b8cf42b309873e2e9433d3329a631ff46f2547 master    
-git_repo_checkout_branch "../OptimizationTemplateLibrary"         bd9c4193e6354e9974488cf98f5ddf4f01e2d1fe master    
-git_repo_checkout_branch "../PGM-index"                           cd48e385505e00755b4fd43bb974cc675907bab5 master    
-git_repo_checkout_branch "../PhotonLibOS"                         5ceb305493aa27fc9d3adf551c206e0ba86b31eb main      
-git_repo_checkout_branch "../QCBOR"                               b0e7033268e88c9f27146fa9a1415ef4c19ebaff master    
-git_repo_checkout_branch "../QuickJS"                             938cd0c726eb6d9a51a37982ab0f23e760c94ae5 master    
-git_repo_checkout_branch "../QuickJS-C++-Wrapper"                 15779f084985f79c2af18e45d3dbf49c618a7d48 master    
-git_repo_checkout_branch "../QuickJS-C++-Wrapper2"                1acb0b4b7a14a12c38839de2dab649806c402265 master    
-git_repo_checkout_branch "../QuickJS/test262"                     a76ebd15fb52e36c32e995d5c9ce573b800a3a23 master    
-git_repo_checkout_branch "../QuickJS/thirdparty/uint128_t"        31be3028a2d71a1385e43315e783e6c4e6844b45 master    
-git_repo_checkout_branch "../RxCpp"                               761b932a80e2be6e2b62d232e754bd96fc448946 main      
-git_repo_checkout_branch "../SQLiteCpp"                           638aab038366985bdf87a52820115f3d646cc473 master    
-git_repo_checkout_branch "../SQLiteHistograms"                    c7338c00d4f1aa1d13f3dc61479406aac38211cc master    
-git_repo_checkout_branch "../ScriptX"                             337913406a6ca0940a1f0d91841f9b786939925d main      
-git_repo_checkout_branch "../Sealighter"                          77932ff417407824c4b31174e4022403355ef63e main      
-git_repo_checkout_branch "../ShapeCrawler"                        1285dc671e32a112dd22022c64ff567f88cb4967 master    
-git_repo_checkout_branch "../Signals"                             17881fb92ec314bb43549cc2cc8acfac24916f91 master    
-git_repo_checkout_branch "../SilkETW"                             c5368720305dab1767c95e827eb07cb0caf4c8a5 master    
-git_repo_checkout_branch "../StarSpace"                           8aee0a950aa607c023e5c91cff518bec335b5df5 main      
-git_repo_checkout_branch "../ThreadPool"                          9a42ec1329f259a5f4881a291db1dcb8f2ad9040 master    
-git_repo_checkout_branch "../TraceETW"                            60d14b82aad0066bbb097826d57fa0f86b3d5439 master    
-git_repo_checkout_branch "../UIforETW"                            daccee64a60f7e2e5c6defb050f9ed6ebe46e2c1 main      
-git_repo_checkout_branch "../VQMT"                                640a3a813d0fc96e491c7d4252766c4344fb2a92 master    
-git_repo_checkout_branch "../VisualScriptEngine"                  f76564d795b08d413a8625edba87dff21837039f master    
-git_repo_checkout_branch "../Win32_read_directory_changes"        fef1f39901d100791c0160a46f098eccb2e1475b master    
-git_repo_checkout_branch "../Win32_read_directory_changes_IOCP"   4e43c796c3bd076a90d25d936ebbb8748eca1dc7 master    
-git_repo_checkout_branch "../WinHttpPAL"                          22c649a52760d01a1c10b9ed93ec90b532a18780 master    
-git_repo_checkout_branch "../Windows10EtwEvents"                  8a8a66f7a4becc0cabaa1640d4e874f7a75af3da master    
-git_repo_checkout_branch "../XMP-Toolkit-SDK"                     ac7abc8961a7c07874d465d6b5cd861b5b874b36 main      
-git_repo_checkout_branch "../YACLib"                              a5862ec017a819d5415e38850fb87bc95da75e85 main      
-git_repo_checkout_branch "../annoy"                               005eaa99304398e6930807149900754ccb374dd8 master    
-git_repo_checkout_branch "../arangodb"                            70c91602d81f4410016833641e2c65da3aab8435 devel     
-git_repo_checkout_branch "../argparse"                            ed2953aa3d08e70f7414ca15a7dde8d8a42a2316 master    
-git_repo_checkout_branch "../arrayfire"                           0f9a29b678fab650d2ab22bce1988342daa8c392 master    
-git_repo_checkout_branch "../asio"                                4f1dea34ede9caf9505c1b1f2cd9e7d20b8da3c0 master    
-git_repo_checkout_branch "../asyncplusplus"                       4159da79e20ad6d0eb1f13baa0f10e989edd9fba master    
-git_repo_checkout_branch "../asynqro"                             4260820ffd790d27bdf5ed336c63ac49c742d770 develop   
-git_repo_checkout_branch "../b2xtranslator"                       90d05a6589706cf177a245fcb74e9cba4b6264ae master    
-git_repo_checkout_branch "../bebop"                               f47e3441e5bc2430583df2adfe1b18eebb2c7c45 master    
-git_repo_checkout_branch "../bebop/docs-src"                      b040e57b212eb130141fba1b6f643eb54cd8e03f master    
-git_repo_checkout_branch "../bhtsne--Barnes-Hut-t-SNE"            cd619e6c186b909a2d8ed26fbf0b1afec770f43d master    
-git_repo_checkout_branch "../bibtex-robust-decoder"               289a24c296b4f41ad49a4bace38c15bd97d3c438 master    
-git_repo_checkout_branch "../bibtex-robust-decoder/R-n-D/bkn-bibtex" a48b3fe3435aca572a2d956811b1846321d32c51           
-git_repo_checkout_branch "../bibtex-robust-decoder/R-n-D/caltechlibrary-bibtex" 708259a4758b4c96cefe0c149a2d394f90cc52b9           
-git_repo_checkout_branch "../bibtex-robust-decoder/R-n-D/digitalheir-bibliography-js" 84fbb1b70b3e448e59e7288db012df45eaa255bd           
-git_repo_checkout_branch "../bibtex-robust-decoder/R-n-D/jabref"  f43b9c7e8bc6cba00e0d148ce657795ed0d5aa5a           
-git_repo_checkout_branch "../bibtex-robust-decoder/R-n-D/orcid-bibtexParse" 7eb975c162259e3b82c0fe0c08c546bd43b0835c           
-git_repo_checkout_branch "../bibtex-robust-decoder/R-n-D/pcooksey-bibtex-js" 00d8997bec5490e14dcaef7d722629cb79c7ea26           
-git_repo_checkout_branch "../bibtex-robust-decoder/R-n-D/zekom-bibtex" 11fe246f7302708fc193c8185e0bcdfa9fa35709           
-git_repo_checkout_branch "../bibtex-robust-decoder/R-n-D/zotero-better-bibtex" 67a41efb422a90a985a9fd8013b12b200c9f6332 master    
-git_repo_checkout_branch "../bibtool"                             59f0a5b816d668108c37dec5783b95ac201ebead master    
-git_repo_checkout_branch "../bibutils"                            b29ef87c95d2cd54a02f18c798c2281e40f7a65d master    
-git_repo_checkout_branch "../binlog"                              1dce0f206b38095cf7f2257b08fcc575dd89552e main      
-git_repo_checkout_branch "../bolt"                                4bdc81eeebcfa3e83ee45f906d9cdbe132cc064d master    
-git_repo_checkout_branch "../boost"                               58289990b8bfc65a6bd341c8871ad57630cd2755 master    
-git_repo_checkout_branch "../boost-url"                           18033bed8faafcf659502393b02b2d1801e91813 develop   
-git_repo_checkout_branch "../boost/libs/accumulators"             4df0de9b47ef1415a7ccf0310250d6e15e132537 master    
-git_repo_checkout_branch "../boost/libs/algorithm"                28dd87b90e79c5e1d9de82835125aa2bcbb3f468 master    
-git_repo_checkout_branch "../boost/libs/align"                    bef21416a3bbd46f3f5de4f9254bf4c46ec752fe master    
-git_repo_checkout_branch "../boost/libs/any"                      06eaa82dbfb6bc3e3842f9c1e1c8151f4858f56a master    
-git_repo_checkout_branch "../boost/libs/array"                    868af27d82d4f83566c072615ec8eabea4266dc0 master    
-git_repo_checkout_branch "../boost/libs/asio"                     6d6d5a53d2f9559f398954cde2ab093288edecfc           
-git_repo_checkout_branch "../boost/libs/assert"                   7dea14cf7f21dcd5bc5d4cedfd22935878634cdf           
-git_repo_checkout_branch "../boost/libs/assign"                   ababd47970e8a5fa1bebc8ccad526c4f25bd867a master    
-git_repo_checkout_branch "../boost/libs/atomic"                   456d3c5ce5f9037f17930ffc2463755ca10383b5           
-git_repo_checkout_branch "../boost/libs/beast"                    3ae7e3023f21acdc5a11d2d9af34b2b737f05e0a           
-git_repo_checkout_branch "../boost/libs/bimap"                    85f0f02537d71794a415ef4b992629b2edebfbff           
-git_repo_checkout_branch "../boost/libs/bind"                     cbd61ba5b9bbefebab0eeabf07ece4cc928d2159 master    
-git_repo_checkout_branch "../boost/libs/callable_traits"          2a56a3a2496cdb66496f844db55085dd992d5e49 master    
-git_repo_checkout_branch "../boost/libs/chrono"                   f13b061053a28a8bd122529b85d6782e0fed4983 master    
-git_repo_checkout_branch "../boost/libs/circular_buffer"          a08a5b55ee82e0c2487523471379ac53a23935dc master    
-git_repo_checkout_branch "../boost/libs/compatibility"            47ce71af6b018764c9ba74c0bfcb4f3151b81aa7 master    
-git_repo_checkout_branch "../boost/libs/compute"                  36350b7de849300bd3d72a05d8bf890ca405a014 master    
-git_repo_checkout_branch "../boost/libs/concept_check"            5656ffe0ac76ad58fbaff45baff20c39924a1278 master    
-git_repo_checkout_branch "../boost/libs/config"                   de00ddd50aa4b3263a3de10e7974a5c4d343bf07 master    
-git_repo_checkout_branch "../boost/libs/container"                725d95b314ac8693b64fb2c53f6f772fd8c4dc95           
-git_repo_checkout_branch "../boost/libs/container_hash"           85f9f8a97af07800a510f6fc8830b9c8129df2d2           
-git_repo_checkout_branch "../boost/libs/context"                  87135f923efe28a4c477be817d23f08d8e937713           
-git_repo_checkout_branch "../boost/libs/contract"                 eca93d24b5d3bb909ed64c12b5feb5296c5cc070 master    
-git_repo_checkout_branch "../boost/libs/conversion"               4ae8b4d49547126264f0b80c528fcfd26cdf5e7d master    
-git_repo_checkout_branch "../boost/libs/convert"                  1dd2ca23cb74991d420ea85b9b764f0ac76367c1 master    
-git_repo_checkout_branch "../boost/libs/core"                     162a4e1d24d1cab4f24cbca9489203d891f352e6           
-git_repo_checkout_branch "../boost/libs/coroutine"                1e1347c0b1910b9310ec1719edad8b0bf2fd03c8 master    
-git_repo_checkout_branch "../boost/libs/coroutine2"               d7e1c1c4abcf8c1e90097279e485edea0b253a80 master    
-git_repo_checkout_branch "../boost/libs/crc"                      96daae9fcdf965298077ed12a9304ea24713bb40 master    
-git_repo_checkout_branch "../boost/libs/date_time"                b280ef1506dbf3a927750cb6c4631b9b2e552768 master    
-git_repo_checkout_branch "../boost/libs/describe"                 ef9c38f90c876b7bcb98d4280d7f79684afeb6fc           
-git_repo_checkout_branch "../boost/libs/detail"                   15cc27d2bd94887fdf98be582ef28117bbf34e7e           
-git_repo_checkout_branch "../boost/libs/dll"                      3d3ae7bb7c26fcf98e7859e38928444ceb4799e5 master    
-git_repo_checkout_branch "../boost/libs/dynamic_bitset"           8e20aa1462bf6dcadc338835df529a6d568431b1 master    
-git_repo_checkout_branch "../boost/libs/endian"                   0dab6737ebd60e49bb1bede55c85a191a90010e5 master    
-git_repo_checkout_branch "../boost/libs/exception"                54f2228f78dae86335558e67cbec496693907bfc master    
-git_repo_checkout_branch "../boost/libs/fiber"                    3e1770607c88a7a67869bd50fdd70f6da7be19c0 master    
-git_repo_checkout_branch "../boost/libs/filesystem"               d22a31b0b9c43fb17a5e470da0ad6155ea52cef4 master    
-git_repo_checkout_branch "../boost/libs/flyweight"                11028b6c14f43c9bba237b52d3aa371894c478d3 master    
-git_repo_checkout_branch "../boost/libs/foreach"                  cc2f75ae30492b9de69b3b692f5c59afcb7dea5e master    
-git_repo_checkout_branch "../boost/libs/format"                   78ef371d2d90462671b90c3af407fae07820b193 master    
-git_repo_checkout_branch "../boost/libs/function"                 16fca8368b5da14c4bcad977c2738dc6e482e1b7 master    
-git_repo_checkout_branch "../boost/libs/function_types"           895335874d67987ada0d8bf6ca1725e70642ed49 master    
-git_repo_checkout_branch "../boost/libs/functional"               075c2e089a50d6a2f566d0415c62aa9a6e09f765 master    
-git_repo_checkout_branch "../boost/libs/fusion"                   65395679522d853fa7f845a5120dd84d2ba9354e           
-git_repo_checkout_branch "../boost/libs/geometry"                 ca14e7840f73ceda4ee70304040774379f0d43e9 master    
-git_repo_checkout_branch "../boost/libs/gil"                      0919fde35e3fbc90eaccfd0e2c35d59965ad1aa2 master    
-git_repo_checkout_branch "../boost/libs/graph"                    a649be53bd90ab3365c6c0c44414c80907cfd8a1 master    
-git_repo_checkout_branch "../boost/libs/graph_parallel"           5520a5617d2763c48a06a4ff277ad76e665c7cf3 master    
-git_repo_checkout_branch "../boost/libs/hana"                     998033e9dba8c82e3c9496c274a3ad1acf4a2f36           
-git_repo_checkout_branch "../boost/libs/headers"                  017c3cd1338b5437f28506cd14119b7dcfb1a86d master    
-git_repo_checkout_branch "../boost/libs/heap"                     dc2f19f8815cbe0654df61bfc5f31ad8b06fc883 master    
-git_repo_checkout_branch "../boost/libs/histogram"                4699dbc0e8c300597fc60ba62a86705d3309ff35           
-git_repo_checkout_branch "../boost/libs/hof"                      0a28586156eb6cc7db1fbe74ae2a220daf40df14 master    
-git_repo_checkout_branch "../boost/libs/icl"                      e6c06ddee1e2320f11c4ec5cd2661c4abe9bca53 master    
-git_repo_checkout_branch "../boost/libs/integer"                  d4157bdf38681e44b41afa3143343cec47893ace           
-git_repo_checkout_branch "../boost/libs/interprocess"             41018201d6b7a34f38a0303a1ad591d978989cb8           
-git_repo_checkout_branch "../boost/libs/intrusive"                f439778dc7a851bf3ba8929fd5ecf199b0d13dcd           
-git_repo_checkout_branch "../boost/libs/io"                       932dd480263d06d00bf4b40a323dc3f4ace266e2 master    
-git_repo_checkout_branch "../boost/libs/iostreams"                bfaf96eea6f4198b837f04cf5c9b0e4d21e5cda0 master    
-git_repo_checkout_branch "../boost/libs/iterator"                 ed1d96f25163386623fda44f4451a28e49df386f           
-git_repo_checkout_branch "../boost/libs/json"                     43d04d1d214e29d1ad890c5f9237ae0201726166           
-git_repo_checkout_branch "../boost/libs/lambda"                   ac26514243521513d33be23aaa92a85b858ddf51 master    
-git_repo_checkout_branch "../boost/libs/lambda2"                  4b68743cf06516de1375b83a379b2a3af2d8e545 master    
-git_repo_checkout_branch "../boost/libs/leaf"                     9d3ffa0f1c859a34da6175b53572fd4f2a61bb18           
-git_repo_checkout_branch "../boost/libs/lexical_cast"             81148c50f719f94e150b6b261db2573b3e1b1d54 master    
-git_repo_checkout_branch "../boost/libs/local_function"           099e96bef0e5f2d513940c5987958121ca6f6e02 master    
-git_repo_checkout_branch "../boost/libs/locale"                   76f6226fb12c900d0cc5c5744c30dc36a36d5b9f           
-git_repo_checkout_branch "../boost/libs/lockfree"                 fdd4d0632dd0904f6e9c656c45397fe8ef985bc9 master    
-git_repo_checkout_branch "../boost/libs/log"                      5782827b5554087e10b133abeeef937f57582fdf           
-git_repo_checkout_branch "../boost/libs/logic"                    145778490c2d332c1411df6a5274a4b53ec3e091 master    
-git_repo_checkout_branch "../boost/libs/math"                     db2a7cbb44a84c4c9cba62232c07f18b22bd965d           
-git_repo_checkout_branch "../boost/libs/metaparse"                0ef448c1a7ce22b5de514f9cd504c323c28f4379 master    
-git_repo_checkout_branch "../boost/libs/move"                     19bb08cf17cffba726875a906ba0be8fdfa15cd0           
-git_repo_checkout_branch "../boost/libs/mp11"                     f6133a9f1f965d89676a33c4a39b3df09373b929 master    
-git_repo_checkout_branch "../boost/libs/mpi"                      79e261101a13789ee88e793c5ad406ca893c22a7 master    
-git_repo_checkout_branch "../boost/libs/mpl"                      db09fb1dce010e172072a1ba62858b2155285444 master    
-git_repo_checkout_branch "../boost/libs/msm"                      03f58ead6d0ec23d52e5c7b382e2c98df1d943d5 master    
-git_repo_checkout_branch "../boost/libs/multi_array"              0c5348bef71b890c4bd06eff1ee5ebda69e7b27a master    
-git_repo_checkout_branch "../boost/libs/multi_index"              288216448cbe55b00106cf68aa45f87da7255b20 master    
-git_repo_checkout_branch "../boost/libs/multiprecision"           3b333b1634a3bf92ded87732ad3a6f7f68b22229           
-git_repo_checkout_branch "../boost/libs/nowide"                   211213a3a85694487693a659406ab09f61dca1c2 master    
-git_repo_checkout_branch "../boost/libs/numeric/conversion"       db44689f4f4f74d6572a868e13f523c82fca5a55 master    
-git_repo_checkout_branch "../boost/libs/numeric/interval"         2eda7413ac16dd4158005446438daf8a7e435dd9 master    
-git_repo_checkout_branch "../boost/libs/numeric/odeint"           db8f91a51da630957d6bfa1ff87be760b0be97a6 master    
-git_repo_checkout_branch "../boost/libs/numeric/ublas"            f0e55caf310d5e01c7e9f2190b2422e113ddeedb master    
-git_repo_checkout_branch "../boost/libs/optional"                 c809700d6a5fdcbb39e1bf8e9df3433a1615ad02 master    
-git_repo_checkout_branch "../boost/libs/outcome"                  338f8c4d17cedac735c056304dee2615d6ca05e6 master    
-git_repo_checkout_branch "../boost/libs/parameter"                fae4c2daccc8724ce2fde897745d26f63a9dbe53           
-git_repo_checkout_branch "../boost/libs/parameter_python"         1f7f9ce9930119f0dda7dcd5e1ec3b5ed7c6b091 master    
-git_repo_checkout_branch "../boost/libs/pfr"                      58dcb40a4906cb0f5f7b162599e58a018ca8f040           
-git_repo_checkout_branch "../boost/libs/phoenix"                  15500aec2187ab59e51d05addab0fdba7e788dbb           
-git_repo_checkout_branch "../boost/libs/poly_collection"          0b8bfc4cff012d0f23049fc5a0009ac4abadceb4 master    
-git_repo_checkout_branch "../boost/libs/polygon"                  8ba35b57c1436c4b36f7544aadd78c2b24acc7db master    
-git_repo_checkout_branch "../boost/libs/pool"                     600bcb027379b0670ccecf14f380f77e1264037f master    
-git_repo_checkout_branch "../boost/libs/predef"                   392e4e767469e3469c9390f0d9cca16724dc3fc8 master    
-git_repo_checkout_branch "../boost/libs/preprocessor"             667e87b3392db338a919cbe0213979713aca52e3 master    
-git_repo_checkout_branch "../boost/libs/process"                  c1b6eb4eb8e95f2c29d934715b0e6635f55edc95           
-git_repo_checkout_branch "../boost/libs/program_options"          7bcbb4ea23c958800694436b411669f80c543e18 master    
-git_repo_checkout_branch "../boost/libs/property_map"             e3a3c3655f4118fd15a02d8315f86a48db7390fd master    
-git_repo_checkout_branch "../boost/libs/property_map_parallel"    a2f90e9660e4e7e012c0b54a1338d8e69fb71906 master    
-git_repo_checkout_branch "../boost/libs/property_tree"            d30ff9404bd6af5cc8922a177865e566f4846b19 master    
-git_repo_checkout_branch "../boost/libs/proto"                    7f924934689b940f3a72212ab0f714ec6fd6e34b master    
-git_repo_checkout_branch "../boost/libs/ptr_container"            943730c349f5af0814cc16c44d63850de5bfc697 master    
-git_repo_checkout_branch "../boost/libs/python"                   8dd151177374dbf0aa5cb86bd350cf1ad13e2160 master    
-git_repo_checkout_branch "../boost/libs/qvm"                      5791440b346232c391ab8d16f559ca5b2d7ae9b3 master    
-git_repo_checkout_branch "../boost/libs/random"                   a2740d4b30178cb187fabca163e5be7803a577b9 master    
-git_repo_checkout_branch "../boost/libs/range"                    88c6199aedf8bbb5a6a8966e534f9de99943cde2 master    
-git_repo_checkout_branch "../boost/libs/ratio"                    00073b7d5896603b2036a334253dc9784285355c master    
-git_repo_checkout_branch "../boost/libs/rational"                 564623136417068916495e2b24737054d607347c master    
-git_repo_checkout_branch "../boost/libs/regex"                    a851f2141f644eb7cd9cdbe086c36491e52cbfb2 master    
-git_repo_checkout_branch "../boost/libs/safe_numerics"            777e0be5ec763d0333a717c5e421a4f7c5e5bdc9 master    
-git_repo_checkout_branch "../boost/libs/scope_exit"               60baaae454b2da887a31cf939e22015b6263c9e4 master    
-git_repo_checkout_branch "../boost/libs/serialization"            0ca603daf99888bf059c01ae1bab1b27dbc35ebe master    
-git_repo_checkout_branch "../boost/libs/signals2"                 ed50b7720e91215975dd74bca2bf9741f9a56798 master    
-git_repo_checkout_branch "../boost/libs/smart_ptr"                59b5b17e813c238187d568450b7155e7398fdf18           
-git_repo_checkout_branch "../boost/libs/sort"                     72a3ae870c59980dadd757f5f63e6be16ab61c1b master    
-git_repo_checkout_branch "../boost/libs/spirit"                   5049c39ec5e3f8ca41c54216305c3934c9fe0042           
-git_repo_checkout_branch "../boost/libs/stacktrace"               57db1f511e8e78c18c4f9d70c1b4018bb8e9b159           
-git_repo_checkout_branch "../boost/libs/statechart"               586445b824c5cf0e7e6ce4ff2df620fda5d0f0d7 master    
-git_repo_checkout_branch "../boost/libs/static_assert"            ba72d3340f3dc6e773868107f35902292f84b07e master    
-git_repo_checkout_branch "../boost/libs/static_string"            5d6fefdd2acd70c34d8ba4590ab888d8481532af master    
-git_repo_checkout_branch "../boost/libs/stl_interfaces"           24f9450297cb6dc4eb9df019cd9a1c7f4379e720 master    
-git_repo_checkout_branch "../boost/libs/system"                   1cb68f50c2f6c5fb260055fc9518dc09c563d8f9 master    
-git_repo_checkout_branch "../boost/libs/test"                     d2895ebfdfdf16074c58c9801d53e190c4654fcb master    
-git_repo_checkout_branch "../boost/libs/thread"                   743d19d7d337af9705a882f55907e3b7622514b3 master    
-git_repo_checkout_branch "../boost/libs/throw_exception"          d307a2d4a75efb0999f97f559f2df83cb9841b8d master    
-git_repo_checkout_branch "../boost/libs/timer"                    fb88e7758e1fe2d1f81fca51df5b21b94ee3edf4 master    
-git_repo_checkout_branch "../boost/libs/tokenizer"                90106f155bd72b62aaca0d9ad826f4132030dba0 master    
-git_repo_checkout_branch "../boost/libs/tti"                      03734c54a51b6372ac3296d2fe5103b7360bcd3f master    
-git_repo_checkout_branch "../boost/libs/tuple"                    500e4fa0a2845b96c0dd919e7485e0f216438a01 master    
-git_repo_checkout_branch "../boost/libs/type_erasure"             fc39ca9936bd7ac37afa8fadf3be3b62ee378f39 master    
-git_repo_checkout_branch "../boost/libs/type_index"               cca370a91834d331e3143ac4d023fb0f178e512b master    
-git_repo_checkout_branch "../boost/libs/type_traits"              d2a4a6bf0a3900e11faaf6904b95183115bac54d           
-git_repo_checkout_branch "../boost/libs/typeof"                   46c7a05f826fc020ee88210ea2a5cd9278b930ab master    
-git_repo_checkout_branch "../boost/libs/units"                    45787015dd8c11653eb988260acf05c4af9d42e5 master    
-git_repo_checkout_branch "../boost/libs/unordered"                f141cd1dea6965e36f7415c7d9aec7053a5cdaae           
-git_repo_checkout_branch "../boost/libs/utility"                  a1231d1ff42bebff05e26490020f8d5a3bc4cdaf           
-git_repo_checkout_branch "../boost/libs/uuid"                     bd835638a5179cc1fb55b9f95377bedce4e47e1d master    
-git_repo_checkout_branch "../boost/libs/variant"                  78856c049d6323882bfc9ab06790f550f7ee9b4f master    
-git_repo_checkout_branch "../boost/libs/variant2"                 c633a953dea46a8f146b35f37986f660b07ac101           
-git_repo_checkout_branch "../boost/libs/vmd"                      34cad2c1a574d445812c7c2432d3a5a5c843b412 master    
-git_repo_checkout_branch "../boost/libs/wave"                     1444cdf539575e89f489f2dbbb8ef9daa2a78235 master    
-git_repo_checkout_branch "../boost/libs/winapi"                   7a37250e1364aa99ae3db20ee6843b0c2c57a895 master    
-git_repo_checkout_branch "../boost/libs/xpressive"                4679fbd23f962bfa78d44acf5fa48f6f790642c0 master    
-git_repo_checkout_branch "../boost/libs/yap"                      ae49bf2744586e6bd6c0cedff4500a58a4386860 master    
-git_repo_checkout_branch "../boost/more"                          3f58b37f6fc5e8dc1417af5b193f690f26cccf25 master    
-git_repo_checkout_branch "../boost/tools/auto_index"              e98a81769364f56b272e510c876df874af514b29 master    
-git_repo_checkout_branch "../boost/tools/bcp"                     a86fdce7885babae3ff625de36aa2dfacf983f8c master    
-git_repo_checkout_branch "../boost/tools/boost_install"           0dffa522de55126767c0f464c14da3eb5b8acd61 master    
-git_repo_checkout_branch "../boost/tools/boostbook"               a6701f5d278daba797697a1e5000ee41f25bcaff master    
-git_repo_checkout_branch "../boost/tools/boostdep"                7f601b865a80db5854523d114ad7539c1e14fe18 master    
-git_repo_checkout_branch "../boost/tools/build"                   405d34a04d29519625c5edfe1f3bac3bc3dc3534           
-git_repo_checkout_branch "../boost/tools/check_build"             9c3fc263fc3203e566c4b632c1b124e57dafbed5 master    
-git_repo_checkout_branch "../boost/tools/cmake"                   985b866e657ee5f981c4523ba02a8457c715fa33           
-git_repo_checkout_branch "../boost/tools/docca"                   7aa8441f5c271f06c44ea53481aee6189a961e26 master    
-git_repo_checkout_branch "../boost/tools/inspect"                 db423bf897bcc6aa34231e5266442b75ee2a5666 master    
-git_repo_checkout_branch "../boost/tools/litre"                   564d4d8d30b7e03ac5e25d78e14d2c19fa321c83 master    
-git_repo_checkout_branch "../boost/tools/quickbook"               cd4518ceff1c5cdbd67679698c0d29f277495d5b           
-git_repo_checkout_branch "../breakpad"                            cb55d48154af1c1c747af51d9351dd639754fe50 main      
-git_repo_checkout_branch "../brotli"                              aeb04d92b7c893b307025b790a7debd1b67cfecb master    
-git_repo_checkout_branch "../c-blosc2"                            1ad5f115e108be52eb3ff9b45de78c0ff418f40f master    
-git_repo_checkout_branch "../caches"                              1461ac6c424b9e97fee54099da283f2cd489b56d master    
-git_repo_checkout_branch "../caffe"                               9b891540183ddc834a02b2bd81b31afae71b2153 master    
-git_repo_checkout_branch "../calibre"                             423fbbed4a474edc201876a345bb6457ae818430 master    
-git_repo_checkout_branch "../catboost"                            eaa211ada38fede99d79852313e8707b636296dd master    
-git_repo_checkout_branch "../cctz"                                c83606d3b2fd12279d75d560d9fff240be80f8d0 master    
-git_repo_checkout_branch "../ccv-nnc"                             12498fa45b48621c2005c97f74040fb214e2bea3 unstable  
-git_repo_checkout_branch "../cef-pdf"                             0089a136dbff83c05751cbbba48a455d12476fe1 master    
-git_repo_checkout_branch "../cereal"                              1b0afc625da2883419c92155a629c2dfd02637b3 master    
-git_repo_checkout_branch "../ceres-solver"                        a78a5747272bb0b94bc7b4c5da8b6f601a1b1cb8 master    
-git_repo_checkout_branch "../circlehash"                          7aa31a27e78f89a36742f91410cb373048639031 main      
-git_repo_checkout_branch "../citation-abbreviations"              77afacdd635d0f34dbb303a493cbc1188d68262d master    
-git_repo_checkout_branch "../citation-journals"                   0d63f6f85fbbd8aa7a3e8cbcad31dd9b03ee1846 master    
-git_repo_checkout_branch "../citation-styles"                     22141118834f2be67e7eaf3ff9956346a8f36383 master    
-git_repo_checkout_branch "../citeproc-js"                         3d42d7b1adbcba904537bf585b827a5f3ab7925b master    
-git_repo_checkout_branch "../civetweb"                            6068e4f76570ae6701f5efb836d272df3c2994d7 master    
-git_repo_checkout_branch "../clBLAS"                              fc4daee9dab5b898a4c5c990cd60f635ee70d69c master    
-git_repo_checkout_branch "../cld2-language-detect"                b56fa78a2fe44ac2851bae5bf4f4693a0644da7b master    
-git_repo_checkout_branch "../cli11"                               465a972e3545016b6abb242a749e3cc2145bbd06 master    
-git_repo_checkout_branch "../clipp"                               ccbe6e0777026b4fa07dca248dccab4fefc948dd master    
-git_repo_checkout_branch "../cmph-hasher"                         f49f33b2e5a6134b512f0aa2c0a8312886127338 master    
-git_repo_checkout_branch "../comdb2-bdb"                          3fa95db70bc5234417aafb0f10da174b1cef3547 master    
-git_repo_checkout_branch "../compact_enc_det"                     3ba472037e40a0acf6bb61b1727e99602cd71647 master    
-git_repo_checkout_branch "../completesearch"                      bfb452b405a4d2690ee22ee785655f99abbae781 master    
-git_repo_checkout_branch "../concurrencpp"                        876fb1e0d57a603e6fdafe584f2f9dff695bc8ae master    
-git_repo_checkout_branch "../concurrentqueue"                     65d6970912fc3f6bb62d80edf95ca30e0df85137 master    
-git_repo_checkout_branch "../coost"                               b2b40903aec23cf3953dd60e146bcc2c5de0543f master    
-git_repo_checkout_branch "../cpp-btree"                           c876a70384340b222c206f86ec1497bd05c5a72c master    
-git_repo_checkout_branch "../cpp-ipc"                             768e58f60502efce0b9f1f8d2c31482ea99a01a9 master    
-git_repo_checkout_branch "../cpp_rest_sdk"                        982502cb80be14c94990183369625de61d42b9bb master    
-git_repo_checkout_branch "../cppflow"                             c3f646f7382cd27f4b306459e481b30233af1f59 master    
-git_repo_checkout_branch "../cppjieba"                            99b496d8718112c4387500b46ecfa31277aa5a4d master    
-git_repo_checkout_branch "../cpptoml"                             fededad7169e538ca47e11a9ee9251bc361a9a65 master    
-git_repo_checkout_branch "../cppzmq"                              e70dd63a343e79315ff3950246a6f0d20b018944 master    
-git_repo_checkout_branch "../cpuinfo"                             f5932ef2f1af6e03c7653a57a8d242d15f42aa19 master    
-git_repo_checkout_branch "../cpython"                             2a36b09ce7cd67503893412b53295717d66fee19 master    
-git_repo_checkout_branch "../createprocess-windows"               a18169adbcdc84957573883a6efad6e98e6715d5 master    
-git_repo_checkout_branch "../crow"                                9868a9435dcafeefa44e67d5cffc5a0ff7c79f5b           
-git_repo_checkout_branch "../cryptopp"                            ccaf3912da985e84fada5767f76c292aa60212b0 master    
-git_repo_checkout_branch "../csv-parser"                          9d5f796a32c6cdecd83a2f778ca6db0500948d27 master    
-git_repo_checkout_branch "../csync2"                              83b36449abb4c2903ef3b40b46018240633989e0 master    
-git_repo_checkout_branch "../cuckoo-index"                        cae12a1260352c7937855381295335927fb9a846 master    
-git_repo_checkout_branch "../cuckoofilter"                        709eef793631b16937a5a8ef06112072cfa57efc master    
-git_repo_checkout_branch "../cxxtest_catch_2_gtest"               9144ee62e37bd12bec286019de8372d17baae0e9 main      
-git_repo_checkout_branch "../date"                                22ceabf205d8d678710a43154da5a06b701c5830 master    
-git_repo_checkout_branch "../datetimepp"                          fe76721bffd042e04e1db992d9ff069f85c855e2 master    
-git_repo_checkout_branch "../dateutils"                           06198a8607d8e4a31294d82843214ca5100176e3 master    
-git_repo_checkout_branch "../debugbreak"                          5dcbe41d2bd4712c8014aa7e843723ad7b40fd74 master    
-git_repo_checkout_branch "../delegate"                            64185e2d87d777ba84caad687f19a03f6745b42f master    
-git_repo_checkout_branch "../diffutils"                           9e70e1ce7aaeff0f9c428d1abc9821589ea054f1 distrotech-diffutils
-git_repo_checkout_branch "../dirent"                              328e7fca1497f1d990d8b55b3cec39c869e3a6a8 master    
-git_repo_checkout_branch "../djvulibre"                           5793d374a1e59c8d3bd9452e13a75a683b78a02f master    
-git_repo_checkout_branch "../dlib"                                d26e917abc626fb81f0b57ecf1f3be555bddf8de master    
-git_repo_checkout_branch "../docxBox"                             5c78c7ae2c577a5daffbcd7b3c1483635af238c4 master    
-git_repo_checkout_branch "../drogon"                              9a63c2a875b7d64fc72ac91b175bf7741c6a826d master    
-git_repo_checkout_branch "../drogon/trantor"                      586aacd084e088bbc041350a657b80b143820276           
-git_repo_checkout_branch "../dtl-diff-template-library"           62689d568be47a9a10149755afcf34555a07e70d master    
-git_repo_checkout_branch "../dtoa-benchmark"                      bf1fb58ade01658c908a498679e47f0b4e89aff7 master    
-git_repo_checkout_branch "../dynet"                               c418b09dfb08be8c797c1403911ddfe0d9f5df77 master    
-git_repo_checkout_branch "../ecal"                                218d0625a98282a71a63f459cb8b4ef601c0288b master    
-git_repo_checkout_branch "../efsw"                                6439b9329c16b0a2ac88fb0d124e25d89a87650d master    
-git_repo_checkout_branch "../emphf-hash"                          a18574fa8252fd1c877fe4ffc4a39ed3751ce19d master    
-git_repo_checkout_branch "../enkiTS-TaskScheduler"                fd5a2603a0adf1884eee40dd081e30733a3b46dd master    
-git_repo_checkout_branch "../eventpp"                             6813ec217f8489d8105d52008c8aca11093fb749 master    
-git_repo_checkout_branch "../exiv2"                               b90426dda95c7b3f2824b6e137bf9f33820d36b4 main      
-git_repo_checkout_branch "../expected-lite"                       95b9cb015fa17baa749c2b396b335906e1596a9e master    
-git_repo_checkout_branch "../faiss"                               2cd84aa66308143d00aa0f39ccf29cbf48d243a6 main      
-git_repo_checkout_branch "../fastBPE"                             036711f8fdc3265d64e8e123a0761be12c5a8e74 master    
-git_repo_checkout_branch "../fastText"                            b8d924ca320d36a25aa5232b494fcf10cf848f92 main      
-git_repo_checkout_branch "../fast_float"                          bc3be1253060e91cef1ad888d9d1592adf043c84 main      
-git_repo_checkout_branch "../fast_pfor"                           773283d4a11fa2440a1b3b28fd77f775e86d7898 master    
-git_repo_checkout_branch "../fatal"                               6a901dde7bfdddf774ba3c88648bc91a89026550 main      
-git_repo_checkout_branch "../file"                                f66ebba61ced10a258bf3903a2f18090b8418a89 master    
-git_repo_checkout_branch "../filesystem"                          f714f4c2d8592a1241e89a866567b8e3df1781f5 master    
-git_repo_checkout_branch "../flat_hash_map"                       2c4687431f978f02a3780e24b8b701d22aa32d9c master    
-git_repo_checkout_branch "../fmt"                                 5548ace11d975cefb08f9d3fce6612ac76881d7d master    
-git_repo_checkout_branch "../fmtlog"                              d6f37427b4f35eb1260b4897073d67feab2f691b main      
-git_repo_checkout_branch "../folly"                               73e5f8cf57009b71486c53434ad2711e5b0a1728 main      
-git_repo_checkout_branch "../friso"                               c624b7089ba37889d5257d32ece16027a80b5b1d master    
-git_repo_checkout_branch "../frozen"                              5ca421329d61674c7c125e26e45eea9e4f862db6 master    
-git_repo_checkout_branch "../gbenchmark"                          b64cfa010680964adfc518b37c8e110688d1ad40 main      
-git_repo_checkout_branch "../gdbm"                                331f05ac9c58d358806fe1bcba88a01467ab0895 master    
-git_repo_checkout_branch "../gettext"                             349cf65bf2852ec53351ffc8e2292f565a6dfde7 master    
-git_repo_checkout_branch "../gflags"                              5e943a16fb25fb9309861f4778f1677e4df88a03 master    
-git_repo_checkout_branch "../gibbs-lda"                           2d61bb93f2569dd189fa9363ad97064e6805dabe master    
-git_repo_checkout_branch "../glib2"                               72595f3f467788157af0d150e08715febbcf2b25 main      
-git_repo_checkout_branch "../glob"                                da4f5660cb618df332b7959cbfd926d374417050 master    
-git_repo_checkout_branch "../glog"                                af881efb9c99cd342d85253f457fd2f014674725 master    
-git_repo_checkout_branch "../google-diff-match-patch"             62f2e689f498f9c92dbc588c58750addec9b1654 master    
-git_repo_checkout_branch "../google-marl"                         45575d71fb4c112009d4148480d77372b4cf8222 main      
-git_repo_checkout_branch "../googletest"                          9a46dfcccae722b4cdf3531b4cbac899de9a8ed1 master    
-git_repo_checkout_branch "../gperf-hash"                          61e5f4b034fde7cc716fe02ace2368ae877dc83a output-javascript
-git_repo_checkout_branch "../graphit"                             2e0149719b10484ae4caf99257fa9448bc1aa9a9 master    
-git_repo_checkout_branch "../gtn"                                 0ee32d88cf37e092ea91db00bb8dd99c0692907d master    
-git_repo_checkout_branch "../gumbo-libxml"                        6c9f6e19d425bdf67cffc14c39b3c17d2dac64e1 master    
-git_repo_checkout_branch "../gumbo-query"                         1f6df742d054c0e483681745b2cef480ae7dc27f master    
-git_repo_checkout_branch "../h2o-server"                          a429117babff09542d3517c4fa36c1ef769889c1 master    
-git_repo_checkout_branch "../hedley"                              5ae0d13cfa3b5cb747d392c7fc2310a85984e59b master    
-git_repo_checkout_branch "../highway"                             9fb3265eca344fb82f4e5ef754946ee84e64e2f1 master    
-git_repo_checkout_branch "../highwayhash"                         a422b896ce10aa14eb3e4266d4689e9945c85dd3 master    
-git_repo_checkout_branch "../hmm-scalable"                        1d0f46b887fc80445561b9f1331cf387a5296d41 master    
-git_repo_checkout_branch "../hmm-stoch"                           65934eec686782449240ec62d729e11896460bee master    
-git_repo_checkout_branch "../hnswlib"                             443d667478fddf1e13f2e06b1da4e1ec3a9fe716 master    
-git_repo_checkout_branch "../hocr-fileformat"                     562b117c5a86943aa798842c10d87aad7a91a34b master    
-git_repo_checkout_branch "../hocr-spec"                           278e23a1c6742093f96ed8f32a3a9297da16cf8b master    
-git_repo_checkout_branch "../hocr-tools"                          786544a2a219384680e65ecd953946a93fc3f694 master    
-git_repo_checkout_branch "../honggfuzz"                           5a504b49fe829a73b6ea88214d8e4bcf3d103d4f master    
-git_repo_checkout_branch "../hopscotch-map"                       44423162aa804616327306bd38c47a094a7e6096 master    
-git_repo_checkout_branch "../horsejs"                             590e6f571c8d0e704bd10ae31aac321e5226c30b main      
-git_repo_checkout_branch "../html2openxml"                        67991d230b715fd186047ab7571651e6b1ee556c dev       
-git_repo_checkout_branch "../htmlstreamparser"                    b95e3eb071bfd89b0831e3373ab0d66a1def142c master    
-git_repo_checkout_branch "../http-parser"                         e031e39c7c7f46b64671d11855569ed5e45672b4 master    
-git_repo_checkout_branch "../hunspell"                            aaeb0bc51c5b0bb83a505c5075b3482fb2956628 master    
-git_repo_checkout_branch "../hunspell-hyphen"                     df06238e5baf70e62fe689b199282b526377e944 master    
-git_repo_checkout_branch "../hyperscan"                           73695e419c27af7fe2a099c7aa57931cc02aea5d master    
-git_repo_checkout_branch "../hypertextcpp"                        0058bffd31fd2a46374fd44c6730c2356bbaab43 master    
-git_repo_checkout_branch "../iceoryx"                             89769ce269d32a96b1ac6c5c1370c0948d1fd7a4 master    
-git_repo_checkout_branch "../indicators"                          a5bc05f32a9c719535054b7fa5306ce5c8d055d8 master    
-git_repo_checkout_branch "../infoware"                            0ab5b14a0ba9f3d6d777961782d6ce3ea04ca165 main      
-git_repo_checkout_branch "../ion-c"                               32ca6fff68d4d2e7be63f9a0ea0c72d668f049ae master    
-git_repo_checkout_branch "../iresearch"                           8ad73d47dc00718b6c2dad80870bd7f196260849 master    
-git_repo_checkout_branch "../jasper"                              6663250088ece915836dcaece4a18131d046138c master    
-git_repo_checkout_branch "../jemalloc"                            83dc35ad647659a6866c24fd0a0d59c9f9c5c04c dev       
-git_repo_checkout_branch "../jpeg-xl"                             863cc4975426c69eb7b2cf409eb730f1bf2bb399 master    
-git_repo_checkout_branch "../jpeg-xl/third_party/brotli"          aeb04d92b7c893b307025b790a7debd1b67cfecb master    
-git_repo_checkout_branch "../jpeg-xl/third_party/googletest"      9a46dfcccae722b4cdf3531b4cbac899de9a8ed1 master    
-git_repo_checkout_branch "../jpeg-xl/third_party/highway"         9fb3265eca344fb82f4e5ef754946ee84e64e2f1 master    
-git_repo_checkout_branch "../jpeg-xl/third_party/lcms"            e10d1bd772bc3a05d79a75c16fc20e65d649d981           
-git_repo_checkout_branch "../jpeg-xl/third_party/libpng"          6376815c5100a19d01d74e1e16784c51b295f266           
-git_repo_checkout_branch "../jpeg-xl/third_party/sjpeg"           04c9a4d10f7309f30cdd7fa0094576db3b6f97fb master    
-git_repo_checkout_branch "../jpeg-xl/third_party/skcms"           b25b07b4b07990811de121c0356155b2ba0f4318 main      
-git_repo_checkout_branch "../jpeg-xl/third_party/zlib"            faa2dff29a64661791f5808d7fc46bf16aee647e master    
-git_repo_checkout_branch "../jq"                                  cff5336ec71b6fee396a95bb0e4bea365e0cd1e8 master    
-git_repo_checkout_branch "../json"                                e71f4e393efa9c94ba8c9f371b890271370ebaae master    
-git_repo_checkout_branch "../json-jansson"                        0a5d598eb7c12935772934f8aa6a36b8f6f7f6f4 master    
-git_repo_checkout_branch "../jsoncons"                            0439c1eecf3013e82d19b46eea2ab36ef41b2ae2 master    
-git_repo_checkout_branch "../kahypar"                             3d1b15f0159d72e776ac3aafb4041fcea763debf master    
-git_repo_checkout_branch "../kgraph"                              2c924aab832e63c6ae6c821c1d0466a9df0ea29e master    
-git_repo_checkout_branch "../krabsETW"                            79e8af192eaa2a3bfd6365238903bae91b796beb master    
-git_repo_checkout_branch "../lapack"                              a066b6a08f23186f2f38f1d9167f6616528ad89f master    
-git_repo_checkout_branch "../lda"                                 888b80394f5053da1b8c2466106d35ff260138e4 master    
-git_repo_checkout_branch "../lda-3-variants"                      63f9292feb92bd9de1e2373d31fccb9f78bc41fa master    
-git_repo_checkout_branch "../lda-Familia"                         585d9ebddd97ad5196e5fe59e5d13275dc141bba master    
-git_repo_checkout_branch "../lda-bigartm"                         47e37f982de87aa67bfd475ff1f39da696b181b3 master    
-git_repo_checkout_branch "../lerc"                                a7e2a059df5dd18a0e0b4572690d226a821ae8cc master    
-git_repo_checkout_branch "../libCRCpp"                            71f2152b639f8fc0efa3d1fec01c7c0dbb96dc76 master    
-git_repo_checkout_branch "../libCZMQ"                             e760e06a047d0e89fc5bbf21fe118367cbfddae1 master    
-git_repo_checkout_branch "../lib_nas_lockfile"                    c1e8dcbc873a5f4522b93cb31c62fe561f4eb99c main      
-git_repo_checkout_branch "../libaco"                              d00631a9e143a8711c0a6e7b603a72b1e379b661 master    
-git_repo_checkout_branch "../libaom"                              96ee0eb4586b69c07662d7c7606fd2fa0bad7b2c master    
-git_repo_checkout_branch "../libarchive"                          b86ec0b70b77de279e2c351ee03c751d3fee519a master    
-git_repo_checkout_branch "../libassert"                           080b08cb5c9ea4272e9f017ec79c81ca109a2766 master    
-git_repo_checkout_branch "../libbf"                               1fc8243d151541dea80b45a2052fa03b423b6d8d master    
-git_repo_checkout_branch "../libbloom"                            23c19a7f5cbb35d7c3d970bef13bc2bfbe3625f6 master    
-git_repo_checkout_branch "../libcbor"                             e87d5714e69214f187db225f23985aea51c52d28 master    
-git_repo_checkout_branch "../libchardet"                          dcdcdfc6a207eb98196b277d72c967beb36cb250 master    
-git_repo_checkout_branch "../libclipboard"                        3d2cb08d90a18a9e5010ee0a27c83aa4b4f877a7 master    
-git_repo_checkout_branch "../libcmime"                            9b551f1fc3293821d0b45c8408545febe7d2382a master    
-git_repo_checkout_branch "../libcnl"                              3ef9b0e224f135dbfed9d210fa8bdf53367b18ff main      
-git_repo_checkout_branch "../libconfig"                           4587455261f99506c7d61d272cfa049f31095052 master    
-git_repo_checkout_branch "../libcopp"                             fefb1b8781207064accdeabdf9fa497e264fdf5d v2        
-git_repo_checkout_branch "../libcppjieba"                         3f1dccd748f93e4e8c4ea9190c1ff6ce9068a333 master    
-git_repo_checkout_branch "../libcpr"                              7c4f0631c4dfb6fb1262b914981fde7184c80f06 master    
-git_repo_checkout_branch "../libcpuid"                            9710e7c0ba3c9fb3898440a9ff329a14f671817d master    
-git_repo_checkout_branch "../libcsp"                              519a4182f9c5c1ceb39fa351ea864f0ab72c4034 master    
-git_repo_checkout_branch "../libcsv2"                             a6d77394f308e02443c5501064ea8248471f6d41 master    
-git_repo_checkout_branch "../libcyaml"                            a21216dfb2406440953181e9e3c9d6db326e078c main      
-git_repo_checkout_branch "../libde265"                            b371427f52ab50c031ce4cf33854c0f4eae84c7b master    
-git_repo_checkout_branch "../libdeflate"                          55409b1120dcef7c799d276fdbf55b94e8f0d4fd master    
-git_repo_checkout_branch "../libdist"                             5688cffc1284bff8894ba29d5270afb5116b7869 main      
-git_repo_checkout_branch "../libeigen"                            36b95962756c1fce8e29b1f8bc45967f30773c00 heads/master
-git_repo_checkout_branch "../libeternaltimestamp"                 80b91c855a7382eb8e54b4692d71dfd816de2e7e main      
-git_repo_checkout_branch "../libevt"                              a8ecfb45b3c6beb5be32a84e8aa66315479551b1 main      
-git_repo_checkout_branch "../libexpat"                            53641231a83bf0dc5664473715f3739e4a7b953d master    
-git_repo_checkout_branch "../libffi"                              c6dc125afba294b9b9613392c492ae18df3ede84 master    
-git_repo_checkout_branch "../libfolia"                            db7b8683c96af0f00fbd6c81cf2a8ec9bc5fe95e master    
-git_repo_checkout_branch "../libfort"                             41237162a9bd34a30a88069ee4e230584ae8d674 develop   
-git_repo_checkout_branch "../libfyaml"                            0bb4406b591ee773348aa161270a0c9596192dd2 master    
-git_repo_checkout_branch "../libgd"                               681cc7c4f49a39503ecc9feb5154bd18b69b645b master    
-git_repo_checkout_branch "../libgif"                              1f29e7d45e744010b50ed5ffc5834ae20702ce7c master    
-git_repo_checkout_branch "../libgrape-lite"                       0cf45501fd9517f063cebcef0e8a4db6a6eb4c89 master    
-git_repo_checkout_branch "../libheif"                             be43efdf273ae9cf90e552b99f16ac43983f3d19 master    
-git_repo_checkout_branch "../libheif-alt"                         0b837157541cff35aec9d2e153a34a2e229dc9f5 master    
-git_repo_checkout_branch "../libicns"                             5a843a02d4e61f8ccb37f470a674efc3985796bd master    
-git_repo_checkout_branch "../libiconv"                            bb668810ef548c2031eed275553b6befd28f28cf main      
-git_repo_checkout_branch "../libidn2"                             b1a260a67d84ae2e7e6c687b6370e042e2803067 master    
-git_repo_checkout_branch "../libimagequant"                       39d66a26c05025032b1994f4d2afc39cb5659cce main      
-git_repo_checkout_branch "../libjpeg-turbo"                       5c801bc60880007811c864419bfef4cb8df4c998 master    
-git_repo_checkout_branch "../libjxl"                              116143f5054b5f5117a3539ff71da6aa53efd1f9 main      
-git_repo_checkout_branch "../liblinear"                           1f3c41f2b77bba2723c6454fc2948648283192b6 master    
-git_repo_checkout_branch "../libmdbx"                             66ef4081627318ab07490c0247eb0ce6dc259e8a master    
-git_repo_checkout_branch "../libmio"                              c6be9e948d3d4516613774d87a93679d2e055e0b master    
-git_repo_checkout_branch "../libmobi"                             0cc913e0e18ffdb084610785d44ba849c9dea4ac public    
-git_repo_checkout_branch "../libngt-ann"                          d7fef6816c3e6d81ccb41ece45837c83003701f4 master    
-git_repo_checkout_branch "../libocca"                             2e576e69e07627a516b568079e047965a9bd8d24 main      
-git_repo_checkout_branch "../libpinyin"                           9a0b828affd447aed97b571261de8409d1143d18 main      
-git_repo_checkout_branch "../libpsl"                              1772e3b948d2dab8e36a1c67eebefb64ccaa558f master    
-git_repo_checkout_branch "../libq"                                655254c52687f6568adc1e8ab05bf3427a3659d8 master    
-git_repo_checkout_branch "../libqrencode"                         da07c4bae43343777322c13e21a95f61c94431e6 master    
-git_repo_checkout_branch "../libquill"                            0179e6e78dcc0c6e369d5460d8ade39794dd4c25 master    
-git_repo_checkout_branch "../librs232"                            3bdb0b13e5ceb6b686f4e7f9424179b5bcb71ab8 master    
-git_repo_checkout_branch "../librsync"                            390c804d0b4d4ff3f556c47eb91012a7f49da492 master    
-git_repo_checkout_branch "../libscanf"                            da736ec3f6d6023e2410d161187028b46a76f262 master    
-git_repo_checkout_branch "../libsigcplusplus"                     6cd3c1b54973f2055187404ffabb36200253e9a6 master    
-git_repo_checkout_branch "../libsmile"                            cabd57123fdadd2fe0b7575bc5a612e8e9c987c2 master    
-git_repo_checkout_branch "../libsptag"                            2740b333a072b42f1ee103abcd7ba7a0524ea3b9 main      
-git_repo_checkout_branch "../libsqlfs"                            1d206e4a062bfac2244e232e9171323454a236b2 master    
-git_repo_checkout_branch "../libstb"                              8b5f1f37b5b75829fc72d38e7b5d4bcbf8a26d55 master    
-git_repo_checkout_branch "../libstemmer"                          bcb6ea3504cc5ddc98e4da8e91e480dd9725ae71 master    
-git_repo_checkout_branch "../libsvm"                              da770f07ae92d4c4d0833fb62d389d58d5b4b556 master    
-git_repo_checkout_branch "../libtextcat"                          eba33db61a3fca15d623ff9cd8e7681cbfecf5ea master    
-git_repo_checkout_branch "../libtuv"                              3ab27fb30e843525afa98397565bc3ef5d6298cc master    
-git_repo_checkout_branch "../libucl"                              97e58db41142b81c4bf603edd2fefcf39dbe8253 master    
-git_repo_checkout_branch "../libunifex"                           7de22a166ab628238d1e39250f86ba06ae4144dc main      
-git_repo_checkout_branch "../libuv"                               963ecc82d0988f9bbaef07a6939d774dfd027b7c v1.x      
-git_repo_checkout_branch "../libvips"                             7b884e2820c53073c655411d958f7b7b0d32e9b9 master    
-git_repo_checkout_branch "../libvrb"                              5345da79e3a26f7ba9bd3651181b0dcc3946617c alt       
-git_repo_checkout_branch "../libwarc"                             61d3bc4c64c99c8c79d5e80b34f698a4b09866f0 master    
-git_repo_checkout_branch "../libwebp"                             fbede6ec2ac9c35a5ee4abc21a842937b08016e5 master    
-git_repo_checkout_branch "../libwebsocketpp"                      b9aeec6eaf3d5610503439b4fae3581d9aff08e8 develop   
-git_repo_checkout_branch "../libwebsockets"                       b898229edfaa85eb2714e01f6bcd7c5e51fb4ba1 main      
-git_repo_checkout_branch "../libwil"                              856f0a2f7bc94fad9facee102ac68ef0e763c7c2 master    
-git_repo_checkout_branch "../libwildmatch"                        2910a9c0f5e98c81ff067b8db3172b35972375d5 main      
-git_repo_checkout_branch "../libxml2"                             9aea3d90ed0789afa9c3d562bdd45d1fbec8f8bc master    
-git_repo_checkout_branch "../libxml2/pthread-win32"               116926c87e1c89e25998d9b28e9de55dd2dd7c42           
-git_repo_checkout_branch "../libxml2/zlib"                        faa2dff29a64661791f5808d7fc46bf16aee647e           
-git_repo_checkout_branch "../libxslt"                             7bcc8dca27041e2b03855508fe54d435d816a78f master    
-git_repo_checkout_branch "../libyaml"                             1464132159025fb4aa56cfc76d97327ecd1f130c master    
-git_repo_checkout_branch "../libyaml-examples"                    2a70cf66f140980308ff7e1d92ecb83f12425272 master    
-git_repo_checkout_branch "../libzip"                              db0848b4fe09805e33803f302269829da20871d0 master    
-git_repo_checkout_branch "../libzmq"                              05b86019bfa58c618a910ed169f493a590a17d5a master    
-git_repo_checkout_branch "../libzopfli"                           e10b3309e625f3de9c3252bbc726b91482bc2c63 master    
-git_repo_checkout_branch "../ligra-graph"                         8436fad9755629aaa96fd433fd75b665b53bacfb master    
-git_repo_checkout_branch "../line_detector"                       9e8b20e73b09a8f042daab583271a24c78b94321 master    
-git_repo_checkout_branch "../linenoise"                           f58c470a0a45a3451660de980b2e23062b8a218f master    
-git_repo_checkout_branch "../lmdb"                                636faef525a80930cd93f04b9203b0642481b328 x         
-git_repo_checkout_branch "../lmdb-safe"                           2e22d0cc40fb4f4126195dba47e46d0fb0f0f48b master    
-git_repo_checkout_branch "../lmdb-store"                          50c5d9c50ca478c4fc29536097dd8d92b026fae7 master    
-git_repo_checkout_branch "../lmdb.spreads.net"                    9c459c25002ac8f7a2518a3f3d1f4b15a2aa2089 main      
-git_repo_checkout_branch "../lmdbxx"                              0b43ca87d8cfabba392dfe884eb1edb83874de02 master    
-git_repo_checkout_branch "../localmemcache"                       236aab4ffbc2faa7963d12e578f44a090f2b3eb8 master    
-git_repo_checkout_branch "../lrucache11"                          fb961f798bd04fdee62f4d43763916f3b3d409af master    
-git_repo_checkout_branch "../lz4"                                 306f827dbbc257a39216833dbea13fb24ee95981 dev       
-git_repo_checkout_branch "../mace"                                42ee056f2c4d683694bb55be7fa6262c01022e96 master    
-git_repo_checkout_branch "../magic_enum"                          64bedded2a9645470a26f3be0942bf5dad0f53e8 master    
-git_repo_checkout_branch "../mammut"                              de6ce2967d470eb72d901636421a3066ee148a11 master    
-git_repo_checkout_branch "../manticore-columnar"                  2537756be3ec7bb06668ba5b722618299027dd46 master    
-git_repo_checkout_branch "../manticore-plugins"                   ebeae89630eb2a94eff4c848a555dc282b48600a master    
-git_repo_checkout_branch "../manticoresearch"                     bf81af7f1084520a0d4ef843e1fbfcc256333067 master    
-git_repo_checkout_branch "../many-stop-words"                     f9bfdc2c1ae970cf2b074cdc7a361aa68d7f4583 master    
-git_repo_checkout_branch "../marian"                              f00d0621897ecf5dc947bba186d3d5fc8434fba2 master    
-git_repo_checkout_branch "../math-atlas"                          f7840d66da7e0d40f4e40619ddd00e7f891263dc master    
-git_repo_checkout_branch "../mcmc"                                9152d4ddc0a2d451fc1e4692b475a07e0094bd1d master    
-git_repo_checkout_branch "../merror"                              3cd9cd9e5f5ca8cf397d8e4ce77bed50b228a309 main      
-git_repo_checkout_branch "../messagebox-windows"                  33be748fa41d01b75161c592d72815bc6ed26a7c master    
-git_repo_checkout_branch "../mht-rip"                             9b6d5215f4d8bd2997eb5443f9d9fc99d306ca87 master    
-git_repo_checkout_branch "../microsoft-performance-toolkit-sdk"   afcd4cf0954c29c8106b01d10532a02e750bb519 main      
-git_repo_checkout_branch "../midas"                               149509a90a0fb35fd68f7485a0ab0e661d74644b master    
-git_repo_checkout_branch "../mimalloc"                            eb29d6b06f0f0d38aa8d7edd036d1dc412395393 dev       
-git_repo_checkout_branch "../mime-mega"                           c8729b6b57433047d944b58fbd129fd5f24eac23 master    
-git_repo_checkout_branch "../mimetic"                             63848712a95d2cbf891b56f64d1d68784abc7a64 master    
-git_repo_checkout_branch "../mipp"                                b54fb785f2c14e20ca4e4e34e58ea7bd69d7542b master    
-git_repo_checkout_branch "../mlpack"                              1e34d1240276704d4411fd45c49773713ed51770 master    
-git_repo_checkout_branch "../mmc"                                 f1df4bd955e3becb90fac848590caafa1314d345 master    
-git_repo_checkout_branch "../monolith"                            f34ad0111d9d9546e379c6127f900efe18bddb20 master    
-git_repo_checkout_branch "../morton_filter"                       cb7b78846c7d779c357cdbd6be22bfdf9f0b9a70 master    
-git_repo_checkout_branch "../ms_cpp_client_telemetry"             b22500d1279e3717b9d552cc16f57a3c3a0b378c main      
-git_repo_checkout_branch "../multiverso"                          3c03cce205c3eb33ebf83b417ac0748daa9efdd1 master    
-git_repo_checkout_branch "../mxnet"                               7d602e3b2382eb501fdeb94c4d97e652a723af11 master    
-git_repo_checkout_branch "../mydumper"                            4d4415b29dcbbd265728089523e934d25590e086 master    
-git_repo_checkout_branch "../mysql-connector-cpp"                 987fada391411f2e8d71688812674c6203ef253f trunk     
-git_repo_checkout_branch "../nameof"                              6a1efd31c1b38e48fdec15c7df7265b66d674aeb master    
-git_repo_checkout_branch "../nanoflann"                           8e5fccf697e7d80fa7210295d8f19508671b1b94 master    
-git_repo_checkout_branch "../nanosvg"                             3869713dd327cf60cf6b88a4bf34ed3eff051b15 master    
-git_repo_checkout_branch "../nativefiledialog-extended"           31df8e30cc14c6929033152ffd61dd1c98b4f5b3 master    
-git_repo_checkout_branch "../ncnn"                                0b1141c0c50b0cf40ecf272b52b770aa07dee354 master    
-git_repo_checkout_branch "../neutralinoJS"                        57df9a174968c94b0648abe8e4a3b84378785bb6 main      
-git_repo_checkout_branch "../neutralinoJS-CLI"                    d8dc72d91598a6165f87b353e100c37cdcf9b79d master    
-git_repo_checkout_branch "../nmslib"                              e4d015a311c6f87e988a69f35aa559e77a5b8eb7 master    
-git_repo_checkout_branch "../notcurses"                           7651cde99827c78ebe773f1f2c6bd311dc3ec4d4 master    
-git_repo_checkout_branch "../npoi"                                60f3acbedd46821fec6b79e6f43cb06c64e1f1a3 master    
-git_repo_checkout_branch "../nsync"                               ac5489682760393fe21bd2a8e038b528442412a7 master    
-git_repo_checkout_branch "../ocreval"                             873a0de5796c0b9ccf07a549afdd30159a9e0b3e master    
-git_repo_checkout_branch "../oiio"                                c72b4bb3eb4223a4c0424a855589e818759ad36e master    
-git_repo_checkout_branch "../olena"                               69ee97aeb224dd884c26a1e1ca3567fc8eb5fda5 master    
-git_repo_checkout_branch "../oneTBB"                              51277f0e588183b162f9d60b987406eebb02135c master    
-git_repo_checkout_branch "../opencv"                              7b083a1a6481ffbff315c87248d56466cb806d8f master    
-git_repo_checkout_branch "../opencv_contrib"                      de41bb94d25f5eae94c52dcb794178dd5e5b8937 master    
-git_repo_checkout_branch "../openpbs"                             df4c32063fc13e97b71547f5e11290dc07923079 master    
-git_repo_checkout_branch "../openssl"                             43086b1bd48958ce95fadba8459ad88675da4fdf vanilla   
-git_repo_checkout_branch "../openssl/gost-engine"                 b2b4d629f100eaee9f5942a106b1ccefe85b8808           
-git_repo_checkout_branch "../openssl/krb5"                        aa9b4a2a64046afd2fab7cb49c346295874a5fb6           
-git_repo_checkout_branch "../openssl/pyca-cryptography"           277ee0d58c6c8cfc9517df35c8a020bea33bddf4           
-git_repo_checkout_branch "../openssl/wycheproof"                  2196000605e45d91097147c9c71f26b72af58003 master    
-git_repo_checkout_branch "../opentelemetry-cpp"                   b8504d978d2cff1a5255ca8f55ab76f7ce6a49f7 main      
-git_repo_checkout_branch "../oppat"                               39a46dc953ed656cc28d216c4d58ea8f709a5d28 master    
-git_repo_checkout_branch "../otl"                                 887da8501c451eceae2986db4d8b49e749156f91 master    
-git_repo_checkout_branch "../pHash"                               dea9ffca729841db087f46a7389dd8610a629dc6 master    
-git_repo_checkout_branch "../pagerank"                            5ec180f6b008abb6e96a15e43c55c79dacd5d54a master    
-git_repo_checkout_branch "../palanteer"                           fbc305809d61c6e91fbebdc137aa741eb498beb5 main      
-git_repo_checkout_branch "../palmtree"                            f4926f37814fb30c2cbdbd01ab57278987d0a906 master    
-git_repo_checkout_branch "../papis-zotero"                        9b735bb2ef52bbbe02fa7c5a420335bc373ad486 master    
-git_repo_checkout_branch "../parallel-hashmap"                    1bc85c675e647df2869fd5932004413917c3df9d master    
-git_repo_checkout_branch "../pcg-c-random"                        1afda5718af6d16e6aaf9534398c32217b8100ad master    
-git_repo_checkout_branch "../pcg-cpp-random"                      12a374480dcac3d5d93c7a705af3c22a38bd4f1f master    
-git_repo_checkout_branch "../pcm"                                 530e68527e31378135b58276a762801218bb2913 master    
-git_repo_checkout_branch "../pcre"                                229184a417600b94eeedce01efaa54bdc15e1b92 master    
-git_repo_checkout_branch "../pdf2htmlEX"                          7c9086b958e3da3ace34feb7306d7ed7e589bc9e master    
-git_repo_checkout_branch "../pdfgrep"                             be55d22b3d335b08a56f5a19a319e3d259a2818d           
-git_repo_checkout_branch "../pdfium"                              a98c08922d62e1d68d8dada74f2c695dd8d83e19 main      
-git_repo_checkout_branch "../pelikan"                             e7a76c92d8a6b401475ce53d3cefe964f1e7fbb6 master    
-git_repo_checkout_branch "../percona-server"                      f4057ed0220be87bbb21683784c25bcdf584f256 8.0       
-git_repo_checkout_branch "../pevents"                             d3b053151aca7d76b3e76a24dca083678b933d86 master    
-git_repo_checkout_branch "../phash-gpl"                           1386cec19d67238536d54499613446eacc72c7ab master    
-git_repo_checkout_branch "../phf-hash"                            840a06582bbccc9e5ceda434e4e12401593df7ed master    
-git_repo_checkout_branch "../photino.native"                      2859added07f08935e2c091cda42e0ce9b1deba2 master    
-git_repo_checkout_branch "../picohttpparser"                      820d5f718dfd1b619de6ed5d8ad54d59e9e7dfab master    
-git_repo_checkout_branch "../picohttpparser/picotest"             d2a40939ab48f90d660816b9a774dc90a84eb3e9 master    
-git_repo_checkout_branch "../pinyin"                              63c5b9fb258c056fc10807763b9ce6482eb5f842 master    
-git_repo_checkout_branch "../pipes"                               56f7e335deb89236918f16e60526bbc0702f6b80 master    
-git_repo_checkout_branch "../pisa"                                4417ad115203dce2df19e42c6c339641aa7436fe master    
-git_repo_checkout_branch "../plf_nanotimer"                       f9a1dc46b10930b056148142d850425463c3b816 master    
-git_repo_checkout_branch "../pmt-png-tools"                       9a85721085300a76e828c80291ac84c86f01fd82 master    
-git_repo_checkout_branch "../poppler"                             a5952ab70716a2d4f792a943c2dcf3068f1d6885 master    
-git_repo_checkout_branch "../portable-memory-mapping"             86c92756ccfeba1191dbe8e57fb4db159d1ed651 master    
-git_repo_checkout_branch "../portable-snippets"                   84abba93ff3d52c87e08ba81de1cc6615a42b72e master    
-git_repo_checkout_branch "../portable_concurrency-std-future"     a449a8a6bfcc6eba0853afb882ed73b47b9abe50 master    
-git_repo_checkout_branch "../preprocess-corpuses"                 faa0ecf5b408b3d957d05a4fd32d45147546e13d master    
-git_repo_checkout_branch "../prio_queue"                          67e56a16c73edc1d791400c9a5cebf70ae256e03 master    
-git_repo_checkout_branch "../promise-cpp"                         f582223fa18efbc0ad33bddb6d217ca60de78f70 master    
-git_repo_checkout_branch "../promise-hpp"                         e0219f5d5338b9b793d79b11619e7b51878c281b main      
-git_repo_checkout_branch "../proxygen"                            9354d025b8095c0239ff60c3abdc3e2832f6f3e6 main      
-git_repo_checkout_branch "../pthread-win32"                       f70755704aa4a6a8f86423f1f07f00704fc99208 master    
-git_repo_checkout_branch "../pthreadpool"                         1787867f6183f056420e532eec640cba25efafea master    
-git_repo_checkout_branch "../pybind11"                            964c49978f7e7227f2968c359f4f05255d2b54f4 master    
-git_repo_checkout_branch "../pytorch"                             ba14dc5f21339480580e8c009966fc6db6280f65 master    
-git_repo_checkout_branch "../pytorch/android/libs/fbjni"          b592c5591345a05341ed6cd31d214e71e8bf4229           
-git_repo_checkout_branch "../pytorch/third_party/FP16"            4dfe081cf6bcd15db339cf2680b9281b8451eeb3           
-git_repo_checkout_branch "../pytorch/third_party/FXdiv"           b408327ac2a15ec3e43352421954f5b1967701d1           
-git_repo_checkout_branch "../pytorch/third_party/NNPACK"          c07e3a0400713d546e0dea2d5466dd22ea389c73           
-git_repo_checkout_branch "../pytorch/third_party/QNNPACK"         7d2a4e9931a82adc3814275b6219a03e24e36b4c           
-git_repo_checkout_branch "../pytorch/third_party/XNNPACK"         79cd5f9e18ad0925ac9a050b00ea5a36230072db           
-git_repo_checkout_branch "../pytorch/third_party/benchmark"       e991355c02b93fe17713efe04cbc2e278e00fdbd           
-git_repo_checkout_branch "../pytorch/third_party/breakpad"        7d188f679d4ae0a5bd06408a3047d69ef8eef848           
-git_repo_checkout_branch "../pytorch/third_party/cpuinfo"         5916273f79a21551890fd3d56fc5375a78d1598d           
-git_repo_checkout_branch "../pytorch/third_party/cub"             d106ddb991a56c3df1b6d51b2409e36ba8181ce4           
-git_repo_checkout_branch "../pytorch/third_party/cudnn_frontend"  51e60d891b689d618e7a623509a779c422a420f7           
-git_repo_checkout_branch "../pytorch/third_party/eigen"           d41dc4dd74acce21fb210e7625d5d135751fa9e5           
-git_repo_checkout_branch "../pytorch/third_party/fbgemm"          10ec0d33885795e6b4cc9a17896ee3f25b48fa8e           
-git_repo_checkout_branch "../pytorch/third_party/fbgemm/third_party/asmjit" 8b35b4cffb62ecb58a903bf91cb7537d7a672211           
-git_repo_checkout_branch "../pytorch/third_party/fbgemm/third_party/cpuinfo" ed8b86a253800bafdb7b25c5c399f91bff9cb1f3           
-git_repo_checkout_branch "../pytorch/third_party/fbgemm/third_party/googletest" cbf019de22c8dd37b2108da35b2748fd702d1796           
-git_repo_checkout_branch "../pytorch/third_party/flatbuffers"     d0cede9c90c5257537c293517a21376408b549fa           
-git_repo_checkout_branch "../pytorch/third_party/fmt"             f7ea6e08e4cd84df7e3c4ef1d9da224b00db2c0f master    
-git_repo_checkout_branch "../pytorch/third_party/foxi"            c278588e34e535f0bb8f00df3880d26928038cad           
-git_repo_checkout_branch "../pytorch/third_party/gemmlowp/gemmlowp" 3fb5c176c17c765a3492cd2f0321b0dab712f350           
-git_repo_checkout_branch "../pytorch/third_party/gloo"            c22a5cfba94edf8ea4f53a174d38aa0c629d070f           
-git_repo_checkout_branch "../pytorch/third_party/googletest"      e8b323dfd62f604e8f86397063121c84677268ba master    
-git_repo_checkout_branch "../pytorch/third_party/ideep"           9ca27bbfd88fa1469cbf0467bd6f14cd1738fa40           
-git_repo_checkout_branch "../pytorch/third_party/ideep/mkl-dnn"   7336ca9f055cf1bfa13efb658fe15dc9b41f0740           
-git_repo_checkout_branch "../pytorch/third_party/ios-cmake"       8abaed637d56f1337d6e1d2c4026e25c1eade724           
-git_repo_checkout_branch "../pytorch/third_party/kineto"          dbfa0ead96612f7ca265c63a35fdf0488395179b           
-git_repo_checkout_branch "../pytorch/third_party/kineto/libkineto/third_party/fmt" 2591ab91c3898c9f6544fff04660276537d32ffd           
-git_repo_checkout_branch "../pytorch/third_party/kineto/libkineto/third_party/googletest" 7aca84427f224eeed3144123d5230d5871e93347           
-git_repo_checkout_branch "../pytorch/third_party/nccl/nccl"       7e515921295adaab72adf56ea71a0fafb0ecb5f3           
-git_repo_checkout_branch "../pytorch/third_party/neon2sse"        97a126f08ce318023be604d03f88bf0820a9464a           
-git_repo_checkout_branch "../pytorch/third_party/onnx"            29e7aa7048809784465d06e897f043a4600642b2           
-git_repo_checkout_branch "../pytorch/third_party/onnx-tensorrt"   c153211418a7c57ce071d9ce2a41f8d1c85a878f           
-git_repo_checkout_branch "../pytorch/third_party/onnx-tensorrt/third_party/onnx" 765f5ee823a67a866f4bd28a9860e81f3c811ce8           
-git_repo_checkout_branch "../pytorch/third_party/onnx/third_party/benchmark" e776aa0275e293707b6a0901e0e8d8a8a3679508           
-git_repo_checkout_branch "../pytorch/third_party/onnx/third_party/pybind11" 59a2ac2745d8a57ac94c6accced73620d59fb844           
-git_repo_checkout_branch "../pytorch/third_party/pocketfft"       ea778e37710c07723435b1be58235996d1d43a5a           
-git_repo_checkout_branch "../pytorch/third_party/protobuf"        d0bfd5221182da1a7cc280f3337b5e41a89539cf           
-git_repo_checkout_branch "../pytorch/third_party/protobuf/third_party/benchmark" 5b7683f49e1e9223cf9927b24f6fd3d6bd82e3f8           
-git_repo_checkout_branch "../pytorch/third_party/protobuf/third_party/googletest" 5ec7f0c4a113e2f18ac2c6cc7df51ad6afc24081           
-git_repo_checkout_branch "../pytorch/third_party/psimd"           072586a71b55b7f8c584153d223e95687148a900           
-git_repo_checkout_branch "../pytorch/third_party/pthreadpool"     a134dd5d4cee80cce15db81a72e7f929d71dd413           
-git_repo_checkout_branch "../pytorch/third_party/pybind11"        8de7772cc72daca8e947b79b83fea46214931604           
-git_repo_checkout_branch "../pytorch/third_party/python-enum"     4cfedc426c4e2fc52e3f5c2b4297e15ed8d6b8c7           
-git_repo_checkout_branch "../pytorch/third_party/python-peachpy"  07d8fde8ac45d7705129475c0f94ed8925b93473           
-git_repo_checkout_branch "../pytorch/third_party/python-six"      15e31431af97e5e64b80af0a3f598d382bcdd49a           
-git_repo_checkout_branch "../pytorch/third_party/sleef"           e0a003ee838b75d11763aa9c3ef17bf71a725bff           
-git_repo_checkout_branch "../pytorch/third_party/tbb"             a51a90bc609bb73db8ea13841b5cf7aa4344d4a9           
-git_repo_checkout_branch "../pytorch/third_party/tensorpipe"      e45b2338d0a31192a7e413f3fbbfa7fd90504a37           
-git_repo_checkout_branch "../pytorch/third_party/tensorpipe/third_party/googletest" aee0f9d9b5b87796ee8a0ab26b7587ec30e8858e           
-git_repo_checkout_branch "../pytorch/third_party/tensorpipe/third_party/libnop" aa95422ea8c409e3f078d2ee7708a5f59a8b9fa2           
-git_repo_checkout_branch "../pytorch/third_party/tensorpipe/third_party/libuv" 1dff88e5161cba5c59276d2070d2e304e4dcb242           
-git_repo_checkout_branch "../pytorch/third_party/tensorpipe/third_party/pybind11" a23996fce38ff6ccfbcdc09f1e63f2c4be5ea2ef           
-git_repo_checkout_branch "../pytorch/third_party/tensorpipe/third_party/pybind11/tools/clang" 6a00cbc4a9b8e68b71caf7f774b3f9c753ae84d5           
-git_repo_checkout_branch "../pytorch/third_party/zstd"            2aab914105ccba636e842f636871ee54fca87480 dev       
-git_repo_checkout_branch "../pytorch_cpp_demo"                    4c1d9f6941eac4286101c2cc522a90c653ba47e9 master    
-git_repo_checkout_branch "../qlever"                              1f10d4e549bcd143bc5466ff64af8a0eb8b7b85c master    
-git_repo_checkout_branch "../randen"                              f5c24d87c2602e28172e6ee97539a25e196d65a5 master    
-git_repo_checkout_branch "../random"                              a8f6fd27f8ac53e6bcd3c30053999f37d07869b0 master    
-git_repo_checkout_branch "../rapidJSON"                           334d3f79f31aec848c2c31eda67bfaa1ebac6bc1 master    
-git_repo_checkout_branch "../rapidJSON/thirdparty/gtest"          9a46dfcccae722b4cdf3531b4cbac899de9a8ed1 master    
-git_repo_checkout_branch "../rapidyaml"                           bd51bd6cc1d105c81dc1cee5e5809bbab3b5d192 master    
-git_repo_checkout_branch "../rclone"                              65987f5970892f7fc8bc353f87fe8b7363e0b06d master    
-git_repo_checkout_branch "../re2"                                 b16819fa2ebcce1255cb96f4489cf7b3dcb29442 master    
-git_repo_checkout_branch "../recycle"                             3502ca106363a967ed1d0b6eaa30c66c5fae8778 master    
-git_repo_checkout_branch "../refl-cpp"                            ca4d31cb2d0286f1abc53fe5ea731e734d950905 master    
-git_repo_checkout_branch "../replxx"                              477f48923657d7a72eff4463ef302f03e70ebc62 master    
-git_repo_checkout_branch "../restc-cpp"                           b9c2aef049dbdb3de86db68ed15bd797bd8269fc master    
-git_repo_checkout_branch "../result-cpp"                          a97e66bc66f140132619fd5f5cdffc30127f4220 master    
-git_repo_checkout_branch "../resumable-assert"                    a73ebf1e2cfe7f67c2a69f78ca15c754beca5cf0 master    
-git_repo_checkout_branch "../robin-map"                           f8e0f679d2fad8b47f6300f25ab844fd49a1f7e5 master    
-git_repo_checkout_branch "../rsync"                               556a2c5bc2f6244f140a96302d4df92cfc25af8b master    
-git_repo_checkout_branch "../safestringlib"                       88d4f8708b13171b652155e9c078caaa165afa79 master    
-git_repo_checkout_branch "../salieri"                             e6887e30229747a679600796f532e51276a49d73 master    
-git_repo_checkout_branch "../scantailor"                          30d98d0d403a9a74812b60dc3ff948efcb979e0b master    
-git_repo_checkout_branch "../scintilla"                           b23a155f463483ef19e130b38897383e8819537c master    
-git_repo_checkout_branch "../sentence-tokenizer"                  e60faa05eee199cf258ce93ce8d9829f7d539a3d master    
-git_repo_checkout_branch "../sentencepiece"                       1aafd8d639c06d6bc2a40ec7c9898d9003e1f223 master    
-git_repo_checkout_branch "../shadesmar"                           9edf83ae38fac8e36d85ae2920c307e9e2b0b08a master    
-git_repo_checkout_branch "../shoco"                               9a21de6e620fea09e9f191f81fc2e7940e4682d7 master    
-git_repo_checkout_branch "../sioyek"                              78cf88f5f27c0438d8c814232baa7ca6c49d7cd6 main      
-git_repo_checkout_branch "../smhasher"                            bd0630d7803069e046c6dbb0daeadf63635d3402 master    
-git_repo_checkout_branch "../snmalloc"                            106835bf872b85df66b52988e16e64afb76b8565 main      
-git_repo_checkout_branch "../snowball"                            458fea1e23e1845054ad96503195e6228c89b73b master    
-git_repo_checkout_branch "../sparsehash"                          d6ec9952fd0d56bfeaf141e0e145e876835ad0f4 master    
-git_repo_checkout_branch "../spdlog"                              936697e5b1944bf1630cfbb9e82144f8bdc32815 v1.x      
-git_repo_checkout_branch "../spdlog_setup"                        d1b3f41e6ae340b8bd9a536e7d945f085f3d4cff master    
-git_repo_checkout_branch "../spy-build-sysinfo"                   d607af30f46b23438a827e015f868fe4593f5c2f develop   
-git_repo_checkout_branch "../sqlcipher"                           104f2d2fda33f4c179960d628e7446f3869ef4ed master    
-git_repo_checkout_branch "../sqlean"                              fce0e36a4ccd45d36af8f8646ec07063640f9442 combined  
-git_repo_checkout_branch "../sqleet"                              3e7cd11285c1504566a4edab2747dc106ff637f5 master    
-git_repo_checkout_branch "../sqlite"                              3cc19586e5ec39204abadc7643a2ad2885e13c01 master    
-git_repo_checkout_branch "../sqlite-amalgamation"                 d86835bdbc9a23615190d3f14980b39f2a280e4a master    
-git_repo_checkout_branch "../sqlite-fts5-snowball"                948a7de459a4bc6c83972659122da74bf18a900e master    
-git_repo_checkout_branch "../sqlite-stats"                        e4bf1fa7eb44eac8a54b65b8c129c1f14fd09cda main      
-git_repo_checkout_branch "../sqlite3-compression-encryption-vfs"  8fabfc5d775e7078c1c27eee6817d09af8423e35 master    
-git_repo_checkout_branch "../sqlite3pp"                           9e4dd8d3a1729cd9326953b0628a41314ed9066e master    
-git_repo_checkout_branch "../sqlite_fts_tokenizer_chinese_simple" 834b51269bfe207c35fe99e77b0452cce30b9adc master    
-git_repo_checkout_branch "../sqlite_wrapper"                      1c45d8b7faa939c72507ee352cf3efbcb42ed555 master    
-git_repo_checkout_branch "../sqlite_zstd_vfs"                     4f570e2979c9330756d3cd52c3c586c0e5c3e590 main      
-git_repo_checkout_branch "../sqlpp11"                             648183fd64070185019f9237481b888173abfaf2 main      
-git_repo_checkout_branch "../ssimulacra2"                         9012bce32c3adecccd4633736cec2759129a929d main      
-git_repo_checkout_branch "../stateline"                           29ab7fbf43f3bb42bd8b1277551b37f98f8bd670 master    
-git_repo_checkout_branch "../statsite"                            bf68fa2d3d107edcface16571e90ce71d3ede0f8 master    
-git_repo_checkout_branch "../stdext-path"                         061d0c06cd448930f0e850a78bf1cd7d0c2a5014 master    
-git_repo_checkout_branch "../stopwords"                           8395a54795d520dfcc3fa6ad308291f10a42a216 master    
-git_repo_checkout_branch "../stringi"                             0dc5f8af71d353aac56edfe62fe8f9710bb78c3b master    
-git_repo_checkout_branch "../stx-error-handling"                  3f661b528a927779a666cfe6cb715b7e32b1202a master    
-git_repo_checkout_branch "../subprocess"                          9b29e3412cf29644728e2dbcc35530c9db41bec7 echo.exe  
-git_repo_checkout_branch "../subprocess_h"                        06984f76a7a3649d1467f5e1b903f28642e02e4b master    
-git_repo_checkout_branch "../sumatrapdf"                          b8e2c41f1f7356b3e96c53c894bf567a8708529b master    
-git_repo_checkout_branch "../svg-charter"                         6ef603534e41d4f7b9f51bf05cb5fd566ac49f3d master    
-git_repo_checkout_branch "../svg-charter/src/tinyexpr"            dc061efb4d051c333a607ac26893cf02ba7b3a45 master    
-git_repo_checkout_branch "../swig"                                a2fc5ecaff561b4e3c6c8edc84d46a20eebae731 master    
-git_repo_checkout_branch "../tabulate"                            4d76b8ae309dee120b45d91cb4d1998e38a7e5c6 master    
-git_repo_checkout_branch "../taolog"                              2f820818a15f670a6acb2d9353e651b0e2081b3e master    
-git_repo_checkout_branch "../taskflow"                            a6c62442d27ff066318d31ca1ffbca04eb3317b1 master    
-git_repo_checkout_branch "../tcp_pubsub"                          5b47272465af667256ffbe9795c271ba04428113 master    
-git_repo_checkout_branch "../tensorflow"                          35e982d715860f6c4bc22e9b264cfe63cd1c4fbb master    
-git_repo_checkout_branch "../tesseract-gImgRdrGui"                88d42c5ce29edbbcf716eb3cc05aa5fda5ebba76 master    
-git_repo_checkout_branch "../thread-pool"                         f5dbe42f40fc7ccfb5a23c599b0ba48ce49c5d5b master    
-git_repo_checkout_branch "../thread-pool-c"                       b259a6e29a76d756f68c3665a3d841e5848e928b master    
-git_repo_checkout_branch "../thread-pool-cpp"                     e84d1e75e9fc6e543e735cefadadb97c4b9d3d37 master    
-git_repo_checkout_branch "../thunderSVM"                          43e7640202269cd3e1ac6c7609cb39b34ce4484b master    
-git_repo_checkout_branch "../thunderSVM/eigen"                    dde02fceedfc1ba09d4d4f71a2b5dafcfcb85491           
-git_repo_checkout_branch "../thunderSVM/src/test/googletest"      9a46dfcccae722b4cdf3531b4cbac899de9a8ed1 master    
-git_repo_checkout_branch "../ticpp"                               1cdaddc14ca6f86f9ac80eda1e40bef6c11e37b7 master    
-git_repo_checkout_branch "../tidy-html5"                          78ffcc95a3ffdef7b739fbcc4a4b198a4665c6ab next      
-git_repo_checkout_branch "../tink"                                39602ef8508453217c03caf13b1171c06804e072 master    
-git_repo_checkout_branch "../tinn"                                815225a8f11c7aff2f3d008cb19980f40dc60de6 master    
-git_repo_checkout_branch "../tiny-process-library"                d42ac180db9afa6757ce7b8e78d24f64aa61cccf master    
-git_repo_checkout_branch "../tinycbor"                            cd3cfc3bc99e4fa58b104184136bae93d7bd6d6b main      
-git_repo_checkout_branch "../tinycolormap"                        67198d2b2b48ca5e97600c83b5c0f2310cfd4c03 master    
-git_repo_checkout_branch "../tinyexpr"                            dc061efb4d051c333a607ac26893cf02ba7b3a45 master    
-git_repo_checkout_branch "../tinygettext"                         2fcecb76900fac852fd4006e4d49b0744b1031e1 master    
-git_repo_checkout_branch "../tlx"                                 46215fbbf6eb97c307c0f83cb272f9f5165f0339 master    
-git_repo_checkout_branch "../tlx-btree"                           46215fbbf6eb97c307c0f83cb272f9f5165f0339 master    
-git_repo_checkout_branch "../toml11"                              41908b2cefcd5ba81610957fb6df0c836f1b7558 master    
-git_repo_checkout_branch "../tomlpp"                              92ec5b2c45f0755241f26466abc5a6aff3b71b69 master    
-git_repo_checkout_branch "../tracelogging-for-ETW"                b512492760c6207bccafa84e2679106213e65feb main      
-git_repo_checkout_branch "../tre"                                 cdcae80129b6df07a9705995b827c19309e5e2ee master    
-git_repo_checkout_branch "../tsf"                                 7540ae6207bde991bcdfd721531552d2b6e9a612 master    
-git_repo_checkout_branch "../tvision"                             b5eb6be607707eaad1b4687926cbf99175fc26b9 master    
-git_repo_checkout_branch "../txiki.js"                            af9ced0b1589d4a7f61a7acbdeafefc1e4cdc1a4 master    
-git_repo_checkout_branch "../txiki.js/deps/libuv"                 4e69e333252693bd82d6338d6124f0416538dbfc           
-git_repo_checkout_branch "../txiki.js/deps/wasm3"                 092449fe1753f44047d7004078aa92662b3c0f22           
-git_repo_checkout_branch "../typesense"                           9905a1f1dc8123ff23d2513764ad94b18c7015cf master    
-git_repo_checkout_branch "../uberlog"                             141342bcff085fa1bd2b28331d33c20d56a40081 master    
-git_repo_checkout_branch "../uchardet"                            7d714c66981366d1c87c9d87968701a76fe0b1e4 master    
-git_repo_checkout_branch "../ucto"                                c2ddc65c554802c9b547982f5061cca40a26c00a master    
-git_repo_checkout_branch "../uctodata"                            9647bcf2b81eb8a9c47b1a190cbd208b309a43b1 master    
-git_repo_checkout_branch "../ucx"                                 563449749bef188abdb20c72fde4bdc3645be3ca master    
-git_repo_checkout_branch "../uint128_t"                           31be3028a2d71a1385e43315e783e6c4e6844b45 master    
-git_repo_checkout_branch "../unicode-cldr"                        0fc1a8ef0d6da7ab27f759f571e0f258b1d7eae8 master    
-git_repo_checkout_branch "../unicode-icu"                         85e42ae5599c31b05a0fb140b6061f04cf05405e master    
-git_repo_checkout_branch "../universal-numbers"                   4bd347141be925c3d12df697086dc0def67c3ff5 main      
-git_repo_checkout_branch "../unpaper"                             a2a88fe837fd6770ac94f08b2eb841f0dc9d2430 main      
-git_repo_checkout_branch "../upscaledb"                           f7010988ce5410c0b6a6499ee167a90adaf22b61 bleeding_edge
-git_repo_checkout_branch "../upskirt-markdown"                    b65faf6fd6fb3ae5bebad648d242ff207dd21a21 master    
-git_repo_checkout_branch "../upskirt-markdown/src/charter"        6ef603534e41d4f7b9f51bf05cb5fd566ac49f3d master    
-git_repo_checkout_branch "../upskirt-markdown/src/charter/src/tinyexpr" dc061efb4d051c333a607ac26893cf02ba7b3a45 master    
-git_repo_checkout_branch "../url"                                 cf77ae3c7cd36ced758c9dfdc96c0a73322184ee master    
-git_repo_checkout_branch "../userver"                             262ff57a43c35362d325a4149cc731067d4a8220 develop   
-git_repo_checkout_branch "../utfcpp"                              d8b92208fddde08d628004563a1a3614a32cf8c8 master    
-git_repo_checkout_branch "../variadic_table"                      70ddeb66f000a351b36b5a8d04b0820dfeda129f master    
-git_repo_checkout_branch "../velocypack"                          9906eb54a6f6d16778a153d7d4b6a482bde9916c main      
-git_repo_checkout_branch "../warc2text"                           c5d9f1c9e008840cf56e926d5f3538aa8b72a0f9 master    
-git_repo_checkout_branch "../warp-ctc"                            83ab8652d16e3f1a75603dcc9e54e60a25b5f8d2 master    
-git_repo_checkout_branch "../warpLDA"                             c97265d9b219d43afc95fa05966c0eba075779d6 master    
-git_repo_checkout_branch "../websocket-sharp"                     ba5ccfcd10d99b603e228db8b993fe3744709dad master    
-git_repo_checkout_branch "../webview"                             2ee04ccd0530e3928a872f5d508c114403803e61 master    
-git_repo_checkout_branch "../wget"                                98350855440b60080dc47bcc5ebda29dfb9fcbd2 master    
-git_repo_checkout_branch "../win32-dpi"                           8d6cff1c7b160f8dc992396de6b4c0b7ec25f1b0 master    
-git_repo_checkout_branch "../winflexbison"                        911853359017d3e817d638a0de18881eb7960de9 master    
-git_repo_checkout_branch "../wxCharts"                            72fd398301e0684eeed869eeb40dfb5668c9009b main      
-git_repo_checkout_branch "../wxExamples"                          72e7b0faad426bd0b39b6532d693ab8046a38db6 master    
-git_repo_checkout_branch "../wxFormBuilder"                       a8ecdcbe9556c34194c013cb7767003992c7ae99 master    
-git_repo_checkout_branch "../wxMEdit"                             0ac05dcc78987e64cf185784f5fcf3e97fe5476f master    
-git_repo_checkout_branch "../wxPDFView"                           3dc424a4a10aa724a6ee6162e57f9fcecdc56a09 master    
-git_repo_checkout_branch "../wxPdfDocument"                       e43afe93c11f4a8481fe913d195a25ee6e8a7fe1 main      
-git_repo_checkout_branch "../wxSQLite3"                           958ff8b0e6cb8af09e1df2f420b8bcdcff14be82 master    
-git_repo_checkout_branch "../wxVisualScriptEngine"                f944d3783b00cf18db14bfb7bbef7ca556ab4b61 master    
-git_repo_checkout_branch "../wxWebViewChromium"                   58408fd3cb0535846db0172e32a783ef900e301e master    
-git_repo_checkout_branch "../wxWidgets"                           e84ec3820b31e6baca5aa72965c0a2ae8a63033f master    
-git_repo_checkout_branch "../wxWidgets/3rdparty/catch"            5f5e4cecd1cafc85e109471356dec29e778d2160 wx        
-git_repo_checkout_branch "../wxWidgets/3rdparty/nanosvg"          3869713dd327cf60cf6b88a4bf34ed3eff051b15 master    
-git_repo_checkout_branch "../wxWidgets/3rdparty/pcre"             229184a417600b94eeedce01efaa54bdc15e1b92 master    
-git_repo_checkout_branch "../wxWidgets/src/expat"                 53641231a83bf0dc5664473715f3739e4a7b953d master    
-git_repo_checkout_branch "../wxWidgets/src/jpeg"                  5c801bc60880007811c864419bfef4cb8df4c998 master    
-git_repo_checkout_branch "../wxWidgets/src/png"                   102c223a63bb155d742622adfc7bb7a328bc8e34 wx        
-git_repo_checkout_branch "../wxWidgets/src/tiff"                  c2b99401512ab388eb5ded1145c75bc63f4e855f master    
-git_repo_checkout_branch "../wxWidgets/src/zlib"                  faa2dff29a64661791f5808d7fc46bf16aee647e master    
-git_repo_checkout_branch "../wyhash"                              a5995b98ebfa7bd38bfadc0919326d2e7aabb805 master    
-git_repo_checkout_branch "../xgboost"                             2ed3c29c8ab451776a72813cf7d6945972f0d526 master    
-git_repo_checkout_branch "../xml-pugixml"                         2b8e93650b38f6710b77b1e2a4fdae78c9885614 master    
-git_repo_checkout_branch "../xnnpack"                             1d7616fbfb2ae49956d733d6ac061e3990f9f077 master    
-git_repo_checkout_branch "../xpdf"                                e1a009286fcd4161f4eaf1423ee48ea35dc79633 v302      
-git_repo_checkout_branch "../xsimd"                               696d711ad9cceedcb468f24aa13b9103e626bc09 master    
-git_repo_checkout_branch "../xsldbg"                              ed83ea07015a77e6d7480456a09c9b40a133de73 master    
-git_repo_checkout_branch "../xtensor"                             bffa0ce9ba596afdb7f44c408804cff40e6d5e9b master    
-git_repo_checkout_branch "../xtensor-blas"                        66ab0fa7cd53d0b914f89d4d451576a9240ea457 master    
-git_repo_checkout_branch "../xtensor-io"                          7b9a9b7d8d9dc979bd64664f186692e3e9eb8c0f master    
-git_repo_checkout_branch "../xtl"                                 7812bebf3eea45d47ce707893d376bb49059913f master    
-git_repo_checkout_branch "../xxHash"                              2de0fd6d9b3fd8bbb35ebd52152ecd11fc1ebbfc dev       
-git_repo_checkout_branch "../yaml-cpp"                            0018d49152d9febe37f93d8d27e1b1abef8834ea master    
-git_repo_checkout_branch "../yaml-test-suite"                     8236ad3cf03a35e3707f726ff0179e71af943e87 master    
-git_repo_checkout_branch "../yara-pattern-matcher"                02ce7c0c40b9ef631a815d519ad7db3c24e32d7d master    
-git_repo_checkout_branch "../you-token-to-me"                     f4bc5f8c45487b31aa0f53419714f32229ca8854 master    
-git_repo_checkout_branch "../yyjson"                              683b946eacf1929cd4d0f086a82199a17c28ecf0 master    
-git_repo_checkout_branch "../zfp-compressed-arrays"               26678cdeda84be7c0f0fe027a0144d8d2bc1c210 develop   
-git_repo_checkout_branch "../zotero"                              2c5a91682eafce5eff371e075d7252fa915c4d90 master    
-git_repo_checkout_branch "../zotero-better-bibtex"                5882c04f77f90068ac0854c57c3398b0d36d3737 master    
-git_repo_checkout_branch "../zotero-bib"                          958d042d3e41cf708ea0a8f4d786170290eae4d2 master    
-git_repo_checkout_branch "../zotero-build"                        00e854c6588f329b714250e450f4f7f663aa0222 master    
-git_repo_checkout_branch "../zotero-connectors"                   5bb3e00559c9cf063696b6df0b3e8c1d6ad9b73b master    
-git_repo_checkout_branch "../zotero-google-docs-integration"      741f5e78b3e30668b334a57c98ca14bc3e63303c master    
-git_repo_checkout_branch "../zotero-libreoffice-integration"      1d747aad99ef48099cc23ab8904b2b84f919e07b master    
-git_repo_checkout_branch "../zotero-scholar-citations"            616603679fe1f57a0cd9016e96a63d9ce4477b47 master    
-git_repo_checkout_branch "../zotero-shortdoi"                     e11627fec31046bdd7323ff2c64e7fdf0089c6d5 master    
-git_repo_checkout_branch "../zotero-standalone-build"             fd20ee49cd84630dfe5037eafada56b11cf1092f master    
-git_repo_checkout_branch "../zotero-translate"                    586a893ee2e0b4e6d5c6afeac3dada8fb1ac556f master    
-git_repo_checkout_branch "../zotero-translation-server"           a30a15d62f725a075d32ef927990d04c4b4e277c master    
-git_repo_checkout_branch "../zotero-translators"                  b337cd542a335819fc0dc0db70ee3c34daad2a2d master    
-git_repo_checkout_branch "../zotero-web-library"                  35ee252891fd0f350b6fce3330809b91f68bb0e0 master    
+git_repo_checkout_branch "../A-MNS_TemplateMatching" de87d7364658282d6dec104c72cfff4727520e9c main      
+git_repo_checkout_branch "../ADE-graph-management" 0e8a2ccdd34f29dba55894f5f3c5179809888b9e master    
+git_repo_checkout_branch "../ApprovalTestsCpp" 4392754da2790157b9f34d90d6631c9f56565229 master    
+git_repo_checkout_branch "../BBHash" 9134394c15942ea90b3c6b5fdb61314633de9ff5 master    
+git_repo_checkout_branch "../BCF-cuckoo-index" 8918ebadc951d956930ba3a62d4d99b262d0caac master    
+git_repo_checkout_branch "../BLAKE3" 4f437bd6650e563064df884b4332cebef51cc928 master    
+git_repo_checkout_branch "../BaseMatrixOps" 9e5beec15d803f0429dadae5e9218ef907271383 main      
+git_repo_checkout_branch "../BitFunnel" b8ec70eeb3aa2f6aef6166feb6780fac3acf981b master    
+git_repo_checkout_branch "../BlingFire" 5dad17aa31dd87c9992d9570ab0dd20e84246fa6 master    
+git_repo_checkout_branch "../BoxFort" c91d7181734ab2fd6d1299e8aa927297f0ddb754 master    
+git_repo_checkout_branch "../CHM-lib" e5cc1ca9e9b29afe2ebc75e38ce6aaae986c3658 master    
+git_repo_checkout_branch "../CImg" d04d1a92626f99e86485f3e5a3a35133c2b3be13 master    
+git_repo_checkout_branch "../CLBlast" bcd294a93ad0dffbace51103215b1346ec3956df master    
+git_repo_checkout_branch "../CLBlast-database" 07eec67dafdc94a58cfd4b83d145f494231e4611 master    
+git_repo_checkout_branch "../CLTune" 6a13b43af09bbbfd3b83223c5a1c9c57d63c0330 master    
+git_repo_checkout_branch "../CRFpp" 1dc92a606f874a4fe52603803364cc1d90f952fb master    
+git_repo_checkout_branch "../CRFsuite-extended" 073d650b12460c1d6f1c3bf862e13dccaf473fc6 master    
+git_repo_checkout_branch "../CRoaring" 1b81314567abaad36da289aceb0d776563a51c54 master    
+git_repo_checkout_branch "../CTCWordBeamSearch" 43567e5b06dd43bdcbec452f5099171c81f5e737 master    
+git_repo_checkout_branch "../CTPL-Thread-Pool" 437e135dbd94eb65b45533d9ce8ee28b5bd37b6d master    
+git_repo_checkout_branch "../CacheLib" 33cd333d4ad2b5075d42fce241e410e0045968b1 main      
+git_repo_checkout_branch "../CacheLib/cachelib/external/fbthrift" 4e4cb9b1d82e15bb48e1f6cddaa2f5968fc668c5 main      
+git_repo_checkout_branch "../CacheLib/cachelib/external/fizz" 27b732aecf6d201c35ca3a99ae01c93af7d0816a main      
+git_repo_checkout_branch "../CacheLib/cachelib/external/folly" 3da4d3ccc4ea69bc10800754816e339d912736bd main      
+git_repo_checkout_branch "../CacheLib/cachelib/external/wangle" 2bb03978091fa165cb009ec6efde9e2e256a297a main      
+git_repo_checkout_branch "../Capture2Text" adcce2467568c230411851a1cef1d3bad44a4115 master    
+git_repo_checkout_branch "../ColorSpace" 2b28f91cc92d07265190c64522b4d7c5e07d09b2 master    
+git_repo_checkout_branch "../Criterion" f6097bcf699e436e4033e10e2a5f0e13d1b46e92 bleeding  
+git_repo_checkout_branch "../CryptSync" ba6f87da9a4bc660b0de78e21730a4a7ed5ac2e8 main      
+git_repo_checkout_branch "../CxImage" b60dd06e4a39ca3456b9a5cd2d8bcf0d28b708de master    
+git_repo_checkout_branch "../Cysboard" df7204d6af79b407ff9ef4f20889e1327e990577 master    
+git_repo_checkout_branch "../DBoW2" 3924753db6145f12618e7de09b7e6b258db93c6e master    
+git_repo_checkout_branch "../DCF-cuckoo-index" f943929afe9d8f973e9f847995d9c2c2095c566c master    
+git_repo_checkout_branch "../DGM-CRF" 33a2e9bdaf446378ec63c10b3a07b257e32aa1ef master    
+git_repo_checkout_branch "../ECMA262" ee74c9cb74dbfa23e62b486f5226102c345c678e master    
+git_repo_checkout_branch "../EtwExplorer" 47af917705e6a1d15b8d78ee0f017cdfbb7016ee master    
+git_repo_checkout_branch "../Extensible-Storage-Engine" f6f66c29d191e74bc7dd1cb67cba266c6b3f255d main      
+git_repo_checkout_branch "../FFmpeg" 8cd2e0c075d80f2f794d48a9e36ffa1fb02bffd3 master    
+git_repo_checkout_branch "../FreeFileSync" 73b56f1dcb087d72c1c589b2a833953b59f4011d master    
+git_repo_checkout_branch "../GMM-HMM-kMeans" df76ebd12cb9902705569a17a6a19f02835b8516 master    
+git_repo_checkout_branch "../GMMreg" b18d1c9cec54ce84df950f5821b24b8e4d03d519 master    
+git_repo_checkout_branch "../GoldFish-CBOR" 4ba6a01c7714fee78ce311ef8910f2065e80c8a5 master    
+git_repo_checkout_branch "../GraphicsMagick" 1738f4529293f7357536cc312b7b36376397834f master    
+git_repo_checkout_branch "../HDiffPatch" e1980314399e551b667cd7bdb1a217591eb80b6d master    
+git_repo_checkout_branch "../IdGenerator" 61b9ea7fde44b3930f954269a33112628f1148d3 master    
+git_repo_checkout_branch "../ImageMagick" 3cc61f7863239010ae71bb0cbedb7fc85fa36806 main      
+git_repo_checkout_branch "../Imath" f800038a6a148833e4abd73e8eb1cb2b65aa0d1a master    
+git_repo_checkout_branch "../JabRef-Browser-Extension" 7aaf851212c837199e10cb9cc7dd3107d8463c8c main      
+git_repo_checkout_branch "../JabRef-abbreviations" fff00f8aa657d89d70995ce85ba48bfe78f19489 master    
+git_repo_checkout_branch "../JamSpell" ab5ade201df3e52d99c3a1d38ec422cf4ded1795 master    
+git_repo_checkout_branch "../LDCF-hash" e5c1dacc8dc0d13568d908e2d38e6f37f2c8ef72 master    
+git_repo_checkout_branch "../LLhttp-parser" 926c982942eb53a13f01c1e9e6b19bd3b196e7dd main      
+git_repo_checkout_branch "../LSWMS" 044eac0cb10601a002e008c19b5dc3d2b142501f master    
+git_repo_checkout_branch "../LeptonicaDocsSite" ac9a10ed893db6c37dc339c158368bb7997a1dc9 gh-pages  
+git_repo_checkout_branch "../LightGBM" 6fa4673f69fa377477e74f986e216c5c186b5b1f master    
+git_repo_checkout_branch "../LightLDA" 0f78696f58db56aa7e41f65b0b44c47dfaf27552 master    
+git_repo_checkout_branch "../LightLDA/multiverso" 3c03cce205c3eb33ebf83b417ac0748daa9efdd1 master    
+git_repo_checkout_branch "../Lightning.NET" 4db175a9df1db628a4b7c369959478e550ec4b1a master    
+git_repo_checkout_branch "../MITIE-nlp" 42dbcd5dad55e9d5bc76580fc9582097342d9916 master    
+git_repo_checkout_branch "../MNN" cc27d4ae1385301195150c9d7ed0efb145737ca2 master    
+git_repo_checkout_branch "../MariGold.OpenXHTML" e5fc8e210dda6ce042e04eeb162f8a53de043754 master    
+git_repo_checkout_branch "../NSIS-OBSInstallerUtils" 7292d894ef16edfc6ed2dd89e7a9189c59bd6501 master    
+git_repo_checkout_branch "../NSISDotNetChecker" abbaae9a521a930b41242a029e8172bba2143eb5 master    
+git_repo_checkout_branch "../NSISFileCheck" a59a42cde584f7f7bb1612790e38db6aa158e754 master    
+git_repo_checkout_branch "../NSISMultiUser" ef3a937477ad332dfd43ff9005b2024884e18365 master    
+git_repo_checkout_branch "../NanoLog" 2a94d70f9d1db4da416053b1b926387fa068a59b master    
+git_repo_checkout_branch "../NiuTrans.NMT" f3ef9094a7c6e282e30f3057373fe154ed95acdc master    
+git_repo_checkout_branch "../OfficeIMO" e01a9cd71e356153ddebe0de83757d6839bd05e7 master    
+git_repo_checkout_branch "../Open-XML-SDK" c318b07d858fa75d9377eb7928a6c5cd4dfdc38d main      
+git_repo_checkout_branch "../OpenBLAS" 30294f7689fe9dc5ceec44066e15e58090950475 develop   
+git_repo_checkout_branch "../OpenCL-CTS" 7d235e46b41efbfc2152319455ed9038518fc1a0 main      
+git_repo_checkout_branch "../OpenCL-Headers" 8f33fba7c14b926c6551bf86b5b255e3e0f47f86 main      
+git_repo_checkout_branch "../OpenCL-SDK" 81ebd78c33680960c5a4edf9509e2107b6204534 main      
+git_repo_checkout_branch "../OpenColorIO" c7ad35340af721c6c3c4780c3a3666b8ce326ba2 main      
+git_repo_checkout_branch "../OpenEXR" 34f5447054c6d40cc85ed004f47f524d5c93fad1 master    
+git_repo_checkout_branch "../OpenFST" 0e2ebdf25ee26656570947ea72e149b5216424ac master    
+git_repo_checkout_branch "../OpenFST-utils" 62b8cf42b309873e2e9433d3329a631ff46f2547 master    
+git_repo_checkout_branch "../OptimizationTemplateLibrary" bd9c4193e6354e9974488cf98f5ddf4f01e2d1fe master    
+git_repo_checkout_branch "../PGM-index" cd48e385505e00755b4fd43bb974cc675907bab5 master    
+git_repo_checkout_branch "../PaddlePaddle" f20c512a7a8b417a077fdaeb4037e292cb867496 develop   
+git_repo_checkout_branch "../PhotonLibOS" 779751a447974e1435d290513779364509e4da0e main      
+git_repo_checkout_branch "../Pillow" e1889544cdd959c60e2526505053e81a8f43c7e4 main      
+git_repo_checkout_branch "../PlatformFolders" 784f8ceb8bbd042722caf2cdec427c7b80e0a960 master    
+git_repo_checkout_branch "../QCBOR" fbe3f5828da496eccca658bd1130daf104e321e1 master    
+git_repo_checkout_branch "../QuickJS" bb0506d8bba384d9483cab59761b12c766890388 master    
+git_repo_checkout_branch "../QuickJS-C++-Wrapper" 15779f084985f79c2af18e45d3dbf49c618a7d48 master    
+git_repo_checkout_branch "../QuickJS-C++-Wrapper2" 805089d35dbb395c213657280bb1437894b37c8e master    
+git_repo_checkout_branch "../QuickJS/test262" a76ebd15fb52e36c32e995d5c9ce573b800a3a23 master    
+git_repo_checkout_branch "../QuickJS/thirdparty/uint128_t" 31be3028a2d71a1385e43315e783e6c4e6844b45 master    
+git_repo_checkout_branch "../RE-flex" 2df6fe52dabfe59d41cffed019959e2f4f7a0749 master    
+git_repo_checkout_branch "../RuntimeCompiledCPlusPlus" 950cee4a746602b20d64b521e62cc3c65b233d23 master    
+git_repo_checkout_branch "../RxCpp" 761b932a80e2be6e2b62d232e754bd96fc448946 main      
+git_repo_checkout_branch "../SQLiteCpp" 1a36d11d4a8840ac589778ad77ff9d8f89f13798 master    
+git_repo_checkout_branch "../SQLiteHistograms" 4d316cf0466e57e40fec50bbfc753af63d330025 master    
+git_repo_checkout_branch "../ScriptX" 85609949034ef74023bfb9bac7d82b76cc1192dc main      
+git_repo_checkout_branch "../Sealighter" 654306da02552c9728b66a71545210b5d0d8d2ae main      
+git_repo_checkout_branch "../ShapeCrawler" b7d611251968d197cf966c955bd068136829d369 master    
+git_repo_checkout_branch "../Signals" 17881fb92ec314bb43549cc2cc8acfac24916f91 master    
+git_repo_checkout_branch "../SilkETW" c5368720305dab1767c95e827eb07cb0caf4c8a5 master    
+git_repo_checkout_branch "../StarSpace" 8aee0a950aa607c023e5c91cff518bec335b5df5 main      
+git_repo_checkout_branch "../SymSpell" 84c2037919508a902f575ab2022cf35289e68c0f master    
+git_repo_checkout_branch "../ThreadPool" 9a42ec1329f259a5f4881a291db1dcb8f2ad9040 master    
+git_repo_checkout_branch "../TraceETW" 60d14b82aad0066bbb097826d57fa0f86b3d5439 master    
+git_repo_checkout_branch "../UIforETW" 2f9de79d003e906eee4c465d7301abbb0f35d694 main      
+git_repo_checkout_branch "../URI-Encode-C" 21ad52e02f0cebb5e079f3d5666833cc894fa45e master    
+git_repo_checkout_branch "../URL-Detector" 368c4e4481714a7f9c271515131cbf0282759006 master    
+git_repo_checkout_branch "../UnofficialLeptDocs" 953b8a83b67a6f40f9d95b64b413062c2570e1da gh-pages  
+git_repo_checkout_branch "../VQMT" 640a3a813d0fc96e491c7d4252766c4344fb2a92 master    
+git_repo_checkout_branch "../VSNASM" 784d1cbbada545c904a69d1efd392dd9a52007de master    
+git_repo_checkout_branch "../Verify" 97ccdf8f8722d84c65507f16c2bc04660618e876 main      
+git_repo_checkout_branch "../VisualScriptEngine" f76564d795b08d413a8625edba87dff21837039f master    
+git_repo_checkout_branch "../Win32_read_directory_changes" fef1f39901d100791c0160a46f098eccb2e1475b master    
+git_repo_checkout_branch "../Win32_read_directory_changes_IOCP" 4e43c796c3bd076a90d25d936ebbb8748eca1dc7 master    
+git_repo_checkout_branch "../WinHttpPAL" 590c28949f50004911d4d22b1e328433355351f1 master    
+git_repo_checkout_branch "../Windows10EtwEvents" 8a8a66f7a4becc0cabaa1640d4e874f7a75af3da master    
+git_repo_checkout_branch "../XMP-Toolkit-SDK" af3af56d26d1276b08d6aecdc4e16bb480bc18c2 main      
+git_repo_checkout_branch "../Xoshiro-cpp" 19bcbb2ce0ed158233187f524fd0964c105a65b3 master    
+git_repo_checkout_branch "../YACLib" d05a36ebc414c9fb8d6d7586d770715dfdcc1a08 main      
+git_repo_checkout_branch "../abseil-cpp" 222376d5c1cb91e48aa0b51852e4e340edda75d2 master    
+git_repo_checkout_branch "../adaptiveqf" 6682209f5ea1ec37a17c0e1e9f99c56076331ac7 main      
+git_repo_checkout_branch "../annoy" 1bdf0d5ab8c4a1f7005b7fef2c6db2d66cfb4ab6 master    
+git_repo_checkout_branch "../arangodb" d2a1c5ae2f58475642d6aa64a8738578930235f6 devel     
+git_repo_checkout_branch "../archive-hocr-tools" 201208ff47c1005459ea5a37c2e3e8ff0765f902 master    
+git_repo_checkout_branch "../argparse" 6fe7359822e96e7e610baf657f147663177bc217 master    
+git_repo_checkout_branch "../armadillo" c5d93b33ec747146020996347445953ceed284f0 main      
+git_repo_checkout_branch "../arrayfire" 138f12e9f181b8a7bd013323137931aec0f3bd59 master    
+git_repo_checkout_branch "../asio" efe982a3a6e8a868bdf87957acba617dbb793568 master    
+git_repo_checkout_branch "../asyncplusplus" 8585fd99a852f185cab5fdaddd9249efde7ed5c3 master    
+git_repo_checkout_branch "../asynqro" 4260820ffd790d27bdf5ed336c63ac49c742d770 develop   
+git_repo_checkout_branch "../autodiff" 247620ddc19be689e7f122ec914b4b3f9e95aeb3 main      
+git_repo_checkout_branch "../b2xtranslator" 90d05a6589706cf177a245fcb74e9cba4b6264ae master    
+git_repo_checkout_branch "../basez" 8cedfbd685f1aed8c53f5cda3fbd2798e405090e master    
+git_repo_checkout_branch "../bbe" 7c6fd66afdee54f327ea28f55bc025363723f60a master    
+git_repo_checkout_branch "../bebop" 151fef965e2a56aafe1dc9b573488b5f9f44f9f8 master    
+git_repo_checkout_branch "../bebop/docs-src" cb27306412af90afc64512d46e7cd15389e4fa08 master    
+git_repo_checkout_branch "../bhtsne--Barnes-Hut-t-SNE" 692263633ce4b2db1ddb5a72100009252349d128 master    
+git_repo_checkout_branch "../bibtex-robust-decoder" 7a4dcfb304dda6718c1f2c48bc313e7eeded98e0 master    
+git_repo_checkout_branch "../bibtex-robust-decoder/R-n-D/bkn-bibtex" a48b3fe3435aca572a2d956811b1846321d32c51 master    
+git_repo_checkout_branch "../bibtex-robust-decoder/R-n-D/caltechlibrary-bibtex" 3a1dc5ab3b141148e46759d8dc2f7c753e4c31f9 main      
+git_repo_checkout_branch "../bibtex-robust-decoder/R-n-D/digitalheir-bibliography-js" f10596c0be0cf7ae9e3e67ce6141a265f0c47e67 master    
+git_repo_checkout_branch "../bibtex-robust-decoder/R-n-D/jabref" 1e34797a03be3f95cfe396c95a4fc6197d20a74d           master
+git_repo_checkout_branch "../bibtex-robust-decoder/R-n-D/orcid-bibtexParse" b55dc9e4015f9dec67921f56f8f23dadb71697ad master    
+git_repo_checkout_branch "../bibtex-robust-decoder/R-n-D/pcooksey-bibtex-js" 46dd3ce83cb793634b80882cb803b02a9974f106 master    
+git_repo_checkout_branch "../bibtex-robust-decoder/R-n-D/zekom-bibtex" 56b1da32ba1980532eafdc65248b28164f310087 master    
+git_repo_checkout_branch "../bibtex-robust-decoder/R-n-D/zotero-better-bibtex" 312d0adfff74c11c06910572b2c55bb0be0d9772           master
+git_repo_checkout_branch "../bibtool" fdeda59cf95fc94cd0dcfd5f905412f41d93815a master    
+git_repo_checkout_branch "../bibutils" 9a1f7b0b4c3e59c44ce72990f2dbb64a721e5d7c master    
+git_repo_checkout_branch "../binlog" 8a000d7e21eaee7473482ada3248953f318ab9eb main      
+git_repo_checkout_branch "../bitsery" 388c1b0f56315b45b134fdc80c9f57587fcec327 master    
+git_repo_checkout_branch "../bloom" 7309d713e0f02189e059a997bdb5e5dd3ea4a6a1 master    
+git_repo_checkout_branch "../bolt" 7aa30f85436a0745aa56030dd52d96af381a8f05 master    
+git_repo_checkout_branch "../boost" cc16d15106d9f113c74c03db1fc0f61a3f3aa23d master    
+git_repo_checkout_branch "../boost-url" 18033bed8faafcf659502393b02b2d1801e91813 develop   
+git_repo_checkout_branch "../boost/libs/accumulators" 9d9e5dae2202660f57e2dc91efb620aa001525b3 master    
+git_repo_checkout_branch "../boost/libs/algorithm" 32c5a6327cfdca5d41ce0f1d8849b811886daa2f master    
+git_repo_checkout_branch "../boost/libs/align" 5ad7df63cd792fbdb801d600b93cad1a432f0151 master    
+git_repo_checkout_branch "../boost/libs/any" a25b013d53c3af489f4f331753fecf19227ce357 master    
+git_repo_checkout_branch "../boost/libs/array" ecc47cb42c98261d6abf39fb5575c38eac6db748 master    
+git_repo_checkout_branch "../boost/libs/asio" f2fbbd824c1fafa67c1b9c7ee6e4d2649b343a46 master    
+git_repo_checkout_branch "../boost/libs/assert" 5227f10a99442da67415e9649be2b4d9df53b61e master    
+git_repo_checkout_branch "../boost/libs/assign" ababd47970e8a5fa1bebc8ccad526c4f25bd867a master    
+git_repo_checkout_branch "../boost/libs/atomic" 6ec7f682f8cd1c021702212f4d1bce1e3f5f2c74 master    
+git_repo_checkout_branch "../boost/libs/beast" 19976ff016337c3531c410e43b2567e3637ba0cf master    
+git_repo_checkout_branch "../boost/libs/bimap" e5c2657a9e2d6184622ad4ccd1373e6c60a7efca master    
+git_repo_checkout_branch "../boost/libs/bind" 55d037093bc715d3cf5682f6f84c3dc3456a3b97 master    
+git_repo_checkout_branch "../boost/libs/callable_traits" 2a56a3a2496cdb66496f844db55085dd992d5e49 master    
+git_repo_checkout_branch "../boost/libs/chrono" 8551ec1c5373621e5228a06cf0aacbb5c261560f master    
+git_repo_checkout_branch "../boost/libs/circular_buffer" a08a5b55ee82e0c2487523471379ac53a23935dc master    
+git_repo_checkout_branch "../boost/libs/compatibility" d0caac5c346f7e24b4f8ec1e55110119492b64bd master    
+git_repo_checkout_branch "../boost/libs/compute" 36350b7de849300bd3d72a05d8bf890ca405a014 master    
+git_repo_checkout_branch "../boost/libs/concept_check" 37c9bddf0bdefaaae0ca5852c1a153d9fc43f278 master    
+git_repo_checkout_branch "../boost/libs/config" e6f29394293e7e09072c405f1d6d2ea7429aa2b6 master    
+git_repo_checkout_branch "../boost/libs/container" 22357b34b7a5ad94a307fb0df69ff5a1f05f0c83 master    
+git_repo_checkout_branch "../boost/libs/container_hash" 226eb066e949adbf37b220e993d64ecefeeaae99 master    
+git_repo_checkout_branch "../boost/libs/context" d0e7afc1816f34d49a4b0a2b65c1bfae03064c9e master    
+git_repo_checkout_branch "../boost/libs/contract" eca93d24b5d3bb909ed64c12b5feb5296c5cc070 master    
+git_repo_checkout_branch "../boost/libs/conversion" 5cf5f78376c8562c168e322ba64b5a94c1f29a6c master    
+git_repo_checkout_branch "../boost/libs/convert" 1dd2ca23cb74991d420ea85b9b764f0ac76367c1 master    
+git_repo_checkout_branch "../boost/libs/core" ba6360e8edcc053c226e924af86996c79494c796 master    
+git_repo_checkout_branch "../boost/libs/coroutine" 1e1347c0b1910b9310ec1719edad8b0bf2fd03c8 master    
+git_repo_checkout_branch "../boost/libs/coroutine2" d7e1c1c4abcf8c1e90097279e485edea0b253a80 master    
+git_repo_checkout_branch "../boost/libs/crc" e3b1e56890a701ded5e66929579fb7fa62ac6bcc master    
+git_repo_checkout_branch "../boost/libs/date_time" 75be56b4c85d8e2dcbc22a1eb251d18cc942fceb master    
+git_repo_checkout_branch "../boost/libs/describe" c89e4dd3db81eb4f2867b2bc965d161f51cc316c master    
+git_repo_checkout_branch "../boost/libs/detail" b75c261492862448cdc5e1c0d5900203497122d6 master    
+git_repo_checkout_branch "../boost/libs/dll" 15574811de5ac224483bd6d586fc4f6a2e95f074 master    
+git_repo_checkout_branch "../boost/libs/dynamic_bitset" 8e20aa1462bf6dcadc338835df529a6d568431b1 master    
+git_repo_checkout_branch "../boost/libs/endian" 56bd7c23aeafe6410b73d2ca69684611eb69eec2 master    
+git_repo_checkout_branch "../boost/libs/exception" 11f102a9872f2d12f4a75bca8c5daafaded2eb97 master    
+git_repo_checkout_branch "../boost/libs/fiber" 88b8304e78dfab4baee5d6beca09938d2826061a master    
+git_repo_checkout_branch "../boost/libs/filesystem" a1fd2bcdac02383ae9943c61c7f6771263fdbd45 master    
+git_repo_checkout_branch "../boost/libs/flyweight" e9f3a0a005eca8baa377f13423107b35985d9119 master    
+git_repo_checkout_branch "../boost/libs/foreach" cc2f75ae30492b9de69b3b692f5c59afcb7dea5e master    
+git_repo_checkout_branch "../boost/libs/format" 78ef371d2d90462671b90c3af407fae07820b193 master    
+git_repo_checkout_branch "../boost/libs/function" 7ca2310b15e387258e97e4cd16887f5ee4906b28 master    
+git_repo_checkout_branch "../boost/libs/function_types" 895335874d67987ada0d8bf6ca1725e70642ed49 master    
+git_repo_checkout_branch "../boost/libs/functional" 6a573e4b8333ee63ee62ce95558c3667348db233 master    
+git_repo_checkout_branch "../boost/libs/fusion" 7d4c03fa032299f2d46149b7b3136c9fd43e4f81 master    
+git_repo_checkout_branch "../boost/libs/geometry" 600bac84313440ff9fe89a280ebbf6a8e613628f master    
+git_repo_checkout_branch "../boost/libs/gil" e2714cc5821c5cf8e759c1ff1c1b611b6464d222 master    
+git_repo_checkout_branch "../boost/libs/graph" a649be53bd90ab3365c6c0c44414c80907cfd8a1 master    
+git_repo_checkout_branch "../boost/libs/graph_parallel" 5520a5617d2763c48a06a4ff277ad76e665c7cf3 master    
+git_repo_checkout_branch "../boost/libs/hana" 944f7177e12c0546b91f58e5f80f054907225739      master     
+git_repo_checkout_branch "../boost/libs/headers" 0456900fadde4b07c84760eadea4ccc9f948fe28 master    
+git_repo_checkout_branch "../boost/libs/heap" dc2f19f8815cbe0654df61bfc5f31ad8b06fc883 master    
+git_repo_checkout_branch "../boost/libs/histogram" a29729e6682652800b06dc8aded29bbeb4acea61 master    
+git_repo_checkout_branch "../boost/libs/hof" 63ac019fca325038bfb4f56db17fbb281d2b5f49 master    
+git_repo_checkout_branch "../boost/libs/icl" 2741c3a1b7b79f7326360c26c3e1588b385c9e53 master    
+git_repo_checkout_branch "../boost/libs/integer" becbd39cc48c312f4b8ad546ae4f4557d338a921 master    
+git_repo_checkout_branch "../boost/libs/interprocess" a0c5a8ff176434c9024d4540ce092a2eebb8c5c3 master    
+git_repo_checkout_branch "../boost/libs/intrusive" 1014e97fb28ec0b512cb875579fd43c9189a3ec3 master    
+git_repo_checkout_branch "../boost/libs/io" 932dd480263d06d00bf4b40a323dc3f4ace266e2 master    
+git_repo_checkout_branch "../boost/libs/iostreams" 2d7b4b1c2e97188b4c7f8955e24e1238c76da9d8 master    
+git_repo_checkout_branch "../boost/libs/iterator" 80bb1ac9e401d0d679718e29bef2f2aaf0123fcb master    
+git_repo_checkout_branch "../boost/libs/json" 66d925116740c1063eab814be7821fc7611ac480 master    
+git_repo_checkout_branch "../boost/libs/lambda" 2cff5d9dd04f0df032d95492e2fa3eb659f7f30d master    
+git_repo_checkout_branch "../boost/libs/lambda2" 62815a69bfaf6d0fac5ace703737e7a9b4899139 master    
+git_repo_checkout_branch "../boost/libs/leaf" f2ec744ce9ca1934193b85f7094c1931177a451c master    
+git_repo_checkout_branch "../boost/libs/lexical_cast" 1ca93a8e275c88efd83b3d622547faef697e0f42 master    
+git_repo_checkout_branch "../boost/libs/local_function" 099e96bef0e5f2d513940c5987958121ca6f6e02 master    
+git_repo_checkout_branch "../boost/libs/locale" f5954004fa07be78834976e93cd01deb0b9daca4 master    
+git_repo_checkout_branch "../boost/libs/lockfree" fdd4d0632dd0904f6e9c656c45397fe8ef985bc9 master    
+git_repo_checkout_branch "../boost/libs/log" ae9bf80017b881ca7b1575093ec98cf130619492 master    
+git_repo_checkout_branch "../boost/libs/logic" 145778490c2d332c1411df6a5274a4b53ec3e091 master    
+git_repo_checkout_branch "../boost/libs/math" 1a7be5d895d266a870af7a6ed258e5bcf9838277 master    
+git_repo_checkout_branch "../boost/libs/metaparse" 0ef448c1a7ce22b5de514f9cd504c323c28f4379 master    
+git_repo_checkout_branch "../boost/libs/move" f1fbb45134065deebe95249c616a967d4b66c809 master    
+git_repo_checkout_branch "../boost/libs/mp11" 391e23ae716aec4d59f6c7272e49e1dd8c01dcdb master    
+git_repo_checkout_branch "../boost/libs/mpi" 74e740d0c12298c6ea2b969ce2e71ebcb5749479 master    
+git_repo_checkout_branch "../boost/libs/mpl" b440c45c2810acbddc917db057f2e5194da1a199 master    
+git_repo_checkout_branch "../boost/libs/msm" f932a51ef0f7a136312c7d2949fb69963cb46830 master    
+git_repo_checkout_branch "../boost/libs/multi_array" 0c5348bef71b890c4bd06eff1ee5ebda69e7b27a master    
+git_repo_checkout_branch "../boost/libs/multi_index" fab1601a4239e957c128d7d113b812dfaddc06fd master    
+git_repo_checkout_branch "../boost/libs/multiprecision" 380aae3c28c646ea2ca1b42156d83732295082d7 master    
+git_repo_checkout_branch "../boost/libs/nowide" 2f871bf75758d0daa9da748beeec61503fdb1fbc master    
+git_repo_checkout_branch "../boost/libs/numeric/conversion" 50a1eae942effb0a9b90724323ef8f2a67e7984a master    
+git_repo_checkout_branch "../boost/libs/numeric/interval" 2eda7413ac16dd4158005446438daf8a7e435dd9 master    
+git_repo_checkout_branch "../boost/libs/numeric/odeint" db8f91a51da630957d6bfa1ff87be760b0be97a6 master    
+git_repo_checkout_branch "../boost/libs/numeric/ublas" f0e55caf310d5e01c7e9f2190b2422e113ddeedb master    
+git_repo_checkout_branch "../boost/libs/optional" 6266c39b8e648786a308982a55006e74886ee67d master    
+git_repo_checkout_branch "../boost/libs/outcome" c90858a190899e94d97cee1e7541ce99446a5bb0 master    
+git_repo_checkout_branch "../boost/libs/parameter" 6538609cf5e390b6e7cbcb73173d86d18af73281 master    
+git_repo_checkout_branch "../boost/libs/parameter_python" 1f7f9ce9930119f0dda7dcd5e1ec3b5ed7c6b091 master    
+git_repo_checkout_branch "../boost/libs/pfr" 294a4976bd04829dd204aaf9e9fd30338a5d3199 master    
+git_repo_checkout_branch "../boost/libs/phoenix" faadf7577e9adeb30b3f1c31533225d95350a7bb master    
+git_repo_checkout_branch "../boost/libs/poly_collection" 0b8bfc4cff012d0f23049fc5a0009ac4abadceb4 master    
+git_repo_checkout_branch "../boost/libs/polygon" 8ba35b57c1436c4b36f7544aadd78c2b24acc7db master    
+git_repo_checkout_branch "../boost/libs/pool" 8ec1be1e82ba559744ecfa3c6ec13f71f9c175cc master    
+git_repo_checkout_branch "../boost/libs/predef" 392e4e767469e3469c9390f0d9cca16724dc3fc8 master    
+git_repo_checkout_branch "../boost/libs/preprocessor" 667e87b3392db338a919cbe0213979713aca52e3 master    
+git_repo_checkout_branch "../boost/libs/process" bfb1ebb5bd24837b6292421dba3790f5701883ba master    
+git_repo_checkout_branch "../boost/libs/program_options" 2cc355c50e8e04f33a97cf6d3cb7ac092fef9813 master    
+git_repo_checkout_branch "../boost/libs/property_map" e3a3c3655f4118fd15a02d8315f86a48db7390fd master    
+git_repo_checkout_branch "../boost/libs/property_map_parallel" a2f90e9660e4e7e012c0b54a1338d8e69fb71906 master    
+git_repo_checkout_branch "../boost/libs/property_tree" d30ff9404bd6af5cc8922a177865e566f4846b19 master    
+git_repo_checkout_branch "../boost/libs/proto" 7f924934689b940f3a72212ab0f714ec6fd6e34b master    
+git_repo_checkout_branch "../boost/libs/ptr_container" b90a92d46a6c654a841a48f664d3ed64c4a2b8b0 master    
+git_repo_checkout_branch "../boost/libs/python" 47d5bc76f69e20625214381c930a2fad5765e2b3 master    
+git_repo_checkout_branch "../boost/libs/qvm" fa272cb0b07ce85b5d8d53fb3dfade389e9cc4df master    
+git_repo_checkout_branch "../boost/libs/random" 1c8e9acf2668b9d7d47068e620253120876d9088 master    
+git_repo_checkout_branch "../boost/libs/range" 88c6199aedf8bbb5a6a8966e534f9de99943cde2 master    
+git_repo_checkout_branch "../boost/libs/ratio" 3708bcab308f54a0a4f365b09f37057b7bab7268 master    
+git_repo_checkout_branch "../boost/libs/rational" 564623136417068916495e2b24737054d607347c master    
+git_repo_checkout_branch "../boost/libs/regex" 4cbcd3078e6ae10d05124379623a1bf03fcb9350 master    
+git_repo_checkout_branch "../boost/libs/safe_numerics" 777e0be5ec763d0333a717c5e421a4f7c5e5bdc9 master    
+git_repo_checkout_branch "../boost/libs/scope_exit" 60baaae454b2da887a31cf939e22015b6263c9e4 master    
+git_repo_checkout_branch "../boost/libs/serialization" 90e3ce2fb9656f95f0fdaad3dca735aa28d86c06 master    
+git_repo_checkout_branch "../boost/libs/signals2" 9bcd76256a76a0cb89c5e0f047a8386c230e7b78 master    
+git_repo_checkout_branch "../boost/libs/smart_ptr" 13be03abf880cdb616d0597c38880f53f1b415b8 master    
+git_repo_checkout_branch "../boost/libs/sort" d12ad000fc63d9c21e299c9ef420ccf85cba8548 master    
+git_repo_checkout_branch "../boost/libs/spirit" 59515f0e56aebdf958eadab30be99cac8872e723 master    
+git_repo_checkout_branch "../boost/libs/stacktrace" dc5cd9d1f393299e5210d0acb92e97bf455e5e9a master    
+git_repo_checkout_branch "../boost/libs/statechart" 586445b824c5cf0e7e6ce4ff2df620fda5d0f0d7 master    
+git_repo_checkout_branch "../boost/libs/static_assert" ba72d3340f3dc6e773868107f35902292f84b07e master    
+git_repo_checkout_branch "../boost/libs/static_string" ac84c4f40ec38f7a7237255738e3e5259aa4a1a8 master    
+git_repo_checkout_branch "../boost/libs/stl_interfaces" df9e186bd6a755221b170786d5917ac259fb5192 master    
+git_repo_checkout_branch "../boost/libs/system" 7c042f2824bfff2fc9365336cf7bbf04b1d0c03b master    
+git_repo_checkout_branch "../boost/libs/test" ee721298d41dc429878e2d5df15eaa69a58eff14 master    
+git_repo_checkout_branch "../boost/libs/thread" d0264d6813d9668aa4803b2d9f303538a5f5eb29 master    
+git_repo_checkout_branch "../boost/libs/throw_exception" 23dd41e920ecd91237500ac6428f7d392a7a875c master    
+git_repo_checkout_branch "../boost/libs/timer" 85b2642a42e55706c98fd5227be162747547aea5 master    
+git_repo_checkout_branch "../boost/libs/tokenizer" 90106f155bd72b62aaca0d9ad826f4132030dba0 master    
+git_repo_checkout_branch "../boost/libs/tti" a09ad0a24c982096c102847411c37045865a8098 master    
+git_repo_checkout_branch "../boost/libs/tuple" b67941dd7d03536a854b96f001954792311ab515 master    
+git_repo_checkout_branch "../boost/libs/type_erasure" 729f3e739abc65d36d46df470c5bab735599d042 master    
+git_repo_checkout_branch "../boost/libs/type_index" 29ab3258a73215c67598383696c927887fc0cfeb master    
+git_repo_checkout_branch "../boost/libs/type_traits" 89f5011b4a79d91e42735670e39f72cb25c86c72 master    
+git_repo_checkout_branch "../boost/libs/typeof" 0fe3f42df7ddd67e0a42d29c091f9528d3c31923 master    
+git_repo_checkout_branch "../boost/libs/units" 45787015dd8c11653eb988260acf05c4af9d42e5 master    
+git_repo_checkout_branch "../boost/libs/unordered" 6b65c8f2308ca8162857ab359e6ac883b26e7f8e master    
+git_repo_checkout_branch "../boost/libs/utility" a95a4f6580c65be5861cf4c40dbf9ed64a344ee6 master    
+git_repo_checkout_branch "../boost/libs/uuid" 2bc0c8e71677f387afdc09bc4f8d609d2c74e80e master    
+git_repo_checkout_branch "../boost/libs/variant" 9d1e62f33cf75486fc12ab11aca9a3036623119e master    
+git_repo_checkout_branch "../boost/libs/variant2" db12c36b891f524a35924cdf7758eb81d0d676c9 master    
+git_repo_checkout_branch "../boost/libs/vmd" 34cad2c1a574d445812c7c2432d3a5a5c843b412 master    
+git_repo_checkout_branch "../boost/libs/wave" 0e0c35ed66fee538d547b0f6f809935aa9e8c956 master    
+git_repo_checkout_branch "../boost/libs/winapi" 39396bd78254053f3137510478e8f956bd2b83d4 master    
+git_repo_checkout_branch "../boost/libs/xpressive" 4679fbd23f962bfa78d44acf5fa48f6f790642c0 master    
+git_repo_checkout_branch "../boost/libs/yap" ae49bf2744586e6bd6c0cedff4500a58a4386860 master    
+git_repo_checkout_branch "../boost/more" 0d59bab432e94fc6c42035401e5c07ef3d95e64d master    
+git_repo_checkout_branch "../boost/tools/auto_index" d7fbfe23f77be21fec6330984a19496112a734f2 master    
+git_repo_checkout_branch "../boost/tools/bcp" e0b9262f6ff4778973a29b601183f3f9367e69d2 master    
+git_repo_checkout_branch "../boost/tools/boost_install" 93bd5adb2363112a3da015af356537cbe10d4bb6 master    
+git_repo_checkout_branch "../boost/tools/boostbook" 46c7732d061a33381e6593139d10fb3d032845a4 master    
+git_repo_checkout_branch "../boost/tools/boostdep" df0647fef2ed465cd08da61da67b2a7dd4104538 master    
+git_repo_checkout_branch "../boost/tools/build" 8d86b9a85407d73d6e8c631771f18c2a237d2d71 master    
+git_repo_checkout_branch "../boost/tools/check_build" 9c3fc263fc3203e566c4b632c1b124e57dafbed5 master    
+git_repo_checkout_branch "../boost/tools/cmake" 69f16e2819c4686450bdac807e3eb58346fb2ac2 master    
+git_repo_checkout_branch "../boost/tools/docca" 0ce4e198398dbb52f1de0029f4ed9b7d2bded273 master    
+git_repo_checkout_branch "../boost/tools/inspect" db423bf897bcc6aa34231e5266442b75ee2a5666 master    
+git_repo_checkout_branch "../boost/tools/litre" 564d4d8d30b7e03ac5e25d78e14d2c19fa321c83 master    
+git_repo_checkout_branch "../boost/tools/quickbook" f9f14bd3cf0b7ac263af26f55ea9b808b367c3d2 master    
+git_repo_checkout_branch "../boringssl" b3c2c756aeec1c4309447f5247f61d435274da4a master    
+git_repo_checkout_branch "../breakpad" 79326ebe9446add03e76b4422ff8036e812224d2 main      
+git_repo_checkout_branch "../brotli" 7fe3ba7dbc05363be7ea5c2153ebe8aa137fc84e master    
+git_repo_checkout_branch "../c-blosc2" dd407b2bc300145b12192a11c9e732d53704523e master    
+git_repo_checkout_branch "../caches" 6fd6d318b74ea4400fab3142fb61862d8a8252e3 master    
+git_repo_checkout_branch "../caffe" 9b891540183ddc834a02b2bd81b31afae71b2153 master    
+git_repo_checkout_branch "../cairo" c990db70a4ae5525ff69ef1c5d711d139a4e82c5 master    
+git_repo_checkout_branch "../cairo-demos" ec821ac1a0c47082c58bd7f5fae4da5afa27c496 master    
+git_repo_checkout_branch "../calibre" 23c673e8abcb7b0c0ac976e2a915bd7cee554e38 master    
+git_repo_checkout_branch "../catboost" 5911deff1e6994664875a5eb3e99e5b5a15c2d11 master    
+git_repo_checkout_branch "../cctz" 790e1abe60136288464e500a2a825b9be031a622 master    
+git_repo_checkout_branch "../ccv-nnc" dd0cb8c06abc17b4495586ac49aa690fa1719fea unstable  
+git_repo_checkout_branch "../cef-pdf" 0089a136dbff83c05751cbbba48a455d12476fe1 master    
+git_repo_checkout_branch "../cereal" a79b0bb4f5ca0e27fb7275ff873b49c67ad642c3 master    
+git_repo_checkout_branch "../ceres-solver" 2fd81de12d619f8a32769a6775dc8cb06355aa70 master    
+git_repo_checkout_branch "../citation-abbreviations" 77afacdd635d0f34dbb303a493cbc1188d68262d master    
+git_repo_checkout_branch "../citation-journals" 1f5c3926f3577bd84ba6b2547097bfc04c36507f master    
+git_repo_checkout_branch "../citation-styles" 1378ba773ac54112f8ccc2982bd729858b5cf2d4 master    
+git_repo_checkout_branch "../citeproc-js" 738d51c2a432a658a42852dbc5d01f5dbee119b8 master    
+git_repo_checkout_branch "../civetweb" c0eed910564a505374494e9f0300ff1f0c4c6869 master    
+git_repo_checkout_branch "../clBLAS" 619d976cfcd1078c72bc02af1516210ed3ac2ac0 master    
+git_repo_checkout_branch "../cld1-language-detect" e45f287b894ee9b481bf6835201fa423f7280708 master    
+git_repo_checkout_branch "../cld2-language-detect" b56fa78a2fe44ac2851bae5bf4f4693a0644da7b master    
+git_repo_checkout_branch "../cld3-language-detect" b48dc46512566f5a2d41118c8c1116c4f96dc661 master    
+git_repo_checkout_branch "../cli11" fb570bbb16e913a42c3e98e87dd33df6b73f8f3b master    
+git_repo_checkout_branch "../clipp" 02783b6782ebedbb2bebc2e6ceda738ee51c7df2 master    
+git_repo_checkout_branch "../cmph-hasher" aaf7ec067070c30860ea516ab74d5ac846eef7dc master    
+git_repo_checkout_branch "../comdb2-bdb" 50013c4c99b71c5d457e06423bcbec02d154b4d0 master    
+git_repo_checkout_branch "../compact_enc_det" 3ba472037e40a0acf6bb61b1727e99602cd71647 master    
+git_repo_checkout_branch "../completesearch" 68ec64b508dc8419e834310dced8088e103d8f7d master    
+git_repo_checkout_branch "../concurrencpp" 0356685f107b13f90fbd3d63615dfb2556f69873 master    
+git_repo_checkout_branch "../concurrentqueue" 5e3285ac7944fc68060477fb66e35fb40fc9abcd master    
+git_repo_checkout_branch "../coost" 382364f59dcf872040468ea741b7699934e9f785 master    
+git_repo_checkout_branch "../cpp-btree" c876a70384340b222c206f86ec1497bd05c5a72c master    
+git_repo_checkout_branch "../cpp-ipc" 768e58f60502efce0b9f1f8d2c31482ea99a01a9 master    
+git_repo_checkout_branch "../cpp-terminal" 7b8c17950acabdd9c830e680751d9b3efb9330fa master    
+git_repo_checkout_branch "../cpp_rest_sdk" d4bc72cdd20a6ab0f32c68fd55f72e5c525d10aa master    
+git_repo_checkout_branch "../cppflow" 99e04d7045af79ef8fe9f906cf0d9bd5559dd935 master    
+git_repo_checkout_branch "../cppjieba" 391121d5db0f31dd5ce9795d4d34812f20eeb25c master    
+git_repo_checkout_branch "../cpplocate" d5516f3cd36d7a58cf1b775f87f52153e9592233 master    
+git_repo_checkout_branch "../cpptoml" fededad7169e538ca47e11a9ee9251bc361a9a65 master    
+git_repo_checkout_branch "../cppzmq" 735028f32affec3ccca962c6595a595000b970f4 master    
+git_repo_checkout_branch "../cpuinfo" 65571f816f00d1c056b3370cd96cca873c175c38 master    
+git_repo_checkout_branch "../cpython" 5712d1fea46c44dd938494a0e38ae87a8d328b77 master    
+git_repo_checkout_branch "../cqf" 5504c7640fa9ca020b833d85666011917f7cd42e master    
+git_repo_checkout_branch "../cr" 13fd7157fa2cef10967e027446a77247016c317e master    
+git_repo_checkout_branch "../createprocess-windows" 38232411fe56dcc1adde9303bee4803f6dafaa3c master    
+git_repo_checkout_branch "../crfsuite" a2a1547727985e3aff6a35cffe073f57f0223e9d master    
+git_repo_checkout_branch "../crow" a26649c6b7735053b2785dd4e8ede4f57e19bce1 master    
+git_repo_checkout_branch "../cryptopp" 81ec3a003d88a9ffce7302a1f88d50e719807f5c master    
+git_repo_checkout_branch "../csv-parser" 2e37efb998c37c229e1c2d6fad6173b5511c584d master    
+git_repo_checkout_branch "../csync2" 83b36449abb4c2903ef3b40b46018240633989e0 master    
+git_repo_checkout_branch "../ctsa" d0c7045eabf73cf5753eee9324046e60b930af2b master    
+git_repo_checkout_branch "../cuckoo-index" cae12a1260352c7937855381295335927fb9a846 master    
+git_repo_checkout_branch "../cuckoofilter" 709eef793631b16937a5a8ef06112072cfa57efc master    
+git_repo_checkout_branch "../curl-impersonate" e987cd66462aa17dc83042c99ce9c0856a355385 main      
+git_repo_checkout_branch "../curl-www" d1b5c5cb4732d556b036c09a4914f6b17ffb0630 master    
+git_repo_checkout_branch "../cxxopts" 58daccc9457a20a2997426951b94f1ea89f5bfd4 master    
+git_repo_checkout_branch "../cxxtest" 48bf84df8a84794cbc3919281f7f95663db9217a master    
+git_repo_checkout_branch "../cxxtest_catch_2_gtest" f301f90f9806dc14b5b1c4f5c369c7202542209f main      
+git_repo_checkout_branch "../cxxtest_catch_2_gtest/3rd/Catch1" ce556fd646d7ae909c174944ba8b73c7c4504e0b devel     
+git_repo_checkout_branch "../cxxtest_catch_2_gtest/3rd/Catch2" ce556fd646d7ae909c174944ba8b73c7c4504e0b devel     
+git_repo_checkout_branch "../cxxtest_catch_2_gtest/3rd/CppUTest" a74cf2cc176fd34e67e0aee814db3ced74f2322a master    
+git_repo_checkout_branch "../cxxtest_catch_2_gtest/3rd/check" 455005dc29dc6727de7ee36fee4b49a13b39f73f master    
+git_repo_checkout_branch "../cxxtest_catch_2_gtest/3rd/cppcheck" 0fa066f27c52dda56994c30180d747d13b6bfd5c main      
+git_repo_checkout_branch "../cxxtest_catch_2_gtest/3rd/doctest" 2e2cb056bf5eb3f737182b3935275a5368da174e master    
+git_repo_checkout_branch "../date" 22ceabf205d8d678710a43154da5a06b701c5830 master    
+git_repo_checkout_branch "../datetimepp" fe76721bffd042e04e1db992d9ff069f85c855e2 master    
+git_repo_checkout_branch "../dateutils" 35041f4d9f06f94e4e408a3a12be237d4aa9ef44 master    
+git_repo_checkout_branch "../debugbreak" df620f2cba4290ff8d2485eca661a1581553033b master    
+git_repo_checkout_branch "../delegate" 64185e2d87d777ba84caad687f19a03f6745b42f master    
+git_repo_checkout_branch "../density" 67bd584bd7414d4bc1418e5b7fcf9d68e44c3f28 master    
+git_repo_checkout_branch "../densityxx" 22b2a0e7a8d3f7343352a7d402823cbb3476f44a master    
+git_repo_checkout_branch "../diffutils" dd9deb765548679e821be565229bb2e142d93573 master    
+git_repo_checkout_branch "../dirent" 4d32b6ba889c2226a67f6a2a6ffb5c5128490af1 master    
+git_repo_checkout_branch "../djvulibre" 5793d374a1e59c8d3bd9452e13a75a683b78a02f master    
+git_repo_checkout_branch "../dlfcn-win32" 962fdb098c3634b35d701a01b27f58164b24413c master    
+git_repo_checkout_branch "../dlib" ffd1f82c93d5937130599001bf9452647b357669 master    
+git_repo_checkout_branch "../docxBox" 7c7bf21edd9423f7c1519de848ebc9f018b34394 master    
+git_repo_checkout_branch "../doh" 8654bc94ddbfaeec33e3403c6424e2dec8e86c30 master    
+git_repo_checkout_branch "../doxa" 93abc17eef413e3ab73debbdcc04fb1db989743d master    
+git_repo_checkout_branch "../doxygen-awesome-css" 00a52f6c74065ffbd836cbd791ddfe8edf2836b8 main      
+git_repo_checkout_branch "../drogon" 9a63c2a875b7d64fc72ac91b175bf7741c6a826d master    
+git_repo_checkout_branch "../drogon/trantor" 586aacd084e088bbc041350a657b80b143820276           
+git_repo_checkout_branch "../dtl-diff-template-library" 62689d568be47a9a10149755afcf34555a07e70d master    
+git_repo_checkout_branch "../dtoa-benchmark" bf1fb58ade01658c908a498679e47f0b4e89aff7 master    
+git_repo_checkout_branch "../dynet" 75242fa36c75cf6cfc527085bc7d6dc48ac846e3 master    
+git_repo_checkout_branch "../easyexif" cd994a3b6009bc3c1f84062e96bd7f5ad16e85f6 master    
+git_repo_checkout_branch "../easyloggingpp" 8489989bb26c6371df103f6cbced3fbee1bc3c2f master    
+git_repo_checkout_branch "../ecal" 419d7f33edca6cf4b02c50b8e879981f4043f873 master    
+git_repo_checkout_branch "../efsw" dbe29a7e84a2f923f09c3ddb11cab1d3197bea72 master    
+git_repo_checkout_branch "../emphf-hash" a18574fa8252fd1c877fe4ffc4a39ed3751ce19d master    
+git_repo_checkout_branch "../enca" 0d567c70248c68d70c485fc0fd5df3254f445da7 master    
+git_repo_checkout_branch "../enkiTS-TaskScheduler" 9954096dc82ecdbc52e5b7bd9bd0206ad880a9d6 master    
+git_repo_checkout_branch "../ensmallen" 42cdf42e3bcf92e7695a25912e91b21e548fe66f master    
+git_repo_checkout_branch "../eventpp" 63497c60ef16bb3842812f75b97c6a48778affa1 master    
+git_repo_checkout_branch "../everything-curl" cfb2dcb16858a52276a865e542768aa58669161e master    
+git_repo_checkout_branch "../exiv2" e9290bc117be27c2e83f7903f7d71974d24c2336 main      
+git_repo_checkout_branch "../expected-lite" 7f99814d08391b3d083e71de665a56c20b6f9514 master    
+git_repo_checkout_branch "../exprtk" f46bffcd6966d38a09023fb37ba9335214c9b959 master    
+git_repo_checkout_branch "../faiss" 521e271cb84afa7e7762692ff5eee0c846865bd4 main      
+git_repo_checkout_branch "../farver-OKlab" 9bc85a6fd839dc6d2d919c772feee40740afe53d main      
+git_repo_checkout_branch "../fast-lzma2" ec7912a953e02f9562eebea0c44d5b362419486d master    
+git_repo_checkout_branch "../fastBPE" 162fccf2a5de6d6ff1002a5e545355042f1e75a0 master    
+git_repo_checkout_branch "../fastPRNG" 5ce17711a65965b3726b3f0c62c7dcbd967a7b0f master    
+git_repo_checkout_branch "../fastText" 315874c70feca151b8a8ed42d496ba3a915c16f0 fastText  
+git_repo_checkout_branch "../fast_float" 14cf1617ea0d1bbeebbe17a7ff7bc9841658ed36 main      
+git_repo_checkout_branch "../fast_pfor" 53b0b752fc678ad0851e9dc6001216469427e89a master    
+git_repo_checkout_branch "../fastapprox" 17d023550b4bc5301d1fe5a324555a04ba60e22a master    
+git_repo_checkout_branch "../fastfilter_cpp" e0434f2f96cca10c34836c51ce6aac1db9371c72 master    
+git_repo_checkout_branch "../fatal" 56097fa2b7b5f3f093e391306c0c0722ef428b6e main      
+git_repo_checkout_branch "../faup" 3a26d0a0d643f5035e1d846e6df9472569a6ef0e master    
+git_repo_checkout_branch "../fftw3" 9426cd59106ffddde1f55131c07fa9c562fa2f8e master    
+git_repo_checkout_branch "../file" cf7dbc58b60b7580e47f28c50752d58de29620c9 master    
+git_repo_checkout_branch "../filecopyex3" ef5df3b739f751e2ebf9483b4302937db92f94ce master    
+git_repo_checkout_branch "../filesystem" fd814ed827ca3ddc76f0689b9314cd8cd1e15390 master    
+git_repo_checkout_branch "../flat_hash_map" 2c4687431f978f02a3780e24b8b701d22aa32d9c master    
+git_repo_checkout_branch "../fluent-bit" 76d2d08fdd97d1b5a0ce5563595bddbf82e4e60b master    
+git_repo_checkout_branch "../fmem" b73b3d8b570c2f79df5a0b071efba392a82ddcd7 master    
+git_repo_checkout_branch "../fmemopen_windows" b57cad19f19f413e56594f145c6fe2379cf19d60 master    
+git_repo_checkout_branch "../fmt" 1d2aa61aecadd149f7c92e7177a56c6790d07ce3 master    
+git_repo_checkout_branch "../fmtlog" 913b3fc9054a9e72a81248614d14001f47d81c78 main      
+git_repo_checkout_branch "../folly" 350d393db10ccf685547bf17824f8faffe3e83d4 main      
+git_repo_checkout_branch "../fontconfig" d93bd530298fa3daa352dc4b887f3c7518f40785 main      
+git_repo_checkout_branch "../fribidi" 2c2a014bf7161d43ed9f0f23f383be176a4f9df3 master    
+git_repo_checkout_branch "../friso" c624b7089ba37889d5257d32ece16027a80b5b1d master    
+git_repo_checkout_branch "../frozen" 9a4e371e0565d731a2ba2abdf457724bba6c7589 master    
+git_repo_checkout_branch "../fswatch" ba411e0d0fabcd5cbf0881f1380482e2f5ab9f47 master    
+git_repo_checkout_branch "../g3log" b24d4a4523164aa69013d4327ca9faae484fa844 master    
+git_repo_checkout_branch "../gbenchmark" 5fbcb84d6310fd03f5d5411f1011c40a2e791b93 main      
+git_repo_checkout_branch "../gcem" e82c8b398f6ee497d82b446ff47595152de1fab8 master    
+git_repo_checkout_branch "../gdbm" 331f05ac9c58d358806fe1bcba88a01467ab0895 master    
+git_repo_checkout_branch "../getopt" 3bf2ef14e3640873962aa1daa578bffb353d79da master    
+git_repo_checkout_branch "../gettext" d4d42aee0e5d0de62278cd0ce3b651e34b533465 master    
+git_repo_checkout_branch "../gflags" 45ed5c93ceecba005e0ae60583c504a4217390ce master    
+git_repo_checkout_branch "../gibbs-lda" 2d61bb93f2569dd189fa9363ad97064e6805dabe master    
+git_repo_checkout_branch "../glib2" 7d3deded71e8286842ebda707705e7dffa2be9e7 main      
+git_repo_checkout_branch "../glob" 1bb297f1d88cc85b8080f20e7df9b8b016c2fb93 master    
+git_repo_checkout_branch "../glog" 4ce601598f7801125d204c89dedf9eb0ff967c2d master    
+git_repo_checkout_branch "../gmic" 726f896bb6de28875b1f8a8da3c5fa84d55f6c06 master    
+git_repo_checkout_branch "../gmic-community" e41b1272dccf729e1ac56a7fd02cb228fbe48af3 master    
+git_repo_checkout_branch "../google-diff-match-patch" 62f2e689f498f9c92dbc588c58750addec9b1654 master    
+git_repo_checkout_branch "../google-marl" add3f2595d73d94f42318174da4159f7fc0450eb main      
+git_repo_checkout_branch "../googletest" 8e9ae2217411465c0452482e964bb8e105e9d20e master    
+git_repo_checkout_branch "../gperf-hash" ae2fd2ce27fcea47ceaf4a558d2226bb8792f7c0 master    
+git_repo_checkout_branch "../graph-coloring" 4a4c31f15216912288e271986375df7cde7fa9c8 master    
+git_repo_checkout_branch "../graphit" 2e0149719b10484ae4caf99257fa9448bc1aa9a9 master    
+git_repo_checkout_branch "../grok-jpeg2000" 8ee58f3ca2e71dd110707c83a620dc7bf4e2c045 master    
+git_repo_checkout_branch "../groonga" 81c9a3f93503f7c80004c73dd23dd2aafa8e9109 master    
+git_repo_checkout_branch "../gtn" 568d35665fcf15e61df53524f53f7b348523e990 master    
+git_repo_checkout_branch "../guetzli" 214f2bb42abf5a577c079d00add5d6cc470620d3 master    
+git_repo_checkout_branch "../gumbo-libxml" 6b1b9836072bd9a38113421d7433c27dabb37470 master    
+git_repo_checkout_branch "../gumbo-query" 1f6df742d054c0e483681745b2cef480ae7dc27f master    
+git_repo_checkout_branch "../h5cpp" 1444cf87cc2953c473129eeb2217b483aa4ffcc1 master    
+git_repo_checkout_branch "../harbour-core" 11add62606d72099cbc9ff2dd19b0bcd9aa14d37 master    
+git_repo_checkout_branch "../hedley" 5ae0d13cfa3b5cb747d392c7fc2310a85984e59b master    
+git_repo_checkout_branch "../highway" c131137584800e4d1e473288fee346a41227d2fc master    
+git_repo_checkout_branch "../highwayhash" a422b896ce10aa14eb3e4266d4689e9945c85dd3 master    
+git_repo_checkout_branch "../hikyuu" f85b1a54ca6ed0095a710e888235e0482b087aae master    
+git_repo_checkout_branch "../hmm-scalable" 1d0f46b887fc80445561b9f1331cf387a5296d41 master    
+git_repo_checkout_branch "../hmm-stoch" 7fc7717ba7d006e5ba0b81b7e7a727c77fa0987c master    
+git_repo_checkout_branch "../hnswlib" 359b2ba87358224963986f709e593d799064ace6 master    
+git_repo_checkout_branch "../hocr-fileformat" 76ece4b836fdbba63f86dbef7228e1bd501a6e2b master    
+git_repo_checkout_branch "../hocr-spec" 278e23a1c6742093f96ed8f32a3a9297da16cf8b master    
+git_repo_checkout_branch "../hocr-tools" 7ae609d8243fcc685ee771e770df8bb04d55fa5d master    
+git_repo_checkout_branch "../honggfuzz" d9e70def49f628f066df01e473a5ab924d65184c master    
+git_repo_checkout_branch "../hopscotch-map" fc6ddc142a2ea11270275d32ccd5fea091f84a12 master    
+git_repo_checkout_branch "../horsejs" 71c19215dc03c099f6b29db611abeb9418726c5c main      
+git_repo_checkout_branch "../hsluv-c" 59539e04a6fa648935cbe57c2104041f23136c4a master    
+git_repo_checkout_branch "../html2openxml" 67991d230b715fd186047ab7571651e6b1ee556c dev       
+git_repo_checkout_branch "../htmlstreamparser" 827d216f0a78135df9506dae3a74302135f6be83 master    
+git_repo_checkout_branch "../http-parser" dab67923349c86dede3e7fa54774e130e29eb92a master    
+git_repo_checkout_branch "../hunspell" 0dd94ed1a0f0ca1b27b8033d176b37da5ff16b7e master    
+git_repo_checkout_branch "../hunspell-dictionaries" 2a5353f1617f00e606dc036cab1c37df94272ca0 main      
+git_repo_checkout_branch "../hunspell-hyphen" e447efab6f202a2493823d0a43c79fbcf328fa8c master    
+git_repo_checkout_branch "../hyperscan" 73695e419c27af7fe2a099c7aa57931cc02aea5d master    
+git_repo_checkout_branch "../hypertextcpp" 606a622c520ef6d89ec5a2c6c4b451691e5f4e45 master    
+git_repo_checkout_branch "../iODBC" e2375b64ad778af1d33694a0ec537a048006d8a0 develop   
+git_repo_checkout_branch "../iceberghashtable" d5e5f201c5c8062acdaa9baccc74a86e8b7dd8b9 main      
+git_repo_checkout_branch "../iceoryx" b80407457c322baf1724e7ea1bb680aa393de691 master    
+git_repo_checkout_branch "../id3-tagparser" 6a07d60649f62b796501c3d146940b4eb2b2fe46 master    
+git_repo_checkout_branch "../indicators" b29b242a03da13195b1e03fa6cc8fcc21e4b2a56 master    
+git_repo_checkout_branch "../infoware" 0ab5b14a0ba9f3d6d777961782d6ce3ea04ca165 main      
+git_repo_checkout_branch "../ion-c" 50ad74d086711af151c8436c264198ce51da6233 master    
+git_repo_checkout_branch "../ipa-dict" 9995d56aac498961c1c1d6167681e49ef0ae0f9e master    
+git_repo_checkout_branch "../iresearch" 47ac0c2c59f5564a34ed341dcbb24ffbbc3da3a7 master    
+git_repo_checkout_branch "../itpp" eb613a60427b26a3a592600730aff540581b2680 base      
+git_repo_checkout_branch "../ivf-hnsw" 03887288d332f841264ba6dc22739fab844d1fab master    
+git_repo_checkout_branch "../jasper" 402d096b39f4f618ad9e6ff2b4fc1b5eb260a2e4 master    
+git_repo_checkout_branch "../jbig2enc" 0b12968301c5a95043f2083aaa3bd96ec0f2e9a3 master    
+git_repo_checkout_branch "../jemalloc" 20fc7729f55c55486b68e3c6da1b931725922e5a dev       
+git_repo_checkout_branch "../jerryscript" 38ec2f5788af31aa6cca0715f77819884743da58 master    
+git_repo_checkout_branch "../jpeg-xl" 9d520c06abe9403063c7d67067382cc5b8ce7563 master    
+git_repo_checkout_branch "../jpeg-xl/testdata" f7488f72ca25423d1ae72a0f3a0b31f5c8b0b6e5 main      
+git_repo_checkout_branch "../jpeg-xl/third_party/brotli" 7fe3ba7dbc05363be7ea5c2153ebe8aa137fc84e master    
+git_repo_checkout_branch "../jpeg-xl/third_party/googletest" 8e9ae2217411465c0452482e964bb8e105e9d20e master    
+git_repo_checkout_branch "../jpeg-xl/third_party/highway" c131137584800e4d1e473288fee346a41227d2fc master    
+git_repo_checkout_branch "../jpeg-xl/third_party/lcms" de001d9d1f1a61d839f69d69d53fee045cd4c58e master    
+git_repo_checkout_branch "../jpeg-xl/third_party/libpng" e2f82f2c84ef4c7fa0d0e99cdf2a2e57961d4538 master    
+git_repo_checkout_branch "../jpeg-xl/third_party/sjpeg" 9990bdceb22612a62f1492462ef7423f48154072 master    
+git_repo_checkout_branch "../jpeg-xl/third_party/skcms" 1323db7bd0b43b2b4d90aebc0cd4ba6409f689de main      
+git_repo_checkout_branch "../jpeg-xl/third_party/zlib" faa2dff29a64661791f5808d7fc46bf16aee647e master    
+git_repo_checkout_branch "../jq" cff5336ec71b6fee396a95bb0e4bea365e0cd1e8 master    
+git_repo_checkout_branch "../json" e71f4e393efa9c94ba8c9f371b890271370ebaae master    
+git_repo_checkout_branch "../json-jansson" c9afd4927dde78ff427dd0698b14bee0fc3448de master    
+git_repo_checkout_branch "../jsoncons" 7928fcca228face5c59fe616d4f4f37596e82804 master    
+git_repo_checkout_branch "../kahypar" 14d2cac8bc8d653b31965d7653a81c7108710cc7 master    
+git_repo_checkout_branch "../kalman-cpp" c46e4edeab3a726ce1d16b7ea1e582d05fdbb950 master    
+git_repo_checkout_branch "../kfr" 1873310b8db3a0c2f0c6f86516c95cd824741002 master    
+git_repo_checkout_branch "../kgraph" 2c924aab832e63c6ae6c821c1d0466a9df0ea29e master    
+git_repo_checkout_branch "../koan" c22fccdd6f359b5e7f4889b9969486ed27f76894 main      
+git_repo_checkout_branch "../krabsETW" 394eb6c52ae26db16b4ae8b3daa556c0ac6732a1 master    
+git_repo_checkout_branch "../lapack" 7ed4fe94577255be7d25639d4e290555423de8e2 master    
+git_repo_checkout_branch "../lda" 888b80394f5053da1b8c2466106d35ff260138e4 master    
+git_repo_checkout_branch "../lda-3-variants" 63f9292feb92bd9de1e2373d31fccb9f78bc41fa master    
+git_repo_checkout_branch "../lda-Familia" 516b67e5548a94182f4a5d9b32af5757be01c016 master    
+git_repo_checkout_branch "../lda-bigartm" ffbcb3bd5ef59ce6611e8e47495671fde69d5d8f master    
+git_repo_checkout_branch "../lerc" a85da373502139650669a0f1c7ad1e82c43c3a18 master    
+git_repo_checkout_branch "../lexbor" 31e3d9d7f9032cd475d5afa788999de2d4b891dd master    
+git_repo_checkout_branch "../libCRCpp" 6da4f42ec110c22d10973f4c16927700f1b52bf1 master    
+git_repo_checkout_branch "../libCZMQ" d6b635223c4880bb10fd3e85a425a74f00c50c33 master    
+git_repo_checkout_branch "../lib_nas_lockfile" ce1a4490f4caeda6633d81421eb5d0c805b69cc7 main      
+git_repo_checkout_branch "../libaco" 99f6e80015e786d535567caf321e213314ff47fc master    
+git_repo_checkout_branch "../libalg" 7e6b44af3a7d034f2585f76e16c31fdc761018f5 main      
+git_repo_checkout_branch "../libaom" 263b55228accdbc27fb3dd8d1425e092e1115e34 master    
+git_repo_checkout_branch "../libarchive" c54771ca9f0efec6e0fb1bcf9100663ccd61129e master    
+git_repo_checkout_branch "../libassert" 3c24b80b9920ddfff783286226e40487952b6764 master    
+git_repo_checkout_branch "../libavif" a8d6d1b098f08677e5a0c587e1bfb88d552b656f main      
+git_repo_checkout_branch "../libbf" d6c84ce2a9bfe32dd026280c8b6d5c436315e202 master    
+git_repo_checkout_branch "../libbloom" 23c19a7f5cbb35d7c3d970bef13bc2bfbe3625f6 master    
+git_repo_checkout_branch "../libbloomfilters" 4c9efc1a4db7ed1ccf54cf0bd3a3641ce579206c master    
+git_repo_checkout_branch "../libcbor" 0dd2ffefcf7ae0874c6456f2358de340501abaab master    
+git_repo_checkout_branch "../libchaos" 4412a894f353c6364169697b52515078760395f3 master    
+git_repo_checkout_branch "../libchardet" 29f4ccd8882a1a7f6a725981059d2d4e5ebe67e7 uchardet  
+git_repo_checkout_branch "../libclip" 3433235c7faa86d28507558cf07ffa0d933ffd72 main      
+git_repo_checkout_branch "../libclipboard" 1a3259ebef4646afb5a95af5fb0343573f1dac62 master    
+git_repo_checkout_branch "../libcmime" ee2f1af010e48351574df96e57480765e7b5b884 master    
+git_repo_checkout_branch "../libcnl" 3ef9b0e224f135dbfed9d210fa8bdf53367b18ff main      
+git_repo_checkout_branch "../libconfig" c804dc9cc1938974201c629c5024e6c9bb24b586 master    
+git_repo_checkout_branch "../libcopp" 3a2096d0acaee77fbbacdb1bd712fadb567f6d81 v2        
+git_repo_checkout_branch "../libcppjieba" 3f1dccd748f93e4e8c4ea9190c1ff6ce9068a333 master    
+git_repo_checkout_branch "../libcpr" dc7f664f6131a8182272753ed1fd047806fe7df8 master    
+git_repo_checkout_branch "../libcpuid" b22b50c6b550e272ff158e8d9d5e6e53b284eafd master    
+git_repo_checkout_branch "../libcsp" 519a4182f9c5c1ceb39fa351ea864f0ab72c4034 master    
+git_repo_checkout_branch "../libcsv2" cc8954cd8ae7cf891e176f35d2d847c86509ab28 master    
+git_repo_checkout_branch "../libcyaml" 4e9ffb4c3411d733d703d7835336f55de20e6a67 main      
+git_repo_checkout_branch "../libde265" c96962cf6a0259f1678e9a0e1566eb9b5516093a master    
+git_repo_checkout_branch "../libdeflate" 7c3c3f39017e1f2ae7c433dc32d581762972511b master    
+git_repo_checkout_branch "../libdi-dependency-injection" a0cdfa626caf30a290509869b41c7a0edc3143ac cpp14     
+git_repo_checkout_branch "../libdiagnostics" 694e519d5a79ab17b1ae675e9d1ecd40e053243c main      
+git_repo_checkout_branch "../libdist" 5688cffc1284bff8894ba29d5270afb5116b7869 main      
+git_repo_checkout_branch "../libdivide" 3bd34388573681ce563348cdf04fe15d24770d04 master    
+git_repo_checkout_branch "../libdivsufsort" 5f60d6f026c30fb4ac296f696b3c8b0eb71bd428 master    
+git_repo_checkout_branch "../libdtm" 810d9abb5eda13a486f3fb283383981a2d7aeb66 master    
+git_repo_checkout_branch "../libeigen" 311cc0f9cc66fa49523bbcb45a9ba22363fdd65a heads/master
+git_repo_checkout_branch "../libeternaltimestamp" c385dc80df2299cb1232c71feab40fd759b898a3 main      
+git_repo_checkout_branch "../libevent" 0b79a0024fcc53a322bf63f6e2301173de7dc9de master    
+git_repo_checkout_branch "../libevt" 880a6faeb9b07cf562216f2d7fae3d8d83f78337 main      
+git_repo_checkout_branch "../libexpat" 822e895fec1087e08462f6de196ed42e72df952f master    
+git_repo_checkout_branch "../libfann" 8409b42d308bf9428b9d3e60927595e53a797bbc master    
+git_repo_checkout_branch "../libffi" f08493d249d2067c8b3207ba46693dd858f95db3 master    
+git_repo_checkout_branch "../libfolia" cf88dd3990b98329875d2e6d01530dab38afa5ef master    
+git_repo_checkout_branch "../libfort" ee9b19381d0b84146776cae4d70f40fb3517b074 develop   
+git_repo_checkout_branch "../libfyaml" db9754bd12717195d82f62d6e66e1782197d27f6 master    
+git_repo_checkout_branch "../libgateY" 6743b9c213c88773e28123344434ec6b839bc3eb master    
+git_repo_checkout_branch "../libgd" 142a33dede1bd69af08e2395955788ed07c7eb62 master    
+git_repo_checkout_branch "../libgif" 7d59e46b5d127166f46e6a9157768f52f71f3293 master    
+git_repo_checkout_branch "../libgrape-lite" 7e81adf6ea9ffb4ae4e49c5215d8230c6c166fbc master    
+git_repo_checkout_branch "../libharry" 6352a3d4d74baaf4d74f21fd79b21e680b60dc40 master    
+git_repo_checkout_branch "../libheif" be43efdf273ae9cf90e552b99f16ac43983f3d19 master    
+git_repo_checkout_branch "../libheif-alt" 84a5b0dbaa7eb72e616c0d49f54a868e3a65a0f3 master    
+git_repo_checkout_branch "../libicns" adb13ebdaf3c0cb4e828fc3da90401dbff562b49 master    
+git_repo_checkout_branch "../libiconv" 538f6aabc27eee0db3d31812997bd27bc5d64512 main      
+git_repo_checkout_branch "../libidn2" b1a260a67d84ae2e7e6c687b6370e042e2803067 master    
+git_repo_checkout_branch "../libimagequant" 662699b9a108e06fe2d68dd3c32c6d8cf45a20b3 main      
+git_repo_checkout_branch "../libinsane" 916d6501e25a37fde6ac4a324d561e692b2f0cf5 master    
+git_repo_checkout_branch "../libjpeg-turbo" a387abff0ae31c3a7c1406df5e6b61dfb150f2d3 master    
+git_repo_checkout_branch "../libjxl" 587d81655b8532f633f385e1b1a508719eb89d3c main      
+git_repo_checkout_branch "../liblinear" 70ecb8963b9390baf56892290b0d5a9e7e3d84ec master    
+git_repo_checkout_branch "../libmdbx" 66ef4081627318ab07490c0247eb0ce6dc259e8a master    
+git_repo_checkout_branch "../libmetalink" 5bcdfc0572fccc2b7bde32693f0dddb6ca040549 master    
+git_repo_checkout_branch "../libmio" c5680dc96f8ca1b2f7935edfb95d570958f51bcf master    
+git_repo_checkout_branch "../libmlpp" 0694ac3f20163a6a7bb7b4d1358374a3c840a27b main      
+git_repo_checkout_branch "../libmobi" 18566ff22cd93c6968828ca4bfc82e6b5a0bb6d9 public    
+git_repo_checkout_branch "../libngt-ann" 10c8e23024fa40d85ee68ac9e7a29b83b204624a master    
+git_repo_checkout_branch "../libnop" 35e800d81f28c632956c5a592e3cbe8085ecd430 master    
+git_repo_checkout_branch "../libocca" 2e576e69e07627a516b568079e047965a9bd8d24 main      
+git_repo_checkout_branch "../libpillowfight" 8827ba3f3d0d2131b0c75007e92b718597709cd7 master    
+git_repo_checkout_branch "../libpinyin" 087a773a22935e33f9c616756ff8f963cfe3d6db main      
+git_repo_checkout_branch "../libpmemobj-cpp" 9c8f5c78db11806eafae7dc0b9a5e228a6332804 master    
+git_repo_checkout_branch "../libpopcnt" 49c49617b6d1f3600b3ae452a91b1e1ca7ce4a82 master    
+git_repo_checkout_branch "../libprecog" 0d47887e35d88ffe0adc2906b38fc3d73a24639b master    
+git_repo_checkout_branch "../libprecog-data" 14ed319276f74bbf4794b34426b7e0089f8e970c main      
+git_repo_checkout_branch "../libprecog-manuals" 74adbbfa12c90d8a5dddff16c698b82f62d33353 main      
+git_repo_checkout_branch "../libpsl" ad6503033f42032ffabd00fad293afd0ed7ce778 master    
+git_repo_checkout_branch "../libq" 655254c52687f6568adc1e8ab05bf3427a3659d8 master    
+git_repo_checkout_branch "../libqrencode" da07c4bae43343777322c13e21a95f61c94431e6 master    
+git_repo_checkout_branch "../libraqm" a8be04b6937ddf63ad3bb5fbca56cd647eb5b1dc master    
+git_repo_checkout_branch "../librs232" 647bf0e9cb54caeca3b5ae00b4aab1fd6cb0e57e master    
+git_repo_checkout_branch "../librsync" 390c804d0b4d4ff3f556c47eb91012a7f49da492 master    
+git_repo_checkout_branch "../libscanf" de2b1b5119b2a2c77900c195865ab6247b2fea0d master    
+git_repo_checkout_branch "../libshmcache" 79d1b78a8e9eb76b60f2f7706de73f52e635142a master    
+git_repo_checkout_branch "../libsigcplusplus" 5711e2bc736d9a06fd19b838732568911baab6f1 master    
+git_repo_checkout_branch "../libsiridb" e8237f62506cd3370603cb9e2db396fccb7c128d master    
+git_repo_checkout_branch "../libsl3" d45978b53cb34e42779d11f59d2de9f978bf567b main      
+git_repo_checkout_branch "../libsmile" 1dee385f591cfa9af1db9232cf15ded45481a9bb master    
+git_repo_checkout_branch "../libsptag" 4bf88300a7ad95e55550588279d54942ba43af73 main      
+git_repo_checkout_branch "../libsql" 57a49e1c2fc032ab25d86430fce6ab7ac11e90d9 main      
+git_repo_checkout_branch "../libsqlfs" 1d206e4a062bfac2244e232e9171323454a236b2 master    
+git_repo_checkout_branch "../libstb" 8b5f1f37b5b75829fc72d38e7b5d4bcbf8a26d55 master    
+git_repo_checkout_branch "../libstemmer" bcb6ea3504cc5ddc98e4da8e91e480dd9725ae71 master    
+git_repo_checkout_branch "../libsvm" da770f07ae92d4c4d0833fb62d389d58d5b4b556 master    
+git_repo_checkout_branch "../libtextcat" eba33db61a3fca15d623ff9cd8e7681cbfecf5ea master    
+git_repo_checkout_branch "../libtuv" 3ab27fb30e843525afa98397565bc3ef5d6298cc master    
+git_repo_checkout_branch "../libucl" 97e58db41142b81c4bf603edd2fefcf39dbe8253 master    
+git_repo_checkout_branch "../libunifex" 90a54550edcc852285826779228731f1e30353bf main      
+git_repo_checkout_branch "../libusb" e2f28d1c7b28896e2e07243bd16e243d099acd74 master    
+git_repo_checkout_branch "../libuv" 75d9411e803dea5363bfdc223f1f284b8cf3dec3 v1.x      
+git_repo_checkout_branch "../libvips" 3bdf43dd0288f319fba71f0fec9f6b46ca38a14e master    
+git_repo_checkout_branch "../libvrb" 5345da79e3a26f7ba9bd3651181b0dcc3946617c alt       
+git_repo_checkout_branch "../libwarc" 61d3bc4c64c99c8c79d5e80b34f698a4b09866f0 master    
+git_repo_checkout_branch "../libwebp" f45898a6f01069eeeeb10581a67dea6601d0eeea master    
+git_repo_checkout_branch "../libwebsocketpp" b9aeec6eaf3d5610503439b4fae3581d9aff08e8 develop   
+git_repo_checkout_branch "../libwebsockets" 401d4c0f03f620ae53a18e8e0742b7d8f566016d main      
+git_repo_checkout_branch "../libwil" b22c274fdbbf1c32dc98fe1fe2bb0510d5165142 master    
+git_repo_checkout_branch "../libwildmatch" 2910a9c0f5e98c81ff067b8db3172b35972375d5 main      
+git_repo_checkout_branch "../libxml2" 04f0194873365e9bb663e87bb10f79acd6c4aa76 master    
+git_repo_checkout_branch "../libxml2/pthread-win32" a301ede8e6a285fe0891c81eaba847d1b702c313 master    
+git_repo_checkout_branch "../libxml2/zlib" a6354fcd718e76678e8be8f630bf9955d96234fe master    
+git_repo_checkout_branch "../libxslt" 56bb4768ee2937fd72a7a3c9cc8b1c1a1b57a0d6 master    
+git_repo_checkout_branch "../libyaml" 7122f1b6e46c41383da7ef39ba480196ce12cd35 master    
+git_repo_checkout_branch "../libyaml-examples" 4f3c2514fc33c9484659c8c0c5239698760b2a12 master    
+git_repo_checkout_branch "../libzip" 503b797f9f4f152244a909d4618e23b3eada210f master    
+git_repo_checkout_branch "../libzmq" ba8ff0cd2757d717ebdb41f28bc75b75b994d393 master    
+git_repo_checkout_branch "../libzopfli" e10b3309e625f3de9c3252bbc726b91482bc2c63 master    
+git_repo_checkout_branch "../ligra-graph" 8436fad9755629aaa96fd433fd75b665b53bacfb master    
+git_repo_checkout_branch "../line_detector" 9e8b20e73b09a8f042daab583271a24c78b94321 master    
+git_repo_checkout_branch "../linenoise" 9509586af67aaa60faf0a87066761ab741b98f61 master    
+git_repo_checkout_branch "../lizard" 3ea5729b2a337999772cb86998f202a718dd46fb lizard    
+git_repo_checkout_branch "../lmdb" 636faef525a80930cd93f04b9203b0642481b328 x         
+git_repo_checkout_branch "../lmdb-safe" 2e22d0cc40fb4f4126195dba47e46d0fb0f0f48b master    
+git_repo_checkout_branch "../lmdb-store" d836c8f5bb93f22a95f5a71926b6233ae2503957 master    
+git_repo_checkout_branch "../lmdb.spreads.net" dd76eba3a2a12e5c934e4bd50b614a953f69a51b main      
+git_repo_checkout_branch "../lmdbxx" 0b43ca87d8cfabba392dfe884eb1edb83874de02 master    
+git_repo_checkout_branch "../localmemcache" 236aab4ffbc2faa7963d12e578f44a090f2b3eb8 master    
+git_repo_checkout_branch "../loguru" 4adaa185883e3c04da25913579c451d3c32cfac1 master    
+git_repo_checkout_branch "../lrucache11" fb961f798bd04fdee62f4d43763916f3b3d409af master    
+git_repo_checkout_branch "../lz4" 92485c67ea891819cef6bc326a7020ff3c1c8405 dev       
+git_repo_checkout_branch "../lzbench" 609d783118ca6026aa0d1bab7e485a62b6c7e4f0 master    
+git_repo_checkout_branch "../lzham_codec" d379b1f9121e2197881c61cfc4713c78848bdfe7 master    
+git_repo_checkout_branch "../mace" 42ee056f2c4d683694bb55be7fa6262c01022e96 master    
+git_repo_checkout_branch "../magic_enum" e1a68e9dd3d2e9180b04c8aeacd4975db745e6b8 master    
+git_repo_checkout_branch "../mammut" de6ce2967d470eb72d901636421a3066ee148a11 master    
+git_repo_checkout_branch "../manticore-columnar" fb33274d9616763f4151018158a2871f51f99836 master    
+git_repo_checkout_branch "../manticore-plugins" ebeae89630eb2a94eff4c848a555dc282b48600a master    
+git_repo_checkout_branch "../manticoresearch" 54df23b78f566cf38a032a8aec0fa768b4135739 master    
+git_repo_checkout_branch "../many-stop-words" f9bfdc2c1ae970cf2b074cdc7a361aa68d7f4583 master    
+git_repo_checkout_branch "../marian" f00d0621897ecf5dc947bba186d3d5fc8434fba2 master    
+git_repo_checkout_branch "../math-atlas" 282f7f900f7834ad600ea5171b6459e21dbd87b9 master    
+git_repo_checkout_branch "../mcmc" 4bc4b3633f4305c01cd781302c1a1367e58308d9 master    
+git_repo_checkout_branch "../memory" 62a41ddcf919d7066436a2e86cd3567337458e8b main      
+git_repo_checkout_branch "../merror" b033befa0ced44a78f3d2309d423fa858f4c5a58 main      
+git_repo_checkout_branch "../mesh-allocator" 297a84804285919ff59a984be59ce40dfdb6d4b6 master    
+git_repo_checkout_branch "../messagebox-windows" 33be748fa41d01b75161c592d72815bc6ed26a7c master    
+git_repo_checkout_branch "../metalink-cli" a0fc9868cd445cb36c288414ffbffde67044f3ab master    
+git_repo_checkout_branch "../metalink-mini-downloader" 890a4a260ddc487a90e3843e368c22ecce5e6ec4 master    
+git_repo_checkout_branch "../mht-rip" 9b6d5215f4d8bd2997eb5443f9d9fc99d306ca87 master    
+git_repo_checkout_branch "../microsoft-performance-toolkit-sdk" 95cbd0903b57fa1a4d7bc98959a21c6f88895280 main      
+git_repo_checkout_branch "../midas" 149509a90a0fb35fd68f7485a0ab0e661d74644b master    
+git_repo_checkout_branch "../mimalloc" 11a61667d15978aaae35646f27d331de167e6115 dev       
+git_repo_checkout_branch "../mime-mega" c8729b6b57433047d944b58fbd129fd5f24eac23 master    
+git_repo_checkout_branch "../mimetic" 63848712a95d2cbf891b56f64d1d68784abc7a64 master    
+git_repo_checkout_branch "../minifb" 37776c0e947f55345c7777ab1925b1a751abb9ee master    
+git_repo_checkout_branch "../mipp" 00550c06dc0e67fea98b99e1c26346f4603d346a master    
+git_repo_checkout_branch "../mlpack" 367aad63a7d1c7c74b8da82714264d25874bd560 master    
+git_repo_checkout_branch "../mmc" f8b7ffb9ccdc9e159c98949f67a1acd0518efd97 master    
+git_repo_checkout_branch "../mmkv" c09632cb2f821ad725e7dc188ac1656b1ef53bb4 master    
+git_repo_checkout_branch "../monolith" 6e07fab547f5fe441a2db32cdead4d6450db96b9 master    
+git_repo_checkout_branch "../morton_filter" cb7b78846c7d779c357cdbd6be22bfdf9f0b9a70 master    
+git_repo_checkout_branch "../mozjpeg" 61e03cc6b25ea506085dce1ee93ddd1f4b6588e6 master    
+git_repo_checkout_branch "../ms_cpp_client_telemetry" 39ed8c8111895dd66b5aa2e78265a05d150ce87f main      
+git_repo_checkout_branch "../multiverso" 3c03cce205c3eb33ebf83b417ac0748daa9efdd1 master    
+git_repo_checkout_branch "../mxnet" 83dd7ed047b3d362dcdf952fb08c95ee3ac23f6c master    
+git_repo_checkout_branch "../mydumper" 250185dfc0585fa06797f7599dad5312ca068408 master    
+git_repo_checkout_branch "../mysql-connector-cpp" 987fada391411f2e8d71688812674c6203ef253f trunk     
+git_repo_checkout_branch "../n2-kNN" 20b02de8bdcf808312232dd4784c2902476063da dev       
+git_repo_checkout_branch "../nameof" bc183cd334848b52848dab7c148b8c234fd727a9 master    
+git_repo_checkout_branch "../nanodbc" 2dc94b9a86f5b6d10e16b726e9f03defcdeb4534 main      
+git_repo_checkout_branch "../nanoflann" 98bbdff4a112eaed4ddddcae09872988b284d937 master    
+git_repo_checkout_branch "../nanomsg-nng" 5385b788d28f42078b7fd342ab241e2043e158f5 master    
+git_repo_checkout_branch "../nanosvg" 54a888467aebafc6bff6e2eed905bb39c21df1d3 master    
+git_repo_checkout_branch "../nativefiledialog-extended" 6efc824070c79afd42a3a9e08da8f867d0ca2a97 master    
+git_repo_checkout_branch "../ncnn" e79cc8e29c6b47ab80e58278a5918752cf2ee34c master    
+git_repo_checkout_branch "../neutralinoJS" c908c628fc5aa1ad3f445202aad452dce342ba84 main      
+git_repo_checkout_branch "../neutralinoJS-CLI" d8dc72d91598a6165f87b353e100c37cdcf9b79d master    
+git_repo_checkout_branch "../nghttp3" 8191bc57442274dbcc9518198c77ae89876b0bdb main      
+git_repo_checkout_branch "../ngtcp2" 520afbe37ddbffc3978590d41b6db5aef0b8d63a main      
+git_repo_checkout_branch "../nmslib" e4d015a311c6f87e988a69f35aa559e77a5b8eb7 master    
+git_repo_checkout_branch "../notcurses" 7651cde99827c78ebe773f1f2c6bd311dc3ec4d4 master    
+git_repo_checkout_branch "../npoi" 29ac8b5fa4e607b8567dd48679123232687cd9fd master    
+git_repo_checkout_branch "../nsis" fdfefaaf48abc58506297c87b7227b10f4f20148 master    
+git_repo_checkout_branch "../nsis-nscurl" 9ee88babc9bc224ae78a16699196ed8878153ab1 master    
+git_repo_checkout_branch "../nsis-stdutils" a3f1b1d85c427140e0b37203549b1b6c9122a6c1 master    
+git_repo_checkout_branch "../nsis/Contrib/ExecDos" 45dad2ef12d41e84c29dfb80bad0095253169dfc           
+git_repo_checkout_branch "../nsis/Contrib/NScurl" 9ee88babc9bc224ae78a16699196ed8878153ab1           
+git_repo_checkout_branch "../nsis/Contrib/NSutils" 73524de881a997a3cf3dcefa70269fa608773a2d           
+git_repo_checkout_branch "../nsis/Contrib/NSxfer" 544198dabf0d8f6ad55e5fbe7fb97f7419130e41           
+git_repo_checkout_branch "../nsis/Contrib/ShellLink" 7e65c695e36a91ac36771e18ad006a3fcb121ba0           
+git_repo_checkout_branch "../nsis/Contrib/w7tbp" 95d306d47a2285181a895d4367edbc4d449a6e84           
+git_repo_checkout_branch "../nsis/zlib" 5752b171fd4cc96b8d1f9526ec1940199c6e9740           
+git_repo_checkout_branch "../nsync" ac5489682760393fe21bd2a8e038b528442412a7 master    
+git_repo_checkout_branch "../nuspell" c0cbfc0a65f040951c41c1e27c02fc58dd588fac master    
+git_repo_checkout_branch "../ocreval" 873a0de5796c0b9ccf07a549afdd30159a9e0b3e master    
+git_repo_checkout_branch "../ogdf" 214105da97863e1d0a066157e5cc573b65b433a9 master    
+git_repo_checkout_branch "../oidn-OpenImageDenoise" 5579cd99edfa0839f87ec6960d16dcafcfe0eb31 master    
+git_repo_checkout_branch "../oiio" 070e00c99d54ab1ddaddb7598740b00512d56527 master    
+git_repo_checkout_branch "../olena" 0753930f6d5f787bcbdffa95d822cca46736241f master    
+git_repo_checkout_branch "../omaha" 8fa5322c5c35d0cede28f4c32454cb0285490b6d main      
+git_repo_checkout_branch "../oneTBB" bc48c4a099dcccc7ee86de70bc94a48f9a6d0cba master    
+git_repo_checkout_branch "../online-hnsw" 2473b03604a91c13186b216590caabc43632b4bb master    
+git_repo_checkout_branch "../onnxruntime" 9b0db7c1edd5a330fadcd9856247e4cfe683a003 main      
+git_repo_checkout_branch "../opencv" eccf3bfa3f6e41108e4580ca41c7b3c74155fdd0 master    
+git_repo_checkout_branch "../opencv_contrib" 54db650610e69daaa041f2670ebe460250338f63 master    
+git_repo_checkout_branch "../opencv_extra" 635678b529c947e04e9b05566debeaeedeb50798 master    
+git_repo_checkout_branch "../openpbs" 79bf5a68026000a5abc151199ae659bfadac7a68 master    
+git_repo_checkout_branch "../openssl" d0ca12121271c91f0ecae31d2c0295e063698a77 vanilla   
+git_repo_checkout_branch "../openssl/gost-engine" ebf9c1fec3c58cdf7e2b56220d384ab90647f966           
+git_repo_checkout_branch "../openssl/krb5" 50b7ae4b971d2e7b9d16230de966ec5452a367c6           
+git_repo_checkout_branch "../openssl/pyca-cryptography" 4de6304884a752014cb9ad0f67453a5292dfa468           
+git_repo_checkout_branch "../openssl/wycheproof" 2196000605e45d91097147c9c71f26b72af58003           
+git_repo_checkout_branch "../opentelemetry-cpp" 722ad4e771bb36847b6ebe4230222b6536f33556 main      
+git_repo_checkout_branch "../openvino" e6341917cd6ea37930c1c7ccb86ee6d933b8f5c1 master    
+git_repo_checkout_branch "../oppat" 4350a35bfacbe488f987135914acd3a8124791c4 master    
+git_repo_checkout_branch "../optim" 248a927d6edee185f5fb6931e30051f9f1d2cf9e master    
+git_repo_checkout_branch "../osquery" acff815ee4437744d360f138a5361f800738819d master    
+git_repo_checkout_branch "../otl" 887da8501c451eceae2986db4d8b49e749156f91 master    
+git_repo_checkout_branch "../p7zip" 36f6b7422234c8c48d3eaaa80a0e8ceb1180f081 master    
+git_repo_checkout_branch "../pHash" ff7b05d812ab9d761697fa4d8dd184180e3c984f master    
+git_repo_checkout_branch "../pagerank" 5ec180f6b008abb6e96a15e43c55c79dacd5d54a master    
+git_repo_checkout_branch "../palanteer" 91de90475571ce364b769693e6abd05c91e5163c main      
+git_repo_checkout_branch "../palmtree" f4926f37814fb30c2cbdbd01ab57278987d0a906 master    
+git_repo_checkout_branch "../pango" 7217b2b29f51ef9476238ac80e927a68f53696b1 main      
+git_repo_checkout_branch "../papis-zotero" 9b735bb2ef52bbbe02fa7c5a420335bc373ad486 master    
+git_repo_checkout_branch "../parallel-hashmap" da95978939832cc4f09745be32e831fe33883299 master    
+git_repo_checkout_branch "../pcg-c-random" 1afda5718af6d16e6aaf9534398c32217b8100ad master    
+git_repo_checkout_branch "../pcg-cpp-random" 12a374480dcac3d5d93c7a705af3c22a38bd4f1f master    
+git_repo_checkout_branch "../pcm" 7b3589f84c09778c62cc8a76bd0e18096cacee63 master    
+git_repo_checkout_branch "../pcre" fb46e6c171265f40a3640378501fd967d1d2f841 master    
+git_repo_checkout_branch "../pdf2htmlEX" 150932be82ad4f1186fd4ba84fee690240a31d51 master    
+git_repo_checkout_branch "../pdfgrep" ec8212486f68d03f8d9be1677fdf1390acfda6e5 master    
+git_repo_checkout_branch "../pdfium" 9a02c9040e16d95c44e7dfec10d55c3ad0b39380 main      
+git_repo_checkout_branch "../pdiff" 3e001eab34d1334b717517ea09c475299e198ac4 master    
+git_repo_checkout_branch "../pecos" 9f9cfe4742bac256332995f36ad34520b7b81539 mainline  
+git_repo_checkout_branch "../pelikan" e7a76c92d8a6b401475ce53d3cefe964f1e7fbb6 master    
+git_repo_checkout_branch "../pevents" d6afcbc629cf806f6465238849278e530e1d56fb master    
+git_repo_checkout_branch "../phash-gpl" 1386cec19d67238536d54499613446eacc72c7ab master    
+git_repo_checkout_branch "../phf-hash" 840a06582bbccc9e5ceda434e4e12401593df7ed master    
+git_repo_checkout_branch "../photino.native" 8b95c1f3d2418d98f02f41c5115341da1895e1ed master    
+git_repo_checkout_branch "../picoc" d8cb2706d74d9753ffc4970cd5073f747510a562 master    
+git_repo_checkout_branch "../picohttpparser" f9fc8ef6daf6ae96e4c63487fc5be4ba674c5c4a master    
+git_repo_checkout_branch "../picohttpparser/picotest" d2a40939ab48f90d660816b9a774dc90a84eb3e9 master    
+git_repo_checkout_branch "../pinyin" 63c5b9fb258c056fc10807763b9ce6482eb5f842 master    
+git_repo_checkout_branch "../pipes" 56f7e335deb89236918f16e60526bbc0702f6b80 master    
+git_repo_checkout_branch "../pisa" 6ddfabc414fa14d88af544fc0f977d4b57db42a6 master    
+git_repo_checkout_branch "../pixman" 713077d0a3c310ca1955bc331d46d55d0ae4a72b master    
+git_repo_checkout_branch "../plf_nanotimer" c3598cd04e530d55e40a9e092350cd74c1408fff master    
+git_repo_checkout_branch "../pmdk" 35ca902c8870bbf7debcfa0a4c7aa1fc7b32b5a0 master    
+git_repo_checkout_branch "../pmdk-tests" eb78f6a328f9050040baee2cdb4b0e938c8b16e5 master    
+git_repo_checkout_branch "../pmemkv" f7cc6edb441668efd3c7293a72a76b6f33f31753 master    
+git_repo_checkout_branch "../pmemkv-bench" 9969c8436d1a59d4f32a5eae615825ba78880981 master    
+git_repo_checkout_branch "../pmt-png-tools" 9a85721085300a76e828c80291ac84c86f01fd82 master    
+git_repo_checkout_branch "../podofo" d0e9f5d503b0cb79516ec9bff989f3d7d625b678 master    
+git_repo_checkout_branch "../poppler" 6a19713ca8473c14905bd25d719757df5987d93b master    
+git_repo_checkout_branch "../portable-memory-mapping" 86c92756ccfeba1191dbe8e57fb4db159d1ed651 master    
+git_repo_checkout_branch "../portable-snippets" 84abba93ff3d52c87e08ba81de1cc6615a42b72e master    
+git_repo_checkout_branch "../portable_concurrency-std-future" a449a8a6bfcc6eba0853afb882ed73b47b9abe50 master    
+git_repo_checkout_branch "../preprocess-corpuses" faa0ecf5b408b3d957d05a4fd32d45147546e13d master    
+git_repo_checkout_branch "../prio_queue" 67e56a16c73edc1d791400c9a5cebf70ae256e03 master    
+git_repo_checkout_branch "../probminhash" d6d1fc50212009adffb73f982bc23a49c812fc77 master    
+git_repo_checkout_branch "../promise-cpp" 8112d1f561c45e62d644d09e791986c3d79b3938 master    
+git_repo_checkout_branch "../promise-hpp" e0219f5d5338b9b793d79b11619e7b51878c281b main      
+git_repo_checkout_branch "../protobuf" 47e05427e3341c9b18fff047e7d9f79af0dafe9b master    
+git_repo_checkout_branch "../proxygen" 0883fee9c8eb44173127d3469fe9fc221ff56a0d main      
+git_repo_checkout_branch "../prvhash" 84f1e25634371e4ea034c1105a524c7fdb931c42 master    
+git_repo_checkout_branch "../pthread-win32" a301ede8e6a285fe0891c81eaba847d1b702c313 master    
+git_repo_checkout_branch "../pthreadpool" 43edadc654d6283b4b6e45ba09a853181ae8e850 master    
+git_repo_checkout_branch "../pybind11" 9db988013ceb54ab15fb775b229ac9180fd08fbe master    
+git_repo_checkout_branch "../pyclustering" bf4f51a472622292627ec8c294eb205585e50f52 master    
+git_repo_checkout_branch "../pylene" 0918597df32c625b2349152bc25052e26acf6c7b master    
+git_repo_checkout_branch "../pytorch" fdc7dbca12a11374c156984c89a12e3202b15840 master    
+git_repo_checkout_branch "../pytorch/android/libs/fbjni" 52a14f0daa889a20d8984798b8d96eb03cebd334 main      
+git_repo_checkout_branch "../pytorch/third_party/FP16" 0a92994d729ff76a58f692d3028ca1b64b145d91 master    
+git_repo_checkout_branch "../pytorch/third_party/FXdiv" 63058eff77e11aa15bf531df5dd34395ec3017c8 master    
+git_repo_checkout_branch "../pytorch/third_party/NNPACK" 70a77f485e8b934224f3a79efd8edcd84cd377b8 master    
+git_repo_checkout_branch "../pytorch/third_party/QNNPACK" 7d2a4e9931a82adc3814275b6219a03e24e36b4c master    
+git_repo_checkout_branch "../pytorch/third_party/VulkanMemoryAllocator" 41baf866850024bb46a46df0281707d6be9b5516           
+git_repo_checkout_branch "../pytorch/third_party/XNNPACK" fcfc0e169c765df2af56d0b1f91b17fdb22118f1           
+git_repo_checkout_branch "../pytorch/third_party/benchmark" 62edc4fb00e1aeab86cc69c70eafffb17219d047 master    
+git_repo_checkout_branch "../pytorch/third_party/cpuinfo" de2fa78ebb431db98489e78603e4f77c1f6c5c57 master    
+git_repo_checkout_branch "../pytorch/third_party/cub" d75fcdf36aa575f1dd830111a62b5139bcdb4e94           
+git_repo_checkout_branch "../pytorch/third_party/cudnn_frontend" 8f488bd41229aa0a3d5f7c0168f59e4d69c618ee           
+git_repo_checkout_branch "../pytorch/third_party/cutlass" b72cbf957df8cf84a6d0ff91c190ad51a9c1d24a           
+git_repo_checkout_branch "../pytorch/third_party/eigen" 21c49e8f8e0c27d7c549891f22ac277e051dd28f           
+git_repo_checkout_branch "../pytorch/third_party/fbgemm" 80d64206c07879fd4683be66873de7cefa1a0a71 master    
+git_repo_checkout_branch "../pytorch/third_party/fbgemm/third_party/asmjit" 7e64eabca49c1a4d2cbfb06e4b9d3987bce7f7b3 master    
+git_repo_checkout_branch "../pytorch/third_party/fbgemm/third_party/cpuinfo" de2fa78ebb431db98489e78603e4f77c1f6c5c57 master    
+git_repo_checkout_branch "../pytorch/third_party/fbgemm/third_party/googletest" 0134d73a4902574269ff2e42827f7573d3df08ae master    
+git_repo_checkout_branch "../pytorch/third_party/flatbuffers" d4d355d883b31a6cacd5a28b08db7cff4ec30360           
+git_repo_checkout_branch "../pytorch/third_party/fmt" 56ad63e6f923e38071a3c320ff7f7ba62d7c7a47 master    
+git_repo_checkout_branch "../pytorch/third_party/foxi" c278588e34e535f0bb8f00df3880d26928038cad master    
+git_repo_checkout_branch "../pytorch/third_party/gemmlowp/gemmlowp" 08e4bb339e34017a0835269d4a37c4ea04d15a69 master    
+git_repo_checkout_branch "../pytorch/third_party/gloo" c22a5cfba94edf8ea4f53a174d38aa0c629d070f master    
+git_repo_checkout_branch "../pytorch/third_party/googletest" e8b323dfd62f604e8f86397063121c84677268ba master    
+git_repo_checkout_branch "../pytorch/third_party/ideep" b57539e4608e75f80dbc5c2784643d5f2f242003 master    
+git_repo_checkout_branch "../pytorch/third_party/ideep/mkl-dnn" 3ba353cbfa5a8eb3e66a9dbb43e7713a50333612 master    
+git_repo_checkout_branch "../pytorch/third_party/ios-cmake" 8abaed637d56f1337d6e1d2c4026e25c1eade724 master    
+git_repo_checkout_branch "../pytorch/third_party/ittapi" 5b8a7d7422611c3a0d799fb5fc5dd4abfae35b42           
+git_repo_checkout_branch "../pytorch/third_party/kineto" a1cccb65e5aaac97f9278499e38ee952973a2cfb main      
+git_repo_checkout_branch "../pytorch/third_party/kineto/libkineto/third_party/fmt" 130cf54cbc77abf0c8200a1206638cb70c9e26f1 master    
+git_repo_checkout_branch "../pytorch/third_party/kineto/libkineto/third_party/googletest" 0134d73a4902574269ff2e42827f7573d3df08ae master    
+git_repo_checkout_branch "../pytorch/third_party/nccl/nccl" 5d3ab08b69754cb863ab1bf6e3fb6f7612bb725b           
+git_repo_checkout_branch "../pytorch/third_party/neon2sse" 097a5ecacd527d5b5c3006e360fb9cb1c1c48a1f master    
+git_repo_checkout_branch "../pytorch/third_party/nlohmann" 87cda1d6646592ac5866dc703c8e1839046a6806           
+git_repo_checkout_branch "../pytorch/third_party/onnx" 3b27cb91d91b8b9e9e282f6939538073ef09daa5 master    
+git_repo_checkout_branch "../pytorch/third_party/onnx-tensorrt" 4e50dbca6615635c6ace6105bbff449da5a567c4 master    
+git_repo_checkout_branch "../pytorch/third_party/onnx-tensorrt/third_party/onnx" 3b27cb91d91b8b9e9e282f6939538073ef09daa5 master    
+git_repo_checkout_branch "../pytorch/third_party/onnx/third_party/benchmark" e67028c510196783b4cb8143d62f81f570fd828b master    
+git_repo_checkout_branch "../pytorch/third_party/onnx/third_party/pybind11" 6c77208561f23c255bf73e3d76674a6a9496179f master    
+git_repo_checkout_branch "../pytorch/third_party/pocketfft" 81d171a6d5562e3aaa2c73489b70f564c633ff81 master    
+git_repo_checkout_branch "../pytorch/third_party/protobuf" 98b6ead7756237cfbad9006c6032d96dbc82fae3 master    
+git_repo_checkout_branch "../pytorch/third_party/protobuf/third_party/benchmark" e67028c510196783b4cb8143d62f81f570fd828b master    
+git_repo_checkout_branch "../pytorch/third_party/protobuf/third_party/googletest" 0134d73a4902574269ff2e42827f7573d3df08ae master    
+git_repo_checkout_branch "../pytorch/third_party/psimd" 072586a71b55b7f8c584153d223e95687148a900 master    
+git_repo_checkout_branch "../pytorch/third_party/pthreadpool" 4fe0e1e183925bf8cfa6aae24237e724a96479b8 master    
+git_repo_checkout_branch "../pytorch/third_party/pybind11" 654fe92652e6dc0eec80b1877b531aaab3a3e56c           
+git_repo_checkout_branch "../pytorch/third_party/python-enum" 4cfedc426c4e2fc52e3f5c2b4297e15ed8d6b8c7 master    
+git_repo_checkout_branch "../pytorch/third_party/python-peachpy" 349e8f836142b2ed0efeb6bb99b1b715d87202e9 master    
+git_repo_checkout_branch "../pytorch/third_party/python-six" 3b7efbcca41857da03fb01f004ccc425ab82dfbf master    
+git_repo_checkout_branch "../pytorch/third_party/sleef" 85440a5e87dae36ca1b891de14bc83b441ae7c43 master    
+git_repo_checkout_branch "../pytorch/third_party/tbb" d8604942dc13dbdf2a8d9c7099bea05adeb1f427           
+git_repo_checkout_branch "../pytorch/third_party/tensorpipe" e9c261fd772e0677fb467859478bc26cf760e1dc master    
+git_repo_checkout_branch "../pytorch/third_party/tensorpipe/third_party/googletest" 0134d73a4902574269ff2e42827f7573d3df08ae master    
+git_repo_checkout_branch "../pytorch/third_party/tensorpipe/third_party/libnop" 35e800d81f28c632956c5a592e3cbe8085ecd430 master    
+git_repo_checkout_branch "../pytorch/third_party/tensorpipe/third_party/libuv" a877ca2435134ef86315326ef4ef0c16bdbabf17 master    
+git_repo_checkout_branch "../pytorch/third_party/tensorpipe/third_party/pybind11" 0e2c3e5db41b6b2af4038734c84ab855ccaaa5f0 master    
+git_repo_checkout_branch "../pytorch/third_party/zstd" 9df97af2a7efd44b84b9b9338029417f169e98ee dev       
+git_repo_checkout_branch "../pytorch_cpp_demo" 4c1d9f6941eac4286101c2cc522a90c653ba47e9 master    
+git_repo_checkout_branch "../qlever" 7652d3fab08ae3a82e366fd6c93297c0cbb684d6 master    
+git_repo_checkout_branch "../qpdf" bd01ba78732a10efcb76e53e481c3bae3d0edc63 master    
+git_repo_checkout_branch "../qs_parse" 5f1a1933a8ae3877d299b4bd758856f870f49238 master    
+git_repo_checkout_branch "../quill-logging" d987b35777fc8462bad1fabbdbba81440c27b4a0 master    
+git_repo_checkout_branch "../randen" f5c24d87c2602e28172e6ee97539a25e196d65a5 master    
+git_repo_checkout_branch "../random" a8f6fd27f8ac53e6bcd3c30053999f37d07869b0 master    
+git_repo_checkout_branch "../rapidJSON" 39067c8dc290a8b14b2ab5f64e9b1f8a96a14154 master    
+git_repo_checkout_branch "../rapidJSON/thirdparty/gtest" 8e9ae2217411465c0452482e964bb8e105e9d20e master    
+git_repo_checkout_branch "../rapidyaml" 989f727f501a002733c6fd98e56a763975b24f43 master    
+git_repo_checkout_branch "../rclone" 450c3664035007875e2ade2ab5fc37a0c8b889e5 master    
+git_repo_checkout_branch "../re2" b85e95a80a4cea431634f0daf4cdcf9838aebe91 master    
+git_repo_checkout_branch "../reckless" 1f0d8471cb3f75b785441ad4cea81b16f6ef8814 master    
+git_repo_checkout_branch "../recycle" 3502ca106363a967ed1d0b6eaa30c66c5fae8778 master    
+git_repo_checkout_branch "../refl-cpp" 27fbd7d2e6d86bc135b87beef6b5f7ce53afd4fc master    
+git_repo_checkout_branch "../replxx" 97a5401dd77e6d5d018e6d59aae64312c68dfe13 master    
+git_repo_checkout_branch "../restc-cpp" b9c2aef049dbdb3de86db68ed15bd797bd8269fc master    
+git_repo_checkout_branch "../result-cpp" a97e66bc66f140132619fd5f5cdffc30127f4220 master    
+git_repo_checkout_branch "../resumable-assert" a73ebf1e2cfe7f67c2a69f78ca15c754beca5cf0 master    
+git_repo_checkout_branch "../robin-hood-hashing" fb1483621fda28d4afb31c0097c1a4a457fdd35b master    
+git_repo_checkout_branch "../robin-map" f8e0f679d2fad8b47f6300f25ab844fd49a1f7e5 master    
+git_repo_checkout_branch "../rotate_detection" c62ba35731c78a4f82513c834230737a67bca2cd master    
+git_repo_checkout_branch "../rsync" f1e3434b59dd3dfbf4b6faf8dbc81dd068adc305 master    
+git_repo_checkout_branch "../safestringlib" ceca2c94ab5163c4e1b4c7afc47233d18ac377c6 master    
+git_repo_checkout_branch "../salieri" e6887e30229747a679600796f532e51276a49d73 master    
+git_repo_checkout_branch "../scantailor" 30d98d0d403a9a74812b60dc3ff948efcb979e0b master    
+git_repo_checkout_branch "../scintilla" b23a155f463483ef19e130b38897383e8819537c master    
+git_repo_checkout_branch "../scws-chinese-word-segmentation" 8d1482d4357f7c06df99d25004955243051d46fa master    
+git_repo_checkout_branch "../sdhash" b9eff63e4e5867e910f41fd69032bbb1c94a2a5e master    
+git_repo_checkout_branch "../sdsl-lite" c32874cb2d8524119f25f3b501526fe692df29f4 master    
+git_repo_checkout_branch "../sentence-tokenizer" 82abe7f241ff7b88ceba8744d6fb2e126e9bd023 master    
+git_repo_checkout_branch "../sentencepiece" e1bf4d1ca66f2b7bddaa34844aba7ea417c41357 master    
+git_repo_checkout_branch "../shadesmar" 9edf83ae38fac8e36d85ae2920c307e9e2b0b08a master    
+git_repo_checkout_branch "../sharedhashfile" 9834e8ebfdfc78cd97b55a56bbc2f1fbb07772d4 master    
+git_repo_checkout_branch "../shmdata" a3be8ae869d5749b5f8ebca6cd8923fa080b1da8 develop   
+git_repo_checkout_branch "../shoco" 9a21de6e620fea09e9f191f81fc2e7940e4682d7 master    
+git_repo_checkout_branch "../simd-imgproc" 8782ab8a67f6892dfa777ff020948b19c73eb3dd master    
+git_repo_checkout_branch "../simdjson" 68ba9a1b2a5fa9be0f5d8a58a97c0169cf4b5a36 master    
+git_repo_checkout_branch "../sioyek" 83f2020a98cd52bc1efc5dcbfb6b1680ea217e13 main      
+git_repo_checkout_branch "../siridb-server" f0edd48c02bc18a39c8bdfd53b9b179b8c216f86 master    
+git_repo_checkout_branch "../smhasher" 3716e9e493157a9d41f801449b0b264cc292505e master    
+git_repo_checkout_branch "../snap" e9f72d079631123003cfde648a704fd18cca334f master    
+git_repo_checkout_branch "../snappy" d7b3dedfe40bc0b39f31f9b0af636cae161575ac master    
+git_repo_checkout_branch "../snmalloc" 515fe432ee99a44b5a2fdd016d7d0c6451fbb479 main      
+git_repo_checkout_branch "../snowball" a45b428cf1489713fdeca5867cc689e5a0d60eea master    
+git_repo_checkout_branch "../sparsehash" d6ec9952fd0d56bfeaf141e0e145e876835ad0f4 master    
+git_repo_checkout_branch "../spdlog" 37786c3229e6e7c7f203aa42254c2b2d01d0694d v2.x      
+git_repo_checkout_branch "../spdlog_setup" d1b3f41e6ae340b8bd9a536e7d945f085f3d4cff master    
+git_repo_checkout_branch "../spdlog_sqlite_sink" cda24d541350e5562ebc367bd7fb763459c4fe6e master    
+git_repo_checkout_branch "../splitmerge" 8bb2e673113c2561a24c927a54e7f604b170ed77 main      
+git_repo_checkout_branch "../spookyhash" b9954b4b72fbc9424c5f59b345c51b25ad925b95 master    
+git_repo_checkout_branch "../spy-build-sysinfo" d607af30f46b23438a827e015f868fe4593f5c2f develop   
+git_repo_checkout_branch "../sqlcipher" c63faac034616e5df9cbce011f12035c1a68bb3c master    
+git_repo_checkout_branch "../sqlean" 49360149e13388744e4fed390b2e9b8b76592c72 combined  
+git_repo_checkout_branch "../sqleet" dd1aca72fc29d1981c98bb545c14f83c96263b6a master    
+git_repo_checkout_branch "../sqlite" e2c59ed960abb6766fe1b196849c3c557457dc0b master    
+git_repo_checkout_branch "../sqlite-amalgamation" 401841a073e67d242b07487bdad6991d05d622d0 master    
+git_repo_checkout_branch "../sqlite-fts5-snowball" 847fd49a6b002fd6dc8bb2d1eab9fc179e817e32 master    
+git_repo_checkout_branch "../sqlite-stats" c562a566075a31d94f4a92e901584fd58be8cefd main      
+git_repo_checkout_branch "../sqlite3-compression-encryption-vfs" 8fabfc5d775e7078c1c27eee6817d09af8423e35 master    
+git_repo_checkout_branch "../sqlite3pp" 7d814fce69ace6c45b7b2e51f9e351eb395e3903 master    
+git_repo_checkout_branch "../sqlite_fts_tokenizer_chinese_simple" e99034da9100755cc190aae742c83019f70cf671 master    
+git_repo_checkout_branch "../sqlite_wrapper" 1c45d8b7faa939c72507ee352cf3efbcb42ed555 master    
+git_repo_checkout_branch "../sqlite_zstd_vfs" 1cb3fc22606d74106fda773737c41ed1f02bc9e5 main      
+git_repo_checkout_branch "../sqliteodbc" 337e88caa0321e33b2d78ac076bb9d5066d2d6b3 master    
+git_repo_checkout_branch "../sqlpp11" 9412851408e7bc290732b56d7a5e76c6942d49d8 main      
+git_repo_checkout_branch "../squash" 7a74261a12637c6ac558194497ebed832c584d50 master    
+git_repo_checkout_branch "../ssdeep" d8705da60369a27a2b5d22da488416e8ab348d8f master    
+git_repo_checkout_branch "../ssimulacra2" 03dc87ac3d458c62f1cbe14186cc5131309427ab main      
+git_repo_checkout_branch "../stan" a3ee52eee6a294638445f2db5fed37214fae3142 develop   
+git_repo_checkout_branch "../stan-math" 771ad848fa60e7203ed8b0ca73887432a59b8fd0 develop   
+git_repo_checkout_branch "../stateline" 29ab7fbf43f3bb42bd8b1277551b37f98f8bd670 master    
+git_repo_checkout_branch "../stats" f8dcb15ae51cce7142b239805745a0de56aa509f master    
+git_repo_checkout_branch "../statsite" bf68fa2d3d107edcface16571e90ce71d3ede0f8 master    
+git_repo_checkout_branch "../stdext-path" 061d0c06cd448930f0e850a78bf1cd7d0c2a5014 master    
+git_repo_checkout_branch "../stopwords" 8395a54795d520dfcc3fa6ad308291f10a42a216 master    
+git_repo_checkout_branch "../stringi" be59953c4394f2687cf3f2ad8c4d898097db87aa master    
+git_repo_checkout_branch "../strtk" d2b446bf1f7854e8b08f5295ec6f6852cae066a2 master    
+git_repo_checkout_branch "../stx-error-handling" c138dd933e3b2e8a887d037c8c61b0973e716fa7 master    
+git_repo_checkout_branch "../subprocess" 5e03ad94bd186a39dfaeaa24e2f47444b8c8afdd echo.exe  
+git_repo_checkout_branch "../subprocess-cpp" 251e020e10bd5e32e622b576245acb595bdf08dd master    
+git_repo_checkout_branch "../subprocess_h" bb23c02e4012a4d6f12d84123f550ad55653c698 master    
+git_repo_checkout_branch "../sumatrapdf" 26633a9a6004c9ec56b07ffc8ec09ecb7cb9a987 master    
+git_repo_checkout_branch "../svg-charter" df22bd6b5e9a6a5b5d90e0426e3963c7d8762657 master    
+git_repo_checkout_branch "../svg-charter/src/tinyexpr" 3087886f351bc28d35f1642c6793ff6806dbbb93 master    
+git_repo_checkout_branch "../swig" 14202430260f393dd16c7acf6f1ecbdce79d13fa master    
+git_repo_checkout_branch "../tabulate" b35db4cce50a4b296290b0ae827305cdeb23751e master    
+git_repo_checkout_branch "../taglib" 0d45308d0e6ba8bb876909227823c4716d529533 master    
+git_repo_checkout_branch "../taolog" c42d509eb1150ac16aeb0324cdf3562bb42ce88c master    
+git_repo_checkout_branch "../taskflow" fe54288567da74f31e5d206abe32fc8b0498b225 master    
+git_repo_checkout_branch "../tcp_pubsub" 4ceafb6b55ce41149ed9473dae7e8ea37235a3cc master    
+git_repo_checkout_branch "../tcpshm" f8258162beb75e00e4278110db4dbcb2225a1c15 master    
+git_repo_checkout_branch "../tensorflow" aa8c911ef1d3d90e9257d9898f4345b1d10786d9 master    
+git_repo_checkout_branch "../tensorflow-docs" a89b900f18bb647a8a5cba40997eacbe801c0fc0 master    
+git_repo_checkout_branch "../tensorflow-io" f09257bbde4108fe37b1d56248e240e2046220f4 master    
+git_repo_checkout_branch "../tensorflow-text" c0d91f7ced83fd75592569530ab6fb5b19b6982e master    
+git_repo_checkout_branch "../termcolor" b3cb0f365f8435588df7a6b12a82b2ac5fc1fe95 master    
+git_repo_checkout_branch "../tesseract-gImgRdrGui" 1ffb0bbffe1481c5c9f8a67711948f84e0fad39e heads/master
+git_repo_checkout_branch "../tesslinesplit" 372f98333441b99efcbcfce110ad075e04fcf3a8 master    
+git_repo_checkout_branch "../textflowcpp" 12010ddc8d15538ceea20622d22977e7c5a25da5 master    
+git_repo_checkout_branch "../thread-pool" f5dbe42f40fc7ccfb5a23c599b0ba48ce49c5d5b master    
+git_repo_checkout_branch "../thread-pool-c" b2827e9960213416c5d83fb23e613a36bdbad6d3 master    
+git_repo_checkout_branch "../thread-pool-cpp" d2c239aa827bcb0a06bfad28df857da5d6ed79f7 master    
+git_repo_checkout_branch "../thrift" 3fdc63649e8eda98a23c203afa60f555a3b7d70f master    
+git_repo_checkout_branch "../thunderSVM" 349c8a66ea9d891be95152402748a56544db4e34 master    
+git_repo_checkout_branch "../thunderSVM/eigen" 36b95962756c1fce8e29b1f8bc45967f30773c00 master    
+git_repo_checkout_branch "../thunderSVM/src/test/googletest" 8e9ae2217411465c0452482e964bb8e105e9d20e master    
+git_repo_checkout_branch "../ticpp" 1cdaddc14ca6f86f9ac80eda1e40bef6c11e37b7 master    
+git_repo_checkout_branch "../tidy-html5" cc6ca0e44b68c41cc34b4fca8efa618cc7e28dda next      
+git_repo_checkout_branch "../tink" 44172068013515768e71285b097265e9461f7051 master    
+git_repo_checkout_branch "../tinn" 815225a8f11c7aff2f3d008cb19980f40dc60de6 master    
+git_repo_checkout_branch "../tiny-process-library" 7408fd0633d52126ac8b4552144ef9161d7d6116 master    
+git_repo_checkout_branch "../tinycbor" cd3cfc3bc99e4fa58b104184136bae93d7bd6d6b main      
+git_repo_checkout_branch "../tinycolormap" 67198d2b2b48ca5e97600c83b5c0f2310cfd4c03 master    
+git_repo_checkout_branch "../tinydir" 9f866c1ec09e62aa4df50d7209556ed705a4dd90 master    
+git_repo_checkout_branch "../tinyexpr" 3087886f351bc28d35f1642c6793ff6806dbbb93 master    
+git_repo_checkout_branch "../tinygettext" 2fcecb76900fac852fd4006e4d49b0744b1031e1 master    
+git_repo_checkout_branch "../tlx" 4ad43edb60c49004a67396c571c336eee5cb7d59 master    
+git_repo_checkout_branch "../tlx-btree" 4ad43edb60c49004a67396c571c336eee5cb7d59 master    
+git_repo_checkout_branch "../toml11" 22db720ad55c3470c4d036ae74be35e68c761845 master    
+git_repo_checkout_branch "../tomlpp" 341e1b1de5657b665811f3aa3b7f758ed94e7d31 master    
+git_repo_checkout_branch "../tracelogging-for-ETW" 2f57d28961b5966947ce1d11c7f1b6d43bad29ac main      
+git_repo_checkout_branch "../transwarp" 20f3955d7457b469050ba24c5849f456b950de37 master    
+git_repo_checkout_branch "../tre" 628e564e428725810188f55906b771a41e837c1e master    
+git_repo_checkout_branch "../tsf" 7540ae6207bde991bcdfd721531552d2b6e9a612 master    
+git_repo_checkout_branch "../tvision" ccb6e76f699145e030720f6ff6b590ac8f82aa9d master    
+git_repo_checkout_branch "../twain_library" 8b7b641d5c05b8d49402d050fc5f3067c6bada0e master    
+git_repo_checkout_branch "../txiki.js" c7c606770ca0bc4be0c58b063dca284f941cf3f6 master    
+git_repo_checkout_branch "../txiki.js/deps/libuv" a877ca2435134ef86315326ef4ef0c16bdbabf17 master    
+git_repo_checkout_branch "../txiki.js/deps/wasm3" 045040a97345e636b8be4f3086e6db59cdcc785f main      
+git_repo_checkout_branch "../typesense" a1d58e1dc9b5e6fd56cb63baac669360197f1af1 master    
+git_repo_checkout_branch "../uberlog" 141342bcff085fa1bd2b28331d33c20d56a40081 master    
+git_repo_checkout_branch "../uchardet" 29f4ccd8882a1a7f6a725981059d2d4e5ebe67e7 master    
+git_repo_checkout_branch "../ucto" 99d51e4b89e5acdb831b9b348bf662a7928d68dd master    
+git_repo_checkout_branch "../uctodata" 8cbf6ccd327abce50cfedea78f417b276efe7092 master    
+git_repo_checkout_branch "../ucx" 4f07170d1e57006c7a9bb3250560df8217595f64 master    
+git_repo_checkout_branch "../ugrep" 1c131c3b388242e8e48673ba77b43432b4a89bd5 master    
+git_repo_checkout_branch "../uint128_t" 31be3028a2d71a1385e43315e783e6c4e6844b45 master    
+git_repo_checkout_branch "../unicode-cldr" 59196dbbc7d9b4511ba12d962a7a8e2b4670c151 master    
+git_repo_checkout_branch "../unicode-cldr-data" 80a94b0f6c3a34d6e2dc0dca8639a54babc87f94 main      
+git_repo_checkout_branch "../unicode-icu" d8cf093d675385436266532e5fb3e3308d9680c4 master    
+git_repo_checkout_branch "../unicode-icu-data" 55248ee83fe3b394463e65dd6990341eadfb9a92 main      
+git_repo_checkout_branch "../unicode-icu-demos" de988ae3abb38316f29b66d40f1a8bcd0357f5c9 main      
+git_repo_checkout_branch "../universal-numbers" 60c79ba59ed1e786edef240fd36e8b5be8c42b85 main      
+git_repo_checkout_branch "../unixODBC" 7f986df832d375fac25727e9f4f302e659f21438 master    
+git_repo_checkout_branch "../unpaper" 489ff064dff064ef3a4217d4d3978cb802ec542b main      
+git_repo_checkout_branch "../unqlite" 9738a8131f3b9724e86269dfe3c5e004877e1990 master    
+git_repo_checkout_branch "../upscaledb" 0447c800517ff5c7bc33a6352c4d30aee1b121cb bleeding_edge
+git_repo_checkout_branch "../upskirt-markdown" 12cc5f3134c6bcc589c1080eafada104bae8d10d master    
+git_repo_checkout_branch "../upskirt-markdown/src/charter" df22bd6b5e9a6a5b5d90e0426e3963c7d8762657 master    
+git_repo_checkout_branch "../upskirt-markdown/src/charter/src/tinyexpr" 3087886f351bc28d35f1642c6793ff6806dbbb93 master    
+git_repo_checkout_branch "../url" 4ba283540db5c5fb662bcb159d6260480056ef50 master    
+git_repo_checkout_branch "../url-parser" 2d0cca2d6c54534af6e8727703e70055217ebc7d master    
+git_repo_checkout_branch "../userver" fef0dc5c9bf6d8e3f0f9294c84464edc94c20fd7 develop   
+git_repo_checkout_branch "../utfcpp" 780bd57d6341b3291a11a546bf69358277b724bc master    
+git_repo_checkout_branch "../variadic_table" 70ddeb66f000a351b36b5a8d04b0820dfeda129f master    
+git_repo_checkout_branch "../vcopy" b4318a5ddff39b19c54d895dcdebadc3429aaf7c main      
+git_repo_checkout_branch "../velocypack" ba653d401cf33330dd75613d36e027b607d110c4 main      
+git_repo_checkout_branch "../visible-url-detector" 880174fb8a731a997062d93173117ead3d9bca31 master    
+git_repo_checkout_branch "../vmem" 35c313c3fd6f9cac58e4447024268ebce011a4f8 master    
+git_repo_checkout_branch "../vmemcache" 5ab4fc371cc5ea69a32f542ee9336d3f09121857 master    
+git_repo_checkout_branch "../vtm" 3a82e9b9af59ee3fa3fa1c3de660d0da32d6911a master    
+git_repo_checkout_branch "../vxl" 088d48fa09002ed5c22265f71a8bd3b482c4ecac master    
+git_repo_checkout_branch "../waifu2x-ncnn-vulkan" 93ed2bc36e6fb7d0c42d1034f3617bc62d35f9cd master    
+git_repo_checkout_branch "../warc2text" 9fe6fc3df016eef9563bef71666ad6fdeed03cf8 master    
+git_repo_checkout_branch "../warp-ctc" bdc2b4550453e0ef2d3b5190f9c6103a84eff184 master    
+git_repo_checkout_branch "../warpLDA" c97265d9b219d43afc95fa05966c0eba075779d6 master    
+git_repo_checkout_branch "../websocket-sharp" 7042dcaa49e2cd7699bc4e5e0bc3fa0a82df0a09 master    
+git_repo_checkout_branch "../webview" 862eb96057ffa608c8bb19d181591866a33b466f master    
+git_repo_checkout_branch "../wget" 98350855440b60080dc47bcc5ebda29dfb9fcbd2 master    
+git_repo_checkout_branch "../wget2" 8489f73fda851a476c890827b3b4231588b8ddc6 master    
+git_repo_checkout_branch "../wil-Win32-Interface-Library" b22c274fdbbf1c32dc98fe1fe2bb0510d5165142 master    
+git_repo_checkout_branch "../win-iconv" 9f98392dfecadffd62572e73e9aba878e03496c4 master    
+git_repo_checkout_branch "../win32-dpi" 8d6cff1c7b160f8dc992396de6b4c0b7ec25f1b0 master    
+git_repo_checkout_branch "../winflexbison" d770c42cdedcf5a7e86f3e0e5ceb4bcb96b7d267 master    
+git_repo_checkout_branch "../word2vec" 3b1e8880915b5d04f74c739f640c3eacafb88464 master    
+git_repo_checkout_branch "../word2vec-GloVe" 79080789bf440c51a247a56a4a1d1433ac77829c master    
+git_repo_checkout_branch "../wordfreq" 79eb74e9bf74e8ee965dbb3e2de49fc273c62e03 master    
+git_repo_checkout_branch "../wordfrequency" 525f9b560de45753a5ea01069454e72e9aa541c6 master    
+git_repo_checkout_branch "../wxCharts" da8c71f80692dad35675557092fa9bc6c039e658 main      
+git_repo_checkout_branch "../wxCurl" 7d6b5d4e8a2f6caa5e62bcd81241b415ca8b940f master    
+git_repo_checkout_branch "../wxDatabase" 8152e805f2fda92805e487ad0a85deaf6f2968bd master    
+git_repo_checkout_branch "../wxExamples" 2313835aa7a9efb5b4c15bd6124e7d45b31f0885 master    
+git_repo_checkout_branch "../wxFormBuilder" 4280dbb8c462ab976e8770ad5595e478c29bd25a master    
+git_repo_checkout_branch "../wxMEdit" 0ac05dcc78987e64cf185784f5fcf3e97fe5476f master    
+git_repo_checkout_branch "../wxPDFView" 3dc424a4a10aa724a6ee6162e57f9fcecdc56a09 master    
+git_repo_checkout_branch "../wxPdfDocument" e43afe93c11f4a8481fe913d195a25ee6e8a7fe1 main      
+git_repo_checkout_branch "../wxSQLite3" ce2c206e0b035dbb95272500dedcf7bcbba9c8cb master    
+git_repo_checkout_branch "../wxVisualScriptEngine" f944d3783b00cf18db14bfb7bbef7ca556ab4b61 master    
+git_repo_checkout_branch "../wxWebViewChromium" 58408fd3cb0535846db0172e32a783ef900e301e master    
+git_repo_checkout_branch "../wxWidgets" 2bf46c7de62c4c03943730a2ab98c9ff52479141 master    
+git_repo_checkout_branch "../wxWidgets/3rdparty/catch" 5f5e4cecd1cafc85e109471356dec29e778d2160 wx        
+git_repo_checkout_branch "../wxWidgets/3rdparty/nanosvg" 54a888467aebafc6bff6e2eed905bb39c21df1d3 master    
+git_repo_checkout_branch "../wxWidgets/3rdparty/pcre" fb46e6c171265f40a3640378501fd967d1d2f841 master    
+git_repo_checkout_branch "../wxWidgets/src/expat" 822e895fec1087e08462f6de196ed42e72df952f master    
+git_repo_checkout_branch "../wxWidgets/src/jpeg" a387abff0ae31c3a7c1406df5e6b61dfb150f2d3 master    
+git_repo_checkout_branch "../wxWidgets/src/png" 102c223a63bb155d742622adfc7bb7a328bc8e34 wx        
+git_repo_checkout_branch "../wxWidgets/src/tiff" 61a613d0f8faf93c5f5c0f6ec9f186477f1a2f68           
+git_repo_checkout_branch "../wxWidgets/src/zlib" faa2dff29a64661791f5808d7fc46bf16aee647e master    
+git_repo_checkout_branch "../wyhash" ea3b25e1aef55d90f707c3a292eeb9162e2615d8 master    
+git_repo_checkout_branch "../xgboost" 6761bddb977e5dcf1105f470fc7646cb0eebe376 master    
+git_repo_checkout_branch "../xlnt" b296c1a725177db93aa78ddfdffbbd1be4017907 master    
+git_repo_checkout_branch "../xml-pugixml" 194a0bf74a9fd9000e70a45e87836e03c287291f master    
+git_repo_checkout_branch "../xnnpack" 75b69616f19067dd5ebdd5ca6c79135c24cb972e master    
+git_repo_checkout_branch "../xor-and-binary-fuse-filter" fdf9768939055fe3d402efc43642c3ad9f569f9c master    
+git_repo_checkout_branch "../xpdf" cffda4028ac6c76477039a7420dfd93060e6e7ef master    
+git_repo_checkout_branch "../xsimd" 5186173c33515769d49bae8cb8bc8469770427b8 master    
+git_repo_checkout_branch "../xsldbg" ca8d6d3ae2d84a078f4fc57eb94be31d3e55e7e2 master    
+git_repo_checkout_branch "../xtensor" 275a4efb0faaa78b3b2132ea001d9167d4382109 master    
+git_repo_checkout_branch "../xtensor-blas" 66ab0fa7cd53d0b914f89d4d451576a9240ea457 master    
+git_repo_checkout_branch "../xtensor-io" 7b9a9b7d8d9dc979bd64664f186692e3e9eb8c0f master    
+git_repo_checkout_branch "../xtl" 7812bebf3eea45d47ce707893d376bb49059913f master    
+git_repo_checkout_branch "../xxHash" 2a175f285ccd113e28de49134f38cf800c15d43f dev       
+git_repo_checkout_branch "../yaml-cpp" 7ee9b14b636204636866c76e7695b29816500ac6 master    
+git_repo_checkout_branch "../yaml-test-suite" b38606a2d7fcde13f515ff2b6ae764fc58b84129 master    
+git_repo_checkout_branch "../yara-pattern-matcher" 65feab41d4cbf4a75338561d8506fc1fa9fa6ba6 master    
+git_repo_checkout_branch "../yasl" 6ea631a3e68cd4c2eda007dd8330f3d9fbe0203c master    
+git_repo_checkout_branch "../you-token-to-me" f4bc5f8c45487b31aa0f53419714f32229ca8854 master    
+git_repo_checkout_branch "../yyjson" 5c4bb85eae7c5dec2d3b7deed84ad3f5166e79d5 master    
+git_repo_checkout_branch "../zfp-compressed-arrays" 37ac336da87bb03e1a27f3089b4b883073b7ef62 develop   
+git_repo_checkout_branch "../zotero" 6a0ecd243d4513507b85bc9bd37deb2d61a3bad7 master    
+git_repo_checkout_branch "../zotero-better-bibtex" d8875de2bfce364c628b0ebebc46d3b30c052cd8 master    
+git_repo_checkout_branch "../zotero-bib" 958d042d3e41cf708ea0a8f4d786170290eae4d2 master    
+git_repo_checkout_branch "../zotero-build" 00e854c6588f329b714250e450f4f7f663aa0222 master    
+git_repo_checkout_branch "../zotero-connectors" 9bfd7d4efb01b22a13ef52738a7fcc203e84ea40 master    
+git_repo_checkout_branch "../zotero-google-docs-integration" 304d2411d2f585f3bca987dfa8914c4eb01d105e master    
+git_repo_checkout_branch "../zotero-libreoffice-integration" 6295e41ade48707cba73165e31c60a2d847d7485 master    
+git_repo_checkout_branch "../zotero-scholar-citations" 616603679fe1f57a0cd9016e96a63d9ce4477b47 master    
+git_repo_checkout_branch "../zotero-shortdoi" e11627fec31046bdd7323ff2c64e7fdf0089c6d5 master    
+git_repo_checkout_branch "../zotero-standalone-build" 544580e8141cb69d4e07d0d10ef2eadfe7da1059 master    
+git_repo_checkout_branch "../zotero-translate" c1cc3bd89014a81725437219c2376f32e50f87f7 master    
+git_repo_checkout_branch "../zotero-translation-server" 03290315ad76a06bcb5a993047172a0f90815175 master    
+git_repo_checkout_branch "../zotero-translators" a60935d2662a611d154ab05dc710ba33b6a3db64 master    
+git_repo_checkout_branch "../zotero-web-library" ea9be406191f17d289cd84bed5d9abbcc3dc0d6e master    
 git_repo_checkout_branch "../zotero-word-for-windows-integration" c8a640788e53cdfa46e9721792b2b31e4369e6b0 master    
-git_repo_checkout_branch "../zotero-zotfile"                      ba28edd40e039e6183a7024aa0f3c518a6a322fd master    
-git_repo_checkout_branch "../zpp_bits"                            4b88b0cdce67242d44c0e203f313e40973dbdc07 main      
-git_repo_checkout_branch "../zstd"                                8e6e09c29c613271c3de8c7ebcb0c86013c1c786 dev       
-git_repo_checkout_branch "../zsv"                                 e84715b41919d843576a05508a70bbcac0da2f18 main      
-git_repo_checkout_branch "../zsync2"                              22ea8e07eafe3e315be40396faefd10418b0e919 master    
-git_repo_checkout_branch "../zxing-cpp"                           f710542a86a9c09112cf7ca5968cae046178cbdd master    
+git_repo_checkout_branch "../zotero-zotfile" 432de7f75539d6c3f45050c8c1535f9f87a0a98c master    
+git_repo_checkout_branch "../zpp_bits" 4b88b0cdce67242d44c0e203f313e40973dbdc07 main      
+git_repo_checkout_branch "../zstd" 9df97af2a7efd44b84b9b9338029417f169e98ee dev       
+git_repo_checkout_branch "../zsv" 03928197fe323b6c6f650e6d6bc3fe291c5f8de4 main      
+git_repo_checkout_branch "../zsync2" ec38186df3f536ad4feef8d5e02eeac8cd84338f master    
+git_repo_checkout_branch "../zxing-cpp" 8766956e9e9c1f6860d10a9b3273e62028681446 master    
 
 # --- all done ---
 

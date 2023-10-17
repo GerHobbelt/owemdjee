@@ -4107,3 +4107,86 @@ ignore = dirty
 	url = git@github.com:GerHobbelt/sdsl-lite.git
 
 
+[submodule "tensorstore"]
+	path = tensorstore
+	url = git@github.com:GerHobbelt/tensorstore.git
+
+
+[submodule "Sherwood"]
+	path = Sherwood
+	url = git@github.com:GerHobbelt/Sherwood.git
+
+
+[submodule "treelite"]
+	path = treelite
+	url = git@github.com:GerHobbelt/treelite.git
+
+
+[submodule "decision-tree"]
+	path = decision-tree
+	url = git@github.com:GerHobbelt/decision-tree.git
+
+
+[submodule "random-forest"]
+	path = random-forest
+	url = git@github.com:GerHobbelt/random-forest.git
+
+
+[submodule "cppdap"]
+	path = cppdap
+	url = git@github.com:GerHobbelt/cppdap.git
+
+
+[submodule "crc32c"]
+	path = crc32c
+	url = git@github.com:GerHobbelt/crc32c.git
+
+
+[submodule "farmhash"]
+	path = farmhash
+	url = git@github.com:GerHobbelt/farmhash.git
+
+
+[submodule "capture-thread"]
+	path = capture-thread
+	url = git@github.com:GerHobbelt/capture-thread.git
+
+
+[submodule "semimap"]
+	path = semimap
+	url = git@github.com:GerHobbelt/semimap.git
+
+
+[submodule "fifo_map"]
+	path = fifo_map
+	url = git@github.com:GerHobbelt/fifo_map.git
+
+
+[submodule "eytzinger"]
+	path = eytzinger
+	url = git@github.com:GerHobbelt/eytzinger.git
+
+
+[submodule "cpp-netlib"]
+	path = cpp-netlib
+	url = git@github.com:GerHobbelt/cpp-netlib.git
+
+
+[submodule "xsg"]
+	path = xsg
+	url = git@github.com:GerHobbelt/xsg.git
+[submodule "flat.hpp"]
+	path = flat.hpp
+	url = git@github.com:GerHobbelt/flat.hpp.git
+[submodule "ITK"]
+	path = ITK
+	url = git@github.com:GerHobbelt/ITK.git
+[submodule "cdc-file-transfer"]
+	path = cdc-file-transfer
+	url = git@github.com:GerHobbelt/cdc-file-transfer.git
+[submodule "yggdrasil-decision-forests"]
+	path = yggdrasil-decision-forests
+	url = git@github.com:GerHobbelt/yggdrasil-decision-forests.git
+[submodule "slot_map"]
+	path = slot_map
+	url = git@github.com:GerHobbelt/slot_map.git
