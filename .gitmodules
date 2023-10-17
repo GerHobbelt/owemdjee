@@ -4175,18 +4175,30 @@ ignore = dirty
 [submodule "xsg"]
 	path = xsg
 	url = git@github.com:GerHobbelt/xsg.git
+
+
 [submodule "flat.hpp"]
 	path = flat.hpp
 	url = git@github.com:GerHobbelt/flat.hpp.git
+
+
 [submodule "ITK"]
 	path = ITK
 	url = git@github.com:GerHobbelt/ITK.git
+
+
 [submodule "cdc-file-transfer"]
 	path = cdc-file-transfer
 	url = git@github.com:GerHobbelt/cdc-file-transfer.git
+
+
 [submodule "yggdrasil-decision-forests"]
 	path = yggdrasil-decision-forests
 	url = git@github.com:GerHobbelt/yggdrasil-decision-forests.git
+
+
 [submodule "slot_map"]
 	path = slot_map
 	url = git@github.com:GerHobbelt/slot_map.git
+
+
