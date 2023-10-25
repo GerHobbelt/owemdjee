@@ -4202,3 +4202,13 @@ ignore = dirty
 	url = git@github.com:GerHobbelt/slot_map.git
 
 ignore = dirty
+[submodule "ex-leptonica-freetype-harfbuzz"]
+	path = ex-leptonica-freetype-harfbuzz
+	url = git@github.com:GerHobbelt/ex-leptonica-freetype-harfbuzz.git
+
+ignore = dirty
+[submodule "sile-typesetter"]
+	path = sile-typesetter
+	url = git@github.com:GerHobbelt/sile.git
+
+ignore = dirty
