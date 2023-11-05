@@ -1,6 +1,1 @@
-DIR: **./ITK** -- - **ITK** [📁](./ITK) [🌐](https://github.com/GerHobbelt/ITK)
-DIR: **./cdc-file-transfer** -- - **cdc-file-transfer** [📁](./cdc-file-transfer) [🌐](https://github.com/GerHobbelt/cdc-file-transfer)
-DIR: **./flat.hpp** -- - **flat.hpp** [📁](./flat.hpp) [🌐](https://github.com/GerHobbelt/flat.hpp)
-DIR: **./slot_map** -- - **slot_map** [📁](./slot_map) [🌐](https://github.com/GerHobbelt/slot_map)
-DIR: **./xsg** -- - **xsg** [📁](./xsg) [🌐](https://github.com/GerHobbelt/xsg)
-DIR: **./yggdrasil-decision-forests** -- - **yggdrasil-decision-forests** [📁](./yggdrasil-decision-forests) [🌐](https://github.com/GerHobbelt/yggdrasil-decision-forests)
+DIR: **./netpbm** -- - **netpbm** [📁](./netpbm) [🌐](https://github.com/GerHobbelt/netpbm-mirror)

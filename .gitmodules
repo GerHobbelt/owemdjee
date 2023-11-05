@@ -4212,3 +4212,113 @@ ignore = dirty
 	url = git@github.com:GerHobbelt/sile.git
 
 ignore = dirty
+[submodule "glfw"]
+	path = glfw
+	url = git@github.com:GerHobbelt/glfw.git
+
+ignore = dirty
+[submodule "fontview"]
+	path = fontview
+	url = git@github.com:GerHobbelt/fontview.git
+
+ignore = dirty
+[submodule "vcpkg"]
+	path = vcpkg
+	url = git@github.com:GerHobbelt/vcpkg.git
+
+ignore = dirty
+[submodule "libass"]
+	path = libass
+	url = git@github.com:GerHobbelt/libass.git
+
+ignore = dirty
+[submodule "ZLMediaKit"]
+	path = ZLMediaKit
+	url = git@github.com:GerHobbelt/ZLMediaKit.git
+
+ignore = dirty
+[submodule "sqawk"]
+	path = sqawk
+	url = git@github.com:GerHobbelt/sqawk.git
+
+ignore = dirty
+[submodule "csvquote"]
+	path = csvquote
+	url = git@github.com:GerHobbelt/csvquote.git
+
+ignore = dirty
+[submodule "netpbm"]
+	path = netpbm
+	url = git@github.com:GerHobbelt/netpbm-mirror.git
+
+ignore = dirty
+[submodule "fastgron"]
+	path = fastgron
+	url = git@github.com:GerHobbelt/fastgron.git
+
+ignore = dirty
+[submodule "TelemetrySourcerer"]
+	path = TelemetrySourcerer
+	url = git@github.com:GerHobbelt/TelemetrySourcerer.git
+
+ignore = dirty
+[submodule "jtc"]
+	path = jtc
+	url = git@github.com:GerHobbelt/jtc.git
+
+ignore = dirty
+[submodule "libxo"]
+	path = libxo
+	url = git@github.com:GerHobbelt/libxo.git
+
+ignore = dirty
+[submodule "datamash"]
+	path = datamash
+	url = git@github.com:GerHobbelt/datamash.git
+
+ignore = dirty
+[submodule "libdip"]
+	path = libdip
+	url = git@github.com:GerHobbelt/diplib.git
+
+ignore = dirty
+[submodule "klib"]
+	path = klib
+	url = git@github.com:GerHobbelt/klib.git
+
+ignore = dirty
+[submodule "telegram-td"]
+	path = telegram-td
+	url = git@github.com:GerHobbelt/td.git
+
+ignore = dirty
+[submodule "cpp-httplib"]
+	path = cpp-httplib
+	url = git@github.com:GerHobbelt/cpp-httplib.git
+
+ignore = dirty
+[submodule "libcuckoo"]
+	path = libcuckoo
+	url = git@github.com:GerHobbelt/libcuckoo.git
+
+ignore = dirty
+[submodule "libics"]
+	path = libics
+	url = git@github.com:GerHobbelt/libics.git
+
+ignore = dirty
+[submodule "lnav"]
+	path = lnav
+	url = git@github.com:GerHobbelt/lnav.git
+
+ignore = dirty
+[submodule "telegram-bot-api"]
+	path = telegram-bot-api
+	url = git@github.com:GerHobbelt/telegram-bot-api.git
+
+ignore = dirty
+[submodule "RapidFuzz"]
+	path = RapidFuzz
+	url = git@github.com:GerHobbelt/RapidFuzz.git
+
+ignore = dirty
