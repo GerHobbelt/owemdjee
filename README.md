@@ -166,12 +166,12 @@ The other JavaScript engines considered are of varying size, performance and com
         * [memory mapping](#ipc-memory-mapping)
     * [IPC: JSON for protocol design](#ipc-json-for-protocol-design)
     * [IPC: CBOR for protocol design](#ipc-cbor-for-protocol-design)
-    * [~~IPC: YAML, TOML, etc. for protocol design~~](#ipc-yaml-toml-etc-for-protocol-design)
+    * [IPC: YAML, TOML, etc. for protocol design](#ipc-yaml-toml-etc-for-protocol-design)
     * [Content Hashing (cryptographic strength i.e. *"guaranteed"* collision-free)](#content-hashing-cryptographic-strength-ie-guaranteed-collision-free)
     * [Hash-like Filters & Fast Hashing for Hash Tables et al (64 bits and less, mostly)](#hash-like-filters--fast-hashing-for-hash-tables-et-al-64-bits-and-less-mostly)
     * [Intermediate Data Storage / Caching / Hierarchical Data Stores (binary hOCR; document text revisions; ...)](#intermediate-data-storage--caching--hierarchical-data-stores-binary-hocr-document-text-revisions-)
         * [RAM-/disk-based large queues and stores: B+tree, LSM-tree, ...](#ram-disk-based-large-queues-and-stores-btree-lsm-tree-)
-        * [~~HDF5 file format~~](#hdf5-file-format)
+        * [HDF5 file format](#hdf5-file-format)
     * [Data Storage / Caching / IPC: loss-less data compression](#data-storage--caching--ipc-loss-less-data-compression)
     * [File / Directory Tree Synchronization (local and remote)](#file--directory-tree-synchronization-local-and-remote)
     * [OCR: hOCR output format, other output formats? (dedicated binary?)](#ocr-hocr-output-format-other-output-formats-dedicated-binary)
@@ -395,7 +395,7 @@ Also, we are currently more interested in *fast data serialization* then RPC *pe
 
 
 
-## ~~IPC: YAML, TOML, etc. for protocol design~~
+## IPC: YAML, TOML, etc. for protocol design
 
 **Not considered**: reason: when we want the IPC protocol to be "human readable" in any form/approximation, we've decided to stick with JSON or XML (if we cannot help it -- I particularly dislike the verbosity and tag redundancy (open+close) in XML and consider it a lousy design choice for *any* purpose).
 
@@ -522,7 +522,7 @@ These hashes are for other purposes, e.g. fast lookup in dictionaries, fast appr
 
 
 
-### ~~HDF5 file format~~
+### HDF5 file format
 
 - **h5cpp** [📁](./h5cpp) [🌐](https://github.com/GerHobbelt/h5cpp) -- easy to use HDF5 C++ templates for Serial and Paralel HDF5. Hierarchical Data Format HDF5 is prevalent in high performance scientific computing, sits directly on top of sequential or parallel file systems, providing block and stream operations on standardized or custom binary/text objects. Scientific computing platforms come with the necessary libraries to read write HDF5 dataset. H5CPP simplifies interactions with popular linear algebra libraries, provides compiler assisted seamless object persistence, Standard Template Library support and comes equipped with a novel error handling architecture.
   
