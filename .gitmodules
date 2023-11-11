@@ -4322,3 +4322,43 @@ ignore = dirty
 	url = git@github.com:GerHobbelt/RapidFuzz.git
 
 ignore = dirty
+[submodule "Bi-Sent2Vec"]
+	path = Bi-Sent2Vec
+	url = git@github.com:GerHobbelt/Bi-Sent2Vec.git
+
+ignore = dirty
+[submodule "sent2vec"]
+	path = sent2vec
+	url = git@github.com:GerHobbelt/sent2vec.git
+
+ignore = dirty
+[submodule "edit-distance"]
+	path = edit-distance
+	url = git@github.com:GerHobbelt/editdistance.git
+
+ignore = dirty
+[submodule "Clipper2"]
+	path = Clipper2
+	url = git@github.com:GerHobbelt/Clipper2.git
+
+ignore = dirty
+[submodule "gmt"]
+	path = gmt
+	url = git@github.com:GerHobbelt/gmt.git
+
+ignore = dirty
+[submodule "psd_sdk"]
+	path = psd_sdk
+	url = git@github.com:GerHobbelt/psd_sdk.git
+
+ignore = dirty
+[submodule "libpsd"]
+	path = libpsd
+	url = git@github.com:GerHobbelt/libpsd.git
+
+ignore = dirty
+[submodule "tmap"]
+	path = tmap
+	url = git@github.com:GerHobbelt/tmap.git
+
+ignore = dirty
