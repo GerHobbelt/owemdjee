@@ -268,7 +268,8 @@ txt = txt.replace(mod_re, (m, p1, p2, p3, pos) => {
 		}
 	}
 	return m;
-});
+})
+.replace(/ -- +/g, ' -- ')                // hotfix
 
 if (undoc.length > 0) {
 	console.log("Updating the UNDOC.TXT list...");
