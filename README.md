@@ -3632,9 +3632,6 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **stats** [📁](./stats) [🌐](https://github.com/GerHobbelt/stats) -- StatsLib is a templated C++ library of statistical distribution functions, featuring unique compile-time computing capabilities and seamless integration with several popular linear algebra libraries. Features a header-only library of probability density functions, cumulative distribution functions, quantile functions, and random sampling methods. Functions are written in C++11 `constexpr` format, enabling the library to operate as both a compile-time and run-time computation engine. Provides functions to compute the cdf, pdf, quantile, as well as random sampling methods, are available for the following distributions: Bernoulli, Beta, Binomial, Cauchy, Chi-squared, Exponential, F, Gamma, Inverse-Gamma, Inverse-Gaussian, Laplace, Logistic, Log-Normal, Normal (Gaussian), Poisson, Rademacher, Student's t, Uniform and Weibull. In addition, pdf and random sampling functions are available for several multivariate distributions: inverse-Wishart, Multivariate Normal and Wishart.
 - **statsite** [📁](./statsite) [🌐](https://github.com/GerHobbelt/statsite) -- a metrics aggregation server. Statsite is based heavily on Etsy's StatsD <https://github.com/etsy/statsd>, and is wire compatible.
 - **stdext-path** [📁](./stdext-path) [🌐](https://github.com/GerHobbelt/stdext-path) -- path manipulations (`dirname` et al)
-  
-- **taolog** [📁](./taolog) [🌐](https://github.com/GerHobbelt/taolog) -- A Win32 logger based on DebugView & ETW.
-
 - **stopwords** [📁](./stopwords) [🌐](https://github.com/GerHobbelt/stopwords) -- default English stop words from different sources.
 - **stringi** [📁](./stringi) [🌐](https://github.com/GerHobbelt/stringi) -- fast and portable character string processing in R (with the Unicode ICU).
 - **strtk** [📁](./strtk) [🌐](https://github.com/GerHobbelt/strtk) -- the C++ String Toolkit Library (StrTk) consists of robust, optimized and portable string processing algorithms for the C++ language. StrTk is designed to be easy to use and integrate within existing code bases. Furthermore the library has a rich set of features  that makes light work of any kind of string processing task.
@@ -3871,6 +3868,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **zxing-cpp** [📁](./zxing-cpp) [🌐](https://github.com/GerHobbelt/zxing-cpp) -- ZXing-C++ ("zebra crossing") is a multi-format linear/matrix (1D/2D) barcode image processing library implemented in C++. Supported formats include: UPC-A, UPC-E, EAN-8, EAN-13, Code 39, Code 128, QR Code, PDF417, DataMatrix, CodaBar, DataBar, ITF.
 - https://github.com/alxvasilev/cpp-promise -- Javascript-like C++ promise library
 - https://github.com/arun11299/cpp-subprocess -- as close as possible to Python2.7 `subprocess` module in dealing with processes.
+- https://github.com/fxsjy/jieba -- a Chinese text tokenizer (done in Python)
 - https://github.com/pnappa/subprocesscpp -- A header-only library that allows you to execute processes either synchronously or asynchronously, whilst providing input and output handling. No more calling `exec` in C++!
 - https://github.com/rajatjain1997/subprocess -- A C++ high level library for running shell processes
 - https://github.com/rhashimoto/poolqueue -- C++ Asynchronous Promises, inspired by Promises/A+.
@@ -3884,7 +3882,6 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
   
   - **tentative/pending**; reason: considered nice & cool but still *overkill*. Qiqqa tooling can use [Apache Tika](https://tika.apache.org/), [ImageMagick](https://imagemagick.org/) or other thirdparty pipelines to convert to & from supported formats.
 
-- https://github.com/fxsjy/jieba -- a Chinese text tokenizer (done in Python)
 - ~~**circlehash** [📁](./circlehash) [🌐](https://github.com/GerHobbelt/circlehash) -- a family of non-cryptographic hash functions that pass every test in SMHasher.~~
   
   - **removed**; reason: written in Go; port to C/C++ is easy but just too much effort for too little gain; when we're looking for *fast* non-cryptographic hashes like this, we don't it to include 128-bit / 64-bit multiplications as those are generally slower than shift, add, xor. While this will surely be a nice hash, it doesn't fit our purposes.
@@ -4040,20 +4037,61 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 
 # TBD: Libraries which still need to be moved into the overview / categories above...
 
+- **Bi-Sent2Vec** [📁](./Bi-Sent2Vec) [🌐](https://github.com/GerHobbelt/Bi-Sent2Vec) -- provides cross-lingual numerical representations (features) for words, short texts, or sentences, which can be used as input to any machine learning task with applications geared towards cross-lingual word translation, cross-lingual sentence retrieval as well as cross-lingual downstream NLP tasks. The library is a cross-lingual extension of [Sent2Vec](https://github.com/epfml/sent2vec). Bi-Sent2Vec vectors are also well suited to monolingual tasks as indicated by a marked improvement in the monolingual quality of the word embeddings. (For more details, see [paper](https://arxiv.org/abs/1912.12481))
+- **Clipper2** [📁](./Clipper2) [🌐](https://github.com/GerHobbelt/Clipper2) -- a Polygon <a href="https://en.wikipedia.org/wiki/Clipping_(computer_graphics)">Clipping</a> and <a href="https://en.wikipedia.org/wiki/Parallel_curve">Offsetting</a> library.
+- **RapidFuzz** [📁](./RapidFuzz) [🌐](https://github.com/GerHobbelt/RapidFuzz) -- rapid fuzzy string matching in Python and C++ using the Levenshtein Distance.
+- **TelemetrySourcerer** [📁](./TelemetrySourcerer) [🌐](https://github.com/GerHobbelt/TelemetrySourcerer) -- Telemetry Sourcerer can enumerate and disable common sources of telemetry used by AV/EDR on Windows. Red teamers and security enthusiasts can use this tool in a lab environment for various purposes, including ETW event monitoring.
+- **ZLMediaKit** [📁](./ZLMediaKit) [🌐](https://github.com/GerHobbelt/ZLMediaKit) -- a high-performance operational-level streaming media service framework based on C++11, supporting multiple protocols (RTSP/RTMP/HLS/HTTP-FLV/WebSocket-FLV/GB28181/HTTP-TS/WebSocket-TS/HTTP-fMP4/WebSocket-fMP4/MP4/WebRTC) and protocol conversion.
+- **cpp-httplib** [📁](./cpp-httplib) [🌐](https://github.com/GerHobbelt/cpp-httplib) -- an extremely easy to setup C++11 cross platform HTTP/HTTPS library. 
+  
+  **NOTE**: This library uses 'blocking' socket I/O. If you are looking for a library with 'non-blocking' socket I/O, this is not the one that you want.
+  
 
+- **csvquote** [📁](./csvquote) [🌐](https://github.com/GerHobbelt/csvquote) -- smart and simple CSV processing on the command line. This program can be used at the start and end of a text processing pipeline so that regular unix command line tools can properly handle CSV data that contain commas and newlines inside quoted data fields. Without this program, embedded special characters would be incorrectly interpreted as separators when they are inside quoted data fields.
+- **datamash** [📁](./datamash) [🌐](https://github.com/GerHobbelt/datamash) -- GNU Datamash is a command-line program which performs basic numeric, textual and statistical operations on input textual data files. It is designed to be portable and reliable, and aid researchers to easily automate analysis pipelines, without writing code or even short scripts.
+- **edit-distance** [📁](./edit-distance) [🌐](https://github.com/GerHobbelt/editdistance) -- a fast implementation of the edit distance (Levenshtein distance). The algorithm used in this library is proposed by _Heikki Hyyrö, "Explaining and extending the bit-parallel approximate string matching algorithm of Myers", (2001) <http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.19.7158&rep=rep1&type=pdf>_.
+- **ex-leptonica-freetype-harfbuzz** [📁](./ex-leptonica-freetype-harfbuzz) [🌐](https://github.com/GerHobbelt/ex-leptonica-freetype-harfbuzz) -- a simple sample application to get from zero to rendering unicode text using harfbuzz to do the text layout, freetype for the underlying font magic and some trivial code for the anti-aliased font rasterization.
+- **fastgron** [📁](./fastgron) [🌐](https://github.com/GerHobbelt/fastgron) -- `fastgron` makes JSON greppable super fast! `fastgron` transforms JSON into discrete assignments to make it easier to grep for what you want and see the absolute 'path' to it. It eases the exploration of APIs that return large blobs of JSON but lack documentation.
+- **fontview** [📁](./fontview) [🌐](https://github.com/GerHobbelt/fontview) -- “FontView” is a little demo app that shows the contents of a font file. It opens `*.ttf`, `*.otf`, `*.ttc`, `*.otc`, `*.pfa`, and `*.pfb` files. To render text, FontView uses the open-source libraries [FreeType](https://www.freetype.org/), [HarfBuzz](https://www.freedesktop.org/wiki/Software/HarfBuzz/), and [Raqm](http://host-oman.github.io/libraqm/).
+- **glfw** [📁](./glfw) [🌐](https://github.com/GerHobbelt/glfw) -- GLFW is an Open Source, multi-platform library for OpenGL, OpenGL ES and Vulkan application development.  It provides a simple, platform-independent API for creating windows, contexts and surfaces, reading input, handling events, etc.
+- **gmt** [📁](./gmt) [🌐](https://github.com/GerHobbelt/gmt) -- GMT (Generic Mapping Tools) is an open source collection of about 100 command-line tools for manipulating geographic and Cartesian data sets (including filtering, trend fitting, gridding, projecting, etc.) and producing high-quality illustrations ranging from simple x-y plots via contour maps to artificially illuminated surfaces, 3D perspective views and animations. The GMT supplements add another 50 more specialized and discipline-specific tools. GMT supports over 30 map projections and transformations and requires support data such as [GSHHG](http://www.soest.hawaii.edu/pwessel/gshhg/) coastlines, rivers, and political boundaries and optionally [DCW](http://www.soest.hawaii.edu/pwessel/dcw) country polygons.
+- **jtc** [📁](./jtc) [🌐](https://github.com/GerHobbelt/jtc) -- `jtc` stand for: **_JSON transformational chains_** (used to be _JSON test console_) and is a cli tool to extract, manipulate and transform source JSON, offering powerful ways to select one or multiple elements from a source JSON and apply various actions on the selected elements at once (wrap selected elements into a new JSON, filter in/out, sort elements, update elements, insert new elements, remove, copy, move, compare, transform, swap around and many other operations).
+- **klib** [📁](./klib) [🌐](https://github.com/GerHobbelt/klib) -- Klib is a standalone and lightweight C library. Most components are independent of external libraries, except the standard C library, and independent of each other. To use a component of this library, you only need to copy a couple of files to your source code tree without worrying about library dependencies. Klib strives for efficiency and a small memory footprint. Some components, such as khash.h, kbtree.h, ksort.h and kvec.h, are among the most efficient implementations of similar algorithms or data structures in all programming languages, in terms of both speed and memory use.
+- **libass** [📁](./libass) [🌐](https://github.com/GerHobbelt/libass) -- `libass` is a portable subtitle renderer for the ASS/SSA (Advanced Substation Alpha/Substation Alpha) subtitle format.
+- **libcuckoo** [📁](./libcuckoo) [🌐](https://github.com/GerHobbelt/libcuckoo) -- provides a high-performance, compact hash table that allows multiple concurrent reader and writer threads.
+- **libdip** [📁](./libdip) [🌐](https://github.com/GerHobbelt/diplib) -- **[*DIPlib*](https://diplib.org/diplib-docs/)** is a C++ library for quantitative image analysis.
+- **libics** [📁](./libics) [🌐](https://github.com/GerHobbelt/libics) -- the reference library for ICS (Image Cytometry Standard), an open standard for writing images of any dimensionality and data type to file, together with associated information regarding the recording equipment or recorded subject.
+  
+  ICS stands for Image Cytometry Standard, and was first proposed in: P. Dean, L. Mascio, D. Ow, D. Sudar, J. Mullikin, "Propsed standard for image cytometry data files", Cytometry, n.11, pp.561-569, 1990. 
+  
+  It writes 2 files, one is the header, with an '.ics' extension, and the other is the actual image data (with an '.ids' extension.)
+  
+  ICS version 2.0 extends this standard to allow for a more versatile placement of the image data. It can now be placed either in the same '.ics' file or inbedded in any other file, by specifying the file name and the byte offset for the data.
+  
+  The advantage of ICS over other open standards such as TIFF is that it allows data of any type and dimensionality to be stored. A TIFF file can contain a collection of 2D images; it's up to the user to determine how these relate to each other. An ICS file can contain, for exmaple, a 5D image in which the 4th dimension is the light frequency and the 5th time. Also, all of the information regarding the microscope settings (or whatever instument was used to acquire the image) and the sample preparation can be included in the file.
+  
 
+- **libpsd** [📁](./libpsd) [🌐](https://github.com/GerHobbelt/libpsd) -- a library for Adobe Photoshop `.psd` file's decoding and rendering.
+- **libxo** [📁](./libxo) [🌐](https://github.com/GerHobbelt/libxo) -- `libxo` allows an application to generate text, XML, JSON, and HTML output using a common set of function calls (rather than the application using old skool `printf()`).  The application decides at run time which output style should be produced.
+- **lnav** [📁](./lnav) [🌐](https://github.com/GerHobbelt/lnav) -- the Log File Navigator, **lnav** for short, is an advanced log file viewer for the small-scale.  It is a terminal application that can understand your log files and make it easy for you to find problems with little to no setup.
+- **netpbm** [📁](./netpbm) [🌐](https://github.com/GerHobbelt/netpbm-mirror)
+- **psd_sdk** [📁](./psd_sdk) [🌐](https://github.com/GerHobbelt/psd_sdk) -- a C++ library that directly reads Photoshop PSD files. The library supports:
+  
+  * Groups
+  * Nested layers
+  * Smart Objects
+  * User and vector masks
+  * Transparency masks and additional alpha channels
+  * 8-bit, 16-bit, and 32-bit data in grayscale and RGB color mode
+  * All compression types known to Photoshop
+  
+  Additionally, limited export functionality is also supported.
+  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+- **sent2vec** [📁](./sent2vec) [🌐](https://github.com/GerHobbelt/sent2vec) -- a tool and pre-trained models related to the [Bi-Sent2vec](https://arxiv.org/abs/1912.12481). The cross-lingual extension of Sent2Vec can be found [here](https://github.com/epfml/Bi-sent2vec). This library provides numerical representations (features) for words, short texts, or sentences, which can be used as input to any machine learning task.
+- **sile-typesetter** [📁](./sile-typesetter) [🌐](https://github.com/GerHobbelt/sile) -- SILE is a typesetting system; its job is to produce beautiful printed documents. Conceptually, SILE is similar to TeX—from which it borrows some concepts and even syntax and algorithms—but the similarities end there. Rather than being a derivative of the TeX family SILE is a new typesetting and layout engine written from the ground up using modern technologies and borrowing some ideas from graphical systems such as Adobe InDesign.
+- **sqawk** [📁](./sqawk) [🌐](https://github.com/GerHobbelt/sqawk) -- apply SQL on CSV files in the shell: `sqawk` imports CSV files into an on-the-fly SQLite database, and runs a user-supplied query on the data.
+- **telegram-bot-api** [📁](./telegram-bot-api) [🌐](https://github.com/GerHobbelt/telegram-bot-api) -- the Telegram Bot API provides an HTTP API for creating Telegram Bots.
+- **telegram-td** [📁](./telegram-td) [🌐](https://github.com/GerHobbelt/td) -- TDLib (Telegram Database library) is a cross-platform library for building [Telegram](https://telegram.org) clients. It can be easily used from almost any programming language.
+- **tmap** [📁](./tmap) [🌐](https://github.com/GerHobbelt/tmap) -- a very fast visualization library for large, high-dimensional data sets. tmap's graph layouts are based on the [OGDF](https://ogdf.uos.de/) library.
+- **vcpkg** [📁](./vcpkg) [🌐](https://github.com/GerHobbelt/vcpkg) -- `Vcpkg` helps you manage C and C++ libraries on Windows, Linux and MacOS.
