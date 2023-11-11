@@ -1,2 +1,1 @@
-DIR: **./Clipper2** -- - **Clipper2** [📁](./Clipper2) [🌐](https://github.com/GerHobbelt/Clipper2)
 DIR: **./netpbm** -- - **netpbm** [📁](./netpbm) [🌐](https://github.com/GerHobbelt/netpbm-mirror)
