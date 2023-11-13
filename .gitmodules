@@ -4362,3 +4362,123 @@ ignore = dirty
 	url = git@github.com:GerHobbelt/tmap.git
 
 ignore = dirty
+[submodule "mathtoolbox"]
+	path = mathtoolbox
+	url = git@github.com:GerHobbelt/mathtoolbox.git
+
+ignore = dirty
+[submodule "color-util"]
+	path = color-util
+	url = git@github.com:GerHobbelt/color-util.git
+
+ignore = dirty
+[submodule "sequential-line-search"]
+	path = sequential-line-search
+	url = git@github.com:GerHobbelt/sequential-line-search.git
+
+ignore = dirty
+[submodule "imagedistance"]
+	path = imagedistance
+	url = git@github.com:GerHobbelt/imagedistance.git
+
+ignore = dirty
+[submodule "colormap-shaders"]
+	path = colormap-shaders
+	url = git@github.com:GerHobbelt/colormap-shaders.git
+
+ignore = dirty
+[submodule "Sophus"]
+	path = Sophus
+	url = git@github.com:GerHobbelt/Sophus.git
+
+ignore = dirty
+[submodule "ifopt"]
+	path = ifopt
+	url = git@github.com:GerHobbelt/ifopt.git
+
+ignore = dirty
+[submodule "Ipopt"]
+	path = Ipopt
+	url = git@github.com:GerHobbelt/Ipopt.git
+
+ignore = dirty
+[submodule "blaze"]
+	path = blaze
+	url = git@github.com:GerHobbelt/blaze.git
+
+ignore = dirty
+[submodule "poisson_blend"]
+	path = poisson_blend
+	url = git@github.com:GerHobbelt/poisson_blend.git
+
+ignore = dirty
+[submodule "osqp-eigen"]
+	path = osqp-eigen
+	url = git@github.com:GerHobbelt/osqp-eigen.git
+
+ignore = dirty
+[submodule "osqp"]
+	path = osqp
+	url = git@github.com:GerHobbelt/osqp.git
+
+ignore = dirty
+[submodule "osqp-cpp"]
+	path = osqp-cpp
+	url = git@github.com:GerHobbelt/osqp-cpp.git
+
+ignore = dirty
+[submodule "lolremez"]
+	path = lolremez
+	url = git@github.com:GerHobbelt/lolremez.git
+
+ignore = dirty
+[submodule "lol"]
+	path = lol
+	url = git@github.com:GerHobbelt/lol.git
+
+ignore = dirty
+[submodule "polatory"]
+	path = polatory
+	url = git@github.com:GerHobbelt/polatory.git
+
+ignore = dirty
+[submodule "spline"]
+	path = spline
+	url = git@github.com:GerHobbelt/spline.git
+
+ignore = dirty
+[submodule "splinter"]
+	path = splinter
+	url = git@github.com:GerHobbelt/splinter.git
+
+ignore = dirty
+[submodule "magsac"]
+	path = magsac
+	url = git@github.com:GerHobbelt/magsac.git
+
+ignore = dirty
+[submodule "libxcam"]
+	path = libxcam
+	url = git@github.com:GerHobbelt/libxcam.git
+
+ignore = dirty
+[submodule "matplotplusplus"]
+	path = matplotplusplus
+	url = git@github.com:GerHobbelt/matplotplusplus.git
+
+ignore = dirty
+[submodule "FIt-SNE"]
+	path = FIt-SNE
+	url = git@github.com:GerHobbelt/FIt-SNE.git
+
+ignore = dirty
+[submodule "flip"]
+	path = flip
+	url = git@github.com:GerHobbelt/flip.git
+
+ignore = dirty
+[submodule "unblending"]
+	path = unblending
+	url = git@github.com:GerHobbelt/unblending.git
+
+ignore = dirty
