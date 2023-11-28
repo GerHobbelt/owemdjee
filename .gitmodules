@@ -4571,6 +4571,10 @@
 [submodule "vmaf"]
 	path = vmaf
 	url = git@github.com:GerHobbelt/vmaf.git
+	fetchRecurseSubmodules = on-demand
+    ignore = dirty
 [submodule "openlibm"]
 	path = openlibm
 	url = git@github.com:GerHobbelt/openlibm.git
+	fetchRecurseSubmodules = on-demand
+    ignore = dirty

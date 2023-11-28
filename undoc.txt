@@ -1,2 +1,2 @@
-DIR: **./SipHash** -- - **SipHash** [📁](./SipHash) [🌐](https://github.com/GerHobbelt/SipHash)
-DIR: **./reproc** -- - **reproc** [📁](./reproc) [🌐](https://github.com/GerHobbelt/reproc)
+DIR: **./openlibm** -- - **openlibm** [📁](./openlibm) [🌐](https://github.com/GerHobbelt/openlibm)
+DIR: **./vmaf** -- - **vmaf** [📁](./vmaf) [🌐](https://github.com/GerHobbelt/vmaf)
