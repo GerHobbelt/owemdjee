@@ -1717,7 +1717,7 @@
 	path = ocreval
 	url = https://github.com/GerHobbelt/ocreval.git
 	fetchRecurseSubmodules = on-demand
-    ignore = dirty
+    
 [submodule "asio"]
 	path = asio
 	url = https://github.com/GerHobbelt/asio.git
@@ -1732,7 +1732,7 @@
 	path = tinycolormap
 	url = https://github.com/GerHobbelt/tinycolormap.git
 	fetchRecurseSubmodules = on-demand
-    ignore = dirty
+    
 [submodule "tesseract-gImgRdrGui"]
 	path = tesseract-gImgRdrGui
 	url = https://github.com/GerHobbelt/gImageReader.git
@@ -2592,7 +2592,7 @@
 	path = unpaper
 	url = https://github.com/GerHobbelt/unpaper.git
 	fetchRecurseSubmodules = on-demand
-    ignore = dirty
+    
 [submodule "shadesmar"]
 	path = shadesmar
 	url = https://github.com/GerHobbelt/shadesmar.git
@@ -2637,7 +2637,7 @@
 	path = libeigen
 	url = https://github.com/GerHobbelt/eigen-git-mirror.git
 	fetchRecurseSubmodules = on-demand
-    ignore = dirty
+    
 [submodule "mxnet"]
 	path = mxnet
 	url = https://github.com/GerHobbelt/mxnet.git
@@ -3592,12 +3592,12 @@
 	path = cld3-language-detect
 	url = git@github.com:GerHobbelt/cld3.git
 	fetchRecurseSubmodules = on-demand
-    ignore = dirty
+    
 [submodule "cld1-language-detect"]
 	path = cld1-language-detect
 	url = git@github.com:GerHobbelt/cld.git
 	fetchRecurseSubmodules = on-demand
-    ignore = dirty
+    
 [submodule "guetzli"]
 	path = guetzli
 	url = git@github.com:GerHobbelt/guetzli.git
@@ -4422,7 +4422,7 @@
 	path = figtree
 	url = git@github.com:GerHobbelt/figtree.git
 	fetchRecurseSubmodules = on-demand
-    ignore = dirty
+    
 [submodule "CppNumericalSolvers"]
 	path = CppNumericalSolvers
 	url = git@github.com:GerHobbelt/CppNumericalSolvers.git
@@ -4497,7 +4497,7 @@
 	path = numero
 	url = git@github.com:GerHobbelt/numero.git
 	fetchRecurseSubmodules = on-demand
-    ignore = dirty
+    
 [submodule "rgf"]
 	path = rgf
 	url = git@github.com:GerHobbelt/rgf.git
@@ -4512,7 +4512,7 @@
 	path = minizip-ng
 	url = git@github.com:GerHobbelt/minizip-ng.git
 	fetchRecurseSubmodules = on-demand
-    ignore = dirty
+    
 [submodule "IconFontCppHeaders"]
 	path = IconFontCppHeaders
 	url = git@github.com:GerHobbelt/IconFontCppHeaders.git
@@ -4571,3 +4571,6 @@
 [submodule "vmaf"]
 	path = vmaf
 	url = git@github.com:GerHobbelt/vmaf.git
+[submodule "openlibm"]
+	path = openlibm
+	url = git@github.com:GerHobbelt/openlibm.git
