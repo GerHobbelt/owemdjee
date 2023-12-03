@@ -129,8 +129,14 @@ while (m) {
 	let key2 = localdir.replace(/[\\\/._-]+/g, '');
 	//console.log({id, key2, localdir, repo, url })
 
-	dict[id.toLowerCase()] = { id, key2, localdir, repo, url };
-	dict[key2.toLowerCase()] = { id, key2, localdir, repo, url };
+	if (dict[id.toLowerCase()] == undefined) {
+		dict[id.toLowerCase()] = { id, key2, localdir, repo, url };
+		//console.log({id, key2, localdir, repo, url })
+	}
+	if (dict[key2.toLowerCase()] == undefined) {
+		dict[key2.toLowerCase()] = { id, key2, localdir, repo, url };
+		//console.log({id, key2, localdir, repo, url })
+	}
 
 	m = mod_re.exec(txt);
 }

@@ -229,6 +229,7 @@ The other JavaScript engines considered are of varying size, performance and com
     * [testing, benchmarking & fuzzing](#testing-benchmarking--fuzzing)
     * [logging & debugging](#logging--debugging)
         * [ETW (Event Tracing for Microsoft Windows)](#etw-event-tracing-for-microsoft-windows)
+    * [visualization](#visualization)
     * [telemetry](#telemetry)
     * [OCR core (*tesseract*)](#ocr-core-tesseract)
     * [PDF render & metadata core (*mupdf*)](#pdf-render--metadata-core-mupdf)
@@ -1283,7 +1284,6 @@ See also [image formats (visual) quality comparison](https://eclipseo.github.io/
 - **lolremez** [📁](./lolremez) [🌐](https://github.com/GerHobbelt/lolremez) -- LolRemez is a Remez algorithm implementation to approximate functions using polynomials.
 - **magsac** [📁](./magsac) [🌐](https://github.com/GerHobbelt/magsac) -- (MAGSAC++ had been included in OpenCV) the MAGSAC and MAGSAC++ algorithms for robust model fitting without using a single inlier-outlier threshold.
 - **mathtoolbox** [📁](./mathtoolbox) [🌐](https://github.com/GerHobbelt/mathtoolbox) -- mathematical tools (interpolation, dimensionality reduction, optimization, etc.) written in C++11 and [Eigen](http://eigen.tuxfamily.org/).
-- **matplotplusplus** [📁](./matplotplusplus) [🌐](https://github.com/GerHobbelt/matplotplusplus) -- **Matplot++** is a graphics library for data visualization that provides interactive plotting, means for exporting plots in high-quality formats for scientific publications, a compact syntax consistent with similar libraries, dozens of plot categories with specialized algorithms, multiple coding styles, and supports generic backends.
 - **openlibm** [📁](./openlibm) [🌐](https://github.com/GerHobbelt/openlibm) -- [OpenLibm](https://openlibm.org/) is an effort to have a high quality, portable, standalone C mathematical library ([`libm`](http://en.wikipedia.org/wiki/libm)). The project was born out of a need to have a good `libm` for the [Julia programming language](http://www.julialang.org) that worked consistently across compilers and operating systems, and in 32-bit and 64-bit environments.
 - **polatory** [📁](./polatory) [🌐](https://github.com/GerHobbelt/polatory) -- a fast and memory-efficient framework for RBF (radial basis function) interpolation. Polatory can perform kriging prediction via RBF interpolation (dual kriging). Although different terminologies are used, both methods produce the same results.
 - **radon-tf** [📁](./radon-tf) [🌐](https://github.com/GerHobbelt/radon-tf) -- simple implementation of the radon transform. Faster when using more than one thread to execute it. No inverse function is provided. CPU implementation only.
@@ -2296,7 +2296,8 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
   * XML test report generation.
 
 - **honggfuzz** [📁](./honggfuzz) [🌐](https://github.com/GerHobbelt/honggfuzz) -- a security oriented, feedback-driven, evolutionary, easy-to-use fuzzer with interesting analysis options.
-- **libassert** [📁](./libassert) [🌐](https://github.com/GerHobbelt/libassert) -- the most over-engineered and overpowered C++ assertion library.
+- **libassert** [📁](./libassert) [🌐](https://github.com/GerHobbelt/libassert) -- the most over-engineered and overpowered C++ assertion library. **Library philosophy**: Provide as much helpful diagnostic info as possible.
+- **resumable-assert** [📁](./resumable-assert) [🌐](https://github.com/GerHobbelt/resumable-assert) -- `assert` replacement to continue execution in debugger. In any large app, it sometimes happens that some asserts are failing in code you don't currently care about, and blocking the entire team from being able to run the app until the issue is fixed is not the best workflow. So we usually end up moving the execution marker past the assert line in IDE or debugger, or even comment the assert out, recompile and relaunch. With Resumable Assert, you can simply continue execution when an assertion fails in debugger, or even disable asserts that you are not interested in, so that those never bother you again.
 - **Verify** [📁](./Verify) [🌐](https://github.com/GerHobbelt/Verify) -- a snapshot tool that simplifies the assertion of complex data models and documents. Verify is called on the test result during the assertion phase. It serializes that result and stores it in a file that matches the test name. On the next test execution, the result is again serialized and compared to the existing file. The test will fail if the two snapshots do not match: either the change is unexpected, or the reference snapshot needs to be updated to the new result.
 
 
@@ -2349,12 +2350,31 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 
 - ~~**spdlog** [🌐](https://github.com/gabime/spdlog)~~
   
-  - **removed**; reason: we've decided on using `glog` as the logging library for everything. `spdlog` has some nice features but in the end it was easy of cross-platform compilation and installed base that won out here...
+  - **removed**; reason: we've decided on using `glog` as the logging library for everything. `spdlog` has some nice features but in the end it was ease of cross-platform compilation and installed base that won out here...
 
 - ~~**zlog** [🌐](https://github.com/HardySimpson/zlog)~~
   
-  - **removed**; `zlog` has a nice overall design but is too 'Unix-is-the-world' in its coding: in the end it was easy of cross-platform compilation of `glog` that won the day and I'm okay with layering on top of that one to get the zlog category and other channel features, once I really need them.
+  - **removed**; `zlog` has a nice overall design but is too 'Unix-is-the-world' in its coding: in the end it was ease of cross-platform compilation of `glog` that won the day and I'm okay with layering on top of that one to get the zlog category and other channel features, once I really need them.
 
+
+
+
+### Visualization
+
+- **colormap-shaders** [📁](./colormap-shaders) [🌐](https://github.com/GerHobbelt/colormap-shaders) -- a collection of shaders to draw color maps.
+- **ColorSpace** [📁](./ColorSpace) [🌐](https://github.com/GerHobbelt/ColorSpace) -- library for converting between color spaces and comparing colors.
+- **color-util** [📁](./color-util) [🌐](https://github.com/GerHobbelt/color-util) -- a header-only C++11 library for handling colors, including color space converters between RGB, XYZ, Lab, etc. and color difference calculators such as CIEDE2000.
+- **graph-coloring** [📁](./graph-coloring) [🌐](https://github.com/GerHobbelt/graph-coloring) -- a C++ Graph Coloring Package. This project has two primary uses:
+  
+  * As an executable for finding the chromatic number for an input graph (in edge list or edge matrix format)
+  * As a library for finding the particular coloring of an input graph (represented as a `map<string,vector<string>>` edge list)
+
+- **hsluv-c** [📁](./hsluv-c) [🌐](https://github.com/GerHobbelt/hsluv-c) -- HSLuv (revision 4) is a human-friendly alternative to HSL. HSLuv is very similar to CIELUV, a color space designed for perceptual uniformity based on human experiments. When accessed by polar coordinates, it becomes functionally similar to HSL with a single problem: its chroma component doesn't fit into a specific range. HSLuv extends CIELUV with a new saturation component that allows you to span all the available chroma as a neat percentage.
+- **matplotplusplus** [📁](./matplotplusplus) [🌐](https://github.com/GerHobbelt/matplotplusplus) -- **Matplot++** is a graphics library for data visualization that provides interactive plotting, means for exporting plots in high-quality formats for scientific publications, a compact syntax consistent with similar libraries, dozens of plot categories with specialized algorithms, multiple coding styles, and supports generic backends.
+- **OpenColorIO** [📁](./OpenColorIO) [🌐](https://github.com/GerHobbelt/OpenColorIO) -- OpenColorIO (OCIO) is a complete color management solution geared towards motion picture production with an emphasis on visual effects and computer animation. OCIO provides a straightforward and consistent user experience across all supporting applications while allowing for sophisticated back-end configuration options suitable for high-end production usage. OCIO is compatible with the Academy Color Encoding Specification (ACES) and is LUT-format agnostic, supporting many popular formats.
+- **pdiff** [📁](./pdiff) [🌐](https://github.com/GerHobbelt/pdiff) -- perceptualdiff (pdiff): a program that compares two images using a perceptually based image metric.
+- **tinycolormap** [📁](./tinycolormap) [🌐](https://github.com/GerHobbelt/tinycolormap) -- a header-only, single-file library for colormaps written in C++11.
+- **tmap** [📁](./tmap) [🌐](https://github.com/GerHobbelt/tmap) -- a very fast visualization library for large, high-dimensional data sets. tmap's graph layouts are based on the [OGDF](https://ogdf.uos.de/) library.
 
 
 
@@ -4298,7 +4318,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 
 - ~~**spdlog** [🌐](https://github.com/gabime/spdlog)~~
   
-  - **removed**; reason: we've decided on using `glog` as the logging library for everything. `spdlog` has some nice features but in the end it was easy of cross-platform compilation and installed base that won out here...
+  - **removed**; reason: we've decided on using `glog` as the logging library for everything. `spdlog` has some nice features but in the end it was ease of cross-platform compilation and installed base that won out here...
 
 - ~~**xz-utils** [🌐](https://github.com/xz-mirror/xz)~~
   
@@ -4306,7 +4326,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 
 - ~~**zlog** [🌐](https://github.com/HardySimpson/zlog)~~
   
-  - **removed**; `zlog` has a nice overall design but is too 'Unix-is-the-world' in its coding: in the end it was easy of cross-platform compilation of `glog` that won the day and I'm okay with layering on top of that one to get the zlog category and other channel features, once I really need them.
+  - **removed**; `zlog` has a nice overall design but is too 'Unix-is-the-world' in its coding: in the end it was ease of cross-platform compilation of `glog` that won the day and I'm okay with layering on top of that one to get the zlog category and other channel features, once I really need them.
 
 
 
@@ -4326,4 +4346,3 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **fastgron** [📁](./fastgron) [🌐](https://github.com/GerHobbelt/fastgron) -- `fastgron` makes JSON greppable super fast! `fastgron` transforms JSON into discrete assignments to make it easier to grep for what you want and see the absolute 'path' to it. It eases the exploration of APIs that return large blobs of JSON but lack documentation.
 - **fontview** [📁](./fontview) [🌐](https://github.com/GerHobbelt/fontview) -- “FontView” is a little demo app that shows the contents of a font file. It opens `*.ttf`, `*.otf`, `*.ttc`, `*.otc`, `*.pfa`, and `*.pfb` files. To render text, FontView uses the open-source libraries [FreeType](https://www.freetype.org/), [HarfBuzz](https://www.freedesktop.org/wiki/Software/HarfBuzz/), and [Raqm](http://host-oman.github.io/libraqm/).
 - **klib** [📁](./klib) [🌐](https://github.com/GerHobbelt/klib) -- Klib is a standalone and lightweight C library. Most components are independent of external libraries, except the standard C library, and independent of each other. To use a component of this library, you only need to copy a couple of files to your source code tree without worrying about library dependencies. Klib strives for efficiency and a small memory footprint. Some components, such as khash.h, kbtree.h, ksort.h and kvec.h, are among the most efficient implementations of similar algorithms or data structures in all programming languages, in terms of both speed and memory use.
-- **tmap** [📁](./tmap) [🌐](https://github.com/GerHobbelt/tmap) -- a very fast visualization library for large, high-dimensional data sets. tmap's graph layouts are based on the [OGDF](https://ogdf.uos.de/) library.
