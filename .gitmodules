@@ -4578,3 +4578,33 @@
     url = git@github.com:GerHobbelt/openlibm.git
     fetchRecurseSubmodules = on-demand
     ignore = dirty
+[submodule "u8_to_std_string"]
+	path = u8_to_std_string
+	url = git@github.com:GerHobbelt/u8_to_std_string.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "netdata"]
+	path = netdata
+	url = git@github.com:GerHobbelt/netdata.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "tempo"]
+	path = tempo
+	url = git@github.com:GerHobbelt/tempo.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "loki"]
+	path = loki
+	url = git@github.com:GerHobbelt/loki.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "jsoncpp"]
+	path = jsoncpp
+	url = git@github.com:GerHobbelt/jsoncpp.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "mosquitto"]
+	path = mosquitto
+	url = git@github.com:GerHobbelt/mosquitto.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
