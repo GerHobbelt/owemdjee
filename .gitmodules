@@ -4608,3 +4608,48 @@
 	url = git@github.com:GerHobbelt/mosquitto.git
     fetchRecurseSubmodules = on-demand
     ignore = dirty
+[submodule "PEGTL"]
+	path = PEGTL
+	url = git@github.com:GerHobbelt/PEGTL.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "tao-json"]
+	path = tao-json
+	url = git@github.com:GerHobbelt/tao-json.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "qoi"]
+	path = qoi
+	url = git@github.com:GerHobbelt/qoi.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "safeclib"]
+	path = safeclib
+	url = git@github.com:GerHobbelt/safeclib.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "fpng"]
+	path = fpng
+	url = git@github.com:GerHobbelt/fpng.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "capnproto"]
+	path = capnproto
+	url = git@github.com:GerHobbelt/capnproto.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "vizzu"]
+	path = vizzu
+	url = git@github.com:GerHobbelt/vizzu-lib.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "doctest"]
+	path = doctest
+	url = git@github.com:GerHobbelt/doctest.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "libparameters"]
+	path = libparameters
+	url = git@github.com:GerHobbelt/libparameters.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
