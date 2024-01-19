@@ -4653,3 +4653,108 @@
 	url = git@github.com:GerHobbelt/libparameters.git
     fetchRecurseSubmodules = on-demand
     ignore = dirty
+[submodule "opentelemetry-cpp-contrib"]
+	path = opentelemetry-cpp-contrib
+	url = git@github.com:GerHobbelt/opentelemetry-cpp-contrib.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "GSL"]
+	path = GSL
+	url = git@github.com:GerHobbelt/GSL.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "cachelot"]
+	path = cachelot
+	url = git@github.com:GerHobbelt/cachelot.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "lru_cache"]
+	path = lru_cache
+	url = git@github.com:GerHobbelt/lru_cache.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "poco"]
+	path = poco
+	url = git@github.com:GerHobbelt/poco.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "stlcache"]
+	path = stlcache
+	url = git@github.com:GerHobbelt/stlcache.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "GQ-gumbo-css-selectors"]
+	path = GQ-gumbo-css-selectors
+	url = git@github.com:GerHobbelt/GQ.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "tclap"]
+	path = tclap
+	url = git@github.com:GerHobbelt/tclap.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "chibi-scheme"]
+	path = chibi-scheme
+	url = git@github.com:GerHobbelt/chibi-scheme.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "jimtcl"]
+	path = jimtcl
+	url = git@github.com:GerHobbelt/jimtcl.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "guile"]
+	path = guile
+	url = git@github.com:GerHobbelt/guile.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "tcl"]
+	path = tcl
+	url = git@github.com:GerHobbelt/tcl.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "itcl"]
+	path = itcl
+	url = git@github.com:GerHobbelt/itcl.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "tclclockmod"]
+	path = tclclockmod
+	url = git@github.com:GerHobbelt/tclclockmod.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "avro"]
+	path = avro
+	url = git@github.com:GerHobbelt/avro.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "javascript-serialization-benchmark"]
+	path = javascript-serialization-benchmark
+	url = git@github.com:GerHobbelt/javascript-serialization-benchmark.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "ngrams-weighted"]
+	path = ngrams-weighted
+	url = git@github.com:GerHobbelt/ngweight.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "sqlplot-tools"]
+	path = sqlplot-tools
+	url = git@github.com:GerHobbelt/sqlplot-tools.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "libhog"]
+	path = libhog
+	url = git@github.com:GerHobbelt/libhog.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "chromium-snss-parse"]
+	path = chromium-snss-parse
+	url = git@github.com:GerHobbelt/chromium-snss-parse.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "FastGlobbing"]
+	path = FastGlobbing
+	url = git@github.com:GerHobbelt/FastGlobbing.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
