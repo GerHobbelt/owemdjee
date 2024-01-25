@@ -4758,3 +4758,8 @@
 	url = git@github.com:GerHobbelt/FastGlobbing.git
     fetchRecurseSubmodules = on-demand
     ignore = dirty
+[submodule "glyph_name"]
+	path = glyph_name
+	url = git@github.com:GerHobbelt/glyph_name.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
