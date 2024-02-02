@@ -1,1 +1,3 @@
-DIR: **./glyph_name** -- - **glyph_name** [📁](./glyph_name) [🌐](https://github.com/GerHobbelt/glyph_name)
+DIR: **./duckdb** -- - **duckdb** [📁](./duckdb) [🌐](https://github.com/GerHobbelt/duckdb)
+DIR: **./libgnurx** -- - **libgnurx** [📁](./libgnurx) [🌐](https://github.com/GerHobbelt/libgnurx)
+DIR: **./pikchr** -- - **pikchr** [📁](./pikchr) [🌐](https://github.com/GerHobbelt/pikchr)

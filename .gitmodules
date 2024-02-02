@@ -4766,3 +4766,15 @@
 [submodule "pikchr"]
 	path = pikchr
 	url = git@github.com:GerHobbelt/pikchr.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "libgnurx"]
+	path = libgnurx
+	url = git@github.com:GerHobbelt/libgnurx.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "duckdb"]
+	path = duckdb
+	url = git@github.com:GerHobbelt/duckdb.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
