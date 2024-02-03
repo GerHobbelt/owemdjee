@@ -4778,3 +4778,8 @@
 	url = git@github.com:GerHobbelt/duckdb.git
     fetchRecurseSubmodules = on-demand
     ignore = dirty
+[submodule "newlisp"]
+	path = newlisp
+	url = git@github.com:GerHobbelt/newlisp.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
