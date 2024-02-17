@@ -4443,6 +4443,35 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 
 # TBD: Libraries which still need to be moved into the overview / categories above...
 
-
-
-
+- **1D-RGB-color-gradient** [📁](./1D-RGB-color-gradient) [🌐](https://github.com/GerHobbelt/1D-RGB-color-gradient) -- 1D (univariate) continous (smooth) [color gradients](https://en.wikipedia.org/wiki/Color_gradient) (colormaps) for gnuplot.
+- **2D-color-gradient-or-Procedural-texture** [📁](./2D-color-gradient-or-Procedural-texture) [🌐](https://github.com/GerHobbelt/2D-color-gradient-or-Procedural-texture) -- 2D continous (smooth) [color gradients](https://en.wikipedia.org/wiki/Color_gradient) (colormaps) for gnuplot.
+- **AFLplusplus** [📁](./AFLplusplus) [🌐](https://github.com/GerHobbelt/AFLplusplus) -- American Fuzzy Lop plus plus (AFL++) is a superior fork to Google's AFL fuzzer - more speed, more and better mutations, more and better instrumentation, custom module support, etc.
+- **PaddleClas** [📁](./PaddleClas) [🌐](https://github.com/GerHobbelt/PaddleClas)
+- **PaddleDetection** [📁](./PaddleDetection) [🌐](https://github.com/GerHobbelt/PaddleDetection)
+- **PaddleNLP** [📁](./PaddleNLP) [🌐](https://github.com/GerHobbelt/PaddleNLP)
+- **PaddleOCR** [📁](./PaddleOCR) [🌐](https://github.com/GerHobbelt/PaddleOCR)
+- **VTK** [📁](./VTK) [🌐](https://github.com/GerHobbelt/VTK) -- VTK - The Visualization Toolkit - is an open-source software system for image processing, 3D graphics, volume rendering and visualization. VTK includes many advanced algorithms (e.g., surface reconstruction, implicit modeling, decimation) and rendering techniques (e.g., hardware-accelerated volume rendering, LOD control).
+- **agg** [📁](./agg) [🌐](https://github.com/GerHobbelt/agg) -- Anti-Grain Geometry library, written by Maxim Shemanarev in C++. It is an Open Source, 2D vector graphics library. Agg produces pixel images in memory from vectorial data. AGG doesn't depend on any graphic API or technology. Basically, you can think of AGG as of a rendering engine that produces pixel images in memory from some vectorial data.
+- **awesome-c** [📁](./awesome-c) [🌐](https://github.com/GerHobbelt/awesome-c) -- a curated list of C good stuff.
+- **cfgpath** [📁](./cfgpath) [🌐](https://github.com/GerHobbelt/cfgpath) -- cross platform methods for obtaining paths to configuration files
+- **gegl** [📁](./gegl) [🌐](https://github.com/GerHobbelt/gegl)
+- **gencolormap** [📁](./gencolormap) [🌐](https://github.com/GerHobbelt/gencolormap) -- generate color maps for visualization. A variety of methods for sequential, diverging, and qualitative maps is available.
+- **gnuplot** [📁](./gnuplot) [🌐](https://github.com/GerHobbelt/gnuplot) -- the Gnuplot Plotting Utility is a command-line driven interactive function plotting utility for linux, OSX, MSWin, VMS, and many other platforms. Gnuplot handles both curves (2 dimensions) and surfaces (3 dimensions). Surfaces can be plotted as a mesh fitting the specified function, floating in the 3-d coordinate space, or as a contour plot on the x-y plane. For 2-d plots, there are also many plot styles including lines, points, boxes, heat maps, stacked histograms, and contoured projections of 3D data. Graphs may be labeled with arbitrary labels and arrows, axis labels, a title, date and time, and a key.  The interface includes command-line editing and history on most platforms.
+- **gnuplot-palettes** [📁](./gnuplot-palettes) [🌐](https://github.com/GerHobbelt/gnuplot-palettes) -- color palettes for gnuplot.
+- **gnuplot_i** [📁](./gnuplot_i) [🌐](https://github.com/GerHobbelt/gnuplot_i) -- gnuplot C interface library enables developers to create [gnuplots](http://www.gnuplot.info/) directly from their C programs.
+- **hsluv-color-gradient** [📁](./hsluv-color-gradient) [🌐](https://github.com/GerHobbelt/hsluv-color-gradient) -- 1D discrete and continous perceptually uniform ordered color gradients rendered in [HSL](https://www.hsluv.org/)
+- **leptonica-hillshade** [📁](./leptonica-hillshade) [🌐](https://github.com/GerHobbelt/leptonica-hillshade) -- apply hillshade elevation/shadow render to leptonica PIX & FPIX
+- **libmodbus** [📁](./libmodbus) [🌐](https://github.com/GerHobbelt/libmodbus) -- a groovy modbus library to send/receive data with a device which respects the Modbus protocol. This library can use a serial port or an Ethernet connection. The functions included in the library have been derived from the Modicon Modbus Protocol Reference Guide which can be obtained from [www.modbus.org](http://www.modbus.org).
+- **libpathutils** [📁](./libpathutils) [🌐](https://github.com/GerHobbelt/libpathutils) -- cross-platform filesystem path utility functions
+- **libpipeline** [📁](./libpipeline) [🌐](https://github.com/GerHobbelt/libpipeline) -- libpipeline, a pipeline manipulation library for setting up and running pipelines of processes, without needing to involve shell command-line parsing which is often error-prone and insecure.  This alleviates programmers of the need to laboriously construct pipelines using lower-level primitives such as fork(2) and execve(2).
+- **libserialport** [📁](./libserialport) [🌐](https://github.com/GerHobbelt/libserialport) -- a cross-platform library for accessing serial ports. libserialport is a minimal library written in C that is intended to take care of the OS-specific details when writing software that uses serial ports.
+- **linecook** [📁](./linecook) [🌐](https://github.com/GerHobbelt/linecook) -- a C library for editing the command line, much like the [readline](https://tiswww.cwru.edu/php/chet/readline/readline.html) library used in <b>bash</b> and <b>gdb</b>.
+- **modbus-esp8266** [📁](./modbus-esp8266) [🌐](https://github.com/GerHobbelt/modbus-esp8266) -- a Modbus Library for Arduino. Supports ModbusRTU, ModbusTCP and ModbusTCP Security.
+- **nano-signal-slot** [📁](./nano-signal-slot) [🌐](https://github.com/GerHobbelt/nano-signal-slot) -- pure C++17 Signals and Slots (observer pattern)
+- **owl** [📁](./owl) [🌐](https://github.com/GerHobbelt/owl) -- Owl Lisp is a functional dialect of the Scheme programming language. It is mainly based on the applicative subset of the R7RS standard.
+- **radamsa** [📁](./radamsa) [🌐](https://github.com/GerHobbelt/radamsa) -- Radamsa is a test case generator for robustness testing, a.k.a. a fuzzer. It is typically used to test how well a program can withstand malformed and potentially malicious inputs. It works by reading sample files of valid data and generating interestingly different outputs from them. The main selling points of radamsa are that it has already found a slew of bugs in programs that actually matter, it is easily scriptable and easy to get up and running.
+- **sbcl** [📁](./sbcl) [🌐](https://github.com/GerHobbelt/sbcl)
+- **tee-win32** [📁](./tee-win32) [🌐](https://github.com/GerHobbelt/tee-win32) -- a simple [**`tee`**](https://en.wikipedia.org/wiki/Tee_(command)) implementation for Microsoft Windows.
+- **tray** [📁](./tray) [🌐](https://github.com/GerHobbelt/tray) -- cross-platform, single header, super tiny C99 implementation of a system tray icon with a popup menu.
+- **utf8proc** [📁](./utf8proc) [🌐](https://github.com/GerHobbelt/utf8proc) -- [utf8proc](http://juliastrings.github.io/utf8proc/) is a small, clean C library that provides Unicode normalization, case-folding, and other operations for data in the [UTF-8 encoding](http://en.wikipedia.org/wiki/UTF-8).
+- **wcwidth9** [📁](./wcwidth9) [🌐](https://github.com/GerHobbelt/wcwidth9) -- platform independent, header only, `wcwidth` with full Unicode 9 wide character support.

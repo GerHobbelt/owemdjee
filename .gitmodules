@@ -4783,3 +4783,168 @@
 	url = git@github.com:GerHobbelt/newlisp.git
     fetchRecurseSubmodules = on-demand
     ignore = dirty
+[submodule "sbcl"]
+	path = sbcl
+	url = git@github.com:GerHobbelt/sbcl.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "gegl"]
+	path = gegl
+	url = git@github.com:GerHobbelt/gegl.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "tee-win32"]
+	path = tee-win32
+	url = git@github.com:GerHobbelt/tee-win32.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "linecook"]
+	path = linecook
+	url = git@github.com:GerHobbelt/linecook.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "wcwidth9"]
+	path = wcwidth9
+	url = git@github.com:GerHobbelt/wcwidth9.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "libpipeline"]
+	path = libpipeline
+	url = git@github.com:GerHobbelt/libpipeline.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "libserialport"]
+	path = libserialport
+	url = git@github.com:GerHobbelt/libserialport.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "agg"]
+	path = agg
+	url = git@github.com:GerHobbelt/agg.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "gnuplot"]
+	path = gnuplot
+	url = git@github.com:GerHobbelt/gnuplot.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "gnuplot_i"]
+	path = gnuplot_i
+	url = git@github.com:GerHobbelt/gnuplot_i.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "gnuplot-palettes"]
+	path = gnuplot-palettes
+	url = git@github.com:GerHobbelt/gnuplot-palettes.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "1D-RGB-color-gradient"]
+	path = 1D-RGB-color-gradient
+	url = git@github.com:GerHobbelt/1D-RGB-color-gradient.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "hsluv-color-gradient"]
+	path = hsluv-color-gradient
+	url = git@github.com:GerHobbelt/hsluv-color-gradient.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "2D-color-gradient-or-Procedural-texture"]
+	path = 2D-color-gradient-or-Procedural-texture
+	url = git@github.com:GerHobbelt/2D-color-gradient-or-Procedural-texture.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "gencolormap"]
+	path = gencolormap
+	url = git@github.com:GerHobbelt/gencolormap.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "leptonica-hillshade"]
+	path = leptonica-hillshade
+	url = git@github.com:GerHobbelt/leptonica-hillshade.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "awesome-c"]
+	path = awesome-c
+	url = git@github.com:GerHobbelt/awesome-c.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "tray"]
+	path = tray
+	url = git@github.com:GerHobbelt/tray.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "libpathutils"]
+	path = libpathutils
+	url = git@github.com:GerHobbelt/libpathutils.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "nano-signal-slot"]
+	path = nano-signal-slot
+	url = git@github.com:GerHobbelt/nano-signal-slot.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "utf8proc"]
+	path = utf8proc
+	url = git@github.com:GerHobbelt/utf8proc.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "libmodbus"]
+	path = libmodbus
+	url = git@github.com:GerHobbelt/libmodbus.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "modbus-esp8266"]
+	path = modbus-esp8266
+	url = git@github.com:GerHobbelt/modbus-esp8266.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "cfgpath"]
+	path = cfgpath
+	url = git@github.com:GerHobbelt/cfgpath.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "AFLplusplus"]
+	path = AFLplusplus
+	url = git@github.com:GerHobbelt/AFLplusplus.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "owl"]
+	path = owl
+	url = git@github.com:GerHobbelt/owl.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "radamsa"]
+	path = radamsa
+	url = git@github.com:GerHobbelt/radamsa.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "PaddleOCR"]
+	path = PaddleOCR
+	url = git@github.com:GerHobbelt/PaddleOCR.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "PaddleDetection"]
+	path = PaddleDetection
+	url = git@github.com:GerHobbelt/PaddleDetection.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "PaddleClas"]
+	path = PaddleClas
+	url = git@github.com:GerHobbelt/PaddleClas.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "PaddleNLP"]
+	path = PaddleNLP
+	url = git@github.com:GerHobbelt/PaddleNLP.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "VTK"]
+	path = VTK
+	url = git@github.com:GerHobbelt/VTK.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "Paddle-Lite"]
+	path = Paddle-Lite
+	url = git@github.com:GerHobbelt/Paddle-Lite.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
