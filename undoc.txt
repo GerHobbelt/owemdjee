@@ -1,6 +1,2 @@
-DIR: **./PaddleClas** -- - **PaddleClas** [📁](./PaddleClas) [🌐](https://github.com/GerHobbelt/PaddleClas)
-DIR: **./PaddleDetection** -- - **PaddleDetection** [📁](./PaddleDetection) [🌐](https://github.com/GerHobbelt/PaddleDetection)
-DIR: **./PaddleNLP** -- - **PaddleNLP** [📁](./PaddleNLP) [🌐](https://github.com/GerHobbelt/PaddleNLP)
-DIR: **./PaddleOCR** -- - **PaddleOCR** [📁](./PaddleOCR) [🌐](https://github.com/GerHobbelt/PaddleOCR)
 DIR: **./gegl** -- - **gegl** [📁](./gegl) [🌐](https://github.com/GerHobbelt/gegl)
-DIR: **./sbcl** -- - **sbcl** [📁](./sbcl) [🌐](https://github.com/GerHobbelt/sbcl)
+DIR: **./Paddle-Lite** -- - **Paddle-Lite** [📁](./Paddle-Lite) [🌐](https://github.com/GerHobbelt/Paddle-Lite)
