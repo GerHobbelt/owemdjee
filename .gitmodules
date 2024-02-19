@@ -2708,11 +2708,6 @@
     url = https://github.com/GerHobbelt/calibre.git
     fetchRecurseSubmodules = on-demand
     ignore = dirty
-[submodule "poppler"]
-    path = poppler
-    url = https://github.com/GerHobbelt/poppler.git
-    fetchRecurseSubmodules = on-demand
-    ignore = dirty
 [submodule "xpdf"]
     path = xpdf
     url = https://github.com/GerHobbelt/xpdf.git
