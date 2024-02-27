@@ -4943,3 +4943,6 @@
 	url = git@github.com:GerHobbelt/Paddle-Lite.git
     fetchRecurseSubmodules = on-demand
     ignore = dirty
+[submodule "mrpt"]
+	path = mrpt
+	url = git@github.com:GerHobbelt/mrpt.git
