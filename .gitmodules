@@ -4946,3 +4946,15 @@
 [submodule "mrpt"]
 	path = mrpt
 	url = git@github.com:GerHobbelt/mrpt.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "pyglass"]
+	path = pyglass
+	url = git@github.com:GerHobbelt/pyglass.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "DiskANN"]
+	path = DiskANN
+	url = git@github.com:GerHobbelt/DiskANN.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
