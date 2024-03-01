@@ -4958,3 +4958,40 @@
 	url = git@github.com:GerHobbelt/DiskANN.git
     fetchRecurseSubmodules = on-demand
     ignore = dirty
+[submodule "flann"]
+	path = flann
+	url = git@github.com:GerHobbelt/flann.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "falconn"]
+	path = falconn
+	url = git@github.com:GerHobbelt/FALCONN.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "ffht"]
+	path = ffht
+	url = git@github.com:GerHobbelt/FFHT.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "flinng"]
+	path = flinng
+	url = git@github.com:GerHobbelt/FLINNG.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "lshbox"]
+	path = lshbox
+	url = git@github.com:GerHobbelt/LSHBOX.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "liblbfgs"]
+	path = liblbfgs
+	url = git@github.com:GerHobbelt/liblbfgs.git
+[submodule "CurvatureFilter"]
+	path = CurvatureFilter
+	url = git@github.com:GerHobbelt/CurvatureFilter.git
+[submodule "aho_corasick"]
+	path = aho_corasick
+	url = git@github.com:GerHobbelt/aho_corasick.git
+[submodule "aho-corasick"]
+	path = aho-corasick
+	url = git@github.com:GerHobbelt/aho-corasick.git

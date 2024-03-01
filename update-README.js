@@ -315,7 +315,7 @@ function process_all_sections(txt) {
 	
 	let sections = txt.split(/\n#/);
 	
-	txt = sections.map(process_single_section).join('\n\n\n\n') + '\n\n\n\n';
+	txt = sections.map(process_single_section).join('\n\n\n\n\n\n\n\n\n\n\n\n') + '\n\n\n\n';
 	
 	return txt;
 }
