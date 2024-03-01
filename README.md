@@ -5336,3 +5336,47 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **tray** [📁](./tray) [🌐](https://github.com/GerHobbelt/tray) -- cross-platform, single header, super tiny C99 implementation of a system tray icon with a popup menu.
 - **utf8proc** [📁](./utf8proc) [🌐](https://github.com/GerHobbelt/utf8proc) -- [utf8proc](http://juliastrings.github.io/utf8proc/) is a small, clean C library that provides Unicode normalization, case-folding, and other operations for data in the [UTF-8 encoding](http://en.wikipedia.org/wiki/UTF-8).
 - **wcwidth9** [📁](./wcwidth9) [🌐](https://github.com/GerHobbelt/wcwidth9) -- platform independent, header only, `wcwidth` with full Unicode 9 wide character support.
+
+
+[submodule "lshbox"]
+	path = lshbox
+	url = git@github.com:GerHobbelt/LSHBOX.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "liblbfgs"]
+	path = liblbfgs
+	url = git@github.com:GerHobbelt/liblbfgs.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "CurvatureFilter"]
+	path = CurvatureFilter
+	url = git@github.com:GerHobbelt/CurvatureFilter.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "aho_corasick"]
+	path = aho_corasick
+	url = git@github.com:GerHobbelt/aho_corasick.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "aho-corasick"]
+	path = aho-corasick
+	url = git@github.com:GerHobbelt/aho-corasick.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "libahocorasick"]
+	path = libahocorasick
+	url = git@github.com:GerHobbelt/pyahocorasick.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "libirwls"]
+	path = libirwls
+	url = git@github.com:GerHobbelt/LIBIRWLS.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+[submodule "kiwi"]
+	path = kiwi
+	url = git@github.com:GerHobbelt/kiwi.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+
