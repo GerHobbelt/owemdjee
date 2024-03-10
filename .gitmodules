@@ -5021,9 +5021,15 @@
 [submodule "detect-character-encoding"]
 	path = detect-character-encoding
 	url = git@github.com:GerHobbelt/detect-character-encoding.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
 [submodule "EigenRand"]
 	path = EigenRand
 	url = git@github.com:GerHobbelt/EigenRand.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
 [submodule "rapidxml"]
 	path = rapidxml
 	url = git@github.com:GerHobbelt/rapidxml.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
