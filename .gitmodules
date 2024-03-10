@@ -5018,3 +5018,12 @@
 	url = git@github.com:GerHobbelt/kiwi.git
     fetchRecurseSubmodules = on-demand
     ignore = dirty
+[submodule "detect-character-encoding"]
+	path = detect-character-encoding
+	url = git@github.com:GerHobbelt/detect-character-encoding.git
+[submodule "EigenRand"]
+	path = EigenRand
+	url = git@github.com:GerHobbelt/EigenRand.git
+[submodule "rapidxml"]
+	path = rapidxml
+	url = git@github.com:GerHobbelt/rapidxml.git
