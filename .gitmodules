@@ -5048,3 +5048,28 @@
 	url = git@github.com:GerHobbelt/MicroPather.git
     fetchRecurseSubmodules = on-demand
     
+[submodule "spdmon"]
+	path = spdmon
+	url = git@github.com:GerHobbelt/spdmon.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "miniscript"]
+	path = miniscript
+	url = git@github.com:GerHobbelt/miniscript.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "libkra"]
+	path = libkra
+	url = git@github.com:GerHobbelt/libkra.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "cjose"]
+	path = cjose
+	url = git@github.com:GerHobbelt/cjose.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "liboauth2"]
+	path = liboauth2
+	url = git@github.com:GerHobbelt/liboauth2.git
+    fetchRecurseSubmodules = on-demand
+    
