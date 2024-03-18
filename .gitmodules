@@ -5073,3 +5073,8 @@
 	url = git@github.com:GerHobbelt/liboauth2.git
     fetchRecurseSubmodules = on-demand
     
+[submodule "fnmatch"]
+	path = fnmatch
+	url = git@github.com:GerHobbelt/fnmatch.git
+    fetchRecurseSubmodules = on-demand
+    
