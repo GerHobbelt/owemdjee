@@ -5078,3 +5078,143 @@
 	url = git@github.com:GerHobbelt/fnmatch.git
     fetchRecurseSubmodules = on-demand
     
+[submodule "text-wrangler"]
+	path = text-wrangler
+	url = git@github.com:GerHobbelt/text-wrangler.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "kann"]
+	path = kann
+	url = git@github.com:GerHobbelt/kann.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "deepdetect"]
+	path = deepdetect
+	url = git@github.com:GerHobbelt/deepdetect.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "xbrzscale"]
+	path = xbrzscale
+	url = git@github.com:GerHobbelt/xbrzscale.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "libxbr-standalone"]
+	path = libxbr-standalone
+	url = git@github.com:GerHobbelt/libxbr-standalone.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "libpano13"]
+	path = libpano13
+	url = git@github.com:GerHobbelt/libpano13.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "KDSPDSetup"]
+	path = KDSPDSetup
+	url = git@github.com:GerHobbelt/KDSPDSetup.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "serde-cpp"]
+	path = serde-cpp
+	url = git@github.com:GerHobbelt/serde-cpp.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "figcone"]
+	path = figcone
+	url = git@github.com:GerHobbelt/figcone.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "config-cpp"]
+	path = config-cpp
+	url = git@github.com:GerHobbelt/config-cpp.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "serdepp"]
+	path = serdepp
+	url = git@github.com:GerHobbelt/serdepp.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "CNTK"]
+	path = CNTK
+	url = git@github.com:GerHobbelt/CNTK.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "TNN"]
+	path = TNN
+	url = git@github.com:GerHobbelt/TNN.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "gtsam"]
+	path = gtsam
+	url = git@github.com:GerHobbelt/gtsam.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "Cmathtuts"]
+	path = Cmathtuts
+	url = git@github.com:GerHobbelt/Cmathtuts.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "flashlight"]
+	path = flashlight
+	url = git@github.com:GerHobbelt/flashlight.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "oneDNN"]
+	path = oneDNN
+	url = git@github.com:GerHobbelt/oneDNN.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "ZQCNN"]
+	path = ZQCNN
+	url = git@github.com:GerHobbelt/ZQCNN.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "blis"]
+	path = blis
+	url = git@github.com:GerHobbelt/blis.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "MegEngine"]
+	path = MegEngine
+	url = git@github.com:GerHobbelt/MegEngine.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "OpenNN"]
+	path = OpenNN
+	url = git@github.com:GerHobbelt/opennn.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "fCWT"]
+	path = fCWT
+	url = git@github.com:GerHobbelt/fCWT.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "wavelib"]
+	path = wavelib
+	url = git@github.com:GerHobbelt/wavelib.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "wdenoise"]
+	path = wdenoise
+	url = git@github.com:GerHobbelt/wdenoise.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "FastString"]
+	path = FastString
+	url = git@github.com:GerHobbelt/FastString.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "SIMDString"]
+	path = SIMDString
+	url = git@github.com:GerHobbelt/SIMDString.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "Multicore-TSNE"]
+	path = Multicore-TSNE
+	url = git@github.com:GerHobbelt/Multicore-TSNE.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "luple"]
+	path = luple
+	url = git@github.com:GerHobbelt/luple.git
+    fetchRecurseSubmodules = on-demand
+    
