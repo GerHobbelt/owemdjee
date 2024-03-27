@@ -3463,11 +3463,6 @@
     url = git@github.com:GerHobbelt/twain_library.git
     fetchRecurseSubmodules = on-demand
     
-[submodule "libprecog"]
-    path = libprecog
-    url = git@github.com:GerHobbelt/PRLib.git
-    fetchRecurseSubmodules = on-demand
-    
 [submodule "snappy"]
     path = snappy
     url = git@github.com:GerHobbelt/snappy.git
@@ -5216,5 +5211,10 @@
 [submodule "luple"]
 	path = luple
 	url = git@github.com:GerHobbelt/luple.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "jpegview"]
+	path = jpegview
+	url = git@github.com:GerHobbelt/jpegview.git
     fetchRecurseSubmodules = on-demand
     
