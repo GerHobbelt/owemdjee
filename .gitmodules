@@ -5218,3 +5218,13 @@
 	url = git@github.com:GerHobbelt/jpegview.git
     fetchRecurseSubmodules = on-demand
     
+[submodule "libprecog"]
+	path = libprecog
+	url = git@github.com:GerHobbelt/PRLib.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "fastrange"]
+	path = fastrange
+	url = git@github.com:GerHobbelt/fastrange.git
+    fetchRecurseSubmodules = on-demand
+    
