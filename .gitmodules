@@ -5228,3 +5228,113 @@
 	url = git@github.com:GerHobbelt/fastrange.git
     fetchRecurseSubmodules = on-demand
     
+[submodule "rollinghashcpp"]
+	path = rollinghashcpp
+	url = git@github.com:GerHobbelt/rollinghashcpp.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "Hackers-Delight"]
+	path = Hackers-Delight
+	url = git@github.com:GerHobbelt/Hackers-Delight.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "sdcc"]
+	path = sdcc
+	url = git@github.com:GerHobbelt/sdcc.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "sally"]
+	path = sally
+	url = git@github.com:GerHobbelt/sally.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "bustache"]
+	path = bustache
+	url = git@github.com:GerHobbelt/bustache.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "rtl"]
+	path = rtl
+	url = git@github.com:GerHobbelt/rtl.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "FM-fast-match"]
+	path = FM-fast-match
+	url = git@github.com:GerHobbelt/FAsT-Match.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "tapkee"]
+	path = tapkee
+	url = git@github.com:GerHobbelt/tapkee.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "see-phit"]
+	path = see-phit
+	url = git@github.com:GerHobbelt/see-phit.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "cef-pdf"]
+	path = cef-pdf
+	url = git@github.com:GerHobbelt/cef-pdf.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "sse-popcount"]
+	path = sse-popcount
+	url = git@github.com:GerHobbelt/sse-popcount.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "readerwriterqueue"]
+	path = readerwriterqueue
+	url = git@github.com:GerHobbelt/readerwriterqueue.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "blazingmq"]
+	path = blazingmq
+	url = git@github.com:GerHobbelt/blazingmq.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "lockfree"]
+	path = lockfree
+	url = git@github.com:GerHobbelt/lockfree.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "sparsepp"]
+	path = sparsepp
+	url = git@github.com:GerHobbelt/sparsepp.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "FiberTaskingLib"]
+	path = FiberTaskingLib
+	url = git@github.com:GerHobbelt/FiberTaskingLib.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "state-threads"]
+	path = state-threads
+	url = git@github.com:GerHobbelt/state-threads.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "continuable"]
+	path = continuable
+	url = git@github.com:GerHobbelt/continuable.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "quantum"]
+	path = quantum
+	url = git@github.com:GerHobbelt/quantum.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "directorywatcher"]
+	path = directorywatcher
+	url = git@github.com:GerHobbelt/myoddweb.directorywatcher.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "MPMCQueue"]
+	path = MPMCQueue
+	url = git@github.com:GerHobbelt/MPMCQueue.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "SPSCQueue"]
+	path = SPSCQueue
+	url = git@github.com:GerHobbelt/SPSCQueue.git
+    fetchRecurseSubmodules = on-demand
+    

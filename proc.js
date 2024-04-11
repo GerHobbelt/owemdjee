@@ -23,7 +23,7 @@ let content = lines.map((l, i) => {
 		console.log("README found!", {l, repo_path, f})
 		return {l, repo_path, f};
 	}
-	const exts = [ 'md', 'rst', 'markdown', 'txt', 'html', null ];
+	const exts = [ 'md', 'rst', 'markdown', 'txt', 'html', 'asciidoc', null ];
 	for (let ext of exts) {
 		if (ext == null)
 			ext = '';
