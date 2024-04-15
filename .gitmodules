@@ -5338,3 +5338,21 @@
 	url = git@github.com:GerHobbelt/SPSCQueue.git
     fetchRecurseSubmodules = on-demand
     
+[submodule "libascii"]
+	path = libascii
+	url = git@github.com:GerHobbelt/libascii.git
+[submodule "tinyexr"]
+	path = tinyexr
+	url = git@github.com:GerHobbelt/tinyexr.git
+[submodule "Digital-Halftoning"]
+	path = Digital-Halftoning
+	url = git@github.com:GerHobbelt/Digital-Halftoning.git
+[submodule "libintrinsics"]
+	path = libintrinsics
+	url = git@github.com:GerHobbelt/libintrinsics.git
+[submodule "qHilbert"]
+	path = qHilbert
+	url = git@github.com:GerHobbelt/qHilbert.git
+[submodule "ruy"]
+	path = ruy
+	url = git@github.com:GerHobbelt/ruy.git
