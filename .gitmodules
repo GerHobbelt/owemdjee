@@ -5341,18 +5341,240 @@
 [submodule "libascii"]
 	path = libascii
 	url = git@github.com:GerHobbelt/libascii.git
+    fetchRecurseSubmodules = on-demand
+    
 [submodule "tinyexr"]
 	path = tinyexr
 	url = git@github.com:GerHobbelt/tinyexr.git
+    fetchRecurseSubmodules = on-demand
+    
 [submodule "Digital-Halftoning"]
 	path = Digital-Halftoning
 	url = git@github.com:GerHobbelt/Digital-Halftoning.git
+    fetchRecurseSubmodules = on-demand
+    
 [submodule "libintrinsics"]
 	path = libintrinsics
 	url = git@github.com:GerHobbelt/libintrinsics.git
+    fetchRecurseSubmodules = on-demand
+    
 [submodule "qHilbert"]
 	path = qHilbert
 	url = git@github.com:GerHobbelt/qHilbert.git
+    fetchRecurseSubmodules = on-demand
+    
 [submodule "ruy"]
 	path = ruy
 	url = git@github.com:GerHobbelt/ruy.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "half"]
+	path = half
+	url = git@github.com:GerHobbelt/half.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "WebView2Samples"]
+	path = WebView2Samples
+	url = git@github.com:GerHobbelt/WebView2Samples.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "WebView2Browser"]
+	path = WebView2Browser
+	url = git@github.com:GerHobbelt/WebView2Browser.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "fmath"]
+	path = fmath
+	url = git@github.com:GerHobbelt/fmath.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "fast_double_parser"]
+	path = fast_double_parser
+	url = git@github.com:GerHobbelt/fast_double_parser.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "fastops"]
+	path = fastops
+	url = git@github.com:GerHobbelt/fastops.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "nedtries"]
+	path = nedtries
+	url = git@github.com:GerHobbelt/nedtries.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "HashMap"]
+	path = HashMap
+	url = git@github.com:GerHobbelt/HashMap.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "StringZilla"]
+	path = StringZilla
+	url = git@github.com:GerHobbelt/StringZilla.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "better-enums"]
+	path = better-enums
+	url = git@github.com:GerHobbelt/better-enums.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "or-tools"]
+	path = or-tools
+	url = git@github.com:GerHobbelt/or-tools.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "theoretica"]
+	path = theoretica
+	url = git@github.com:GerHobbelt/theoretica.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "baobzi"]
+	path = baobzi
+	url = git@github.com:GerHobbelt/baobzi.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "tweeny"]
+	path = tweeny
+	url = git@github.com:GerHobbelt/tweeny.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "mlinterp"]
+	path = mlinterp
+	url = git@github.com:GerHobbelt/mlinterp.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "BayerToRGB"]
+	path = BayerToRGB
+	url = git@github.com:GerHobbelt/BayerToRGB.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "fityk"]
+	path = fityk
+	url = git@github.com:GerHobbelt/fityk.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "tinyspline"]
+	path = tinyspline
+	url = git@github.com:GerHobbelt/tinyspline.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "glm"]
+	path = glm
+	url = git@github.com:GerHobbelt/glm.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "tinynurbs"]
+	path = tinynurbs
+	url = git@github.com:GerHobbelt/tinynurbs.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "cel-cpp"]
+	path = cel-cpp
+	url = git@github.com:GerHobbelt/cel-cpp.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "cel-spec"]
+	path = cel-spec
+	url = git@github.com:GerHobbelt/cel-spec.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "cpu_features"]
+	path = cpu_features
+	url = git@github.com:GerHobbelt/cpu_features.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "tink-cc"]
+	path = tink-cc
+	url = git@github.com:GerHobbelt/tink-cc.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "robotstxt"]
+	path = robotstxt
+	url = git@github.com:GerHobbelt/robotstxt.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "brunsli"]
+	path = brunsli
+	url = git@github.com:GerHobbelt/brunsli.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "unsmear"]
+	path = unsmear
+	url = git@github.com:GerHobbelt/unsmear.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "knusperli"]
+	path = knusperli
+	url = git@github.com:GerHobbelt/knusperli.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "open-vcdiff"]
+	path = open-vcdiff
+	url = git@github.com:GerHobbelt/open-vcdiff.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "xdelta"]
+	path = xdelta
+	url = git@github.com:GerHobbelt/xdelta.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "fsst"]
+	path = fsst
+	url = git@github.com:GerHobbelt/fsst.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "SuperString"]
+	path = SuperString
+	url = git@github.com:GerHobbelt/SuperString.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "flare-floss"]
+	path = flare-floss
+	url = git@github.com:GerHobbelt/flare-floss.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "binary2strings"]
+	path = binary2strings
+	url = git@github.com:GerHobbelt/binary2strings.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "strings2"]
+	path = strings2
+	url = git@github.com:GerHobbelt/strings2.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "houdini"]
+	path = houdini
+	url = git@github.com:GerHobbelt/houdini.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "hescape"]
+	path = hescape
+	url = git@github.com:GerHobbelt/hescape.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "gumbo_pp"]
+	path = gumbo_pp
+	url = git@github.com:GerHobbelt/gumbo_pp.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "html5lib-tests"]
+	path = html5lib-tests
+	url = git@github.com:GerHobbelt/html5lib-tests.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "StronglyUniversalStringHashing"]
+	path = StronglyUniversalStringHashing
+	url = git@github.com:GerHobbelt/StronglyUniversalStringHashing.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "units"]
+	path = units
+	url = git@github.com:GerHobbelt/units.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "chewing_text_cud"]
+	path = chewing_text_cud
+	url = git@github.com:GerHobbelt/chewing_text_cud.git
+    fetchRecurseSubmodules = on-demand
+    
