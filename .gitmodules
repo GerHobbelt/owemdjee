@@ -5578,3 +5578,163 @@
 	url = git@github.com:GerHobbelt/chewing_text_cud.git
     fetchRecurseSubmodules = on-demand
     
+[submodule "tiny-utf8"]
+	path = tiny-utf8
+	url = git@github.com:GerHobbelt/tiny-utf8.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "duktape"]
+	path = duktape
+	url = git@github.com:GerHobbelt/duktape.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "cilantro"]
+	path = cilantro
+	url = git@github.com:GerHobbelt/cilantro.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "pcl"]
+	path = pcl
+	url = git@github.com:GerHobbelt/pcl.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "tcllib"]
+	path = tcllib
+	url = git@github.com:GerHobbelt/tcllib.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "EWAHBoolArray"]
+	path = EWAHBoolArray
+	url = git@github.com:GerHobbelt/EWAHBoolArray.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "RoaringBitmap"]
+	path = RoaringBitmap
+	url = git@github.com:GerHobbelt/RoaringBitmap.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "pillow-resize"]
+	path = pillow-resize
+	url = git@github.com:GerHobbelt/pillow-resize.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "riegeli"]
+	path = riegeli
+	url = git@github.com:GerHobbelt/riegeli.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "concat"]
+	path = concat
+	url = git@github.com:GerHobbelt/concat.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "MultipartEncoder"]
+	path = MultipartEncoder
+	url = git@github.com:GerHobbelt/MultipartEncoder.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "poplar-trie"]
+	path = poplar-trie
+	url = git@github.com:GerHobbelt/poplar-trie.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "fast-hex"]
+	path = fast-hex
+	url = git@github.com:GerHobbelt/fast-hex.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "libCSD"]
+	path = libCSD
+	url = git@github.com:GerHobbelt/libCSD.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "fasthashing"]
+	path = fasthashing
+	url = git@github.com:GerHobbelt/fasthashing.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "fuzzy-match"]
+	path = fuzzy-match
+	url = git@github.com:GerHobbelt/fuzzy-match.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "SheenBidi"]
+	path = SheenBidi
+	url = git@github.com:GerHobbelt/SheenBidi.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "hydraquill"]
+	path = hydraquill
+	url = git@github.com:GerHobbelt/hydraquill.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "mechascribe"]
+	path = mechascribe
+	url = git@github.com:GerHobbelt/mechascribe.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "RectangleBinPack"]
+	path = RectangleBinPack
+	url = git@github.com:GerHobbelt/RectangleBinPack.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "fontbm"]
+	path = fontbm
+	url = git@github.com:GerHobbelt/fontbm.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "bitrush-index"]
+	path = bitrush-index
+	url = git@github.com:GerHobbelt/bitrush-index.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "OZBCBitmap"]
+	path = OZBCBitmap
+	url = git@github.com:GerHobbelt/OZBCBitmap.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "mutable_rank_select"]
+	path = mutable_rank_select
+	url = git@github.com:GerHobbelt/mutable_rank_select.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "qjs-ffi"]
+	path = qjs-ffi
+	url = git@github.com:GerHobbelt/qjs-ffi.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "quickjs-ffi"]
+	path = quickjs-ffi
+	url = git@github.com:GerHobbelt/quickjs-ffi.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "qjs-modules"]
+	path = qjs-modules
+	url = git@github.com:GerHobbelt/qjs-modules.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "qjs-opencv"]
+	path = qjs-opencv
+	url = git@github.com:GerHobbelt/qjs-opencv.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "giflib-turbo"]
+	path = giflib-turbo
+	url = git@github.com:GerHobbelt/giflib-turbo.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "nanovg-qjs"]
+	path = nanovg-qjs
+	url = git@github.com:GerHobbelt/nanovg-qjs.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "qjs-sqlite3"]
+	path = qjs-sqlite3
+	url = git@github.com:GerHobbelt/qjs-sqlite3.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "fph-table"]
+	path = fph-table
+	url = git@github.com:GerHobbelt/fph-table.git
+    fetchRecurseSubmodules = on-demand
+    
