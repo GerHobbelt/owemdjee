@@ -6143,3 +6143,23 @@
 	url = git@github.com:GerHobbelt/ocr_eval_tools.git
     fetchRecurseSubmodules = on-demand
     
+[submodule "local_adaptive_binarization"]
+	path = local_adaptive_binarization
+	url = git@github.com:GerHobbelt/local_adaptive_binarization.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "Awesome-Image-Quality-Assessment"]
+	path = Awesome-Image-Quality-Assessment
+	url = git@github.com:GerHobbelt/Awesome-Image-Quality-Assessment.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "Awesome-Document-Image-Rectification"]
+	path = Awesome-Document-Image-Rectification
+	url = git@github.com:GerHobbelt/Awesome-Document-Image-Rectification.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "IMGUR5K-Handwriting-Dataset"]
+	path = IMGUR5K-Handwriting-Dataset
+	url = git@github.com:GerHobbelt/IMGUR5K-Handwriting-Dataset.git
+    fetchRecurseSubmodules = on-demand
+    
