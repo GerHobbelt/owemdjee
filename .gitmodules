@@ -6163,3 +6163,33 @@
 	url = git@github.com:GerHobbelt/IMGUR5K-Handwriting-Dataset.git
     fetchRecurseSubmodules = on-demand
     
+[submodule "ragel"]
+	path = ragel
+	url = git@github.com:GerHobbelt/ragel.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "colm"]
+	path = colm
+	url = git@github.com:GerHobbelt/colm.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "ModernCppStarter"]
+	path = ModernCppStarter
+	url = git@github.com:GerHobbelt/ModernCppStarter.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "libpostal"]
+	path = libpostal
+	url = git@github.com:GerHobbelt/libpostal.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "simdcomp"]
+	path = simdcomp
+	url = git@github.com:GerHobbelt/simdcomp.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "PDFGen"]
+	path = PDFGen
+	url = git@github.com:GerHobbelt/PDFGen.git
+    fetchRecurseSubmodules = on-demand
+    
