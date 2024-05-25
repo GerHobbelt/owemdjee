@@ -6193,3 +6193,163 @@
 	url = git@github.com:GerHobbelt/PDFGen.git
     fetchRecurseSubmodules = on-demand
     
+[submodule "lmfit"]
+	path = lmfit
+	url = git@github.com:GerHobbelt/lmfit.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "cv-VanishingPoint"]
+	path = cv-VanishingPoint
+	url = git@github.com:GerHobbelt/cv-VanishingPoint.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "FFME"]
+	path = FFME
+	url = git@github.com:GerHobbelt/FFME.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "InversePerspectiveMapping"]
+	path = InversePerspectiveMapping
+	url = git@github.com:GerHobbelt/InversePerspectiveMapping.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "libchiaroscuramente"]
+	path = libchiaroscuramente
+	url = git@github.com:GerHobbelt/libchiaroscuramente.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "tesseract-ocr-mailing-list-archive"]
+	path = tesseract-ocr-mailing-list-archive
+	url = git@github.com:GerHobbelt/tesseract-ocr-mailing-list-archive.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "tesseract-dev-mailing-list-archive"]
+	path = tesseract-dev-mailing-list-archive
+	url = git@github.com:GerHobbelt/tesseract-dev-mailing-list-archive.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "libzint"]
+	path = libzint
+	url = git@github.com:GerHobbelt/libzint.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "wolfsort"]
+	path = wolfsort
+	url = git@github.com:GerHobbelt/wolfsort.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "piposort"]
+	path = piposort
+	url = git@github.com:GerHobbelt/piposort.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "learnopencv"]
+	path = learnopencv
+	url = git@github.com:GerHobbelt/learnopencv.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "hilbert_hpp"]
+	path = hilbert_hpp
+	url = git@github.com:GerHobbelt/hilbert_hpp.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "r8brain-free-src"]
+	path = r8brain-free-src
+	url = git@github.com:GerHobbelt/r8brain-free-src.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "libInterpolate"]
+	path = libInterpolate
+	url = git@github.com:GerHobbelt/libInterpolate.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "pico_tree"]
+	path = pico_tree
+	url = git@github.com:GerHobbelt/pico_tree.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "ikd-Tree"]
+	path = ikd-Tree
+	url = git@github.com:GerHobbelt/ikd-Tree.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "imagehash"]
+	path = imagehash
+	url = git@github.com:GerHobbelt/imagehash.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "libjpegqs"]
+	path = libjpegqs
+	url = git@github.com:GerHobbelt/libjpegqs.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "butteraugli"]
+	path = butteraugli
+	url = git@github.com:GerHobbelt/butteraugli.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "epeg"]
+	path = epeg
+	url = git@github.com:GerHobbelt/epeg.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "nfft"]
+	path = nfft
+	url = git@github.com:GerHobbelt/nfft.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "icer_compression"]
+	path = icer_compression
+	url = git@github.com:GerHobbelt/icer_compression.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "efftw"]
+	path = efftw
+	url = git@github.com:GerHobbelt/efftw.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "kissfft"]
+	path = kissfft
+	url = git@github.com:GerHobbelt/kissfft.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "ffts"]
+	path = ffts
+	url = git@github.com:GerHobbelt/ffts.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "amd-fftw"]
+	path = amd-fftw
+	url = git@github.com:GerHobbelt/amd-fftw.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "jpeg2dct"]
+	path = jpeg2dct
+	url = git@github.com:GerHobbelt/jpeg2dct.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "RandomizedRedundantDCTDenoising"]
+	path = RandomizedRedundantDCTDenoising
+	url = git@github.com:GerHobbelt/RandomizedRedundantDCTDenoising.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "libkdtree"]
+	path = libkdtree
+	url = git@github.com:GerHobbelt/libkdtree.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "QALSH"]
+	path = QALSH
+	url = git@github.com:GerHobbelt/QALSH.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "nanoflann_dbscan"]
+	path = nanoflann_dbscan
+	url = git@github.com:GerHobbelt/nanoflann_dbscan.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "QALSH_Mem"]
+	path = QALSH_Mem
+	url = git@github.com:GerHobbelt/QALSH_Mem.git
+    fetchRecurseSubmodules = on-demand
+    
