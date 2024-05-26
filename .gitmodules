@@ -6353,3 +6353,18 @@
 	url = git@github.com:GerHobbelt/QALSH_Mem.git
     fetchRecurseSubmodules = on-demand
     
+[submodule "hilbert_curves"]
+	path = hilbert_curves
+	url = git@github.com:GerHobbelt/hilbert_curves.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "libhilbert"]
+	path = libhilbert
+	url = git@github.com:GerHobbelt/libhilbert.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "tiny-dnn"]
+	path = tiny-dnn
+	url = git@github.com:GerHobbelt/tiny-dnn.git
+    fetchRecurseSubmodules = on-demand
+    
