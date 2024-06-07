@@ -6368,3 +6368,58 @@
 	url = git@github.com:GerHobbelt/tiny-dnn.git
     fetchRecurseSubmodules = on-demand
     
+[submodule "u8g2"]
+	path = u8g2
+	url = git@github.com:GerHobbelt/u8g2.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "mcmd"]
+	path = mcmd
+	url = git@github.com:GerHobbelt/mcmd.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "tab"]
+	path = tab
+	url = git@github.com:GerHobbelt/tab.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "binary_bakery"]
+	path = binary_bakery
+	url = git@github.com:GerHobbelt/binary_bakery.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "oof"]
+	path = oof
+	url = git@github.com:GerHobbelt/oof.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "QuantLib"]
+	path = QuantLib
+	url = git@github.com:GerHobbelt/QuantLib.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "design-patterns-cpp"]
+	path = design-patterns-cpp
+	url = git@github.com:GerHobbelt/design-patterns-cpp.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "ormpp"]
+	path = ormpp
+	url = git@github.com:GerHobbelt/ormpp.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "trng4"]
+	path = trng4
+	url = git@github.com:GerHobbelt/trng4.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "remake"]
+	path = remake
+	url = git@github.com:GerHobbelt/remake.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "clp"]
+	path = clp
+	url = git@github.com:GerHobbelt/clp.git
+    fetchRecurseSubmodules = on-demand
+    
