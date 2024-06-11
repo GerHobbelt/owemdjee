@@ -6423,3 +6423,33 @@
 	url = git@github.com:GerHobbelt/clp.git
     fetchRecurseSubmodules = on-demand
     
+[submodule "openalpr"]
+	path = openalpr
+	url = git@github.com:GerHobbelt/openalpr.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "onnxruntime-extensions"]
+	path = onnxruntime-extensions
+	url = git@github.com:GerHobbelt/onnxruntime-extensions.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "krabsetw"]
+	path = krabsetw
+	url = git@github.com:GerHobbelt/krabsetw.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "onnxruntime-genai"]
+	path = onnxruntime-genai
+	url = git@github.com:GerHobbelt/onnxruntime-genai.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "uvw"]
+	path = uvw
+	url = git@github.com:GerHobbelt/uvw.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "WinToast"]
+	path = WinToast
+	url = git@github.com:GerHobbelt/WinToast.git
+    fetchRecurseSubmodules = on-demand
+    
