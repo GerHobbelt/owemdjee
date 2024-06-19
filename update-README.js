@@ -41,8 +41,14 @@ while (m) {
 	let key2 = localdir.replace(/[\\\/._-]+/g, '');
 	//console.log({id, key2, localdir, repo, url })
 
-	dict[id.toLowerCase()] = { id, key2, localdir, repo, url };
-	dict[key2.toLowerCase()] = { id, key2, localdir, repo, url };
+	if (dict[id.toLowerCase()] == undefined) {
+		dict[id.toLowerCase()] = { id, key2, localdir, repo, url };
+		//console.log({id, key2, localdir, repo, url })
+	}
+	if (dict[key2.toLowerCase()] == undefined) {
+		dict[key2.toLowerCase()] = { id, key2, localdir, repo, url };
+		//console.log({id, key2, localdir, repo, url })
+	}
 
 	m = mod_re.exec(module_spec);
 }
@@ -60,8 +66,14 @@ while (m) {
 	let key2 = localdir.replace('thirdparty/', '').replace(/[\\\/._-]+/g, '');
 	//console.log({id, key2, localdir, repo, url })
 
-	dict[id.toLowerCase()] = { id, key2, localdir, repo, url };
-	dict[key2.toLowerCase()] = { id, key2, localdir, repo, url };
+	if (dict[id.toLowerCase()] == undefined) {
+		dict[id.toLowerCase()] = { id, key2, localdir, repo, url };
+		//console.log({id, key2, localdir, repo, url })
+	}
+	if (dict[key2.toLowerCase()] == undefined) {
+		dict[key2.toLowerCase()] = { id, key2, localdir, repo, url };
+		//console.log({id, key2, localdir, repo, url })
+	}
 
 	m = mod_re.exec(module_spec2);
 }
@@ -277,7 +289,8 @@ txt = txt.replace(mod_re, (m, p1, p2, p3, pos) => {
 })
 .replace(/ -- +/g, ' -- ')                // hotfix
 
-if (undoc.length > 0) {
+// bugfix: also write a (possibly empty) undoc.txt to update that file for every README edit as this MAY impact the set of modules still to document.
+if (undoc.length > 0 || origTxt !== txt) {
 	console.log("Updating the UNDOC.TXT list...");
 	fs.writeFileSync("undoc.txt", undoc.join('\n') + '\n', "utf8");
 }

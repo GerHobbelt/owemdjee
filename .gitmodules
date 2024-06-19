@@ -6453,3 +6453,13 @@
 	url = git@github.com:GerHobbelt/WinToast.git
     fetchRecurseSubmodules = on-demand
     
+[submodule "nodesoup"]
+	path = nodesoup
+	url = git@github.com:GerHobbelt/nodesoup.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "quirc"]
+	path = quirc
+	url = git@github.com:GerHobbelt/quirc.git
+    fetchRecurseSubmodules = on-demand
+    

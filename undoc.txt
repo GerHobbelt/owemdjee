@@ -1,2 +1,1 @@
-DIR: **./paintingReorganize** -- - **paintingReorganize** [📁](./paintingReorganize) [🌐](https://github.com/GerHobbelt/paintingReorganize)
-DIR: **./wesanderson** -- - **wesanderson** [📁](./wesanderson) [🌐](https://github.com/GerHobbelt/wesanderson)
+

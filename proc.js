@@ -10,7 +10,7 @@ let lines = src.split('\n').map((l) => l.trim()).filter((l) => l.length > 0);
 let repos = lines.map((l) => l.replace(/^DIR: \*\*([^*]+)\*\*.*$/, '$1'));
 
 
-console.log({lines, repos})
+//console.log({lines, repos})
 
 
 let content = lines.map((l, i) => {
@@ -124,7 +124,9 @@ ${ rec.l }
 });
 
 		
-console.log({content})
+//console.log({content})
+
+console.log("**Done**    --> File 'undoc.out.md' has been updated.");
 
 fs.writeFileSync('undoc.out.md', output.join('\n'), 'utf8');
 
