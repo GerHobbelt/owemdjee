@@ -341,6 +341,23 @@ The other JavaScript engines considered are of varying size, performance and com
 
 ## IPC: flatbuffer et al for protocol design
 
+- **arrow** [📁](./arrow) [🌐](https://github.com/GerHobbelt/arrow) -- Apache Arrow is a development platform for in-memory analytics. It contains a set of technologies that enable big data systems to process and move data fast. The reference Arrow libraries contain many distinct software components:
+  
+  - Columnar vector and table-like containers (similar to data frames) supporting
+    flat or nested types
+  
+  - Conversions to and from other in-memory data structures
+  - Integration tests for verifying binary compatibility between the
+    implementations (e.g. sending data from Java to C++)
+  
+  - IO interfaces to local and remote filesystems
+  - Readers and writers for various widely-used file formats (such as Parquet, CSV)
+  - Reference-counted off-heap buffer memory management, for zero-copy memory
+    sharing and handling memory-mapped files
+  
+  - Self-describing binary wire formats (streaming and batch/file-like) for
+    remote procedure calls (RPC) and interprocess communication (IPC)
+
 - **avro** [📁](./avro) [🌐](https://github.com/GerHobbelt/avro) -- Apache Avro™ is a data serialization system.
 - **bebop** [📁](./bebop) [🌐](https://github.com/GerHobbelt/bebop) -- an extremely simple, fast, efficient, cross-platform serialization format. Bebop is a schema-based binary serialization technology, similar to Protocol Buffers or MessagePack. In particular, Bebop tries to be a good fit for client–server or distributed web apps that need something faster, more concise, and more type-safe than JSON or MessagePack, while also avoiding some of the complexity of Protocol Buffers, FlatBuffers and the like.
 - **bitsery** [📁](./bitsery) [🌐](https://github.com/GerHobbelt/bitsery) -- header only C++ binary serialization library, designed around the networking requirements for real-time data delivery, especially for games. All cross-platform requirements are enforced at compile time, so serialized data do not store any meta-data information and is as small as possible.
@@ -481,6 +498,23 @@ Also, we are currently more interested in *fast data serialization* then RPC *pe
 
 ### IPC: memory mapping
 
+- **arrow** [📁](./arrow) [🌐](https://github.com/GerHobbelt/arrow) -- Apache Arrow is a development platform for in-memory analytics. It contains a set of technologies that enable big data systems to process and move data fast. The reference Arrow libraries contain many distinct software components:
+  
+  - Columnar vector and table-like containers (similar to data frames) supporting
+    flat or nested types
+  
+  - Conversions to and from other in-memory data structures
+  - Integration tests for verifying binary compatibility between the
+    implementations (e.g. sending data from Java to C++)
+  
+  - IO interfaces to local and remote filesystems
+  - Readers and writers for various widely-used file formats (such as Parquet, CSV)
+  - Reference-counted off-heap buffer memory management, for zero-copy memory
+    sharing and handling memory-mapped files
+  
+  - Self-describing binary wire formats (streaming and batch/file-like) for
+    remote procedure calls (RPC) and interprocess communication (IPC)
+
 - **fmem** [📁](./fmem) [🌐](https://github.com/GerHobbelt/fmem) -- a cross-platform library for opening memory-backed libc streams (a la UNIX `fmemopen()`).
 - **fmemopen_windows** [📁](./fmemopen_windows) [🌐](https://github.com/GerHobbelt/fmemopen_windows) -- provides **FILE\*** handler based on memory backend for fread,fwrite etc. just like `fmemopen` on linux, but now on MS Windows.
 - **libmio** [📁](./libmio) [🌐](https://github.com/GerHobbelt/mio) -- An easy to use header-only cross-platform C++11 memory mapping library. `mio` has been created with the goal to be easily includable (i.e. no dependencies) in any C++ project that needs memory mapped file IO without the need to pull in Boost.
@@ -503,6 +537,7 @@ Also, we are currently more interested in *fast data serialization* then RPC *pe
 
 ## IPC: JSON for protocol design
 
+- **glaze** [📁](./glaze) [🌐](https://github.com/GerHobbelt/glaze) -- one of the fastest JSON libraries in the world. Glaze reads and writes from object memory, simplifying interfaces and offering incredible performance. Glaze also supports [BEVE](https://github.com/beve-org/beve) (binary efficient versatile encoding), CSV (comma separated value) and Binary data through the same API for maximum performance
 - **GoldFish-CBOR** [📁](./GoldFish-CBOR) [🌐](https://github.com/GerHobbelt/GoldFish) -- a fast JSON and CBOR streaming library, without using memory. GoldFish can parse and generate very large [JSON](http://json.org) or [CBOR](http://cbor.io) documents. It has some similarities to a [SAX](https://en.wikipedia.org/wiki/Simple_API_for_XML) parser, but doesn't use an event driven API, instead the user of the GoldFish interface is in control. GoldFish intends to be the easiest and one of the fastest JSON and CBOR streaming parser and serializer to use.
 - **json** [📁](./json) [🌐](https://github.com/GerHobbelt/nlohmann-json) -- N. Lohmann's JSON for Modern C++.
 - **jsoncons** [📁](./jsoncons) [🌐](https://github.com/GerHobbelt/jsoncons) -- a C++, header-only library for constructing [JSON](http://www.json.org) and JSON-like data formats such as [CBOR](http://cbor.io/). Compared to other JSON libraries, jsoncons has been designed to handle very large JSON texts. At its heart are SAX-style parsers and serializers. It supports reading an entire JSON text in memory in a variant-like structure. But it also supports efficient access to the underlying data using StAX-style pull parsing and push serializing. It supports incremental parsing into a user's preferred form, using information about user types provided by specializations of `json_type_traits`.
@@ -535,6 +570,7 @@ Also, we are currently more interested in *fast data serialization* then RPC *pe
 
 ## IPC: CBOR for protocol design
 
+- **glaze** [📁](./glaze) [🌐](https://github.com/GerHobbelt/glaze) -- one of the fastest JSON libraries in the world. Glaze reads and writes from object memory, simplifying interfaces and offering incredible performance. Glaze also supports [BEVE](https://github.com/beve-org/beve) (binary efficient versatile encoding), CSV (comma separated value) and Binary data through the same API for maximum performance
 - **GoldFish-CBOR** [📁](./GoldFish-CBOR) [🌐](https://github.com/GerHobbelt/GoldFish) -- a fast JSON and CBOR streaming library, without using memory. GoldFish can parse and generate very large [JSON](http://json.org) or [CBOR](http://cbor.io) documents. It has some similarities to a [SAX](https://en.wikipedia.org/wiki/Simple_API_for_XML) parser, but doesn't use an event driven API, instead the user of the GoldFish interface is in control. GoldFish intends to be the easiest and one of the fastest JSON and CBOR streaming parser and serializer to use.
 - **jsoncons** [📁](./jsoncons) [🌐](https://github.com/GerHobbelt/jsoncons) -- a C++, header-only library for constructing [JSON](http://www.json.org) and JSON-like data formats such as [CBOR](http://cbor.io/). Compared to other JSON libraries, jsoncons has been designed to handle very large JSON texts. At its heart are SAX-style parsers and serializers. It supports reading an entire JSON text in memory in a variant-like structure. But it also supports efficient access to the underlying data using StAX-style pull parsing and push serializing. It supports incremental parsing into a user's preferred form, using information about user types provided by specializations of `json_type_traits`.
 - **libcbor** [📁](./libcbor) [🌐](https://github.com/GerHobbelt/libcbor) -- a C library for parsing and generating [CBOR](https://tools.ietf.org/html/rfc7049), the general-purpose schema-less binary data format.
@@ -740,6 +776,23 @@ These hashes are for other purposes, e.g. fast lookup in dictionaries, fast appr
 
 
 ### RAM-/disk-based large queues and stores: B+tree, LSM-tree, ...
+
+- **arrow** [📁](./arrow) [🌐](https://github.com/GerHobbelt/arrow) -- Apache Arrow is a development platform for in-memory analytics. It contains a set of technologies that enable big data systems to process and move data fast. The reference Arrow libraries contain many distinct software components:
+  
+  - Columnar vector and table-like containers (similar to data frames) supporting
+    flat or nested types
+  
+  - Conversions to and from other in-memory data structures
+  - Integration tests for verifying binary compatibility between the
+    implementations (e.g. sending data from Java to C++)
+  
+  - IO interfaces to local and remote filesystems
+  - Readers and writers for various widely-used file formats (such as Parquet, CSV)
+  - Reference-counted off-heap buffer memory management, for zero-copy memory
+    sharing and handling memory-mapped files
+  
+  - Self-describing binary wire formats (streaming and batch/file-like) for
+    remote procedure calls (RPC) and interprocess communication (IPC)
 
 - **cpp-btree** [📁](./cpp-btree) [🌐](https://github.com/GerHobbelt/cpp-btree) -- in-memory B+-tree: an alternative for the priority queue as we expect the queue to grow huge, given past experience with Qiqqa.
 - **libmdbx** [📁](./libmdbx) [🌐](https://github.com/GerHobbelt/libmdbx) -- one of the fastest embeddable key-value ACID database without WAL. `libmdbx` surpasses the legendary LMDB in terms of reliability, features and performance.
@@ -1010,6 +1063,7 @@ See also [lzbench](https://github.com/inikep/lzbench).
 
 - **HDiffPatch** [📁](./HDiffPatch) [🌐](https://github.com/GerHobbelt/HDiffPatch) -- a library and command-line tools for Diff & Patch between binary files or directories(folders); cross-platform; runs fast; create small delta/differential; support large files and limit memory requires when diff & patch.
 - **libdist** [📁](./libdist) [🌐](https://github.com/GerHobbelt/distlib) -- string distance related functions (Damerau-Levenshtein, Jaro-Winkler, longest common substring & subsequence) implemented as SQLite run-time loadable extension, with UTF-8 support.
+- **libharry** [📁](./libharry) [🌐](https://github.com/GerHobbelt/harry) -- Harry - A Tool for Measuring String Similarity. The tool supports several common distance and kernel functions for strings as well as some excotic similarity measures.  The focus of Harry lies on implicit similarity measures, that is, comparison functions that do not give rise to an explicit vector space.  Examples of such similarity measures are the Levenshtein distance, the Jaro-Winkler distance or the spectrum kernel.
 - **open-vcdiff** [📁](./open-vcdiff) [🌐](https://github.com/GerHobbelt/open-vcdiff) -- an encoder and decoder for the VCDIFF format, as described in [RFC 3284](http://www.ietf.org/rfc/rfc3284.txt): The VCDIFF Generic Differencing and Compression Data Format.
 - **rollinghashcpp** [📁](./rollinghashcpp) [🌐](https://github.com/GerHobbelt/rollinghashcpp) -- randomized rolling hash functions in C++. This is a set of C++ classes implementing various recursive n-gram hashing techniques, also called rolling hashing (http://en.wikipedia.org/wiki/Rolling_hash), including Randomized Karp-Rabin (sometimes called Rabin-Karp), Hashing by Cyclic Polynomials (also known as Buzhash) and Hashing by Irreducible Polynomials.
 - **ssdeep** [📁](./ssdeep) [🌐](https://github.com/GerHobbelt/ssdeep) -- fuzzy hashing library, can be used to assist with identifying almost identical files using context triggered piecewise hashing.
@@ -2067,6 +2121,23 @@ i.e. breaking text into words when you _receive a textstream without spaces_. Al
 ## database "backend storage"
 
 - **arangodb** [📁](./arangodb) [🌐](https://github.com/GerHobbelt/arangodb) -- a scalable open-source multi-model database natively supporting graph, document and search. All supported data models & access patterns can be combined in queries allowing for maximal flexibility.
+- **arrow** [📁](./arrow) [🌐](https://github.com/GerHobbelt/arrow) -- Apache Arrow is a development platform for in-memory analytics. It contains a set of technologies that enable big data systems to process and move data fast. The reference Arrow libraries contain many distinct software components:
+  
+  - Columnar vector and table-like containers (similar to data frames) supporting
+    flat or nested types
+  
+  - Conversions to and from other in-memory data structures
+  - Integration tests for verifying binary compatibility between the
+    implementations (e.g. sending data from Java to C++)
+  
+  - IO interfaces to local and remote filesystems
+  - Readers and writers for various widely-used file formats (such as Parquet, CSV)
+  - Reference-counted off-heap buffer memory management, for zero-copy memory
+    sharing and handling memory-mapped files
+  
+  - Self-describing binary wire formats (streaming and batch/file-like) for
+    remote procedure calls (RPC) and interprocess communication (IPC)
+
 - **csv-parser** [📁](./csv-parser) [🌐](https://github.com/GerHobbelt/csv-parser) -- Vince's CSV Parser: there's plenty of other CSV parsers in the wild, but I had a hard time finding what I wanted. Inspired by Python's `csv` module, I wanted a library with **simple, intuitive syntax**. Furthermore, I wanted support for special use cases such as calculating statistics on very large files. Thus, this library was created with these following goals in mind.
 - **csvquote** [📁](./csvquote) [🌐](https://github.com/GerHobbelt/csvquote) -- smart and simple CSV processing on the command line. This program can be used at the start and end of a text processing pipeline so that regular unix command line tools can properly handle CSV data that contain commas and newlines inside quoted data fields. Without this program, embedded special characters would be incorrectly interpreted as separators when they are inside quoted data fields.
 - **datamash** [📁](./datamash) [🌐](https://github.com/GerHobbelt/datamash) -- GNU Datamash is a command-line program which performs basic numeric, textual and statistical operations on input textual data files. It is designed to be portable and reliable, and aid researchers to easily automate analysis pipelines, without writing code or even short scripts.
@@ -2118,6 +2189,7 @@ i.e. breaking text into words when you _receive a textstream without spaces_. Al
 
 - **SQLiteHistograms** [📁](./SQLiteHistograms) [🌐](https://github.com/GerHobbelt/SQLiteHistograms) -- an SQLite extension library for creating histogram tables, tables of ratio between histograms and interpolation tables of scatter point tables.
 - **sqliteodbc** [📁](./sqliteodbc) [🌐](https://github.com/GerHobbelt/sqliteodbc) -- SQLite ODBC Driver for the wonderful SQLite 2.8.* and SQLite 3.* Database Engine/Library.
+- **sqlite-parquet-vtable** [📁](./sqlite-parquet-vtable) [🌐](https://github.com/GerHobbelt/sqlite-parquet-vtable) -- an SQLite [virtual table](https://sqlite.org/vtab.html) extension to expose Parquet files as SQL tables. You may also find [csv2parquet](https://github.com/cldellow/csv2parquet/) useful. This [blog post](https://cldellow.com/2018/06/22/sqlite-parquet-vtable.html) provides some context on why you might use this.
 - **sqlite-stats** [📁](./sqlite-stats) [🌐](https://github.com/GerHobbelt/sqlite-stats) -- provides common statistical functions for SQLite.
 - **sqlite_wrapper** [📁](./sqlite_wrapper) [🌐](https://github.com/GerHobbelt/sqlite_wrapper) -- an easy-to-use, lightweight and concurrency-friendly SQLite wrapper written in C++17.
 - **sqlite_zstd_vfs** [📁](./sqlite_zstd_vfs) [🌐](https://github.com/GerHobbelt/sqlite_zstd_vfs) -- SQLite VFS extension providing streaming storage compression using Zstandard (Zstd), transparently compressing pages of the main database file as they're written out and later decompressing them as they're read in. It runs page de/compression on background threads and occasionally generates dictionaries to improve subsequent compression.
@@ -2160,6 +2232,23 @@ i.e. breaking text into words when you _receive a textstream without spaces_. Al
 
 
 ### LMDB, NoSQL and key/value stores
+
+- **arrow** [📁](./arrow) [🌐](https://github.com/GerHobbelt/arrow) -- Apache Arrow is a development platform for in-memory analytics. It contains a set of technologies that enable big data systems to process and move data fast. The reference Arrow libraries contain many distinct software components:
+  
+  - Columnar vector and table-like containers (similar to data frames) supporting
+    flat or nested types
+  
+  - Conversions to and from other in-memory data structures
+  - Integration tests for verifying binary compatibility between the
+    implementations (e.g. sending data from Java to C++)
+  
+  - IO interfaces to local and remote filesystems
+  - Readers and writers for various widely-used file formats (such as Parquet, CSV)
+  - Reference-counted off-heap buffer memory management, for zero-copy memory
+    sharing and handling memory-mapped files
+  
+  - Self-describing binary wire formats (streaming and batch/file-like) for
+    remote procedure calls (RPC) and interprocess communication (IPC)
 
 - **comdb2-bdb** [📁](./comdb2-bdb) [🌐](https://github.com/GerHobbelt/comdb2) -- a clustered RDBMS built on Optimistic Concurrency Control techniques. It provides multiple isolation levels, including Snapshot and Serializable Isolation.
 - **ctsa** [📁](./ctsa) [🌐](https://github.com/GerHobbelt/ctsa) -- a Univariate Time Series Analysis and ARIMA Modeling Package in ANSI C: CTSA is a C software package for univariate time series analysis. ARIMA and Seasonal ARIMA models have been added as of 10/30/2014. 07/24/2020 Update: SARIMAX and Auto ARIMA added. Documentation will be added in the coming days. Software is still in beta stage and older ARIMA and SARIMA functions are now superseded by SARIMAX.
@@ -2242,6 +2331,7 @@ i.e. breaking text into words when you _receive a textstream without spaces_. Al
 
 - **SQLiteHistograms** [📁](./SQLiteHistograms) [🌐](https://github.com/GerHobbelt/SQLiteHistograms) -- an SQLite extension library for creating histogram tables, tables of ratio between histograms and interpolation tables of scatter point tables.
 - **sqliteodbc** [📁](./sqliteodbc) [🌐](https://github.com/GerHobbelt/sqliteodbc) -- SQLite ODBC Driver for the wonderful SQLite 2.8.* and SQLite 3.* Database Engine/Library.
+- **sqlite-parquet-vtable** [📁](./sqlite-parquet-vtable) [🌐](https://github.com/GerHobbelt/sqlite-parquet-vtable) -- an SQLite [virtual table](https://sqlite.org/vtab.html) extension to expose Parquet files as SQL tables. You may also find [csv2parquet](https://github.com/cldellow/csv2parquet/) useful. This [blog post](https://cldellow.com/2018/06/22/sqlite-parquet-vtable.html) provides some context on why you might use this.
 - **sqlite-stats** [📁](./sqlite-stats) [🌐](https://github.com/GerHobbelt/sqlite-stats) -- provides common statistical functions for SQLite.
 - **sqlite_wrapper** [📁](./sqlite_wrapper) [🌐](https://github.com/GerHobbelt/sqlite_wrapper) -- an easy-to-use, lightweight and concurrency-friendly SQLite wrapper written in C++17.
 - **sqlite_zstd_vfs** [📁](./sqlite_zstd_vfs) [🌐](https://github.com/GerHobbelt/sqlite_zstd_vfs) -- SQLite VFS extension providing streaming storage compression using Zstandard (Zstd), transparently compressing pages of the main database file as they're written out and later decompressing them as they're read in. It runs page de/compression on background threads and occasionally generates dictionaries to improve subsequent compression.
@@ -2565,6 +2655,7 @@ Not just speech processing & speech recognition, but sometimes data is easier "v
 - **libfort** [📁](./libfort) [🌐](https://github.com/GerHobbelt/libfort) -- a simple crossplatform library to create formatted text tables.
 - **libqrencode** [📁](./libqrencode) [🌐](https://github.com/GerHobbelt/libqrencode) -- generate QRcodes from anything (e.g. URLs). `libqrencode` is a fast and compact library for encoding data in a QR Code, a 2D symbology that can be scanned by handy terminals such as a smartphone. The capacity of QR Code is up to 7000 digits or 4000 characters and has high robustness. `libqrencode` supports QR Code model 2, described in JIS (Japanese Industrial Standards) X0510:2004 or ISO/IEC 18004. Most of features in the specification are implemented: Numeric, alphabet, Japanese kanji (Shift-JIS) or any 8 bit code, Optimized encoding of a string, Structured-append of symbols, Micro QR Code (experimental).
 - **PDFGen** [📁](./PDFGen) [🌐](https://github.com/GerHobbelt/PDFGen) -- a simple PDF Creation/Generation library, contained in a single C-file with header and no external library dependencies. Useful for embedding into other programs that require rudimentary PDF output.
+- **quirc** [📁](./quirc) [🌐](https://github.com/GerHobbelt/quirc) -- a library for extracting and decoding QR codes, which are a type of high-density matrix barcodes, from images. It features a fast, robust and tolerant recognition algorithm. It can correctly recognise and decode QR codes which are rotated and/or oblique to the camera. It can also distinguish and decode multiple codes within the same image.
 - **sile-typesetter** [📁](./sile-typesetter) [🌐](https://github.com/GerHobbelt/sile) -- SILE is a typesetting system; its job is to produce beautiful printed documents. Conceptually, SILE is similar to TeX—from which it borrows some concepts and even syntax and algorithms—but the similarities end there. Rather than being a derivative of the TeX family SILE is a new typesetting and layout engine written from the ground up using modern technologies and borrowing some ideas from graphical systems such as Adobe InDesign.
 - **tabulate** [📁](./tabulate) [🌐](https://github.com/GerHobbelt/tabulate) -- Table Maker for Modern C++, for when you want to display table formatted data in the terminal/console text window.
 - **textflowcpp** [📁](./textflowcpp) [🌐](https://github.com/GerHobbelt/textflowcpp) -- a simple way to wrap a string at different line lengths, optionally with indents.
@@ -4039,6 +4130,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **poco** [📁](./poco) [🌐](https://github.com/GerHobbelt/poco) -- POCO (Portable Components) C++ Libraries are a collection of C++ class libraries, conceptually similar to the Java Class Library or the .NET Framework, focused on solutions to frequently-encountered practical problems.
 - **portable-snippets** [📁](./portable-snippets) [🌐](https://github.com/GerHobbelt/portable-snippets) -- a collection of public domain (CC0) code snippets written in C for performing various common tasks which are typically OS, architecture, and/or compiler-dependent.  Basically, our goal is to move those annoying preprocessor conditionals from your code to ours.
 - **preprocess-corpuses** [📁](./preprocess-corpuses) [🌐](https://github.com/GerHobbelt/preprocess) -- Pipelines for preprocessing corpora.
+- **quirc** [📁](./quirc) [🌐](https://github.com/GerHobbelt/quirc) -- a library for extracting and decoding QR codes, which are a type of high-density matrix barcodes, from images. It features a fast, robust and tolerant recognition algorithm. It can correctly recognise and decode QR codes which are rotated and/or oblique to the camera. It can also distinguish and decode multiple codes within the same image.
 - **RectangleBinPack** [📁](./RectangleBinPack) [🌐](https://github.com/GerHobbelt/RectangleBinPack) -- the source code used in "A Thousand Ways to Pack the Bin - A Practical Approach to Two-Dimensional Rectangle Bin Packing." The code can be
 - **remake** [📁](./remake) [🌐](https://github.com/GerHobbelt/remake) -- a patched GNU Make 4.3 sourcecode adding improved error reporting, tracing, target listing, graph visualization, profiling, and more. It also contains a [debugger](https://remake.readthedocs.io/en/latest/debugger.html).
 - **RuntimeCompiledCPlusPlus** [📁](./RuntimeCompiledCPlusPlus) [🌐](https://github.com/GerHobbelt/RuntimeCompiledCPlusPlus) -- Runtime-Compiled C++ (RCC++) is a way to reliably make major changes to your C++ code at runtime and see the results immediately. It's aimed at games development but could be useful in any industry where turnaround times are a bottleneck. RCC++ is primarily designed to shorten iteration times in development - developers can build their project, run it, make changes during runtime and see the results almost immediately. If needed, shipping code can [disable runtime compilation](https://github.com/RuntimeCompiledCPlusPlus/RuntimeCompiledCPlusPlus/wiki/Disabling-runtime-compilation) in a number of ways. RCC++ is not intended as a method to allow end users of a shipped binary to compile modifications, though with some work it can be used this way.
@@ -4181,6 +4273,23 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **argparse** [📁](./argparse) [🌐](https://github.com/GerHobbelt/argparse) -- simply include argparse.hpp and start parsing command-line arguments.
 - **armadillo** [📁](./armadillo) [🌐](https://github.com/GerHobbelt/armadillo-code) -- C++ library for linear algebra & scientific computing
 - **arrayfire** [📁](./arrayfire) [🌐](https://github.com/GerHobbelt/arrayfire) -- a general-purpose tensor library that simplifies the process of software development for the parallel architectures found in CPUs, GPUs, and other hardware acceleration devices. The library serves users in every technical computing market.
+- **arrow** [📁](./arrow) [🌐](https://github.com/GerHobbelt/arrow) -- Apache Arrow is a development platform for in-memory analytics. It contains a set of technologies that enable big data systems to process and move data fast. The reference Arrow libraries contain many distinct software components:
+  
+  - Columnar vector and table-like containers (similar to data frames) supporting
+    flat or nested types
+  
+  - Conversions to and from other in-memory data structures
+  - Integration tests for verifying binary compatibility between the
+    implementations (e.g. sending data from Java to C++)
+  
+  - IO interfaces to local and remote filesystems
+  - Readers and writers for various widely-used file formats (such as Parquet, CSV)
+  - Reference-counted off-heap buffer memory management, for zero-copy memory
+    sharing and handling memory-mapped files
+  
+  - Self-describing binary wire formats (streaming and batch/file-like) for
+    remote procedure calls (RPC) and interprocess communication (IPC)
+
 - **asio** [📁](./asio) [🌐](https://github.com/GerHobbelt/asio) -- a cross-platform C++ library for network and low-level I/O programming that provides developers with a consistent asynchronous model using a modern C++ approach.
   
   Note: (older) Boost.Asio is also included in Boost.
@@ -4598,6 +4707,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **gflags** [📁](./gflags) [🌐](https://github.com/GerHobbelt/gflags) -- google::flags library, used by other libs in this set.
 - **gibbs-lda** [📁](./gibbs-lda) [🌐](https://github.com/GerHobbelt/gibbs-lda) -- modified GibbsLDA++: A C/C++ Implementation of Latent Dirichlet Allocation by by Xuan-Hieu Phan and Cam-Tu Nguyen.
 - **giflib-turbo** [📁](./giflib-turbo) [🌐](https://github.com/GerHobbelt/giflib-turbo) -- GIFLIB-Turbo is a faster drop-in replacement for GIFLIB. The original GIF codecs were written for a much different world and took great pains to use as little memory as possible and to accommodate a slow and unreliable input stream of data. Those constraints are no longer a problem for the vast majority of users and they were hurting the performance. Another feature holding back the performance of the original GIFLIB was that the original codec was designed to work with image data a line at a time and used a separate LZW dictionary to manage the strings of repeating symbols. My codec uses the output image as the dictionary; this allows much faster 'unwinding' of the codes since they are all stored in the right direction to just be copied to the new location.
+- **glaze** [📁](./glaze) [🌐](https://github.com/GerHobbelt/glaze) -- one of the fastest JSON libraries in the world. Glaze reads and writes from object memory, simplifying interfaces and offering incredible performance. Glaze also supports [BEVE](https://github.com/beve-org/beve) (binary efficient versatile encoding), CSV (comma separated value) and Binary data through the same API for maximum performance
 - **glfw** [📁](./glfw) [🌐](https://github.com/GerHobbelt/glfw) -- GLFW is an Open Source, multi-platform library for OpenGL, OpenGL ES and Vulkan application development.  It provides a simple, platform-independent API for creating windows, contexts and surfaces, reading input, handling events, etc.
 - **glib2** [📁](./glib2) [🌐](https://github.com/GerHobbelt/glib) -- GLib is the low-level core library that forms the basis for projects such as GTK and GNOME.
 - **glm** [📁](./glm) [🌐](https://github.com/GerHobbelt/glm) -- [OpenGL Mathematics](http://glm.g-truc.net/) (*GLM*) is a header only C++ mathematics library for graphics software based on the [OpenGL Shading Language (GLSL) specifications](https://www.opengl.org/registry/doc/GLSLangSpec.4.50.diff.pdf). *GLM* provides classes and functions designed and implemented with the same naming conventions and functionality than *GLSL* so that anyone who knows *GLSL*, can use *GLM* as well in C++.
@@ -5510,6 +5620,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **QuickJS-C++-Wrapper2** [📁](./QuickJS-C++-Wrapper2) [🌐](https://github.com/GerHobbelt/quickjspp) -- QuickJSPP is QuickJS wrapper for C++. It allows you to easily embed Javascript engine into your program.
 - **quickjs-ffi** [📁](./quickjs-ffi) [🌐](https://github.com/GerHobbelt/quickjs-ffi) -- libffi wrapper for QuickJS. Now supports almost every features of C including primitive types, structs, callbacks and so on.
 - **quill-logging** [📁](./quill-logging) [🌐](https://github.com/GerHobbelt/quill) -- asynchronous cross-platform low latency logging library based on C++14/C++17.
+- **quirc** [📁](./quirc) [🌐](https://github.com/GerHobbelt/quirc) -- a library for extracting and decoding QR codes, which are a type of high-density matrix barcodes, from images. It features a fast, robust and tolerant recognition algorithm. It can correctly recognise and decode QR codes which are rotated and/or oblique to the camera. It can also distinguish and decode multiple codes within the same image.
 - **r8brain-free-src** [📁](./r8brain-free-src) [🌐](https://github.com/GerHobbelt/r8brain-free-src) -- high-quality professional audio sample rate converter (SRC) / resampler C++ library.  Features routines for SRC, both up- and downsampling, to/from any sample rate, including non-integer sample rates: it can be also used for conversion to/from SACD/DSD sample rates, and even go beyond that. Also suitable for fast general-purpose 1D time-series resampling / interpolation (with relaxed filter parameters).
 - **radamsa** [📁](./radamsa) [🌐](https://github.com/GerHobbelt/radamsa) -- Radamsa is a test case generator for robustness testing, a.k.a. a fuzzer. It is typically used to test how well a program can withstand malformed and potentially malicious inputs. It works by reading sample files of valid data and generating interestingly different outputs from them. The main selling points of radamsa are that it has already found a slew of bugs in programs that actually matter, it is easily scriptable and easy to get up and running.
 - **radon-tf** [📁](./radon-tf) [🌐](https://github.com/GerHobbelt/radon-tf) -- simple implementation of the radon transform. Faster when using more than one thread to execute it. No inverse function is provided. CPU implementation only.
@@ -5662,6 +5773,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 
 - **SQLiteHistograms** [📁](./SQLiteHistograms) [🌐](https://github.com/GerHobbelt/SQLiteHistograms) -- an SQLite extension library for creating histogram tables, tables of ratio between histograms and interpolation tables of scatter point tables.
 - **sqliteodbc** [📁](./sqliteodbc) [🌐](https://github.com/GerHobbelt/sqliteodbc) -- SQLite ODBC Driver for the wonderful SQLite 2.8.* and SQLite 3.* Database Engine/Library.
+- **sqlite-parquet-vtable** [📁](./sqlite-parquet-vtable) [🌐](https://github.com/GerHobbelt/sqlite-parquet-vtable) -- an SQLite [virtual table](https://sqlite.org/vtab.html) extension to expose Parquet files as SQL tables. You may also find [csv2parquet](https://github.com/cldellow/csv2parquet/) useful. This [blog post](https://cldellow.com/2018/06/22/sqlite-parquet-vtable.html) provides some context on why you might use this.
 - **sqlite-stats** [📁](./sqlite-stats) [🌐](https://github.com/GerHobbelt/sqlite-stats) -- provides common statistical functions for SQLite.
 - **sqlite_wrapper** [📁](./sqlite_wrapper) [🌐](https://github.com/GerHobbelt/sqlite_wrapper) -- an easy-to-use, lightweight and concurrency-friendly SQLite wrapper written in C++17.
 - **sqlite_zstd_vfs** [📁](./sqlite_zstd_vfs) [🌐](https://github.com/GerHobbelt/sqlite_zstd_vfs) -- SQLite VFS extension providing streaming storage compression using Zstandard (Zstd), transparently compressing pages of the main database file as they're written out and later decompressing them as they're read in. It runs page de/compression on background threads and occasionally generates dictionaries to improve subsequent compression.
@@ -6198,20 +6310,4 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 
 
 
-    
-[submodule "WinToast"]
-	path = WinToast
-	url = git@github.com:GerHobbelt/WinToast.git
-    fetchRecurseSubmodules = on-demand
-    
-[submodule "nodesoup"]
-	path = nodesoup
-	url = git@github.com:GerHobbelt/nodesoup.git
-    fetchRecurseSubmodules = on-demand
-    
-[submodule "quirc"]
-	path = quirc
-	url = git@github.com:GerHobbelt/quirc.git
-    fetchRecurseSubmodules = on-demand
-    
 

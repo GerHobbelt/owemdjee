@@ -6463,3 +6463,18 @@
 	url = git@github.com:GerHobbelt/quirc.git
     fetchRecurseSubmodules = on-demand
     
+[submodule "arrow"]
+	path = arrow
+	url = git@github.com:GerHobbelt/arrow.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "glaze"]
+	path = glaze
+	url = git@github.com:GerHobbelt/glaze.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "sqlite-parquet-vtable"]
+	path = sqlite-parquet-vtable
+	url = git@github.com:GerHobbelt/sqlite-parquet-vtable.git
+    fetchRecurseSubmodules = on-demand
+    
