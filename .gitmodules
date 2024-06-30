@@ -6478,3 +6478,13 @@
 	url = git@github.com:GerHobbelt/sqlite-parquet-vtable.git
     fetchRecurseSubmodules = on-demand
     
+[submodule "colorm"]
+	path = colorm
+	url = git@github.com:GerHobbelt/colorm.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "expected"]
+	path = expected
+	url = git@github.com:GerHobbelt/expected.git
+    fetchRecurseSubmodules = on-demand
+    
