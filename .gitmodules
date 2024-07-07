@@ -6488,3 +6488,8 @@
 	url = git@github.com:GerHobbelt/expected.git
     fetchRecurseSubmodules = on-demand
     
+[submodule "bin2cpp"]
+	path = bin2cpp
+	url = git@github.com:GerHobbelt/bin2cpp.git
+    fetchRecurseSubmodules = on-demand
+    
