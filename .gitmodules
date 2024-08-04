@@ -6498,3 +6498,58 @@
 	url = git@github.com:GerHobbelt/ink-stroke-modeler.git
     fetchRecurseSubmodules = on-demand
     
+[submodule "libnatspec"]
+	path = libnatspec
+	url = git@github.com:GerHobbelt/libnatspec.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "bzip2"]
+	path = bzip2
+	url = git@github.com:GerHobbelt/bzip2.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "bzip3"]
+	path = bzip3
+	url = git@github.com:GerHobbelt/bzip3.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "Turbo-Range-Coder"]
+	path = Turbo-Range-Coder
+	url = git@github.com:GerHobbelt/Turbo-Range-Coder.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "libbsc"]
+	path = libbsc
+	url = git@github.com:GerHobbelt/libbsc.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "easylzma"]
+	path = easylzma
+	url = git@github.com:GerHobbelt/easylzma.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "xz"]
+	path = xz
+	url = git@github.com:GerHobbelt/xz.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "7zip"]
+	path = 7zip
+	url = git@github.com:GerHobbelt/7zip.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "lzma"]
+	path = lzma
+	url = git@github.com:GerHobbelt/lzma.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "libsais"]
+	path = libsais
+	url = git@github.com:GerHobbelt/libsais.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "bxzstr"]
+	path = bxzstr
+	url = git@github.com:GerHobbelt/bxzstr.git
+    fetchRecurseSubmodules = on-demand
+    
