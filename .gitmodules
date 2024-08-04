@@ -6493,3 +6493,8 @@
 	url = git@github.com:GerHobbelt/bin2cpp.git
     fetchRecurseSubmodules = on-demand
     
+[submodule "ink-stroke-modeler"]
+	path = ink-stroke-modeler
+	url = git@github.com:GerHobbelt/ink-stroke-modeler.git
+    fetchRecurseSubmodules = on-demand
+    
