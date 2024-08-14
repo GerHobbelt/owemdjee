@@ -874,6 +874,7 @@ These hashes are for other purposes, e.g. fast lookup in dictionaries, fast appr
 ## Data Storage / Caching / IPC: loss-less data compression
 
 - **7zip** [📁](./7zip) [🌐](https://github.com/GerHobbelt/7zip) -- 7-Zip: [7-zip.org](https://7-zip.org)
+- **7-Zip-zstd** [📁](./7-Zip-zstd) [🌐](https://github.com/GerHobbelt/7-Zip-zstd) -- 7-Zip ZS with support of additional Codecs: Zstandard, Brotli, LZ4, LZ5, Lizard, Fast LZMA2
 - **brotli** [📁](./brotli) [🌐](https://github.com/GerHobbelt/brotli) -- compression
 - **bxzstr** [📁](./bxzstr) [🌐](https://github.com/GerHobbelt/bxzstr) -- a header-only library for using standard c++ iostreams to access streams compressed with ZLib, libBZ2, libLZMA, or libZstd (.gz, .bz2, .xz, and .zst files). For decompression, the format is automatically detected. For compression, the only parameter exposed is the compression algorithm.
 - **bzip2** [📁](./bzip2) [🌐](https://github.com/GerHobbelt/bzip2) -- bzip2 with minor modifications to original sources.
@@ -4312,6 +4313,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **1D-RGB-color-gradient** [📁](./1D-RGB-color-gradient) [🌐](https://github.com/GerHobbelt/1D-RGB-color-gradient) -- 1D (univariate) continous (smooth) [color gradients](https://en.wikipedia.org/wiki/Color_gradient) (colormaps) for gnuplot.
 - **2D-color-gradient-or-Procedural-texture** [📁](./2D-color-gradient-or-Procedural-texture) [🌐](https://github.com/GerHobbelt/2D-color-gradient-or-Procedural-texture) -- 2D continous (smooth) [color gradients](https://en.wikipedia.org/wiki/Color_gradient) (colormaps) for gnuplot.
 - **7zip** [📁](./7zip) [🌐](https://github.com/GerHobbelt/7zip) -- 7-Zip: [7-zip.org](https://7-zip.org)
+- **7-Zip-zstd** [📁](./7-Zip-zstd) [🌐](https://github.com/GerHobbelt/7-Zip-zstd) -- 7-Zip ZS with support of additional Codecs: Zstandard, Brotli, LZ4, LZ5, Lizard, Fast LZMA2
 - **abseil-cpp** [📁](./abseil-cpp) [🌐](https://github.com/GerHobbelt/abseil-cpp) -- a collection of C++ code (compliant to C++11) designed to augment the C++ standard library.
 - **adaptiveqf** [📁](./adaptiveqf) [🌐](https://github.com/GerHobbelt/adaptiveqf) -- [Adaptive Quotient Filter (AQF)](https://arxiv.org/abs/2107.02866) supports approximate membership testing and counting the occurrences of items in a data set. Like other AMQs, the AQF has a chance for false positives during queries. However, the AQF has the ability to adapt to false positives after they have occurred so they are not repeated. At the same time, the AQF maintains the benefits of a quotient filter, as it is small and fast, has good locality of reference, scales out of RAM to SSD, and supports deletions, counting, resizing, merging, and highly concurrent access.
 - **ADE-graph-management** [📁](./ADE-graph-management) [🌐](https://github.com/GerHobbelt/ade) -- ADE Framework is a graph construction, manipulation, and processing framework.  ADE Framework is suitable for organizing data flow processing and execution.

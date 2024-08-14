@@ -6553,3 +6553,8 @@
 	url = git@github.com:GerHobbelt/bxzstr.git
     fetchRecurseSubmodules = on-demand
     
+[submodule "7-Zip-zstd"]
+	path = 7-Zip-zstd
+	url = git@github.com:GerHobbelt/7-Zip-zstd.git
+    fetchRecurseSubmodules = on-demand
+    
