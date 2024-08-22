@@ -6558,3 +6558,9 @@
 	url = git@github.com:GerHobbelt/7-Zip-zstd.git
     fetchRecurseSubmodules = on-demand
     
+[submodule "Image-Smoothing-Algorithm-Based-on-Gradient-Analysis"]
+	path = Image-Smoothing-Algorithm-Based-on-Gradient-Analysis
+	url = git@github.com:GerHobbelt/Image-Smoothing-Algorithm-Based-on-Gradient-Analysis.git
+[submodule "lodepng"]
+	path = lodepng
+	url = git@github.com:GerHobbelt/lodepng.git
