@@ -6568,3 +6568,33 @@
 	url = git@github.com:GerHobbelt/lodepng.git
     fetchRecurseSubmodules = on-demand
     
+[submodule "float_compare"]
+	path = float_compare
+	url = git@github.com:GerHobbelt/float_compare.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "sse2neon"]
+	path = sse2neon
+	url = git@github.com:GerHobbelt/sse2neon.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "reflect-cpp"]
+	path = reflect-cpp
+	url = git@github.com:GerHobbelt/reflect-cpp.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "msgpack-c"]
+	path = msgpack-c
+	url = git@github.com:GerHobbelt/msgpack-c.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "libbson"]
+	path = libbson
+	url = git@github.com:GerHobbelt/libbson.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "flatbuffers"]
+	path = flatbuffers
+	url = git@github.com:GerHobbelt/flatbuffers.git
+    fetchRecurseSubmodules = on-demand
+    

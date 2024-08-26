@@ -120,8 +120,7 @@ For that purpose, this repo is a *solution*, though -- granted -- a *sub-optimal
 
 # Intent
 
-<!--```toc
-```-->
+<!--```toc```-->
 
 * [TOC](#intent)
     * [Inter-process communications (IPC)](#inter-process-communications-ipc)
@@ -257,8 +256,7 @@ The other JavaScript engines considered are of varying size, performance and com
 
 # Libraries we're looking at for this *intent*:
 
-<!--```toc
-```-->
+<!--```toc```-->
 
 * [TOC](#libraries-we-re-looking-at-for-this-intent)
     * [IPC: flatbuffer et al for protocol design](#ipc-flatbuffer-et-al-for-protocol-design)
@@ -383,15 +381,22 @@ The other JavaScript engines considered are of varying size, performance and com
 - **bitsery** [📁](./bitsery) [🌐](https://github.com/GerHobbelt/bitsery) -- header only C++ binary serialization library, designed around the networking requirements for real-time data delivery, especially for games. All cross-platform requirements are enforced at compile time, so serialized data do not store any meta-data information and is as small as possible.
 - **capnproto** [📁](./capnproto) [🌐](https://github.com/GerHobbelt/capnproto) -- Cap'n Proto is an insanely fast data interchange format and capability-based RPC system. Think JSON, except binary. Or think [Protocol Buffers](https://github.com/google/protobuf), except faster.
 - **cereal** [📁](./cereal) [🌐](https://github.com/GerHobbelt/cereal) -- C++11 serialization library
+- **flatbuffers** [📁](./flatbuffers) [🌐](https://github.com/GerHobbelt/flatbuffers) -- a cross platform serialization library architected for maximum memory efficiency. It allows you to directly access serialized data without parsing/unpacking it first, while still having great forwards/backwards compatibility.
 - **GoldFish-CBOR** [📁](./GoldFish-CBOR) [🌐](https://github.com/GerHobbelt/GoldFish) -- a fast JSON and CBOR streaming library, without using memory. GoldFish can parse and generate very large [JSON](http://json.org) or [CBOR](http://cbor.io) documents. It has some similarities to a [SAX](https://en.wikipedia.org/wiki/Simple_API_for_XML) parser, but doesn't use an event driven API, instead the user of the GoldFish interface is in control. GoldFish intends to be the easiest and one of the fastest JSON and CBOR streaming parser and serializer to use.
 - **ion-c** [📁](./ion-c) [🌐](https://github.com/GerHobbelt/ion-c) -- a C implementation of the [Ion data notation](http://amzn.github.io/ion-docs). Amazon Ion is a richly-typed, self-describing, hierarchical data serialization format offering interchangeable binary and text representations. The text format (a superset of JSON) is easy to read and author, supporting rapid prototyping. The binary representation is efficient to store, transmit, and skip-scan parse. The rich type system provides unambiguous semantics for long-term preservation of data which can survive multiple generations of software evolution.
+- **libbson** [📁](./libbson) [🌐](https://github.com/GerHobbelt/libbson) -- a library providing useful routines related to building, parsing, and iterating BSON documents.
 - **libnop** [📁](./libnop) [🌐](https://github.com/GerHobbelt/libnop) -- libnop (C++ Native Object Protocols) is a header-only library for serializing and deserializing C++ data types without external code generators or runtime support libraries. The only mandatory requirement is a compiler that supports the C++14 standard.
 - **libsmile** [📁](./libsmile) [🌐](https://github.com/GerHobbelt/libsmile) -- C implementation of the Smile binary format (https://github.com/FasterXML/smile-format-specification).
+  
+  - **discouraged**; reason: for binary format record serialization we will be using `bebop` or `reflect-cpp` exclusively. All other communications will be JSON/JSON5/XML based.
+
 - **mosquitto** [📁](./mosquitto) [🌐](https://github.com/GerHobbelt/mosquitto) -- Eclipse Mosquitto is an open source implementation of a server for version 5.0, 3.1.1, and 3.1 of the MQTT protocol. It also includes a C and C++ client library, and the `mosquitto_pub` and `mosquitto_sub` utilities for publishing and subscribing.
+- **msgpack-c** [📁](./msgpack-c) [🌐](https://github.com/GerHobbelt/msgpack-c) -- [MessagePack](http://msgpack.org/) (a.k.a. `msgpack`) for C/C++ is an efficient binary serialization format, which lets you exchange data among multiple languages like JSON, except that it's faster and smaller. Small integers are encoded into a single byte and short strings require only one extra byte in addition to the strings themselves.
 - **protobuf** [📁](./protobuf) [🌐](https://github.com/GerHobbelt/protobuf) -- Protocol Buffers - Google's data interchange format that is a language-neutral, platform-neutral, extensible mechanism for serializing structured data.
   
   - **☹discouraged🤧**; reason: relatively slow run-time and (in my opinion) rather ugly & convoluted approach at build time. Has too much of a Java/CorporateProgramming smell, which has not lessened over the years, unfortunately.
 
+- **reflect-cpp** [📁](./reflect-cpp) [🌐](https://github.com/GerHobbelt/reflect-cpp) -- a C++-20 library for **fast serialization, deserialization and validation** using reflection, similar to [pydantic](https://github.com/pydantic/pydantic) in Python, [serde](https://github.com/serde-rs) in Rust, [encoding](https://github.com/golang/go/tree/master/src/encoding) in Go or [aeson](https://github.com/haskell/aeson/tree/master) in Haskell. As the aforementioned libraries are among the most widely used in the respective languages, reflect-cpp fills an important gap in C++ development. It reduces boilerplate code and increases code safety.
 - **serde-cpp** [📁](./serde-cpp) [🌐](https://github.com/GerHobbelt/serde-cpp) -- serialization framework for C++17, inspired by Rust [serde](https://serde.rs/) project.
 - **serdepp** [📁](./serdepp) [🌐](https://github.com/GerHobbelt/serdepp) -- a C++17 low cost serialize deserialize adaptor library like Rust [serde](https://serde.rs/) project.
 - **swig** [📁](./swig) [🌐](https://github.com/GerHobbelt/swig) -- SWIG (Simplified Wrapper and Interface Generator) is a software development tool (code generator) that connects programs written in C and C++ with a variety of high-level programming languages. It is used for building scripting language interfaces to C and C++ programs. SWIG simplifies development by largely automating the task of scripting language integration, allowing developers and users to focus on more important problems.
@@ -400,13 +405,8 @@ The other JavaScript engines considered are of varying size, performance and com
 
 - **thrift** [📁](./thrift) [🌐](https://github.com/GerHobbelt/thrift) -- Apache Thrift is a lightweight, language-independent software stack for point-to-point RPC implementation. Thrift provides clean abstractions and implementations for data transport, data serialization, and application level processing. The code generation system takes a simple definition language as input and generates code across programming languages that uses the abstracted stack to build interoperable RPC clients and servers.
 - **velocypack** [📁](./velocypack) [🌐](https://github.com/GerHobbelt/velocypack) -- a fast and compact format for serialization and storage.  These days, JSON (JavaScript Object Notation, see ECMA-404) is used in many cases where data has to be exchanged. Lots of protocols between different services use it, databases store JSON (document stores naturally, but others increasingly as well). It is popular, because it is simple, human-readable, and yet surprisingly versatile, despite its limitations. At the same time there is a plethora of alternatives ranging from XML over Universal Binary JSON, MongoDB's BSON, MessagePack, BJSON (binary JSON), Apache Thrift till Google's protocol buffers and ArangoDB's shaped JSON. When looking into this, we were surprised to find that none of these formats manages to combine compactness, platform independence, fast access to sub-objects and rapid conversion from and to JSON.
-- ZeroMQ a.k.a. ØMQ:
-  
-  - **cppzmq** [📁](./cppzmq) [🌐](https://github.com/GerHobbelt/cppzmq) -- header-only C++ binding for libzmq.
-  - **libCZMQ** [📁](./libCZMQ) [🌐](https://github.com/GerHobbelt/czmq) -- High-level C binding for ØMQ. (http://czmq.zeromq.org/)
-  - **libzmq** [📁](./libzmq) [🌐](https://github.com/GerHobbelt/libzmq) -- ZeroMQ core engine in C++, implements [ZMTP/3.1](https://zguide.zeromq.org/).
-
 - **zpp_bits** [📁](./zpp_bits) [🌐](https://github.com/GerHobbelt/zpp_bits) -- A modern, *fast*, C++20 binary serialization and RPC library, with just one header file.See also the [benchmark](https://github.com/GerHobbelt/zpp_bits#benchmark).
+- ZeroMQ a.k.a. ØMQ:
 - ~~**FastBinaryEncoding** [🌐](https://github.com/chronoxor/FastBinaryEncoding)~~
   
   - **removed**; reason: for binary format record serialization we will be using `bebop` exclusively. All other communications will be JSON/JSON5/XML based.
@@ -418,10 +418,6 @@ The other JavaScript engines considered are of varying size, performance and com
 - ~~**flatcc** [🌐](https://github.com/dvidelabs/flatcc)~~
   
   - **removed**; reason: see `flatbuffers`. When we don't dig `flatbuffers`, then `flatcc` is automatically pretty useless to us. Let's rephrase that professionally: "`flatcc` has moved out of scope for our project."
-
-- ~~**libsmile** [🌐](https://github.com/pierre/libsmile) -- ["Smile" format](https://en.wikipedia.org/wiki/Smile_%28data_interchange_format%29), i.e. a compact binary JSON format~~
-  
-  - **removed**; reason: for binary format record serialization we will be using `bebop` exclusively. All other communications will be JSON/JSON5/XML based.
 
 
 
@@ -569,7 +565,7 @@ Also, we are currently more interested in *fast data serialization* then RPC *pe
 - **yyjson** [📁](./yyjson) [🌐](https://github.com/GerHobbelt/yyjson) -- allegedly the fastest JSON library in C.
 - ~~**libsmile** [🌐](https://github.com/pierre/libsmile) -- ["Smile" format](https://en.wikipedia.org/wiki/Smile_%28data_interchange_format%29), i.e. a compact binary JSON format~~
   
-  - **removed**; reason: I think we'd better standardize on using one or more of these:
+  - **discouraged**; reason: for binary format record serialization we will be using `bebop` or `reflect-cpp` exclusively. All other communications will be JSON/JSON5/XML based. I think we'd better standardize on using one or more of these:
     
     - custom binary exchange formats for those interchanges that demand highest performance and MAY carry large transfer loads.
     - JSON
@@ -760,7 +756,7 @@ These hashes are for other purposes, e.g. fast lookup in dictionaries, fast appr
 - **xxHash** [📁](./xxHash) [🌐](https://github.com/GerHobbelt/xxHash) -- fast (non-cryptographic) hash algorithm
 - ~~**circlehash** [📁](./circlehash) [🌐](https://github.com/GerHobbelt/circlehash) -- a family of non-cryptographic hash functions that pass every test in SMHasher.~~
   
-  - **removed**; reason: written in Go; port to C/C++ is easy but just too much effort for too little gain; when we're looking for *fast* non-cryptographic hashes like this, we don't it to include 128-bit / 64-bit multiplications as those are generally slower than shift, add, xor. While this will surely be a nice hash, it doesn't fit our purposes.
+  - **removed**; reason: written in Go; port to C/C++ is easy but just too much effort for too little gain; when we're looking for *fast* non-cryptographic hashes like this, we don't appreciate it to include 128-bit / 64-bit multiplications as those are generally slower than shift, add, xor. While this will surely be a nice hash, it doesn't fit our purposes.
 
 
 
@@ -922,10 +918,6 @@ These hashes are for other purposes, e.g. fast lookup in dictionaries, fast appr
 - **xz** [📁](./xz) [🌐](https://github.com/GerHobbelt/xz) -- XZ Utils provide a general-purpose data-compression library plus command-line tools. The native file format is the .xz format, but also the legacy .lzma format is supported. The .xz format supports multiple compression algorithms, which are called "filters" in the context of XZ Utils. The primary filter is currently LZMA2. With typical files, XZ Utils create about 30 % smaller files than gzip.
 - **zfp-compressed-arrays** [📁](./zfp-compressed-arrays) [🌐](https://github.com/GerHobbelt/zfp) -- zfp is a compressed format for representing multidimensional floating-point and integer arrays. zfp provides compressed-array classes that support high throughput read and write random access to individual array elements. zfp also supports serial and parallel (OpenMP and CUDA) compression of whole arrays, e.g., for applications that read and write large data sets to and from disk.
 - **zstd** [📁](./zstd) [🌐](https://github.com/GerHobbelt/zstd) -- Zstandard, a.k.a. `zstd`, is a fast lossless compression algorithm, targeting real-time compression scenarios at zlib-level and better compression ratios.
-- ~~**bzip2** [🌐](https://github.com/nemequ/bzip2)~~
-  
-  - **removed**; reason: see `lzo` below. When we want this, we can go through [Apache Tika](https://tika.apache.org/) or other thirdparty pipelines.
-
 - ~~**lzo** [🌐](https://github.com/nemequ/lzo)~~
   
   - **removed**; reason: gone as part of the first round of compression libraries' cleanup: we intend to support lz4 for fast work, plus zstd and *maybe* brotli for higher compression ratios, while we won't bother with anything else: the rest can be dealt with through [Apache Tika](https://tika.apache.org/) or other thirdparty pipelines when we need to read (or write) them. See also: [7zip-Zstd](https://github.com/mcmilk/7-Zip-zstd), which is what I use for accessing almost all compressed material anywhere.
@@ -2008,6 +2000,7 @@ i.e. breaking text into words when you _receive a textstream without spaces_. Al
 - **fastrange** [📁](./fastrange) [🌐](https://github.com/GerHobbelt/fastrange) -- a fast alternative to the modulo reduction. [It has accelerated some operations in Google's Tensorflow by 10% to 20%](https://github.com/tensorflow/tensorflow/commit/a47a300185026fe7829990def9113bf3a5109fed). Further reading : http://lemire.me/blog/2016/06/27/a-fast-alternative-to-the-modulo-reduction/ See also: Daniel Lemire, [Fast Random Integer Generation in an Interval](https://arxiv.org/abs/1805.10941), ACM Transactions on Modeling and Computer Simulation, January 2019 Article No. 3 https://doi.org/10.1145/3230636
 - **figtree** [📁](./figtree) [🌐](https://github.com/GerHobbelt/figtree) -- FIGTree is a library that provides a C/C++ and MATLAB interface for speeding up the computation of the Gauss Transform.
 - **fityk** [📁](./fityk) [🌐](https://github.com/GerHobbelt/fityk) -- a program for nonlinear fitting of analytical functions (especially peak-shaped) to data (usually experimental data). To put it differently, it is primarily peak fitting software, but can handle other types of functions as well. Apart from the actual fitting, the program helps with data processing and provides ergonomic graphical interface (and also command line interface and scripting API -- but if the program is popular in some fields, it's thanks to its graphical interface). It is reportedly__ used in crystallography, chromatography, photoluminescence and photoelectron spectroscopy, infrared and Raman spectroscopy, to name but a few. Fityk offers various nonlinear fitting methods, simple background subtraction and other manipulations to the dataset, easy placement of peaks and changing of peak parameters, support for analysis of series of datasets, automation of common tasks with scripts, and much more.
+- **float_compare** [📁](./float_compare) [🌐](https://github.com/GerHobbelt/float_compare) -- C++ header providing floating point value comparators with user-specifiable tolerances and behaviour.
 - **fmath** [📁](./fmath) [🌐](https://github.com/GerHobbelt/fmath) -- fast approximate function of exponential function exp and log: includes `fmath::log`, `fmath::exp`, `fmath::expd`.
 - **gmt** [📁](./gmt) [🌐](https://github.com/GerHobbelt/gmt) -- GMT (Generic Mapping Tools) is an open source collection of about 100 command-line tools for manipulating geographic and Cartesian data sets (including filtering, trend fitting, gridding, projecting, etc.) and producing high-quality illustrations ranging from simple x-y plots via contour maps to artificially illuminated surfaces, 3D perspective views and animations. The GMT supplements add another 50 more specialized and discipline-specific tools. GMT supports over 30 map projections and transformations and requires support data such as [GSHHG](http://www.soest.hawaii.edu/pwessel/gshhg/) coastlines, rivers, and political boundaries and optionally [DCW](http://www.soest.hawaii.edu/pwessel/dcw) country polygons.
 - **half** [📁](./half) [🌐](https://github.com/GerHobbelt/half) -- IEEE 754-based half-precision floating point library forked from http://half.sourceforge.net/. This is a C++ header-only library to provide an IEEE 754 conformant 16-bit half-precision floating-point type along with corresponding arithmetic operators, type conversions and common mathematical functions. It aims for both efficiency and ease of use, trying to accurately mimic the behaviour of the built-in floating-point types at the best performance possible.
@@ -2040,6 +2033,7 @@ i.e. breaking text into words when you _receive a textstream without spaces_. Al
 - **Sophus** [📁](./Sophus) [🌐](https://github.com/GerHobbelt/Sophus) -- a C++ implementation of Lie groups commonly used for 2d and 3d geometric problems (i.e. for Computer Vision or Robotics applications). Among others, this package includes the special orthogonal groups SO(2) and SO(3) to present rotations in 2d and 3d as well as the special Euclidean group SE(2) and SE(3) to represent rigid body transformations (i.e. rotations and translations) in 2d and 3d.
 - **spline** [📁](./spline) [🌐](https://github.com/GerHobbelt/spline) -- a lightweight C++ cubic spline interpolation library.
 - **splinter** [📁](./splinter) [🌐](https://github.com/GerHobbelt/splinter) -- SPLINTER (SPLine INTERpolation) is a library for *multivariate function approximation with splines*. The library can be used for function approximation, regression, data smoothing, data reduction, and much more. Spline approximations are represented by a speedy C++ implementation of the tensor product B-spline. The B-spline consists of piecewise polynomial basis functions, offering a high flexibility and smoothness. The B-spline can be fitted to data using ordinary least squares (OLS), possibly with regularization. The library also offers construction of penalized splines (P-splines).
+- **sse2neon** [📁](./sse2neon) [🌐](https://github.com/GerHobbelt/sse2neon) -- converts Intel SSE intrinsics to Arm/Aarch64 NEON intrinsics, shortening the time needed to get an Arm working program that then can be used to extract profiles and to identify hot paths in the code.
 - **sse-popcount** [📁](./sse-popcount) [🌐](https://github.com/GerHobbelt/sse-popcount) -- SIMD popcount; sample programs for my article http://0x80.pl/articles/sse-popcount.html / Faster Population Counts using AVX2 Instructions (https://arxiv.org/abs/1611.07612)
 - **theoretica** [📁](./theoretica) [🌐](https://github.com/GerHobbelt/theoretica) -- a numerical and automatic math library for scientific research and graphical applications. Theoretica is a header-only mathematical library which provides algorithms for **systems simulation**, **statistical analysis** of lab data and **numerical approximation**, using a **functional** oriented paradigm to mimic **mathematical notation** and formulas. The aim of the library is to provide _simple_ access to powerful algorithms while keeping an _elegant_ and _transparent_ interface, enabling the user to focus on the problem at hand.
 - **tinynurbs** [📁](./tinynurbs) [🌐](https://github.com/GerHobbelt/tinynurbs) -- a lightweight header-only C++14 library for Non-Uniform Rational B-Spline curves and surfaces. The API is simple to use and the code is readable while being efficient.
@@ -3047,6 +3041,7 @@ The additional (and more important) reason to ditch CPython from the R&D set is 
 - **fast_float** [📁](./fast_float) [🌐](https://github.com/GerHobbelt/fast_float) -- fast and exact implementation of the C++ `from_chars` functions for float and double types: 4x faster than `strtod`
 - **fastrange** [📁](./fastrange) [🌐](https://github.com/GerHobbelt/fastrange) -- a fast alternative to the modulo reduction. [It has accelerated some operations in Google's Tensorflow by 10% to 20%](https://github.com/tensorflow/tensorflow/commit/a47a300185026fe7829990def9113bf3a5109fed). Further reading : http://lemire.me/blog/2016/06/27/a-fast-alternative-to-the-modulo-reduction/ See also: Daniel Lemire, [Fast Random Integer Generation in an Interval](https://arxiv.org/abs/1805.10941), ACM Transactions on Modeling and Computer Simulation, January 2019 Article No. 3 https://doi.org/10.1145/3230636
 - **FastString** [📁](./FastString) [🌐](https://github.com/GerHobbelt/FastString) -- fast, in stack, fixed size string implementation with **constexpr noexcept** constructors and accessors. **FastString** improves **memory locality and latency** of strings by avoiding heap allocations.
+- **float_compare** [📁](./float_compare) [🌐](https://github.com/GerHobbelt/float_compare) -- C++ header providing floating point value comparators with user-specifiable tolerances and behaviour.
 - **fluxsort** [📁](./fluxsort) [🌐](https://github.com/GerHobbelt/fluxsort) -- is a stable quicksort / mergesort hybrid algorithm. The sort is stable, adaptive, branchless, and has exceptional performance.
 - **fnmatch** [📁](./fnmatch) [🌐](https://github.com/GerHobbelt/fnmatch) -- match a filename string or a pathname using POSIX wildcards.
 - **highway** [📁](./highway) [🌐](https://github.com/GerHobbelt/highway) -- dependency of JpegXL
@@ -3060,16 +3055,19 @@ The additional (and more important) reason to ditch CPython from the R&D set is 
 - **lockfree** [📁](./lockfree) [🌐](https://github.com/GerHobbelt/lockfree) -- a collection of lock-free data structures written in standard C++11 and suitable for all platforms - from deeply embedded to HPC.
 - **memory** [📁](./memory) [🌐](https://github.com/GerHobbelt/memory) -- the C++ STL allocator model has various flaws. For example, they are fixed to a certain type, because they are almost necessarily required to be templates. So you can't easily share a single allocator for multiple types. In addition, you can only get a copy from the containers and not the original allocator object. At least with C++11 they are allowed to be stateful and so can be made object not instance based. But still, the model has many flaws. Over the course of the years many solutions have been proposed, for example [EASTL]. This library is another. But instead of trying to change the STL, it works with the current implementation.
 - **mesh-allocator** [📁](./mesh-allocator) [🌐](https://github.com/GerHobbelt/Mesh) -- Mesh: Compacting Memory Management for C/C++ -- Mesh is a drop in replacement for [malloc(3)](http://man7.org/linux/man-pages/man3/malloc.3.html) that can transparently recover from memory fragmentation without any changes to application code. Mesh is described in detail in a [paper (PDF)](https://github.com/plasma-umass/Mesh/raw/master/mesh-pldi19-powers.pdf) that appeared at PLDI 2019.
+- **msgpack-c** [📁](./msgpack-c) [🌐](https://github.com/GerHobbelt/msgpack-c) -- [MessagePack](http://msgpack.org/) (a.k.a. `msgpack`) for C/C++ is an efficient binary serialization format, which lets you exchange data among multiple languages like JSON, except that it's faster and smaller. Small integers are encoded into a single byte and short strings require only one extra byte in addition to the strings themselves.
 - **pdiff** [📁](./pdiff) [🌐](https://github.com/GerHobbelt/pdiff) -- perceptualdiff (pdiff): a program that compares two images using a perceptually based image metric.
 - **pfp-cst** [📁](./pfp-cst) [🌐](https://github.com/GerHobbelt/pfp-cst) -- Prefix-Free Parsing Compressed Suffix Tree is a compressed suffix tree, built on the prefix-free parsing of the text. If you use the PFP-CST in your research, please cite: Christina Boucher, Ondřej Cvacho, Travis Gagie, Jan Holub, Giovanni Manzini, Gonzalo Navarro, and Massimiliano Rossi . *"PFP Compressed Suffix Tree"*, In Proc. of the SIAM Symposium onAlgorithm Engineering and Experiments (ALENEX21), pp. 60-72. (2021).
 - **piposort** [📁](./piposort) [🌐](https://github.com/GerHobbelt/piposort) -- a stable top-down adaptive branchless merge sort named piposort. It is intended as a simplified [quadsort](https://github.com/scandum/quadsort) with reduced adaptivity, but a great reduction in lines of code and overall complexity. The name stands for ping-pong.
 - **quadsort** [📁](./quadsort) [🌐](https://github.com/GerHobbelt/quadsort) -- a high performance stable bottom-up adaptive branchless merge sort algorithm.
 - **recycle** [📁](./recycle) [🌐](https://github.com/GerHobbelt/recycle) -- an implementation of a simple resource pool for recycling resources in C++.
 - **refl-cpp** [📁](./refl-cpp) [🌐](https://github.com/GerHobbelt/refl-cpp) -- static reflection for C++17 (compile-time enumeration, attributes, proxies, overloads, template functions, metaprogramming).
+- **reflect-cpp** [📁](./reflect-cpp) [🌐](https://github.com/GerHobbelt/reflect-cpp) -- a C++-20 library for **fast serialization, deserialization and validation** using reflection, similar to [pydantic](https://github.com/pydantic/pydantic) in Python, [serde](https://github.com/serde-rs) in Rust, [encoding](https://github.com/golang/go/tree/master/src/encoding) in Go or [aeson](https://github.com/haskell/aeson/tree/master) in Haskell. As the aforementioned libraries are among the most widely used in the respective languages, reflect-cpp fills an important gap in C++ development. It reduces boilerplate code and increases code safety.
 - **result-cpp** [📁](./result-cpp) [🌐](https://github.com/GerHobbelt/result) -- `Result<T, E>` is a modern, simple, and light-weight error-handling alternative to C++ exceptions with a rich feature-set.
 - **rttr** [📁](./rttr) [🌐](https://github.com/GerHobbelt/rttr) -- RTTR - Run Time Type Reflection - provides the ability to introspect and modify an object at runtime and is written in C++. Features:
 - **simdcomp** [📁](./simdcomp) [🌐](https://github.com/GerHobbelt/simdcomp) -- SIMDComp is a simple C library for compressing lists of integers using binary packing and SIMD instructions. The assumption is either that you have a list of 32-bit integers where most of them are small, or a list of 32-bit integers where differences between successive integers are small. No software is able to reliably compress an array of 32-bit random numbers.
 - **SIMDString** [📁](./SIMDString) [🌐](https://github.com/GerHobbelt/SIMDString) -- a [MIT-licensed](https://opensource.org/licenses/MIT) open source implementation of a fast C++ string class designed for use in games. It is a drop-in replacement for `std::string` that is 10-100x faster for many common operations, such as small `string::operator+=(const char*)`, `string::string(const string&)`, `string::string(const char*)`, and `string::c_str()`.
+- **sse2neon** [📁](./sse2neon) [🌐](https://github.com/GerHobbelt/sse2neon) -- converts Intel SSE intrinsics to Arm/Aarch64 NEON intrinsics, shortening the time needed to get an Arm working program that then can be used to extract profiles and to identify hot paths in the code.
 - **stx-error-handling** [📁](./stx-error-handling) [🌐](https://github.com/GerHobbelt/STX) -- C++ 17 & C++ 20 error-handling and utility extensions.
 - **swig** [📁](./swig) [🌐](https://github.com/GerHobbelt/swig) -- SWIG (Simplified Wrapper and Interface Generator) is a software development tool (code generator) that connects programs written in C and C++ with a variety of high-level programming languages. It is used for building scripting language interfaces to C and C++ programs. SWIG simplifies development by largely automating the task of scripting language integration, allowing developers and users to focus on more important problems.
   
@@ -3471,6 +3469,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **libconfig** [📁](./libconfig) [🌐](https://github.com/GerHobbelt/libconfig) -- generic config (file) reader/writer
 - **libparameters** [📁](./libparameters) [🌐](https://github.com/GerHobbelt/libparameters) -- use C++ runtime configurable typed parameters as if they were native types, while you can track read/write access/usage of each in your code sections for improved diagnostics of your application's behaviour. Used in enhanced tesseract, f.e.
 - **libucl** [📁](./libucl) [🌐](https://github.com/GerHobbelt/libucl) -- the configuration language called UCL - Universal Configuration Language.  UCL is heavily infused by nginx configuration as the example of a convenient configuration system. However, UCL is fully compatible with JSON format and is able to parse json files.
+- **reflect-cpp** [📁](./reflect-cpp) [🌐](https://github.com/GerHobbelt/reflect-cpp) -- a C++-20 library for **fast serialization, deserialization and validation** using reflection, similar to [pydantic](https://github.com/pydantic/pydantic) in Python, [serde](https://github.com/serde-rs) in Rust, [encoding](https://github.com/golang/go/tree/master/src/encoding) in Go or [aeson](https://github.com/haskell/aeson/tree/master) in Haskell. As the aforementioned libraries are among the most widely used in the respective languages, reflect-cpp fills an important gap in C++ development. It reduces boilerplate code and increases code safety.
 
 
 
@@ -3620,6 +3619,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **reckless** [📁](./reckless) [🌐](https://github.com/GerHobbelt/reckless) -- Reckless is an extremely low-latency, high-throughput logging library.
 - **replxx** [📁](./replxx) [🌐](https://github.com/GerHobbelt/replxx) -- REPL CLI component: `readline` simile for REPL/interactive runs in a CLI
 - **resumable-assert** [📁](./resumable-assert) [🌐](https://github.com/GerHobbelt/resumable-assert) -- `assert` replacement to continue execution in debugger. In any large app, it sometimes happens that some asserts are failing in code you don't currently care about, and blocking the entire team from being able to run the app until the issue is fixed is not the best workflow. So we usually end up moving the execution marker past the assert line in IDE or debugger, or even comment the assert out, recompile and relaunch. With Resumable Assert, you can simply continue execution when an assertion fails in debugger, or even disable asserts that you are not interested in, so that those never bother you again.
+- **spdlog** [📁](./spdlog) [🌐](https://github.com/GerHobbelt/spdlog) -- very fast, header-only/compiled, C++ logging library.
 - **spdlog_sqlite_sink** [📁](./spdlog_sqlite_sink) [🌐](https://github.com/GerHobbelt/sqlite_sink) -- SQLite 3 database sink for `spdlog`: a simple custom sink made for spdlog that writes to SQLite database.
 - **spdmon** [📁](./spdmon) [🌐](https://github.com/GerHobbelt/spdmon) -- a progress monitor based on spdlog library. In just one function call visualize your loop progress!
 - **sqlplot-tools** [📁](./sqlplot-tools) [🌐](https://github.com/GerHobbelt/sqlplot-tools) -- a tool to **process data series** from algorithm experiments **using SQL statements** and embed the results in **gnuplot** datafiles or **pgfplots** LaTeX files. Using SQL to generate plots can be see as **cracking a nut with a sledgehammer**, but it really works well in practice.
@@ -3632,15 +3632,11 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 
 - ~~**log4cplus** [🌐](https://github.com/log4cplus/log4cplus)~~
   
-  - **removed**; reason: we've decided on using `glog` as the logging library for everything. log4cplus, at the same time, is a tad too much. (I consider `log4j` et al *overdone* as it caters to every need instead of just providing those things as contrib code which can be integrated at need -- should not be as far run-time configurable as it currently is.)
-
-- ~~**spdlog** [🌐](https://github.com/gabime/spdlog)~~
-  
-  - **removed**; reason: we've decided on using `glog` as the logging library for everything. `spdlog` has some nice features but in the end it was ease of cross-platform compilation and installed base that won out here...
+  - **removed**; reason: we've decided on using `glog`/`spdlog` as the logging library for everything. `log4cplus`, at the same time, is a tad too much. (I consider `log4j` et al *overdone* as it caters to every need instead of just providing those things as contrib code which can be integrated at need -- should not be as far run-time configurable as it currently is.)
 
 - ~~**zlog** [🌐](https://github.com/HardySimpson/zlog)~~
   
-  - **removed**; `zlog` has a nice overall design but is too 'Unix-is-the-world' in its coding: in the end it was ease of cross-platform compilation of `glog` that won the day and I'm okay with layering on top of that one to get the zlog category and other channel features, once I really need them.
+  - **removed**; `zlog` has a nice overall design but is too 'Unix-is-the-world' in its coding: in the end it was ease of cross-platform compilation of `glog`/`spdlog` that won the day and I'm okay with layering on top of that one to get the zlog category and other channel features, once I really need them.
 
 
 
@@ -4725,11 +4721,13 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **flann** [📁](./flann) [🌐](https://github.com/GerHobbelt/flann) -- FLANN (Fast Library for Approximate Nearest Neighbors) is a library for performing fast approximate nearest neighbor searches in high dimensional spaces. It contains a collection of algorithms we found to work best for nearest neighbor search and a system for automatically choosing the best algorithm and optimum parameters depending on the dataset.
 - **flare-floss** [📁](./flare-floss) [🌐](https://github.com/GerHobbelt/flare-floss) -- the FLARE Obfuscated String Solver (FLOSS, formerly FireEye Labs Obfuscated String Solver) uses advanced static analysis techniques to automatically extract and deobfuscate all strings from malware binaries. You can use it just like `strings.exe` to enhance the basic static analysis of unknown binaries.
 - **flashlight** [📁](./flashlight) [🌐](https://github.com/GerHobbelt/flashlight) -- a fast, flexible machine learning library written entirely in C++ from the Facebook AI Research and the creators of Torch, TensorFlow, Eigen and Deep Speech, with an emphasis on efficiency and scale.
+- **flatbuffers** [📁](./flatbuffers) [🌐](https://github.com/GerHobbelt/flatbuffers) -- a cross platform serialization library architected for maximum memory efficiency. It allows you to directly access serialized data without parsing/unpacking it first, while still having great forwards/backwards compatibility.
 - **flat_hash_map** [📁](./flat_hash_map) [🌐](https://github.com/GerHobbelt/flat_hash_map) -- a very fast hashtable.
 - **flat.hpp** [📁](./flat.hpp) [🌐](https://github.com/GerHobbelt/flat.hpp) -- a library of flat vector-like based associative containers.
 - **flatton-offline** [📁](./flatton-offline) [🌐](https://github.com/GerHobbelt/flatton-offline) -- Flatton-Offline is an utility that allows you to quickly "flatten" an inked comics page. You pass in a png image with line art and Flatton fills each white area with a random color. It then grows each area so that it bleeds under the line art, touching the other neighboring areas. It is derived from the online utility which you can find [here](https://www.ayalpinkus.nl/Flatton.html).
 - **flinng** [📁](./flinng) [🌐](https://github.com/GerHobbelt/FLINNG) -- Filters to Identify Near-Neighbor Groups (FLINNG) is a near neighbor search algorithm outlined in the paper [Practical Near Neighbor Search via Group Testing](https://arxiv.org/pdf/2106.11565.pdf).
 - **flip** [📁](./flip) [🌐](https://github.com/GerHobbelt/flip) -- ꟻLIP: A Tool for Visualizing and Communicating Errors in Rendered Images, implements the [LDR-ꟻLIP](https://research.nvidia.com/publication/2020-07_FLIP) and [HDR-ꟻLIP](https://research.nvidia.com/publication/2021-05_HDR-FLIP) image error metrics.
+- **float_compare** [📁](./float_compare) [🌐](https://github.com/GerHobbelt/float_compare) -- C++ header providing floating point value comparators with user-specifiable tolerances and behaviour.
 - **fluent-bit** [📁](./fluent-bit) [🌐](https://github.com/GerHobbelt/fluent-bit) -- [Fluent Bit](http://fluentbit.io) is a fast Log Processor and Forwarder for Linux, Windows, Embedded Linux, MacOS and BSD family operating systems. It's part of the Graduated [Fluentd](http://fluentd.org) Ecosystem and a [CNCF](https://cncf.io) sub-project. Fluent Bit allows to collect log events or metrics from different sources, process them and deliver them to different backends such as [Fluentd](http://fluentd.org), Elasticsearch, Splunk, DataDog, Kafka, New Relic, Azure services, AWS services, Google services, NATS, InfluxDB or any custom HTTP end-point.
 - **fluxsort** [📁](./fluxsort) [🌐](https://github.com/GerHobbelt/fluxsort) -- is a stable quicksort / mergesort hybrid algorithm. The sort is stable, adaptive, branchless, and has exceptional performance.
 - **fmath** [📁](./fmath) [🌐](https://github.com/GerHobbelt/fmath) -- fast approximate function of exponential function exp and log: includes `fmath::log`, `fmath::exp`, `fmath::expd`.
@@ -5037,6 +5035,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
   - Stable
 
 - **libbsc** [📁](./libbsc) [🌐](https://github.com/GerHobbelt/libbsc) -- a library for lossless, block-sorting data compression. `bsc` is a high performance file compressor based on lossless, block-sorting data compression algorithms.
+- **libbson** [📁](./libbson) [🌐](https://github.com/GerHobbelt/libbson) -- a library providing useful routines related to building, parsing, and iterating BSON documents.
 - **libcbor** [📁](./libcbor) [🌐](https://github.com/GerHobbelt/libcbor) -- a C library for parsing and generating [CBOR](https://tools.ietf.org/html/rfc7049), the general-purpose schema-less binary data format.
 - **libchaos** [📁](./libchaos) [🌐](https://github.com/GerHobbelt/libchaos) -- *Advanced library for randomization, hashing and statistical analysis (devoted to [chaos machines](https://en.wikipedia.org/wiki/Chaos_machine))* written to help with the development of software for scientific research. Project goal is to *implement & analyze* various algorithms for randomization and hashing, while maintaining simplicity and security, making them suitable for use in your own code. Popular tools like [TestU01](http://simul.iro.umontreal.ca/testu01/tu01.html), [Dieharder](https://www.phy.duke.edu/~rgb/General/dieharder.php) and [Hashdeep](https://github.com/jessek/hashdeep) are obsolete or their development has been stopped. Libchaos aims to replace them.
 - **libchardet** [📁](./libchardet) [🌐](https://github.com/GerHobbelt/libchardet) -- is based on Mozilla Universal Charset Detector library and, detects the character set used to encode data.
@@ -5410,6 +5409,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
   The algorithm for automatic hyperparameter tuning is described in detail in our new article that will be presented in Pacific-Asia Conference on Knowledge Discovery and Data Mining 2019 ([arxiv preprint](https://arxiv.org/abs/1812.07484)).
 
 - **ms_cpp_client_telemetry** [📁](./ms_cpp_client_telemetry) [🌐](https://github.com/GerHobbelt/cpp_client_telemetry) -- 1DS C/C++ SDK enables cross-platform telemetry collection from various Microsoft products. It enables data / telemetry upload to Collector++. 1DS (One Data Strategy), also known as One Observability, is a cross-org initiative with five teams across the company coming together to unify multiple telemetry efforts at Microsoft. Collector++ is the externally-facing destination end-point where telemetry data is uploaded to that subsequently routes the data to Microsoft internal data pipeline.
+- **msgpack-c** [📁](./msgpack-c) [🌐](https://github.com/GerHobbelt/msgpack-c) -- [MessagePack](http://msgpack.org/) (a.k.a. `msgpack`) for C/C++ is an efficient binary serialization format, which lets you exchange data among multiple languages like JSON, except that it's faster and smaller. Small integers are encoded into a single byte and short strings require only one extra byte in addition to the strings themselves.
 - **mujs** [📁](../../thirdparty/mujs) [🌐](https://github.com/GerHobbelt/mujs) -- a lightweight ES5 Javascript interpreter designed for embedding in other software to extend them with scripting capabilities.
 - **Multicore-TSNE** [📁](./Multicore-TSNE) [🌐](https://github.com/GerHobbelt/Multicore-TSNE) -- Multicore t-SNE is a multicore modification of [Barnes-Hut t-SNE](https://github.com/lvdmaaten/bhtsne) by L. Van der Maaten with Python CFFI-based wrappers. This code also works **faster than sklearn.TSNE** on 1 core (as of version 0.18).
 - **MultipartEncoder** [📁](./MultipartEncoder) [🌐](https://github.com/GerHobbelt/MultipartEncoder) -- a C++ implementation of encoding multipart/form-data. You may find the asynchronous http-client, i.e. [cpprestsdk](https://github.com/Microsoft/cpprestsdk), does not support posting a multipart/form-data request. This MultipartEncoder is a work around to generate the body content of multipart/form-data format, so that then you can use a cpp HTTP-client, which is not limited to cpprestsdk, to post a multipart/form-data request by setting the encoded body content.
@@ -5723,6 +5723,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **RectangleBinPack** [📁](./RectangleBinPack) [🌐](https://github.com/GerHobbelt/RectangleBinPack) -- the source code used in "A Thousand Ways to Pack the Bin - A Practical Approach to Two-Dimensional Rectangle Bin Packing." The code can be
 - **recycle** [📁](./recycle) [🌐](https://github.com/GerHobbelt/recycle) -- an implementation of a simple resource pool for recycling resources in C++.
 - **refl-cpp** [📁](./refl-cpp) [🌐](https://github.com/GerHobbelt/refl-cpp) -- static reflection for C++17 (compile-time enumeration, attributes, proxies, overloads, template functions, metaprogramming).
+- **reflect-cpp** [📁](./reflect-cpp) [🌐](https://github.com/GerHobbelt/reflect-cpp) -- a C++-20 library for **fast serialization, deserialization and validation** using reflection, similar to [pydantic](https://github.com/pydantic/pydantic) in Python, [serde](https://github.com/serde-rs) in Rust, [encoding](https://github.com/golang/go/tree/master/src/encoding) in Go or [aeson](https://github.com/haskell/aeson/tree/master) in Haskell. As the aforementioned libraries are among the most widely used in the respective languages, reflect-cpp fills an important gap in C++ development. It reduces boilerplate code and increases code safety.
 - **RE-flex** [📁](./RE-flex) [🌐](https://github.com/GerHobbelt/RE-flex) -- the regex-centric, fast lexical analyzer generator for C++ with full Unicode support. Faster than Flex. Accepts Flex specifications. Generates reusable source code that is easy to understand. Introduces indent/dedent anchors, lazy quantifiers, functions for lex/syntax error reporting and more. Seamlessly integrates with Bison and other parsers.
   
   The RE/flex matcher tracks line numbers, column numbers, and indentations, whereas Flex does not (option `noyylineno`) and neither do the other regex matchers (except PCRE2 and Boost.Regex when used with RE/flex).
@@ -5865,6 +5866,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **sqlpp11** [📁](./sqlpp11) [🌐](https://github.com/GerHobbelt/sqlpp11) -- a type safe embedded domain specific language for SQL queries and results in C++.
 - **squash** [📁](./squash) [🌐](https://github.com/GerHobbelt/squash) -- an abstraction library which provides a single API to access many compression libraries, allowing applications a great deal of flexibility when choosing a compression algorithm, or allowing a choice between several of them.
 - **ssdeep** [📁](./ssdeep) [🌐](https://github.com/GerHobbelt/ssdeep) -- fuzzy hashing library, can be used to assist with identifying almost identical files using context triggered piecewise hashing.
+- **sse2neon** [📁](./sse2neon) [🌐](https://github.com/GerHobbelt/sse2neon) -- converts Intel SSE intrinsics to Arm/Aarch64 NEON intrinsics, shortening the time needed to get an Arm working program that then can be used to extract profiles and to identify hot paths in the code.
 - **sse-popcount** [📁](./sse-popcount) [🌐](https://github.com/GerHobbelt/sse-popcount) -- SIMD popcount; sample programs for my article http://0x80.pl/articles/sse-popcount.html / Faster Population Counts using AVX2 Instructions (https://arxiv.org/abs/1611.07612)
 - **ssimulacra2** [📁](./ssimulacra2) [🌐](https://github.com/GerHobbelt/ssimulacra2) -- Structural SIMilarity Unveiling Local And Compression Related Artifacts metric developed by Jon Sneyers. SSIMULACRA 2 is based on the concept of the multi-scale structural similarity index measure (MS-SSIM), computed in a perceptually relevant color space, adding two other (asymmetric) error maps, and aggregating using two different norms.
 - **stan** [📁](./stan) [🌐](https://github.com/GerHobbelt/stan) -- Stan is a C++ package providing (1) full Bayesian inference using the No-U-Turn sampler (NUTS), a variant of Hamiltonian Monte Carlo (HMC), (2) approximate Bayesian inference using automatic differentiation variational inference (ADVI), and (3) penalized maximum likelihood estimation (MLE) using L-BFGS optimization. It is built on top of the [Stan Math library](https://github.com/stan-dev/math).
@@ -6229,7 +6231,7 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 
 - ~~**circlehash** [📁](./circlehash) [🌐](https://github.com/GerHobbelt/circlehash) -- a family of non-cryptographic hash functions that pass every test in SMHasher.~~
   
-  - **removed**; reason: written in Go; port to C/C++ is easy but just too much effort for too little gain; when we're looking for *fast* non-cryptographic hashes like this, we don't it to include 128-bit / 64-bit multiplications as those are generally slower than shift, add, xor. While this will surely be a nice hash, it doesn't fit our purposes.
+  - **removed**; reason: written in Go; port to C/C++ is easy but just too much effort for too little gain; when we're looking for *fast* non-cryptographic hashes like this, we don't appreciate it to include 128-bit / 64-bit multiplications as those are generally slower than shift, add, xor. While this will surely be a nice hash, it doesn't fit our purposes.
 
 - ~~**cpuinfo** [📁](./cpuinfo) [🌐](https://github.com/GerHobbelt/cpuinfo) -- CPU & hardware info~~
   
@@ -6250,10 +6252,6 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - ~~**binary_bakery** [🌐](https://github.com/s9w/binary_bakery) -- resource compiler-like tool: embed any data in your C/C++ application~~
   
   - **removed**; reason: we already have `bin2coff` from MuPDF, which serves this purpose well enough.
-
-- ~~**bzip2** [🌐](https://github.com/nemequ/bzip2)~~
-  
-  - **removed**; reason: see `lzo` below. When we want this, we can go through [Apache Tika](https://tika.apache.org/) or other thirdparty pipelines.
 
 - ~~**Catch2** [🌐](https://github.com/catchorg/Catch2)~~
   
@@ -6329,13 +6327,9 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
   
   - **removed**; reason: we've decided on using `crow` as the main server framework. Second choices are `civetweb` and `h2o`. This GNU library is way too 'Unix-is-the-world' oriented for a smooth portable dev experience.
 
-- ~~**libsmile** [🌐](https://github.com/pierre/libsmile) -- ["Smile" format](https://en.wikipedia.org/wiki/Smile_%28data_interchange_format%29), i.e. a compact binary JSON format~~
-  
-  - **removed**; reason: for binary format record serialization we will be using `bebop` exclusively. All other communications will be JSON/JSON5/XML based.
-
 - ~~**log4cplus** [🌐](https://github.com/log4cplus/log4cplus)~~
   
-  - **removed**; reason: we've decided on using `glog` as the logging library for everything. log4cplus, at the same time, is a tad too much. (I consider `log4j` et al *overdone* as it caters to every need instead of just providing those things as contrib code which can be integrated at need -- should not be as far run-time configurable as it currently is.)
+  - **removed**; reason: we've decided on using `glog`/`spdlog` as the logging library for everything. `log4cplus`, at the same time, is a tad too much. (I consider `log4j` et al *overdone* as it caters to every need instead of just providing those things as contrib code which can be integrated at need -- should not be as far run-time configurable as it currently is.)
 
 - ~~**lua** [🌐](https://github.com/lua/lua)~~
   
@@ -6361,17 +6355,13 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
   
   - **removed**; reason: see `lzo` above. LZ4 either overtakes this one or is on par (anno 2022 AD) and I don't see a lot happening here, so the coolness factor is slowly fading...
 
-- ~~**spdlog** [🌐](https://github.com/gabime/spdlog)~~
-  
-  - **removed**; reason: we've decided on using `glog` as the logging library for everything. `spdlog` has some nice features but in the end it was ease of cross-platform compilation and installed base that won out here...
-
 - ~~**xz-utils** [🌐](https://github.com/xz-mirror/xz)~~
   
   - **removed**; reason: see `lzo2` above. When we want this, we can go through [Apache Tika](https://tika.apache.org/) or other thirdparty pipelines.
 
 - ~~**zlog** [🌐](https://github.com/HardySimpson/zlog)~~
   
-  - **removed**; `zlog` has a nice overall design but is too 'Unix-is-the-world' in its coding: in the end it was ease of cross-platform compilation of `glog` that won the day and I'm okay with layering on top of that one to get the zlog category and other channel features, once I really need them.
+  - **removed**; `zlog` has a nice overall design but is too 'Unix-is-the-world' in its coding: in the end it was ease of cross-platform compilation of `glog`/`spdlog` that won the day and I'm okay with layering on top of that one to get the zlog category and other channel features, once I really need them.
 
 
 
