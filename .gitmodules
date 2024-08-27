@@ -6598,3 +6598,18 @@
 	url = git@github.com:GerHobbelt/flatbuffers.git
     fetchRecurseSubmodules = on-demand
     
+[submodule "ztd.text"]
+	path = ztd.text
+	url = git@github.com:GerHobbelt/ztd.text.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "cmocka"]
+	path = cmocka
+	url = git@github.com:GerHobbelt/cmocka.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "cJSON"]
+	path = cJSON
+	url = git@github.com:GerHobbelt/cJSON.git
+    fetchRecurseSubmodules = on-demand
+    
