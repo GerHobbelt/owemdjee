@@ -6613,3 +6613,13 @@
 	url = git@github.com:GerHobbelt/cJSON.git
     fetchRecurseSubmodules = on-demand
     
+[submodule "uni-algo"]
+	path = uni-algo
+	url = git@github.com:GerHobbelt/uni-algo.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "reflect"]
+	path = reflect
+	url = git@github.com:GerHobbelt/reflect.git
+    fetchRecurseSubmodules = on-demand
+    
