@@ -6623,3 +6623,68 @@
 	url = git@github.com:GerHobbelt/reflect.git
     fetchRecurseSubmodules = on-demand
     
+[submodule "figcone_tree"]
+	path = figcone_tree
+	url = git@github.com:GerHobbelt/figcone_tree.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "sfun"]
+	path = sfun
+	url = git@github.com:GerHobbelt/sfun.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "figcone_shoal"]
+	path = figcone_shoal
+	url = git@github.com:GerHobbelt/figcone_shoal.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "shoal"]
+	path = shoal
+	url = git@github.com:GerHobbelt/shoal.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "figcone_ini"]
+	path = figcone_ini
+	url = git@github.com:GerHobbelt/figcone_ini.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "inifile-cpp"]
+	path = inifile-cpp
+	url = git@github.com:GerHobbelt/inifile-cpp.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "figcone_toml"]
+	path = figcone_toml
+	url = git@github.com:GerHobbelt/figcone_toml.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "figcone_json"]
+	path = figcone_json
+	url = git@github.com:GerHobbelt/figcone_json.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "figcone_xml"]
+	path = figcone_xml
+	url = git@github.com:GerHobbelt/figcone_xml.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "figcone_yaml"]
+	path = figcone_yaml
+	url = git@github.com:GerHobbelt/figcone_yaml.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "libchewing"]
+	path = libchewing
+	url = git@github.com:GerHobbelt/libchewing.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "libexif"]
+	path = libexif
+	url = git@github.com:GerHobbelt/libexif.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "exif"]
+	path = exif
+	url = git@github.com:GerHobbelt/exif.git
+    fetchRecurseSubmodules = on-demand
+    
