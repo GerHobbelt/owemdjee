@@ -6691,48 +6691,80 @@
 [submodule "ocr-evaluation-tools"]
 	path = ocr-evaluation-tools
 	url = git@github.com:GerHobbelt/ocr-evaluation-tools.git
+    fetchRecurseSubmodules = on-demand
+    
 [submodule "StringViewTests"]
 	path = StringViewTests
 	url = git@github.com:GerHobbelt/StringViewTests.git
+    fetchRecurseSubmodules = on-demand
+    
 [submodule "map_benchmark"]
 	path = map_benchmark
 	url = git@github.com:GerHobbelt/map_benchmark.git
+    fetchRecurseSubmodules = on-demand
+    
 [submodule "unordered_dense"]
 	path = unordered_dense
 	url = git@github.com:GerHobbelt/unordered_dense.git
+    fetchRecurseSubmodules = on-demand
+    
 [submodule "emhash"]
 	path = emhash
 	url = git@github.com:GerHobbelt/emhash.git
+    fetchRecurseSubmodules = on-demand
+    
 [submodule "rapidhash"]
 	path = rapidhash
 	url = git@github.com:GerHobbelt/rapidhash.git
+    fetchRecurseSubmodules = on-demand
+    
 [submodule "gtl"]
 	path = gtl
 	url = git@github.com:GerHobbelt/gtl.git
+    fetchRecurseSubmodules = on-demand
+    
 [submodule "dense_hash_map"]
 	path = dense_hash_map
 	url = git@github.com:GerHobbelt/dense_hash_map.git
+    fetchRecurseSubmodules = on-demand
+    
 [submodule "Allocator"]
 	path = Allocator
 	url = git@github.com:GerHobbelt/Allocator.git
+    fetchRecurseSubmodules = on-demand
+    
 [submodule "EASTL"]
 	path = EASTL
 	url = git@github.com:GerHobbelt/EASTL.git
+    fetchRecurseSubmodules = on-demand
+    
 [submodule "stl-allocator"]
 	path = stl-allocator
 	url = git@github.com:GerHobbelt/stl-allocator.git
+    fetchRecurseSubmodules = on-demand
+    
 [submodule "pool_allocator"]
 	path = pool_allocator
 	url = git@github.com:GerHobbelt/pool_allocator.git
+    fetchRecurseSubmodules = on-demand
+    
 [submodule "sparse-map"]
 	path = sparse-map
 	url = git@github.com:GerHobbelt/sparse-map.git
+    fetchRecurseSubmodules = on-demand
+    
 [submodule "libetpan"]
 	path = libetpan
 	url = git@github.com:GerHobbelt/libetpan.git
+    fetchRecurseSubmodules = on-demand
+    
 [submodule "cpp-base64"]
 	path = cpp-base64
 	url = git@github.com:GerHobbelt/cpp-base64.git
+    fetchRecurseSubmodules = on-demand
+    
 [submodule "fast-cpp-csv-parser"]
 	path = fast-cpp-csv-parser
 	url = git@github.com:GerHobbelt/fast-cpp-csv-parser.git
+    fetchRecurseSubmodules = on-demand
+    
