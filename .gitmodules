@@ -6768,3 +6768,12 @@
 	url = git@github.com:GerHobbelt/fast-cpp-csv-parser.git
     fetchRecurseSubmodules = on-demand
     
+[submodule "llfio"]
+	path = llfio
+	url = git@github.com:GerHobbelt/llfio.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "popt"]
+	path = popt
+	url = git@github.com:GerHobbelt/POPT.git
+    fetchRecurseSubmodules = on-demand
