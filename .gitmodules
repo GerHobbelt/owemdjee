@@ -6777,3 +6777,9 @@
 	path = popt
 	url = git@github.com:GerHobbelt/POPT.git
     fetchRecurseSubmodules = on-demand
+	
+[submodule "vivid"]
+	path = vivid
+	url = git@github.com:GerHobbelt/vivid.git
+    fetchRecurseSubmodules = on-demand
+	
