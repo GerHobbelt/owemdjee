@@ -6783,3 +6783,28 @@
 	url = git@github.com:GerHobbelt/vivid.git
     fetchRecurseSubmodules = on-demand
 	
+[submodule "SSIM"]
+	path = SSIM
+	url = git@github.com:GerHobbelt/SSIM.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "observable"]
+	path = observable
+	url = git@github.com:GerHobbelt/observable.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "skia"]
+	path = skia
+	url = git@github.com:GerHobbelt/skia.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "inja"]
+	path = inja
+	url = git@github.com:GerHobbelt/inja.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "SFML"]
+	path = SFML
+	url = git@github.com:GerHobbelt/SFML.git
+    fetchRecurseSubmodules = on-demand
+    
