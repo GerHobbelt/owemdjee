@@ -6808,3 +6808,13 @@
 	url = git@github.com:GerHobbelt/SFML.git
     fetchRecurseSubmodules = on-demand
     
+[submodule "libpfm4"]
+	path = libpfm4
+	url = git@github.com:GerHobbelt/libpfm4.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "Catch2"]
+	path = Catch2
+	url = git@github.com:GerHobbelt/Catch2.git
+    fetchRecurseSubmodules = on-demand
+    
