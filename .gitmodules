@@ -6818,3 +6818,53 @@
 	url = git@github.com:GerHobbelt/Catch2.git
     fetchRecurseSubmodules = on-demand
     
+[submodule "entt"]
+	path = entt
+	url = git@github.com:GerHobbelt/entt.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "FASTER"]
+	path = FASTER
+	url = git@github.com:GerHobbelt/FASTER.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "actor-framework"]
+	path = actor-framework
+	url = git@github.com:GerHobbelt/actor-framework.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "restclient-cpp"]
+	path = restclient-cpp
+	url = git@github.com:GerHobbelt/restclient-cpp.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "stdexec"]
+	path = stdexec
+	url = git@github.com:GerHobbelt/stdexec.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "msgpack-cpp"]
+	path = msgpack-cpp
+	url = git@github.com:GerHobbelt/msgpack-c.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "ejdb"]
+	path = ejdb
+	url = git@github.com:GerHobbelt/ejdb.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "iowow"]
+	path = iowow
+	url = git@github.com:GerHobbelt/iowow.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "nanobench"]
+	path = nanobench
+	url = git@github.com:GerHobbelt/nanobench.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "libprng"]
+	path = libprng
+	url = git@github.com:GerHobbelt/libprng.git
+    fetchRecurseSubmodules = on-demand
+    
