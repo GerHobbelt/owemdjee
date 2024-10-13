@@ -6559,3 +6559,24 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 
 
 
+    
+[submodule "curlpp"]
+	path = curlpp
+	url = git@github.com:GerHobbelt/curlpp.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "lsnms"]
+	path = lsnms
+	url = git@github.com:GerHobbelt/lsnms.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "libspatialindex"]
+	path = libspatialindex
+	url = git@github.com:GerHobbelt/libspatialindex.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "THST"]
+	path = THST
+	url = git@github.com:GerHobbelt/THST.git
+    fetchRecurseSubmodules = on-demand
+    
