@@ -6888,3 +6888,13 @@
 	url = git@github.com:GerHobbelt/THST.git
     fetchRecurseSubmodules = on-demand
     
+[submodule "simdutf"]
+	path = simdutf
+	url = git@github.com:GerHobbelt/simdutf.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "md5-optimisation"]
+	path = md5-optimisation
+	url = git@github.com:GerHobbelt/md5-optimisation.git
+    fetchRecurseSubmodules = on-demand
+    
