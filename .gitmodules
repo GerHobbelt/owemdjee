@@ -6898,3 +6898,8 @@
 	url = git@github.com:GerHobbelt/md5-optimisation.git
     fetchRecurseSubmodules = on-demand
     
+[submodule "c4core"]
+	path = c4core
+	url = git@github.com:GerHobbelt/c4core.git
+    fetchRecurseSubmodules = on-demand
+    
