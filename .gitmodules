@@ -6903,3 +6903,64 @@
 	url = git@github.com:GerHobbelt/c4core.git
     fetchRecurseSubmodules = on-demand
     
+[submodule "docopt.cpp"]
+	path = docopt.cpp
+	url = git@github.com:GerHobbelt/docopt.cpp.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "PSI"]
+	path = PSI
+	url = git@github.com:GerHobbelt/PSI.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "dablooms"]
+	path = dablooms
+	url = git@github.com:GerHobbelt/dablooms.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "Cuckoo_Filter"]
+	path = Cuckoo_Filter
+	url = git@github.com:GerHobbelt/Cuckoo_Filter.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "Containers"]
+	path = Containers
+	url = git@github.com:GerHobbelt/Containers.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "radix_tree"]
+	path = radix_tree
+	url = git@github.com:GerHobbelt/radix_tree.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "adaptive-radix-tree"]
+	path = adaptive-radix-tree
+	url = git@github.com:GerHobbelt/adaptive-radix-tree.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "PruningRadixTrie"]
+	path = PruningRadixTrie
+	url = git@github.com:GerHobbelt/PruningRadixTrie.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "libart"]
+	path = libart
+	url = git@github.com:GerHobbelt/libart.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "rax"]
+	path = rax
+	url = git@github.com:GerHobbelt/rax.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "botan"]
+	path = botan
+	url = git@github.com:GerHobbelt/botan.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "cpp-unicodelib"]
+	path = cpp-unicodelib
+	url = git@github.com:GerHobbelt/cpp-unicodelib.git
+[submodule "fast_align"]
+	path = fast_align
+	url = git@github.com:GerHobbelt/fast_align.git
