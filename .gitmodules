@@ -6961,6 +6961,35 @@
 [submodule "cpp-unicodelib"]
 	path = cpp-unicodelib
 	url = git@github.com:GerHobbelt/cpp-unicodelib.git
+    fetchRecurseSubmodules = on-demand
+    
 [submodule "fast_align"]
 	path = fast_align
 	url = git@github.com:GerHobbelt/fast_align.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "Non-Maximum-Suppression"]
+	path = Non-Maximum-Suppression
+	url = git@github.com:GerHobbelt/Non-Maximum-Suppression.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "cmake_examples"]
+	path = cmake_examples
+	url = git@github.com:GerHobbelt/cmake_examples.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "modern-cpp-template"]
+	path = modern-cpp-template
+	url = git@github.com:GerHobbelt/modern-cpp-template.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "googletest-ci-cpp-template"]
+	path = googletest-ci-cpp-template
+	url = git@github.com:GerHobbelt/googletest-ci-cpp-template.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "Algo_Ds_Notes"]
+	path = Algo_Ds_Notes
+	url = git@github.com:GerHobbelt/Algo_Ds_Notes.git
+    fetchRecurseSubmodules = on-demand
+    
