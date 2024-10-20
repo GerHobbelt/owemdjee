@@ -6993,3 +6993,23 @@
 	url = git@github.com:GerHobbelt/Algo_Ds_Notes.git
     fetchRecurseSubmodules = on-demand
     
+[submodule "UniversalStacktrace"]
+	path = UniversalStacktrace
+	url = git@github.com:GerHobbelt/UniversalStacktrace.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "signals-rt"]
+	path = signals-rt
+	url = git@github.com:GerHobbelt/signals-rt.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "sigslot"]
+	path = sigslot
+	url = git@github.com:GerHobbelt/sigslot.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "signal-slot-benchmarks"]
+	path = signal-slot-benchmarks
+	url = git@github.com:GerHobbelt/signal-slot-benchmarks.git
+    fetchRecurseSubmodules = on-demand
+
