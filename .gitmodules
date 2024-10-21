@@ -7013,3 +7013,8 @@
 	url = git@github.com:GerHobbelt/signal-slot-benchmarks.git
     fetchRecurseSubmodules = on-demand
 
+[submodule "libccpalette"]
+	path = libccpalette
+	url = git@github.com:GerHobbelt/libccpalette.git
+    fetchRecurseSubmodules = on-demand
+    
