@@ -7018,3 +7018,31 @@
 	url = git@github.com:GerHobbelt/libccpalette.git
     fetchRecurseSubmodules = on-demand
     
+[submodule "ssp"]
+	path = ssp
+	url = git@github.com:GerHobbelt/ssp.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "lazycsv"]
+	path = lazycsv
+	url = git@github.com:GerHobbelt/lazycsv.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "rapidcsv"]
+	path = rapidcsv
+	url = git@github.com:GerHobbelt/rapidcsv.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "libclustering_dim_redux"]
+	path = libclustering_dim_redux
+	url = git@github.com:GerHobbelt/libclustering_dim_redux.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "zimg"]
+	path = zimg
+	url = git@github.com:GerHobbelt/zimg.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "html-parser-test-corpus"]
+	path = html-parser-test-corpus
+	url = git@github.com:GerHobbelt/html-parser-test-corpus.git
