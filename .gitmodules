@@ -7046,3 +7046,10 @@
 [submodule "html-parser-test-corpus"]
 	path = html-parser-test-corpus
 	url = git@github.com:GerHobbelt/html-parser-test-corpus.git
+    fetchRecurseSubmodules = on-demand
+    
+[submodule "libfsm"]
+	path = libfsm
+	url = git@github.com:GerHobbelt/libfsm.git
+    fetchRecurseSubmodules = on-demand
+    
