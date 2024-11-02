@@ -1844,6 +1844,7 @@ i.e. breaking text into words when you _receive a textstream without spaces_. Al
 - **wavelib** [📁](./wavelib) [🌐](https://github.com/GerHobbelt/wavelib) -- C implementation of Discrete Wavelet Transform (DWT,SWT and MODWT), Continuous Wavelet transform (CWT) and Discrete Packet Transform ( Full Tree Decomposition and Best Basis DWPT).
 - **wdenoise** [📁](./wdenoise) [🌐](https://github.com/GerHobbelt/wdenoise) -- Wavelet Denoising in ANSI C using empirical bayes thresholding and a host of other thresholding methods.
 - **xbrzscale** [📁](./xbrzscale) [🌐](https://github.com/GerHobbelt/xbrzscale) -- xBRZ upscaling commandline tool. This tool allows you to scale your graphics with xBRZ algorithm, see https://en.wikipedia.org/wiki/Pixel-art_scaling_algorithms#xBR_family
+- **zimg** [📁](./zimg) [🌐](https://github.com/GerHobbelt/zimg) -- the "z" library implements the commonly required image processing basics of scaling, colorspace conversion, and depth conversion. A simple API enables conversion between any supported formats to operate with minimal knowledge from the programmer. All library routines were designed from the ground-up with correctness, flexibility, and thread-safety as first priorities.
 
 
 
@@ -4416,6 +4417,7 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 - **fontconfig** [📁](./fontconfig) [🌐](https://github.com/GerHobbelt/fontconfig) -- font configuration and customization library
 - **gflags** [📁](./gflags) [🌐](https://github.com/GerHobbelt/gflags) -- google::flags library, used by other libs in this set.
 - **glib2** [📁](./glib2) [🌐](https://github.com/GerHobbelt/glib) -- GLib is the low-level core library that forms the basis for projects such as GTK and GNOME.
+- **graphengine** [📁](./graphengine) [🌐](https://github.com/GerHobbelt/graphengine) -- modern graph analytics. Used by `zimg` library.
 - **highway** [📁](./highway) [🌐](https://github.com/GerHobbelt/highway) -- dependency of JpegXL
 - **htmlstreamparser** [📁](./htmlstreamparser) [🌐](https://github.com/GerHobbelt/htmlstreamparser) -- used in a demo of zsync2
 - **jemalloc** [📁](./jemalloc) [🌐](https://github.com/GerHobbelt/jemalloc) -- a general purpose malloc(3) implementation that emphasizes fragmentation avoidance and scalable concurrency support.  jemalloc first came into use as the FreeBSD libc allocator in 2005, and since then it has found its way into numerous applications that rely on its predictable behavior.  In 2010 jemalloc development efforts broadened to include developer support features such as heap profiling and extensive monitoring/tuning hooks.
@@ -5022,6 +5024,7 @@ abstraction without sacrificing performance. Whether you are targeting a single 
   * As an executable for finding the chromatic number for an input graph (in edge list or edge matrix format)
   * As a library for finding the particular coloring of an input graph (represented as a `map<string,vector<string>>` edge list)
 
+- **graphengine** [📁](./graphengine) [🌐](https://github.com/GerHobbelt/graphengine) -- modern graph analytics. Used by `zimg` library.
 - **GraphicsMagick** [📁](./GraphicsMagick) [🌐](https://github.com/GerHobbelt/graphicsmagick) -- provides a comprehensive collection of utilities, programming interfaces, and GUIs, to support file format conversion, image processing, and 2D vector rendering. GraphicsMagick is originally based on ImageMagick from ImageMagick Studio (which was originally written by John Cristy at Dupont). The goal of GraphicsMagick is to provide the highest quality product possible while encouraging open and active participation from all interested developers.
 - **graphit** [📁](./graphit) [🌐](https://github.com/GerHobbelt/graphit) -- a High-Performance Domain Specific Language for Graph Analytics.
 - **grok-jpeg2000** [📁](./grok-jpeg2000) [🌐](https://github.com/GerHobbelt/grok) -- World's Leading Open Source JPEG 2000 Codec
@@ -6636,4 +6639,6 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 
 # TBD: Libraries which still need to be moved into the overview / categories above...
 
-- **zimg** [📁](./zimg) [🌐](https://github.com/GerHobbelt/zimg) -- the "z" library implements the commonly required image processing basics of scaling, colorspace conversion, and depth conversion. A simple API enables conversion between any supported formats to operate with minimal knowledge from the programmer. All library routines were designed from the ground-up with correctness, flexibility, and thread-safety as first priorities.
+
+
+

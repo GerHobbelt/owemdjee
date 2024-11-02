@@ -8464,3 +8464,8 @@
     fetchRecurseSubmodules = on-demand
     ignore = dirty
 
+[submodule "graphengine"]
+	path = graphengine
+	url = git@github.com:GerHobbelt/graphengine.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
