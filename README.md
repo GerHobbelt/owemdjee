@@ -5715,6 +5715,7 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 
 - **nsis-stdutils** [📁](./nsis-stdutils) [🌐](https://github.com/GerHobbelt/stdutils) -- StdUtils plug-in for NSIS
 - **nsync** [📁](./nsync) [🌐](https://github.com/GerHobbelt/nsync) -- a C library that exports various synchronization primitives. `nsync` may be desirable in place of `pthread` primitives in some cases:  (1) nsync locks are reader-writer locks (but are as efficient as mutexes).  (2) nsync locks and condition variables occupy only two words each.  (3) nsync works on Unix-like systems and Windows.  It should be portable to other platforms straightforwardly.  (4) nsync provides conditional critical sections.  These fill the same role as condition variables, but are usually easier to use, and in most common cases are comparable in speed.  They can be easier to use in two ways:  (A) it's not necessary to surround the "wait" operation in a while loop; instead the condition is passed to the call as a function and arbitrary pointer argument.  (B) it's not necessary to wake or signal explicitly when the condition(s) become true; they are checked automatically. The primary downsides are:  (A) they are not available in most other common synchronization APIs, and so they may be unfamiliar (even though they date back to the 1960s), and (B) if threads routinely wait on many distinct, false conditions associated with the same lock, they may be slower than condition variables. In this case, clients can use condition variables in the normal way; conditional critical sections and condition variables can be used with the same lock.  (5) nsync waits can be cancelled via an object passed to the wait calls, unlike the pthread model in which threads are cancelled.  This difference can be useful if the computation needs multiple threads, or if cancellation affects only sub-operations within a larger operation by the thread.
+- **ntl** [📁](./ntl) [🌐](https://github.com/GerHobbelt/ntl) -- a library for doing numbery theory.
 - **numero** [📁](./numero) [🌐](https://github.com/GerHobbelt/numero) -- a library which parses/extracts a decimal number, either integer or floating-point, either in scientific notation or not, from the given input string. It uses the thousands and decimal separator symbols given in the conversion options. It also provides methods for the inverse operation, i.e. converting a value to a (English) human-readable text, e.g. "one thousand and twenty four" for `1024`.
 - **nuspell** [📁](./nuspell) [🌐](https://github.com/GerHobbelt/nuspell) -- a fast and safe spelling checker software program. It is designed for languages with rich morphology and complex word compounding. Nuspell is written in modern C++ and it supports Hunspell dictionaries.
 - **observable** [📁](./observable) [🌐](https://github.com/GerHobbelt/observable) -- use the observer pattern in C++11 multithreaded programs with observable/observer classes or signals/slots.
@@ -6014,6 +6015,7 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 
 - **sdcc** [📁](./sdcc) [🌐](https://github.com/GerHobbelt/sdcc) -- SDCC is the free open source, retargettable, optimizing ISO C compiler for small devices, including the Intel MCS-51 based microprocessors (8031, 8032, 8051, 8052, etc.), Maxim (formerly Dallas) DS80C390 variants, Freescale (formerly Motorola) HC08 based (hc08, s08), Zilog Z80 based MCUs (Z80, Z80N, Z180, SM83 (e.g. Game Boy), Rabbit 2000, Rabbit 2000A/3000, Rabbit 3000A, TLCS-90, R800), STMicroelectronics STM8, Padauk PDK14 and PDK15 and MOS 6502. Work is in progress on supporting the Padauk PDK13 target. There are unmaintained Microchip PIC16 and PIC18 targets.
 - **sdhash** [📁](./sdhash) [🌐](https://github.com/GerHobbelt/sdhash) -- a tool which allows two arbitrary blobs of data to be compared for similarity based on common strings of binary data. It is designed to provide quick results during triage and initial investigation phases.
+- **sds** [📁](./sds) [🌐](https://github.com/GerHobbelt/sds) -- Simple Dynamic Strings (SDS) is a string library for C designed to augment the limited libc string handling functionalities by adding heap allocated strings that are (1) simpler to use, (2) binary safe, (3) computationally more efficient and (4) compatible with normal C string functions. This is achieved using an alternative design in which instead of using a C structure to represent a string, we use a binary prefix that is stored before the actual pointer to the string that is returned by SDS to the user.
 - **sdsl-lite** [📁](./sdsl-lite) [🌐](https://github.com/GerHobbelt/sdsl-lite) -- The Succinct Data Structure Library (SDSL) is a powerful and flexible C++11 library implementing succinct data structures. In total, the library contains the highlights of 40 [research publications][SDSLLIT]. Succinct data structures can represent an object (such as a bitvector or a tree) in space close to the information-theoretic lower bound of the object while supporting operations of the original object efficiently. The theoretical time complexity of an operation performed on the classical data structure and the equivalent succinct data structure are (most of the time) identical.
 - **Sealighter** [📁](./Sealighter) [🌐](https://github.com/GerHobbelt/Sealighter) -- Sysmon-Like research tool for ETW: helps non-developers dive into researching Event Tracing for Windows (ETW) and Windows PreProcessor Tracing (WPP).
 - **see-phit** [📁](./see-phit) [🌐](https://github.com/GerHobbelt/see-phit) -- a compile time HTML templating library written in modern C++/14. You write plain HTML as C++ string literals and it is parsed at compile time into a DOM like data structure. It makes your "stringly typed" HTML text into an actual strongly typed DSL.
@@ -6177,6 +6179,7 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 - **tclap** [📁](./tclap) [🌐](https://github.com/GerHobbelt/tclap) -- TCLAP (Templatized Command Line Argument Parser) is a simple C++ library that facilitates parsing command line arguments in a type independent manner. It doesn't conform exactly to either the GNU or POSIX standards, although it is close.
 - **tclclockmod** [📁](./tclclockmod) [🌐](https://github.com/GerHobbelt/tclclockmod) -- TclClockMod is the fastest, most powerful Tcl clock engine written in C. This Tcl clock extension is the faster Tcl-module for the replacement of the standard "clock" ensemble of tcl.
 - **tcllib** [📁](./tcllib) [🌐](https://github.com/GerHobbelt/tcllib) -- the Tcl Standard Library.
+- **tcmalloc** [📁](./tcmalloc) [🌐](https://github.com/GerHobbelt/tcmalloc) -- TCMalloc is Google's customized implementation of C's `malloc()` and C++'s `operator new` used for memory allocation within our C and C++ code. TCMalloc is a fast, multi-threaded malloc implementation.
 - **tcp_pubsub** [📁](./tcp_pubsub) [🌐](https://github.com/GerHobbelt/tcp_pubsub) -- a minimal publish-subscribe library that transports data via TCP. `tcp_pubsub` does not define a message format but only transports binary blobs. It does however define a protocol around that, which is kept as lightweight as possible.
 - **tcpshm** [📁](./tcpshm) [🌐](https://github.com/GerHobbelt/tcpshm) -- a connection-oriented persistent message queue framework based on TCP or SHM IPC for Linux. TCPSHM provides a reliable and efficient solution based on a sequence number and acknowledge mechanism, that every sent out msg is persisted in a send queue until sender got ack that it's been consumed by the receiver, so that disconnects/crashes are tolerated and the recovery process is purely automatic.
 - **tee-win32** [📁](./tee-win32) [🌐](https://github.com/GerHobbelt/tee-win32) -- a simple [**`tee`**](https://en.wikipedia.org/wiki/Tee_(command)) implementation for Microsoft Windows.
@@ -6277,6 +6280,7 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 - **unicode-icu-demos** [📁](./unicode-icu-demos) [🌐](https://github.com/GerHobbelt/icu-demos) -- ICU Demos contains sample applications built using the International Components for Unicode (ICU) C++ library ICU4C.
 - **unilib** [📁](./unilib) [🌐](https://github.com/GerHobbelt/unilib) -- an embeddable C++17 Unicode library.
 - **units** [📁](./units) [🌐](https://github.com/GerHobbelt/units) -- the Units library provides a means of working with units of measurement at runtime, including conversion to and from strings. It provides a small number of types for working with units and measurements and operations necessary for user input and output with units.
+- **units_cpp** [📁](./units_cpp) [🌐](https://github.com/GerHobbelt/units_cpp) -- a compile-time, header-only, dimensional analysis library built on C++14 with no dependencies.
 - **universal-numbers** [📁](./universal-numbers) [🌐](https://github.com/GerHobbelt/universal) -- a header-only C++ template library for universal number arithmetic. The goal of the Universal Numbers Library is to offer applications alternatives to IEEE floating-point that are more efficient and mathematically robust. The Universal library is a ready-to-use header-only library that provides plug-in replacement for native types, and provides a low-friction environment to start exploring alternatives to IEEE floating-point in your own algorithms.
 - **UniversalStacktrace** [📁](./UniversalStacktrace) [🌐](https://github.com/GerHobbelt/UniversalStacktrace) -- C++ Stacktrace for MS Windows, Linux and Apple OS/X.
 - **unixODBC** [📁](./unixODBC) [🌐](https://github.com/GerHobbelt/unixODBC) -- an Open Source ODBC sub-system and an ODBC SDK for Linux, Mac OSX, and UNIX.
@@ -6324,7 +6328,9 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 - **vcpkg** [📁](./vcpkg) [🌐](https://github.com/GerHobbelt/vcpkg) -- `Vcpkg` helps you manage C and C++ libraries on Windows, Linux and MacOS.
 - **velocypack** [📁](./velocypack) [🌐](https://github.com/GerHobbelt/velocypack) -- a fast and compact format for serialization and storage.  These days, JSON (JavaScript Object Notation, see ECMA-404) is used in many cases where data has to be exchanged. Lots of protocols between different services use it, databases store JSON (document stores naturally, but others increasingly as well). It is popular, because it is simple, human-readable, and yet surprisingly versatile, despite its limitations. At the same time there is a plethora of alternatives ranging from XML over Universal Binary JSON, MongoDB's BSON, MessagePack, BJSON (binary JSON), Apache Thrift till Google's protocol buffers and ArangoDB's shaped JSON. When looking into this, we were surprised to find that none of these formats manages to combine compactness, platform independence, fast access to sub-objects and rapid conversion from and to JSON.
 - **Verify** [📁](./Verify) [🌐](https://github.com/GerHobbelt/Verify) -- a snapshot tool that simplifies the assertion of complex data models and documents. Verify is called on the test result during the assertion phase. It serializes that result and stores it in a file that matches the test name. On the next test execution, the result is again serialized and compared to the existing file. The test will fail if the two snapshots do not match: either the change is unexpected, or the reference snapshot needs to be updated to the new result.
+- **vigra** [📁](./vigra) [🌐](https://github.com/GerHobbelt/vigra) -- VIGRA Computer Vision Library is a computer vision library that puts its main emphasis on flexible algorithms, because algorithms represent the principal know-how of this field. The library was consequently built using generic programming as introduced by Stepanov and Musser and exemplified in the C++ Standard Template Library. By writing a few adapters (image iterators and accessors) you can use VIGRA's algorithms on top of your data structures, within your environment.
 - **visible-url-detector** [📁](./visible-url-detector) [🌐](https://github.com/GerHobbelt/visible-url-detector) -- console app for listing active tab from browsers (Windows)
+- **VisualizationLibrary** [📁](./VisualizationLibrary) [🌐](https://github.com/GerHobbelt/VisualizationLibrary) -- a C++ middleware for high-performance 2D and 3D graphics applications based on the industry standard OpenGL 1.x-4.x, designed to develop portable applications for the Windows, Linux and Mac OS X operating systems.
 - **VisualScriptEngine** [📁](./VisualScriptEngine) [🌐](https://github.com/GerHobbelt/VisualScriptEngine) -- A visual scripting engine designed for embedding. The engine is written in modern C++ and compiles on several platforms with no external dependencies.
 - **vivid** [📁](./vivid) [🌐](https://github.com/GerHobbelt/vivid) -- vivid 🌈 is a simple-to-use C++ color library.
 - **vizzu** [📁](./vizzu) [🌐](https://github.com/GerHobbelt/vizzu-lib) -- Vizzu is a Javascript/C++ library for animated data visualizations and data stories, utilizing a generic dataviz engine that generates many types of charts and seamlessly animates between them. It can be used to create static charts but more importantly, it is designed for building animated data stories and interactive explorers as Vizzu enables showing different perspectives of the data that the viewers can easily follow due to the animation.
@@ -6416,6 +6422,7 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 - **yaml-test-suite** [📁](./yaml-test-suite) [🌐](https://github.com/GerHobbelt/yaml-test-suite) -- comprehensive Test Suite for YAML
 - **yara-pattern-matcher** [📁](./yara-pattern-matcher) [🌐](https://github.com/GerHobbelt/yara) -- for automated and user-specified pattern recognition in custom document & metadata *cleaning* / processing tasks
 - **yasl** [📁](./yasl) [🌐](https://github.com/GerHobbelt/yasl) -- Bytecode Interpreter for Yet Another Scripting Language (YASL).
+- **ygg** [📁](./ygg) [🌐](https://github.com/GerHobbelt/ygg) -- Ygg (short for [Yggdrasil](https://en.wikipedia.org/wiki/Yggdrasil)) is a C++17 implementation of several intrusive tree data structures. If you need a Red-Black-Tree, a Zip Tree, a Segment Tree or an Interval Tree in your C++ application, and for some reason the existing implementations (like std::set or boost::instrusive::rbtree) are not suited for you, Ygg may be the answer. Also, I do not know of any other implementation of the "Dynamic Segment Tree".
 - **yggdrasil-decision-forests** [📁](./yggdrasil-decision-forests) [🌐](https://github.com/GerHobbelt/yggdrasil-decision-forests) -- Yggdrasil Decision Forests (YDF) is a production-grade collection of algorithms for the training, serving, and interpretation of decision forest models. YDF is open-source and is available in C++, command-line interface (CLI), TensorFlow (under the name [TensorFlow Decision Forests](https://github.com/tensorflow/decision-forests); TF-DF), JavaScript (inference only), and Go (inference only).
 - **you-token-to-me** [📁](./you-token-to-me) [🌐](https://github.com/GerHobbelt/YouTokenToMe) -- text tokenization
 - **yy_color_convertor** [📁](./yy_color_convertor) [🌐](https://github.com/GerHobbelt/yy_color_convertor) -- convert color between RGB,HSL,HSB,CMYK,YUV,YIQ,XYZ,xyY,Lab,Luv,LCH ...
@@ -6639,48 +6646,10 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 
 # TBD: Libraries which still need to be moved into the overview / categories above...
 
-
-
-
-
-[submodule "libfsm"]
-	path = libfsm
-	url = git@github.com:GerHobbelt/libfsm.git
-    fetchRecurseSubmodules = on-demand
-    ignore = dirty
-
-[submodule "graphengine"]
-	path = graphengine
-	url = git@github.com:GerHobbelt/graphengine.git
-    fetchRecurseSubmodules = on-demand
-    ignore = dirty
-
-[submodule "tcmalloc"]
-	path = tcmalloc
-	url = git@github.com:GerHobbelt/tcmalloc.git
-    fetchRecurseSubmodules = on-demand
-    ignore = dirty
-
-
-[submodule "ygg"]
-	path = ygg
-	url = git@github.com:GerHobbelt/ygg.git
-    fetchRecurseSubmodules = on-demand
-    ignore = dirty
-
-
-[submodule "VisualizationLibrary"]
-	path = VisualizationLibrary
-	url = git@github.com:GerHobbelt/VisualizationLibrary.git
-    fetchRecurseSubmodules = on-demand
-    ignore = dirty
-
-
-
-[submodule "ntl"]
-	path = ntl
-	url = git@github.com:GerHobbelt/ntl.git
-    fetchRecurseSubmodules = on-demand
-    ignore = dirty
-
-
+- **VisualizationLibrary** [📁](./VisualizationLibrary) [🌐](https://github.com/GerHobbelt/VisualizationLibrary) -- a C++ middleware for high-performance 2D and 3D graphics applications based on the industry standard OpenGL 1.x-4.x, designed to develop portable applications for the Windows, Linux and Mac OS X operating systems.
+- **ntl** [📁](./ntl) [🌐](https://github.com/GerHobbelt/ntl) -- a library for doing numbery theory.
+- **sds** [📁](./sds) [🌐](https://github.com/GerHobbelt/sds) -- Simple Dynamic Strings (SDS) is a string library for C designed to augment the limited libc string handling functionalities by adding heap allocated strings that are (1) simpler to use, (2) binary safe, (3) computationally more efficient and (4) compatible with normal C string functions. This is achieved using an alternative design in which instead of using a C structure to represent a string, we use a binary prefix that is stored before the actual pointer to the string that is returned by SDS to the user.
+- **tcmalloc** [📁](./tcmalloc) [🌐](https://github.com/GerHobbelt/tcmalloc) -- TCMalloc is Google's customized implementation of C's `malloc()` and C++'s `operator new` used for memory allocation within our C and C++ code. TCMalloc is a fast, multi-threaded malloc implementation.
+- **units_cpp** [📁](./units_cpp) [🌐](https://github.com/GerHobbelt/units_cpp) -- a compile-time, header-only, dimensional analysis library built on C++14 with no dependencies.
+- **vigra** [📁](./vigra) [🌐](https://github.com/GerHobbelt/vigra) -- VIGRA Computer Vision Library is a computer vision library that puts its main emphasis on flexible algorithms, because algorithms represent the principal know-how of this field. The library was consequently built using generic programming as introduced by Stepanov and Musser and exemplified in the C++ Standard Template Library. By writing a few adapters (image iterators and accessors) you can use VIGRA's algorithms on top of your data structures, within your environment.
+- **ygg** [📁](./ygg) [🌐](https://github.com/GerHobbelt/ygg) -- Ygg (short for [Yggdrasil](https://en.wikipedia.org/wiki/Yggdrasil)) is a C++17 implementation of several intrusive tree data structures. If you need a Red-Black-Tree, a Zip Tree, a Segment Tree or an Interval Tree in your C++ application, and for some reason the existing implementations (like std::set or boost::instrusive::rbtree) are not suited for you, Ygg may be the answer. Also, I do not know of any other implementation of the "Dynamic Segment Tree".

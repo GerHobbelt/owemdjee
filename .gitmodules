@@ -212,7 +212,7 @@
     path = glob
     url = git@github.com:GerHobbelt/glob.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "libvips"]
     path = libvips
@@ -326,7 +326,7 @@
     path = fmt
     url = git@github.com:GerHobbelt/fmt.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "xml-pugixml"]
     path = xml-pugixml
@@ -410,7 +410,7 @@
     path = boost
     url = git@github.com:GerHobbelt/boost.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "libwebsockets"]
     path = libwebsockets
@@ -962,7 +962,7 @@
     path = hedley
     url = git@github.com:GerHobbelt/hedley.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "expected-lite"]
     path = expected-lite
@@ -1118,7 +1118,7 @@
     path = civetweb
     url = git@github.com:GerHobbelt/civetweb.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "proxygen"]
     path = proxygen
@@ -1136,7 +1136,7 @@
     path = wxWidgets
     url = git@github.com:GerHobbelt/wxWidgets.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "pcre"]
     path = pcre
@@ -1166,7 +1166,7 @@
     path = wxCharts
     url = git@github.com:GerHobbelt/wxCharts.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "GMMreg"]
     path = GMMreg
@@ -1286,7 +1286,7 @@
     path = fastText
     url = git@github.com:GerHobbelt/fastText.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "BlingFire"]
     path = BlingFire
@@ -1568,7 +1568,7 @@
     path = libcpr
     url = git@github.com:GerHobbelt/cpr.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "glib2"]
     path = glib2
@@ -1658,7 +1658,7 @@
     path = libwildmatch
     url = git@github.com:GerHobbelt/wildmatch.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "libsqlfs"]
     path = libsqlfs
@@ -1892,7 +1892,7 @@
     path = hnswlib
     url = git@github.com:GerHobbelt/hnswlib.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "nmslib"]
     path = nmslib
@@ -2036,7 +2036,7 @@
     path = result-cpp
     url = git@github.com:GerHobbelt/result.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "delegate"]
     path = delegate
@@ -2060,7 +2060,7 @@
     path = ocreval
     url = git@github.com:GerHobbelt/ocreval.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "asio"]
     path = asio
@@ -2072,7 +2072,7 @@
     path = highway
     url = git@github.com:GerHobbelt/highway.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "tinycolormap"]
     path = tinycolormap
@@ -2102,7 +2102,7 @@
     path = pcg-cpp-random
     url = git@github.com:GerHobbelt/pcg-cpp.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "cpp-ipc"]
     path = cpp-ipc
@@ -2132,13 +2132,13 @@
     path = libstb
     url = git@github.com:GerHobbelt/stb.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "bolt"]
     path = bolt
     url = git@github.com:GerHobbelt/bolt.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "concurrentqueue"]
     path = concurrentqueue
@@ -2216,7 +2216,7 @@
     path = libchardet
     url = git@github.com:GerHobbelt/libchardet.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "line_detector"]
     path = line_detector
@@ -2228,7 +2228,7 @@
     path = refl-cpp
     url = git@github.com:GerHobbelt/refl-cpp.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "zpp_bits"]
     path = zpp_bits
@@ -2252,7 +2252,7 @@
     path = fast_float
     url = git@github.com:GerHobbelt/fast_float.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "libcopp"]
     path = libcopp
@@ -2264,7 +2264,7 @@
     path = boost-url
     url = git@github.com:GerHobbelt/boost-url.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "gdbm"]
     path = gdbm
@@ -2288,7 +2288,7 @@
     path = libiconv
     url = git@github.com:GerHobbelt/libiconv-win-build.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "horsejs"]
     path = horsejs
@@ -2300,7 +2300,7 @@
     path = dirent
     url = git@github.com:GerHobbelt/dirent.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "swig"]
     path = swig
@@ -2324,7 +2324,7 @@
     path = libassert
     url = git@github.com:GerHobbelt/libassert.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "libicns"]
     path = libicns
@@ -2384,7 +2384,7 @@
     path = subprocess_h
     url = git@github.com:GerHobbelt/subprocess.h.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "nameof"]
     path = nameof
@@ -2450,7 +2450,7 @@
     path = libeternaltimestamp
     url = git@github.com:GerHobbelt/libeternaltimestamp.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "libxslt"]
     path = libxslt
@@ -2588,7 +2588,7 @@
     path = cppjieba
     url = git@github.com:GerHobbelt/cppjieba.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "monolith"]
     path = monolith
@@ -2678,19 +2678,19 @@
     path = libcppjieba
     url = git@github.com:GerHobbelt/libcppjieba.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "pinyin"]
     path = pinyin
     url = git@github.com:GerHobbelt/pinyin.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "libpinyin"]
     path = libpinyin
     url = git@github.com:GerHobbelt/libpinyin.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "libcsv2"]
     path = libcsv2
@@ -2846,7 +2846,7 @@
     path = oiio
     url = git@github.com:GerHobbelt/oiio.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "libheif-alt"]
     path = libheif-alt
@@ -2912,19 +2912,19 @@
     path = date
     url = git@github.com:GerHobbelt/date.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "datetimepp"]
     path = datetimepp
     url = git@github.com:GerHobbelt/datetimepp.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "dateutils"]
     path = dateutils
     url = git@github.com:GerHobbelt/dateutils.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "cctz"]
     path = cctz
@@ -3032,13 +3032,13 @@
     path = spdlog
     url = git@github.com:GerHobbelt/spdlog.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "spdlog_setup"]
     path = spdlog_setup
     url = git@github.com:GerHobbelt/spdlog_setup.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "cpptoml"]
     path = cpptoml
@@ -3056,7 +3056,7 @@
     path = folly
     url = git@github.com:GerHobbelt/folly.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "BoxFort"]
     path = BoxFort
@@ -3068,7 +3068,7 @@
     path = debugbreak
     url = git@github.com:GerHobbelt/debugbreak.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "Criterion"]
     path = Criterion
@@ -3110,7 +3110,7 @@
     path = unpaper
     url = git@github.com:GerHobbelt/unpaper.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "shadesmar"]
     path = shadesmar
@@ -3140,7 +3140,7 @@
     path = fatal
     url = git@github.com:GerHobbelt/fatal.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "marian"]
     path = marian
@@ -3332,7 +3332,7 @@
     path = ApprovalTestsCpp
     url = git@github.com:GerHobbelt/ApprovalTests.cpp.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "Verify"]
     path = Verify
@@ -3440,7 +3440,7 @@
     path = cxxtest
     url = git@github.com:GerHobbelt/cxxtest.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "textflowcpp"]
     path = textflowcpp
@@ -3470,7 +3470,7 @@
     path = ipa-dict
     url = git@github.com:GerHobbelt/ipa-dict.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "nuspell"]
     path = nuspell
@@ -3626,7 +3626,7 @@
     path = libchaos
     url = git@github.com:GerHobbelt/libchaos.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "libevent"]
     path = libevent
@@ -3638,7 +3638,7 @@
     path = abseil-cpp
     url = git@github.com:GerHobbelt/abseil-cpp.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "libdivsufsort"]
     path = libdivsufsort
@@ -3674,7 +3674,7 @@
     path = harbour-core
     url = git@github.com:GerHobbelt/core.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "id3-tagparser"]
     path = id3-tagparser
@@ -3896,7 +3896,7 @@
     path = libpopcnt
     url = git@github.com:GerHobbelt/libpopcnt.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "PlatformFolders"]
     path = PlatformFolders
@@ -3998,7 +3998,7 @@
     path = jbig2enc
     url = git@github.com:GerHobbelt/jbig2enc.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "cpplocate"]
     path = cpplocate
@@ -4244,7 +4244,7 @@
     path = vcopy
     url = git@github.com:GerHobbelt/vcopy.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "fswatch"]
     path = fswatch
@@ -4520,7 +4520,7 @@
     path = OpenColorIO
     url = git@github.com:GerHobbelt/OpenColorIO.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "graph-coloring"]
     path = graph-coloring
@@ -4580,7 +4580,7 @@
     path = libdiagnostics
     url = git@github.com:GerHobbelt/libdiagnostics.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "LLhttp-parser"]
     path = LLhttp-parser
@@ -4670,7 +4670,7 @@
     path = Imath
     url = git@github.com:GerHobbelt/Imath.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "LSWMS"]
     path = LSWMS
@@ -5360,7 +5360,7 @@
     path = libchopshop
     url = git@github.com:GerHobbelt/libchopshop.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "fxt"]
     path = fxt
@@ -5486,7 +5486,7 @@
 	path = u8_to_std_string
 	url = git@github.com:GerHobbelt/u8_to_std_string.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "netdata"]
 	path = netdata
@@ -5570,7 +5570,7 @@
 	path = libparameters
 	url = git@github.com:GerHobbelt/libparameters.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "opentelemetry-cpp-contrib"]
 	path = opentelemetry-cpp-contrib
@@ -5684,7 +5684,7 @@
 	path = libhog
 	url = git@github.com:GerHobbelt/libhog.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "chromium-snss-parse"]
 	path = chromium-snss-parse
@@ -5840,7 +5840,7 @@
 	path = libpathutils
 	url = git@github.com:GerHobbelt/libpathutils.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "nano-signal-slot"]
 	path = nano-signal-slot
@@ -5870,7 +5870,7 @@
 	path = cfgpath
 	url = git@github.com:GerHobbelt/cfgpath.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "AFLplusplus"]
 	path = AFLplusplus
@@ -6086,13 +6086,13 @@
 	path = fnmatch
 	url = git@github.com:GerHobbelt/fnmatch.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "text-wrangler"]
 	path = text-wrangler
 	url = git@github.com:GerHobbelt/text-wrangler.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "kann"]
 	path = kann
@@ -6410,7 +6410,7 @@
 	path = libascii
 	url = git@github.com:GerHobbelt/libascii.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "tinyexr"]
 	path = tinyexr
@@ -6428,7 +6428,7 @@
 	path = libintrinsics
 	url = git@github.com:GerHobbelt/libintrinsics.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "qHilbert"]
 	path = qHilbert
@@ -6446,7 +6446,7 @@
 	path = half
 	url = git@github.com:GerHobbelt/half.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "WebView2Samples"]
 	path = WebView2Samples
@@ -6686,13 +6686,13 @@
 	path = units
 	url = git@github.com:GerHobbelt/units.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "chewing_text_cud"]
 	path = chewing_text_cud
 	url = git@github.com:GerHobbelt/chewing_text_cud.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "tiny-utf8"]
 	path = tiny-utf8
@@ -6752,7 +6752,7 @@
 	path = concat
 	url = git@github.com:GerHobbelt/concat.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "MultipartEncoder"]
 	path = MultipartEncoder
@@ -7046,7 +7046,7 @@
 	path = worde_butcher
 	url = git@github.com:GerHobbelt/worde_butcher.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "dkm"]
 	path = dkm
@@ -7364,19 +7364,19 @@
 	path = Sancho.Panza.on.tesseract.OCR
 	url = git@github.com:GerHobbelt/Sancho.Panza.on.tesseract.OCR.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "ocr_eval_tools"]
 	path = ocr_eval_tools
 	url = git@github.com:GerHobbelt/ocr_eval_tools.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "local_adaptive_binarization"]
 	path = local_adaptive_binarization
 	url = git@github.com:GerHobbelt/local_adaptive_binarization.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "Awesome-Image-Quality-Assessment"]
 	path = Awesome-Image-Quality-Assessment
@@ -7400,7 +7400,7 @@
 	path = ragel
 	url = git@github.com:GerHobbelt/ragel.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "colm"]
 	path = colm
@@ -7460,19 +7460,19 @@
 	path = libchiaroscuramente
 	url = git@github.com:GerHobbelt/libchiaroscuramente.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "tesseract-ocr-mailing-list-archive"]
 	path = tesseract-ocr-mailing-list-archive
 	url = git@github.com:GerHobbelt/tesseract-ocr-mailing-list-archive.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "tesseract-dev-mailing-list-archive"]
 	path = tesseract-dev-mailing-list-archive
 	url = git@github.com:GerHobbelt/tesseract-dev-mailing-list-archive.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "libzint"]
 	path = libzint
@@ -7646,7 +7646,7 @@
 	path = u8g2
 	url = git@github.com:GerHobbelt/u8g2.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "mcmd"]
 	path = mcmd
@@ -7694,7 +7694,7 @@
 	path = trng4
 	url = git@github.com:GerHobbelt/trng4.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "remake"]
 	path = remake
@@ -7706,7 +7706,7 @@
 	path = clp
 	url = git@github.com:GerHobbelt/clp.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "openalpr"]
 	path = openalpr
@@ -7748,7 +7748,7 @@
 	path = nodesoup
 	url = git@github.com:GerHobbelt/nodesoup.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "quirc"]
 	path = quirc
@@ -7784,13 +7784,13 @@
 	path = expected
 	url = git@github.com:GerHobbelt/expected.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "bin2cpp"]
 	path = bin2cpp
 	url = git@github.com:GerHobbelt/bin2cpp.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "ink-stroke-modeler"]
 	path = ink-stroke-modeler
@@ -7838,13 +7838,13 @@
 	path = xz
 	url = git@github.com:GerHobbelt/xz.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "7zip"]
 	path = 7zip
 	url = git@github.com:GerHobbelt/7zip.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "lzma"]
 	path = lzma
@@ -7862,13 +7862,13 @@
 	path = bxzstr
 	url = git@github.com:GerHobbelt/bxzstr.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "7-Zip-zstd"]
 	path = 7-Zip-zstd
 	url = git@github.com:GerHobbelt/7-Zip-zstd.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "Image-Smoothing-Algorithm-Based-on-Gradient-Analysis"]
 	path = Image-Smoothing-Algorithm-Based-on-Gradient-Analysis
@@ -8012,7 +8012,7 @@
 	path = libchewing
 	url = git@github.com:GerHobbelt/libchewing.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "libexif"]
 	path = libexif
@@ -8030,13 +8030,13 @@
 	path = ocr-evaluation-tools
 	url = git@github.com:GerHobbelt/ocr-evaluation-tools.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "StringViewTests"]
 	path = StringViewTests
 	url = git@github.com:GerHobbelt/StringViewTests.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "map_benchmark"]
 	path = map_benchmark
@@ -8108,7 +8108,7 @@
 	path = libetpan
 	url = git@github.com:GerHobbelt/libetpan.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "cpp-base64"]
 	path = cpp-base64
@@ -8150,7 +8150,7 @@
 	path = observable
 	url = git@github.com:GerHobbelt/observable.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "skia"]
 	path = skia
@@ -8162,7 +8162,7 @@
 	path = inja
 	url = git@github.com:GerHobbelt/inja.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "SFML"]
 	path = SFML
@@ -8180,7 +8180,7 @@
 	path = Catch2
 	url = git@github.com:GerHobbelt/Catch2.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "entt"]
 	path = entt
@@ -8204,13 +8204,13 @@
 	path = restclient-cpp
 	url = git@github.com:GerHobbelt/restclient-cpp.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "stdexec"]
 	path = stdexec
 	url = git@github.com:GerHobbelt/stdexec.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "msgpack-cpp"]
 	path = msgpack-cpp
@@ -8240,7 +8240,7 @@
 	path = libprng
 	url = git@github.com:GerHobbelt/libprng.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "curlpp"]
 	path = curlpp
@@ -8258,7 +8258,7 @@
 	path = libspatialindex
 	url = git@github.com:GerHobbelt/libspatialindex.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "THST"]
 	path = THST
@@ -8390,13 +8390,13 @@
 	path = Algo_Ds_Notes
 	url = git@github.com:GerHobbelt/Algo_Ds_Notes.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "UniversalStacktrace"]
 	path = UniversalStacktrace
 	url = git@github.com:GerHobbelt/UniversalStacktrace.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "signals-rt"]
 	path = signals-rt
@@ -8420,7 +8420,7 @@
 	path = libccpalette
 	url = git@github.com:GerHobbelt/libccpalette.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "ssp"]
 	path = ssp
@@ -8456,7 +8456,7 @@
 	path = html-parser-test-corpus
 	url = git@github.com:GerHobbelt/html-parser-test-corpus.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "libfsm"]
 	path = libfsm
@@ -8497,9 +8497,18 @@
 [submodule "vigra"]
 	path = vigra
 	url = git@github.com:GerHobbelt/vigra.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
 [submodule "sds"]
 	path = sds
 	url = git@github.com:GerHobbelt/sds.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
 [submodule "units_cpp"]
 	path = units_cpp
 	url = git@github.com:GerHobbelt/units_cpp.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
