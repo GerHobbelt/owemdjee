@@ -6642,3 +6642,45 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 
 
 
+
+[submodule "libfsm"]
+	path = libfsm
+	url = git@github.com:GerHobbelt/libfsm.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "graphengine"]
+	path = graphengine
+	url = git@github.com:GerHobbelt/graphengine.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "tcmalloc"]
+	path = tcmalloc
+	url = git@github.com:GerHobbelt/tcmalloc.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+
+[submodule "ygg"]
+	path = ygg
+	url = git@github.com:GerHobbelt/ygg.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+
+[submodule "VisualizationLibrary"]
+	path = VisualizationLibrary
+	url = git@github.com:GerHobbelt/VisualizationLibrary.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+
+
+[submodule "ntl"]
+	path = ntl
+	url = git@github.com:GerHobbelt/ntl.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+
