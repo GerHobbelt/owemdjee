@@ -8469,3 +8469,37 @@
 	url = git@github.com:GerHobbelt/graphengine.git
     fetchRecurseSubmodules = on-demand
     ignore = dirty
+
+[submodule "tcmalloc"]
+	path = tcmalloc
+	url = git@github.com:GerHobbelt/tcmalloc.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "ygg"]
+	path = ygg
+	url = git@github.com:GerHobbelt/ygg.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "VisualizationLibrary"]
+	path = VisualizationLibrary
+	url = git@github.com:GerHobbelt/VisualizationLibrary.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "ntl"]
+	path = ntl
+	url = git@github.com:GerHobbelt/ntl.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "vigra"]
+	path = vigra
+	url = git@github.com:GerHobbelt/vigra.git
+[submodule "sds"]
+	path = sds
+	url = git@github.com:GerHobbelt/sds.git
+[submodule "units_cpp"]
+	path = units_cpp
+	url = git@github.com:GerHobbelt/units_cpp.git
