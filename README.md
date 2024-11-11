@@ -6653,3 +6653,17 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 - **units_cpp** [📁](./units_cpp) [🌐](https://github.com/GerHobbelt/units_cpp) -- a compile-time, header-only, dimensional analysis library built on C++14 with no dependencies.
 - **vigra** [📁](./vigra) [🌐](https://github.com/GerHobbelt/vigra) -- VIGRA Computer Vision Library is a computer vision library that puts its main emphasis on flexible algorithms, because algorithms represent the principal know-how of this field. The library was consequently built using generic programming as introduced by Stepanov and Musser and exemplified in the C++ Standard Template Library. By writing a few adapters (image iterators and accessors) you can use VIGRA's algorithms on top of your data structures, within your environment.
 - **ygg** [📁](./ygg) [🌐](https://github.com/GerHobbelt/ygg) -- Ygg (short for [Yggdrasil](https://en.wikipedia.org/wiki/Yggdrasil)) is a C++17 implementation of several intrusive tree data structures. If you need a Red-Black-Tree, a Zip Tree, a Segment Tree or an Interval Tree in your C++ application, and for some reason the existing implementations (like std::set or boost::instrusive::rbtree) are not suited for you, Ygg may be the answer. Also, I do not know of any other implementation of the "Dynamic Segment Tree".
+
+
+[submodule "opencv_3rdparty"]
+	path = opencv_3rdparty
+	url = git@github.com:GerHobbelt/opencv_3rdparty.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "cgal"]
+	path = cgal
+	url = git@github.com:GerHobbelt/cgal.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+

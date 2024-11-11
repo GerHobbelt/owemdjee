@@ -8512,3 +8512,15 @@
     fetchRecurseSubmodules = on-demand
     ignore = dirty
 
+[submodule "opencv_3rdparty"]
+	path = opencv_3rdparty
+	url = git@github.com:GerHobbelt/opencv_3rdparty.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "cgal"]
+	path = cgal
+	url = git@github.com:GerHobbelt/cgal.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
