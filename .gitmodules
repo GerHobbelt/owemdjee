@@ -52,12 +52,6 @@
     fetchRecurseSubmodules = on-demand
     ignore = dirty
 
-[submodule "ImageMagick"]
-    path = ImageMagick
-    url = git@github.com:GerHobbelt/ImageMagick.git
-    fetchRecurseSubmodules = on-demand
-    ignore = dirty
-
 [submodule "unicode-cldr"]
     path = unicode-cldr
     url = git@github.com:GerHobbelt/cldr.git
@@ -217,12 +211,6 @@
 [submodule "libvips"]
     path = libvips
     url = git@github.com:GerHobbelt/libvips.git
-    fetchRecurseSubmodules = on-demand
-    ignore = dirty
-
-[submodule "GraphicsMagick"]
-    path = GraphicsMagick
-    url = git@github.com:GerHobbelt/graphicsmagick.git
     fetchRecurseSubmodules = on-demand
     ignore = dirty
 
@@ -2590,12 +2578,6 @@
     fetchRecurseSubmodules = on-demand
 
 
-[submodule "monolith"]
-    path = monolith
-    url = git@github.com:GerHobbelt/monolith.git
-    fetchRecurseSubmodules = on-demand
-    ignore = dirty
-
 [submodule "PGM-index"]
     path = PGM-index
     url = git@github.com:GerHobbelt/PGM-index.git
@@ -3244,12 +3226,6 @@
     fetchRecurseSubmodules = on-demand
     ignore = dirty
 
-[submodule "calibre"]
-    path = calibre
-    url = git@github.com:GerHobbelt/calibre.git
-    fetchRecurseSubmodules = on-demand
-    ignore = dirty
-
 [submodule "xpdf"]
     path = xpdf
     url = git@github.com:GerHobbelt/xpdf.git
@@ -3427,12 +3403,6 @@
 [submodule "osquery"]
     path = osquery
     url = git@github.com:GerHobbelt/osquery.git
-    fetchRecurseSubmodules = on-demand
-    ignore = dirty
-
-[submodule "podofo"]
-    path = podofo
-    url = git@github.com:GerHobbelt/podofo.git
     fetchRecurseSubmodules = on-demand
     ignore = dirty
 
@@ -6328,12 +6298,6 @@
     fetchRecurseSubmodules = on-demand
     ignore = dirty
 
-[submodule "cef-pdf"]
-	path = cef-pdf
-	url = git@github.com:GerHobbelt/cef-pdf.git
-    fetchRecurseSubmodules = on-demand
-    ignore = dirty
-
 [submodule "sse-popcount"]
 	path = sse-popcount
 	url = git@github.com:GerHobbelt/sse-popcount.git
@@ -6949,12 +6913,6 @@
 [submodule "libase"]
 	path = libase
 	url = git@github.com:GerHobbelt/libase.git
-    fetchRecurseSubmodules = on-demand
-    ignore = dirty
-
-[submodule "krita"]
-	path = krita
-	url = git@github.com:GerHobbelt/krita.git
     fetchRecurseSubmodules = on-demand
     ignore = dirty
 
@@ -8080,12 +8038,6 @@
     fetchRecurseSubmodules = on-demand
     ignore = dirty
 
-[submodule "EASTL"]
-	path = EASTL
-	url = git@github.com:GerHobbelt/EASTL.git
-    fetchRecurseSubmodules = on-demand
-    ignore = dirty
-
 [submodule "stl-allocator"]
 	path = stl-allocator
 	url = git@github.com:GerHobbelt/stl-allocator.git
@@ -8521,6 +8473,12 @@
 [submodule "cgal"]
 	path = cgal
 	url = git@github.com:GerHobbelt/cgal.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "oniguruma"]
+    path = oniguruma
+    url = git@github.com:GerHobbelt/oniguruma.git
     fetchRecurseSubmodules = on-demand
     ignore = dirty
 
