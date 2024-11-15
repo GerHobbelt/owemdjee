@@ -8482,3 +8482,27 @@
     fetchRecurseSubmodules = on-demand
     ignore = dirty
 
+[submodule "hwinfo"]
+	path = hwinfo
+	url = git@github.com:GerHobbelt/hwinfo.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "libMultiRobotPlanning"]
+	path = libMultiRobotPlanning
+	url = git@github.com:GerHobbelt/libMultiRobotPlanning.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "cppuprofile"]
+	path = cppuprofile
+	url = git@github.com:GerHobbelt/cppuprofile.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "sys_info"]
+	path = sys_info
+	url = git@github.com:GerHobbelt/sys_info.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
