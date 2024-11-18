@@ -8506,3 +8506,57 @@
     fetchRecurseSubmodules = on-demand
     ignore = dirty
 
+[submodule "uuid_v4"]
+	path = uuid_v4
+	url = git@github.com:GerHobbelt/uuid_v4.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "cpp.react"]
+	path = cpp.react
+	url = git@github.com:GerHobbelt/cpp.react.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "ReactivePlusPlus"]
+	path = ReactivePlusPlus
+	url = git@github.com:GerHobbelt/ReactivePlusPlus.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "simde"]
+	path = simde
+	url = git@github.com:GerHobbelt/simde.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "libcds"]
+	path = libcds
+	url = git@github.com:GerHobbelt/libcds.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "sml"]
+	path = sml
+	url = git@github.com:GerHobbelt/sml.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "LibRaw"]
+	path = LibRaw
+	url = git@github.com:GerHobbelt/LibRaw.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "rawspeed"]
+	path = rawspeed
+	url = git@github.com:GerHobbelt/rawspeed.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "libuuid"]
+	path = libuuid
+	url = git@github.com:GerHobbelt/libuuid.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+

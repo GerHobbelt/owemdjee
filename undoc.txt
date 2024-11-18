@@ -1,1 +1,1 @@
-
+DIR: **./libuuid** -- - **libuuid** [📁](./libuuid) [🌐](https://github.com/GerHobbelt/libuuid)
