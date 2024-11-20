@@ -8566,3 +8566,27 @@
     fetchRecurseSubmodules = on-demand
     ignore = dirty
 
+[submodule "iod"]
+	path = iod
+	url = git@github.com:GerHobbelt/iod.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "avir"]
+	path = avir
+	url = git@github.com:GerHobbelt/avir.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "freeimage"]
+	path = freeimage
+	url = git@github.com:GerHobbelt/freeimage.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "vpp"]
+	path = vpp
+	url = git@github.com:GerHobbelt/vpp.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
