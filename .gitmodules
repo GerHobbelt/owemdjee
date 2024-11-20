@@ -8560,3 +8560,9 @@
     fetchRecurseSubmodules = on-demand
     ignore = dirty
 
+[submodule "libultrahdr"]
+	path = libultrahdr
+	url = git@github.com:GerHobbelt/libultrahdr.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
