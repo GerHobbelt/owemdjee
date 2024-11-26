@@ -8590,3 +8590,42 @@
     fetchRecurseSubmodules = on-demand
     ignore = dirty
 
+[submodule "detox"]
+	path = detox
+	url = git@github.com:GerHobbelt/detox.git
+[submodule "rankselect"]
+	path = rankselect
+	url = git@github.com:GerHobbelt/rankselect.git
+[submodule "vqf"]
+	path = vqf
+	url = git@github.com:GerHobbelt/vqf.git
+[submodule "libcron"]
+	path = libcron
+	url = git@github.com:GerHobbelt/libcron.git
+[submodule "open-location-code"]
+	path = open-location-code
+	url = git@github.com:GerHobbelt/open-location-code.git
+[submodule "janet"]
+	path = janet
+	url = git@github.com:GerHobbelt/janet.git
+[submodule "janet-sh"]
+	path = janet-sh
+	url = git@github.com:GerHobbelt/janet-sh.git
+[submodule "immer"]
+	path = immer
+	url = git@github.com:GerHobbelt/immer.git
+[submodule "lager"]
+	path = lager
+	url = git@github.com:GerHobbelt/lager.git
+[submodule "ewig"]
+	path = ewig
+	url = git@github.com:GerHobbelt/ewig.git
+[submodule "tarray"]
+	path = tarray
+	url = git@github.com:GerHobbelt/tarray.git
+[submodule "spork"]
+	path = spork
+	url = git@github.com:GerHobbelt/spork.git
+[submodule "janet-sqlite3"]
+	path = janet-sqlite3
+	url = git@github.com:GerHobbelt/janet-sqlite3.git
