@@ -8674,3 +8674,39 @@
     fetchRecurseSubmodules = on-demand
     ignore = dirty
 
+[submodule "spatial_index_benchmark"]
+	path = spatial_index_benchmark
+	url = git@github.com:GerHobbelt/spatial_index_benchmark.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "RTree"]
+	path = RTree
+	url = git@github.com:GerHobbelt/RTree.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "tindicators"]
+	path = tindicators
+	url = git@github.com:GerHobbelt/tindicators.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "grid_map"]
+	path = grid_map
+	url = git@github.com:GerHobbelt/grid_map.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "SDLP"]
+	path = SDLP
+	url = git@github.com:GerHobbelt/SDLP.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "pyTsetlinMachine"]
+	path = pyTsetlinMachine
+	url = git@github.com:GerHobbelt/pyTsetlinMachine.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
