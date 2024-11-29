@@ -8710,3 +8710,9 @@
     fetchRecurseSubmodules = on-demand
     ignore = dirty
 
+[submodule "Doxa"]
+	path = Doxa
+	url = git@github.com:GerHobbelt/Doxa.git
+[submodule "iqa"]
+	path = iqa
+	url = git@github.com:GerHobbelt/iqa.git
