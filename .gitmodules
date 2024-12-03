@@ -8710,9 +8710,180 @@
     fetchRecurseSubmodules = on-demand
     ignore = dirty
 
-[submodule "Doxa"]
-	path = Doxa
-	url = git@github.com:GerHobbelt/Doxa.git
 [submodule "iqa"]
 	path = iqa
 	url = git@github.com:GerHobbelt/iqa.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "DarkThumbs"]
+	path = DarkThumbs
+	url = git@github.com:GerHobbelt/DarkThumbs.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "bit7z"]
+	path = bit7z
+	url = git@github.com:GerHobbelt/bit7z.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "coolreader"]
+	path = coolreader
+	url = git@github.com:GerHobbelt/coolreader.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "OpenCL-Guide"]
+	path = OpenCL-Guide
+	url = git@github.com:GerHobbelt/OpenCL-Guide.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "OpenCL-CLHPP"]
+	path = OpenCL-CLHPP
+	url = git@github.com:GerHobbelt/OpenCL-CLHPP.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "gemmlowp"]
+	path = gemmlowp
+	url = git@github.com:GerHobbelt/gemmlowp.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "sod"]
+	path = sod
+	url = git@github.com:GerHobbelt/sod.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "quile"]
+	path = quile
+	url = git@github.com:GerHobbelt/quile.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "GALGO-2.0"]
+	path = GALGO-2.0
+	url = git@github.com:GerHobbelt/GALGO-2.0.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "optframe"]
+	path = optframe
+	url = git@github.com:GerHobbelt/optframe.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "openGA"]
+	path = openGA
+	url = git@github.com:GerHobbelt/openGA.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "CDT"]
+	path = CDT
+	url = git@github.com:GerHobbelt/CDT.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "delaunator-cpp"]
+	path = delaunator-cpp
+	url = git@github.com:GerHobbelt/delaunator-cpp.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "poly2tri"]
+	path = poly2tri
+	url = git@github.com:GerHobbelt/poly2tri.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "depth_clustering"]
+	path = depth_clustering
+	url = git@github.com:GerHobbelt/depth_clustering.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "adaptive_clustering"]
+	path = adaptive_clustering
+	url = git@github.com:GerHobbelt/adaptive_clustering.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "PointCloudSegmentation"]
+	path = PointCloudSegmentation
+	url = git@github.com:GerHobbelt/PointCloudSegmentation.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "dbscan_kdtree"]
+	path = dbscan_kdtree
+	url = git@github.com:GerHobbelt/dbscan_kdtree.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "TrianglePP"]
+	path = TrianglePP
+	url = git@github.com:GerHobbelt/TrianglePP.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "corosync"]
+	path = corosync
+	url = git@github.com:GerHobbelt/corosync.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "agglomerative-hierarchical-clustering"]
+	path = agglomerative-hierarchical-clustering
+	url = git@github.com:GerHobbelt/agglomerative-hierarchical-clustering.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "clustercat"]
+	path = clustercat
+	url = git@github.com:GerHobbelt/clustercat.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "mcl"]
+	path = mcl
+	url = git@github.com:GerHobbelt/mcl.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "cimfomfa"]
+	path = cimfomfa
+	url = git@github.com:GerHobbelt/cimfomfa.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "html5-parser"]
+	path = html5-parser
+	url = git@github.com:GerHobbelt/html5-parser.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "galib"]
+	path = galib
+	url = git@github.com:GerHobbelt/galib.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "mixbench"]
+	path = mixbench
+	url = git@github.com:GerHobbelt/mixbench.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "OpenCL-Wrapper"]
+	path = OpenCL-Wrapper
+	url = git@github.com:GerHobbelt/OpenCL-Wrapper.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "fann"]
+	path = fann
+	url = git@github.com:GerHobbelt/fann.git

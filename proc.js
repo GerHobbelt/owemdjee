@@ -18,21 +18,28 @@ let content = lines.map((l, i) => {
 
 	l = l.replace(/^.*?-- /, '');
 
-	let f = `${ repo_path }/README.md`;
-	if (fs.existsSync(f)) {
-		console.log("README found!", {l, repo_path, f})
-		return {l, repo_path, f};
-	}
-	const exts = [ 'md', 'rst', 'markdown', 'txt', 'html', 'asciidoc', null ];
-	for (let ext of exts) {
-		if (ext == null)
-			ext = '';
-		else ext = '.' + ext;
+	const dirs = [ null, 'docs', 'doc' ];
+	for (let dir of dirs) {
+		let read_path = repo_path;
+		if (dir != null)
+			read_path += '/' + dir;
 		
-		f = `${ repo_path }/README${ ext }`;
+		let f = `${ read_path }/README.md`;
 		if (fs.existsSync(f)) {
-			console.log("README found!", {l, repo_path, f})
-			return {l, repo_path, f};
+			console.log("README found!", {l, read_path, f})
+			return {l, repo_path: read_path, f};
+		}
+		const exts = [ 'md', 'rst', 'markdown', 'txt', 'html', 'asciidoc', null ];
+		for (let ext of exts) {
+			if (ext == null)
+				ext = '';
+			else ext = '.' + ext;
+			
+			f = `${ read_path }/README${ ext }`;
+			if (fs.existsSync(f)) {
+				console.log("README found!", {l, read_path, f})
+				return {l, repo_path: read_path, f};
+			}
 		}
 	}
 	
