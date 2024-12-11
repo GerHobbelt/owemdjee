@@ -8884,6 +8884,75 @@
     fetchRecurseSubmodules = on-demand
     ignore = dirty
 
-[submodule "fann"]
-	path = fann
-	url = git@github.com:GerHobbelt/fann.git
+[submodule "raylib"]
+	path = raylib
+	url = git@github.com:GerHobbelt/raylib.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "jbigkit"]
+	path = jbigkit
+	url = git@github.com:GerHobbelt/jbigkit.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "wuffs"]
+	path = wuffs
+	url = git@github.com:GerHobbelt/wuffs.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "crc32"]
+	path = crc32
+	url = git@github.com:GerHobbelt/crc32.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "zzuf"]
+	path = zzuf
+	url = git@github.com:GerHobbelt/zzuf.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "fpnge"]
+	path = fpnge
+	url = git@github.com:GerHobbelt/fpnge.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "thumbhash"]
+	path = thumbhash
+	url = git@github.com:GerHobbelt/thumbhash.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "qoir"]
+	path = qoir
+	url = git@github.com:GerHobbelt/qoir.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "blurhash"]
+	path = blurhash
+	url = git@github.com:GerHobbelt/blurhash.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "Image-Compression-Benchmark"]
+	path = Image-Compression-Benchmark
+	url = git@github.com:GerHobbelt/Image-Compression-Benchmark.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "NBLI"]
+	path = NBLI
+	url = git@github.com:GerHobbelt/NBLI.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "libsodium"]
+	path = libsodium
+	url = git@github.com:GerHobbelt/libsodium.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
