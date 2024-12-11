@@ -8956,3 +8956,9 @@
     fetchRecurseSubmodules = on-demand
     ignore = dirty
 
+[submodule "lunasvg"]
+	path = lunasvg
+	url = git@github.com:GerHobbelt/lunasvg.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
