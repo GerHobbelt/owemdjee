@@ -8962,3 +8962,21 @@
     fetchRecurseSubmodules = on-demand
     ignore = dirty
 
+[submodule "thrill"]
+	path = thrill
+	url = git@github.com:GerHobbelt/thrill.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "stxxl"]
+	path = stxxl
+	url = git@github.com:GerHobbelt/stxxl.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "sundials"]
+	path = sundials
+	url = git@github.com:GerHobbelt/sundials.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
