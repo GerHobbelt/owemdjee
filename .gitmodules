@@ -8980,3 +8980,27 @@
     fetchRecurseSubmodules = on-demand
     ignore = dirty
 
+[submodule "habla-el-babbla"]
+	path = habla-el-babbla
+	url = git@github.com:GerHobbelt/habla-el-babbla.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "UDDSketch"]
+	path = UDDSketch
+	url = git@github.com:GerHobbelt/UDDSketch.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "prometheus-cpp"]
+	path = prometheus-cpp
+	url = git@github.com:GerHobbelt/prometheus-cpp.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "libhashish"]
+	path = libhashish
+	url = git@github.com:GerHobbelt/libhashish.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
