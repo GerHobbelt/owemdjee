@@ -9004,3 +9004,135 @@
     fetchRecurseSubmodules = on-demand
     ignore = dirty
 
+[submodule "asp"]
+	path = asp
+	url = git@github.com:GerHobbelt/asp.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "physfs"]
+	path = physfs
+	url = git@github.com:GerHobbelt/physfs.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "my_basic"]
+	path = my_basic
+	url = git@github.com:GerHobbelt/my_basic.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "ChaiScript"]
+	path = ChaiScript
+	url = git@github.com:GerHobbelt/ChaiScript.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "daScript"]
+	path = daScript
+	url = git@github.com:GerHobbelt/daScript.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "atlast"]
+	path = atlast
+	url = git@github.com:GerHobbelt/atlast.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "pforth"]
+	path = pforth
+	url = git@github.com:GerHobbelt/pforth.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "gravity"]
+	path = gravity
+	url = git@github.com:GerHobbelt/gravity.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "wren"]
+	path = wren
+	url = git@github.com:GerHobbelt/wren.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "io"]
+	path = io
+	url = git@github.com:GerHobbelt/io.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "racket"]
+	path = racket
+	url = git@github.com:GerHobbelt/racket.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "pocketlang"]
+	path = pocketlang
+	url = git@github.com:GerHobbelt/pocketlang.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "micropython"]
+	path = micropython
+	url = git@github.com:GerHobbelt/micropython.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "PikaPython"]
+	path = PikaPython
+	url = git@github.com:GerHobbelt/PikaPython.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "quirrel"]
+	path = quirrel
+	url = git@github.com:GerHobbelt/quirrel.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "Rebol3"]
+	path = Rebol3
+	url = git@github.com:GerHobbelt/Rebol3.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "squilu"]
+	path = squilu
+	url = git@github.com:GerHobbelt/squilu.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "squirrel"]
+	path = squirrel
+	url = git@github.com:GerHobbelt/squirrel.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "picol"]
+	path = picol
+	url = git@github.com:GerHobbelt/picol.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "ecl"]
+	path = ecl
+	url = git@github.com:GerHobbelt/ecl.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "mrubyc"]
+	path = mrubyc
+	url = git@github.com:GerHobbelt/mrubyc.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "mruby"]
+	path = mruby
+	url = git@github.com:GerHobbelt/mruby.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
