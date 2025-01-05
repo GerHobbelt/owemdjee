@@ -8255,7 +8255,7 @@
     ignore = dirty
 
 [submodule "Cuckoo_Filter"]
-	path = Cuckoo_Filter
+	path = Cuckoo_Filter_simple
 	url = git@github.com:GerHobbelt/Cuckoo_Filter.git
     fetchRecurseSubmodules = on-demand
     ignore = dirty
