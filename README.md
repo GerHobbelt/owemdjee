@@ -7160,6 +7160,7 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 
 # TBD: Libraries which still need to be moved into the overview / categories above...
 
-
+- **barkeep** [📁](./barkeep) [🌐](https://github.com/GerHobbelt/barkeep)
+- **opendtrace** [📁](./opendtrace) [🌐](https://github.com/GerHobbelt/opendtrace)
 
 

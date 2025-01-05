@@ -9139,6 +9139,12 @@
 [submodule "barkeep"]
 	path = barkeep
 	url = git@github.com:GerHobbelt/barkeep.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
 [submodule "opendtrace"]
 	path = opendtrace
 	url = git@github.com:GerHobbelt/opendtrace.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+

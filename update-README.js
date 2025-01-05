@@ -10,6 +10,9 @@ const fs = require("fs");
 
 
 
+//let dbgRe = /cuckoo.*filter/i;
+let dbgRe = false;
+
 
 
 
@@ -33,21 +36,22 @@ let m = mod_re.exec(module_spec);
 while (m) {
 	m.input = null;
 	// https://github.com/GerHobbelt/zlib-ng
-	//console.log({m})
+	let dbg = (dbgRe && dbgRe.test(m[0]));
+	if (dbg) console.log({m})
 	let repo = m[3];
 	let url = repo.replace(/git@github.com:GerHobbelt/, `https://github.com/GerHobbelt`).replace(/\.git$/, '');
 	let id = m[1];
 	let localdir = `./${ m[2] }`
-	let key2 = localdir.replace(/[\\\/._-]+/g, '');
-	//console.log({id, key2, localdir, repo, url })
+	let key2 = localdir.replace(/[\\\/.-]+/g, '');
+	if (dbg) console.log({id, key2, localdir, repo, url })
 
 	if (dict[id.toLowerCase()] == undefined) {
 		dict[id.toLowerCase()] = { id, key2, localdir, repo, url };
-		//console.log({id, key2, localdir, repo, url })
+		if (dbg) console.log({id, key2, localdir, repo, url })
 	}
 	if (dict[key2.toLowerCase()] == undefined) {
 		dict[key2.toLowerCase()] = { id, key2, localdir, repo, url };
-		//console.log({id, key2, localdir, repo, url })
+		if (dbg) console.log({id, key2, localdir, repo, url })
 	}
 
 	m = mod_re.exec(module_spec);
@@ -58,21 +62,22 @@ m = mod_re.exec(module_spec2);
 while (m) {
 	m.input = null;
 	// https://github.com/GerHobbelt/zlib-ng
-	//console.log({m})
+	let dbg = (dbgRe && dbgRe.test(m[0]));
+	if (dbg) console.log({m})
 	let repo = m[3];
 	let url = repo.replace(/git@github.com:GerHobbelt/, `https://github.com/GerHobbelt`).replace(/\.git$/, '');
 	let id = m[1].replace('thirdparty/', '');
 	let localdir = `../../${ m[2] }`;
-	let key2 = localdir.replace('thirdparty/', '').replace(/[\\\/._-]+/g, '');
-	//console.log({id, key2, localdir, repo, url })
+	let key2 = localdir.replace('thirdparty/', '').replace(/[\\\/.-]+/g, '');
+	if (dbg) console.log({id, key2, localdir, repo, url })
 
 	if (dict[id.toLowerCase()] == undefined) {
 		dict[id.toLowerCase()] = { id, key2, localdir, repo, url };
-		//console.log({id, key2, localdir, repo, url })
+		if (dbg) console.log({id, key2, localdir, repo, url })
 	}
 	if (dict[key2.toLowerCase()] == undefined) {
 		dict[key2.toLowerCase()] = { id, key2, localdir, repo, url };
-		//console.log({id, key2, localdir, repo, url })
+		if (dbg) console.log({id, key2, localdir, repo, url })
 	}
 
 	m = mod_re.exec(module_spec2);
@@ -83,21 +88,22 @@ mod_re = /\*\*([^*]+)\*\* \[📁\]\(([^ )]+)\) \[🌐\]\(([^ )]+)\)/g;
 m = mod_re.exec(txt);
 while (m) {
 	m.input = null;
-	//console.log({m})
+	let dbg = (dbgRe && dbgRe.test(m[0]));
+	if (dbg) console.log({m})
 	let repo = m[3];
 	let url = repo;
 	let id = m[1];
 	let localdir = m[2];
-	let key2 = localdir.replace('thirdparty/', '').replace(/[\\\/._-]+/g, '');
-	//console.log({id, key2, localdir, repo, url })
+	let key2 = localdir.replace('thirdparty/', '').replace(/[\\\/.-]+/g, '');
+	if (dbg) console.log({id, key2, localdir, repo, url })
 
 	if (dict[id.toLowerCase()] == undefined) {
 		dict[id.toLowerCase()] = { id, key2, localdir, repo, url };
-		//console.log({id, key2, localdir, repo, url })
+		if (dbg) console.log({id, key2, localdir, repo, url })
 	}
 	if (dict[key2.toLowerCase()] == undefined) {
 		dict[key2.toLowerCase()] = { id, key2, localdir, repo, url };
-		//console.log({id, key2, localdir, repo, url })
+		if (dbg) console.log({id, key2, localdir, repo, url })
 	}
 
 	m = mod_re.exec(txt);
@@ -108,21 +114,22 @@ mod_re = /\*\*([^*]+)\*\* \[🌐\]\(([^ )]+)\)/g;
 m = mod_re.exec(txt);
 while (m) {
 	m.input = null;
-	//console.log({m})
+	let dbg = (dbgRe && dbgRe.test(m[0]));
+	if (dbg) console.log({m})
 	let repo = m[2];
 	let url = repo;
 	let id = m[1];
 	let localdir = null;
-	let key2 = id.replace(/[\\\/._-]+/g, '');
-	//console.log({id, key2, localdir, repo, url })
+	let key2 = id.replace(/[\\\/.-]+/g, '');
+	if (dbg) console.log({id, key2, localdir, repo, url })
 
 	if (dict[id.toLowerCase()] == undefined) {
 		dict[id.toLowerCase()] = { id, key2, localdir, repo, url };
-		//console.log({id, key2, localdir, repo, url })
+		if (dbg) console.log({id, key2, localdir, repo, url })
 	}
 	if (dict[key2.toLowerCase()] == undefined) {
 		dict[key2.toLowerCase()] = { id, key2, localdir, repo, url };
-		//console.log({id, key2, localdir, repo, url })
+		if (dbg) console.log({id, key2, localdir, repo, url })
 	}
 
 	m = mod_re.exec(txt);
@@ -133,21 +140,22 @@ mod_re = /\s*\[submodule "([^"]+)"\][\s\r\n]+path = ([^\s\r\n]+)[\s\r\n]+url = (
 m = mod_re.exec(txt);
 while (m) {
 	m.input = null;
-	//console.log({m})
+	let dbg = (dbgRe && dbgRe.test(m[0]));
+	if (dbg) console.log({m})
 	let repo = m[3];
 	let url = repo.replace(/git@github.com:GerHobbelt/, `https://github.com/GerHobbelt`).replace(/\.git$/, '');
 	let id = m[1];
 	let localdir = `./${ m[2] }`
-	let key2 = localdir.replace(/[\\\/._-]+/g, '');
-	//console.log({id, key2, localdir, repo, url })
+	let key2 = localdir.replace(/[\\\/.-]+/g, '');
+	if (dbg) console.log({id, key2, localdir, repo, url })
 
 	if (dict[id.toLowerCase()] == undefined) {
 		dict[id.toLowerCase()] = { id, key2, localdir, repo, url };
-		//console.log({id, key2, localdir, repo, url })
+		if (dbg) console.log({id, key2, localdir, repo, url })
 	}
 	if (dict[key2.toLowerCase()] == undefined) {
 		dict[key2.toLowerCase()] = { id, key2, localdir, repo, url };
-		//console.log({id, key2, localdir, repo, url })
+		if (dbg) console.log({id, key2, localdir, repo, url })
 	}
 
 	m = mod_re.exec(txt);
@@ -195,11 +203,11 @@ while (modified) {
 		//console.log({m, p1, p2});
 		let spec = dict[p1.toLowerCase()];
 		if (!spec) {
-			let key2 = p2.replace(/[\\\/._-]+/g, '');
+			let key2 = p2.replace(/[\\\/.-]+/g, '');
 			spec = dict[key2.toLowerCase()];
 		}
 		if (!spec) {
-			let key2 = p1.replace(/[ \\\/._-]+/g, '');
+			let key2 = p1.replace(/[ \\\/.-]+/g, '');
 			spec = dict[key2.toLowerCase()];
 		}
 		if (!spec) {
@@ -258,7 +266,7 @@ mod_re = /- \*\*([^*]+)\*\* \[📁\]\(([^ )]+)\) \[🌐\]\(([^ )]+)\)\s*[\n]/g;
 txt = txt.replace(mod_re, (m, p1, p2, p3, pos) => {
 	let id = 'x' + p1;
 	let localdir = p2;
-	let key2 = localdir.replace('thirdparty/', '').replace(/[\\\/._-]+/g, '');
+	let key2 = localdir.replace('thirdparty/', '').replace(/[\\\/.-]+/g, '');
 	let descr = descr_arr[id];
 	if (descr) {
 		let indent = find_indent_level(txt, pos);
@@ -510,7 +518,7 @@ function collect_descriptions(txt) {
 		let url = repo;
 		let id = 'x' + m[1];
 		let localdir = m[2];
-		let key2 = localdir.replace('thirdparty/', '').replace(/[\\\/._-]+/g, '');
+		let key2 = localdir.replace('thirdparty/', '').replace(/[\\\/.-]+/g, '');
 		let match = m[0];
 		let matchPos = m.index + match.length;
 		let dstr = txt.substring(matchPos, matchPos + 4000);
@@ -683,7 +691,7 @@ function collect_entries(txt) {
 		let url = repo;
 		let id = 'x' + m[1];
 		let localdir = m[2];
-		let key2 = localdir.replace('thirdparty/', '').replace(/[\\\/._-]+/g, '');
+		let key2 = localdir.replace('thirdparty/', '').replace(/[\\\/.-]+/g, '');
 		let match = m[0];
 		let matchPos = m.index + match.length;
 		let dstr = txt.substring(matchPos, matchPos + 1000);
