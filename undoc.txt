@@ -1,2 +1,1 @@
-DIR: **./barkeep** -- - **barkeep** [📁](./barkeep) [🌐](https://github.com/GerHobbelt/barkeep)
-DIR: **./opendtrace** -- - **opendtrace** [📁](./opendtrace) [🌐](https://github.com/GerHobbelt/opendtrace)
+

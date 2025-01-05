@@ -7160,7 +7160,5 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 
 # TBD: Libraries which still need to be moved into the overview / categories above...
 
-- **barkeep** [📁](./barkeep) [🌐](https://github.com/GerHobbelt/barkeep)
-- **opendtrace** [📁](./opendtrace) [🌐](https://github.com/GerHobbelt/opendtrace)
-
-
+- **barkeep** [📁](./barkeep) [🌐](https://github.com/GerHobbelt/barkeep) -- a small, single C++ header to display async animations, counters, and progress bars.
+- **opendtrace** [📁](./opendtrace) [🌐](https://github.com/GerHobbelt/opendtrace) -- unified, cross platform, source code for the OpenDTrace system including kernel components and tools for all of the platforms currently supported by the OpenDTrace system.
