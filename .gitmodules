@@ -9148,3 +9148,15 @@
     fetchRecurseSubmodules = on-demand
     ignore = dirty
 
+[submodule "tscns"]
+	path = tscns
+	url = git@github.com:GerHobbelt/tscns.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "logger_benchmarks"]
+	path = logger_benchmarks
+	url = git@github.com:GerHobbelt/logger_benchmarks.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
