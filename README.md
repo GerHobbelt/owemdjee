@@ -7175,3 +7175,10 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 
 
 
+
+[submodule "the-yabbering-politician"]
+	path = the-yabbering-politician
+	url = git@github.com:GerHobbelt/the-yabbering-politician.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
