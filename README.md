@@ -7182,3 +7182,10 @@ abstraction without sacrificing performance. Whether you are targeting a single 
     fetchRecurseSubmodules = on-demand
     ignore = dirty
 
+
+[submodule "cpptrace"]
+	path = cpptrace
+	url = git@github.com:GerHobbelt/cpptrace.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
