@@ -9172,3 +9172,9 @@
     fetchRecurseSubmodules = on-demand
     ignore = dirty
 
+[submodule "dunce"]
+	path = dunce
+	url = git@github.com:GerHobbelt/dunce.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
