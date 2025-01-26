@@ -9178,3 +9178,9 @@
     fetchRecurseSubmodules = on-demand
     ignore = dirty
 
+[submodule "win32-fileapi-demo"]
+	path = win32-fileapi-demo
+	url = git@github.com:GerHobbelt/win32-fileapi-demo.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
