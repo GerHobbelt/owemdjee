@@ -9184,3 +9184,9 @@
     fetchRecurseSubmodules = on-demand
     ignore = dirty
 
+[submodule "hashtable-bench"]
+    path = hashtable-bench
+    url = git@github.com:GerHobbelt/hashtable-bench.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
