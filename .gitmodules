@@ -9190,3 +9190,30 @@
     fetchRecurseSubmodules = on-demand
     ignore = dirty
 
+[submodule "imageio-freeimage"]
+	path = imageio-freeimage
+	url = git@github.com:GerHobbelt/imageio-freeimage.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+	
+[submodule "Lyra"]
+	path = Lyra
+	url = git@github.com:GerHobbelt/Lyra.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+	
+[submodule "small_vectors"]
+	path = small_vectors
+	url = git@github.com:GerHobbelt/small_vectors.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+	
+[submodule "Celero"]
+	path = Celero
+	url = git@github.com:GerHobbelt/Celero.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+	
+[submodule "openimageio-mupdf"]
+	path = openimageio-mupdf
+	url = git@github.com:GerHobbelt/openimageio-mupdf.git
