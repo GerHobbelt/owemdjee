@@ -9217,3 +9217,12 @@
 [submodule "openimageio-mupdf"]
 	path = openimageio-mupdf
 	url = git@github.com:GerHobbelt/openimageio-mupdf.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+	
+[submodule "gtest-tap-listener"]
+	path = gtest-tap-listener
+	url = git@github.com:GerHobbelt/gtest-tap-listener.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+	
