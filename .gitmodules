@@ -9226,3 +9226,21 @@
     fetchRecurseSubmodules = on-demand
     ignore = dirty
 	
+[submodule "lwlog"]
+	path = lwlog
+	url = git@github.com:GerHobbelt/lwlog.git
+[submodule "Jungle"]
+	path = Jungle
+	url = git@github.com:GerHobbelt/Jungle.git
+[submodule "data_tamer"]
+	path = data_tamer
+	url = git@github.com:GerHobbelt/data_tamer.git
+[submodule "forestdb"]
+	path = forestdb
+	url = git@github.com:GerHobbelt/forestdb.git
+[submodule "binary_log"]
+	path = binary_log
+	url = git@github.com:GerHobbelt/binary_log.git
+[submodule "Arduino-KalmanFilter"]
+	path = Arduino-KalmanFilter
+	url = git@github.com:GerHobbelt/Arduino-KalmanFilter.git
