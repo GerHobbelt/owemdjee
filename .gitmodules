@@ -9280,3 +9280,12 @@
     fetchRecurseSubmodules = on-demand
     ignore = dirty
 	
+[submodule "msvc_sln_cleaner"]
+	path = msvc_sln_cleaner
+	url = git@github.com:GerHobbelt/msvc_sln_cleaner.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+	
+[submodule "unicode-inflection"]
+	path = unicode-inflection
+	url = git@github.com:GerHobbelt/inflection.git
