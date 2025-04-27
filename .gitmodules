@@ -9229,18 +9229,54 @@
 [submodule "lwlog"]
 	path = lwlog
 	url = git@github.com:GerHobbelt/lwlog.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+	
 [submodule "Jungle"]
 	path = Jungle
 	url = git@github.com:GerHobbelt/Jungle.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+	
 [submodule "data_tamer"]
 	path = data_tamer
 	url = git@github.com:GerHobbelt/data_tamer.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+	
 [submodule "forestdb"]
 	path = forestdb
 	url = git@github.com:GerHobbelt/forestdb.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+	
 [submodule "binary_log"]
 	path = binary_log
 	url = git@github.com:GerHobbelt/binary_log.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+	
 [submodule "Arduino-KalmanFilter"]
 	path = Arduino-KalmanFilter
 	url = git@github.com:GerHobbelt/Arduino-KalmanFilter.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+	
+[submodule "poisson-disc-distribution-bridson"]
+	path = poisson-disc-distribution-bridson
+	url = git@github.com:GerHobbelt/poisson-disc-distribution-bridson.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+	
+[submodule "OpenRAND"]
+	path = OpenRAND
+	url = git@github.com:GerHobbelt/OpenRAND.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+	
+[submodule "fast_io"]
+	path = fast_io
+	url = git@github.com:GerHobbelt/fast_io.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+	
