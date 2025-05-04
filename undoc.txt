@@ -1,1 +1,1 @@
-
+DIR: **./unicode-inflection** -- - **unicode-inflection** [📁](./unicode-inflection) [🌐](https://github.com/GerHobbelt/inflection)

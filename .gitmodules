@@ -9289,3 +9289,6 @@
 [submodule "unicode-inflection"]
 	path = unicode-inflection
 	url = git@github.com:GerHobbelt/inflection.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+	
