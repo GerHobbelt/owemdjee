@@ -2195,7 +2195,6 @@ i.e. breaking text into words when you _receive a textstream without spaces_. Al
   Additionally, limited export functionality is also supported.
 
 - **qoi** [📁](./qoi) [🌐](https://github.com/GerHobbelt/qoi) -- QOI: the “Quite OK Image Format” for fast, lossless image compression, single-file MIT licensed library for C/C++. Compared to stb_image and stb_image_write QOI offers 20x-50x faster encoding, 3x-4x faster decoding and 20% better compression. It's also stupidly simple and fits in about 300 lines of C.
-- **qoir** [📁](./qoir) [🌐](https://github.com/GerHobbelt/qoir) -- QOIR (pronounced like "choir") is a simple, lossless image file format that is very fast to encode and decode while achieving compression ratios roughly comparable to PNG. It was inspired by the [QOI image file format](https://qoiformat.org/),
 - **rawspeed** [📁](./rawspeed) [🌐](https://github.com/GerHobbelt/rawspeed) -- a library for decoding various images in RAW file format, while providing the fastest decoding speed possible. Supports the most common DSLR and similar class brands.
 - **SFML** [📁](./SFML) [🌐](https://github.com/GerHobbelt/SFML) -- Simple and Fast Multimedia Library (SFML) is a simple, fast, cross-platform and object-oriented multimedia API. It provides access to windowing, graphics, audio and network.
 - **tinyexr** [📁](./tinyexr) [🌐](https://github.com/GerHobbelt/tinyexr) -- Tiny OpenEXR: `tinyexr` is a small, single header-only library to load and save OpenEXR (.exr) images.
@@ -6552,7 +6551,6 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 - **qlever** [📁](./qlever) [🌐](https://github.com/GerHobbelt/qlever) -- a SPARQL engine that can efficiently index and query very large knowledge graphs with up to 100 billion triples on a single standard PC or server. In particular, QLever is fast for queries that involve large intermediate or final results, which are notoriously hard for engines like Blazegraph or Virtuoso.
 - **qoa** [📁](./qoa) [🌐](https://github.com/GerHobbelt/qoa) -- QOA - The “Quite OK Audio Format” for fast, lossy audio compression - is a single-file library for C/C++.  More info at: https://qoaformat.org
 - **qoi** [📁](./qoi) [🌐](https://github.com/GerHobbelt/qoi) -- QOI: the “Quite OK Image Format” for fast, lossless image compression, single-file MIT licensed library for C/C++. Compared to stb_image and stb_image_write QOI offers 20x-50x faster encoding, 3x-4x faster decoding and 20% better compression. It's also stupidly simple and fits in about 300 lines of C.
-- **qoir** [📁](./qoir) [🌐](https://github.com/GerHobbelt/qoir) -- QOIR (pronounced like "choir") is a simple, lossless image file format that is very fast to encode and decode while achieving compression ratios roughly comparable to PNG. It was inspired by the [QOI image file format](https://qoiformat.org/),
 - **qpdf** [📁](./qpdf) [🌐](https://github.com/GerHobbelt/qpdf) -- QPDF is a command-line tool and C++ library that performs content-preserving transformations on PDF files. It supports linearization, encryption, and numerous other features. It can also be used for splitting and merging files, creating PDF files, and inspecting files for study or analysis. QPDF does not render PDFs or perform text extraction, and it does not contain higher-level interfaces for working with page contents. It is a low-level tool for working with the structure of PDF files and can be a valuable tool for anyone who wants to do programmatic or command-line-based manipulation of PDF files.
 - **qs_parse** [📁](./qs_parse) [🌐](https://github.com/GerHobbelt/qs_parse) -- a set of simple and easy functions for parsing URL query strings, such as those generated in an HTTP GET form submission.
 - **quadsort** [📁](./quadsort) [🌐](https://github.com/GerHobbelt/quadsort) -- a high performance stable bottom-up adaptive branchless merge sort algorithm.
@@ -7185,6 +7183,10 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 - ~~**merror** [📁](./merror) [🌐](https://github.com/GerHobbelt/merror) -- a library for error handling in C++ without exceptions.~~
   
   - **removed**; reason: code is non-portable to compilers other than GCC, or at least would require more effort than we're willing to expend on this.
+
+- ~~**qoir** [📁](./qoir) [🌐](https://github.com/GerHobbelt/qoir) -- QOIR (pronounced like "choir") is a simple, lossless image file format that is very fast to encode and decode while achieving compression ratios roughly comparable to PNG. It was inspired by the [QOI image file format](https://qoiformat.org/),~~
+  
+  - **removed**; reason: code does not compile and depends on outdated jpegXL internal source code, which does not exist any more in the latest revisions, while work on this repo has stopped a few years ago.
 
 - ~~**binary_bakery** [🌐](https://github.com/s9w/binary_bakery) -- resource compiler-like tool: embed any data in your C/C++ application~~
   

@@ -8926,12 +8926,6 @@
     fetchRecurseSubmodules = on-demand
     ignore = dirty
 
-[submodule "qoir"]
-	path = qoir
-	url = git@github.com:GerHobbelt/qoir.git
-    fetchRecurseSubmodules = on-demand
-    ignore = dirty
-
 [submodule "blurhash"]
 	path = blurhash
 	url = git@github.com:GerHobbelt/blurhash.git
@@ -9289,6 +9283,12 @@
 [submodule "unicode-inflection"]
 	path = unicode-inflection
 	url = git@github.com:GerHobbelt/inflection.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+	
+[submodule "pccts"]
+	path = pccts
+	url = git@github.com:GerHobbelt/pccts.git
     fetchRecurseSubmodules = on-demand
     ignore = dirty
 	
