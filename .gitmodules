@@ -9292,3 +9292,9 @@
     fetchRecurseSubmodules = on-demand
     ignore = dirty
 	
+[submodule "DataFrame"]
+	path = DataFrame
+	url = git@github.com:GerHobbelt/DataFrame.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+	
