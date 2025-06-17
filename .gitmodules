@@ -9327,3 +9327,9 @@
     fetchRecurseSubmodules = on-demand
 
 	
+[submodule "ut"]
+	path = ut
+	url = git@github.com:GerHobbelt/ut.git
+    fetchRecurseSubmodules = on-demand
+
+	
