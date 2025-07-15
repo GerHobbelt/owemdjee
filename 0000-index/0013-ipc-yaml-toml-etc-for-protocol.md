@@ -16,3 +16,11 @@ The more human readable formats (YAML, TOML, ...) are intended for human to mach
 
 
 
+
+
+
+
+	
+----
+
+🡸 [prev](./0012-ipc-cbor-for-protocol.md)  |  🡹 [up](./0006-libraries-we-re-looking-at-for-this-intent.md)  |  🡺 [next](./0014-content.md)

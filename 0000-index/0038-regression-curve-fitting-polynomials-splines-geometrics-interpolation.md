@@ -67,3 +67,11 @@
 
 
 
+
+
+
+
+	
+----
+
+🡸 [prev](./0037-random-generators-all-things.md)  |  🡹 [up](./0022-pattern.md)  |  🡺 [next](./0039-solvers-clustering-monte-carlo-decision.md)

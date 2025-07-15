@@ -20,3 +20,11 @@ Guassian Mixture Models / Hidden Markov Models / k-Means: fit patterns, e.g. mat
 
 
 
+
+
+
+
+	
+----
+
+🡸 [prev](./0026-decision.md)  |  🡹 [up](./0022-pattern.md)  |  🡺 [next](./0028-graph-analysis-graph.md)

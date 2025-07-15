@@ -25,3 +25,11 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 
 
 
+
+
+
+
+	
+----
+
+🡸 [prev](./0065-multi-processing-task.md)  |  🡹 [up](./0056-multi-processing-core.md)  |  🡺 [next](./0067-run-time-library-core-features-logging-formatting.md)

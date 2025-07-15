@@ -139,7 +139,7 @@ function get_text_and_generate_TOCs_if_any(spec, arr, idx) {
 	let txt = spec.chunk;
 	
 	if (!spec.toc_spans)
-		return txt;
+		return append_navigation(txt, arr, idx);
 	
 	console.log({spec, idx, toc_spans: spec.toc_spans});
 	
@@ -158,6 +158,53 @@ function get_text_and_generate_TOCs_if_any(spec, arr, idx) {
 	
 
 
-	return txt;
+	return append_navigation(txt, arr, idx);
 }
 	
+function append_navigation(txt, arr, idx) {
+	let nav = `
+
+
+
+	
+----
+
+`;
+	if (idx > 1) {
+		nav += `🡸 [prev](./${ arr[idx - 1].filename }.md)  |  `;
+	} else if (idx == 1) {
+		nav += `🡸 [prev](../${ arr[idx - 1].filename }.md)  |  `;
+	}
+
+	if (idx > 0) {
+		let depth = arr[idx].depth;
+		let parent_idx = 0;
+		for (let i = idx - 1; i >= 0; i--) {
+			let d = arr[i].depth;
+			if (d < depth) {
+				parent_idx = i;
+				break;
+			}
+		}
+
+		if (parent_idx > 0) {
+			nav += `🡹 [up](./${ arr[parent_idx].filename }.md)  |  `;
+		} else {
+			nav += `🡹 [up](../${ arr[0].filename }.md)  |  `;
+		}
+	}
+
+	if (idx + 1 < arr.length) {
+		if (idx > 0) {
+			nav += `🡺 [next](./${ arr[idx + 1].filename }.md)`;
+		} else if (idx == 0) {
+			nav += `🡺 [next](./0000-index/${ arr[idx + 1].filename }.md)`;
+		}
+	}
+	else {
+		// strip off last '|':
+		nav = nav.replace(/[|]\s*$/, '');
+	}
+	
+	return txt + nav + '\n';
+}

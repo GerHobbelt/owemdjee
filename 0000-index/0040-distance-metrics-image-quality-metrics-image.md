@@ -53,3 +53,11 @@
 
 
 
+
+
+
+
+	
+----
+
+🡸 [prev](./0039-solvers-clustering-monte-carlo-decision.md)  |  🡹 [up](./0022-pattern.md)  |  🡺 [next](./0041-database-backend-storage.md)

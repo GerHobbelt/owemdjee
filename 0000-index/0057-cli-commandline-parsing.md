@@ -27,3 +27,11 @@
 
 
 
+
+
+
+
+	
+----
+
+🡸 [prev](./0056-multi-processing-core.md)  |  🡹 [up](./0056-multi-processing-core.md)  |  🡺 [next](./0058-cpu-features-capabilities.md)

@@ -49,3 +49,11 @@
 
 
 
+
+
+
+
+	
+----
+
+🡸 [prev](./0064-multi-processing-event-handling-signals-asynchronous.md)  |  🡹 [up](./0056-multi-processing-core.md)  |  🡺 [next](./0066-multi-processing-thread.md)

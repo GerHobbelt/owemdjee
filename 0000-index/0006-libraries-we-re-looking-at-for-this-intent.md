@@ -103,3 +103,11 @@
 
 
 
+
+
+
+
+	
+----
+
+🡸 [prev](./0005-scripting-the-system-languages-considered-for-scripting-by.md)  |  🡹 [up](../README.md)  |  🡺 [next](./0007-ipc-flatbuffer-et-al-for-protocol.md)

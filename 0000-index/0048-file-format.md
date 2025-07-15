@@ -136,3 +136,11 @@
 
 
 
+
+
+
+
+	
+----
+
+🡸 [prev](./0047-audio-files.md)  |  🡹 [up](./0006-libraries-we-re-looking-at-for-this-intent.md)  |  🡺 [next](./0049-bibtex-and-similar-library-metadata-formats.md)

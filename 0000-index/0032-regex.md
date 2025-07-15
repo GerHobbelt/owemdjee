@@ -34,3 +34,11 @@
 
 
 
+
+
+
+
+	
+----
+
+🡸 [prev](./0031-text.md)  |  🡹 [up](./0022-pattern.md)  |  🡺 [next](./0033-ocr-quality-improvements-language-detect.md)

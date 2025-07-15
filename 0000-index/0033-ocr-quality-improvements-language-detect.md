@@ -51,3 +51,11 @@
 
 
 
+
+
+
+
+	
+----
+
+🡸 [prev](./0032-regex.md)  |  🡹 [up](./0022-pattern.md)  |  🡺 [next](./0034-ocr-page-image-preprocessing-scanner-tooling-getting-the-pages.md)

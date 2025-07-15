@@ -55,3 +55,11 @@
 
 
 
+
+
+
+
+	
+----
+
+🡸 [prev](./0062-multi-processing-promise-a.md)  |  🡹 [up](./0056-multi-processing-core.md)  |  🡺 [next](./0064-multi-processing-event-handling-signals-asynchronous.md)

@@ -109,3 +109,11 @@ The additional (and more important) reason to ditch CPython from the R&D set is 
 
 
 
+
+
+
+
+	
+----
+
+🡸 [prev](./0053-language-detection.md)  |  🡹 [up](./0006-libraries-we-re-looking-at-for-this-intent.md)  |  🡺 [next](./0055-quickjs-specific-modules-related.md)

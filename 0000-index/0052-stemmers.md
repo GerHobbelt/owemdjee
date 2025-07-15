@@ -15,3 +15,11 @@
 
 
 
+
+
+
+
+	
+----
+
+🡸 [prev](./0051-fts.md)  |  🡹 [up](./0051-fts.md)  |  🡺 [next](./0053-language-detection.md)

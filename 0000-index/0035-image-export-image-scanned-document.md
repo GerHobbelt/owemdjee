@@ -120,3 +120,11 @@
 
 
 
+
+
+
+
+	
+----
+
+🡸 [prev](./0034-ocr-page-image-preprocessing-scanner-tooling-getting-the-pages.md)  |  🡹 [up](./0022-pattern.md)  |  🡺 [next](./0036-monte-carlo-simulations-lda-keyword-inference-extraction-etc.md)

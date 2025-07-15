@@ -16,3 +16,11 @@ As *at least* large images will be transfered (PDF page renders) we need to have
 
 
 
+
+
+
+
+	
+----
+
+🡸 [prev](./0002-intent.md)  |  🡹 [up](./0002-intent.md)  |  🡺 [next](./0004-programming-languages-used-intent-and-purposes.md)

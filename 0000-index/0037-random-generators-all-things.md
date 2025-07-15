@@ -27,3 +27,11 @@
 
 
 
+
+
+
+
+	
+----
+
+🡸 [prev](./0036-monte-carlo-simulations-lda-keyword-inference-extraction-etc.md)  |  🡹 [up](./0022-pattern.md)  |  🡺 [next](./0038-regression-curve-fitting-polynomials-splines-geometrics-interpolation.md)

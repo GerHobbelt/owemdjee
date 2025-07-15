@@ -16,3 +16,11 @@
 
 
 
+
+
+
+
+	
+----
+
+🡸 [prev](./0008-ipc-websockets-etc-all-communication.md)  |  🡹 [up](./0008-ipc-websockets-etc-all-communication.md)  |  🡺 [next](./0010-ipc-memory.md)

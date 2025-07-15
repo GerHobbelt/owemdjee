@@ -18,3 +18,11 @@
 
 
 
+
+
+
+
+	
+----
+
+🡸 [prev](./0058-cpu-features-capabilities.md)  |  🡹 [up](./0056-multi-processing-core.md)  |  🡺 [next](./0060-misc-core.md)

@@ -121,3 +121,11 @@
 
 
 
+
+
+
+
+	
+----
+
+🡸 [prev](./0040-distance-metrics-image-quality-metrics-image.md)  |  🡹 [up](./0006-libraries-we-re-looking-at-for-this-intent.md)  |  🡺 [next](./0042-lmdb-nosql-and-key-value.md)

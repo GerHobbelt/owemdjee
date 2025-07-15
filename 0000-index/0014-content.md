@@ -31,3 +31,11 @@ The bit about **_"guaranteed"_ collision-free** is to be read as: hash algorithm
 
 
 
+
+
+
+
+	
+----
+
+🡸 [prev](./0013-ipc-yaml-toml-etc-for-protocol.md)  |  🡹 [up](./0006-libraries-we-re-looking-at-for-this-intent.md)  |  🡺 [next](./0015-hash-like-filters-fast-hashing-for-hash-tables-et.md)

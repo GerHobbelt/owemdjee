@@ -16,3 +16,11 @@
 
 
 
+
+
+
+
+	
+----
+
+🡸 [prev](./0048-file-format.md)  |  🡹 [up](./0006-libraries-we-re-looking-at-for-this-intent.md)  |  🡺 [next](./0050-export-output-file-formats-text-formatting-etc.md)

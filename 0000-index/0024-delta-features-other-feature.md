@@ -34,3 +34,11 @@
 
 
 
+
+
+
+
+	
+----
+
+🡸 [prev](./0023-blas-lapack.md)  |  🡹 [up](./0022-pattern.md)  |  🡺 [next](./0025-fuzzy.md)

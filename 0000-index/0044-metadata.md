@@ -66,3 +66,11 @@
 
 
 
+
+
+
+
+	
+----
+
+🡸 [prev](./0043-sqlite-specific-modules-related.md)  |  🡹 [up](./0006-libraries-we-re-looking-at-for-this-intent.md)  |  🡺 [next](./0045-pdf.md)

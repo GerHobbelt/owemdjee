@@ -79,3 +79,11 @@
 
 
 
+
+
+
+
+	
+----
+
+🡸 [prev](./0022-pattern.md)  |  🡹 [up](./0022-pattern.md)  |  🡺 [next](./0024-delta-features-other-feature.md)

@@ -19,3 +19,11 @@
 
 
 
+
+
+
+
+	
+----
+
+🡸 [prev](./0025-fuzzy.md)  |  🡹 [up](./0022-pattern.md)  |  🡺 [next](./0027-gmm-hmm.md)

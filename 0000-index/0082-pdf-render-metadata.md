@@ -46,3 +46,11 @@
 
 
 
+
+
+
+
+	
+----
+
+🡸 [prev](./0081-ocr.md)  |  🡹 [up](./0006-libraries-we-re-looking-at-for-this-intent.md)  |  🡺 [next](./0083-ui.md)

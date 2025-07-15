@@ -25,3 +25,11 @@
 
 
 
+
+
+
+
+	
+----
+
+🡸 [prev](./0017-ram-disk-based-large-queues-and-stores-b-tree-lsm-tree.md)  |  🡹 [up](./0016-intermediate-data-storage-caching-hierarchical-data.md)  |  🡺 [next](./0019-data-storage-caching-ipc-loss-less-data.md)

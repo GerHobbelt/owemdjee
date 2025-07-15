@@ -67,3 +67,11 @@
 
 
 
+
+
+
+
+	
+----
+
+🡸 [prev](./0038-regression-curve-fitting-polynomials-splines-geometrics-interpolation.md)  |  🡹 [up](./0022-pattern.md)  |  🡺 [next](./0040-distance-metrics-image-quality-metrics-image.md)

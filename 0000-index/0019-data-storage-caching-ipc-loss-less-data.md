@@ -79,3 +79,11 @@
 
 
 
+
+
+
+
+	
+----
+
+🡸 [prev](./0018-hdf5-file.md)  |  🡹 [up](./0006-libraries-we-re-looking-at-for-this-intent.md)  |  🡺 [next](./0020-file-directory-tree.md)

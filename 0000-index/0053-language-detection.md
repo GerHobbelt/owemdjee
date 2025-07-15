@@ -18,3 +18,11 @@
 
 
 
+
+
+
+
+	
+----
+
+🡸 [prev](./0052-stemmers.md)  |  🡹 [up](./0051-fts.md)  |  🡺 [next](./0054-scripting-user-tunable-tasks-such-as-ocr-preprocessing-metadata.md)

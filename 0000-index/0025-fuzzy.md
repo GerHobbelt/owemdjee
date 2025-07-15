@@ -47,3 +47,11 @@
 
 
 
+
+
+
+
+	
+----
+
+🡸 [prev](./0024-delta-features-other-feature.md)  |  🡹 [up](./0022-pattern.md)  |  🡺 [next](./0026-decision.md)

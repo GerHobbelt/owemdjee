@@ -37,3 +37,11 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 
 
 
+
+
+
+
+	
+----
+
+🡸 [prev](./0061-multi-processing-invoking-external.md)  |  🡹 [up](./0056-multi-processing-core.md)  |  🡺 [next](./0063-multi-processing-running-tasks-in-parallel-multi-processing-multithreading.md)

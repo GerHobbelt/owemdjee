@@ -21,3 +21,11 @@
 
 
 
+
+
+
+
+	
+----
+
+🡸 [prev](./0086-checking-out-the-competition-compatriots-for-qiqqa-re-use-useful.md)  |  🡹 [up](./0006-libraries-we-re-looking-at-for-this-intent.md)  |  🡺 [next](./0088-microsoft-word-google-docs-libreoffice-application.md)

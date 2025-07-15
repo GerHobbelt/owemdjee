@@ -34,3 +34,11 @@
 
 
 
+
+
+
+
+	
+----
+
+🡸 [prev](./0010-ipc-memory.md)  |  🡹 [up](./0006-libraries-we-re-looking-at-for-this-intent.md)  |  🡺 [next](./0012-ipc-cbor-for-protocol.md)
