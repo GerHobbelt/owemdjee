@@ -8,6 +8,8 @@ This place is a gathering spot & integration workplace for the C & C++ libraries
 The heavy data lifting will be done in the referenced libraries, while this lib will provide some glue and common ground for them to work in/with.
 
 
+<!-- *toc* -->
+
 * [TOC](#owemdjee)
     * [Reason for this repo](#reason-for-this-repo)
         * [And?](#and)
@@ -22,12 +24,24 @@ The heavy data lifting will be done in the referenced libraries, while this lib 
 
 
 
+---
+
+
+
+<!-- *toc-ALL* -->
 
 
 
 
 
 
+
+
+
+
+
+
+<!-- *split* -->
 
 ## Reason for this repo
 
@@ -118,9 +132,11 @@ For that purpose, this repo is a *solution*, though -- granted -- a *sub-optimal
 
 
 
+<!-- *split* -->
+
 # Intent
 
-<!--```toc```-->
+<!-- *toc* -->
 
 * [TOC](#intent)
     * [Inter-process communications (IPC)](#inter-process-communications-ipc)
@@ -137,6 +153,8 @@ For that purpose, this repo is a *solution*, though -- granted -- a *sub-optimal
 
 
 
+<!-- *split* -->
+
 ## Inter-process communications (IPC)
 
 Lowest possible **run-time** cost, a.k.a. "run-time overhead": the aim is to have IPC which does not noticably impact UX (User Experience of the application: responsiveness / UI) on reeasonably powered machines. (Users are *not* expected to have the latest or fastest hardware.)
@@ -152,6 +170,8 @@ As *at least* large images will be transfered (PDF page renders) we need to have
 
 
 
+
+<!-- *split* -->
 
 ## Programming Languages used: *intent and purposes*
 
@@ -185,6 +205,8 @@ We **may** **probably** choose to use a web-centric UI approach where images are
 
 
 
+
+<!-- *split* -->
 
 ## Scripting the System: Languages Considered for Scripting by Users
 
@@ -489,9 +511,11 @@ The other JavaScript engines considered are of varying size, performance and com
 
 
 
+<!-- *split* -->
+
 # Libraries we're looking at for this *intent*:
 
-<!--```toc```-->
+<!-- *toc* -->
 
 * [TOC](#libraries-we-re-looking-at-for-this-intent)
     * [IPC: flatbuffer et al for protocol design](#ipc-flatbuffer-et-al-for-protocol-design)
@@ -592,6 +616,8 @@ The other JavaScript engines considered are of varying size, performance and com
 
 
 
+<!-- *split* -->
+
 ## IPC: flatbuffer et al for protocol design
 
 - **arrow** [📁](./arrow) [🌐](https://github.com/GerHobbelt/arrow) -- Apache Arrow is a development platform for in-memory analytics. It contains a set of technologies that enable big data systems to process and move data fast. The reference Arrow libraries contain many distinct software components:
@@ -667,6 +693,8 @@ The other JavaScript engines considered are of varying size, performance and com
 
 
 
+<!-- *split* -->
+
 ## IPC: websockets, etc.: all communication means
 
 - **blazingmq** [📁](./blazingmq) [🌐](https://github.com/GerHobbelt/blazingmq) -- BlazingMQ is a modern, High-Performance Message Queue, which focuses on efficiency, reliability, and a rich feature set for modern-day workflows. At its core, BlazingMQ provides durable, fault-tolerant, highly performant, and highly available queues, along with features like various message routing strategies (e.g., work queues, priority, fan-out, broadcast, etc.), compression, strong consistency, poison pill detection, etc.  Message queues generally provide a loosely-coupled, asynchronous communication channel ("queue") between application services (producers and consumers) that send messages to one another. You can think about it like a mailbox for communication between application programs, where 'producer' drops a message in a mailbox and 'consumer' picks it up at its own leisure. Messages placed into the queue are stored until the recipient retrieves and processes them. In other words, producer and consumer applications can temporally and spatially isolate themselves from each other by using a message queue to facilitate communication.
@@ -736,6 +764,8 @@ Also, we are currently more interested in *fast data serialization* then RPC *pe
 
 
 
+<!-- *split* -->
+
 ### IPC: ZeroMQ a.k.a. ØMQ
 
 - **cppzmq** [📁](./cppzmq) [🌐](https://github.com/GerHobbelt/cppzmq) -- header-only C++ binding for libzmq.
@@ -751,6 +781,8 @@ Also, we are currently more interested in *fast data serialization* then RPC *pe
 
 
 
+
+<!-- *split* -->
 
 ### IPC: memory mapping
 
@@ -793,6 +825,8 @@ Also, we are currently more interested in *fast data serialization* then RPC *pe
 
 
 
+<!-- *split* -->
+
 ## IPC: JSON for protocol design
 
 - **cJSON** [📁](./cJSON) [🌐](https://github.com/GerHobbelt/cJSON) -- ultra-lightweight JSON parser in ANSI C.
@@ -827,6 +861,8 @@ Also, we are currently more interested in *fast data serialization* then RPC *pe
 
 
 
+<!-- *split* -->
+
 ## IPC: CBOR for protocol design
 
 - **glaze** [📁](./glaze) [🌐](https://github.com/GerHobbelt/glaze) -- one of the fastest JSON libraries in the world. Glaze reads and writes from object memory, simplifying interfaces and offering incredible performance. Glaze also supports [BEVE](https://github.com/beve-org/beve) (binary efficient versatile encoding), CSV (comma separated value) and Binary data through the same API for maximum performance
@@ -852,6 +888,8 @@ Also, we are currently more interested in *fast data serialization* then RPC *pe
 
 
 
+<!-- *split* -->
+
 ## IPC: YAML, TOML, etc. for protocol design
 
 **Not considered**: reason: when we want the IPC protocol to be "human readable" in any form/approximation, we've decided to stick with JSON or XML (if we cannot help it -- I particularly dislike the verbosity and tag redundancy (open+close) in XML and consider it a lousy design choice for *any* purpose).
@@ -867,6 +905,8 @@ The more human readable formats (YAML, TOML, ...) are intended for human to mach
 
 
 
+
+<!-- *split* -->
 
 ## Content Hashing (cryptographic strength i.e. *"guaranteed"* collision-free)
 
@@ -898,6 +938,8 @@ The bit about **_"guaranteed"_ collision-free** is to be read as: hash algorithm
 
 
 
+
+<!-- *split* -->
 
 ## Hash-like Filters & Fast Hashing for Hash Tables et al (64 bits and less, mostly)
 
@@ -1038,6 +1080,8 @@ These hashes are for other purposes, e.g. fast lookup in dictionaries, fast appr
 
 
 
+<!-- *split* -->
+
 ## Intermediate Data Storage / Caching / Hierarchical Data Stores (binary hOCR; document text revisions; ...)
 
 - **CacheLib** [📁](./CacheLib) [🌐](https://github.com/GerHobbelt/CacheLib) -- provides an in-process high performance caching mechanism, thread-safe API to build high throughput, low overhead caching services, with built-in ability to leverage DRAM and SSD caching transparently.
@@ -1059,6 +1103,8 @@ These hashes are for other purposes, e.g. fast lookup in dictionaries, fast appr
 
 
 
+
+<!-- *split* -->
 
 ### RAM-/disk-based large queues and stores: B+tree, LSM-tree, ...
 
@@ -1114,6 +1160,8 @@ These hashes are for other purposes, e.g. fast lookup in dictionaries, fast appr
 
 
 
+<!-- *split* -->
+
 ### HDF5 file format
 
 - **h5cpp** [📁](./h5cpp) [🌐](https://github.com/GerHobbelt/h5cpp) -- easy to use HDF5 C++ templates for Serial and Paralel HDF5. Hierarchical Data Format HDF5 is prevalent in high performance scientific computing, sits directly on top of sequential or parallel file systems, providing block and stream operations on standardized or custom binary/text objects. Scientific computing platforms come with the necessary libraries to read write HDF5 dataset. H5CPP simplifies interactions with popular linear algebra libraries, provides compiler assisted seamless object persistence, Standard Template Library support and comes equipped with a novel error handling architecture.
@@ -1138,6 +1186,8 @@ These hashes are for other purposes, e.g. fast lookup in dictionaries, fast appr
 
 
 
+
+<!-- *split* -->
 
 ## Data Storage / Caching / IPC: loss-less data compression
 
@@ -1218,6 +1268,8 @@ These hashes are for other purposes, e.g. fast lookup in dictionaries, fast appr
 
 
 
+<!-- *split* -->
+
 ## File / Directory Tree Synchronization (local and remote)
 
 - **cdc-file-transfer** [📁](./cdc-file-transfer) [🌐](https://github.com/GerHobbelt/cdc-file-transfer) -- CDC File Transfer contains tools for syncing and streaming files from Windows to Windows or Linux. The tools are based on Content Defined Chunking (CDC), in particular [FastCDC](https://www.usenix.org/conference/atc16/technical-sessions/presentation/xia), to split up files into chunks.
@@ -1242,6 +1294,8 @@ These hashes are for other purposes, e.g. fast lookup in dictionaries, fast appr
 
 
 
+<!-- *split* -->
+
 ## OCR: hOCR output format, other output formats? (dedicated binary?)
 
 - **archive-hocr-tools** [📁](./archive-hocr-tools) [🌐](https://github.com/GerHobbelt/archive-hocr-tools) -- a python package to ease hOCR parsing in a streaming manner.
@@ -1262,10 +1316,13 @@ These hashes are for other purposes, e.g. fast lookup in dictionaries, fast appr
 
 
 
+<!-- *split* -->
+
 ## Pattern Recognition
 
 "A.I." for cover pages, image/page *segmentation*, including abstract & summary demarcation, "figure" and "table" detection & extraction from documents, ...
 
+<!-- *toc* -->
 
 
 
@@ -1275,6 +1332,8 @@ These hashes are for other purposes, e.g. fast lookup in dictionaries, fast appr
 
 
 
+
+<!-- *split* -->
 
 ### BLAS, LAPACK, ...
 
@@ -1355,6 +1414,8 @@ These hashes are for other purposes, e.g. fast lookup in dictionaries, fast appr
 
 
 
+<!-- *split* -->
+
 ### _delta features_ & other feature extraction (see Qiqqa research notes)
 
 - **diffutils** [📁](./diffutils) [🌐](https://github.com/GerHobbelt/diffutils) -- the GNU diff, diff3, sdiff, and cmp utilities. Their features are a superset of the Unix features and they are significantly faster.
@@ -1388,6 +1449,8 @@ These hashes are for other purposes, e.g. fast lookup in dictionaries, fast appr
 
 
 
+
+<!-- *split* -->
 
 ### fuzzy matching
 
@@ -1436,6 +1499,8 @@ These hashes are for other purposes, e.g. fast lookup in dictionaries, fast appr
 
 
 
+<!-- *split* -->
+
 ### decision trees
 
 - **catboost** [📁](./catboost) [🌐](https://github.com/GerHobbelt/catboost) -- a fast, scalable, high performance Gradient Boosting on Decision Trees library, used for ranking, classification, regression and other machine learning tasks. Supports computation on CPU and GPU.
@@ -1454,6 +1519,8 @@ These hashes are for other purposes, e.g. fast lookup in dictionaries, fast appr
 
 
 
+
+<!-- *split* -->
 
 ### GMM/HMM/kM
 
@@ -1474,6 +1541,8 @@ Guassian Mixture Models / Hidden Markov Models / k-Means: fit patterns, e.g. mat
 
 
 
+
+<!-- *split* -->
 
 ### graph analysis, graph databases
 
@@ -1505,6 +1574,8 @@ Guassian Mixture Models / Hidden Markov Models / k-Means: fit patterns, e.g. mat
 
 
 
+
+<!-- *split* -->
 
 ### NN, ...
 
@@ -1686,6 +1757,8 @@ Guassian Mixture Models / Hidden Markov Models / k-Means: fit patterns, e.g. mat
 
 
 
+<!-- *split* -->
+
 ### similarity search
 
 - **aho_corasick** [📁](./aho_corasick) [🌐](https://github.com/GerHobbelt/aho_corasick) -- a header only implementation of the Aho-Corasick pattern search algorithm invented by Alfred V. Aho and Margaret J. Corasick. It is a very efficient dictionary matching algorithm that can locate all search patterns against in input text simultaneously in O(n + m), with space complexity O(m) (where n is the length of the input text, and m is the combined length of the search patterns).
@@ -1783,6 +1856,8 @@ Guassian Mixture Models / Hidden Markov Models / k-Means: fit patterns, e.g. mat
 
 
 
+<!-- *split* -->
+
 ### text tokenization (as a preprocessing step for LDA et al):
 
 i.e. breaking text into words when you _receive a textstream without spaces_. Also useful for Asian languages, which don't do spaces, e.g. Chinese.
@@ -1853,6 +1928,8 @@ i.e. breaking text into words when you _receive a textstream without spaces_. Al
 
 
 
+<!-- *split* -->
+
 ### regex matchers (manual edit - pattern recognition)
 
 - **hyperscan** [📁](./hyperscan) [🌐](https://github.com/GerHobbelt/hyperscan) -- Hyperscan is a high-performance multiple regex matching library.
@@ -1886,6 +1963,8 @@ i.e. breaking text into words when you _receive a textstream without spaces_. Al
 
 
 
+
+<!-- *split* -->
 
 ### OCR: quality improvements, language detect, ...
 
@@ -1937,6 +2016,8 @@ i.e. breaking text into words when you _receive a textstream without spaces_. Al
 
 
 
+
+<!-- *split* -->
 
 ### OCR page image preprocessing, \[scanner] tooling: getting the pages to the OCR engine
 
@@ -2122,6 +2203,8 @@ i.e. breaking text into words when you _receive a textstream without spaces_. Al
 
 
 
+<!-- *split* -->
+
 ### image export, image / \[scanned] document import
 
 - **avir** [📁](./avir) [🌐](https://github.com/GerHobbelt/avir) -- a image resizing / scaling library which has reached a production level of quality, and is ready to be incorporated into any project. This library features routines for both down- and upsizing of 8- and 16-bit, 1 to 4-channel images. Image resizing routines were implemented in a portable, cross-platform, header-only C++ code, and have a high level of optimality. Beside resizing, this library offers a sub-pixel shift operation. Built-in sRGB gamma correction is available.
@@ -2242,6 +2325,8 @@ i.e. breaking text into words when you _receive a textstream without spaces_. Al
 
 
 
+<!-- *split* -->
+
 ### Monte Carlo simulations, LDA, keyword inference/extraction, etc.
 
 - **ceres-solver** [📁](./ceres-solver) [🌐](https://github.com/GerHobbelt/ceres-solver) -- a library for modeling and solving large, complicated optimization problems. It is a feature rich, mature and performant library which has been used in production at Google since 2010. Ceres Solver can solve two kinds of problems: (1) Non-linear Least Squares problems with bounds constraints, and (2) General unconstrained optimization problems.
@@ -2283,6 +2368,8 @@ i.e. breaking text into words when you _receive a textstream without spaces_. Al
 
 
 
+<!-- *split* -->
+
 ### Random generators & all things random
 
 - **EigenRand** [📁](./EigenRand) [🌐](https://github.com/GerHobbelt/EigenRand) -- EigenRand: The Fastest C++11-compatible random distribution generator for Eigen. EigenRand is a header-only library for [Eigen](http://eigen.tuxfamily.org/index.php?title=Main_Page), providing vectorized random number engines and vectorized random distribution generators.  Since the classic Random functions of Eigen rely on an old C function `rand()`, there is no way to control random numbers and no guarantee for quality of generated numbers. In addition, Eigen's Random is slow because `rand()` is hard to vectorize. EigenRand provides a variety of random distribution functions similar to C++11 standard's random functions, which can be vectorized and easily integrated into Eigen's expressions of Matrix and Array. You can get 5~10 times speed by just replacing old Eigen's Random or unvectorizable c++11 random number generators with EigenRand.
@@ -2309,6 +2396,8 @@ i.e. breaking text into words when you _receive a textstream without spaces_. Al
 
 
 
+
+<!-- *split* -->
 
 ### Regression, curve fitting, polynomials, splines, geometrics, interpolation, math
 
@@ -2377,6 +2466,8 @@ i.e. breaking text into words when you _receive a textstream without spaces_. Al
 
 
 
+<!-- *split* -->
+
 ### Solvers, Clustering, Monte Carlo, Decision Trees
 
 - **adaptive_clustering** [📁](./adaptive_clustering) [🌐](https://github.com/GerHobbelt/adaptive_clustering) -- a lightweight and accurate point cloud clustering method from the paper Online learning for 3D LiDAR-based human detection: Experimental analysis of point cloud clustering and classification methods, Zhi Yan and Tom Duckett and Nicola Bellotto, 2019.
@@ -2444,6 +2535,8 @@ i.e. breaking text into words when you _receive a textstream without spaces_. Al
 
 
 
+<!-- *split* -->
+
 ### Distance Metrics, Image Quality Metrics, Image Comparison
 
 - **edit-distance** [📁](./edit-distance) [🌐](https://github.com/GerHobbelt/editdistance) -- a fast implementation of the edit distance (Levenshtein distance). The algorithm used in this library is proposed by _Heikki Hyyrö, "Explaining and extending the bit-parallel approximate string matching algorithm of Myers", (2001) <http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.19.7158&rep=rep1&type=pdf>_.
@@ -2496,6 +2589,8 @@ i.e. breaking text into words when you _receive a textstream without spaces_. Al
 
 
 
+
+<!-- *split* -->
 
 ## database "backend storage"
 
@@ -2618,6 +2713,8 @@ i.e. breaking text into words when you _receive a textstream without spaces_. Al
 
 
 
+<!-- *split* -->
+
 ### LMDB, NoSQL and key/value stores
 
 - **arrow** [📁](./arrow) [🌐](https://github.com/GerHobbelt/arrow) -- Apache Arrow is a development platform for in-memory analytics. It contains a set of technologies that enable big data systems to process and move data fast. The reference Arrow libraries contain many distinct software components:
@@ -2695,6 +2792,8 @@ i.e. breaking text into words when you _receive a textstream without spaces_. Al
 
 
 
+<!-- *split* -->
+
 ### SQLite specific modules & related materials
 
 - **duckdb** [📁](./duckdb) [🌐](https://github.com/GerHobbelt/duckdb) -- DuckDB is a high-performance analytical database system. It is designed to be fast, reliable, portable, and easy to use. DuckDB provides a rich SQL dialect, with support far beyond basic SQL. DuckDB supports arbitrary and nested correlated subqueries, window functions, collations, complex types (arrays, structs), and more.
@@ -2738,6 +2837,8 @@ i.e. breaking text into words when you _receive a textstream without spaces_. Al
 
 
 
+
+<!-- *split* -->
 
 ## metadata & text (OCR et al) -- language detect, suggesting fixes, ...
 
@@ -2805,6 +2906,8 @@ i.e. breaking text into words when you _receive a textstream without spaces_. Al
 
 
 
+<!-- *split* -->
+
 ## PDF (XML) metadata editing
 
 for round-trip annotation and other "external application editing" of known documents; metadata embedding / *export*
@@ -2829,6 +2932,8 @@ for round-trip annotation and other "external application editing" of known docu
 
 
 
+
+<!-- *split* -->
 
 ## web scraping (document extraction, cleaning, metadata extraction, BibTeX, ...)
 
@@ -2892,6 +2997,8 @@ for round-trip annotation and other "external application editing" of known docu
 
 
 
+<!-- *split* -->
+
 ## audio files & processing
 
 Not just speech processing & speech recognition, but sometimes data is easier "visualized" as audio (sound).
@@ -2919,6 +3026,8 @@ Not just speech processing & speech recognition, but sometimes data is easier "v
 
 
 
+
+<!-- *split* -->
 
 ## file format support
 
@@ -3056,6 +3165,8 @@ Not just speech processing & speech recognition, but sometimes data is easier "v
 
 
 
+<!-- *split* -->
+
 ## BibTeX and similar library metadata formats' support
 
 - **bibtex-robust-decoder** [📁](./bibtex-robust-decoder) [🌐](https://github.com/GerHobbelt/bibtex-robust-decoder) -- BibTeX parser which is robust: it will cope well with various BibTeX input errors which may be caused by manual entry of a BibTeX record.
@@ -3071,6 +3182,8 @@ Not just speech processing & speech recognition, but sometimes data is easier "v
 
 
 
+
+<!-- *split* -->
 
 ## export / output file formats, text formatting, etc.
 
@@ -3106,6 +3219,8 @@ Not just speech processing & speech recognition, but sometimes data is easier "v
 
 
 
+
+<!-- *split* -->
 
 ## FTS (*Full Text Search*) and related: SOLR/Lucene et al: document content search
 
@@ -3259,6 +3374,8 @@ We'll be using SOLR mostly, but here might be some interface libraries and some 
 
 
 
+<!-- *split* -->
+
 ### stemmers
 
 - **libstemmer** [📁](./libstemmer) [🌐](https://github.com/GerHobbelt/libstemmer) -- SnowBall stemmer for many languages.
@@ -3273,6 +3390,8 @@ We'll be using SOLR mostly, but here might be some interface libraries and some 
 
 
 
+
+<!-- *split* -->
 
 ### language detection / inference
 
@@ -3291,6 +3410,8 @@ We'll be using SOLR mostly, but here might be some interface libraries and some 
 
 
 
+
+<!-- *split* -->
 
 ## scripting *user-tunable tasks* such as OCR preprocessing, metadata extraction, metadata cleaning & other \[post-\]processing, ...
 
@@ -3401,6 +3522,8 @@ The additional (and more important) reason to ditch CPython from the R&D set is 
 
 
 
+<!-- *split* -->
+
 ### QuickJS specific modules & related materials
 
 - **libbf** [📁](./libbf) [🌐](https://github.com/GerHobbelt/libbf) -- a small library to handle arbitrary precision binary or decimal floating point numbers
@@ -3429,10 +3552,13 @@ The additional (and more important) reason to ditch CPython from the R&D set is 
 
 
 
+<!-- *split* -->
+
 ## multi-processing core technologies
 
 
 
+<!-- *toc* -->
 
 
 
@@ -3442,6 +3568,11 @@ The additional (and more important) reason to ditch CPython from the R&D set is 
 
 
 
+
+
+
+
+<!-- *split* -->
 
 ### CLI: commandline parsing & perusing
 
@@ -3469,6 +3600,8 @@ The additional (and more important) reason to ditch CPython from the R&D set is 
 
 
 
+
+<!-- *split* -->
 
 ### CPU features & capabilities detection
 
@@ -3508,6 +3641,8 @@ The additional (and more important) reason to ditch CPython from the R&D set is 
 
 
 
+<!-- *split* -->
+
 ### Date & time functionality
 
 - **cctz** [📁](./cctz) [🌐](https://github.com/GerHobbelt/cctz) -- CCTZ contains two libraries that cooperate with `<chrono>` to give C++ programmers all the necessary tools for computing with dates, times, and time zones in a simple and correct manner.
@@ -3525,6 +3660,8 @@ The additional (and more important) reason to ditch CPython from the R&D set is 
 
 
 
+
+<!-- *split* -->
 
 ### Misc. core functionality
 
@@ -3667,6 +3804,8 @@ The additional (and more important) reason to ditch CPython from the R&D set is 
 
 
 
+<!-- *split* -->
+
 ### multi-processing: invoking external applications
 
 - **cpplocate** [📁](./cpplocate) [🌐](https://github.com/GerHobbelt/cpplocate) -- a cross-platform C++ library that provides tools for applications to locate their binary files and data assets, as well as those of dependent modules.
@@ -3692,6 +3831,8 @@ The additional (and more important) reason to ditch CPython from the R&D set is 
 
 
 
+
+<!-- *split* -->
 
 ### multi-processing: Promise/A+
 
@@ -3729,6 +3870,8 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 
 
 
+
+<!-- *split* -->
 
 ### multi-processing: running tasks in parallel: multi-processing, multithreading, async, ...
 
@@ -3785,6 +3928,8 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 
 
 
+<!-- *split* -->
+
 ### multi-processing: event handling, signals, asynchronous operation
 
 - **cpp.react** [📁](./cpp.react) [🌐](https://github.com/GerHobbelt/cpp.react) -- C++React is a reactive programming library for C++14. It enables the declarative definition of data dependencies between state and event flows. Based on these definitions, propagation of changes is handled automatically.
@@ -3833,6 +3978,8 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 
 
 
+
+<!-- *split* -->
 
 ### multi-processing: task schedulers
 
@@ -3883,6 +4030,8 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 
 
 
+<!-- *split* -->
+
 ### multi-processing: thread pools
 
 - **concurrencpp** [📁](./concurrencpp) [🌐](https://github.com/GerHobbelt/concurrencpp) -- the C++ concurrency library: concurrencpp is a tasking library for C++ allowing developers to write highly concurrent applications easily and safely by using tasks, executors and coroutines.
@@ -3907,6 +4056,8 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 
 
 
+
+<!-- *split* -->
 
 ### run-time library core features: logging, formatting, ...
 
@@ -3983,6 +4134,8 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 
 
 
+<!-- *split* -->
+
 ## web servers, generic sockets I/O (IPC)
 
 - **civetweb** [📁](./civetweb) [🌐](https://github.com/GerHobbelt/civetweb) -- an easy to use, powerful, C (C/C++) embeddable web server with optional CGI, SSL and Lua support.
@@ -4013,6 +4166,8 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 
 
 
+<!-- *split* -->
+
 ## socket I/O: websockets
 
 - **libwebsocketpp** [📁](./libwebsocketpp) [🌐](https://github.com/GerHobbelt/websocketpp) -- WebSocket++ is a header only C++ library that implements RFC6455 The WebSocket Protocol.
@@ -4028,6 +4183,8 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 
 
 
+
+<!-- *split* -->
 
 ## disk I/O, monitoring import locations, ...
 
@@ -4066,6 +4223,8 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 
 
 
+<!-- *split* -->
+
 ## configuration / parameterization
 
 - **cfgpath** [📁](./cfgpath) [🌐](https://github.com/GerHobbelt/cfgpath) -- cross platform methods for obtaining paths to configuration files
@@ -4098,6 +4257,8 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 
 
 
+<!-- *split* -->
+
 ### TOML
 
 - **cpptoml** [📁](./cpptoml) [🌐](https://github.com/GerHobbelt/cpptoml) -- a header-only library for parsing [TOML][toml] configuration files. This includes support for the new DateTime format, inline tables, multi-line basic and raw strings, digit separators, hexadecimal integers, octal integers, binary integers, and float special values.
@@ -4113,6 +4274,8 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 
 
 
+
+<!-- *split* -->
 
 ### YAML
 
@@ -4134,6 +4297,8 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 
 
 
+<!-- *split* -->
+
 ### INI
 
 - ~~**inih** [🌐](https://github.com/benhoyt/inih)~~
@@ -4154,6 +4319,8 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 
 
 
+
+<!-- *split* -->
 
 ## testing, benchmarking & fuzzing
 
@@ -4208,6 +4375,8 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 
 
 
+
+<!-- *split* -->
 
 ## logging & debugging
 
@@ -4283,6 +4452,8 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 
 
 
+<!-- *split* -->
+
 ### Colour Processing & Conversion
 
 - **1D-RGB-color-gradient** [📁](./1D-RGB-color-gradient) [🌐](https://github.com/GerHobbelt/1D-RGB-color-gradient) -- 1D (univariate) continous (smooth) [color gradients](https://en.wikipedia.org/wiki/Color_gradient) (colormaps) for gnuplot.
@@ -4310,6 +4481,8 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 
 
 
+
+<!-- *split* -->
 
 ### Visualization
 
@@ -4366,6 +4539,8 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 
 
 
+<!-- *split* -->
+
 ### ETW (Event Tracing for Microsoft Windows)
 
 - **EtwExplorer** [📁](./EtwExplorer) [🌐](https://github.com/GerHobbelt/EtwExplorer) -- View ETW Provider metadata. Event Tracing for Windows (ETW) is a logging facility built into the Windows OS. Modern providers register a manifest that describes all the events they support, with their properties. Classic providers register a MOF instead.
@@ -4386,6 +4561,8 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 
 
 
+
+<!-- *split* -->
 
 ## telemetry
 
@@ -4408,6 +4585,8 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 
 
 
+
+<!-- *split* -->
 
 ## OCR core (*tesseract*)
 
@@ -4441,6 +4620,8 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 
 
 
+
+<!-- *split* -->
 
 ## PDF render & metadata core (*mupdf*)
 
@@ -4487,6 +4668,8 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 
 
 
+
+<!-- *split* -->
 
 ## UI / GUI
 
@@ -4541,6 +4724,8 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 
 
 
+<!-- *split* -->
+
 ### Language translation & transliteration
 
 - **gettext** [📁](./gettext) [🌐](https://github.com/GerHobbelt/gettext) -- the GNU gettext package.  It is interesting for authors or maintainers of other packages or programs which they want to see internationalized.  As one step the handling of messages in different languages should be implemented.  For this task GNU gettext provides the needed tools and library functions. It is also interesting for translators, because GNU gettext provides the 'msgmerge' program, which prepares a message catalog before a translation update.
@@ -4568,6 +4753,8 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 
 
 
+
+<!-- *split* -->
 
 ## Application Installers (NSIS, et al)
 
@@ -4608,6 +4795,8 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 
 
 
+
+<!-- *split* -->
 
 ## checking out the competition / compatriots for Qiqqa + re-use useful components
 
@@ -4652,6 +4841,8 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 
 
 
+<!-- *split* -->
+
 ## citations output (CSL)
 
 - **citation-abbreviations** [📁](./citation-abbreviations) [🌐](https://github.com/GerHobbelt/abbreviations) -- Journal Title Abbreviations
@@ -4673,6 +4864,8 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 
 
 
+<!-- *split* -->
+
 ## Microsoft Word, Google Docs, LibreOffice: application integration
 
 - **JabRef-Browser-Extension** [📁](./JabRef-Browser-Extension) [🌐](https://github.com/GerHobbelt/JabRef-Browser-Extension) -- a browser extension for users of the bibliographic reference manager [JabRef](https://www.jabref.org/). It automatically identifies and extracts bibliographic information on websites and sends them to JabRef with one click. When you find an interesting article through Google Scholar, the arXiv or journal websites, this browser extension allows you to add those references to JabRef. Even links to accompanying PDFs are sent to JabRef, where those documents can easily be downloaded, renamed and placed in the correct folder. [A wide range of publisher sites, library catalogs and databases are supported](https://www.zotero.org/support/translators).
@@ -4690,6 +4883,8 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 
 
 
+
+<!-- *split* -->
 
 ## XML & XSLT tooling
 
@@ -4711,6 +4906,8 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 
 
 
+<!-- *split* -->
+
 ## Microsoft DOCX ~ OpenXML & other XML & XSLT tooling
 
 - **b2xtranslator** [📁](./b2xtranslator) [🌐](https://github.com/GerHobbelt/b2xtranslator) -- .NET Core library to convert Microsoft Office binary files (doc, xls and ppt) to Open XML (docx, xlsx and pptx). You can use the Open XML SDK to mainpulate those.
@@ -4731,6 +4928,8 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 
 
 
+
+<!-- *split* -->
 
 ## Misc. / Other
 
@@ -4963,6 +5162,8 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 
 
 
+<!-- *split* -->
+
 ## sub-dependencies (libraries which are required by any of the above)
 
 - **abseil-cpp** [📁](./abseil-cpp) [🌐](https://github.com/GerHobbelt/abseil-cpp) -- a collection of C++ code (compliant to C++11) designed to augment the C++ standard library.
@@ -5045,7 +5246,7 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 
 
 
-
+<!-- *split* -->
 
 # Libraries in this collection (All of the above, listed in alphabetical order)
 
@@ -7366,6 +7567,8 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 
 
 
+
+<!-- *split* -->
 
 # TBD: Libraries which still need to be moved into the overview / categories above...
 
