@@ -47,4 +47,4 @@
 	
 ----
 
-🡸 [prev](./0084-language-translation.md)  |  🡹 [up](./0006-libraries-we-re-looking-at-for-this-intent.md)  |  🡺 [next](./0086-checking-out-the-competition-compatriots-for-qiqqa-re-use-useful.md)
+🡸 [previous section](./0084-language-translation.md)  |  🡹 [up](./0006-libraries-we-re-looking-at-for-this-intent.md)  |  🡻 [all (index)](./0093-libraries-in-this.md)  |  🡺 [next section](./0086-checking-out-the-competition-compatriots-for-qiqqa-re-use-useful.md)

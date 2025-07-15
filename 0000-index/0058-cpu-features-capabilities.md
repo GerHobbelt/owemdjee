@@ -45,4 +45,4 @@
 	
 ----
 
-🡸 [prev](./0057-cli-commandline-parsing.md)  |  🡹 [up](./0056-multi-processing-core.md)  |  🡺 [next](./0059-date-time.md)
+🡸 [previous section](./0057-cli-commandline-parsing.md)  |  🡹 [up](./0056-multi-processing-core.md)  |  🡻 [all (index)](./0093-libraries-in-this.md)  |  🡺 [next section](./0059-date-time.md)

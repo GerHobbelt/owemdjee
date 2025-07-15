@@ -26,4 +26,4 @@
 	
 ----
 
-🡸 [prev](./0001-reason-for-this.md)  |  🡹 [up](../README.md)  |  🡺 [next](./0003-inter-process.md)
+🡸 [previous section](./0001-reason-for-this.md)  |  🡹 [up](../README.md)  |  🡻 [all (index)](./0093-libraries-in-this.md)  |  🡺 [next section](./0003-inter-process.md)

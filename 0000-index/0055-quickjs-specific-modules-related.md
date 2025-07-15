@@ -35,4 +35,4 @@
 	
 ----
 
-🡸 [prev](./0054-scripting-user-tunable-tasks-such-as-ocr-preprocessing-metadata.md)  |  🡹 [up](./0054-scripting-user-tunable-tasks-such-as-ocr-preprocessing-metadata.md)  |  🡺 [next](./0056-multi-processing-core.md)
+🡸 [previous section](./0054-scripting-user-tunable-tasks-such-as-ocr-preprocessing-metadata.md)  |  🡹 [up](./0054-scripting-user-tunable-tasks-such-as-ocr-preprocessing-metadata.md)  |  🡻 [all (index)](./0093-libraries-in-this.md)  |  🡺 [next section](./0056-multi-processing-core.md)

@@ -74,4 +74,4 @@
 	
 ----
 
-🡸 [prev](./0038-regression-curve-fitting-polynomials-splines-geometrics-interpolation.md)  |  🡹 [up](./0022-pattern.md)  |  🡺 [next](./0040-distance-metrics-image-quality-metrics-image.md)
+🡸 [previous section](./0038-regression-curve-fitting-polynomials-splines-geometrics-interpolation.md)  |  🡹 [up](./0022-pattern.md)  |  🡻 [all (index)](./0093-libraries-in-this.md)  |  🡺 [next section](./0040-distance-metrics-image-quality-metrics-image.md)

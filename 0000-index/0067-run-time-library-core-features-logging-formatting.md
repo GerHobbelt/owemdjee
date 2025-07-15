@@ -82,4 +82,4 @@
 	
 ----
 
-🡸 [prev](./0066-multi-processing-thread.md)  |  🡹 [up](./0056-multi-processing-core.md)  |  🡺 [next](./0068-web-servers-generic-sockets-i.md)
+🡸 [previous section](./0066-multi-processing-thread.md)  |  🡹 [up](./0056-multi-processing-core.md)  |  🡻 [all (index)](./0093-libraries-in-this.md)  |  🡺 [next section](./0068-web-servers-generic-sockets-i.md)

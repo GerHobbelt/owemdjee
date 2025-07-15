@@ -40,4 +40,4 @@ We **may** **probably** choose to use a web-centric UI approach where images are
 	
 ----
 
-🡸 [prev](./0003-inter-process.md)  |  🡹 [up](./0002-intent.md)  |  🡺 [next](./0005-scripting-the-system-languages-considered-for-scripting-by.md)
+🡸 [previous section](./0003-inter-process.md)  |  🡹 [up](./0002-intent.md)  |  🡻 [all (index)](./0093-libraries-in-this.md)  |  🡺 [next section](./0005-scripting-the-system-languages-considered-for-scripting-by.md)

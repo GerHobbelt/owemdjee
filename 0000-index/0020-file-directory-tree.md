@@ -31,4 +31,4 @@
 	
 ----
 
-🡸 [prev](./0019-data-storage-caching-ipc-loss-less-data.md)  |  🡹 [up](./0006-libraries-we-re-looking-at-for-this-intent.md)  |  🡺 [next](./0021-ocr-hocr-output-format-other-output-formats.md)
+🡸 [previous section](./0019-data-storage-caching-ipc-loss-less-data.md)  |  🡹 [up](./0006-libraries-we-re-looking-at-for-this-intent.md)  |  🡻 [all (index)](./0093-libraries-in-this.md)  |  🡺 [next section](./0021-ocr-hocr-output-format-other-output-formats.md)

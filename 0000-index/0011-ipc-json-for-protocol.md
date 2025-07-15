@@ -41,4 +41,4 @@
 	
 ----
 
-🡸 [prev](./0010-ipc-memory.md)  |  🡹 [up](./0006-libraries-we-re-looking-at-for-this-intent.md)  |  🡺 [next](./0012-ipc-cbor-for-protocol.md)
+🡸 [previous section](./0010-ipc-memory.md)  |  🡹 [up](./0006-libraries-we-re-looking-at-for-this-intent.md)  |  🡻 [all (index)](./0093-libraries-in-this.md)  |  🡺 [next section](./0012-ipc-cbor-for-protocol.md)

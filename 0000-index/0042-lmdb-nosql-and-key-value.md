@@ -84,4 +84,4 @@
 	
 ----
 
-🡸 [prev](./0041-database-backend-storage.md)  |  🡹 [up](./0041-database-backend-storage.md)  |  🡺 [next](./0043-sqlite-specific-modules-related.md)
+🡸 [previous section](./0041-database-backend-storage.md)  |  🡹 [up](./0041-database-backend-storage.md)  |  🡻 [all (index)](./0093-libraries-in-this.md)  |  🡺 [next section](./0043-sqlite-specific-modules-related.md)

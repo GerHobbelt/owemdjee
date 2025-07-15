@@ -35,4 +35,4 @@
 	
 ----
 
-🡸 [prev](./0083-ui.md)  |  🡹 [up](./0083-ui.md)  |  🡺 [next](./0085-application.md)
+🡸 [previous section](./0083-ui.md)  |  🡹 [up](./0083-ui.md)  |  🡻 [all (index)](./0093-libraries-in-this.md)  |  🡺 [next section](./0085-application.md)

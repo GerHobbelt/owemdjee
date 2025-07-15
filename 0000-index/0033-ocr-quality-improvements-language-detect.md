@@ -58,4 +58,4 @@
 	
 ----
 
-🡸 [prev](./0032-regex.md)  |  🡹 [up](./0022-pattern.md)  |  🡺 [next](./0034-ocr-page-image-preprocessing-scanner-tooling-getting-the-pages.md)
+🡸 [previous section](./0032-regex.md)  |  🡹 [up](./0022-pattern.md)  |  🡻 [all (index)](./0093-libraries-in-this.md)  |  🡺 [next section](./0034-ocr-page-image-preprocessing-scanner-tooling-getting-the-pages.md)

@@ -23,4 +23,4 @@
 	
 ----
 
-🡸 [prev](./0068-web-servers-generic-sockets-i.md)  |  🡹 [up](./0006-libraries-we-re-looking-at-for-this-intent.md)  |  🡺 [next](./0070-disk-i-o-monitoring-import-locations.md)
+🡸 [previous section](./0068-web-servers-generic-sockets-i.md)  |  🡹 [up](./0006-libraries-we-re-looking-at-for-this-intent.md)  |  🡻 [all (index)](./0093-libraries-in-this.md)  |  🡺 [next section](./0070-disk-i-o-monitoring-import-locations.md)

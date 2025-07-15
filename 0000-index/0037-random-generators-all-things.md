@@ -34,4 +34,4 @@
 	
 ----
 
-🡸 [prev](./0036-monte-carlo-simulations-lda-keyword-inference-extraction-etc.md)  |  🡹 [up](./0022-pattern.md)  |  🡺 [next](./0038-regression-curve-fitting-polynomials-splines-geometrics-interpolation.md)
+🡸 [previous section](./0036-monte-carlo-simulations-lda-keyword-inference-extraction-etc.md)  |  🡹 [up](./0022-pattern.md)  |  🡻 [all (index)](./0093-libraries-in-this.md)  |  🡺 [next section](./0038-regression-curve-fitting-polynomials-splines-geometrics-interpolation.md)

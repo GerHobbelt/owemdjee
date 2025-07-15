@@ -48,4 +48,4 @@
 	
 ----
 
-🡸 [prev](./0009-ipc-zeromq-a-k-a.md)  |  🡹 [up](./0008-ipc-websockets-etc-all-communication.md)  |  🡺 [next](./0011-ipc-json-for-protocol.md)
+🡸 [previous section](./0009-ipc-zeromq-a-k-a.md)  |  🡹 [up](./0008-ipc-websockets-etc-all-communication.md)  |  🡻 [all (index)](./0093-libraries-in-this.md)  |  🡺 [next section](./0011-ipc-json-for-protocol.md)

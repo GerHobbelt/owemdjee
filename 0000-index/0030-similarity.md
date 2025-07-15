@@ -104,4 +104,4 @@
 	
 ----
 
-🡸 [prev](./0029-nn.md)  |  🡹 [up](./0022-pattern.md)  |  🡺 [next](./0031-text.md)
+🡸 [previous section](./0029-nn.md)  |  🡹 [up](./0022-pattern.md)  |  🡻 [all (index)](./0093-libraries-in-this.md)  |  🡺 [next section](./0031-text.md)

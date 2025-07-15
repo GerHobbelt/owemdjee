@@ -25,4 +25,4 @@
 	
 ----
 
-🡸 [prev](./0052-stemmers.md)  |  🡹 [up](./0051-fts.md)  |  🡺 [next](./0054-scripting-user-tunable-tasks-such-as-ocr-preprocessing-metadata.md)
+🡸 [previous section](./0052-stemmers.md)  |  🡹 [up](./0051-fts.md)  |  🡻 [all (index)](./0093-libraries-in-this.md)  |  🡺 [next section](./0054-scripting-user-tunable-tasks-such-as-ocr-preprocessing-metadata.md)

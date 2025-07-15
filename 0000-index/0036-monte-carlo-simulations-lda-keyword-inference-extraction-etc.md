@@ -48,4 +48,4 @@
 	
 ----
 
-🡸 [prev](./0035-image-export-image-scanned-document.md)  |  🡹 [up](./0022-pattern.md)  |  🡺 [next](./0037-random-generators-all-things.md)
+🡸 [previous section](./0035-image-export-image-scanned-document.md)  |  🡹 [up](./0022-pattern.md)  |  🡻 [all (index)](./0093-libraries-in-this.md)  |  🡺 [next section](./0037-random-generators-all-things.md)

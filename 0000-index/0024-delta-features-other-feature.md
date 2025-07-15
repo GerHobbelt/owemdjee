@@ -41,4 +41,4 @@
 	
 ----
 
-🡸 [prev](./0023-blas-lapack.md)  |  🡹 [up](./0022-pattern.md)  |  🡺 [next](./0025-fuzzy.md)
+🡸 [previous section](./0023-blas-lapack.md)  |  🡹 [up](./0022-pattern.md)  |  🡻 [all (index)](./0093-libraries-in-this.md)  |  🡺 [next section](./0025-fuzzy.md)

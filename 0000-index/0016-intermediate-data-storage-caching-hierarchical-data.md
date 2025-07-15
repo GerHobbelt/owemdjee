@@ -29,4 +29,4 @@
 	
 ----
 
-🡸 [prev](./0015-hash-like-filters-fast-hashing-for-hash-tables-et.md)  |  🡹 [up](./0006-libraries-we-re-looking-at-for-this-intent.md)  |  🡺 [next](./0017-ram-disk-based-large-queues-and-stores-b-tree-lsm-tree.md)
+🡸 [previous section](./0015-hash-like-filters-fast-hashing-for-hash-tables-et.md)  |  🡹 [up](./0006-libraries-we-re-looking-at-for-this-intent.md)  |  🡻 [all (index)](./0093-libraries-in-this.md)  |  🡺 [next section](./0017-ram-disk-based-large-queues-and-stores-b-tree-lsm-tree.md)

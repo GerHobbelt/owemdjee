@@ -61,4 +61,4 @@
 	
 ----
 
-🡸 [prev](./0016-intermediate-data-storage-caching-hierarchical-data.md)  |  🡹 [up](./0016-intermediate-data-storage-caching-hierarchical-data.md)  |  🡺 [next](./0018-hdf5-file.md)
+🡸 [previous section](./0016-intermediate-data-storage-caching-hierarchical-data.md)  |  🡹 [up](./0016-intermediate-data-storage-caching-hierarchical-data.md)  |  🡻 [all (index)](./0093-libraries-in-this.md)  |  🡺 [next section](./0018-hdf5-file.md)

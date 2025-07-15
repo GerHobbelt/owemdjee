@@ -82,4 +82,4 @@
 	
 ----
 
-🡸 [prev](./0006-libraries-we-re-looking-at-for-this-intent.md)  |  🡹 [up](./0006-libraries-we-re-looking-at-for-this-intent.md)  |  🡺 [next](./0008-ipc-websockets-etc-all-communication.md)
+🡸 [previous section](./0006-libraries-we-re-looking-at-for-this-intent.md)  |  🡹 [up](./0006-libraries-we-re-looking-at-for-this-intent.md)  |  🡻 [all (index)](./0093-libraries-in-this.md)  |  🡺 [next section](./0008-ipc-websockets-etc-all-communication.md)

@@ -62,4 +62,4 @@
 	
 ----
 
-🡸 [prev](./0062-multi-processing-promise-a.md)  |  🡹 [up](./0056-multi-processing-core.md)  |  🡺 [next](./0064-multi-processing-event-handling-signals-asynchronous.md)
+🡸 [previous section](./0062-multi-processing-promise-a.md)  |  🡹 [up](./0056-multi-processing-core.md)  |  🡻 [all (index)](./0093-libraries-in-this.md)  |  🡺 [next section](./0064-multi-processing-event-handling-signals-asynchronous.md)

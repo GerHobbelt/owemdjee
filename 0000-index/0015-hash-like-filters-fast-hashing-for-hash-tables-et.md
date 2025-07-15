@@ -146,4 +146,4 @@ These hashes are for other purposes, e.g. fast lookup in dictionaries, fast appr
 	
 ----
 
-🡸 [prev](./0014-content.md)  |  🡹 [up](./0006-libraries-we-re-looking-at-for-this-intent.md)  |  🡺 [next](./0016-intermediate-data-storage-caching-hierarchical-data.md)
+🡸 [previous section](./0014-content.md)  |  🡹 [up](./0006-libraries-we-re-looking-at-for-this-intent.md)  |  🡻 [all (index)](./0093-libraries-in-this.md)  |  🡺 [next section](./0016-intermediate-data-storage-caching-hierarchical-data.md)

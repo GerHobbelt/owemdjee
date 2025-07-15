@@ -51,4 +51,4 @@
 	
 ----
 
-🡸 [prev](./0042-lmdb-nosql-and-key-value.md)  |  🡹 [up](./0041-database-backend-storage.md)  |  🡺 [next](./0044-metadata.md)
+🡸 [previous section](./0042-lmdb-nosql-and-key-value.md)  |  🡹 [up](./0041-database-backend-storage.md)  |  🡻 [all (index)](./0093-libraries-in-this.md)  |  🡺 [next section](./0044-metadata.md)

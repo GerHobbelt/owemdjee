@@ -86,4 +86,4 @@
 	
 ----
 
-🡸 [prev](./0018-hdf5-file.md)  |  🡹 [up](./0006-libraries-we-re-looking-at-for-this-intent.md)  |  🡺 [next](./0020-file-directory-tree.md)
+🡸 [previous section](./0018-hdf5-file.md)  |  🡹 [up](./0006-libraries-we-re-looking-at-for-this-intent.md)  |  🡻 [all (index)](./0093-libraries-in-this.md)  |  🡺 [next section](./0020-file-directory-tree.md)

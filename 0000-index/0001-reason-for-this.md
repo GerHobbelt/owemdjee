@@ -96,4 +96,4 @@ For that purpose, this repo is a *solution*, though -- granted -- a *sub-optimal
 	
 ----
 
-🡸 [prev](../README.md)  |  🡹 [up](../README.md)  |  🡺 [next](./0002-intent.md)
+🡸 [previous section](../README.md)  |  🡹 [up](../README.md)  |  🡻 [all (index)](./0093-libraries-in-this.md)  |  🡺 [next section](./0002-intent.md)

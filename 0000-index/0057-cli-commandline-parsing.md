@@ -34,4 +34,4 @@
 	
 ----
 
-🡸 [prev](./0056-multi-processing-core.md)  |  🡹 [up](./0056-multi-processing-core.md)  |  🡺 [next](./0058-cpu-features-capabilities.md)
+🡸 [previous section](./0056-multi-processing-core.md)  |  🡹 [up](./0056-multi-processing-core.md)  |  🡻 [all (index)](./0093-libraries-in-this.md)  |  🡺 [next section](./0058-cpu-features-capabilities.md)

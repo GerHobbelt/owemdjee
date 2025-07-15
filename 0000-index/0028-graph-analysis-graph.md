@@ -38,4 +38,4 @@
 	
 ----
 
-🡸 [prev](./0027-gmm-hmm.md)  |  🡹 [up](./0022-pattern.md)  |  🡺 [next](./0029-nn.md)
+🡸 [previous section](./0027-gmm-hmm.md)  |  🡹 [up](./0022-pattern.md)  |  🡻 [all (index)](./0093-libraries-in-this.md)  |  🡺 [next section](./0029-nn.md)

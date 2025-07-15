@@ -25,4 +25,4 @@
 	
 ----
 
-🡸 [prev](./0087-citations.md)  |  🡹 [up](./0006-libraries-we-re-looking-at-for-this-intent.md)  |  🡺 [next](./0089-xml-xslt.md)
+🡸 [previous section](./0087-citations.md)  |  🡹 [up](./0006-libraries-we-re-looking-at-for-this-intent.md)  |  🡻 [all (index)](./0093-libraries-in-this.md)  |  🡺 [next section](./0089-xml-xslt.md)

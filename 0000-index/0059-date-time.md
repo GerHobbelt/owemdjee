@@ -25,4 +25,4 @@
 	
 ----
 
-🡸 [prev](./0058-cpu-features-capabilities.md)  |  🡹 [up](./0056-multi-processing-core.md)  |  🡺 [next](./0060-misc-core.md)
+🡸 [previous section](./0058-cpu-features-capabilities.md)  |  🡹 [up](./0056-multi-processing-core.md)  |  🡻 [all (index)](./0093-libraries-in-this.md)  |  🡺 [next section](./0060-misc-core.md)

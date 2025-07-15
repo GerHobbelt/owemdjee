@@ -2327,4 +2327,4 @@
 	
 ----
 
-🡸 [prev](./0092-sub.md)  |  🡹 [up](../README.md)  |  🡺 [next](./0094-tbd-libraries-which-still-need-to-be-moved-into-the-overview.md)
+🡸 [previous section](./0092-sub.md)  |  🡹 [up](../README.md)  |  🡻 [all (index)](./0093-libraries-in-this.md)  |  🡺 [next section](./0094-tbd-libraries-which-still-need-to-be-moved-into-the-overview.md)

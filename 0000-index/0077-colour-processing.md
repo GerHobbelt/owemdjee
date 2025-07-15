@@ -35,4 +35,4 @@
 	
 ----
 
-🡸 [prev](./0076-logging.md)  |  🡹 [up](./0076-logging.md)  |  🡺 [next](./0078-visualization.md)
+🡸 [previous section](./0076-logging.md)  |  🡹 [up](./0076-logging.md)  |  🡻 [all (index)](./0093-libraries-in-this.md)  |  🡺 [next section](./0078-visualization.md)

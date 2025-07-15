@@ -32,4 +32,4 @@
 	
 ----
 
-🡸 [prev](./0011-ipc-json-for-protocol.md)  |  🡹 [up](./0006-libraries-we-re-looking-at-for-this-intent.md)  |  🡺 [next](./0013-ipc-yaml-toml-etc-for-protocol.md)
+🡸 [previous section](./0011-ipc-json-for-protocol.md)  |  🡹 [up](./0006-libraries-we-re-looking-at-for-this-intent.md)  |  🡻 [all (index)](./0093-libraries-in-this.md)  |  🡺 [next section](./0013-ipc-yaml-toml-etc-for-protocol.md)

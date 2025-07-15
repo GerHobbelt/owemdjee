@@ -86,4 +86,4 @@
 	
 ----
 
-🡸 [prev](./0022-pattern.md)  |  🡹 [up](./0022-pattern.md)  |  🡺 [next](./0024-delta-features-other-feature.md)
+🡸 [previous section](./0022-pattern.md)  |  🡹 [up](./0022-pattern.md)  |  🡻 [all (index)](./0093-libraries-in-this.md)  |  🡺 [next section](./0024-delta-features-other-feature.md)

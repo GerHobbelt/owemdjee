@@ -310,4 +310,4 @@ The other JavaScript engines considered are of varying size, performance and com
 	
 ----
 
-🡸 [prev](./0004-programming-languages-used-intent-and-purposes.md)  |  🡹 [up](./0002-intent.md)  |  🡺 [next](./0006-libraries-we-re-looking-at-for-this-intent.md)
+🡸 [previous section](./0004-programming-languages-used-intent-and-purposes.md)  |  🡹 [up](./0002-intent.md)  |  🡻 [all (index)](./0093-libraries-in-this.md)  |  🡺 [next section](./0006-libraries-we-re-looking-at-for-this-intent.md)

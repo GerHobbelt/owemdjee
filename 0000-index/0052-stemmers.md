@@ -22,4 +22,4 @@
 	
 ----
 
-🡸 [prev](./0051-fts.md)  |  🡹 [up](./0051-fts.md)  |  🡺 [next](./0053-language-detection.md)
+🡸 [previous section](./0051-fts.md)  |  🡹 [up](./0051-fts.md)  |  🡻 [all (index)](./0093-libraries-in-this.md)  |  🡺 [next section](./0053-language-detection.md)

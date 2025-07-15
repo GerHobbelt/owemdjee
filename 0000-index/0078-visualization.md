@@ -62,4 +62,4 @@
 	
 ----
 
-🡸 [prev](./0077-colour-processing.md)  |  🡹 [up](./0076-logging.md)  |  🡺 [next](./0079-etw.md)
+🡸 [previous section](./0077-colour-processing.md)  |  🡹 [up](./0076-logging.md)  |  🡻 [all (index)](./0093-libraries-in-this.md)  |  🡺 [next section](./0079-etw.md)

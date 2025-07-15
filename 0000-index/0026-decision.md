@@ -26,4 +26,4 @@
 	
 ----
 
-🡸 [prev](./0025-fuzzy.md)  |  🡹 [up](./0022-pattern.md)  |  🡺 [next](./0027-gmm-hmm.md)
+🡸 [previous section](./0025-fuzzy.md)  |  🡹 [up](./0022-pattern.md)  |  🡻 [all (index)](./0093-libraries-in-this.md)  |  🡺 [next section](./0027-gmm-hmm.md)

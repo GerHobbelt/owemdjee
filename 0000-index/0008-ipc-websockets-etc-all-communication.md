@@ -76,4 +76,4 @@ Also, we are currently more interested in *fast data serialization* then RPC *pe
 	
 ----
 
-🡸 [prev](./0007-ipc-flatbuffer-et-al-for-protocol.md)  |  🡹 [up](./0006-libraries-we-re-looking-at-for-this-intent.md)  |  🡺 [next](./0009-ipc-zeromq-a-k-a.md)
+🡸 [previous section](./0007-ipc-flatbuffer-et-al-for-protocol.md)  |  🡹 [up](./0006-libraries-we-re-looking-at-for-this-intent.md)  |  🡻 [all (index)](./0093-libraries-in-this.md)  |  🡺 [next section](./0009-ipc-zeromq-a-k-a.md)

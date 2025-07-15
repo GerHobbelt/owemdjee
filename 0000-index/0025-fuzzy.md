@@ -54,4 +54,4 @@
 	
 ----
 
-🡸 [prev](./0024-delta-features-other-feature.md)  |  🡹 [up](./0022-pattern.md)  |  🡺 [next](./0026-decision.md)
+🡸 [previous section](./0024-delta-features-other-feature.md)  |  🡹 [up](./0022-pattern.md)  |  🡻 [all (index)](./0093-libraries-in-this.md)  |  🡺 [next section](./0026-decision.md)

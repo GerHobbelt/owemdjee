@@ -148,4 +148,4 @@
 	
 ----
 
-🡸 [prev](./0059-date-time.md)  |  🡹 [up](./0056-multi-processing-core.md)  |  🡺 [next](./0061-multi-processing-invoking-external.md)
+🡸 [previous section](./0059-date-time.md)  |  🡹 [up](./0056-multi-processing-core.md)  |  🡻 [all (index)](./0093-libraries-in-this.md)  |  🡺 [next section](./0061-multi-processing-invoking-external.md)

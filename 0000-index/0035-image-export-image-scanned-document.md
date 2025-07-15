@@ -127,4 +127,4 @@
 	
 ----
 
-🡸 [prev](./0034-ocr-page-image-preprocessing-scanner-tooling-getting-the-pages.md)  |  🡹 [up](./0022-pattern.md)  |  🡺 [next](./0036-monte-carlo-simulations-lda-keyword-inference-extraction-etc.md)
+🡸 [previous section](./0034-ocr-page-image-preprocessing-scanner-tooling-getting-the-pages.md)  |  🡹 [up](./0022-pattern.md)  |  🡻 [all (index)](./0093-libraries-in-this.md)  |  🡺 [next section](./0036-monte-carlo-simulations-lda-keyword-inference-extraction-etc.md)

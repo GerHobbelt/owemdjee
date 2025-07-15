@@ -191,4 +191,4 @@
 	
 ----
 
-🡸 [prev](./0033-ocr-quality-improvements-language-detect.md)  |  🡹 [up](./0022-pattern.md)  |  🡺 [next](./0035-image-export-image-scanned-document.md)
+🡸 [previous section](./0033-ocr-quality-improvements-language-detect.md)  |  🡹 [up](./0022-pattern.md)  |  🡻 [all (index)](./0093-libraries-in-this.md)  |  🡺 [next section](./0035-image-export-image-scanned-document.md)

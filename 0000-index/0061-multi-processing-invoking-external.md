@@ -33,4 +33,4 @@
 	
 ----
 
-🡸 [prev](./0060-misc-core.md)  |  🡹 [up](./0056-multi-processing-core.md)  |  🡺 [next](./0062-multi-processing-promise-a.md)
+🡸 [previous section](./0060-misc-core.md)  |  🡹 [up](./0056-multi-processing-core.md)  |  🡻 [all (index)](./0093-libraries-in-this.md)  |  🡺 [next section](./0062-multi-processing-promise-a.md)

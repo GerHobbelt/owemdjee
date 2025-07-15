@@ -81,4 +81,4 @@
 	
 ----
 
-🡸 [prev](./0075-testing-benchmarking.md)  |  🡹 [up](./0006-libraries-we-re-looking-at-for-this-intent.md)  |  🡺 [next](./0077-colour-processing.md)
+🡸 [previous section](./0075-testing-benchmarking.md)  |  🡹 [up](./0006-libraries-we-re-looking-at-for-this-intent.md)  |  🡻 [all (index)](./0093-libraries-in-this.md)  |  🡺 [next section](./0077-colour-processing.md)

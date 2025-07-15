@@ -171,9 +171,9 @@ function append_navigation(txt, arr, idx) {
 
 `;
 	if (idx > 1) {
-		nav += `🡸 [prev](./${ arr[idx - 1].filename }.md)  |  `;
+		nav += `🡸 [previous section](./${ arr[idx - 1].filename }.md)  |  `;
 	} else if (idx == 1) {
-		nav += `🡸 [prev](../${ arr[idx - 1].filename }.md)  |  `;
+		nav += `🡸 [previous section](../${ arr[idx - 1].filename }.md)  |  `;
 	}
 
 	if (idx > 0) {
@@ -193,12 +193,21 @@ function append_navigation(txt, arr, idx) {
 			nav += `🡹 [up](../${ arr[0].filename }.md)  |  `;
 		}
 	}
+	
+	// hacky way to 'fix' the index of the subdoc that carries the alphabetically ordered TOTAL list:
+	let overall_idx = arr.length - 2;
+	
+	if (idx > 0) {
+		nav += `🡻 [all (index)](./${ arr[overall_idx].filename }.md)  |  `;
+	} else if (idx == 0) {
+		nav += `🡻 [all (index)](./0000-index/${ arr[overall_idx].filename }.md)  |  `;
+	}
 
 	if (idx + 1 < arr.length) {
 		if (idx > 0) {
-			nav += `🡺 [next](./${ arr[idx + 1].filename }.md)`;
+			nav += `🡺 [next section](./${ arr[idx + 1].filename }.md)`;
 		} else if (idx == 0) {
-			nav += `🡺 [next](./0000-index/${ arr[idx + 1].filename }.md)`;
+			nav += `🡺 [next section](./0000-index/${ arr[idx + 1].filename }.md)`;
 		}
 	}
 	else {

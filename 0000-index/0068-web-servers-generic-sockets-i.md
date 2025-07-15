@@ -37,4 +37,4 @@
 	
 ----
 
-🡸 [prev](./0067-run-time-library-core-features-logging-formatting.md)  |  🡹 [up](./0006-libraries-we-re-looking-at-for-this-intent.md)  |  🡺 [next](./0069-socket-i-o.md)
+🡸 [previous section](./0067-run-time-library-core-features-logging-formatting.md)  |  🡹 [up](./0006-libraries-we-re-looking-at-for-this-intent.md)  |  🡻 [all (index)](./0093-libraries-in-this.md)  |  🡺 [next section](./0069-socket-i-o.md)

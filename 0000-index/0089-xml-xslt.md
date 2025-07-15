@@ -27,4 +27,4 @@
 	
 ----
 
-🡸 [prev](./0088-microsoft-word-google-docs-libreoffice-application.md)  |  🡹 [up](./0006-libraries-we-re-looking-at-for-this-intent.md)  |  🡺 [next](./0090-microsoft-docx-openxml-other-xml-xslt.md)
+🡸 [previous section](./0088-microsoft-word-google-docs-libreoffice-application.md)  |  🡹 [up](./0006-libraries-we-re-looking-at-for-this-intent.md)  |  🡻 [all (index)](./0093-libraries-in-this.md)  |  🡺 [next section](./0090-microsoft-docx-openxml-other-xml-xslt.md)

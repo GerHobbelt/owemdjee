@@ -56,4 +56,4 @@
 	
 ----
 
-🡸 [prev](./0063-multi-processing-running-tasks-in-parallel-multi-processing-multithreading.md)  |  🡹 [up](./0056-multi-processing-core.md)  |  🡺 [next](./0065-multi-processing-task.md)
+🡸 [previous section](./0063-multi-processing-running-tasks-in-parallel-multi-processing-multithreading.md)  |  🡹 [up](./0056-multi-processing-core.md)  |  🡻 [all (index)](./0093-libraries-in-this.md)  |  🡺 [next section](./0065-multi-processing-task.md)
