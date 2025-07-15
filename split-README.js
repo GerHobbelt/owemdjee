@@ -45,9 +45,7 @@ arr = arr.map(function (chunk) {
 	// clean up the heading and turn it into a github-style in-page bookmark...
 	let bookmark = `#` + heading.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/(?:^-)|(?:-$)/g, '');
 
-	let tocm = toc_re.exec(chunk);
-	
-	console.log({heading, depth, short_heading, filename, tocm});
+	console.log({heading, depth, short_heading, filename});
 	
 	if (unique_dict[filename]) {
 		throw `\nHeading is ambiguous:\n\n    ${m[0]}\n\n`;
@@ -61,9 +59,7 @@ arr = arr.map(function (chunk) {
 		depth,
 		heading,
 		short_heading,
-		has_toc: tocm != null,
-		toc_spans: get_TOC_span(chunk, tocm, toc_re), 
-		toc_attr: tocm ? tocm[1].replace(/[:-]/g, '') : '',
+		toc_spans: get_TOC_spans(chunk), 
 	};
 });
 
@@ -103,20 +99,24 @@ for (let i = 0; i < arr.length; i++) {
 
 
 
-function get_TOC_span(src, re_match, base_re, main_txt) {
+function get_TOC_spans(src) {
 	let rv = [];
-	
+
+	let re_match = toc_re.exec(src);
 	while (re_match != null) {
+		let attr = re_match[1].replace(/[:-]/g, '');
+		
 		let span_re = /^([\s\r\n]*\*[^\n]+)+/s;
-		let idx = base_re.lastIndex; // + re_match[0].length;
+		let idx = toc_re.lastIndex; // + re_match[0].length;
 		let s = src.substring(idx);
 		let m = span_re.exec(s);
-		console.log({src, re_match, base_re, startIndex: base_re.lastIndex, idx, s, m});
+		console.log({src, re_match, toc_re, startIndex: toc_re.lastIndex, idx, s, m});
 		if (m) {
 			rv.push({
 				idx,
 				match: m[0],
 				length: m[0].length,
+				attr
 			});
 		}
 		else {
@@ -124,24 +124,40 @@ function get_TOC_span(src, re_match, base_re, main_txt) {
 				idx,
 				match: null,
 				length: 0,
+				attr
 			});
 		}
 		
-		re_match = base_re.exec(src);
+		re_match = toc_re.exec(src);
 	}
 	
 	console.log({rv, len: rv.length});
 	return rv.length > 0 ? rv : null;
 }
 
-function get_text_and_generate_TOCs_if_any(spec, arr, i) {
+function get_text_and_generate_TOCs_if_any(spec, arr, idx) {
 	let txt = spec.chunk;
 	
-	if (!spec.has_toc)
+	if (!spec.toc_spans)
 		return txt;
 	
-	console.log({spec, i});
-	throw 1;
+	console.log({spec, idx, toc_spans: spec.toc_spans});
+	
+	let base_depth = spec.depth;
+	for (let i = idx + 1; i < arr.length; i++) {
+		let spec = arr[i];
+		
+		console.log({spec, i});
+		
+		if (spec.depth <= base_depth)
+			break;
+	
+
+
+	}
+	
+
+
 	return txt;
 }
 	
