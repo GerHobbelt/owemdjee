@@ -381,8 +381,8 @@ git_repo_checkout_branch "../VisualScriptEngine"                  f9767371d70d51
 git_repo_checkout_branch "../VisualizationLibrary"                d2a0e321288152008957e29a0bc270ad192f75be master    
 git_repo_checkout_branch "../WebView2Browser"                     ff5ef355ac16b285bdada10274c10685c7d1201a master    
 git_repo_checkout_branch "../WebView2Samples"                     f51a817e0c5b941400f8da5cb1efedc1d3208c35 master    
-git_repo_checkout_branch "../Win32_read_directory_changes"        bcbd3c486c2bad01a2f851b2018427ad60620018           
-git_repo_checkout_branch "../Win32_read_directory_changes_IOCP"   4e43c796c3bd076a90d25d936ebbb8748eca1dc7           
+git_repo_checkout_branch "../Win32_read_directory_changes"        5d87c40ba69d8aefc4dd9ca92bc018a9c4dbf9eb master    
+git_repo_checkout_branch "../Win32_read_directory_changes_IOCP"   5d88a16d11a8e7865445588900f2b78b3442d55c master    
 git_repo_checkout_branch "../WinHttpPAL"                          da0a4e8fffde82c17886f4d4b8ef9cde8abf32c3 master    
 git_repo_checkout_branch "../WinToast"                            11e76e5070c01a472f8ec8c342027e17cd914022 master    
 git_repo_checkout_branch "../Windows10EtwEvents"                  8a8a66f7a4becc0cabaa1640d4e874f7a75af3da master    
@@ -426,14 +426,7 @@ git_repo_checkout_branch "../bbe"                                 4a2e5497479a87
 git_repo_checkout_branch "../bebop"                               b6034c8b3d5e7884dfc339965747b2dcea542306 master    
 git_repo_checkout_branch "../better-enums"                        520d8ee39037c9c94aa6e708a4fd6c0fa313ae80 master    
 git_repo_checkout_branch "../bhtsne--Barnes-Hut-t-SNE"            407210c045dc932976a113fa5da6ce1c819b95b6 master    
-git_repo_checkout_branch "../bibtex-robust-decoder"               7a4dcfb304dda6718c1f2c48bc313e7eeded98e0 master    
-git_repo_checkout_branch "../bibtex-robust-decoder/R-n-D/bkn-bibtex" a48b3fe3435aca572a2d956811b1846321d32c51 master    
-git_repo_checkout_branch "../bibtex-robust-decoder/R-n-D/caltechlibrary-bibtex" 3a1dc5ab3b141148e46759d8dc2f7c753e4c31f9 main      
-git_repo_checkout_branch "../bibtex-robust-decoder/R-n-D/digitalheir-bibliography-js" f10596c0be0cf7ae9e3e67ce6141a265f0c47e67 master    
-git_repo_checkout_branch "../bibtex-robust-decoder/R-n-D/jabref"  1e34797a03be3f95cfe396c95a4fc6197d20a74d           
-git_repo_checkout_branch "../bibtex-robust-decoder/R-n-D/orcid-bibtexParse" b55dc9e4015f9dec67921f56f8f23dadb71697ad master    
-git_repo_checkout_branch "../bibtex-robust-decoder/R-n-D/pcooksey-bibtex-js" 46dd3ce83cb793634b80882cb803b02a9974f106 master    
-git_repo_checkout_branch "../bibtex-robust-decoder/R-n-D/zotero-better-bibtex" 312d0adfff74c11c06910572b2c55bb0be0d9772           
+git_repo_checkout_branch "../bibtex-robust-decoder"               aef9dd54c10f7692f7c9a04690cb9fd2927121ee master    
 git_repo_checkout_branch "../bibtool"                             fdeda59cf95fc94cd0dcfd5f905412f41d93815a master    
 git_repo_checkout_branch "../bibutils"                            704ba6ded38ecf7e25582aa68626d7154bce88f9 master    
 git_repo_checkout_branch "../bin2cpp"                             04ced2b8a2b17b4f2f4553892c49160b1685d161 master    
@@ -719,7 +712,7 @@ git_repo_checkout_branch "../cpptrace"                            1678b91a246402
 git_repo_checkout_branch "../cppuprofile"                         cc6a7012e8ff0a72367730866cebb03a5fd69c5a master    
 git_repo_checkout_branch "../cppzmq"                              20960720785332f08f77cc241954ccc464e6ca70 master    
 git_repo_checkout_branch "../cpu_features"                        be15c80baef871ffec0bcf52d34688f32d499b06 master    
-git_repo_checkout_branch "../cpuinfo"                             7c2d4e7e94b1a7f8368de17f08a68507e6fa160c master    
+git_repo_checkout_branch "../cpuinfo"                             ba18bb4c082963eeebd686fa58b31fd745a714dd master    
 git_repo_checkout_branch "../cpython"                             bb547a857d7bdd5a1f721a254eaea5e0b231a792 master    
 git_repo_checkout_branch "../cqf"                                 b115e13cf0460b226647db621295e4682eb2a16d master    
 git_repo_checkout_branch "../cr"                                  ca051c318540b46daf685fae26697e17ddc004f1 master    
@@ -1116,10 +1109,10 @@ git_repo_checkout_branch "../libdi-dependency-injection"          b93c4cccb9200c
 git_repo_checkout_branch "../libdiagnostics"                      97e695caaae04f9272e6e0ec800b6c369e51398b main      
 git_repo_checkout_branch "../libdip"                              a8c3296314c077ab5ab2aa36ca52a65cbd8f4da6 master    
 git_repo_checkout_branch "../libdist"                             071ea0c8372df3adc0e2739d4d3b87d5cb279e56 main      
-git_repo_checkout_branch "../libdivide"                           fe3de0d42bdfd2c227c9bd8c936dd181ba039423 master    
+git_repo_checkout_branch "../libdivide"                           994ef0629444d7b8ef5005b5a71eaa5857d87e0b master    
 git_repo_checkout_branch "../libdivsufsort"                       fe1975cee5f8dc10070d8c2986ce9bdcdb61f3d4 master    
 git_repo_checkout_branch "../libdtm"                              5de843a8ffc050eecbb1b7699bbeeebeda12167e master    
-git_repo_checkout_branch "../libeigen"                            553103c88f8975115c2b47db70d96f304386671d heads/master
+git_repo_checkout_branch "../libeigen"                            de752392f02a56ccce150d53fd0389a9b5b1ab4a heads/master
 git_repo_checkout_branch "../libeternaltimestamp"                 f3090fa01ed24692edfcc93a4bc53bb057ca3747 main      
 git_repo_checkout_branch "../libetpan"                            5c9eb6b6ba64c4eb927d7a902317410181aacbba master    
 git_repo_checkout_branch "../libevent"                            e754c1da255cc208cca860afb0f66daf642a7efb master    
@@ -1217,12 +1210,12 @@ git_repo_checkout_branch "../libusb"                              134f0bfb7676db
 git_repo_checkout_branch "../libuuid"                             7cf37a1c5ccb489c0c44130f2ab44eef0eeb2d85 master    
 git_repo_checkout_branch "../libuv"                               a1692f76466acb0da3c38c4f82fc11ddefb7a778 v1.x      
 git_repo_checkout_branch "../libvips"                             297b50714e2e28eec1281b1c1fd5b68d3f5aa374 master    
-git_repo_checkout_branch "../libvrb"                              5345da79e3a26f7ba9bd3651181b0dcc3946617c           
-git_repo_checkout_branch "../libwarc"                             61d3bc4c64c99c8c79d5e80b34f698a4b09866f0           
+git_repo_checkout_branch "../libvrb"                              5074b2e7a28587da48725914200e167168d712a6 alt       
+git_repo_checkout_branch "../libwarc"                             0233f24983a7dd5bb8e27dafc56883c793d4659d master    
 git_repo_checkout_branch "../libwebp"                             39c401290ecf4b5b19a1ba0f3457f7ecf3bc8fef master    
 git_repo_checkout_branch "../libwebsocketpp"                      b9aeec6eaf3d5610503439b4fae3581d9aff08e8 develop   
 git_repo_checkout_branch "../libwebsockets"                       dce9ce23b1c38b52cbcc6a23b0c9f88c8c367339 main      
-git_repo_checkout_branch "../libwil"                              b5aea4e2af71dfba66349c4b9fc264d29c37f2a6           
+git_repo_checkout_branch "../libwil"                              a81b5ff4f34873b4bd72c3ab54923c523b251227 master    
 git_repo_checkout_branch "../libwildmatch"                        14b18d3599173945a51d0ae5c533915983f18b6c main      
 git_repo_checkout_branch "../libxbr-standalone"                   3835e97d2f991b867a9764fa6ace730d25e4a19e master    
 git_repo_checkout_branch "../libxcam"                             3dd73ddea67f1e1f3a857e831308995e252d51f7 master    
@@ -1824,16 +1817,16 @@ git_repo_checkout_branch "../visible-url-detector"                5f1368eae99bbc
 git_repo_checkout_branch "../vivid"                               d7f8e7439cb4a091ae0051579f8af16c9445c72c master    
 git_repo_checkout_branch "../vizzu"                               5798871bff8122bf1647a020fce6afb862cbb298 main      
 git_repo_checkout_branch "../vmaf"                                6d6fce7fbe6ccba0d166b64b4f983f7ae6058295 master    
-git_repo_checkout_branch "../vmem"                                35c313c3fd6f9cac58e4447024268ebce011a4f8           
+git_repo_checkout_branch "../vmem"                                fc9078585b0497b792a628c039220e2f7f993b4d master    
 git_repo_checkout_branch "../vmemcache"                           ff3e1d9211959d69e21882794337a85ea2a907a4 master    
 git_repo_checkout_branch "../vpp"                                 8413773ac6fc510c6afb815bfeb2d9c13f3209fd master    
 git_repo_checkout_branch "../vqf"                                 62accaf20c0f6014f98fc8d9b995e244b6318ce3 master    
-git_repo_checkout_branch "../vtm"                                 3a82e9b9af59ee3fa3fa1c3de660d0da32d6911a           
-git_repo_checkout_branch "../vxl"                                 3c9ce5b2782c74cb240ccad8cb2ed08dd874006f           
-git_repo_checkout_branch "../waifu2x-ncnn-vulkan"                 93ed2bc36e6fb7d0c42d1034f3617bc62d35f9cd           
+git_repo_checkout_branch "../vtm"                                 601b690983ed2b9951adefa9302a199f975a48b8 master    
+git_repo_checkout_branch "../vxl"                                 d4b8d87ae0ce41ce57188315d1b9e1b033a026db master    
+git_repo_checkout_branch "../waifu2x-ncnn-vulkan"                 3d334b4fbca43cd4256359ec1843b16c6b9cb367 master    
 git_repo_checkout_branch "../warc2text"                           d00ca68eab7e1fb2d2f376fbbf701a39d8d69d94 master    
 git_repo_checkout_branch "../warp-ctc"                            0e5ca794f41f98f63692599ee6f19c978ebe6975 master    
-git_repo_checkout_branch "../warpLDA"                             c97265d9b219d43afc95fa05966c0eba075779d6           
+git_repo_checkout_branch "../warpLDA"                             da36299d2493676e10aeb9bb7725380f977cf951 master    
 git_repo_checkout_branch "../wavelib"                             8551b35834c0b15e81de730ec9a711d948229c37 master    
 git_repo_checkout_branch "../wcwidth9"                            5367a2016c3a9313a2e997d58cbfee2dd49f235d master    
 git_repo_checkout_branch "../wdenoise"                            4953c1185ffcb5e7a70103ca5ef95e377683fdf5 master    
@@ -1845,13 +1838,13 @@ git_repo_checkout_branch "../wget"                                8775506f632f14
 git_repo_checkout_branch "../wget2"                               400713caebb51e17046c7d884e08729a27cfa505 master    
 git_repo_checkout_branch "../wil-Win32-Interface-Library"         a810407031e3e4d1b7faf8f48a8dc7061b3d73eb master    
 git_repo_checkout_branch "../win-iconv"                           dae39b0d0b79164984dcc72a177c50546f138a04 master    
-git_repo_checkout_branch "../win32-dpi"                           9383dc9b67c9a5a30b159e72255061df3fbd5fb8           
+git_repo_checkout_branch "../win32-dpi"                           206f0b4e59bc372da9200e408510ed6228825118 master    
 git_repo_checkout_branch "../win32-fileapi-demo"                  b8b9f75239359a1763c42edb28a2ce20c9471cc1 main      
 git_repo_checkout_branch "../winflexbison"                        862d3fb6416529fdc110624cbf714a4a0698f52a master    
 git_repo_checkout_branch "../wolfsort"                            eadb9987d57a3dbaf61adfaed5017814328a21c3 master    
 git_repo_checkout_branch "../word2vec"                            3b1e8880915b5d04f74c739f640c3eacafb88464 master    
 git_repo_checkout_branch "../word2vec-GloVe"                      0c66783cb0797d43b371c9d54e9755c752bbb145 master    
-git_repo_checkout_branch "../worde_butcher"                       eef42b82f07629040c71e1ecd5348a60a57a9130 main      
+git_repo_checkout_branch "../worde_butcher"                       228881a0a3b4873f9b54f5e45059a8ffc715eaa8 main      
 git_repo_checkout_branch "../wordfreq"                            96370de9471f47a94e3ccb199ed79481d3afbc34 master    
 git_repo_checkout_branch "../wordfrequency"                       daf2cba6f38941814641fb29d260177a35773215 master    
 git_repo_checkout_branch "../wren"                                77aeb12ab8cff432dcc0e0c511d0f30366650f15 main      
@@ -1873,14 +1866,14 @@ git_repo_checkout_branch "../xbrzscale"                           a2d8dce723e8fa
 git_repo_checkout_branch "../xcdat"                               2451441dcc09e470dcb3ecd2c1bb304a7dc46347 master    
 git_repo_checkout_branch "../xdelta"                              7508fd2a823443b1f0173ca361620f21d62a7d37 release3_1_apl
 git_repo_checkout_branch "../xgboost"                             f03dd95ab2708e97421583b296e0e578d37195f1 master    
-git_repo_checkout_branch "../xlnt"                                b296c1a725177db93aa78ddfdffbbd1be4017907           
+git_repo_checkout_branch "../xlnt"                                78752a4d87600e6de814921f47e2fa1931dbf611 master    
 git_repo_checkout_branch "../xml-pugixml"                         28a60ec2b80cf8f3487527b775ce3b54fc95b27f master    
 git_repo_checkout_branch "../xmunch"                              ebef6ee77a5cb28f9ad076dbd9b05aee53cd91c2 master    
 git_repo_checkout_branch "../xnnpack"                             476ed45dd157e204b736089c46597ab1b62367d6 master    
 git_repo_checkout_branch "../xor-and-binary-fuse-filter"          22b2416a43b4206703cfc2ef6f5d206b8d3ebc8a master    
 git_repo_checkout_branch "../xpdf"                                cffda4028ac6c76477039a7420dfd93060e6e7ef master    
-git_repo_checkout_branch "../xsg"                                 e5cd2ac01f559a49a36c7b30dec82acde6742a7d           
-git_repo_checkout_branch "../xsg/xl"                              bb26e9f3f621c7b4662447533a06c772038b6e31           
+git_repo_checkout_branch "../xsg"                                 e63fd785b406b2be6522fbb68473ce132124f7cc master    
+git_repo_checkout_branch "../xsg/xl"                              8179a70af1c913546b7c88edf31149e157d637cc master    
 git_repo_checkout_branch "../xsimd"                               8cf3992d026391bd32feddea70175198bfa0057c master    
 git_repo_checkout_branch "../xsldbg"                              77b83fcad12400aabb4fa7fb7c6a83d4f3ae71b3 master    
 git_repo_checkout_branch "../xtensor"                             47b3a5bec6c74ca829b718d3e1feb259ae791955 master    
