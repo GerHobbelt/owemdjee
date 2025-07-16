@@ -1,0 +1,69 @@
+
+
+
+
+
+
+
+
+
+
+## UI / GUI
+
+- **agg** [📁](./agg) [🌐](https://github.com/GerHobbelt/agg) -- Anti-Grain Geometry library, written by Maxim Shemanarev in C++. It is an Open Source, 2D vector graphics library. Agg produces pixel images in memory from vectorial data. AGG doesn't depend on any graphic API or technology. Basically, you can think of AGG as of a rendering engine that produces pixel images in memory from some vectorial data.
+- **barkeep** [📁](./barkeep) [🌐](https://github.com/GerHobbelt/barkeep) -- a small, single C++ header to display async animations, counters, and progress bars.
+- **clp** [📁](./clp) [🌐](https://github.com/GerHobbelt/clp) -- YScope's Compressed Log Processor (CLP) compresses your logs, and allows you to search the compressed logs without decompression. CLP supports both JSON logs and unstructured (i.e., free text) logs. It also supports real-time log compression within several logging libraries. CLP also includes purpose-built web interfaces for searching and viewing the compressed logs.
+- **DarkThumbs** [📁](./DarkThumbs) [🌐](https://github.com/GerHobbelt/DarkThumbs) -- thumbnail preview support for ebooks and various archive formats in Windows File Explorer. V2.0 adds DJVU and 7Z/CB7 support!
+- **ewig** [📁](./ewig) [🌐](https://github.com/GerHobbelt/ewig) -- a simple text editor (an [Ersatz Emacs](https://www.emacswiki.org/emacs/ErsatzEmacs)) written using [immutable data-structures](https://sinusoid.es/immer/) in C++. The code is written in a simple style to showcase a value-based functional architecture.
+- **horsejs** [📁](./horsejs) [🌐](https://github.com/GerHobbelt/horsejs) -- a framework similar to Electron. Unlike Electron, it has no built-in Node.js, but directly uses C++ to provide most of Electron's capabilities, such as accessing files using JavaScript, opening dialog boxes, creating new windows, etc. Since there is no Node.js, HorseJs runs faster, uses less memory, and is more stable.
+- **indicators** [📁](./indicators) [🌐](https://github.com/GerHobbelt/indicators) -- thread-safe progress bars and spinners for console applications.
+- **libccpalette** [📁](./libccpalette) [🌐](https://github.com/GerHobbelt/libccpalette) -- a C++ library to load, save, pick and interpolate colors from any color palette.
+- **libclip** [📁](./libclip) [🌐](https://github.com/GerHobbelt/clip) -- a library to copy/retrieve content to/from the clipboard/pasteboard.
+- **libclipboard** [📁](./libclipboard) [🌐](https://github.com/GerHobbelt/libclipboard) -- a lightweight cross-platform clipboard library.
+- **libgateY** [📁](./libgateY) [🌐](https://github.com/GerHobbelt/libgateY) -- Use a web browser to easily visualize data from your C++ program and control it’s behaviour. libgateY allows you to add variables shared between the native C++ code and the javascript code.
+- **nanogui** [📁](./nanogui) [🌐](https://github.com/GerHobbelt/nanogui) -- NanoGUI is a minimalistic cross-platform widget library for OpenGL 3+, GLES 2/3, and Metal. It supports automatic layout generation, stateful C++ lambdas callbacks, a variety of useful widget types and Retina-capable rendering on Apple devices thanks to NanoVG_ by Mikko Mononen.
+- **nativefiledialog-extended** [📁](./nativefiledialog-extended) [🌐](https://github.com/GerHobbelt/nativefiledialog-extended) -- a small C library with that portably invokes native file open, folder select and file save dialogs.  Write dialog code once and have it pop up native dialogs on all supported platforms.  Avoid linking large dependencies like wxWidgets and Qt.
+- **neutralinoJS** [📁](./neutralinoJS) [🌐](https://github.com/GerHobbelt/neutralinojs) -- a lightweight and portable desktop application development framework. It lets you develop lightweight cross-platform desktop applications using JavaScript, HTML and CSS. Neutralinojs offers a lightweight SDK which is an alternative for Electron and NW.js. Neutralinojs doesn't bundle Chromium and uses the existing web browser library in the operating system. Neutralinojs implements a WebSocket connection for native operations and embeds a static web server to serve the web content. Also, it offers a built-in [JavaScript client library](https://github.com/neutralinojs/neutralino.js) for developers.
+- **neutralinoJS-CLI** [📁](./neutralinoJS-CLI) [🌐](https://github.com/GerHobbelt/neutralinojs-cli) -- The official CLI of Neutralinojs.
+- **nodesoup** [📁](./nodesoup) [🌐](https://github.com/GerHobbelt/nodesoup) -- delivers graph untangling: a force-directed graph layout simulates forces to give motion to vertices and arrange them in a way that is visually pleasing and/or reveals structure. The Fruchterman-Reingold algorithm assigns a repelling force to vertices pair of the graph, effectively pushing apart vertices so they don't overlap, and a attraction force between each adjacent vertices pair, thus dragging closer connected vertices. The forces attenuate when the vertices get respectively further apart or closer, and a global temperature also serves as a simulated annealing, capping the maximum vertex displacement at each iteration. As the forces between each component and the temperature gradually diminish, the layout stabilizes.  Another method, the Kamada Kawai algorithm, relies on the simulation of springs between each vertex, which strength is determined by the length of the shortest path between both vertices. The potential energy of each vertex, i.e. the sum of the energy of all its springs, is then computed. The goal being to reduce the global energy of the layout, each vertex is moved step-by-step until its potential energy is considered low-enough, using a Newton-Raphson algorithm.
+- **notcurses** [📁](./notcurses) [🌐](https://github.com/GerHobbelt/notcurses) -- a library facilitating complex TUIs on modern terminal emulators, supporting vivid colors, multimedia, threads, and Unicode to the maximum degree possible. Things can be done with Notcurses that simply can't be done with NCURSES. It is furthermore fast as shit. What it is not: a source-compatible X/Open Curses implementation, nor a replacement for NCURSES on existing systems.
+- **oof** [📁](./oof) [🌐](https://github.com/GerHobbelt/oof) -- OOF (omnipotent output friend) is a single C++20 header that wraps so-called [Virtual Terminal sequences](https://docs.microsoft.com/en-us/windows/console/console-virtual-terminal-sequences) (sometimes also confusingly called ["escape codes"](https://en.wikipedia.org/wiki/ANSI_escape_code)) in a convenient way, enabling console applications using OOF to be far more capable than usual: complete control over position, color and other properties of written characters.
+- **photino.native** [📁](./photino.native) [🌐](https://github.com/GerHobbelt/photino.Native) -- a lightweight open-source framework for building native, cross-platform desktop applications with Web UI technology. Photino enables developers to use fast, natively compiled languages like C#, C++, Java and more. Photino uses the OSs built-in WebKit-based browser control for Windows, macOS and Linux. Photino is the lightest cross-platform framework.
+- **scintilla** [📁](./scintilla) [🌐](https://github.com/GerHobbelt/scintilla) -- text editor
+- **svg-charter** [📁](./svg-charter) [🌐](https://github.com/GerHobbelt/charter) -- SVG chart renderer
+- **tinycolormap** [📁](./tinycolormap) [🌐](https://github.com/GerHobbelt/tinycolormap) -- a header-only, single-file library for colormaps written in C++11.
+- **tvision** [📁](./tvision) [🌐](https://github.com/GerHobbelt/tvision) -- a modern port of Borland's Turbo Vision 2.0, the classical framework for text-based user interfaces. Now cross-platform and with Unicode support. (**retro fun**)
+- **u8g2** [📁](./u8g2) [🌐](https://github.com/GerHobbelt/u8g2) -- a monochrome graphics library for embedded devices. U8g2 supports monochrome OLEDs and LCDs, which include the following controllers: SSD1305, SSD1306, SSD1309, SSD1312, SSD1316, SSD1318, SSD1320, SSD1322, SSD1325, SSD1327, SSD1329, SSD1606, SSD1607, SH1106, SH1107, SH1108, SH1122, T6963, RA8835, LC7981, PCD8544, PCF8812, HX1230, UC1601, UC1604, UC1608, UC1610, UC1611, UC1617, UC1638, UC1701, ST7511, ST7528, ST7565, ST7567, ST7571, ST7586, ST7588, ST75160, ST75256, ST75320, NT7534, ST7920, IST3020, IST3088, IST7920, LD7032, KS0108, KS0713, HD44102, T7932, SED1520, SBN1661, IL3820, MAX7219, GP1287, GP1247, GU800 (see [here](https://github.com/olikraus/u8g2/wiki/u8g2setupcpp) for a full list).
+- **vtm** [📁](./vtm) [🌐](https://github.com/GerHobbelt/vtm) -- Terminal multiplexer with window manager and session sharing. Text-based desktop environment inside your terminal. Includes `destopio`, a text/terminal oriented layout engine.
+- **webview** [📁](./webview) [🌐](https://github.com/GerHobbelt/webview) -- cross-platform embedding of the system-default web browser: a tiny cross-platform webview library for C/C++/Golang to build modern cross-platform GUIs. The goal of the project is to create a common HTML5 UI abstraction layer for the most widely used platforms. It supports two-way JavaScript bindings (to call JavaScript from C/C++/Go and to call C/C++/Go from JavaScript).
+- **win32-dpi** [📁](./win32-dpi) [🌐](https://github.com/GerHobbelt/win32-dpi) -- Win32 DPI-aware window example, showcasing how to write a Win32 DPI-aware GUI application that scales properly on everything starting from Windows XP up to and including latest Windows 11.
+- **WinToast** [📁](./WinToast) [🌐](https://github.com/GerHobbelt/WinToast) -- a library which delivers a complete integration of the modern **toast notifications** of **Windows 8**, **Windows 10** and **Windows 11**.  Toast notifications allows your app to inform the users about relevant information and timely events that they should see and take action upon inside your app, such as a new instant message, a new friend request, breaking news, or a calendar event.
+- **wxCharts** [📁](./wxCharts) [🌐](https://github.com/GerHobbelt/wxCharts) -- charts for wxWidgets
+- **wxCurl** [📁](./wxCurl) [🌐](https://github.com/GerHobbelt/wxCurl) -- clone of improved wxCurl from OpenCPN. wxCURL is a simplified and integrated interface between LibCURL and wxWidgets. wxCURL provides several sub-classes for simplified interfaces to HTTP, WebDAV, FTP and Telnet based resources, threads specialized for non-blocking downloads/uploads, stock download and upload dialogs.
+- **wxDatabase** [📁](./wxDatabase) [🌐](https://github.com/GerHobbelt/wxDatabase) -- wxDatabase is built on the excellent work of Joseph Blough called DatabaseLayer. The wxDatabase classes provide a database independent interface similar to JDBC (but only VERY basic functionality). So far, the only database backends supported are SQLite3, MySQL, PostGreSQL, ODBC, and TDS.
+- **wxExamples** [📁](./wxExamples) [🌐](https://github.com/GerHobbelt/Examples_wxWidgets) -- examples using wxWidgets
+- **wxFormBuilder** [📁](./wxFormBuilder) [🌐](https://github.com/GerHobbelt/wxFormBuilder) -- resource editor and GUI designer for wxWidgets
+- **wxMEdit** [📁](./wxMEdit) [🌐](https://github.com/GerHobbelt/wxMEdit) -- a cross-platform Text/Hex Editor written in C++ & wxWidgets. wxMEdit supports many useful functions, e.g. Bookmark, Syntax Highlightings, Word Wraps, Encodings and Column/Hex Modes.
+- **wxPdfDocument** [📁](./wxPdfDocument) [🌐](https://github.com/GerHobbelt/wxpdfdoc) -- **wxPdfDocument** allows wxWidgets applications to generate PDF documents. The code is a port of FPDF - a free PHP class for generating PDF files - to C++ using the wxWidgets library. Several add-on PHP scripts found on the FPDF web site are incorporated into wxPdfDocument.
+- **wxPDFView** [📁](./wxPDFView) [🌐](https://github.com/GerHobbelt/wxPDFView) -- wxWidgets PDF viewer/reader control
+- **wxSQLite3** [📁](./wxSQLite3) [🌐](https://github.com/GerHobbelt/wxsqlite3) -- a C++ wrapper around the SQLite 3.x database and is specifically designed for use in programs based on the wxWidgets library. **wxSQLite3** does not try to hide the underlying database, in contrary almost all special features of the current SQLite3 version are supported, like for example the creation of user defined scalar or aggregate functions.
+- **wxVisualScriptEngine** [📁](./wxVisualScriptEngine) [🌐](https://github.com/GerHobbelt/VisualScriptEngineWxWidgets) -- a utility module for [VisualScriptEngine](https://github.com/kovacsv/VisualScriptEngine) which provides helper classes for embedding the engine in a wxWidgets application.
+- **wxWebViewChromium** [📁](./wxWebViewChromium) [🌐](https://github.com/GerHobbelt/wxWebViewChromium) -- Chromium CEF3-based embedded browser for wxWidgets
+- **wxWidgets** [📁](./wxWidgets) [🌐](https://github.com/GerHobbelt/wxWidgets) -- cross-platform GUI framework.
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+----
+
+🡸 [previous section](./0092-pdf-render-metadata-core.md)  |  🡹 [up](./0016-libraries-we-re-looking-at-for-this-intent.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0094-language-translation-transliteration.md)

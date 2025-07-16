@@ -1,0 +1,86 @@
+
+
+
+
+
+
+
+
+
+
+### text tokenization (as a preprocessing step for LDA et al):
+
+i.e. breaking text into words when you _receive a textstream without spaces_. Also useful for Asian languages, which don't do spaces, e.g. Chinese.
+
+- **Bi-Sent2Vec** [📁](./Bi-Sent2Vec) [🌐](https://github.com/GerHobbelt/Bi-Sent2Vec) -- provides cross-lingual numerical representations (features) for words, short texts, or sentences, which can be used as input to any machine learning task with applications geared towards cross-lingual word translation, cross-lingual sentence retrieval as well as cross-lingual downstream NLP tasks. The library is a cross-lingual extension of [Sent2Vec](https://github.com/epfml/sent2vec). Bi-Sent2Vec vectors are also well suited to monolingual tasks as indicated by a marked improvement in the monolingual quality of the word embeddings. (For more details, see [paper](https://arxiv.org/abs/1912.12481))
+- **BlingFire** [📁](./BlingFire) [🌐](https://github.com/GerHobbelt/BlingFire) -- we are a team at Microsoft called Bling (Beyond Language Understanding), sharing our [FInite State machine and REgular expression manipulation library](https://github.com/microsoft/BlingFire) (FIRE). We use Fire for many linguistic operations inside Bing such as Tokenization, Multi-word expression matching, Unknown word-guessing, Stemming / Lemmatization just to mention a few.
+  
+  Fire can also be used to improve FastText: see [here](https://github.com/microsoft/BlingFire#8-example-of-reaching-99-accuracy-for-language-detection).
+  
+  Bling Fire Tokenizer provides state of the art performance for Natural Language text tokenization.
+
+- **chewing_text_cud** [📁](./chewing_text_cud) [🌐](https://github.com/GerHobbelt/chewing_text_cud) -- a text processing / filtering library for use in NLP/search/content analysis research pipelines.
+- **cppjieba** [📁](./cppjieba) [🌐](https://github.com/GerHobbelt/cppjieba) -- the C++ version of the Chinese "Jieba" project:
+  
+  - Supports loading a custom user dictionary, using the '|' separator when multipathing or the ';' separator for separate, multiple, dictionaries.
+  - Supports 'utf8' encoding.
+  - The project comes with a relatively complete unit test, and the stability of the core function Chinese word segmentation (utf8) has been tested by the online environment.
+
+- **fastBPE** [📁](./fastBPE) [🌐](https://github.com/GerHobbelt/fastBPE) -- text tokenization / ngrams
+- **fastText** [📁](./fastText) [🌐](https://github.com/GerHobbelt/fastText) -- [fastText](https://fasttext.cc/) is a library for efficient learning of word representations and sentence classification. Includes language detection feeatures.
+- **fribidi** [📁](./fribidi) [🌐](https://github.com/GerHobbelt/fribidi) -- GNU FriBidi: the Free Implementation of the [Unicode Bidirectional Algorithm]. One of the missing links stopping the penetration of free software in Middle East is the lack of support for the Arabic and Hebrew alphabets. In order to have proper Arabic and Hebrew support, the bidi algorithm needs to be implemented. It is our hope that this library will stimulate more free software in the Middle Eastern countries.
+- **friso** [📁](./friso) [🌐](https://github.com/GerHobbelt/friso) -- high performance Chinese tokenizer with both GBK and UTF-8 charset support based on MMSEG algorithm.
+- **fxt** [📁](./fxt) [🌐](https://github.com/GerHobbelt/fxt) -- a large scale feature extraction tool for text-based machine learning.
+- **koan** [📁](./koan) [🌐](https://github.com/GerHobbelt/koan) -- a `word2vec` negative sampling implementation with correct CBOW update. kōan only depends on Eigen.
+  
+  Although continuous bag of word (CBOW) embeddings can be trained more quickly than skipgram (SG) embeddings, it is a common belief that SG embeddings tend to perform better in practice. This was observed by the original authors of Word2Vec [1] and also in subsequent work [2].  However, we found that popular implementations of word2vec with negative sampling such as [word2vec](https://github.com/tmikolov/word2vec/) and [gensim](https://github.com/RaRe-Technologies/gensim/) do not implement the CBOW update correctly, thus potentially leading to misconceptions about the performance of CBOW embeddings when trained correctly.
+
+- **libchewing** [📁](./libchewing) [🌐](https://github.com/GerHobbelt/libchewing) -- The Chewing (酷音) is an intelligent phonetic input method (Zhuyin/Bopomofo) and is one of the most popular choices for Traditional Chinese users. Chewing was inspired by other proprietary intelligent Zhuyin input methods on Microsoft Windows, namely Wang-Xin by Eten, Microsoft New Zhuyin, and Nature Zhuyin (aka Going).
+- **libchopshop** [📁](./libchopshop) [🌐](https://github.com/GerHobbelt/libchopshop) -- NLP/text processing with automated stop word detection and stemmer-based filtering. This library / toolkit is engineered to be able to provide **both** of the (often more or less disparate) n-gram token streams / vectors required for (1) initializing / training FTS databases, neural nets, etc. and (2) executing effective queries / matches on these engines.
+- **libcppjieba** [📁](./libcppjieba) [🌐](https://github.com/GerHobbelt/libcppjieba) -- source code extracted from the [CppJieba] project to form a separate project, making it easier to understand and use.
+- **libdtm** [📁](./libdtm) [🌐](https://github.com/GerHobbelt/dtm) -- LibDTM (Dynamic Topic Models and the Document Influence Model) implements topics that change over time (Dynamic Topic Models) and a model of how individual documents predict that change. This code is the result of work by David M. Blei and Sean M. Gerrish.
+- **libpostal** [📁](./libpostal) [🌐](https://github.com/GerHobbelt/libpostal) -- a C library for parsing/normalizing street addresses around the world using statistical NLP and open data. The goal of this project is to understand location-based strings in every language, everywhere.
+- **libtextcat** [📁](./libtextcat) [🌐](https://github.com/GerHobbelt/libtextcat) -- text language detection
+- **many-stop-words** [📁](./many-stop-words) [🌐](https://github.com/GerHobbelt/many-stop-words) -- Many Stop Words is a simple Python package that provides a single function for loading sets of stop words for different languages.
+- **mecab** [📁](./mecab) [🌐](https://github.com/GerHobbelt/mecab) -- MeCab (Yet Another Part-of-Speech and Morphological Analyzer) is a high-performance morphological analysis engine, designed to be independent of languages, dictionaries, and corpora, using Conditional Random Fields ((CRF)[http://www.cis.upenn.edu/~pereira/papers/crf.pdf]) to estimate the parameters.
+- **ngrams-weighted** [📁](./ngrams-weighted) [🌐](https://github.com/GerHobbelt/ngweight) -- implements the method to compute N-gram IDF weights for all valid word N-grams in the given corpus (document set).
+- **open-location-code** [📁](./open-location-code) [🌐](https://github.com/GerHobbelt/open-location-code) -- Open Location Code is a technology that gives a way of encoding location into a form that is easier to use than latitude and longitude. The codes generated are called plus codes, as their distinguishing attribute is that they include a "+" character.  The technology is designed to produce codes that can be used as a replacement for street addresses, especially in places where buildings aren't numbered or streets aren't named.  Plus codes represent an area, not a point. As digits are added to a code, the area shrinks, so a long code is more precise than a short code.  Codes that are similar are located closer together than codes that are different.
+- **sally** [📁](./sally) [🌐](https://github.com/GerHobbelt/sally) -- a Tool for Embedding Strings in Vector Spaces. This mapping is referred to as embedding and allows for applying techniques of machine learning and data mining for analysis of string data.  Sally can be applied to several types of strings, such as text documents, DNA sequences or log files, where it can handle common formats such as directories, archives and text files of string data. Sally implements a standard technique for mapping strings to a vector space that can be referred to as generalized bag-of-words model.  The strings are characterized by a set of features, where each feature is associated with one dimension of the vector space.  The following types of features are supported by Sally: bytes, tokens (words), n-grams of bytes and n-grams of tokens.
+- **scws-chinese-word-segmentation** [📁](./scws-chinese-word-segmentation) [🌐](https://github.com/GerHobbelt/scws) -- SCWS (Simple Chinese Word Segmentation) (i.e.: Simple Chinese Word Segmentation System). This is a mechanical Chinese word segmentation engine based on word frequency dictionary, which can basically correctly segment a whole paragraph of Chinese text into words. A word is the smallest morpheme unit in Chinese, but when writing, it does not separate words with spaces like English, so how to segment words accurately and quickly has always been a difficult problem in Chinese word segmentation. SCWS supports Chinese encoding includes `GBK`, `UTF-8`, etc.
+  
+  There are not many innovative elements in the word segmentation algorithm. It uses a word frequency dictionary collected by itself, supplemented by certain proper names, names of people, and place names. Basic word segmentation is achieved by identifying rules such as digital age. After small-scale testing, the accuracy is between 90% and 95%, which can basically satisfy some use in small search engines, keyword extraction and other occasions. The first prototype version was released in late 2005.
+
+- **sent2vec** [📁](./sent2vec) [🌐](https://github.com/GerHobbelt/sent2vec) -- a tool and pre-trained models related to the [Bi-Sent2vec](https://arxiv.org/abs/1912.12481). The cross-lingual extension of Sent2Vec can be found [here](https://github.com/epfml/Bi-sent2vec). This library provides numerical representations (features) for words, short texts, or sentences, which can be used as input to any machine learning task.
+- **sentencepiece** [📁](./sentencepiece) [🌐](https://github.com/GerHobbelt/sentencepiece) -- text tokenization
+- **sentence-tokenizer** [📁](./sentence-tokenizer) [🌐](https://github.com/GerHobbelt/Tokenizer) -- text tokenization
+- **SheenBidi** [📁](./SheenBidi) [🌐](https://github.com/GerHobbelt/SheenBidi) -- implements Unicode Bidirectional Algorithm available at http://www.unicode.org/reports/tr9. It is a sophisticated implementation which provides the developers an easy way to use UBA in their applications.
+- **stopwords** [📁](./stopwords) [🌐](https://github.com/GerHobbelt/stopwords) -- default English stop words from different sources.
+- **ucto** [📁](./ucto) [🌐](https://github.com/GerHobbelt/ucto) -- text tokenization
+  
+  - **libfolia** [📁](./libfolia) [🌐](https://github.com/GerHobbelt/libfolia) -- working with the Format for Linguistic Annotation (FoLiA). Provides a high-level API to read, manipulate, and create FoLiA documents.
+  - **uctodata** [📁](./uctodata) [🌐](https://github.com/GerHobbelt/uctodata) -- data for `ucto` library
+
+- **unicode-inflection** [📁](./unicode-inflection) [🌐](https://github.com/GerHobbelt/inflection) -- Code, data and documentation solving language inflection problems. [Inflection](https://en.wikipedia.org/wiki/Inflection) is the process of changing the form of a word to express different grammatical features, such as tense, number, gender, or case. In many languages, inflection is a complex and nuanced process, and it can be difficult to implement inflection correctly in software. This can lead to an inability to express native sounding sentences or to errors in text processing, such as incorrect word forms or incorrect grammatical agreement.
+- **word2vec** [📁](./word2vec) [🌐](https://github.com/GerHobbelt/word2vec) -- Word2Vec in C++ 11.
+- **word2vec-GloVe** [📁](./word2vec-GloVe) [🌐](https://github.com/GerHobbelt/GloVe) -- an implementation of the GloVe (*Global Vectors for Word Representation*) model for learning word representations.
+- **worde_butcher** [📁](./worde_butcher) [🌐](https://github.com/GerHobbelt/worde_butcher) -- a tool for text segmentation, keyword extraction and speech tagging. Butchers any text into prime word / phrase cuts, deboning all incoming based on our definitive set of stopwords for all languages.
+- **wordfreq** [📁](./wordfreq) [🌐](https://github.com/GerHobbelt/wordfreq) -- wordfreq is a Python library for looking up the frequencies of words in many languages, based on many sources of data.
+- **wordfrequency** [📁](./wordfrequency) [🌐](https://github.com/GerHobbelt/FrequencyWords) -- FrequencyWords: Frequency Word List Generator and processed files.
+- **you-token-to-me** [📁](./you-token-to-me) [🌐](https://github.com/GerHobbelt/YouTokenToMe) -- text tokenization
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+----
+
+🡸 [previous section](./0040-similarity-search.md)  |  🡹 [up](./0032-pattern-recognition.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0042-regex-matchers.md)
