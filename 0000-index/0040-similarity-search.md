@@ -48,6 +48,7 @@
   * Double-Bit Quantization Hashing (DBQ)
   * K-means Based Double-Bit Quantization Hashing (KDBQ)
 
+- **lsnms** [📁](./lsnms) [🌐](https://github.com/GerHobbelt/lsnms) -- LSNMS speeds up Non Maximum Suppression with multiclass support ran on very large images by a several folds factor, using a sparse implementation of NMS (Non-Metric Space), used in similarity search. This project becomes useful in the case of very high dimensional image data when the amount of predicted instances to prune becomes considerable (> 10,000 objects).
 - **mrpt** [📁](./mrpt) [🌐](https://github.com/GerHobbelt/mrpt) -- MRPT is a lightweight and easy-to-use library for approximate nearest neighbor search with random projection. The index building has an integrated hyperparameter tuning algorithm, so the only hyperparameter required to construct the index is the target recall level! According to [our experiments](https://github.com/ejaasaari/mrpt-comparison/) MRPT is one of the fastest libraries for approximate nearest neighbor search.
   
   In the offline phase of the algorithm MRPT indexes the data with a collection of *random projection trees*. In the online phase the index structure allows us to answer queries in superior time. A detailed description of the algorithm with the time and space complexities, and the aforementioned comparisons can be found in [our article](https://www.cs.helsinki.fi/u/ttonteri/pub/bigdata2016.pdf) that was published in IEEE International Conference on Big Data 2016.
