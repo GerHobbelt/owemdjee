@@ -1,5 +1,15 @@
 
 
+
+
+
+
+
+
+
+
+
+
 ## export / output file formats, text formatting, etc.
 
 - **bustache** [📁](./bustache) [🌐](https://github.com/GerHobbelt/bustache) -- C++20 implementation of [{{ mustache }}](http://mustache.github.io/), compliant with [spec](https://github.com/mustache/spec) v1.1.3.
@@ -24,16 +34,6 @@
     - **tinyexpr** [📁](./tinyexpr) [🌐](https://github.com/GerHobbelt/tinyexpr) -- a very small recursive descent parser and evaluation engine for math expressions.
 
 - **variadic_table** [📁](./variadic_table) [🌐](https://github.com/GerHobbelt/variadic_table) -- for "pretty-printing" a formatted table of data to the console. It uses "variadic templates" to allow you to specify the types of data in each column.
-
-
-
-
-
-
-
-
-
-
 
 
 

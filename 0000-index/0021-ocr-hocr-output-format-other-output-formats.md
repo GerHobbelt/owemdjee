@@ -1,5 +1,15 @@
 
 
+
+
+
+
+
+
+
+
+
+
 ## OCR: hOCR output format, other output formats? (dedicated binary?)
 
 - **archive-hocr-tools** [📁](./archive-hocr-tools) [🌐](https://github.com/GerHobbelt/archive-hocr-tools) -- a python package to ease hOCR parsing in a streaming manner.
@@ -8,16 +18,6 @@
 - **hocr-tools** [📁](./hocr-tools) [🌐](https://github.com/GerHobbelt/hocr-tools) -- a [Public Specification](http://hocr.info) and tools for the hOCR Format.
   
   hOCR is a format for representing OCR output, including layout information, character confidences, bounding boxes, and style information. It embeds this information invisibly in standard HTML. By building on standard HTML, it automatically inherits well-defined support for most scripts, languages, and common layout options. Furthermore, unlike previous OCR formats, the recognized text and OCR-related information co-exist in the same file and survives editing and manipulation. hOCR markup is independent of the presentation.
-
-
-
-
-
-
-
-
-
-
 
 
 

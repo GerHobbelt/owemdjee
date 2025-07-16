@@ -1,5 +1,15 @@
 
 
+
+
+
+
+
+
+
+
+
+
 ## Reason for this repo
 
 `git submodules` hasn't been the most, ah, "user-friendly" methods to track and manage a set of libraries that you wish to track at *source level*.
@@ -76,18 +86,6 @@ For that purpose, this repo is a *solution*, though -- granted -- a *sub-optimal
 
 
 ---
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

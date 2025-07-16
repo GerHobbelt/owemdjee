@@ -1,5 +1,15 @@
 
 
+
+
+
+
+
+
+
+
+
+
 ## disk I/O, monitoring import locations, ...
 
 - **asio** [📁](./asio) [🌐](https://github.com/GerHobbelt/asio) -- a cross-platform C++ library for network and low-level I/O programming that provides developers with a consistent asynchronous model using a modern C++ approach.
@@ -26,16 +36,6 @@
 - **win32-fileapi-demo** [📁](./win32-fileapi-demo) [🌐](https://github.com/GerHobbelt/win32-fileapi-demo) -- demo-ing Win32 file api 'A' (ANSI) and UCS2/UTF16 'W' (Wide/Unicode) interfaces / UNC paths and "long filename support" / Linux file paths: regulars, limitations, mistakes, disasters and related stuff begging for a CVE if you haven't already.
 - **Win32_read_directory_changes** [📁](./Win32_read_directory_changes) [🌐](https://github.com/GerHobbelt/readdirectorychanges) -- sample code which goes with [Understanding ReadDirectoryChangesW](http://qualapps.blogspot.com/2010/05/understanding-readdirectorychangesw.html)
 - **Win32_read_directory_changes_IOCP** [📁](./Win32_read_directory_changes_IOCP) [🌐](https://github.com/GerHobbelt/ReadDirectoryChangesIOCP) -- inspired by jimbeveridge's artical [Understanding ReadDirectoryChangesW](http://qualapps.blogspot.com/2010/05/understanding-readdirectorychangesw.html)! The project shows how to read directory changes by IO completion port on windows platform.
-
-
-
-
-
-
-
-
-
-
 
 
 

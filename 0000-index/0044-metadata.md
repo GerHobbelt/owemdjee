@@ -1,5 +1,15 @@
 
 
+
+
+
+
+
+
+
+
+
+
 ## metadata & text (OCR et al) -- language detect, suggesting fixes, ...
 
 - **chewing_text_cud** [📁](./chewing_text_cud) [🌐](https://github.com/GerHobbelt/chewing_text_cud) -- a text processing / filtering library for use in NLP/search/content analysis research pipelines.
@@ -55,16 +65,6 @@
 - **xmunch** [📁](./xmunch) [🌐](https://github.com/GerHobbelt/xmunch) -- xmunch essentially does, what the 'munch' command of, for example, hunspell does, but is not compatible with hunspell affix definition files. So why use it then? What makes xmunch different from the other tools is the ability to extend incomplete word-lists. For hunspell's munch to identify a stem and add an affix mark, every word formed by the affix with the stem has to be in the original word-list. This makes sense for a compression tool. However if your word list is incomplete, you have to add all possible word-forms of a word first, before any compression is done. Using xmunch instead, you can define a subset of forms which are required to be in the word-list to allow the word to be used as stem. Like this, you can extend the word-list.
 - **you-token-to-me** [📁](./you-token-to-me) [🌐](https://github.com/GerHobbelt/YouTokenToMe) -- text tokenization
 - **ztd.text** [📁](./ztd.text) [🌐](https://github.com/GerHobbelt/ztd.text) -- an implementation of an up and coming proposal percolating through SG16, [P1629 - Standard Text Encoding](https://thephd.github.io/_vendor/future_cxx/papers/d1629.html). It will also include implementations of some downstream ideas covered in Previous Work in this area, including Zach Laine's [Boost.Text (proposed)](https://github.com/tzlaine/text), rmf's [libogonek](https://github.com/libogonek/ogonek), and Tom Honermann's [text_view](https://github.com/tahonermann/text_view).
-
-
-
-
-
-
-
-
-
-
 
 
 

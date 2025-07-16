@@ -8,6 +8,8 @@ This place is a gathering spot & integration workplace for the C & C++ libraries
 The heavy data lifting will be done in the referenced libraries, while this lib will provide some glue and common ground for them to work in/with.
 
 
+
+
 <!-- *toc* -->
 
 * [TOC](#owemdjee)
@@ -24,9 +26,8 @@ The heavy data lifting will be done in the referenced libraries, while this lib 
 
 
 
+
 ---
-
-
 
 <!-- *toc::ALL* -->
 

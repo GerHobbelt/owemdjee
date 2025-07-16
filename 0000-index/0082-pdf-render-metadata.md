@@ -1,5 +1,15 @@
 
 
+
+
+
+
+
+
+
+
+
+
 ## PDF render & metadata core (*mupdf*)
 
 - **extract** [📁](../../thirdparty/extract) [🌐](https://github.com/GerHobbelt/thirdparty_extract) -- clone of git://git.ghostscript.com/extract.git
@@ -35,16 +45,6 @@
 - **PDFGen** [📁](./PDFGen) [🌐](https://github.com/GerHobbelt/PDFGen) -- a simple PDF Creation/Generation library, contained in a single C-file with header and no external library dependencies. Useful for embedding into other programs that require rudimentary PDF output.
 - **vivid** [📁](./vivid) [🌐](https://github.com/GerHobbelt/vivid) -- vivid 🌈 is a simple-to-use C++ color library.
 - **zlib** [📁](../../thirdparty/zlib) [🌐](https://github.com/GerHobbelt/thirdparty-zlib) -- zlib-ng: zlib data compression library for the next generation systems.
-
-
-
-
-
-
-
-
-
-
 
 
 

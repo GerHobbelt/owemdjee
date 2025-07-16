@@ -1,5 +1,15 @@
 
 
+
+
+
+
+
+
+
+
+
+
 ## IPC: websockets, etc.: all communication means
 
 - **blazingmq** [📁](./blazingmq) [🌐](https://github.com/GerHobbelt/blazingmq) -- BlazingMQ is a modern, High-Performance Message Queue, which focuses on efficiency, reliability, and a rich feature set for modern-day workflows. At its core, BlazingMQ provides durable, fault-tolerant, highly performant, and highly available queues, along with features like various message routing strategies (e.g., work queues, priority, fan-out, broadcast, etc.), compression, strong consistency, poison pill detection, etc.  Message queues generally provide a loosely-coupled, asynchronous communication channel ("queue") between application services (producers and consumers) that send messages to one another. You can think about it like a mailbox for communication between application programs, where 'producer' drops a message in a mailbox and 'consumer' picks it up at its own leisure. Messages placed into the queue are stored until the recipient retrieves and processes them. In other words, producer and consumer applications can temporally and spatially isolate themselves from each other by using a message queue to facilitate communication.
@@ -57,16 +67,6 @@ Also, we are currently more interested in *fast data serialization* then RPC *pe
 - ~~**oatpp** [🌐](https://github.com/oatpp/oatpp) -- IPC / server framework~~
   
   - **removed**; reason: see `crow`. We have picked `crow` as the preferred way forward, so any similar/competing product is out of scope unless `crow` throws a tantrum on our test bench after all, the chances of that being *very slim*.
-
-
-
-
-
-
-
-
-
-
 
 
 

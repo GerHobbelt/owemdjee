@@ -1,5 +1,15 @@
 
 
+
+
+
+
+
+
+
+
+
+
 ### image export, image / \[scanned] document import
 
 - **avir** [📁](./avir) [🌐](https://github.com/GerHobbelt/avir) -- a image resizing / scaling library which has reached a production level of quality, and is ready to be incorporated into any project. This library features routines for both down- and upsizing of 8- and 16-bit, 1 to 4-channel images. Image resizing routines were implemented in a portable, cross-platform, header-only C++ code, and have a high level of optimality. Beside resizing, this library offers a sub-pixel shift operation. Built-in sRGB gamma correction is available.
@@ -108,16 +118,6 @@
 - ~~**GDCM-Grassroots-DICOM** [🌐](https://github.com/malaterre/GDCM)~~
   
   - **removed**; reason: not a frequently used format; the filter codes can be found in other libraries. *Overkill*. Qiqqa tooling can use [Apache Tika](https://tika.apache.org/), [ImageMagick](https://imagemagick.org/) or other thirdparty pipelines to convert to & from supported formats.
-
-
-
-
-
-
-
-
-
-
 
 
 

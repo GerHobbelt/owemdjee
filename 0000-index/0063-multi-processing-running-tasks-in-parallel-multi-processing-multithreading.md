@@ -1,5 +1,15 @@
 
 
+
+
+
+
+
+
+
+
+
+
 ### multi-processing: running tasks in parallel: multi-processing, multithreading, async, ...
 
 - **actor-framework** [📁](./actor-framework) [🌐](https://github.com/GerHobbelt/actor-framework) -- CAF is an open source framework that offers a programming environment based on the [Actor Model](https://en.wikipedia.org/wiki/Actor_model) of computation combined with a [scalable](https://dl.acm.org/doi/10.1145/2541329.2541336), [native](https://www.sciencedirect.com/science/article/abs/pii/S1477842416000038) runtime environment that lets you build applications at a high level of abstraction without sacrificing performance. Whether you are targeting a single machine, a data center, or the cloud, CAF provides the necessary tools to implement robust, scalable, and maintainable software.
@@ -44,16 +54,6 @@
 - https://github.com/pnappa/subprocesscpp -- A header-only library that allows you to execute processes either synchronously or asynchronously, whilst providing input and output handling. No more calling `exec` in C++!
 - https://github.com/rajatjain1997/subprocess -- A C++ high level library for running shell processes
 - https://github.com/sheredom/subprocess.h -- A one header solution to launching processes and interacting with them for C/C++.
-
-
-
-
-
-
-
-
-
-
 
 
 

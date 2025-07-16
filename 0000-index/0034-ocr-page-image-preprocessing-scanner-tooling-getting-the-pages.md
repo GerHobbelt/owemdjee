@@ -1,5 +1,15 @@
 
 
+
+
+
+
+
+
+
+
+
+
 ### OCR page image preprocessing, \[scanner] tooling: getting the pages to the OCR engine
 
 - **Awesome-Document-Image-Rectification** [📁](./Awesome-Document-Image-Rectification) [🌐](https://github.com/GerHobbelt/Awesome-Document-Image-Rectification) -- a comprehensive list of awesome document image rectification methods based on deep learning.
@@ -173,16 +183,6 @@
 - **wdenoise** [📁](./wdenoise) [🌐](https://github.com/GerHobbelt/wdenoise) -- Wavelet Denoising in ANSI C using empirical bayes thresholding and a host of other thresholding methods.
 - **xbrzscale** [📁](./xbrzscale) [🌐](https://github.com/GerHobbelt/xbrzscale) -- xBRZ upscaling commandline tool. This tool allows you to scale your graphics with xBRZ algorithm, see https://en.wikipedia.org/wiki/Pixel-art_scaling_algorithms#xBR_family
 - **zimg** [📁](./zimg) [🌐](https://github.com/GerHobbelt/zimg) -- the "z" library implements the commonly required image processing basics of scaling, colorspace conversion, and depth conversion. A simple API enables conversion between any supported formats to operate with minimal knowledge from the programmer. All library routines were designed from the ground-up with correctness, flexibility, and thread-safety as first priorities.
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -1,5 +1,15 @@
 
 
+
+
+
+
+
+
+
+
+
+
 ## IPC: flatbuffer et al for protocol design
 
 - **arrow** [📁](./arrow) [🌐](https://github.com/GerHobbelt/arrow) -- Apache Arrow is a development platform for in-memory analytics. It contains a set of technologies that enable big data systems to process and move data fast. The reference Arrow libraries contain many distinct software components:
@@ -63,16 +73,6 @@
 - ~~**flatcc** [🌐](https://github.com/dvidelabs/flatcc)~~
   
   - **removed**; reason: see `flatbuffers`. When we don't dig `flatbuffers`, then `flatcc` is automatically pretty useless to us. Let's rephrase that professionally: "`flatcc` has moved out of scope for our project."
-
-
-
-
-
-
-
-
-
-
 
 
 

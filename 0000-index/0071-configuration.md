@@ -1,5 +1,15 @@
 
 
+
+
+
+
+
+
+
+
+
+
 ## configuration / parameterization
 
 - **cfgpath** [📁](./cfgpath) [🌐](https://github.com/GerHobbelt/cfgpath) -- cross platform methods for obtaining paths to configuration files
@@ -21,16 +31,6 @@
 - **libucl** [📁](./libucl) [🌐](https://github.com/GerHobbelt/libucl) -- the configuration language called UCL - Universal Configuration Language.  UCL is heavily infused by nginx configuration as the example of a convenient configuration system. However, UCL is fully compatible with JSON format and is able to parse json files.
 - **reflect-cpp** [📁](./reflect-cpp) [🌐](https://github.com/GerHobbelt/reflect-cpp) -- a C++-20 library for **fast serialization, deserialization and validation** using reflection, similar to [pydantic](https://github.com/pydantic/pydantic) in Python, [serde](https://github.com/serde-rs) in Rust, [encoding](https://github.com/golang/go/tree/master/src/encoding) in Go or [aeson](https://github.com/haskell/aeson/tree/master) in Haskell. As the aforementioned libraries are among the most widely used in the respective languages, reflect-cpp fills an important gap in C++ development. It reduces boilerplate code and increases code safety.
 - **shoal** [📁](./shoal) [🌐](https://github.com/GerHobbelt/shoal) -- an ergonomic configuration file format: `shoal` is a simple and readable `INI`-like format, supporting hierarchical structures with an arbitrary number of nesting levels.
-
-
-
-
-
-
-
-
-
-
 
 
 

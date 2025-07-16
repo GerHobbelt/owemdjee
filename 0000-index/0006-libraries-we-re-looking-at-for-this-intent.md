@@ -1,5 +1,15 @@
 
 
+
+
+
+
+
+
+
+
+
+
 # Libraries we're looking at for this *intent*:
 
 <!-- *toc* -->
@@ -92,17 +102,6 @@
     * [sub-dependencies (libraries which are required by any of the above)](#sub-dependencies-libraries-which-are-required-by-any-of-the-above)
 * [Libraries in this collection (All of the above, listed in alphabetical order)](#libraries-in-this-collection-all-of-the-above-listed-in-alphabetical-order)
 * [TBD: Libraries which still need to be moved into the overview / categories above...](#tbd-libraries-which-still-need-to-be-moved-into-the-overview--categories-above)
-
-
-
-
-
-
-
-
-
-
-
 
 
 

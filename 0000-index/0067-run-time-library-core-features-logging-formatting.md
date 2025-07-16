@@ -1,5 +1,15 @@
 
 
+
+
+
+
+
+
+
+
+
+
 ### run-time library core features: logging, formatting, ...
 
 - **binary_log** [📁](./binary_log) [🌐](https://github.com/GerHobbelt/binary_log) -- a fast C++20 library which logs messages in a compact binary format while using [fmtlib](https://github.com/fmtlib/fmt) to format the logs.
@@ -63,16 +73,6 @@
 - ~~**merror** [📁](./merror) [🌐](https://github.com/GerHobbelt/merror) -- a library for error handling in C++ without exceptions.~~
   
   - **removed**; reason: code is non-portable to compilers other than GCC, or at least would require more effort than we're willing to expend on this.
-
-
-
-
-
-
-
-
-
-
 
 
 

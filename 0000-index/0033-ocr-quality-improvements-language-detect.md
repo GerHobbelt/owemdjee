@@ -1,5 +1,15 @@
 
 
+
+
+
+
+
+
+
+
+
+
 ### OCR: quality improvements, language detect, ...
 
 - **Awesome-Document-Image-Rectification** [📁](./Awesome-Document-Image-Rectification) [🌐](https://github.com/GerHobbelt/Awesome-Document-Image-Rectification) -- a comprehensive list of awesome document image rectification methods based on deep learning.
@@ -40,16 +50,6 @@
 - **tesslinesplit** [📁](./tesslinesplit) [🌐](https://github.com/GerHobbelt/tesslinesplit) -- a standalone program for using Tesseract's line segmentation algorithm to split up document images.
 - **unicode-inflection** [📁](./unicode-inflection) [🌐](https://github.com/GerHobbelt/inflection) -- Code, data and documentation solving language inflection problems. [Inflection](https://en.wikipedia.org/wiki/Inflection) is the process of changing the form of a word to express different grammatical features, such as tense, number, gender, or case. In many languages, inflection is a complex and nuanced process, and it can be difficult to implement inflection correctly in software. This can lead to an inability to express native sounding sentences or to errors in text processing, such as incorrect word forms or incorrect grammatical agreement.
 - **unpaper** [📁](./unpaper) [🌐](https://github.com/GerHobbelt/unpaper) -- a post-processing tool for scanned sheets of paper, especially for book pages that have been scanned from previously created photocopies.  The main purpose is to make scanned book pages better readable on screen after conversion to PDF. The program also tries to detect misaligned centering and rotation of ages and will automatically straighten each page by rotating it to the correct angle (a.k.a. deskewing).
-
-
-
-
-
-
-
-
-
-
 
 
 

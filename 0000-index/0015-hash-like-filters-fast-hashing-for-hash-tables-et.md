@@ -1,5 +1,15 @@
 
 
+
+
+
+
+
+
+
+
+
+
 ## Hash-like Filters & Fast Hashing for Hash Tables et al (64 bits and less, mostly)
 
 These hashes are for other purposes, e.g. fast lookup in dictionaries, fast approximate hit testing and set reduction through fast filtering (think *bloom filter*). These *may* be **machine specific** (and some of them *are*): these are **never supposed to be used for encoding in storage or other means which crosses machine boundaries**: if you want to use them for a database index, that is fine *as long as* you don't expect that database index to be readable by any other machine than the one which produced and uses these hash numbers.
@@ -127,16 +137,6 @@ These hashes are for other purposes, e.g. fast lookup in dictionaries, fast appr
 - ~~**circlehash** [📁](./circlehash) [🌐](https://github.com/GerHobbelt/circlehash) -- a family of non-cryptographic hash functions that pass every test in SMHasher.~~
   
   - **removed**; reason: written in Go; port to C/C++ is easy but just too much effort for too little gain; when we're looking for *fast* non-cryptographic hashes like this, we don't appreciate it to include 128-bit / 64-bit multiplications as those are generally slower than shift, add, xor. While this will surely be a nice hash, it doesn't fit our purposes.
-
-
-
-
-
-
-
-
-
-
 
 
 

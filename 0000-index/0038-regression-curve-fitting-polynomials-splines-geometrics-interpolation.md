@@ -1,5 +1,15 @@
 
 
+
+
+
+
+
+
+
+
+
+
 ### Regression, curve fitting, polynomials, splines, geometrics, interpolation, math
 
 - **baobzi** [📁](./baobzi) [🌐](https://github.com/GerHobbelt/baobzi) -- an adaptive fast function approximator based on tree search. Word salad aside, `baobzi` is a tool to convert very CPU intensive function calculations into relatively cheap ones (at the cost of memory). This is similar to functions like `chebeval` in `MATLAB`, but can be significantly faster since the order of the polynomial fit can be much much lower to meet similar tolerances. It also isn't constrained for use only in `MATLAB`. Internally, `baobzi` represents your function by a grid of binary/quad/oct/N trees, where the leaves represent the function in some small sub-box of the function's domain with chebyshev polynomials. When you evaluate your function at a point with baobzi, it searches the tree for the box containing your point and evaluates using this approximant.
@@ -56,16 +66,6 @@
 - **tinyspline** [📁](./tinyspline) [🌐](https://github.com/GerHobbelt/tinyspline) -- TinySpline is a small, yet powerful library for interpolating, transforming, and querying arbitrary NURBS, B-Splines, and Bézier curves.
 - **TrianglePP** [📁](./TrianglePP) [🌐](https://github.com/GerHobbelt/TrianglePP) -- Triangle++ is a C++ wrapper for the original J.P. Shevchuk's 2005 C-language *Triangle* package. The library can create standard **Delaunay** triangulations and their duals, i.e. **Voronoi** diagrams (aka Dirichlet tessellations). Additionally it can generate **quality Delaunay** triangulations (where we can set bounds on the areas and angles of the resulting triangles) and **constrained Delaunay** triangulations (where we can connect some points with and edge and require that this edge will be part of the result).
 - **tweeny** [📁](./tweeny) [🌐](https://github.com/GerHobbelt/tweeny) -- an inbetweening library designed for the creation of complex animations for games and other beautiful interactive software. It leverages features of modern C++ to empower developers with an intuitive API for declaring tweenings of any type of value, as long as they support arithmetic operations. The goal of Tweeny is to provide means to create fluid interpolations when animating position, scale, rotation, frames or other values of screen objects, by setting their values as the tween starting point and then, after each tween step, plugging back the result.
-
-
-
-
-
-
-
-
-
-
 
 
 

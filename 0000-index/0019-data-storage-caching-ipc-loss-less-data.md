@@ -1,5 +1,15 @@
 
 
+
+
+
+
+
+
+
+
+
+
 ## Data Storage / Caching / IPC: loss-less data compression
 
 - **7zip** [📁](./7zip) [🌐](https://github.com/GerHobbelt/7zip) -- 7-Zip: [7-zip.org](https://7-zip.org)
@@ -67,16 +77,6 @@
 - ~~**xz-utils** [🌐](https://github.com/xz-mirror/xz)~~
   
   - **removed**; reason: see `lzo2` above. When we want this, we can go through [Apache Tika](https://tika.apache.org/) or other thirdparty pipelines.
-
-
-
-
-
-
-
-
-
-
 
 
 

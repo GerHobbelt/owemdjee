@@ -1,5 +1,15 @@
 
 
+
+
+
+
+
+
+
+
+
+
 ## IPC: YAML, TOML, etc. for protocol design
 
 **Not considered**: reason: when we want the IPC protocol to be "human readable" in any form/approximation, we've decided to stick with JSON or XML (if we cannot help it -- I particularly dislike the verbosity and tag redundancy (open+close) in XML and consider it a lousy design choice for *any* purpose).

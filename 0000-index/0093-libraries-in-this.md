@@ -1,5 +1,15 @@
 
 
+
+
+
+
+
+
+
+
+
+
 # Libraries in this collection (All of the above, listed in alphabetical order)
 
 - **1D-RGB-color-gradient** [📁](./1D-RGB-color-gradient) [🌐](https://github.com/GerHobbelt/1D-RGB-color-gradient) -- 1D (univariate) continous (smooth) [color gradients](https://en.wikipedia.org/wiki/Color_gradient) (colormaps) for gnuplot.
@@ -1987,7 +1997,7 @@
 - **ut** [📁](./ut) [🌐](https://github.com/GerHobbelt/ut) -- C++ single header/single module, macro-free μ(micro)/Unit Testing Framework
 - **utf8proc** [📁](./utf8proc) [🌐](https://github.com/GerHobbelt/utf8proc) -- [utf8proc](http://juliastrings.github.io/utf8proc/) is a small, clean C library that provides Unicode normalization, case-folding, and other operations for data in the [UTF-8 encoding](http://en.wikipedia.org/wiki/UTF-8).
 - **utfcpp** [📁](./utfcpp) [🌐](https://github.com/GerHobbelt/utfcpp) -- UTF-8 with C++ in a Portable Way
-- **uuid_v4** [📁](./uuid_v4) [🌐](https://github.com/GerHobbelt/uuid_v4) -- a fast C++ library to generate, serialize, print and parse UUIDs version 4 variant 1 as specified in RFC-4122. It heavily relies on SIMD operations (instruction sets **SSE4.1**/**AVX**/**AVX2**), c\++11 <random> PRNG library and some c\++17 features. This library generates UUIDs with pseudo-random numbers, seeded by true (hardware) random. It is *not* a cryptographically secure way of generating UUIDs.
+- **uuid_v4** [📁](./uuid_v4) [🌐](https://github.com/GerHobbelt/uuid_v4) -- a fast C++ library to generate, serialize, print and parse UUIDs version 4 variant 1 as specified in RFC-4122. It heavily relies on SIMD operations (instruction sets **SSE4.1**/**AVX**/**AVX2**), c\++11 `<random>` PRNG library and some c\++17 features. This library generates UUIDs with pseudo-random numbers, seeded by true (hardware) random. It is *not* a cryptographically secure way of generating UUIDs.
 - **uvw** [📁](./uvw) [🌐](https://github.com/GerHobbelt/uvw) -- `libuv` wrapper in modern C++. `uvw` started as a header-only, event based, tiny and easy to use wrapper for [`libuv`](https://github.com/libuv/libuv) written in modern C++.  Now it's finally available also as a compilable static library. The basic idea is to wrap the *C-ish* interface of `libuv` behind a graceful C++ API.
 - **variadic_table** [📁](./variadic_table) [🌐](https://github.com/GerHobbelt/variadic_table) -- for "pretty-printing" a formatted table of data to the console. It uses "variadic templates" to allow you to specify the types of data in each column.
 - **vcopy** [📁](./vcopy) [🌐](https://github.com/GerHobbelt/vcopy) -- tool to safely copy files across various (local) hardware under circumstances where there may be another file writer active at the same time and/or the (USB?) connection is sometimes flakey or system I/O drivers buggered.
@@ -2307,18 +2317,6 @@
 
 
 ---
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

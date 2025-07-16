@@ -1,5 +1,15 @@
 
 
+
+
+
+
+
+
+
+
+
+
 ### multi-processing: task schedulers
 
 - **actor-framework** [📁](./actor-framework) [🌐](https://github.com/GerHobbelt/actor-framework) -- CAF is an open source framework that offers a programming environment based on the [Actor Model](https://en.wikipedia.org/wiki/Actor_model) of computation combined with a [scalable](https://dl.acm.org/doi/10.1145/2541329.2541336), [native](https://www.sciencedirect.com/science/article/abs/pii/S1477842416000038) runtime environment that lets you build applications at a high level of abstraction without sacrificing performance. Whether you are targeting a single machine, a data center, or the cloud, CAF provides the necessary tools to implement robust, scalable, and maintainable software.
@@ -38,16 +48,6 @@
 - **taskflow** [📁](./taskflow) [🌐](https://github.com/GerHobbelt/taskflow) -- Quickly write parallel and heterogeneous task programs in modern C++. Taskflow is faster, more expressive, and easier for drop-in integration than many of existing task programming frameworks in handling complex parallel workloads.
 - **thrill** [📁](./thrill) [🌐](https://github.com/GerHobbelt/thrill) -- an *EXPERIMENTAL* C++ framework for algorithmic distributed Big Data batch computations on a cluster of machines. More information at [http://project-thrill.org](http://project-thrill.org).
 - **transwarp** [📁](./transwarp) [🌐](https://github.com/GerHobbelt/transwarp) -- a header-only C++ library for task concurrency. It allows you to easily create a graph of tasks where every task can be executed synchronously. transwarp is written in C++17 and only depends on the standard library.
-
-
-
-
-
-
-
-
-
-
 
 
 

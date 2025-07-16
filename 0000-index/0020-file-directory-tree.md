@@ -1,5 +1,15 @@
 
 
+
+
+
+
+
+
+
+
+
+
 ## File / Directory Tree Synchronization (local and remote)
 
 - **cdc-file-transfer** [📁](./cdc-file-transfer) [🌐](https://github.com/GerHobbelt/cdc-file-transfer) -- CDC File Transfer contains tools for syncing and streaming files from Windows to Windows or Linux. The tools are based on Content Defined Chunking (CDC), in particular [FastCDC](https://www.usenix.org/conference/atc16/technical-sessions/presentation/xia), to split up files into chunks.
@@ -13,16 +23,6 @@
 - **rsync** [📁](./rsync) [🌐](https://github.com/GerHobbelt/rsync) -- Rsync is a fast and extraordinarily versatile file copying tool for both remote and local files. Rsync uses a delta-transfer algorithm which provides a very fast method for bringing remote files into sync.
 - **vcopy** [📁](./vcopy) [🌐](https://github.com/GerHobbelt/vcopy) -- tool to safely copy files across various (local) hardware under circumstances where there may be another file writer active at the same time and/or the (USB?) connection is sometimes flakey or system I/O drivers buggered.
 - **zsync2** [📁](./zsync2) [🌐](https://github.com/GerHobbelt/zsync2) -- the advanced file download/sync tool zsync. zsync is a well known tool for downloading and updating local files from HTTP servers using the well known algorithms rsync used for diffing binary files. Therefore, it becomes possible to synchronize modifications by exchanging the changed blocks locally using `Range:` requests. The system is based on meta files called `.zsync` files. They contain hash sums for every block of data. The file is generated from and stored along with the actual file it refers to. Due to how system works, nothing but a "dumb" HTTP server is required to make use of zsync2. This makes it easy to integrate zsync2 into existing systems.
-
-
-
-
-
-
-
-
-
-
 
 
 

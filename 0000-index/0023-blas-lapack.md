@@ -1,5 +1,15 @@
 
 
+
+
+
+
+
+
+
+
+
+
 ### BLAS, LAPACK, ...
 
 - **amd-fftw** [📁](./amd-fftw) [🌐](https://github.com/GerHobbelt/amd-fftw) -- AOCL-FFTW is AMD optimized version of FFTW implementation targeted for AMD EPYC CPUs. It is developed on top of FFTW (version fftw-3.3.10). AOCL-FFTW achieves high performance as a result of its various optimizations involving improved SIMD Kernel functions, improved copy functions (cpy2d and cpy2d_pair used in rank-0 transform and buffering plan), improved 256-bit kernels selection by Planner and an optional in-place transpose for large problem sizes. AOCL-FFTW improves the performance of in-place MPI FFTs by employing a faster in-place MPI transpose function.
@@ -68,16 +78,6 @@
 - **UDDSketch** [📁](./UDDSketch) [🌐](https://github.com/GerHobbelt/UDDSketch) -- Uniform DDSketch is a C implementation of the DDSketch algorithm (a fast and fully-mergeable quantile sketch with relative-error guarantees) for quantile estimation of very large data sets & data streams with the following additions: (1) uniform collapsing strategy, and (2) additional sketch implementation for dealing with negative values.
 - **universal-numbers** [📁](./universal-numbers) [🌐](https://github.com/GerHobbelt/universal) -- a header-only C++ template library for universal number arithmetic. The goal of the Universal Numbers Library is to offer applications alternatives to IEEE floating-point that are more efficient and mathematically robust. The Universal library is a ready-to-use header-only library that provides plug-in replacement for native types, and provides a low-friction environment to start exploring alternatives to IEEE floating-point in your own algorithms.
 - **xsimd** [📁](./xsimd) [🌐](https://github.com/GerHobbelt/xsimd) -- SIMD (Single Instruction, Multiple Data) instructions differ between microprocessor vendors and compilers. `xsimd` provides a unified means for using these features for library authors. It enables manipulation of batches of numbers with the same arithmetic operators as for single values. It also provides accelerated implementation of common mathematical functions operating on batches.
-
-
-
-
-
-
-
-
-
-
 
 
 

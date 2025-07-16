@@ -1,5 +1,15 @@
 
 
+
+
+
+
+
+
+
+
+
+
 ### Random generators & all things random
 
 - **EigenRand** [📁](./EigenRand) [🌐](https://github.com/GerHobbelt/EigenRand) -- EigenRand: The Fastest C++11-compatible random distribution generator for Eigen. EigenRand is a header-only library for [Eigen](http://eigen.tuxfamily.org/index.php?title=Main_Page), providing vectorized random number engines and vectorized random distribution generators.  Since the classic Random functions of Eigen rely on an old C function `rand()`, there is no way to control random numbers and no guarantee for quality of generated numbers. In addition, Eigen's Random is slow because `rand()` is hard to vectorize. EigenRand provides a variety of random distribution functions similar to C++11 standard's random functions, which can be vectorized and easily integrated into Eigen's expressions of Matrix and Array. You can get 5~10 times speed by just replacing old Eigen's Random or unvectorizable c++11 random number generators with EigenRand.
@@ -16,16 +26,6 @@
 - **RNGSobol** [📁](./RNGSobol) [🌐](https://github.com/GerHobbelt/RNGSobol) -- Sobol quadi-random numbers generator (C++). Note that unlike pseudo-random numbers, quasi-random numbers care about dimensionality of points.
 - **trng4** [📁](./trng4) [🌐](https://github.com/GerHobbelt/trng4) -- Tina’s Random Number Generator Library (TRNG) is a state of the art C++ pseudo-random number generator library for sequential and parallel Monte Carlo simulations. Its design principles are based on the extensible random number generator facility that was introduced in the C++11 standard. The TRNG library features an object oriented design, is easy to use and has been speed optimized. Its implementation does not depend on any communication library or hardware architecture.
 - **Xoshiro-cpp** [📁](./Xoshiro-cpp) [🌐](https://github.com/GerHobbelt/Xoshiro-cpp) -- a header-only pseudorandom number generator library for modern C++. Based on **David Blackman and Sebastiano Vigna's [xoshiro/xoroshiro generators](http://prng.di.unimi.it/)**.
-
-
-
-
-
-
-
-
-
-
 
 
 

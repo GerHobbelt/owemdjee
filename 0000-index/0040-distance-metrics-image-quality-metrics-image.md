@@ -1,5 +1,15 @@
 
 
+
+
+
+
+
+
+
+
+
+
 ### Distance Metrics, Image Quality Metrics, Image Comparison
 
 - **edit-distance** [📁](./edit-distance) [🌐](https://github.com/GerHobbelt/editdistance) -- a fast implementation of the edit distance (Levenshtein distance). The algorithm used in this library is proposed by _Heikki Hyyrö, "Explaining and extending the bit-parallel approximate string matching algorithm of Myers", (2001) <http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.19.7158&rep=rep1&type=pdf>_.
@@ -41,16 +51,6 @@
   - Smith-Waterman Coefficient;
   - Smith-Waterman-Gotoh Coefficient;
   - Soundex Distance.
-
-
-
-
-
-
-
-
-
-
 
 
 

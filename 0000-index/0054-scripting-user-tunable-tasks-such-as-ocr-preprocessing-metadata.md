@@ -1,5 +1,15 @@
 
 
+
+
+
+
+
+
+
+
+
+
 ## scripting *user-tunable tasks* such as OCR preprocessing, metadata extraction, metadata cleaning & other \[post-\]processing, ...
 
 - **asp** [📁](./asp) [🌐](https://github.com/GerHobbelt/asp) -- the Asp Scripting Platform for Embedded Systems resembles basic Python (with some small differences), making it easy to learn for those who are already familiar with Python. It supports conditionals (if/elif/else), loops (while, for), and functions. It supports basic data types plus tuples, lists, sets, dictionaries, and ranges/slices. To keep things small, Asp does not support classes, exception handling, and many other advanced features. Scripts are compiled to compact byte-code, which is checked for compatibility with the application before being allowed to run in the engine.  The Asp engine has a small code memory footprint (less than 100 KB when compiled optimizing for space). It avoids use of dynamic memory allocation and recursion, resulting in very little impact on the memory of the host application. Applications run scripts one instruction at a time, retaining a high frequency of control of the CPU.
@@ -97,16 +107,6 @@ The additional (and more important) reason to ditch CPython from the R&D set is 
 - ~~**luaJIT** [🌐](https://github.com/LuaJIT/LuaJIT)~~
   
   - **removed**; reason: see the `lua` entry above.
-
-
-
-
-
-
-
-
-
-
 
 
 

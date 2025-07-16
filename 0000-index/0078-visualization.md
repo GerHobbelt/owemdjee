@@ -1,5 +1,15 @@
 
 
+
+
+
+
+
+
+
+
+
+
 ### Visualization
 
 - **agg** [📁](./agg) [🌐](https://github.com/GerHobbelt/agg) -- Anti-Grain Geometry library, written by Maxim Shemanarev in C++. It is an Open Source, 2D vector graphics library. Agg produces pixel images in memory from vectorial data. AGG doesn't depend on any graphic API or technology. Basically, you can think of AGG as of a rendering engine that produces pixel images in memory from some vectorial data.
@@ -44,16 +54,6 @@
 - **vizzu** [📁](./vizzu) [🌐](https://github.com/GerHobbelt/vizzu-lib) -- Vizzu is a Javascript/C++ library for animated data visualizations and data stories, utilizing a generic dataviz engine that generates many types of charts and seamlessly animates between them. It can be used to create static charts but more importantly, it is designed for building animated data stories and interactive explorers as Vizzu enables showing different perspectives of the data that the viewers can easily follow due to the animation.
 - **VTK** [📁](./VTK) [🌐](https://github.com/GerHobbelt/VTK) -- VTK - The Visualization Toolkit - is an open-source software system for image processing, 3D graphics, volume rendering and visualization. VTK includes many advanced algorithms (e.g., surface reconstruction, implicit modeling, decimation) and rendering techniques (e.g., hardware-accelerated volume rendering, LOD control).
 - **wesanderson** [📁](./wesanderson) [🌐](https://github.com/GerHobbelt/wesanderson) -- Wes Anderson color palettes demo.  Here’s the most indie thing you can do to your plots.  ;-)
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -1,5 +1,15 @@
 
 
+
+
+
+
+
+
+
+
+
+
 ## IPC: CBOR for protocol design
 
 - **glaze** [📁](./glaze) [🌐](https://github.com/GerHobbelt/glaze) -- one of the fastest JSON libraries in the world. Glaze reads and writes from object memory, simplifying interfaces and offering incredible performance. Glaze also supports [BEVE](https://github.com/beve-org/beve) (binary efficient versatile encoding), CSV (comma separated value) and Binary data through the same API for maximum performance
@@ -14,16 +24,6 @@
   * [RFC8949](https://tools.ietf.org/html/rfc8949) The CBOR Standard. (Everything except sorting of encoded maps)
 
 - **tinycbor** [📁](./tinycbor) [🌐](https://github.com/GerHobbelt/tinycbor) -- Concise Binary Object Representation (CBOR) library for serializing data to disk or message channel.
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -1,5 +1,15 @@
 
 
+
+
+
+
+
+
+
+
+
+
 ### Misc. core functionality
 
 - **adaptive-radix-tree** [📁](./adaptive-radix-tree) [🌐](https://github.com/GerHobbelt/adaptive-radix-tree) -- implements the Adaptive Radix Tree (ART), as proposed by Leis et al. ART, which is a trie based data structure, achieves its performance, and space efficiency, by compressing the tree both vertically, i.e., if a node has no siblings it is merged with its parent, and horizontally, i.e., uses an array which grows as the number of children increases. Vertical compression reduces the tree height and horizontal compression decreases a node’s size.
@@ -120,7 +130,7 @@
 - **units_cpp** [📁](./units_cpp) [🌐](https://github.com/GerHobbelt/units_cpp) -- a compile-time, header-only, dimensional analysis library built on C++14 with no dependencies.
 - **UniversalStacktrace** [📁](./UniversalStacktrace) [🌐](https://github.com/GerHobbelt/UniversalStacktrace) -- C++ Stacktrace for MS Windows, Linux and Apple OS/X.
 - **utf8proc** [📁](./utf8proc) [🌐](https://github.com/GerHobbelt/utf8proc) -- [utf8proc](http://juliastrings.github.io/utf8proc/) is a small, clean C library that provides Unicode normalization, case-folding, and other operations for data in the [UTF-8 encoding](http://en.wikipedia.org/wiki/UTF-8).
-- **uuid_v4** [📁](./uuid_v4) [🌐](https://github.com/GerHobbelt/uuid_v4) -- a fast C++ library to generate, serialize, print and parse UUIDs version 4 variant 1 as specified in RFC-4122. It heavily relies on SIMD operations (instruction sets **SSE4.1**/**AVX**/**AVX2**), c\++11 <random> PRNG library and some c\++17 features. This library generates UUIDs with pseudo-random numbers, seeded by true (hardware) random. It is *not* a cryptographically secure way of generating UUIDs.
+- **uuid_v4** [📁](./uuid_v4) [🌐](https://github.com/GerHobbelt/uuid_v4) -- a fast C++ library to generate, serialize, print and parse UUIDs version 4 variant 1 as specified in RFC-4122. It heavily relies on SIMD operations (instruction sets **SSE4.1**/**AVX**/**AVX2**), c\++11 `<random>` PRNG library and some c\++17 features. This library generates UUIDs with pseudo-random numbers, seeded by true (hardware) random. It is *not* a cryptographically secure way of generating UUIDs.
 - **wcwidth9** [📁](./wcwidth9) [🌐](https://github.com/GerHobbelt/wcwidth9) -- platform independent, header only, `wcwidth` with full Unicode 9 wide character support.
 - **win32-fileapi-demo** [📁](./win32-fileapi-demo) [🌐](https://github.com/GerHobbelt/win32-fileapi-demo) -- demo-ing Win32 file api 'A' (ANSI) and UCS2/UTF16 'W' (Wide/Unicode) interfaces / UNC paths and "long filename support" / Linux file paths: regulars, limitations, mistakes, disasters and related stuff begging for a CVE if you haven't already.
 - **wolfsort** [📁](./wolfsort) [🌐](https://github.com/GerHobbelt/wolfsort) -- a stable adaptive hybrid bucket / quick / merge / drop sort named wolfsort. The bucket sort, forming the core of wolfsort, is not a comparison sort, so wolfsort can be considered a member of the radix-sort family. Quicksort and mergesort are well known. Dropsort gained popularity after it was reinvented as Stalin sort.
@@ -129,16 +139,6 @@
 - ~~**merror** [📁](./merror) [🌐](https://github.com/GerHobbelt/merror) -- a library for error handling in C++ without exceptions.~~
   
   - **removed**; reason: code is non-portable to compilers other than GCC, or at least would require more effort than we're willing to expend on this.
-
-
-
-
-
-
-
-
-
-
 
 
 

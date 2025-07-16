@@ -1,5 +1,15 @@
 
 
+
+
+
+
+
+
+
+
+
+
 ## Content Hashing (cryptographic strength i.e. *"guaranteed"* collision-free)
 
 The bit about **_"guaranteed"_ collision-free** is to be read as: hash algorithms in this section must come with *strong statistical guarantees* that any chance at a **hash collision** is negligible, even for *extremely large* collections. In practice this means: use *cryptographic* hash algorithms with a *strength* of 128 bits or more. (Qiqqa used a b0rked version SHA1 thus far, which is considered too weak as we already sample PDFs which cause a hash collision for the *official* SHA1 algo (and thus also collide in our b0rked SHA1 variant): while those can still be argued to be fringe case, I don't want to be bothered with this at all and thus choose to err on the side of 'better than SHA1B' here. Meanwhile, any library in here *may* contain weaker cryptographic hashes alongside: we won't be using those for **content hashing**.
@@ -20,16 +30,6 @@ The bit about **_"guaranteed"_ collision-free** is to be read as: hash algorithm
 
 - **tink** [📁](./tink) [🌐](https://github.com/GerHobbelt/tink) -- A multi-language, cross-platform library that provides cryptographic APIs that are secure, easy to use correctly, and hard(er) to misuse.
 - **tink-cc** [📁](./tink-cc) [🌐](https://github.com/GerHobbelt/tink-cc) -- Tink C++: Using crypto in your application shouldn't feel like juggling chainsaws in the dark. Tink is a crypto library written by a group of cryptographers and security engineers at Google. It was born out of our extensive experience working with Google's product teams, [fixing weaknesses in implementations](https://github.com/google/wycheproof), and providing simple APIs that can be used safely without needing a crypto background. Tink provides secure APIs that are easy to use correctly and hard(er) to misuse. It reduces common crypto pitfalls with user-centered design, careful implementation and code reviews, and extensive testing. At Google, Tink is one of the standard crypto libraries, and has been deployed in hundreds of products and systems.
-
-
-
-
-
-
-
-
-
-
 
 
 

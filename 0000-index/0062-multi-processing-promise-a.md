@@ -1,5 +1,15 @@
 
 
+
+
+
+
+
+
+
+
+
+
 ### multi-processing: Promise/A+
 
 The key distinction between Promises/A+ and `std::promise` in C++11 is that Promises/A+ provides non-blocking synchronization (via chaining function objects) and `std::promise` provides blocking synchronization (or polling). Both have their uses and one is not a direct replacement for the other.
@@ -26,16 +36,6 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - https://github.com/alxvasilev/cpp-promise -- Javascript-like C++ promise library
 - https://github.com/rhashimoto/poolqueue -- C++ Asynchronous Promises, inspired by Promises/A+.
 - https://github.com/YACLib/YACLib -- Yet Another lightweight C++ library for concurrent and parallel task execution.
-
-
-
-
-
-
-
-
-
-
 
 
 

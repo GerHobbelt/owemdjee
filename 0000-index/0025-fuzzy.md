@@ -1,5 +1,15 @@
 
 
+
+
+
+
+
+
+
+
+
+
 ### fuzzy matching
 
 - **FM-fast-match** [📁](./FM-fast-match) [🌐](https://github.com/GerHobbelt/FAsT-Match) -- FAsT-Match: a port of the Fast Affine Template Matching algorithm (Simon Korman, Daniel Reichman, Gilad Tsur, Shai Avidan, CVPR 2013, Portland)
@@ -36,16 +46,6 @@
   The above metrics are implemented in C++ with the help of OpenCV and are based on the original Matlab implementations provided by their developers.
 
 - **xor-and-binary-fuse-filter** [📁](./xor-and-binary-fuse-filter) [🌐](https://github.com/GerHobbelt/xor_singleheader) -- XOR and Binary Fuse Filter library: Bloom filters are used to quickly check whether an element is part of a set. Xor filters and binary fuse filters are faster and more concise alternative to Bloom filters. They are also smaller than cuckoo filters. They are used in [production systems](https://github.com/datafuselabs/databend).
-
-
-
-
-
-
-
-
-
-
 
 
 

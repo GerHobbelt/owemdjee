@@ -1,5 +1,15 @@
 
 
+
+
+
+
+
+
+
+
+
+
 ## Intermediate Data Storage / Caching / Hierarchical Data Stores (binary hOCR; document text revisions; ...)
 
 - **CacheLib** [📁](./CacheLib) [🌐](https://github.com/GerHobbelt/CacheLib) -- provides an in-process high performance caching mechanism, thread-safe API to build high throughput, low overhead caching services, with built-in ability to leverage DRAM and SSD caching transparently.
@@ -11,16 +21,6 @@
 - **lrucache11** [📁](./lrucache11) [🌐](https://github.com/GerHobbelt/lrucache11) -- A header only C++11 LRU Cache template class that allows you to define key, value and optionally the `Map` type. uses a double linked list and a `std::unordered_map` style container to provide fast insert, delete and update No dependencies other than the C++ standard library.
 - **pelikan** [📁](./pelikan) [🌐](https://github.com/GerHobbelt/pelikan) -- Pelikan is Twitter's unified cache backend.
 - **stlcache** [📁](./stlcache) [🌐](https://github.com/GerHobbelt/stlcache) -- STL::Cache is an in-memory cache for C++ applications. STL::Cache is just a simple wrapper over standard map, that implements some cache algorithms, thus allowing you to limit the storage size and automatically remove unused items from it. It is intended to be used for keeping any key/value data, especially when data's size are too big, to just put it into the map and keep the whole thing. With STL::Cache you could put enormous (really unlimited) amount of data into it, but it will store only some small part of your data. So re-usable data will be kept near your code and not so popular data will not spend expensive memory. STL::Cache uses configurable policies, for decisions, whether data are good, to be kept in cache or they should be thrown away. It is shipped with 8 policies and you are free to implement your own.
-
-
-
-
-
-
-
-
-
-
 
 
 

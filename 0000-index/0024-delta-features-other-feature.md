@@ -1,5 +1,15 @@
 
 
+
+
+
+
+
+
+
+
+
+
 ### _delta features_ & other feature extraction (see Qiqqa research notes)
 
 - **diffutils** [📁](./diffutils) [🌐](https://github.com/GerHobbelt/diffutils) -- the GNU diff, diff3, sdiff, and cmp utilities. Their features are a superset of the Unix features and they are significantly faster.
@@ -23,16 +33,6 @@
 - **ssdeep** [📁](./ssdeep) [🌐](https://github.com/GerHobbelt/ssdeep) -- fuzzy hashing library, can be used to assist with identifying almost identical files using context triggered piecewise hashing.
 - **xdelta** [📁](./xdelta) [🌐](https://github.com/GerHobbelt/xdelta) -- a C library and command-line tool for delta compression using VCDIFF/RFC 3284 streams.
 - **yara-pattern-matcher** [📁](./yara-pattern-matcher) [🌐](https://github.com/GerHobbelt/yara) -- for automated and user-specified pattern recognition in custom document & metadata *cleaning* / processing tasks
-
-
-
-
-
-
-
-
-
-
 
 
 

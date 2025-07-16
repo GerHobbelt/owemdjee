@@ -1,5 +1,15 @@
 
 
+
+
+
+
+
+
+
+
+
+
 ## audio files & processing
 
 Not just speech processing & speech recognition, but sometimes data is easier "visualized" as audio (sound).
@@ -17,16 +27,6 @@ Not just speech processing & speech recognition, but sometimes data is easier "v
 - **silk-v3-decoder** [📁](./silk-v3-decoder) [🌐](https://github.com/GerHobbelt/silk-v3-decoder) -- decodes Silk v3 audio files (like WeChat amr, aud files, qq slk files) and converts to other formats (like mp3).
 - **Solo** [📁](./Solo) [🌐](https://github.com/GerHobbelt/Solo) -- Agora SOLO is a speech codec, developed based on Silk with BWE(Bandwidth Extension) and MDC(Multi Description Coding). With these technologies, SOLO is able to resist weak networks at low bitrates. The main reason for SOLO to use bandwidth expansion is to reduce the computational complexity.
 - **speex** [📁](./speex) [🌐](https://github.com/GerHobbelt/speex) -- a patent-free voice codec. Unlike other codecs like MP3 and Ogg Vorbis, Speex is designed to compress voice at bitrates in the 2-45 kbps range. Possible applications include VoIP, internet audio streaming, archiving of speech data (e.g. voice mail), and audio books.
-
-
-
-
-
-
-
-
-
-
 
 
 

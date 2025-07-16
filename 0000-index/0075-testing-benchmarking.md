@@ -1,5 +1,15 @@
 
 
+
+
+
+
+
+
+
+
+
+
 ## testing, benchmarking & fuzzing
 
 - **AFLplusplus** [📁](./AFLplusplus) [🌐](https://github.com/GerHobbelt/AFLplusplus) -- American Fuzzy Lop plus plus (AFL++) is a superior fork to Google's AFL fuzzer - more speed, more and better mutations, more and better instrumentation, custom module support, etc.
@@ -43,16 +53,6 @@
 - **ut** [📁](./ut) [🌐](https://github.com/GerHobbelt/ut) -- C++ single header/single module, macro-free μ(micro)/Unit Testing Framework
 - **Verify** [📁](./Verify) [🌐](https://github.com/GerHobbelt/Verify) -- a snapshot tool that simplifies the assertion of complex data models and documents. Verify is called on the test result during the assertion phase. It serializes that result and stores it in a file that matches the test name. On the next test execution, the result is again serialized and compared to the existing file. The test will fail if the two snapshots do not match: either the change is unexpected, or the reference snapshot needs to be updated to the new result.
 - **zzuf** [📁](./zzuf) [🌐](https://github.com/GerHobbelt/zzuf) -- a transparent application input fuzzer. It works by intercepting file operations and changing random bits in the program's input. zzuf's behaviour is deterministic, making it easy to reproduce bugs.
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -1,5 +1,15 @@
 
 
+
+
+
+
+
+
+
+
+
+
 ### multi-processing: event handling, signals, asynchronous operation
 
 - **cpp.react** [📁](./cpp.react) [🌐](https://github.com/GerHobbelt/cpp.react) -- C++React is a reactive programming library for C++14. It enables the declarative definition of data dependencies between state and event flows. Based on these definitions, propagation of changes is handled automatically.
@@ -38,16 +48,6 @@
 - **signals-rt** [📁](./signals-rt) [🌐](https://github.com/GerHobbelt/signals-rt) -- this Signal-Slot library is optimized for video games (and probably other low-latency applications as well). Interestingly, even though the observer pattern is generally useful, it has never been standardized in C++, which leads to the never-ending attempts at improvements by curious people. Many signal-slot libraries do not focus on performance, e.g. `boost::signals2` [invocation can be 90x more expensive than a simple function call](https://stackoverflow.com/questions/22416860/is-boostsignals2-overkill-for-simple-applications). This work is based on previous [research](https://github.com/TheWisp/ImpossiblyFastEventCPP17) which focused on the syntax and performance improvements brought by a C++17 feature - `template<auto>`. This library is a combination of modern C++ exploration, system programming and data-structure design. It aims to become feature-complete like `boost::signals`, yet extremely light-weight - both run time and memory footprint - in order to replace _interface_ or `std::function` based callbacks. `signal` emission is **faster** than virtual function calls. Compared to virtual calls, `signal` calls only take between 22% and 77% of the time, depending on the number and the level of randomness of classes and objects.
 - **sigslot** [📁](./sigslot) [🌐](https://github.com/GerHobbelt/sigslot) -- a header-only, thread safe implementation of signal-slots for C++. The main goal was to replace Boost.Signals2.
 - **uvw** [📁](./uvw) [🌐](https://github.com/GerHobbelt/uvw) -- `libuv` wrapper in modern C++. `uvw` started as a header-only, event based, tiny and easy to use wrapper for [`libuv`](https://github.com/libuv/libuv) written in modern C++.  Now it's finally available also as a compilable static library. The basic idea is to wrap the *C-ish* interface of `libuv` behind a graceful C++ API.
-
-
-
-
-
-
-
-
-
-
 
 
 

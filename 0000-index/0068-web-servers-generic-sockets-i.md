@@ -1,5 +1,15 @@
 
 
+
+
+
+
+
+
+
+
+
+
 ## web servers, generic sockets I/O (IPC)
 
 - **civetweb** [📁](./civetweb) [🌐](https://github.com/GerHobbelt/civetweb) -- an easy to use, powerful, C (C/C++) embeddable web server with optional CGI, SSL and Lua support.
@@ -18,16 +28,6 @@
 - ~~**oatpp** [🌐](https://github.com/oatpp/oatpp) -- IPC / server framework~~
   
   - **removed**; reason: we've decided on using `crow` as the main server framework.
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -1,5 +1,15 @@
 
 
+
+
+
+
+
+
+
+
+
+
 ### multi-processing: invoking external applications
 
 - **cpplocate** [📁](./cpplocate) [🌐](https://github.com/GerHobbelt/cpplocate) -- a cross-platform C++ library that provides tools for applications to locate their binary files and data assets, as well as those of dependent modules.
@@ -15,16 +25,6 @@
 - https://github.com/pnappa/subprocesscpp -- A header-only library that allows you to execute processes either synchronously or asynchronously, whilst providing input and output handling. No more calling `exec` in C++!
 - https://github.com/rajatjain1997/subprocess -- A C++ high level library for running shell processes
 - https://github.com/sheredom/subprocess.h -- A one header solution to launching processes and interacting with them for C/C++.
-
-
-
-
-
-
-
-
-
-
 
 
 

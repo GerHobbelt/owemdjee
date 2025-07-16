@@ -1,5 +1,15 @@
 
 
+
+
+
+
+
+
+
+
+
+
 ### similarity search
 
 - **aho_corasick** [📁](./aho_corasick) [🌐](https://github.com/GerHobbelt/aho_corasick) -- a header only implementation of the Aho-Corasick pattern search algorithm invented by Alfred V. Aho and Margaret J. Corasick. It is a very efficient dictionary matching algorithm that can locate all search patterns against in input text simultaneously in O(n + m), with space complexity O(m) (where n is the length of the input text, and m is the combined length of the search patterns).
@@ -86,16 +96,6 @@
   The above metrics are implemented in C++ with the help of OpenCV and are based on the original Matlab implementations provided by their developers.
 
 - **xgboost** [📁](./xgboost) [🌐](https://github.com/GerHobbelt/xgboost) -- an optimized distributed gradient boosting library designed to be highly efficient, flexible and portable. It implements machine learning algorithms under the Gradient Boosting framework. XGBoost provides a parallel tree boosting (also known as GBDT, GBM) that solve many data science problems in a fast and accurate way. The same code runs on major distributed environment (Kubernetes, Hadoop, SGE, MPI, Dask) and can solve problems beyond billions of examples.
-
-
-
-
-
-
-
-
-
-
 
 
 

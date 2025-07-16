@@ -1,5 +1,15 @@
 
 
+
+
+
+
+
+
+
+
+
+
 ### Solvers, Clustering, Monte Carlo, Decision Trees
 
 - **adaptive_clustering** [📁](./adaptive_clustering) [🌐](https://github.com/GerHobbelt/adaptive_clustering) -- a lightweight and accurate point cloud clustering method from the paper Online learning for 3D LiDAR-based human detection: Experimental analysis of point cloud clustering and classification methods, Zhi Yan and Tom Duckett and Nicola Bellotto, 2019.
@@ -56,16 +66,6 @@
 - **theoretica** [📁](./theoretica) [🌐](https://github.com/GerHobbelt/theoretica) -- a numerical and automatic math library for scientific research and graphical applications. Theoretica is a header-only mathematical library which provides algorithms for **systems simulation**, **statistical analysis** of lab data and **numerical approximation**, using a **functional** oriented paradigm to mimic **mathematical notation** and formulas. The aim of the library is to provide _simple_ access to powerful algorithms while keeping an _elegant_ and _transparent_ interface, enabling the user to focus on the problem at hand.
 - **thrill** [📁](./thrill) [🌐](https://github.com/GerHobbelt/thrill) -- an *EXPERIMENTAL* C++ framework for algorithmic distributed Big Data batch computations on a cluster of machines. More information at [http://project-thrill.org](http://project-thrill.org).
 - **uno-solver** [📁](./uno-solver) [🌐](https://github.com/GerHobbelt/Uno) -- a modern, modular solver for nonlinearly constrained nonconvex optimization.
-
-
-
-
-
-
-
-
-
-
 
 
 

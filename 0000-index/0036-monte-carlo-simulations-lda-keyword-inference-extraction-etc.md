@@ -1,5 +1,15 @@
 
 
+
+
+
+
+
+
+
+
+
+
 ### Monte Carlo simulations, LDA, keyword inference/extraction, etc.
 
 - **ceres-solver** [📁](./ceres-solver) [🌐](https://github.com/GerHobbelt/ceres-solver) -- a library for modeling and solving large, complicated optimization problems. It is a feature rich, mature and performant library which has been used in production at Google since 2010. Ceres Solver can solve two kinds of problems: (1) Non-linear Least Squares problems with bounds constraints, and (2) General unconstrained optimization problems.
@@ -29,16 +39,6 @@
   * [Hierarchical Dirichlet Process (with Split-Merge Operations), Chong Wang](https://github.com/renaud/hdp-faster)
   * [Hierarchical Latent Tree Analysis (HLTA)](https://github.com/kmpoon/hlta)
   * [Leonard Poon - various works](https://github.com/kmpoon?tab=repositories)
-
-
-
-
-
-
-
-
-
-
 
 
 

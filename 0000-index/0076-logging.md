@@ -1,5 +1,15 @@
 
 
+
+
+
+
+
+
+
+
+
+
 ## logging & debugging
 
 - **binary_log** [📁](./binary_log) [🌐](https://github.com/GerHobbelt/binary_log) -- a fast C++20 library which logs messages in a compact binary format while using [fmtlib](https://github.com/fmtlib/fmt) to format the logs.
@@ -62,16 +72,6 @@
 - ~~**zlog** [🌐](https://github.com/HardySimpson/zlog)~~
   
   - **removed**; `zlog` has a nice overall design but is too 'Unix-is-the-world' in its coding: in the end it was ease of cross-platform compilation of `glog`/`spdlog` that won the day and I'm okay with layering on top of that one to get the zlog category and other channel features, once I really need them.
-
-
-
-
-
-
-
-
-
-
 
 
 

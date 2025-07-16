@@ -1,5 +1,15 @@
 
 
+
+
+
+
+
+
+
+
+
+
 ### multi-processing: thread pools
 
 - **concurrencpp** [📁](./concurrencpp) [🌐](https://github.com/GerHobbelt/concurrencpp) -- the C++ concurrency library: concurrencpp is a tasking library for C++ allowing developers to write highly concurrent applications easily and safely by using tasks, executors and coroutines.
@@ -14,16 +24,6 @@
 abstraction without sacrificing performance. Whether you are targeting a single machine, a data center, or the cloud, CAF provides the necessary tools to implement robust, scalable, and maintainable software.
 
 - **stdexec** [📁](./stdexec) [🌐](https://github.com/GerHobbelt/stdexec) -- `stdexec` is an experimental reference implementation of the _Senders_ model of asynchronous programming proposed by [**P2300 - `std::execution`**](http://wg21.link/p2300) for adoption into the C++ Standard. _Senders_ is a Standard Model for Asynchronous Execution in C++.
-
-
-
-
-
-
-
-
-
-
 
 
 

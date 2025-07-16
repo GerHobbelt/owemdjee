@@ -1,5 +1,15 @@
 
 
+
+
+
+
+
+
+
+
+
+
 ### CPU features & capabilities detection
 
 - **cppuprofile** [📁](./cppuprofile) [🌐](https://github.com/GerHobbelt/cppuprofile) -- provides a tiny C++ profiling library for monitoring execution time, CPU(s) usage, memory usage and GPU(s) usage and memory. Those metrics can be useful to check that load is properly spread onto all CPU cores or that memory is not starved.
@@ -26,16 +36,6 @@
 - ~~**cpu_stat** [🌐](https://github.com/vivaladav/cpu-stat)~~
   
   - **removed**; reason: Linux-only, non-portable, deemed unsuitable for our needs.
-
-
-
-
-
-
-
-
-
-
 
 
 

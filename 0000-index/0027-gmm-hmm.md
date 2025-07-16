@@ -1,5 +1,15 @@
 
 
+
+
+
+
+
+
+
+
+
+
 ### GMM/HMM/kM
 
 Guassian Mixture Models / Hidden Markov Models / k-Means: fit patterns, e.g. match & transform a point cloud or image onto a template --> help matching pages against banner templates, etc. as part of the OCR/recognition task.
@@ -9,16 +19,6 @@ Guassian Mixture Models / Hidden Markov Models / k-Means: fit patterns, e.g. mat
 - **hmm-scalable** [📁](./hmm-scalable) [🌐](https://github.com/GerHobbelt/hmm-scalable) -- a Tool for fitting Hidden Markov Models models at scale. In particular, it is targeting a specific kind of HMM used in education called Bayesian Knowledge Tracing (BKT) model.
 - **hmm-stoch** [📁](./hmm-stoch) [🌐](https://github.com/GerHobbelt/StochHMM) -- StochHMM - A Flexible hidden Markov model application and C++ library that implements HMM from simple text files.   It implements traditional HMM algorithms in addition to providing additional flexibility.  The additional flexibility is achieved by allowing researchers to integrate additional data sources and application code into the HMM framework.
 - **liblinear** [📁](./liblinear) [🌐](https://github.com/GerHobbelt/liblinear) -- a simple package for solving large-scale regularized linear classification, regression and outlier detection.
-
-
-
-
-
-
-
-
-
-
 
 
 
