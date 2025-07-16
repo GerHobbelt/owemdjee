@@ -1,6 +1,22 @@
 # owemdjee
 
+
+
+
+
+
+
+
+
 <!-- 📁🌐 force Notepad++ to recognize UTF8: 📁🌐 -->
+
+
+
+
+
+
+
+
 
 Data Science & Image Processing amalgam library in C/C++.
 
@@ -10,7 +26,20 @@ The heavy data lifting will be done in the referenced libraries, while this lib 
 
 
 
+
+
+
+
+
 <!-- *toc* -->
+
+
+
+
+
+
+
+
 
 * [TOC](#owemdjee)
     * [Reason for this repo](#reason-for-this-repo)
@@ -29,22 +58,15 @@ The heavy data lifting will be done in the referenced libraries, while this lib 
 
 ---
 
+
+
+
+
+
+
+
+
 <!-- *toc::ALL* -->
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- *split* -->
-
-
 
 
 
@@ -131,7 +153,7 @@ For that purpose, this repo is a *solution*, though -- granted -- a *sub-optimal
 
 ---
 
-<!-- *split* -->
+
 
 
 
@@ -145,13 +167,10 @@ For that purpose, this repo is a *solution*, though -- granted -- a *sub-optimal
 
 # Intent
 
-<!-- *toc* -->
-
 * [TOC](#intent)
     * [Inter-process communications (IPC)](#inter-process-communications-ipc)
     * [Programming Languages used: *intent and purposes*](#programming-languages-used-intent-and-purposes)
     * [Scripting the System: Languages Considered for Scripting by Users](#scripting-the-system-languages-considered-for-scripting-by-users)
-<!-- *split* -->
 
 
 
@@ -168,18 +187,6 @@ For that purpose, this repo is a *solution*, though -- granted -- a *sub-optimal
 Lowest possible **run-time** cost, a.k.a. "run-time overhead": the aim is to have IPC which does not noticably impact UX (User Experience of the application: responsiveness / UI) on reeasonably powered machines. (Users are *not* expected to have the latest or fastest hardware.)
 
 As *at least* large images will be transfered (PDF page renders) we need to have a binary-able protocol.
-
-
-
-
-
-
-
-
-
-
-
-<!-- *split* -->
 
 
 
@@ -224,18 +231,6 @@ We **may** **probably** choose to use a web-centric UI approach where images are
 
 
 
-<!-- *split* -->
-
-
-
-
-
-
-
-
-
-
-
 ## Scripting the System: Languages Considered for Scripting by Users
 
 Python has been considered. Given its loud presence in the AI communities, we still may integrate it one day. However, personally I'm not a big fan of the language and don't use it unless it's *prudent to do*, e.g. when extending or tweaking previous works produced by others.
@@ -263,6 +258,48 @@ The other JavaScript engines considered are of varying size, performance and com
 
 
 
+<!-- *split* -->
+
+
+
+
+
+
+
+
+
+## Script Languages for embedding in C/C++ applications
+
+The various embeddable script languages that peaked our interest (at one time or more often...)
+
+
+
+
+
+
+
+
+
+<!-- *toc* -->
+
+
+
+
+
+
+
+
+
+<!-- *split* -->
+
+
+
+
+
+
+
+
+
 
 
 ### Python(esque)
@@ -274,6 +311,14 @@ The other JavaScript engines considered are of varying size, performance and com
 - **pocketlang** [📁](./pocketlang) [🌐](https://github.com/GerHobbelt/pocketlang) -- a lightweight (~3000 semicolons) and [fast](https://github.com/ThakeeNathees/pocketlang#performance) object oriented, embeddable scripting language written in C. It has a ruby flavoured python syntax, that can be learned [within 15 minutes](https://thakeenathees.github.io/pocketlang/docs/v0.1.0/Reference/Cheat-Sheet.html). Including the compiler, bytecode VM and runtime, it's a standalone executable with zero external dependencies just as it's self descriptive name. The pocketlang VM can be embedded in another hosting program very easily.
 
 
+
+
+
+
+
+
+
+<!-- *split* -->
 
 
 
@@ -296,6 +341,14 @@ The other JavaScript engines considered are of varying size, performance and com
 
 
 
+<!-- *split* -->
+
+
+
+
+
+
+
 
 
 ### Expression Parsers of various kinds
@@ -306,6 +359,14 @@ The other JavaScript engines considered are of varying size, performance and com
 - **tinyexpr** [📁](./tinyexpr) [🌐](https://github.com/GerHobbelt/tinyexpr) -- a very small recursive descent parser and evaluation engine for math expressions.
 
 
+
+
+
+
+
+
+
+<!-- *split* -->
 
 
 
@@ -351,6 +412,14 @@ The other JavaScript engines considered are of varying size, performance and com
 
 
 
+<!-- *split* -->
+
+
+
+
+
+
+
 
 
 ### Igor's Lisp, Vetinari's Scheming, ...
@@ -371,6 +440,14 @@ The other JavaScript engines considered are of varying size, performance and com
 
 
 
+<!-- *split* -->
+
+
+
+
+
+
+
 
 
 ### Smalltalk, ...
@@ -379,6 +456,14 @@ The other JavaScript engines considered are of varying size, performance and com
 - **wren** [📁](./wren) [🌐](https://github.com/GerHobbelt/wren) -- Wren is a small, fast, class-based concurrent scripting language: think Smalltalk in a Lua-sized package with a dash of Erlang and wrapped up in a familiar, modern syntax.
 
 
+
+
+
+
+
+
+
+<!-- *split* -->
 
 
 
@@ -402,6 +487,14 @@ The other JavaScript engines considered are of varying size, performance and com
 
 
 
+<!-- *split* -->
+
+
+
+
+
+
+
 
 
 ### Luaäuwitudinational
@@ -411,6 +504,14 @@ The other JavaScript engines considered are of varying size, performance and com
 - **squirrel** [📁](./squirrel) [🌐](https://github.com/GerHobbelt/squirrel) -- the programming language SQUIRREL 3 [http://www.squirrel-lang.org/ squirrel scripting language] seeks to address some problems of lua language and offer a C like syntax with some god extras but it lacks a source code repository and some facilities provided by default in lua like string.gsub, string.gmatch, io.lines, modules, ..., this project try to solve it and extend the language to make it even more useful.
 
 
+
+
+
+
+
+
+
+<!-- *split* -->
 
 
 
@@ -436,6 +537,14 @@ The other JavaScript engines considered are of varying size, performance and com
 
 
 
+<!-- *split* -->
+
+
+
+
+
+
+
 
 
 ### Rubyism, Various others...
@@ -445,6 +554,14 @@ The other JavaScript engines considered are of varying size, performance and com
 - **pocketlang** [📁](./pocketlang) [🌐](https://github.com/GerHobbelt/pocketlang) -- a lightweight (~3000 semicolons) and [fast](https://github.com/ThakeeNathees/pocketlang#performance) object oriented, embeddable scripting language written in C. It has a ruby flavoured python syntax, that can be learned [within 15 minutes](https://thakeenathees.github.io/pocketlang/docs/v0.1.0/Reference/Cheat-Sheet.html). Including the compiler, bytecode VM and runtime, it's a standalone executable with zero external dependencies just as it's self descriptive name. The pocketlang VM can be embedded in another hosting program very easily.
 
 
+
+
+
+
+
+
+
+<!-- *split* -->
 
 
 
@@ -467,6 +584,14 @@ The other JavaScript engines considered are of varying size, performance and com
 
 
 
+<!-- *split* -->
+
+
+
+
+
+
+
 
 
 ### El BASICque
@@ -474,6 +599,14 @@ The other JavaScript engines considered are of varying size, performance and com
 - **my_basic** [📁](./my_basic) [🌐](https://github.com/GerHobbelt/my_basic) -- MY-BASIC is a lightweight BASIC interpreter written in standard C in dual files. It aims to be embeddable, extendable and portable. It is a dynamic typed programming language, reserves structured syntax, supports a style of [prototype-based programming](https://en.wikipedia.org/wiki/Prototype-based_programming) (OOP), also implements a functional paradigm by [lambda abstraction](https://en.wikipedia.org/wiki/Anonymous_function). The core is written in a C source file and an associated header file. It's easy to either use it as a standalone interpreter or embed it with existing projects in C, C++, Java, Objective-C, Swift, C#, etc. and totally customizable by adding your own scripting interface.
 
 
+
+
+
+
+
+
+
+<!-- *split* -->
 
 
 
@@ -492,6 +625,14 @@ The other JavaScript engines considered are of varying size, performance and com
 - **wxVisualScriptEngine** [📁](./wxVisualScriptEngine) [🌐](https://github.com/GerHobbelt/VisualScriptEngineWxWidgets) -- a utility module for [VisualScriptEngine](https://github.com/kovacsv/VisualScriptEngine) which provides helper classes for embedding the engine in a wxWidgets application.
 
 
+
+
+
+
+
+
+
+<!-- *split* -->
 
 
 
@@ -527,9 +668,15 @@ The other JavaScript engines considered are of varying size, performance and com
 
 ---
 
+
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -541,7 +688,23 @@ The other JavaScript engines considered are of varying size, performance and com
 
 # Libraries we're looking at for this *intent*:
 
+
+
+
+
+
+
+
+
 <!-- *toc* -->
+
+
+
+
+
+
+
+
 
 * [TOC](#libraries-we-re-looking-at-for-this-intent)
     * [IPC: flatbuffer et al for protocol design](#ipc-flatbuffer-et-al-for-protocol-design)
@@ -627,13 +790,20 @@ The other JavaScript engines considered are of varying size, performance and com
     * [Microsoft Word, Google Docs, LibreOffice: application integration](#microsoft-word-google-docs-libreoffice-application-integration)
     * [XML & XSLT tooling](#xml--xslt-tooling)
     * [Microsoft DOCX ~ OpenXML & other XML & XSLT tooling](#microsoft-docx--openxml--other-xml--xslt-tooling)
-    * [Misc. / Other](#misc--other)
+    * [Misc. Uncategorized](#misc-uncategorized)
     * [sub-dependencies (libraries which are required by any of the above)](#sub-dependencies-libraries-which-are-required-by-any-of-the-above)
 * [Libraries in this collection (All of the above, listed in alphabetical order)](#libraries-in-this-collection-all-of-the-above-listed-in-alphabetical-order)
 * [TBD: Libraries which still need to be moved into the overview / categories above...](#tbd-libraries-which-still-need-to-be-moved-into-the-overview--categories-above)
+
+
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -708,9 +878,14 @@ The other JavaScript engines considered are of varying size, performance and com
   - **removed**; reason: see `flatbuffers`. When we don't dig `flatbuffers`, then `flatcc` is automatically pretty useless to us. Let's rephrase that professionally: "`flatcc` has moved out of scope for our project."
 
 
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -779,9 +954,14 @@ Also, we are currently more interested in *fast data serialization* then RPC *pe
   - **removed**; reason: see `crow`. We have picked `crow` as the preferred way forward, so any similar/competing product is out of scope unless `crow` throws a tantrum on our test bench after all, the chances of that being *very slim*.
 
 
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -797,9 +977,15 @@ Also, we are currently more interested in *fast data serialization* then RPC *pe
 - **libCZMQ** [📁](./libCZMQ) [🌐](https://github.com/GerHobbelt/czmq) -- High-level C binding for ØMQ. (http://czmq.zeromq.org/)
 - **libzmq** [📁](./libzmq) [🌐](https://github.com/GerHobbelt/libzmq) -- ZeroMQ core engine in C++, implements [ZMTP/3.1](https://zguide.zeromq.org/).
 
+
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -840,9 +1026,15 @@ Also, we are currently more interested in *fast data serialization* then RPC *pe
 - **tcpshm** [📁](./tcpshm) [🌐](https://github.com/GerHobbelt/tcpshm) -- a connection-oriented persistent message queue framework based on TCP or SHM IPC for Linux. TCPSHM provides a reliable and efficient solution based on a sequence number and acknowledge mechanism, that every sent out msg is persisted in a send queue until sender got ack that it's been consumed by the receiver, so that disconnects/crashes are tolerated and the recovery process is purely automatic.
 - **thrill** [📁](./thrill) [🌐](https://github.com/GerHobbelt/thrill) -- an *EXPERIMENTAL* C++ framework for algorithmic distributed Big Data batch computations on a cluster of machines. More information at [http://project-thrill.org](http://project-thrill.org).
 
+
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -876,9 +1068,14 @@ Also, we are currently more interested in *fast data serialization* then RPC *pe
     - YAML
 
 
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -903,9 +1100,15 @@ Also, we are currently more interested in *fast data serialization* then RPC *pe
 
 - **tinycbor** [📁](./tinycbor) [🌐](https://github.com/GerHobbelt/tinycbor) -- Concise Binary Object Representation (CBOR) library for serializing data to disk or message channel.
 
+
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -929,11 +1132,7 @@ The more human readable formats (YAML, TOML, ...) are intended for human to mach
 
 
 
-
-
 <!-- *split* -->
-
-
 
 
 
@@ -964,9 +1163,15 @@ The bit about **_"guaranteed"_ collision-free** is to be read as: hash algorithm
 - **tink** [📁](./tink) [🌐](https://github.com/GerHobbelt/tink) -- A multi-language, cross-platform library that provides cryptographic APIs that are secure, easy to use correctly, and hard(er) to misuse.
 - **tink-cc** [📁](./tink-cc) [🌐](https://github.com/GerHobbelt/tink-cc) -- Tink C++: Using crypto in your application shouldn't feel like juggling chainsaws in the dark. Tink is a crypto library written by a group of cryptographers and security engineers at Google. It was born out of our extensive experience working with Google's product teams, [fixing weaknesses in implementations](https://github.com/google/wycheproof), and providing simple APIs that can be used safely without needing a crypto background. Tink provides secure APIs that are easy to use correctly and hard(er) to misuse. It reduces common crypto pitfalls with user-centered design, careful implementation and code reviews, and extensive testing. At Google, Tink is one of the standard crypto libraries, and has been deployed in hundreds of products and systems.
 
+
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -1105,9 +1310,14 @@ These hashes are for other purposes, e.g. fast lookup in dictionaries, fast appr
   - **removed**; reason: written in Go; port to C/C++ is easy but just too much effort for too little gain; when we're looking for *fast* non-cryptographic hashes like this, we don't appreciate it to include 128-bit / 64-bit multiplications as those are generally slower than shift, add, xor. While this will surely be a nice hash, it doesn't fit our purposes.
 
 
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -1129,9 +1339,15 @@ These hashes are for other purposes, e.g. fast lookup in dictionaries, fast appr
 - **pelikan** [📁](./pelikan) [🌐](https://github.com/GerHobbelt/pelikan) -- Pelikan is Twitter's unified cache backend.
 - **stlcache** [📁](./stlcache) [🌐](https://github.com/GerHobbelt/stlcache) -- STL::Cache is an in-memory cache for C++ applications. STL::Cache is just a simple wrapper over standard map, that implements some cache algorithms, thus allowing you to limit the storage size and automatically remove unused items from it. It is intended to be used for keeping any key/value data, especially when data's size are too big, to just put it into the map and keep the whole thing. With STL::Cache you could put enormous (really unlimited) amount of data into it, but it will store only some small part of your data. So re-usable data will be kept near your code and not so popular data will not spend expensive memory. STL::Cache uses configurable policies, for decisions, whether data are good, to be kept in cache or they should be thrown away. It is shipped with 8 policies and you are free to implement your own.
 
+
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -1185,9 +1401,15 @@ These hashes are for other purposes, e.g. fast lookup in dictionaries, fast appr
 - **vmem** [📁](./vmem) [🌐](https://github.com/GerHobbelt/vmem) -- **libvmem** and **libvmmalloc** are a couple of libraries for using persistent memory for malloc-like volatile uses.  They have historically been a part of [PMDK](https://pmem.io/pmdk) despite being solely for volatile uses. You may want consider using [memkind](https://github.com/memkind/memkind) instead in code that benefits from extra features like NUMA awareness.
 - **vmemcache** [📁](./vmemcache) [🌐](https://github.com/GerHobbelt/vmemcache) -- **libvmemcache** is an embeddable and lightweight in-memory buffered LRU caching solution. It's designed to fully take advantage of large capacity memory, such as Persistent Memory with DAX, through memory mapping in an efficient and scalable way.
 
+
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -1212,9 +1434,14 @@ These hashes are for other purposes, e.g. fast lookup in dictionaries, fast appr
   - **removed**; reason: see the `HDF5` entry above.
 
 
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -1293,9 +1520,14 @@ These hashes are for other purposes, e.g. fast lookup in dictionaries, fast appr
   - **removed**; reason: see `lzo2` above. When we want this, we can go through [Apache Tika](https://tika.apache.org/) or other thirdparty pipelines.
 
 
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -1319,9 +1551,15 @@ These hashes are for other purposes, e.g. fast lookup in dictionaries, fast appr
 - **vcopy** [📁](./vcopy) [🌐](https://github.com/GerHobbelt/vcopy) -- tool to safely copy files across various (local) hardware under circumstances where there may be another file writer active at the same time and/or the (USB?) connection is sometimes flakey or system I/O drivers buggered.
 - **zsync2** [📁](./zsync2) [🌐](https://github.com/GerHobbelt/zsync2) -- the advanced file download/sync tool zsync. zsync is a well known tool for downloading and updating local files from HTTP servers using the well known algorithms rsync used for diffing binary files. Therefore, it becomes possible to synchronize modifications by exchanging the changed blocks locally using `Range:` requests. The system is based on meta files called `.zsync` files. They contain hash sums for every block of data. The file is generated from and stored along with the actual file it refers to. Due to how system works, nothing but a "dumb" HTTP server is required to make use of zsync2. This makes it easy to integrate zsync2 into existing systems.
 
+
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -1341,9 +1579,14 @@ These hashes are for other purposes, e.g. fast lookup in dictionaries, fast appr
   hOCR is a format for representing OCR output, including layout information, character confidences, bounding boxes, and style information. It embeds this information invisibly in standard HTML. By building on standard HTML, it automatically inherits well-defined support for most scripts, languages, and common layout options. Furthermore, unlike previous OCR formats, the recognized text and OCR-related information co-exist in the same file and survives editing and manipulation. hOCR markup is independent of the presentation.
 
 
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -1357,8 +1600,15 @@ These hashes are for other purposes, e.g. fast lookup in dictionaries, fast appr
 
 "A.I." for cover pages, image/page *segmentation*, including abstract & summary demarcation, "figure" and "table" detection & extraction from documents, ...
 
-<!-- *toc* -->
 
+
+
+
+
+
+
+
+<!-- *toc* -->
 
 
 
@@ -1449,9 +1699,15 @@ These hashes are for other purposes, e.g. fast lookup in dictionaries, fast appr
 - **universal-numbers** [📁](./universal-numbers) [🌐](https://github.com/GerHobbelt/universal) -- a header-only C++ template library for universal number arithmetic. The goal of the Universal Numbers Library is to offer applications alternatives to IEEE floating-point that are more efficient and mathematically robust. The Universal library is a ready-to-use header-only library that provides plug-in replacement for native types, and provides a low-friction environment to start exploring alternatives to IEEE floating-point in your own algorithms.
 - **xsimd** [📁](./xsimd) [🌐](https://github.com/GerHobbelt/xsimd) -- SIMD (Single Instruction, Multiple Data) instructions differ between microprocessor vendors and compilers. `xsimd` provides a unified means for using these features for library authors. It enables manipulation of batches of numbers with the same arithmetic operators as for single values. It also provides accelerated implementation of common mathematical functions operating on batches.
 
+
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -1485,9 +1741,15 @@ These hashes are for other purposes, e.g. fast lookup in dictionaries, fast appr
 - **xdelta** [📁](./xdelta) [🌐](https://github.com/GerHobbelt/xdelta) -- a C library and command-line tool for delta compression using VCDIFF/RFC 3284 streams.
 - **yara-pattern-matcher** [📁](./yara-pattern-matcher) [🌐](https://github.com/GerHobbelt/yara) -- for automated and user-specified pattern recognition in custom document & metadata *cleaning* / processing tasks
 
+
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -1534,9 +1796,15 @@ These hashes are for other purposes, e.g. fast lookup in dictionaries, fast appr
 
 - **xor-and-binary-fuse-filter** [📁](./xor-and-binary-fuse-filter) [🌐](https://github.com/GerHobbelt/xor_singleheader) -- XOR and Binary Fuse Filter library: Bloom filters are used to quickly check whether an element is part of a set. Xor filters and binary fuse filters are faster and more concise alternative to Bloom filters. They are also smaller than cuckoo filters. They are used in [production systems](https://github.com/datafuselabs/databend).
 
+
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -1555,9 +1823,15 @@ These hashes are for other purposes, e.g. fast lookup in dictionaries, fast appr
 - **treelite** [📁](./treelite) [🌐](https://github.com/GerHobbelt/treelite) -- **Treelite** is a universal model exchange and serialization format for decision tree forests. Treelite aims to be a small library that enables other C++ applications to exchange and store decision trees on the disk as well as the network.
 - **yggdrasil-decision-forests** [📁](./yggdrasil-decision-forests) [🌐](https://github.com/GerHobbelt/yggdrasil-decision-forests) -- Yggdrasil Decision Forests (YDF) is a production-grade collection of algorithms for the training, serving, and interpretation of decision forest models. YDF is open-source and is available in C++, command-line interface (CLI), TensorFlow (under the name [TensorFlow Decision Forests](https://github.com/tensorflow/decision-forests); TF-DF), JavaScript (inference only), and Go (inference only).
 
+
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -1577,9 +1851,15 @@ Guassian Mixture Models / Hidden Markov Models / k-Means: fit patterns, e.g. mat
 - **hmm-stoch** [📁](./hmm-stoch) [🌐](https://github.com/GerHobbelt/StochHMM) -- StochHMM - A Flexible hidden Markov model application and C++ library that implements HMM from simple text files.   It implements traditional HMM algorithms in addition to providing additional flexibility.  The additional flexibility is achieved by allowing researchers to integrate additional data sources and application code into the HMM framework.
 - **liblinear** [📁](./liblinear) [🌐](https://github.com/GerHobbelt/liblinear) -- a simple package for solving large-scale regularized linear classification, regression and outlier detection.
 
+
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -1610,9 +1890,15 @@ Guassian Mixture Models / Hidden Markov Models / k-Means: fit patterns, e.g. mat
 - **ogdf** [📁](./ogdf) [🌐](https://github.com/GerHobbelt/ogdf) -- OGDF stands both for **O**pen **G**raph **D**rawing **F**ramework (the original name) and **O**pen **G**raph algorithms and **D**ata structures **F**ramework. OGDF is a self-contained C++ library for graph algorithms, in particular for (but not restricted to) automatic graph drawing. It offers sophisticated algorithms and data structures to use within your own applications or scientific projects.
 - **snap** [📁](./snap) [🌐](https://github.com/GerHobbelt/snap) -- Stanford Network Analysis Platform (SNAP) is a general purpose, high performance system for analysis and manipulation of large networks. SNAP scales to massive graphs with hundreds of millions of nodes and billions of edges.
 
+
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -1792,9 +2078,15 @@ Guassian Mixture Models / Hidden Markov Models / k-Means: fit patterns, e.g. mat
 - **yara-pattern-matcher** [📁](./yara-pattern-matcher) [🌐](https://github.com/GerHobbelt/yara) -- for automated and user-specified pattern recognition in custom document & metadata *cleaning* / processing tasks
 - **ZQCNN** [📁](./ZQCNN) [🌐](https://github.com/GerHobbelt/ZQCNN) -- ZQCNN is an inference framework that can run under windows, linux and arm-linux. At the same time, there are some demos related to face detection and recognition.
 
+
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -1891,9 +2183,15 @@ Guassian Mixture Models / Hidden Markov Models / k-Means: fit patterns, e.g. mat
 
 - **xgboost** [📁](./xgboost) [🌐](https://github.com/GerHobbelt/xgboost) -- an optimized distributed gradient boosting library designed to be highly efficient, flexible and portable. It implements machine learning algorithms under the Gradient Boosting framework. XGBoost provides a parallel tree boosting (also known as GBDT, GBM) that solve many data science problems in a fast and accurate way. The same code runs on major distributed environment (Kubernetes, Hadoop, SGE, MPI, Dask) and can solve problems beyond billions of examples.
 
+
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -1963,9 +2261,15 @@ i.e. breaking text into words when you _receive a textstream without spaces_. Al
 - **wordfrequency** [📁](./wordfrequency) [🌐](https://github.com/GerHobbelt/FrequencyWords) -- FrequencyWords: Frequency Word List Generator and processed files.
 - **you-token-to-me** [📁](./you-token-to-me) [🌐](https://github.com/GerHobbelt/YouTokenToMe) -- text tokenization
 
+
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -1999,9 +2303,15 @@ i.e. breaking text into words when you _receive a textstream without spaces_. Al
 - **ugrep** [📁](./ugrep) [🌐](https://github.com/GerHobbelt/ugrep) -- search for anything in everything... ultra fast. "*`grep` for arbitrary binary files*."
 - **yara-pattern-matcher** [📁](./yara-pattern-matcher) [🌐](https://github.com/GerHobbelt/yara) -- for automated and user-specified pattern recognition in custom document & metadata *cleaning* / processing tasks
 
+
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -2052,9 +2362,15 @@ i.e. breaking text into words when you _receive a textstream without spaces_. Al
 - **unicode-inflection** [📁](./unicode-inflection) [🌐](https://github.com/GerHobbelt/inflection) -- Code, data and documentation solving language inflection problems. [Inflection](https://en.wikipedia.org/wiki/Inflection) is the process of changing the form of a word to express different grammatical features, such as tense, number, gender, or case. In many languages, inflection is a complex and nuanced process, and it can be difficult to implement inflection correctly in software. This can lead to an inability to express native sounding sentences or to errors in text processing, such as incorrect word forms or incorrect grammatical agreement.
 - **unpaper** [📁](./unpaper) [🌐](https://github.com/GerHobbelt/unpaper) -- a post-processing tool for scanned sheets of paper, especially for book pages that have been scanned from previously created photocopies.  The main purpose is to make scanned book pages better readable on screen after conversion to PDF. The program also tries to detect misaligned centering and rotation of ages and will automatically straighten each page by rotating it to the correct angle (a.k.a. deskewing).
 
+
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -2238,9 +2554,15 @@ i.e. breaking text into words when you _receive a textstream without spaces_. Al
 - **xbrzscale** [📁](./xbrzscale) [🌐](https://github.com/GerHobbelt/xbrzscale) -- xBRZ upscaling commandline tool. This tool allows you to scale your graphics with xBRZ algorithm, see https://en.wikipedia.org/wiki/Pixel-art_scaling_algorithms#xBR_family
 - **zimg** [📁](./zimg) [🌐](https://github.com/GerHobbelt/zimg) -- the "z" library implements the commonly required image processing basics of scaling, colorspace conversion, and depth conversion. A simple API enables conversion between any supported formats to operate with minimal knowledge from the programmer. All library routines were designed from the ground-up with correctness, flexibility, and thread-safety as first priorities.
 
+
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -2360,9 +2682,14 @@ i.e. breaking text into words when you _receive a textstream without spaces_. Al
   - **removed**; reason: not a frequently used format; the filter codes can be found in other libraries. *Overkill*. Qiqqa tooling can use [Apache Tika](https://tika.apache.org/), [ImageMagick](https://imagemagick.org/) or other thirdparty pipelines to convert to & from supported formats.
 
 
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -2403,9 +2730,14 @@ i.e. breaking text into words when you _receive a textstream without spaces_. Al
   * [Leonard Poon - various works](https://github.com/kmpoon?tab=repositories)
 
 
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -2432,9 +2764,15 @@ i.e. breaking text into words when you _receive a textstream without spaces_. Al
 - **trng4** [📁](./trng4) [🌐](https://github.com/GerHobbelt/trng4) -- Tina’s Random Number Generator Library (TRNG) is a state of the art C++ pseudo-random number generator library for sequential and parallel Monte Carlo simulations. Its design principles are based on the extensible random number generator facility that was introduced in the C++11 standard. The TRNG library features an object oriented design, is easy to use and has been speed optimized. Its implementation does not depend on any communication library or hardware architecture.
 - **Xoshiro-cpp** [📁](./Xoshiro-cpp) [🌐](https://github.com/GerHobbelt/Xoshiro-cpp) -- a header-only pseudorandom number generator library for modern C++. Based on **David Blackman and Sebastiano Vigna's [xoshiro/xoroshiro generators](http://prng.di.unimi.it/)**.
 
+
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -2501,9 +2839,15 @@ i.e. breaking text into words when you _receive a textstream without spaces_. Al
 - **TrianglePP** [📁](./TrianglePP) [🌐](https://github.com/GerHobbelt/TrianglePP) -- Triangle++ is a C++ wrapper for the original J.P. Shevchuk's 2005 C-language *Triangle* package. The library can create standard **Delaunay** triangulations and their duals, i.e. **Voronoi** diagrams (aka Dirichlet tessellations). Additionally it can generate **quality Delaunay** triangulations (where we can set bounds on the areas and angles of the resulting triangles) and **constrained Delaunay** triangulations (where we can connect some points with and edge and require that this edge will be part of the result).
 - **tweeny** [📁](./tweeny) [🌐](https://github.com/GerHobbelt/tweeny) -- an inbetweening library designed for the creation of complex animations for games and other beautiful interactive software. It leverages features of modern C++ to empower developers with an intuitive API for declaring tweenings of any type of value, as long as they support arithmetic operations. The goal of Tweeny is to provide means to create fluid interpolations when animating position, scale, rotation, frames or other values of screen objects, by setting their values as the tween starting point and then, after each tween step, plugging back the result.
 
+
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -2570,9 +2914,15 @@ i.e. breaking text into words when you _receive a textstream without spaces_. Al
 - **thrill** [📁](./thrill) [🌐](https://github.com/GerHobbelt/thrill) -- an *EXPERIMENTAL* C++ framework for algorithmic distributed Big Data batch computations on a cluster of machines. More information at [http://project-thrill.org](http://project-thrill.org).
 - **uno-solver** [📁](./uno-solver) [🌐](https://github.com/GerHobbelt/Uno) -- a modern, modular solver for nonlinearly constrained nonconvex optimization.
 
+
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -2625,9 +2975,14 @@ i.e. breaking text into words when you _receive a textstream without spaces_. Al
   - Soundex Distance.
 
 
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -2748,9 +3103,15 @@ i.e. breaking text into words when you _receive a textstream without spaces_. Al
 - **upscaledb** [📁](./upscaledb) [🌐](https://github.com/GerHobbelt/hamsterdb) -- a.k.a. hamsterdb: a thread-safe key/value database engine. It supports a B+Tree index structure, uses memory mapped I/O (if available), fast Cursors and variable length keys and can create In-Memory Databases.
 - **zsv** [📁](./zsv) [🌐](https://github.com/GerHobbelt/zsv) -- the world's fastest (SIMD) CSV parser, with an extensible CLI for SQL querying, format conversion and more.
 
+
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -2827,9 +3188,14 @@ i.e. breaking text into words when you _receive a textstream without spaces_. Al
   - Zero configuration.
 
 
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -2873,9 +3239,15 @@ i.e. breaking text into words when you _receive a textstream without spaces_. Al
 - **sqlite_wrapper** [📁](./sqlite_wrapper) [🌐](https://github.com/GerHobbelt/sqlite_wrapper) -- an easy-to-use, lightweight and concurrency-friendly SQLite wrapper written in C++17.
 - **sqlite_zstd_vfs** [📁](./sqlite_zstd_vfs) [🌐](https://github.com/GerHobbelt/sqlite_zstd_vfs) -- SQLite VFS extension providing streaming storage compression using Zstandard (Zstd), transparently compressing pages of the main database file as they're written out and later decompressing them as they're read in. It runs page de/compression on background threads and occasionally generates dictionaries to improve subsequent compression.
 
+
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -2941,9 +3313,15 @@ i.e. breaking text into words when you _receive a textstream without spaces_. Al
 - **you-token-to-me** [📁](./you-token-to-me) [🌐](https://github.com/GerHobbelt/YouTokenToMe) -- text tokenization
 - **ztd.text** [📁](./ztd.text) [🌐](https://github.com/GerHobbelt/ztd.text) -- an implementation of an up and coming proposal percolating through SG16, [P1629 - Standard Text Encoding](https://thephd.github.io/_vendor/future_cxx/papers/d1629.html). It will also include implementations of some downstream ideas covered in Previous Work in this area, including Zach Laine's [Boost.Text (proposed)](https://github.com/tzlaine/text), rmf's [libogonek](https://github.com/libogonek/ogonek), and Tom Honermann's [text_view](https://github.com/tahonermann/text_view).
 
+
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -2968,9 +3346,15 @@ for round-trip annotation and other "external application editing" of known docu
 - **XMP-Toolkit-SDK** [📁](./XMP-Toolkit-SDK) [🌐](https://github.com/GerHobbelt/XMP-Toolkit-SDK) -- the XMP Toolkit allows you to integrate XMP functionality into your product, supplying an API for locating, adding, or updating the XMP metadata in a file.
 - **xpdf** [📁](./xpdf) [🌐](https://github.com/GerHobbelt/xpdf) -- Xpdf is an open source viewer for Portable Document Format (PDF) files.
 
+
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -3032,9 +3416,15 @@ for round-trip annotation and other "external application editing" of known docu
 - **wget2** [📁](./wget2) [🌐](https://github.com/GerHobbelt/wget2) -- GNU Wget2 is the successor of GNU Wget, a file and recursive website downloader. Designed and written from scratch it wraps around libwget, that provides the basic functions needed by a web client. Wget2 works multi-threaded and uses many features to allow fast operation. In many cases Wget2 downloads much faster than Wget1.x due to HTTP2, HTTP compression, parallel connections and use of If-Modified-Since HTTP header.
 - **xml-pugixml** [📁](./xml-pugixml) [🌐](https://github.com/GerHobbelt/pugixml) -- light-weight, simple and fast XML parser for C++ with XPath support.
 
+
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -3062,9 +3452,15 @@ Not just speech processing & speech recognition, but sometimes data is easier "v
 - **Solo** [📁](./Solo) [🌐](https://github.com/GerHobbelt/Solo) -- Agora SOLO is a speech codec, developed based on Silk with BWE(Bandwidth Extension) and MDC(Multi Description Coding). With these technologies, SOLO is able to resist weak networks at low bitrates. The main reason for SOLO to use bandwidth expansion is to reduce the computational complexity.
 - **speex** [📁](./speex) [🌐](https://github.com/GerHobbelt/speex) -- a patent-free voice codec. Unlike other codecs like MP3 and Ogg Vorbis, Speex is designed to compress voice at bitrates in the 2-45 kbps range. Possible applications include VoIP, internet audio streaming, archiving of speech data (e.g. voice mail), and audio books.
 
+
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -3200,9 +3596,14 @@ Not just speech processing & speech recognition, but sometimes data is easier "v
   - **removed**; reason: GNOME libraries are horrible to integrate with other codebases.
 
 
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -3218,9 +3619,15 @@ Not just speech processing & speech recognition, but sometimes data is easier "v
 - **bibtool** [📁](./bibtool) [🌐](https://github.com/GerHobbelt/bibtool) -- a tool for manipulating BibTeX data bases. BibTeX provides a mean to integrate citations into LaTeX documents. BibTool allows the manipulation of BibTeX files which goes beyond the possibilities -- and intentions -- of BibTeX.
 - **bibutils** [📁](./bibutils) [🌐](https://github.com/GerHobbelt/bibutils) -- the `bibutils` set interconverts between various bibliography formats using a common MODS-format XML intermediate. For example, one can convert RIS-format files to Bibtex by doing two transformations: RIS->MODS->Bibtex. By using a common intermediate for N formats, only 2N programs are required and not N²-N.
 
+
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -3255,9 +3662,15 @@ Not just speech processing & speech recognition, but sometimes data is easier "v
 
 - **variadic_table** [📁](./variadic_table) [🌐](https://github.com/GerHobbelt/variadic_table) -- for "pretty-printing" a formatted table of data to the console. It uses "variadic templates" to allow you to specify the types of data in each column.
 
+
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -3409,9 +3822,15 @@ We'll be using SOLR mostly, but here might be some interface libraries and some 
 - **xsg** [📁](./xsg) [🌐](https://github.com/GerHobbelt/xsg) -- XOR [BST](https://en.wikipedia.org/wiki/Binary_search_tree) implementations are related to the [XOR linked list](https://en.wikipedia.org/wiki/XOR_linked_list), a [doubly linked list](https://en.wikipedia.org/wiki/Doubly_linked_list) variant, from where we borrow the idea about how links between nodes are to be implemented. Modest resource requirements and simplicity make XOR [scapegoat trees](https://en.wikipedia.org/wiki/Scapegoat_tree) stand out of the [BST](https://en.wikipedia.org/wiki/Binary_search_tree) crowd. All iterators (except `end()` iterators), but not references and pointers, are invalidated, after inserting or erasing from this XOR [scapegoat tree](https://en.wikipedia.org/wiki/Scapegoat_tree) implementation. You can dereference invalidated iterators, if they were not erased, but you cannot iterate with them. `end()` iterators are constant and always valid, but dereferencing them results in undefined behavior.
 - **zvec** [📁](./zvec) [🌐](https://github.com/GerHobbelt/zvec) -- _zip_vector_ is a compressed variable length array that uses vectorized block codecs to compress and decompress integers using variable bit-width deltas. The integer block codecs are optimized for vector instruction sets using Google's Highway C++ library for portable SIMD/vector intrinsics.
 
+
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -3426,9 +3845,15 @@ We'll be using SOLR mostly, but here might be some interface libraries and some 
 - **libstemmer** [📁](./libstemmer) [🌐](https://github.com/GerHobbelt/libstemmer) -- SnowBall stemmer for many languages.
 - **snowball** [📁](./snowball) [🌐](https://github.com/GerHobbelt/snowball) -- SnowBall stemming compiler (code generator)
 
+
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -3446,9 +3871,15 @@ We'll be using SOLR mostly, but here might be some interface libraries and some 
 - **libchardet** [📁](./libchardet) [🌐](https://github.com/GerHobbelt/libchardet) -- is based on Mozilla Universal Charset Detector library and, detects the character set used to encode data.
 - **uchardet** [📁](./uchardet) [🌐](https://github.com/GerHobbelt/uchardet) -- [uchardet](https://www.freedesktop.org/wiki/Software/uchardet/) is an encoding and language detector library, which attempts to determine the encoding of the text. It can reliably detect many charsets. Moreover it also works as a very good and fast language detector.
 
+
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -3557,9 +3988,14 @@ The additional (and more important) reason to ditch CPython from the R&D set is 
   - **removed**; reason: see the `lua` entry above.
 
 
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -3587,9 +4023,15 @@ The additional (and more important) reason to ditch CPython from the R&D set is 
 
 - **txiki** [📁](./txiki.js) [🌐](https://github.com/GerHobbelt/txiki.js) -- uses QuickJS as its kernel
 
+
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -3601,11 +4043,15 @@ The additional (and more important) reason to ditch CPython from the R&D set is 
 
 ## multi-processing core technologies
 
+
+
+
+
+
+
+
+
 <!-- *toc* -->
-
-
-
-
 
 
 
@@ -3644,9 +4090,14 @@ The additional (and more important) reason to ditch CPython from the R&D set is 
   - **removed**; reason: deemed cool but unsuitable for our needs. Besides, we intend to use `cli11` instead of `clipp` for that library is easier to read and support is more active there.
 
 
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -3684,9 +4135,14 @@ The additional (and more important) reason to ditch CPython from the R&D set is 
   - **removed**; reason: Linux-only, non-portable, deemed unsuitable for our needs.
 
 
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -3704,9 +4160,15 @@ The additional (and more important) reason to ditch CPython from the R&D set is 
 - **dateutils** [📁](./dateutils) [🌐](https://github.com/GerHobbelt/dateutils) -- a bunch of tools that revolve around fiddling with dates and times on the command line with a strong focus on use cases that arise when dealing with large amounts of financial data.
 - **libeternaltimestamp** [📁](./libeternaltimestamp) [🌐](https://github.com/GerHobbelt/libeternaltimestamp) -- provide/encode/decode 64-bit integer timestamps which can encode *any* date/time in the lifetime of our planet from before the Big Bang up to about 3000 AD in the future.
 
+
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -3847,9 +4309,14 @@ The additional (and more important) reason to ditch CPython from the R&D set is 
   - **removed**; reason: code is non-portable to compilers other than GCC, or at least would require more effort than we're willing to expend on this.
 
 
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -3875,9 +4342,15 @@ The additional (and more important) reason to ditch CPython from the R&D set is 
 - https://github.com/rajatjain1997/subprocess -- A C++ high level library for running shell processes
 - https://github.com/sheredom/subprocess.h -- A one header solution to launching processes and interacting with them for C/C++.
 
+
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -3914,9 +4387,15 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - https://github.com/rhashimoto/poolqueue -- C++ Asynchronous Promises, inspired by Promises/A+.
 - https://github.com/YACLib/YACLib -- Yet Another lightweight C++ library for concurrent and parallel task execution.
 
+
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -3971,9 +4450,15 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - https://github.com/rajatjain1997/subprocess -- A C++ high level library for running shell processes
 - https://github.com/sheredom/subprocess.h -- A one header solution to launching processes and interacting with them for C/C++.
 
+
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -4022,9 +4507,15 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **sigslot** [📁](./sigslot) [🌐](https://github.com/GerHobbelt/sigslot) -- a header-only, thread safe implementation of signal-slots for C++. The main goal was to replace Boost.Signals2.
 - **uvw** [📁](./uvw) [🌐](https://github.com/GerHobbelt/uvw) -- `libuv` wrapper in modern C++. `uvw` started as a header-only, event based, tiny and easy to use wrapper for [`libuv`](https://github.com/libuv/libuv) written in modern C++.  Now it's finally available also as a compilable static library. The basic idea is to wrap the *C-ish* interface of `libuv` behind a graceful C++ API.
 
+
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -4073,9 +4564,15 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **thrill** [📁](./thrill) [🌐](https://github.com/GerHobbelt/thrill) -- an *EXPERIMENTAL* C++ framework for algorithmic distributed Big Data batch computations on a cluster of machines. More information at [http://project-thrill.org](http://project-thrill.org).
 - **transwarp** [📁](./transwarp) [🌐](https://github.com/GerHobbelt/transwarp) -- a header-only C++ library for task concurrency. It allows you to easily create a graph of tasks where every task can be executed synchronously. transwarp is written in C++17 and only depends on the standard library.
 
+
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -4100,9 +4597,15 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 
 - **stdexec** [📁](./stdexec) [🌐](https://github.com/GerHobbelt/stdexec) -- `stdexec` is an experimental reference implementation of the _Senders_ model of asynchronous programming proposed by [**P2300 - `std::execution`**](http://wg21.link/p2300) for adoption into the C++ Standard. _Senders_ is a Standard Model for Asynchronous Execution in C++.
 
+
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -4177,9 +4680,14 @@ abstraction without sacrificing performance. Whether you are targeting a single 
   - **removed**; reason: code is non-portable to compilers other than GCC, or at least would require more effort than we're willing to expend on this.
 
 
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -4209,9 +4717,14 @@ abstraction without sacrificing performance. Whether you are targeting a single 
   - **removed**; reason: we've decided on using `crow` as the main server framework.
 
 
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -4227,9 +4740,15 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 - **libwebsockets** [📁](./libwebsockets) [🌐](https://github.com/GerHobbelt/libwebsockets) -- a simple-to-use C library providing client and server for HTTP/1, HTTP/2, WebSockets, MQTT and other protocols. It supports a lot of lightweight ancilliary implementations for things like JSON, CBOR, JOSE, COSE. It's very gregarious when it comes to event loop sharing, supporting libuv, libevent, libev, sdevent, glib and uloop, as well as custom event libs.
 - **websocket-sharp** [📁](./websocket-sharp) [🌐](https://github.com/GerHobbelt/websocket-sharp) -- a C# implementation of the WebSocket protocol client and server.
 
+
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -4266,9 +4785,15 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 - **Win32_read_directory_changes** [📁](./Win32_read_directory_changes) [🌐](https://github.com/GerHobbelt/readdirectorychanges) -- sample code which goes with [Understanding ReadDirectoryChangesW](http://qualapps.blogspot.com/2010/05/understanding-readdirectorychangesw.html)
 - **Win32_read_directory_changes_IOCP** [📁](./Win32_read_directory_changes_IOCP) [🌐](https://github.com/GerHobbelt/ReadDirectoryChangesIOCP) -- inspired by jimbeveridge's artical [Understanding ReadDirectoryChangesW](http://qualapps.blogspot.com/2010/05/understanding-readdirectorychangesw.html)! The project shows how to read directory changes by IO completion port on windows platform.
 
+
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -4300,9 +4825,15 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 - **reflect-cpp** [📁](./reflect-cpp) [🌐](https://github.com/GerHobbelt/reflect-cpp) -- a C++-20 library for **fast serialization, deserialization and validation** using reflection, similar to [pydantic](https://github.com/pydantic/pydantic) in Python, [serde](https://github.com/serde-rs) in Rust, [encoding](https://github.com/golang/go/tree/master/src/encoding) in Go or [aeson](https://github.com/haskell/aeson/tree/master) in Haskell. As the aforementioned libraries are among the most widely used in the respective languages, reflect-cpp fills an important gap in C++ development. It reduces boilerplate code and increases code safety.
 - **shoal** [📁](./shoal) [🌐](https://github.com/GerHobbelt/shoal) -- an ergonomic configuration file format: `shoal` is a simple and readable `INI`-like format, supporting hierarchical structures with an arbitrary number of nesting levels.
 
+
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -4318,9 +4849,15 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 - **toml11** [📁](./toml11) [🌐](https://github.com/GerHobbelt/toml11) -- a C++11 header-only TOML parser/encoder depending only on C++ standard library, compatible to the latest version of [TOML v1.0.0](https://toml.io/en/v1.0.0), including UTF-8 support.
 - **tomlpp** [📁](./tomlpp) [🌐](https://github.com/GerHobbelt/tomlplusplus) -- TOML++
 
+
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -4340,9 +4877,15 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 - **yaml-cpp** [📁](./yaml-cpp) [🌐](https://github.com/GerHobbelt/yaml-cpp) -- a YAML parser and emitter in C++ matching the YAML 1.2 spec.
 - **yaml-test-suite** [📁](./yaml-test-suite) [🌐](https://github.com/GerHobbelt/yaml-test-suite) -- comprehensive Test Suite for YAML
 
+
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -4363,9 +4906,14 @@ abstraction without sacrificing performance. Whether you are targeting a single 
   - **removed**; reason: we've decided on using `libconfig` for configuration files.
 
 
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -4419,9 +4967,15 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 - **Verify** [📁](./Verify) [🌐](https://github.com/GerHobbelt/Verify) -- a snapshot tool that simplifies the assertion of complex data models and documents. Verify is called on the test result during the assertion phase. It serializes that result and stores it in a file that matches the test name. On the next test execution, the result is again serialized and compared to the existing file. The test will fail if the two snapshots do not match: either the change is unexpected, or the reference snapshot needs to be updated to the new result.
 - **zzuf** [📁](./zzuf) [🌐](https://github.com/GerHobbelt/zzuf) -- a transparent application input fuzzer. It works by intercepting file operations and changing random bits in the program's input. zzuf's behaviour is deterministic, making it easy to reproduce bugs.
 
+
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -4495,9 +5049,14 @@ abstraction without sacrificing performance. Whether you are targeting a single 
   - **removed**; `zlog` has a nice overall design but is too 'Unix-is-the-world' in its coding: in the end it was ease of cross-platform compilation of `glog`/`spdlog` that won the day and I'm okay with layering on top of that one to get the zlog category and other channel features, once I really need them.
 
 
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -4525,9 +5084,15 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 - **we-love-colors** [📁](./we-love-colors) [🌐](https://github.com/GerHobbelt/we-love-colors) -- a library to easily generate **color palettes**.
 - **yy_color_convertor** [📁](./yy_color_convertor) [🌐](https://github.com/GerHobbelt/yy_color_convertor) -- convert color between RGB,HSL,HSB,CMYK,YUV,YIQ,XYZ,xyY,Lab,Luv,LCH ...
 
+
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -4582,9 +5147,15 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 - **VTK** [📁](./VTK) [🌐](https://github.com/GerHobbelt/VTK) -- VTK - The Visualization Toolkit - is an open-source software system for image processing, 3D graphics, volume rendering and visualization. VTK includes many advanced algorithms (e.g., surface reconstruction, implicit modeling, decimation) and rendering techniques (e.g., hardware-accelerated volume rendering, LOD control).
 - **wesanderson** [📁](./wesanderson) [🌐](https://github.com/GerHobbelt/wesanderson) -- Wes Anderson color palettes demo.  Here’s the most indie thing you can do to your plots.  ;-)
 
+
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -4605,9 +5176,15 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 - **UIforETW** [📁](./UIforETW) [🌐](https://github.com/GerHobbelt/UIforETW) -- Bruce Dawson's user interface for recording ETW (Event Tracing for Windows) traces, which allow amazingly deep investigations of performance problems on Windows.
 - **Windows10EtwEvents** [📁](./Windows10EtwEvents) [🌐](https://github.com/GerHobbelt/Windows10EtwEvents) -- Events from all manifest-based and mof-based ETW providers across Windows 10 versions.
 
+
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -4629,9 +5206,15 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 - **TelemetrySourcerer** [📁](./TelemetrySourcerer) [🌐](https://github.com/GerHobbelt/TelemetrySourcerer) -- Telemetry Sourcerer can enumerate and disable common sources of telemetry used by AV/EDR on Windows. Red teamers and security enthusiasts can use this tool in a lab environment for various purposes, including ETW event monitoring.
 - **tempo** [📁](./tempo) [🌐](https://github.com/GerHobbelt/tempo) -- Grafana Tempo is an open source, easy-to-use and high-scale distributed tracing backend. Tempo is cost-efficient, requiring only object storage to operate, and is deeply integrated with Grafana, Prometheus, and Loki. Tempo is Jaeger, Zipkin, Kafka, OpenCensus and OpenTelemetry compatible.  It ingests batches in any of the mentioned formats, buffers them and then writes them to Azure, GCS, S3 or local disk.  As such it is robust, cheap and easy to operate! Tempo implements [TraceQL](https://grafana.com/docs/tempo/latest/traceql/), a traces-first query language inspired by LogQL and PromQL. This query language allows users to very precisely and easily select spans and jump directly to these spans.
 
+
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -4664,9 +5247,15 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 - **tesslinesplit** [📁](./tesslinesplit) [🌐](https://github.com/GerHobbelt/tesslinesplit) -- a standalone program for using Tesseract's line segmentation algorithm to split up document images.
 - **tesstrain** [📁](../../thirdparty/tesstrain) [🌐](https://github.com/GerHobbelt/tesstrain) -- training workflow for Tesseract 4.
 
+
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -4712,9 +5301,15 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 - **vivid** [📁](./vivid) [🌐](https://github.com/GerHobbelt/vivid) -- vivid 🌈 is a simple-to-use C++ color library.
 - **zlib** [📁](../../thirdparty/zlib) [🌐](https://github.com/GerHobbelt/thirdparty-zlib) -- zlib-ng: zlib data compression library for the next generation systems.
 
+
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -4767,9 +5362,15 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 - **wxWebViewChromium** [📁](./wxWebViewChromium) [🌐](https://github.com/GerHobbelt/wxWebViewChromium) -- Chromium CEF3-based embedded browser for wxWidgets
 - **wxWidgets** [📁](./wxWidgets) [🌐](https://github.com/GerHobbelt/wxWidgets) -- cross-platform GUI framework.
 
+
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -4797,9 +5398,15 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 - **zotero-translation-server** [📁](./zotero-translation-server) [🌐](https://github.com/GerHobbelt/translation-server) -- lets you use Zotero translators without the Zotero client.
 - **zotero-translators** [📁](./zotero-translators) [🌐](https://github.com/GerHobbelt/translators) -- Zotero Translators : automatically detect journal articles, library records, news items, and other objects you might like to save to your Zotero library. Zotero uses so-called “translators” to detect and import data from websites. There are currently more than 600 different translators, facilitating data import from countless sites.
 
+
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -4839,9 +5446,15 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 - **nsis-stdutils** [📁](./nsis-stdutils) [🌐](https://github.com/GerHobbelt/stdutils) -- StdUtils plug-in for NSIS
 - **vcpkg** [📁](./vcpkg) [🌐](https://github.com/GerHobbelt/vcpkg) -- `Vcpkg` helps you manage C and C++ libraries on Windows, Linux and MacOS.
 
+
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -4884,9 +5497,15 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 - **zotero-word-for-windows-integration** [📁](./zotero-word-for-windows-integration) [🌐](https://github.com/GerHobbelt/zotero-word-for-windows-integration) -- a Firefox add-on that consists of a library written in C++ that communicates with Microsoft Word out of process using OLE Automation, a js-ctypes wrapper for said library, and a template that is installed into Microsoft Word to communicate with Zotero.
 - **zotero-zotfile** [📁](./zotero-zotfile) [🌐](https://github.com/GerHobbelt/zotfile) -- Zotero plugin to manage your attachments: automatically rename, move, and attach PDFs (or other files) to Zotero items, sync PDFs from your Zotero library to your (mobile) PDF reader (e.g. an iPad, Android tablet, etc.), and extract PDF annotations.
 
+
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -4907,9 +5526,14 @@ abstraction without sacrificing performance. Whether you are targeting a single 
   The original list of abbreviations is located at [ISI](https://images.webofknowledge.com/images/help/WOS/A_abrvjt.html).
 
 
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -4927,9 +5551,15 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 - **zotero-libreoffice-integration** [📁](./zotero-libreoffice-integration) [🌐](https://github.com/GerHobbelt/zotero-libreoffice-integration) -- comprises extensions for LibreOffice/OpenOffice.org/NeoOffice and Zotero communicating using local web servers.
 - **zotero-word-for-windows-integration** [📁](./zotero-word-for-windows-integration) [🌐](https://github.com/GerHobbelt/zotero-word-for-windows-integration) -- a Firefox add-on that consists of a library written in C++ that communicates with Microsoft Word out of process using OLE Automation, a js-ctypes wrapper for said library, and a template that is installed into Microsoft Word to communicate with Zotero.
 
+
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -4949,9 +5579,15 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 - **xml-pugixml** [📁](./xml-pugixml) [🌐](https://github.com/GerHobbelt/pugixml) -- light-weight, simple and fast XML parser for C++ with XPath support.
 - **xsldbg** [📁](./xsldbg) [🌐](https://github.com/GerHobbelt/xsldbg) -- a debugger for xsl/xslt stylesheets which has functionality similar to a Unix/Linux "gdb", using libxml2 and libxslt.
 
+
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -4972,6 +5608,14 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 - **Open-XML-SDK** [📁](./Open-XML-SDK) [🌐](https://github.com/GerHobbelt/Open-XML-SDK) -- the Microsoft Open XML SDK (.NET) provides tools for working with Office Word, Excel, and PowerPoint documents.
 - **ShapeCrawler** [📁](./ShapeCrawler) [🌐](https://github.com/GerHobbelt/ShapeCrawler) -- a .NET library for manipulating PowerPoint presentations.
 
+
+
+
+
+
+
+
+
 <!-- *split* -->
 
 
@@ -4982,9 +5626,7 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 
 
 
-
-
-## Misc. / Other
+## Misc. Uncategorized
 
 - **ADE-graph-management** [📁](./ADE-graph-management) [🌐](https://github.com/GerHobbelt/ade) -- ADE Framework is a graph construction, manipulation, and processing framework.  ADE Framework is suitable for organizing data flow processing and execution.
 - **Algo_Ds_Notes** [📁](./Algo_Ds_Notes) [🌐](https://github.com/GerHobbelt/Algo_Ds_Notes) -- Algorithm and Data Structure Notes :clipboard:, focussed on understanding the concepts and while doing so, whenever someone gets trapped, they can see one way to code in any language they want.
@@ -5205,9 +5847,14 @@ abstraction without sacrificing performance. Whether you are targeting a single 
   - **removed**; reason: we already have `bin2coff` from MuPDF, which serves this purpose well enough.
 
 
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -5289,9 +5936,15 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 
 ---
 
+
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 
@@ -7609,9 +8262,15 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 
 ---
 
+
+
+
+
+
+
+
+
 <!-- *split* -->
-
-
 
 
 

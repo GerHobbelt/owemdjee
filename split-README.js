@@ -40,12 +40,12 @@ arr = arr.map(function (chunk) {
 	let short_heading = sm[1].trim();
 	
 	// clean up the heading and restrict it to a width *near* 60 so we don't end up with useless long filenames...
-	let filename = short_heading.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^(.{1,60}[^-]*)-.*$/, '$1').replace(/(?:^-)|(?:-$)/g, '');
+	let filename = short_heading.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^(.{60}[^-]*)-.*$/, '$1').replace(/(?:^-)|(?:-$)/g, '');
 	
 	// clean up the heading and turn it into a github-style in-page bookmark...
 	let bookmark = `#` + heading.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/(?:^-)|(?:-$)/g, '');
 
-	console.log({heading, depth, short_heading, filename});
+	console.log({heading, depth, short_heading, filename, bookmark});
 	
 	if (unique_dict[filename]) {
 		throw `\nHeading is ambiguous:\n\n    ${m[0]}\n\n`;

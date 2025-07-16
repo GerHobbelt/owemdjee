@@ -257,6 +257,9 @@ txt = txt.replace(/([\r\n]+)\s*\[submodule "([^"]+)"\][\s\r\n]+path = ([^\s\r\n]
 
 txt = process_all_supersections(txt);
 
+// also make sure the various `<!-- xyz -->` markers are properly visible by separating them from the surrounding text lines:
+txt = txt.replace(/\n+(<!--[^->]+-->)\n+/g, '\n\n\n\n\n\n\n\n\n\n$1\n\n\n\n\n\n\n\n\n\n');
+
 let descr_arr = collect_descriptions(txt);
 
 txt = check_entries_against_their_categorized_references(txt);
