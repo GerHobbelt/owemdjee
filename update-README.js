@@ -17,7 +17,7 @@ let dbgRe = false;
 
 
 
-let txt = fs.readFileSync("README.md.source", "utf8");
+let txt = fs.readFileSync("README.source.md", "utf8");
 const origTxt = txt;
 
 txt = txt.replace(/\t/g, '    ');
@@ -305,7 +305,7 @@ if (undoc.length > 0 || origTxt !== txt) {
 
 if (origTxt !== txt) {
 	console.log("Updating the README...");
-	fs.writeFileSync("README.md.source", txt, "utf8");
+	fs.writeFileSync("README.source.md", txt, "utf8");
 }
 
 

@@ -15,7 +15,7 @@ const fs = require("fs");
 
 
 
-let txt = fs.readFileSync("README.md.source", "utf8");
+let txt = fs.readFileSync("README.source.md", "utf8");
 
 txt = txt.replace(/\t/g, '    ');
 
