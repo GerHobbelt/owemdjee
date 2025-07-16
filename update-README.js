@@ -305,6 +305,9 @@ if (undoc.length > 0 || origTxt !== txt) {
 
 if (origTxt !== txt) {
 	console.log("Updating the README...");
+	
+	//console.log({txt})
+	
 	fs.writeFileSync("README.source.md", txt, "utf8");
 }
 
@@ -333,8 +336,14 @@ function process_all_supersections(txt) {
 
 function process_all_sections(txt) {
 	txt = '\n' + txt.trim() + '\n';
-	
+
 	let sections = txt.split(/\n#/);
+	
+	if (false) {
+		console.log({ sections: sections.map(function (chunk) {
+			return chunk.substring(0, 300); 
+		}) });
+	}
 	
 	txt = sections.map(process_single_section).join('\n\n\n\n\n\n\n\n\n\n\n\n') + '\n\n\n\n';
 	
@@ -343,12 +352,13 @@ function process_all_sections(txt) {
 
 function process_single_section(txt) {
 	txt = txt.trim();
-	if (txt.length === 0)
+	// skip empty chunks and "<!-- *split* -->" and similar marker chunks which are otherwise empty anyway as the first thing to follow such a marker would be a MarkDown heading!
+	if (txt.length === 0 || txt.startsWith("<!--"))
 		return txt;
 	
-	txt = '#' + txt + '\n';
+	txt = `#${ txt }\n`;
 	
-	//console.log({txt});
+	if (false) console.log('process_single_section:', { txt: txt.substring(0, 200) + (txt.length > 200 ? " {...}" : "") });
 	
 	let m = /^(#+)([^\n]+)\n/g.exec(txt);
 	let level = m[1].length;
@@ -507,13 +517,13 @@ function sort_subsection(list) {
 
 function collect_descriptions(txt) {
 	let a = {};
-	let debug = /doxa/.test(txt);
+	let dbg = (dbgRe && dbgRe.test(txt));
 
 	let mod_re = /- \*\*([^*]+)\*\* \[📁\]\(([^ )]+)\) \[🌐\]\(([^ )]+)\)/g;
 	let m = mod_re.exec(txt);
 	while (m) {
 		m.input = null;
-		if (debug && 0) console.log({m})
+		if (dbg) console.log({m})
 		let repo = m[3];
 		let url = repo;
 		let id = 'x' + m[1];
@@ -526,7 +536,7 @@ function collect_descriptions(txt) {
 		let desc_re = /^ +-- +([^ \r\n][^]+?)\n(:?(:?\s*- (:?~~)?\*\*)|(:?\s*- ~~)|(:?\s*- http)|(:?\s*- other)|(:?\s*- ZeroMQ)|(:?\s*- LMDB)|(:?\s*- see also)|(:?\s*- \[Manticore\])|[#*-]|$)/;
 
 		let d = desc_re.exec(dstr);
-		if (id === 'xdoxa')
+		if (dbg)
 			console.log({id, dstr, d});
 		if (d) {
 			d.input = null;
@@ -543,7 +553,7 @@ function collect_descriptions(txt) {
 				a[id] = description;
 			}
 			else if (a[id].length < description.length) {
-				console.log("OVERRIDING: ", a[id], " --> ", description);
+				if (dbg) console.log("OVERRIDING: ", a[id], " --> ", description);
 				a[id] = description;
 			}
 		}
