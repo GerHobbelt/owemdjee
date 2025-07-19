@@ -403,7 +403,7 @@
 
 - https://github.com/koriavinash1/DeepBrainSeg :: Fully automatic brain tumour segmentation using Deep 3-D convolutional neural networks
 
-- https://github.com/digantamisra98/Mish :: Official Repsoitory for "Mish: A Self Regularized Non-Monotonic Neural Activation Function" [BMVC 2020]
+- https://github.com/digantamisra98/Mish :: Official Repository for "Mish: A Self Regularized Non-Monotonic Neural Activation Function" [BMVC 2020]
 
 - https://github.com/sayakpaul/Generating-categories-from-arXiv-paper-titles/ :: This project takes the arXiv dataset and builds an automatic tag classifier from the arXiv article/paper titles
 

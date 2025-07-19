@@ -1,14 +1,14 @@
 {
   "main": {
-    "id": "bfdb4c3d1b079674",
+    "id": "1570c96c83450a54",
     "type": "split",
     "children": [
       {
-        "id": "9325407e31e902e3",
+        "id": "b81237d125f16606",
         "type": "tabs",
         "children": [
           {
-            "id": "7e7081986c76ae20",
+            "id": "ea12bde47388f29c",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -37,15 +37,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "4dce88162e3efebd",
+    "id": "49c9d94e1491cc5a",
     "type": "split",
     "children": [
       {
-        "id": "362e77f4d79d50df",
+        "id": "d6172caa1a81e929",
         "type": "tabs",
         "children": [
           {
-            "id": "826e85f9651501a0",
+            "id": "41f4eeea028e5f7b",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -58,7 +58,7 @@
             }
           },
           {
-            "id": "9b948f8d5e95dc54",
+            "id": "505948890bddcb5c",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -75,7 +75,7 @@
             }
           },
           {
-            "id": "2912dba8749aa46c",
+            "id": "fe51947eb57c54f3",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -91,15 +91,15 @@
     "width": 300
   },
   "right": {
-    "id": "0a87173ca0c97cdd",
+    "id": "24186d1f7144c13c",
     "type": "split",
     "children": [
       {
-        "id": "0463c8ba883e6217",
+        "id": "a7475e0fa003c3dd",
         "type": "tabs",
         "children": [
           {
-            "id": "1432d18d80723333",
+            "id": "4976488c818ebf38",
             "type": "leaf",
             "state": {
               "type": "backlink",
@@ -118,7 +118,7 @@
             }
           },
           {
-            "id": "9db36cb663bdbbd6",
+            "id": "8e635dd75713cc19",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
@@ -132,7 +132,7 @@
             }
           },
           {
-            "id": "0591f4ff92e98c83",
+            "id": "fc9dfb80659f76ab",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -147,7 +147,21 @@
             }
           },
           {
-            "id": "cbc6551a47f22ebc",
+            "id": "8ff8f90a25b72e5b",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "fdf70e398f53e852",
             "type": "leaf",
             "state": {
               "type": "outline",
@@ -159,20 +173,6 @@
               },
               "icon": "lucide-list",
               "title": "Outline of README.source"
-            }
-          },
-          {
-            "id": "9d9a75d4b7e1b814",
-            "type": "leaf",
-            "state": {
-              "type": "all-properties",
-              "state": {
-                "sortOrder": "frequency",
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-archive",
-              "title": "All properties"
             }
           }
         ]
@@ -194,38 +194,16 @@
       "publish:Publish changes...": false
     }
   },
-  "active": "7e7081986c76ae20",
+  "active": "ea12bde47388f29c",
   "lastOpenFiles": [
-    "0000-index/0032-pattern-recognition.md",
-    "0000-index/0031-ocr-hocr-output-format-other-output-formats.md",
-    "0000-index/0030-file-directory-tree-synchronization.md",
-    "0000-index/0029-data-storage-caching-ipc-loss-less-data-compression.md",
-    "0000-index/0028-hdf5-file-format.md",
-    "0000-index/0027-ram-disk-based-large-queues-and-stores-b-tree-lsm-tree.md",
-    "0000-index/0026-intermediate-data-storage-caching-hierarchical-data-stores.md",
-    "0000-index/0025-hash-like-filters-fast-hashing-for-hash-tables-et-al.md",
-    "0000-index/0024-content-hashing.md",
-    "0000-index/0023-ipc-yaml-toml-etc-for-protocol-design.md",
-    "0000-index/0022-ipc-cbor-for-protocol-design.md",
-    "0000-index/0021-ipc-json-for-protocol-design.md",
-    "0000-index/0020-ipc-memory-mapping.md",
-    "0000-index/0019-ipc-zeromq-a-k-a-mq.md",
-    "0000-index/0018-ipc-websockets-etc-all-communication-means.md",
-    "0000-index/0017-ipc-flatbuffer-et-al-for-protocol-design.md",
-    "0000-index/0016-libraries-we-re-looking-at-for-this-intent.md",
-    "0000-index/0015-misc-tooling.md",
-    "0000-index/0014-sans-category.md",
-    "0000-index/0013-el-basicque.md",
-    "0000-index/0012-rebol-nation.md",
-    "0000-index/0011-rubyism-various-others.md",
-    "0000-index/0010-tcl-and-their-ilk.md",
-    "0000-index/0009-lua-uwitudinational.md",
-    "0000-index/0008-strongly-typed-languages-e-g-c-c-like.md",
-    "0000-index/0007-smalltalk.md",
-    "BC56DA5.tmp",
-    "BC5A74A.tmp",
-    "BC545DB.tmp",
-    "BC575C6.tmp",
-    "BC52F08.tmp"
+    "libdiagnostics/docs/libdiagnostics/libdiagnostics Design Specification.md",
+    "libparameters/docs/libparameters/libparameters Design Specification.md",
+    "libparameters/docs/libparameters/Design Specification.md",
+    "libparameters/docs/libparameters/docs/libdiagnostics/Design Specification.md",
+    "libparameters/docs/libparameters/docs/libdiagnostics/Design Notes.md",
+    "libparameters/docs/libparameters/docs/libdiagnostics",
+    "libparameters/docs/libparameters/docs",
+    "libdiagnostics/docs/libdiagnostics/Design Specification.md",
+    "libdiagnostics/docs/libdiagnostics/Untitled.md"
   ]
 }
