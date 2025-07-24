@@ -9334,3 +9334,9 @@
     fetchRecurseSubmodules = on-demand
 
 	
+[submodule "perfetto"]
+	path = perfetto
+	url = git@github.com:GerHobbelt/perfetto.git
+    fetchRecurseSubmodules = on-demand
+
+
