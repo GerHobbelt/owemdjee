@@ -8285,4 +8285,17 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 
 
 
+	
+[submodule "perfetto"]
+	path = perfetto
+	url = git@github.com:GerHobbelt/perfetto.git
+    fetchRecurseSubmodules = on-demand
+
+
+[submodule "Win32.mmap"]
+	path = Win32.mmap
+	url = git@github.com:GerHobbelt/Win32.mmap
+    fetchRecurseSubmodules = on-demand
+
+
 
