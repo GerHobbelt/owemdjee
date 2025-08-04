@@ -38,6 +38,7 @@
 - **stxxl** [📁](./stxxl) [🌐](https://github.com/GerHobbelt/stxxl) -- STXXL is an implementation of the C++ standard template library STL for external memory (out-of-core) computations, i. e. STXXL implements containers and algorithms that can process huge volumes of data that only fit on disks.
 - **tcpshm** [📁](./tcpshm) [🌐](https://github.com/GerHobbelt/tcpshm) -- a connection-oriented persistent message queue framework based on TCP or SHM IPC for Linux. TCPSHM provides a reliable and efficient solution based on a sequence number and acknowledge mechanism, that every sent out msg is persisted in a send queue until sender got ack that it's been consumed by the receiver, so that disconnects/crashes are tolerated and the recovery process is purely automatic.
 - **thrill** [📁](./thrill) [🌐](https://github.com/GerHobbelt/thrill) -- an *EXPERIMENTAL* C++ framework for algorithmic distributed Big Data batch computations on a cluster of machines. More information at [http://project-thrill.org](http://project-thrill.org).
+- **Win32.mmap** [📁](./Win32.mmap) [🌐](https://github.com/GerHobbelt/Win32.mmap) -- UNIX `mmap()` Memory Mapping API emulation for MS Windows/MSVC
 
 
 

@@ -9346,3 +9346,9 @@
     fetchRecurseSubmodules = on-demand
 
 
+[submodule "inih"]
+	path = inih
+	url = git@github.com:GerHobbelt/inih
+    fetchRecurseSubmodules = on-demand
+
+

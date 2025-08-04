@@ -1,13 +1,5 @@
 # owemdjee
 
-
-
-
-
-
-
-
-
 <!-- 📁🌐 force Notepad++ to recognize UTF8: 📁🌐 -->
 
 
@@ -940,6 +932,7 @@ The various embeddable script languages that peaked our interest (at one time or
 - **userver** [📁](./userver) [🌐](https://github.com/GerHobbelt/userver) -- an open source asynchronous framework with a rich set of abstractions for fast and comfortable creation of C++ microservices, services and utilities. The framework solves the problem of efficient I/O interactions transparently for the developers. Operations that would typically suspend the thread of execution do not suspend it. Instead of that, the thread processes other requests and tasks and returns to the handling of the operation only when it is guaranteed to execute immediately. As a result you get straightforward source code and avoid CPU-consuming context switches from OS, efficiently utilizing the CPU with a small amount of execution threads.
 - **uvw** [📁](./uvw) [🌐](https://github.com/GerHobbelt/uvw) -- `libuv` wrapper in modern C++. `uvw` started as a header-only, event based, tiny and easy to use wrapper for [`libuv`](https://github.com/libuv/libuv) written in modern C++.  Now it's finally available also as a compilable static library. The basic idea is to wrap the *C-ish* interface of `libuv` behind a graceful C++ API.
 - **websocket-sharp** [📁](./websocket-sharp) [🌐](https://github.com/GerHobbelt/websocket-sharp) -- a C# implementation of the WebSocket protocol client and server.
+- **Win32.mmap** [📁](./Win32.mmap) [🌐](https://github.com/GerHobbelt/Win32.mmap) -- UNIX `mmap()` Memory Mapping API emulation for MS Windows/MSVC
 - **WinHttpPAL** [📁](./WinHttpPAL) [🌐](https://github.com/GerHobbelt/WinHttpPAL) -- implements [WinHttp API](https://docs.microsoft.com/en-us/windows/win32/winhttp/winhttp-start-page) Platform Abstraction Layer for POSIX systems using libcurl
 - ~~**ice** [🌐](https://github.com/zeroc-ice/ice) -- Comprehensive RPC Framework: helps you network your software with minimal effort.~~
   
@@ -1025,6 +1018,7 @@ Also, we are currently more interested in *fast data serialization* then RPC *pe
 - **stxxl** [📁](./stxxl) [🌐](https://github.com/GerHobbelt/stxxl) -- STXXL is an implementation of the C++ standard template library STL for external memory (out-of-core) computations, i. e. STXXL implements containers and algorithms that can process huge volumes of data that only fit on disks.
 - **tcpshm** [📁](./tcpshm) [🌐](https://github.com/GerHobbelt/tcpshm) -- a connection-oriented persistent message queue framework based on TCP or SHM IPC for Linux. TCPSHM provides a reliable and efficient solution based on a sequence number and acknowledge mechanism, that every sent out msg is persisted in a send queue until sender got ack that it's been consumed by the receiver, so that disconnects/crashes are tolerated and the recovery process is purely automatic.
 - **thrill** [📁](./thrill) [🌐](https://github.com/GerHobbelt/thrill) -- an *EXPERIMENTAL* C++ framework for algorithmic distributed Big Data batch computations on a cluster of machines. More information at [http://project-thrill.org](http://project-thrill.org).
+- **Win32.mmap** [📁](./Win32.mmap) [🌐](https://github.com/GerHobbelt/Win32.mmap) -- UNIX `mmap()` Memory Mapping API emulation for MS Windows/MSVC
 
 
 
@@ -4224,6 +4218,7 @@ The additional (and more important) reason to ditch CPython from the R&D set is 
 - **getopt** [📁](./getopt) [🌐](https://github.com/GerHobbelt/getopt_port) -- an original implementation of `getopt` and `getopt_long` with limited GNU extensions. Provided under the BSD license, to allow non-GPL projects to use `getopt`-style command-line parsing.
 - **highway** [📁](./highway) [🌐](https://github.com/GerHobbelt/highway) -- dependency of JpegXL
 - **immer** [📁](./immer) [🌐](https://github.com/GerHobbelt/immer) -- a library of persistent_ and immutable_ data structures written in C++.  These enable whole new kinds of architectures for interactive and concurrent programs of striking simplicity, correctness, and performance.
+- **inih** [📁](./inih) [🌐](https://github.com/GerHobbelt/inih) -- **inih (INI Not Invented Here)** is a simple [.INI file](http://en.wikipedia.org/wiki/INI_file) parser written in C. It's only a couple of pages of code, and it was designed to be _small and simple_, so it's good for embedded systems. It's also more or less compatible with Python's [ConfigParser](http://docs.python.org/library/configparser.html) style of .INI files, including RFC 822-style multi-line syntax and `name: value` entries.
 - **klib** [📁](./klib) [🌐](https://github.com/GerHobbelt/klib) -- Klib is a standalone and lightweight C library. Most components are independent of external libraries, except the standard C library, and independent of each other. To use a component of this library, you only need to copy a couple of files to your source code tree without worrying about library dependencies. Klib strives for efficiency and a small memory footprint. Some components, such as khash.h, kbtree.h, ksort.h and kvec.h, are among the most efficient implementations of similar algorithms or data structures in all programming languages, in terms of both speed and memory use.
 - **lager** [📁](./lager) [🌐](https://github.com/GerHobbelt/lager) -- a C++ library to assist `value-oriented design`_ by implementing the `unidirectional data-flow architecture`_.  It is heavily inspired by Elm_ and Redux_, and enables composable designs by promoting the use of simple value types and testable application logic via pure functions.
 - **libart** [📁](./libart) [🌐](https://github.com/GerHobbelt/libart) -- provides the Adaptive Radix Tree or ART. The ART operates similar to a traditional radix tree but avoids the wasted space of internal nodes by changing the node size. It makes use of 4 node sizes (4, 16, 48, 256), and can guarantee that the overhead is no more than 52 bytes per key, though in practice it is much lower.
@@ -4251,6 +4246,7 @@ The additional (and more important) reason to ditch CPython from the R&D set is 
 - **nameof** [📁](./nameof) [🌐](https://github.com/GerHobbelt/nameof) -- header-only C++17 library providing nameof macros and functions to simply obtain the name of a variable, type, function, macro, and enum.
 - **oof** [📁](./oof) [🌐](https://github.com/GerHobbelt/oof) -- OOF (omnipotent output friend) is a single C++20 header that wraps so-called [Virtual Terminal sequences](https://docs.microsoft.com/en-us/windows/console/console-virtual-terminal-sequences) (sometimes also confusingly called ["escape codes"](https://en.wikipedia.org/wiki/ANSI_escape_code)) in a convenient way, enabling console applications using OOF to be far more capable than usual: complete control over position, color and other properties of written characters.
 - **pdiff** [📁](./pdiff) [🌐](https://github.com/GerHobbelt/pdiff) -- perceptualdiff (pdiff): a program that compares two images using a perceptually based image metric.
+- **perfetto** [📁](./perfetto) [🌐](https://github.com/GerHobbelt/perfetto) -- a suite of SDKs, daemons and tools which use **tracing** to help developers understand the behaviour of complex systems and root-cause functional and performance issues on client and embedded systems.
 - **pfp-cst** [📁](./pfp-cst) [🌐](https://github.com/GerHobbelt/pfp-cst) -- Prefix-Free Parsing Compressed Suffix Tree is a compressed suffix tree, built on the prefix-free parsing of the text. If you use the PFP-CST in your research, please cite: Christina Boucher, Ondřej Cvacho, Travis Gagie, Jan Holub, Giovanni Manzini, Gonzalo Navarro, and Massimiliano Rossi . *"PFP Compressed Suffix Tree"*, In Proc. of the SIAM Symposium onAlgorithm Engineering and Experiments (ALENEX21), pp. 60-72. (2021).
 - **piposort** [📁](./piposort) [🌐](https://github.com/GerHobbelt/piposort) -- a stable top-down adaptive branchless merge sort named piposort. It is intended as a simplified [quadsort](https://github.com/scandum/quadsort) with reduced adaptivity, but a great reduction in lines of code and overall complexity. The name stands for ping-pong.
 - **PruningRadixTrie** [📁](./PruningRadixTrie) [🌐](https://github.com/GerHobbelt/PruningRadixTrie) -- a 1000x faster Radix trie for prefix search & auto-complete, the PruningRadixTrie is a novel data structure, derived from a radix trie - but 3 orders of magnitude faster. A **Pruning Radix trie** is a novel Radix trie algorithm, that allows pruning of the Radix trie and early termination of the lookup. In many cases, we are not interested in a complete set of all children for a given prefix, but only in the top-k most relevant terms. Especially for short prefixes, this results in a **massive reduction of lookup time** for the top-10 results. On the other hand, a complete result set of millions of suggestions wouldn't be helpful at all for autocompletion. The lookup acceleration is achieved by storing in each node the maximum rank of all its children. By comparing this maximum child rank with the lowest rank of the results retrieved so far, we can heavily prune the trie and do early termination of the lookup for non-promising branches with low child ranks.
@@ -4638,6 +4634,7 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 - **frozen** [📁](./frozen) [🌐](https://github.com/GerHobbelt/frozen) -- provides 0 cost initialization for immutable containers, fixed-size containers, and various algorithms.
 - **hedley** [📁](./hedley) [🌐](https://github.com/GerHobbelt/hedley) -- a C/C++ header file designed to smooth over some platform-specific annoyances.
 - **hypertextcpp** [📁](./hypertextcpp) [🌐](https://github.com/GerHobbelt/hypertextcpp) -- string/text template engine & source-to-source compiler.
+- **inih** [📁](./inih) [🌐](https://github.com/GerHobbelt/inih) -- **inih (INI Not Invented Here)** is a simple [.INI file](http://en.wikipedia.org/wiki/INI_file) parser written in C. It's only a couple of pages of code, and it was designed to be _small and simple_, so it's good for embedded systems. It's also more or less compatible with Python's [ConfigParser](http://docs.python.org/library/configparser.html) style of .INI files, including RFC 822-style multi-line syntax and `name: value` entries.
 - **libetpan** [📁](./libetpan) [🌐](https://github.com/GerHobbelt/libetpan) -- this mail library provides a portable, efficient framework for different kinds of mail access: IMAP, SMTP, POP and NNTP.
 - **libpathutils** [📁](./libpathutils) [🌐](https://github.com/GerHobbelt/libpathutils) -- cross-platform filesystem path utility functions
 - **libpfm4** [📁](./libpfm4) [🌐](https://github.com/GerHobbelt/libpfm4) -- a helper library to develop monitoring tools exploiting the performance monitoring events such as those provided by the Performance Monitoring Unit (PMU) of modern processors.
@@ -4898,10 +4895,7 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 
 ### INI
 
-- ~~**inih** [🌐](https://github.com/benhoyt/inih)~~
-  
-  - **removed**; reason: we've decided on using `libconfig` for configuration files.
-
+- **inih** [📁](./inih) [🌐](https://github.com/GerHobbelt/inih) -- **inih (INI Not Invented Here)** is a simple [.INI file](http://en.wikipedia.org/wiki/INI_file) parser written in C. It's only a couple of pages of code, and it was designed to be _small and simple_, so it's good for embedded systems. It's also more or less compatible with Python's [ConfigParser](http://docs.python.org/library/configparser.html) style of .INI files, including RFC 822-style multi-line syntax and `name: value` entries.
 - ~~**iniparser** [🌐](https://github.com/ndevilla/iniparser)~~
   
   - **removed**; reason: we've decided on using `libconfig` for configuration files.
@@ -5761,6 +5755,7 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 - **pccts** [📁](./pccts) [🌐](https://github.com/GerHobbelt/pccts) -- PCCTS / ANTLR 1 (Purdue Compiler-Construction Tool Set), a set of public domain software tools designed to facilitate the implementation of compilers and other translation systems. The canonical source is [polhode.com (maintainer: Tom Moog)](http://www.polhode.com/pccts.html); [this github repository](https://github.com/GerHobbelt/pccts) carries my own derivative (a.k.a. "fork"), which includes a few additional bugfixes and a tweak here & there.
 - **pcl** [📁](./pcl) [🌐](https://github.com/GerHobbelt/pcl) -- the Point Cloud Library (PCL) is a standalone, large scale, open project for 2D/3D image and point cloud processing.
 - **PEGTL** [📁](./PEGTL) [🌐](https://github.com/GerHobbelt/PEGTL) -- the Parsing Expression Grammar Template Library (PEGTL) is a zero-dependency C++ header-only parser combinator library for creating parsers according to a [Parsing Expression Grammar](http://en.wikipedia.org/wiki/Parsing_expression_grammar) (PEG).
+- **perfetto** [📁](./perfetto) [🌐](https://github.com/GerHobbelt/perfetto) -- a suite of SDKs, daemons and tools which use **tracing** to help developers understand the behaviour of complex systems and root-cause functional and performance issues on client and embedded systems.
 - **pikchr** [📁](./pikchr) [🌐](https://github.com/GerHobbelt/pikchr) -- Pikchr (pronounced like "picture") is a [PIC][1]-like markup language for diagrams in technical documentation.  Pikchr is designed to be embedded in [fenced code blocks][2] of Markdown (or in similar mechanisms in other markup languages) to provide a convenient means of showing diagrams.
 - **poco** [📁](./poco) [🌐](https://github.com/GerHobbelt/poco) -- POCO (Portable Components) C++ Libraries are a collection of C++ class libraries, conceptually similar to the Java Class Library or the .NET Framework, focused on solutions to frequently-encountered practical problems.
 - **pool_allocator** [📁](./pool_allocator) [🌐](https://github.com/GerHobbelt/pool_allocator) -- two custom allocators for C++17 that can speedup node-based STL containers such as `std::list`, `std::set`, etc. as well as custom object-graphs using `std::shared_ptr`.
@@ -5892,6 +5887,7 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 - **graphengine** [📁](./graphengine) [🌐](https://github.com/GerHobbelt/graphengine) -- modern graph analytics. Used by `zimg` library.
 - **highway** [📁](./highway) [🌐](https://github.com/GerHobbelt/highway) -- dependency of JpegXL
 - **htmlstreamparser** [📁](./htmlstreamparser) [🌐](https://github.com/GerHobbelt/htmlstreamparser) -- used in a demo of zsync2
+- **inih** [📁](./inih) [🌐](https://github.com/GerHobbelt/inih) -- **inih (INI Not Invented Here)** is a simple [.INI file](http://en.wikipedia.org/wiki/INI_file) parser written in C. It's only a couple of pages of code, and it was designed to be _small and simple_, so it's good for embedded systems. It's also more or less compatible with Python's [ConfigParser](http://docs.python.org/library/configparser.html) style of .INI files, including RFC 822-style multi-line syntax and `name: value` entries.
 - **iod** [📁](./iod) [🌐](https://github.com/GerHobbelt/iod) -- the IOD library enhances C++14 meta programming with a symbol based paradigm. It provides a compile-time way to introspect objects and generate code matching their data structures. It also contains few utilities built with symbol meta-programming. Symbols are at the core of the IOD paradigm. They add to C++ a missing powerful feature: The way to statically store in a variable the access to an object member, the call to a method, and the access to the string representing the name of this variable.
 - **jemalloc** [📁](./jemalloc) [🌐](https://github.com/GerHobbelt/jemalloc) -- a general purpose malloc(3) implementation that emphasizes fragmentation avoidance and scalable concurrency support.  jemalloc first came into use as the FreeBSD libc allocator in 2005, and since then it has found its way into numerous applications that rely on its predictable behavior.  In 2010 jemalloc development efforts broadened to include developer support features such as heap profiling and extensive monitoring/tuning hooks.
 - **libbf** [📁](./libbf) [🌐](https://github.com/GerHobbelt/libbf) -- a small library to handle arbitrary precision binary or decimal floating point numbers
@@ -6649,6 +6645,7 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 - **InferenceHelper** [📁](./InferenceHelper) [🌐](https://github.com/GerHobbelt/InferenceHelper) -- a wrapper of deep learning frameworks especially for inference. This class provides a common interface to use various deep learnig frameworks, so that you can use the same application code.
 - **infoware** [📁](./infoware) [🌐](https://github.com/GerHobbelt/infoware) -- C++ Library for pulling system and hardware information, without hitting the command line.
 - **inifile-cpp** [📁](./inifile-cpp) [🌐](https://github.com/GerHobbelt/inifile-cpp) -- a simple and easy to use single header-only INI file en- and decoder for C++.
+- **inih** [📁](./inih) [🌐](https://github.com/GerHobbelt/inih) -- **inih (INI Not Invented Here)** is a simple [.INI file](http://en.wikipedia.org/wiki/INI_file) parser written in C. It's only a couple of pages of code, and it was designed to be _small and simple_, so it's good for embedded systems. It's also more or less compatible with Python's [ConfigParser](http://docs.python.org/library/configparser.html) style of .INI files, including RFC 822-style multi-line syntax and `name: value` entries.
 - **inja** [📁](./inja) [🌐](https://github.com/GerHobbelt/inja) -- a template engine for modern C++, loosely inspired by [jinja](http://jinja.pocoo.org) for python. It has an easy and yet powerful template syntax with all variables, loops, conditions, includes, callbacks, and comments you need, nested and combined as you like.
 - **ink-stroke-modeler** [📁](./ink-stroke-modeler) [🌐](https://github.com/GerHobbelt/ink-stroke-modeler) -- smoothes raw freehand input and predicts the input's motion to minimize display latency. It turns noisy pointer input from touch/stylus/etc. into the beautiful stroke patterns of brushes/markers/pens/etc. Be advised that this library was designed to model handwriting, and as such, prioritizes smooth, good-looking curves over precise recreation of the input.
 - **InversePerspectiveMapping** [📁](./InversePerspectiveMapping) [🌐](https://github.com/GerHobbelt/InversePerspectiveMapping) -- C++ class for the computation of plane-to-plane homographies, aka bird's-eye view or IPM, particularly relevant in the field of Advanced Driver Assistance Systems.
@@ -7387,6 +7384,7 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 - **PEGTL** [📁](./PEGTL) [🌐](https://github.com/GerHobbelt/PEGTL) -- the Parsing Expression Grammar Template Library (PEGTL) is a zero-dependency C++ header-only parser combinator library for creating parsers according to a [Parsing Expression Grammar](http://en.wikipedia.org/wiki/Parsing_expression_grammar) (PEG).
 - **pelikan** [📁](./pelikan) [🌐](https://github.com/GerHobbelt/pelikan) -- Pelikan is Twitter's unified cache backend.
 - **percona-server** [📁](./percona-server) [🌐](https://github.com/GerHobbelt/percona-server) -- Percona Server for MySQL is a free, fully compatible, enhanced, and open source drop-in replacement for any MySQL database. It provides superior performance, scalability, and instrumentation.
+- **perfetto** [📁](./perfetto) [🌐](https://github.com/GerHobbelt/perfetto) -- a suite of SDKs, daemons and tools which use **tracing** to help developers understand the behaviour of complex systems and root-cause functional and performance issues on client and embedded systems.
 - **pevents** [📁](./pevents) [🌐](https://github.com/GerHobbelt/pevents) -- Win32 events for *nix/POSIX platforms, built on top of `pthreads`. `pevents` provides most of the functionality of both manual- and auto-reset events on Windows, most-notably including simultaneous waits on multiple events (à la `WaitForMultipleObjects`). `pevents` also doubles as a thin, sane wrapper for `CreateEvent()` & co. on Windows, meaning you can use `pevents` directly in your cross-platform code without `#ifdef`s for Windows/pthreads. While POSIX condition variables (pthread_cond_t) and WIN32 events both provide the essential building blocks of the synchronization primitives required to write multithreaded code with signaling, the nature of the differences between the two have lent their way towards creating different synchronization and multithreaded-programming paradigms. The only features not included are only named events and support for security attributes. To the author's best knowledge, this is the only implementation of WIN32 events available for Linux and other posix platforms that provides support for simultaneously waiting on multiple events. Depending on your needs, we've been told that pevents may be used as a lightweight alternative to libuv/libev while still allowing your code to embrace asynchronous event handling with ease.
 - **pforth** [📁](./pforth) [🌐](https://github.com/GerHobbelt/pforth) -- PForth - a Portable ANS-like Forth written in ANSI 'C'. It only needs character input and output functions to operate and, therefore, does not require an operating system. This makes it handy for bringing up and testing embedded systems.
 - **pfp-cst** [📁](./pfp-cst) [🌐](https://github.com/GerHobbelt/pfp-cst) -- Prefix-Free Parsing Compressed Suffix Tree is a compressed suffix tree, built on the prefix-free parsing of the text. If you use the PFP-CST in your research, please cite: Christina Boucher, Ondřej Cvacho, Travis Gagie, Jan Holub, Giovanni Manzini, Gonzalo Navarro, and Massimiliano Rossi . *"PFP Compressed Suffix Tree"*, In Proc. of the SIAM Symposium onAlgorithm Engineering and Experiments (ALENEX21), pp. 60-72. (2021).
@@ -7993,6 +7991,7 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 - **wil-Win32-Interface-Library** [📁](./wil-Win32-Interface-Library) [🌐](https://github.com/GerHobbelt/wil) -- The Windows Implementation Libraries (WIL) is a header-only C++ library created to make life easier for developers on Windows through readable type-safe C++ interfaces for common Windows coding patterns.
 - **win32-dpi** [📁](./win32-dpi) [🌐](https://github.com/GerHobbelt/win32-dpi) -- Win32 DPI-aware window example, showcasing how to write a Win32 DPI-aware GUI application that scales properly on everything starting from Windows XP up to and including latest Windows 11.
 - **win32-fileapi-demo** [📁](./win32-fileapi-demo) [🌐](https://github.com/GerHobbelt/win32-fileapi-demo) -- demo-ing Win32 file api 'A' (ANSI) and UCS2/UTF16 'W' (Wide/Unicode) interfaces / UNC paths and "long filename support" / Linux file paths: regulars, limitations, mistakes, disasters and related stuff begging for a CVE if you haven't already.
+- **Win32.mmap** [📁](./Win32.mmap) [🌐](https://github.com/GerHobbelt/Win32.mmap) -- UNIX `mmap()` Memory Mapping API emulation for MS Windows/MSVC
 - **Win32_read_directory_changes** [📁](./Win32_read_directory_changes) [🌐](https://github.com/GerHobbelt/readdirectorychanges) -- sample code which goes with [Understanding ReadDirectoryChangesW](http://qualapps.blogspot.com/2010/05/understanding-readdirectorychangesw.html)
 - **Win32_read_directory_changes_IOCP** [📁](./Win32_read_directory_changes_IOCP) [🌐](https://github.com/GerHobbelt/ReadDirectoryChangesIOCP) -- inspired by jimbeveridge's artical [Understanding ReadDirectoryChangesW](http://qualapps.blogspot.com/2010/05/understanding-readdirectorychangesw.html)! The project shows how to read directory changes by IO completion port on windows platform.
 - **Windows10EtwEvents** [📁](./Windows10EtwEvents) [🌐](https://github.com/GerHobbelt/Windows10EtwEvents) -- Events from all manifest-based and mof-based ETW providers across Windows 10 versions.
@@ -8208,10 +8207,6 @@ abstraction without sacrificing performance. Whether you are targeting a single 
   
   - **removed**; reason: has a strong focus on the *remote*, i.e. `R` in `RPC` (thus a focus on things such as encryption, authentication, firewalling, etc.), which we don't want or need: all services are supposed to run on a single machine and comms go through `localhost` *only*. When folks find they need to distribute the workload across multiple machines, then we'll be entering a new era in Qiqqa usage and then will be soon enough to (re-)investigate the usefulness of this package.
 
-- ~~**inih** [🌐](https://github.com/benhoyt/inih)~~
-  
-  - **removed**; reason: we've decided on using `libconfig` for configuration files.
-
 - ~~**iniparser** [🌐](https://github.com/ndevilla/iniparser)~~
   
   - **removed**; reason: we've decided on using `libconfig` for configuration files.
@@ -8283,19 +8278,6 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 
 # TBD: Libraries which still need to be moved into the overview / categories above...
 
-
-
-	
-[submodule "perfetto"]
-	path = perfetto
-	url = git@github.com:GerHobbelt/perfetto.git
-    fetchRecurseSubmodules = on-demand
-
-
-[submodule "Win32.mmap"]
-	path = Win32.mmap
-	url = git@github.com:GerHobbelt/Win32.mmap
-    fetchRecurseSubmodules = on-demand
 
 
 
