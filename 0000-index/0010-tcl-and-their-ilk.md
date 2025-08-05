@@ -31,4 +31,4 @@
 	
 ----
 
-🡸 [previous section](./0009-lua-uwitudinational.md)  |  🡹 [up](./0001-script-languages-for-embedding-in-c-c-applications.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0011-rubyism-various-others.md)
+🡸 [previous section](./0009-lua-uwitudinational.md)  |  🡹 [up](./0001-script-languages-for-embedding-in-c-c-applications.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0011-ruby-ism.md)

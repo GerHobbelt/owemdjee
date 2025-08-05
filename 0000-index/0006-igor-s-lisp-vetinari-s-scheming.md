@@ -33,4 +33,4 @@
 	
 ----
 
-🡸 [previous section](./0005-ecma-javascriptease.md)  |  🡹 [up](./0001-script-languages-for-embedding-in-c-c-applications.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0007-smalltalk.md)
+🡸 [previous section](./0005-ecma-javascript-ease.md)  |  🡹 [up](./0001-script-languages-for-embedding-in-c-c-applications.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0007-smalltalk.md)

@@ -9352,3 +9352,15 @@
     fetchRecurseSubmodules = on-demand
 
 
+[submodule "magika"]
+	path = magika
+	url = git@github.com:GerHobbelt/magika.git
+    fetchRecurseSubmodules = on-demand
+
+
+[submodule "marisa-trie"]
+	path = marisa-trie
+	url = git@github.com:GerHobbelt/marisa-trie.git
+    fetchRecurseSubmodules = on-demand
+
+

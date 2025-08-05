@@ -30,4 +30,4 @@
 	
 ----
 
-🡸 [previous section](./0003-forth-et-al.md)  |  🡹 [up](./0001-script-languages-for-embedding-in-c-c-applications.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0005-ecma-javascriptease.md)
+🡸 [previous section](./0003-forth-et-al.md)  |  🡹 [up](./0001-script-languages-for-embedding-in-c-c-applications.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0005-ecma-javascript-ease.md)

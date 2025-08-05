@@ -28,4 +28,4 @@
 	
 ----
 
-🡸 [previous section](./0011-rubyism-various-others.md)  |  🡹 [up](./0001-script-languages-for-embedding-in-c-c-applications.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0013-el-basicque.md)
+🡸 [previous section](./0011-ruby-ism.md)  |  🡹 [up](./0001-script-languages-for-embedding-in-c-c-applications.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0013-el-basicque.md)
