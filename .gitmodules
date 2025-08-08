@@ -9364,3 +9364,6 @@
     fetchRecurseSubmodules = on-demand
 
 
+[submodule "EASTL"]
+	path = EASTL
+	url = git@github.com:GerHobbelt/EASTL.git
