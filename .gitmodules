@@ -9367,3 +9367,12 @@
 [submodule "EASTL"]
 	path = EASTL
 	url = git@github.com:GerHobbelt/EASTL.git
+    fetchRecurseSubmodules = on-demand
+
+
+[submodule "bestline"]
+	path = bestline
+	url = git@github.com:GerHobbelt/bestline.git
+    fetchRecurseSubmodules = on-demand
+
+
