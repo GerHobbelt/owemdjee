@@ -50,7 +50,7 @@
     path = opencv
     url = git@github.com:GerHobbelt/opencv.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "unicode-cldr"]
     path = unicode-cldr
@@ -398,7 +398,7 @@
     path = boost
     url = git@github.com:GerHobbelt/boost.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "libwebsockets"]
     path = libwebsockets
@@ -8408,7 +8408,7 @@
 	path = html-parser-test-corpus
 	url = git@github.com:GerHobbelt/html-parser-test-corpus.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "libfsm"]
 	path = libfsm
