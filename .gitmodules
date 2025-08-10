@@ -9376,3 +9376,9 @@
     fetchRecurseSubmodules = on-demand
 
 
+[submodule "tgfx"]
+	path = tgfx
+	url = git@github.com:GerHobbelt/tgfx.git
+    fetchRecurseSubmodules = on-demand
+
+

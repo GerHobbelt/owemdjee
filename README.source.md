@@ -1,5 +1,13 @@
 # owemdjee
 
+
+
+
+
+
+
+
+
 <!-- 📁🌐 force Notepad++ to recognize UTF8: 📁🌐 -->
 
 
@@ -5140,6 +5148,7 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 - **skia** [📁](./skia) [🌐](https://github.com/GerHobbelt/skia) -- a complete 2D graphic library for drawing Text, Geometries, and Images. See full details at https://skia.org.
 - **sqlplot-tools** [📁](./sqlplot-tools) [🌐](https://github.com/GerHobbelt/sqlplot-tools) -- a tool to **process data series** from algorithm experiments **using SQL statements** and embed the results in **gnuplot** datafiles or **pgfplots** LaTeX files. Using SQL to generate plots can be see as **cracking a nut with a sledgehammer**, but it really works well in practice.
 - **svg-charter** [📁](./svg-charter) [🌐](https://github.com/GerHobbelt/charter) -- SVG chart renderer
+- **tgfx** [📁](./tgfx) [🌐](https://github.com/GerHobbelt/tgfx) -- TGFX (Tencent Graphics) is a lightweight 2D graphics library for rendering text, shapes, and images. It offers high-performance APIs compatible with various GPU hardware and software platforms, including iOS, Android, macOS, Windows, Linux, OpenHarmony, and the Web.
 - **tinycolormap** [📁](./tinycolormap) [🌐](https://github.com/GerHobbelt/tinycolormap) -- a header-only, single-file library for colormaps written in C++11.
 - **tmap** [📁](./tmap) [🌐](https://github.com/GerHobbelt/tmap) -- a very fast visualization library for large, high-dimensional data sets. tmap's graph layouts are based on the [OGDF](https://ogdf.uos.de/) library.
 - **vigra** [📁](./vigra) [🌐](https://github.com/GerHobbelt/vigra) -- VIGRA Computer Vision Library is a computer vision library that puts its main emphasis on flexible algorithms, because algorithms represent the principal know-how of this field. The library was consequently built using generic programming as introduced by Stepanov and Musser and exemplified in the C++ Standard Template Library. By writing a few adapters (image iterators and accessors) you can use VIGRA's algorithms on top of your data structures, within your environment.
@@ -7830,6 +7839,7 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 - **test262** [📁](./test262) [🌐](https://github.com/GerHobbelt/test262) -- ECMAScript Test Suite ([ECMA TR/104](http://ecma-international.org/publications/techreports/E-TR-104.htm))
 - **textflowcpp** [📁](./textflowcpp) [🌐](https://github.com/GerHobbelt/textflowcpp) -- a simple way to wrap a string at different line lengths, optionally with indents.
 - **text-wrangler** [📁](./text-wrangler) [🌐](https://github.com/GerHobbelt/text-wrangler) -- a library + utility for text wrangling: text from in images, text from text. text line detection, text keyphrase extraction, text metadata extraction, ...
+- **tgfx** [📁](./tgfx) [🌐](https://github.com/GerHobbelt/tgfx) -- TGFX (Tencent Graphics) is a lightweight 2D graphics library for rendering text, shapes, and images. It offers high-performance APIs compatible with various GPU hardware and software platforms, including iOS, Android, macOS, Windows, Linux, OpenHarmony, and the Web.
 - **theoretica** [📁](./theoretica) [🌐](https://github.com/GerHobbelt/theoretica) -- a numerical and automatic math library for scientific research and graphical applications. Theoretica is a header-only mathematical library which provides algorithms for **systems simulation**, **statistical analysis** of lab data and **numerical approximation**, using a **functional** oriented paradigm to mimic **mathematical notation** and formulas. The aim of the library is to provide _simple_ access to powerful algorithms while keeping an _elegant_ and _transparent_ interface, enabling the user to focus on the problem at hand.
 - **the-yabbering-politician** [📁](./the-yabbering-politician) [🌐](https://github.com/GerHobbelt/the-yabbering-politician) -- provides a cross-platform structure-aware generation-based fuzzer toolkit, which does not need coverage tooling nor injects code into your application.
 - **thread-pool** [📁](./thread-pool) [🌐](https://github.com/GerHobbelt/thread-pool) -- `BS::thread_pool`: a fast, lightweight, and easy-to-use C++17 thread pool library (by Barak Shoshany)
