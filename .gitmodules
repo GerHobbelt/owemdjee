@@ -9382,3 +9382,15 @@
     fetchRecurseSubmodules = on-demand
 
 
+[submodule "fork_union"]
+	path = fork_union
+	url = git@github.com:GerHobbelt/fork_union.git
+    fetchRecurseSubmodules = on-demand
+
+
+[submodule "cista"]
+	path = cista
+	url = git@github.com:GerHobbelt/cista.git
+    fetchRecurseSubmodules = on-demand
+
+
