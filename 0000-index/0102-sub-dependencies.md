@@ -32,6 +32,7 @@
 - **fontconfig** [📁](./fontconfig) [🌐](https://github.com/GerHobbelt/fontconfig) -- font configuration and customization library
 - **gflags** [📁](./gflags) [🌐](https://github.com/GerHobbelt/gflags) -- google::flags library, used by other libs in this set.
 - **glib2** [📁](./glib2) [🌐](https://github.com/GerHobbelt/glib) -- GLib is the low-level core library that forms the basis for projects such as GTK and GNOME.
+- **gperftools** [📁](./gperftools) [🌐](https://github.com/GerHobbelt/gperftools) -- (originally Google Performance Tools) is the fastest `malloc` we’ve seen; works particularly well with threads and STL. Also: thread-friendly heap-checker, heap-profiler, and cpu-profiler.  `gperftools` is a collection of a high-performance multi-threaded malloc() implementation, plus some pretty nifty performance analysis tools.
 - **graphengine** [📁](./graphengine) [🌐](https://github.com/GerHobbelt/graphengine) -- modern graph analytics. Used by `zimg` library.
 - **highway** [📁](./highway) [🌐](https://github.com/GerHobbelt/highway) -- dependency of JpegXL
 - **htmlstreamparser** [📁](./htmlstreamparser) [🌐](https://github.com/GerHobbelt/htmlstreamparser) -- used in a demo of zsync2

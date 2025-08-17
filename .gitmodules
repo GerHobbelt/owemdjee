@@ -9394,3 +9394,9 @@
     fetchRecurseSubmodules = on-demand
 
 
+[submodule "gperftools"]
+	path = gperftools
+	url = git@github.com:GerHobbelt/gperftools.git
+    fetchRecurseSubmodules = on-demand
+
+
