@@ -9400,3 +9400,78 @@
     fetchRecurseSubmodules = on-demand
 
 
+[submodule "unicode-lstm_word_segmentation"]
+	path = unicode-lstm_word_segmentation
+	url = git@github.com:unicode-org/lstm_word_segmentation.git
+    fetchRecurseSubmodules = on-demand
+
+
+[submodule "unicode-UK-source-ideographs"]
+	path = unicode-UK-source-ideographs
+	url = git@github.com:unicode-org/uk-source-ideographs.git
+    fetchRecurseSubmodules = on-demand
+
+
+[submodule "unicode-cjk-symbols"]
+	path = unicode-cjk-symbols
+	url = git@github.com:unicode-org/cjk-symbols.git
+    fetchRecurseSubmodules = on-demand
+
+
+[submodule "unicode-icu-docs"]
+	path = unicode-icu-docs
+	url = git@github.com:GerHobbelt/icu-docs.git
+    fetchRecurseSubmodules = on-demand
+
+
+[submodule "unicode-last-resort-font"]
+	path = unicode-last-resort-font
+	url = git@github.com:unicode-org/last-resort-font.git
+    fetchRecurseSubmodules = on-demand
+
+
+[submodule "unicode-unihan-database"]
+	path = unicode-unihan-database
+	url = git@github.com:unicode-org/unihan-database.git
+    fetchRecurseSubmodules = on-demand
+
+
+[submodule "unicode-conformance"]
+	path = unicode-conformance
+	url = git@github.com:GerHobbelt/conformance.git
+    fetchRecurseSubmodules = on-demand
+
+
+[submodule "unicode-test-corpora"]
+	path = unicode-test-corpora
+	url = git@github.com:unicode-org/test-corpora.git
+    fetchRecurseSubmodules = on-demand
+
+
+[submodule "unicode-ml-confusables-generator"]
+	path = unicode-ml-confusables-generator
+	url = git@github.com:unicode-org/ml-confusables-generator.git
+    fetchRecurseSubmodules = on-demand
+
+
+[submodule "unicode-text-rendering-tests"]
+	path = unicode-text-rendering-tests
+	url = git@github.com:GerHobbelt/text-rendering-tests.git
+    fetchRecurseSubmodules = on-demand
+
+
+[submodule "unicode-cldr-staging"]
+	path = unicode-cldr-staging
+	url = git@github.com:unicode-org/cldr-staging.git
+    fetchRecurseSubmodules = on-demand
+
+
+[submodule "unicodetools"]
+	path = unicodetools
+	url = git@github.com:GerHobbelt/unicodetools.git
+    fetchRecurseSubmodules = on-demand
+
+
+[submodule "unicode-icu-perf"]
+	path = unicode-icu-perf
+	url = git@github.com:unicode-org/icu-perf.git
