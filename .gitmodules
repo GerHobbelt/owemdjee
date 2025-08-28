@@ -9475,3 +9475,9 @@
 [submodule "unicode-icu-perf"]
 	path = unicode-icu-perf
 	url = git@github.com:unicode-org/icu-perf.git
+    fetchRecurseSubmodules = on-demand
+
+
+[submodule "atomic_queue"]
+	path = atomic_queue
+	url = git@github.com:GerHobbelt/atomic_queue.git
