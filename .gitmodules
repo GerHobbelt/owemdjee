@@ -9481,3 +9481,30 @@
 [submodule "atomic_queue"]
 	path = atomic_queue
 	url = git@github.com:GerHobbelt/atomic_queue.git
+    fetchRecurseSubmodules = on-demand
+
+
+[submodule "unicode-unilex"]
+	path = unicode-unilex
+	url = git@github.com:GerHobbelt/unilex.git
+    fetchRecurseSubmodules = on-demand
+
+
+[submodule "Detours"]
+	path = Detours
+	url = git@github.com:GerHobbelt/Detours.git
+    fetchRecurseSubmodules = on-demand
+
+
+[submodule "plutovg"]
+	path = plutovg
+	url = git@github.com:GerHobbelt/plutovg.git
+    fetchRecurseSubmodules = on-demand
+
+
+[submodule "genann"]
+	path = genann
+	url = git@github.com:GerHobbelt/genann.git
+    fetchRecurseSubmodules = on-demand
+
+

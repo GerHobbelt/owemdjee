@@ -1,1 +1,5 @@
 DIR: **./buffered_tee** -- - **buffered_tee** [📁](./buffered_tee) [🌐](https://github.com/GerHobbelt/buffered_tee)
+DIR: **./Detours** -- - **Detours** [📁](./Detours) [🌐](https://github.com/GerHobbelt/Detours)
+DIR: **./atomic_queue** -- - **atomic_queue** [📁](./atomic_queue) [🌐](https://github.com/GerHobbelt/atomic_queue)
+DIR: **./unicode-icu-perf** -- - **unicode-icu-perf** [📁](./unicode-icu-perf) [🌐](git@github.com:unicode-org/icu-perf)
+DIR: **./unicode-unilex** -- - **unicode-unilex** [📁](./unicode-unilex) [🌐](https://github.com/GerHobbelt/unilex)
