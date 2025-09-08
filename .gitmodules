@@ -9508,3 +9508,27 @@
     fetchRecurseSubmodules = on-demand
 
 
+[submodule "PhotoshopAPI"]
+	path = PhotoshopAPI
+	url = git@github.com:GerHobbelt/PhotoshopAPI.git
+    fetchRecurseSubmodules = on-demand
+
+
+[submodule "libco"]
+	path = libco
+	url = git@github.com:GerHobbelt/libco.git
+    fetchRecurseSubmodules = on-demand
+
+
+[submodule "libgo"]
+	path = libgo
+	url = git@github.com:GerHobbelt/libgo.git
+    fetchRecurseSubmodules = on-demand
+
+
+[submodule "cppserdes"]
+	path = cppserdes
+	url = git@github.com:GerHobbelt/cppserdes.git
+    fetchRecurseSubmodules = on-demand
+
+
