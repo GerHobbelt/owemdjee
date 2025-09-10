@@ -14,10 +14,10 @@
   
   - **in-purgatory**; reason: see the `HDF5` entry below. But advertises to be an interface between OpenCV, Eigen, etc. at the same time...
 
-- ~~**HDF5** [🌐](https://github.com/HDFGroup/hdf5)~~
-  
-  - **removed**; reason: HDF5 is a nice concept but considered *overkill* right now; where we need disk stores, we'll be using SQLite or LMDB-like key-value stores instead. Such stores are not meant to be interchangeable with other software in their raw shape and we'll provide public access APIs instead, where applicable.
-
+- **hdf5** [📁](./hdf5) [🌐](https://github.com/GerHobbelt/hdf5) -- HDF5®, a high-performance software library and data format that has been adopted across multiple industries and has become a de facto standard in scientific and research communities.
+- **hdf5-examples** [📁](./hdf5-examples) [🌐](https://github.com/GerHobbelt/hdf5-examples) -- HDF5 Examples
+- **hdf5_plugins** [📁](./hdf5_plugins) [🌐](https://github.com/GerHobbelt/hdf5_plugins) -- HDF5 Compression Plugins
+- **tar2h5** [📁](./tar2h5) [🌐](https://github.com/GerHobbelt/tar2h5) -- convert Tape ARchives to HDF5 files.
 - ~~**HighFive-HDF5** [🌐](https://github.com/BlueBrain/HighFive)~~
   
   - **removed**; reason: see the `HDF5` entry above.

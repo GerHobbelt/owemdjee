@@ -838,6 +838,7 @@ The various embeddable script languages that peaked our interest (at one time or
 - **capnproto** [📁](./capnproto) [🌐](https://github.com/GerHobbelt/capnproto) -- Cap'n Proto is an insanely fast data interchange format and capability-based RPC system. Think JSON, except binary. Or think [Protocol Buffers](https://github.com/google/protobuf), except faster.
 - **cereal** [📁](./cereal) [🌐](https://github.com/GerHobbelt/cereal) -- C++11 serialization library
 - **cista** [📁](./cista) [🌐](https://github.com/GerHobbelt/cista) -- provides a simple C++17 compatible way of (de-)serializing C++ data structures. The underlying reflection mechanism can be used in [other ways](https://cista.rocks/#reflection), too!
+- **cppserdes** [📁](./cppserdes) [🌐](https://github.com/GerHobbelt/cppserdes) -- a serialization/deserialization library designed with embedded systems in mind - where bit-level manipulation and low-level protocol design tooling are first class citizens.
 - **flatbuffers** [📁](./flatbuffers) [🌐](https://github.com/GerHobbelt/flatbuffers) -- a cross platform serialization library architected for maximum memory efficiency. It allows you to directly access serialized data without parsing/unpacking it first, while still having great forwards/backwards compatibility.
 - **GoldFish-CBOR** [📁](./GoldFish-CBOR) [🌐](https://github.com/GerHobbelt/GoldFish) -- a fast JSON and CBOR streaming library, without using memory. GoldFish can parse and generate very large [JSON](http://json.org) or [CBOR](http://cbor.io) documents. It has some similarities to a [SAX](https://en.wikipedia.org/wiki/Simple_API_for_XML) parser, but doesn't use an event driven API, instead the user of the GoldFish interface is in control. GoldFish intends to be the easiest and one of the fastest JSON and CBOR streaming parser and serializer to use.
 - **ion-c** [📁](./ion-c) [🌐](https://github.com/GerHobbelt/ion-c) -- a C implementation of the [Ion data notation](http://amzn.github.io/ion-docs). Amazon Ion is a richly-typed, self-describing, hierarchical data serialization format offering interchangeable binary and text representations. The text format (a superset of JSON) is easy to read and author, supporting rapid prototyping. The binary representation is efficient to store, transmit, and skip-scan parse. The rich type system provides unambiguous semantics for long-term preservation of data which can survive multiple generations of software evolution.
@@ -1431,10 +1432,10 @@ These hashes are for other purposes, e.g. fast lookup in dictionaries, fast appr
   
   - **in-purgatory**; reason: see the `HDF5` entry below. But advertises to be an interface between OpenCV, Eigen, etc. at the same time...
 
-- ~~**HDF5** [🌐](https://github.com/HDFGroup/hdf5)~~
-  
-  - **removed**; reason: HDF5 is a nice concept but considered *overkill* right now; where we need disk stores, we'll be using SQLite or LMDB-like key-value stores instead. Such stores are not meant to be interchangeable with other software in their raw shape and we'll provide public access APIs instead, where applicable.
-
+- **hdf5** [📁](./hdf5) [🌐](https://github.com/GerHobbelt/hdf5) -- HDF5®, a high-performance software library and data format that has been adopted across multiple industries and has become a de facto standard in scientific and research communities.
+- **hdf5-examples** [📁](./hdf5-examples) [🌐](https://github.com/GerHobbelt/hdf5-examples) -- HDF5 Examples
+- **hdf5_plugins** [📁](./hdf5_plugins) [🌐](https://github.com/GerHobbelt/hdf5_plugins) -- HDF5 Compression Plugins
+- **tar2h5** [📁](./tar2h5) [🌐](https://github.com/GerHobbelt/tar2h5) -- convert Tape ARchives to HDF5 files.
 - ~~**HighFive-HDF5** [🌐](https://github.com/BlueBrain/HighFive)~~
   
   - **removed**; reason: see the `HDF5` entry above.
@@ -1667,6 +1668,7 @@ These hashes are for other purposes, e.g. fast lookup in dictionaries, fast appr
 - **libbf** [📁](./libbf) [🌐](https://github.com/GerHobbelt/libbf) -- a small library to handle arbitrary precision binary or decimal floating point numbers
 - **libcnl** [📁](./libcnl) [🌐](https://github.com/GerHobbelt/cnl) -- The Compositional Numeric Library (CNL) is a C++ library of fixed-precision numeric classes which enhance integers to deliver safer, simpler, cheaper arithmetic types. CNL is particularly well-suited to: (1) compute on energy-constrained environments where FPUs are absent or costly; (2) compute on energy-intensive environments where arithmetic is the bottleneck such as simulations, machine learning applications and DSPs; and (3) domains such as finance where precision is essential.
 - **libeigen** [📁](./libeigen) [🌐](https://github.com/GerHobbelt/eigen-git-mirror) -- a C++ template library for linear algebra: matrices, vectors, numerical solvers, and related algorithms.
+- **libscientific** [📁](./libscientific) [🌐](https://github.com/GerHobbelt/libscientific) -- a simple and tiny, robust C library for multivariate and other statistical analysis that can be used not only in regular computers but also in embedded systems, written to be quasi-completely independent of common and well-established calculus libraries, except for the lapack library, which is used only to calculate left eigenvectors and eigenvalues.
 - **math-atlas** [📁](./math-atlas) [🌐](https://github.com/GerHobbelt/math-atlas) -- The ATLAS (Automatically Tuned Linear Algebra Software) project is an ongoing research effort focusing on applying empirical techniques in order to provide portable performance, delivering an efficient BLAS implementation, as well as a few routines from LAPACK.
 - **mipp** [📁](./mipp) [🌐](https://github.com/GerHobbelt/MIPP) -- MyIntrinsics++ (MIPP): a portable wrapper for vector intrinsic functions (SIMD) written in C++11. It works for SSE, AVX, AVX-512 and ARM NEON (32-bit and 64-bit) instructions. MIPP wrapper supports simple/double precision floating-point numbers and also signed integer arithmetic (64-bit, 32-bit, 16-bit and 8-bit). With the MIPP wrapper you do not need to write a specific intrinsic code anymore. Just use provided functions and the wrapper will automatically generate the right intrisic calls for your specific architecture.
 - **mlpack** [📁](./mlpack) [🌐](https://github.com/GerHobbelt/mlpack) -- an intuitive, fast, and flexible C++ machine learning library, meant to be a machine learning analog to LAPACK, aiming to implement a wide array of machine learning methods and functions as a "swiss army knife" for machine learning researchers.
@@ -1971,6 +1973,7 @@ Guassian Mixture Models / Hidden Markov Models / k-Means: fit patterns, e.g. mat
 - **libirwls** [📁](./libirwls) [🌐](https://github.com/GerHobbelt/LIBIRWLS) -- LIBIRWLS is an integrated library that incorporates a parallel implementation of the Iterative Re-Weighted Least Squares (IRWLS) procedure, an alternative to quadratic programming (QP), for training of Support Vector Machines (SVMs). Although there are several methods for SVM training, the number of parallel libraries is very reduced. In particular, this library contains solutions to solve either full or budgeted SVMs making use of shared memory parallelization techniques: (1) a parallel SVM training procedure based on the IRWLS algorithm, (2) a parallel budgeted SVMs solver based on the IRWLS algorithm.
 - **libkdtree** [📁](./libkdtree) [🌐](https://github.com/GerHobbelt/libkdtree) -- libkdtree++ is a C++ template container implementation of k-dimensional space sorting, using a kd-tree.
 - **libmlpp** [📁](./libmlpp) [🌐](https://github.com/GerHobbelt/MLPP) -- ML++ :: The intent with this machine-learning library is for it to act as a crossroad between low-level developers and machine learning engineers.
+- **libscientific** [📁](./libscientific) [🌐](https://github.com/GerHobbelt/libscientific) -- a simple and tiny, robust C library for multivariate and other statistical analysis that can be used not only in regular computers but also in embedded systems, written to be quasi-completely independent of common and well-established calculus libraries, except for the lapack library, which is used only to calculate left eigenvectors and eigenvalues.
 - **libsvm** [📁](./libsvm) [🌐](https://github.com/GerHobbelt/libsvm) -- a simple, easy-to-use, and efficient software for SVM classification and regression. It solves C-SVM classification, nu-SVM classification, one-class-SVM, epsilon-SVM regression, and nu-SVM regression. It also provides an automatic model selection tool for C-SVM classification.
 - **LightGBM** [📁](./LightGBM) [🌐](https://github.com/GerHobbelt/LightGBM) -- LightGBM (Light Gradient Boosting Machine) is a gradient boosting framework that uses tree based learning algorithms. It is designed to be distributed and efficient with the following advantages:
   
@@ -4441,8 +4444,10 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **createprocess-windows** [📁](./createprocess-windows) [🌐](https://github.com/GerHobbelt/createprocess-windows) -- drive `CreateProcess` Win32 API
 - **FiberTaskingLib** [📁](./FiberTaskingLib) [🌐](https://github.com/GerHobbelt/FiberTaskingLib) -- a library for enabling task-based multi-threading. It allows execution of task graphs with arbitrary dependencies. Dependencies are represented as atomic counters. Under the covers, the task graph is executed using fibers, which in turn, are run on a pool of worker threads (one thread per CPU core). This allows the scheduler to wait on dependencies without task chaining or context switches.
 - **libaco** [📁](./libaco) [🌐](https://github.com/GerHobbelt/libaco) -- a blazing fast and lightweight C asymmetric coroutine library 💎 ⛅🚀⛅🌞 Along with the implementation of a production-ready C coroutine library, it has detailed documentation about how to implement a fastest and correct coroutine library, includes a strict mathematical proof. It has no more than 700 LOC but has the full functionality which you may want from a coroutine library. (The phrase "fastest" here means the fastest context switching implementation which complies to the Sys V ABI of Intel386 or AMD64.)
+- **libco** [📁](./libco) [🌐](https://github.com/GerHobbelt/libco) -- a C/C++ coroutine library that is widely used in WeChat services. It has been running on tens of thousands of machines since 2013.
 - **libcopp** [📁](./libcopp) [🌐](https://github.com/GerHobbelt/libcopp) -- cross-platform coroutine library in C++
 - **libcsp** [📁](./libcsp) [🌐](https://github.com/GerHobbelt/libcsp) -- a concurrency C library 10x faster than Golang, influenced by the CSP model.
+- **libgo** [📁](./libgo) [🌐](https://github.com/GerHobbelt/libgo) -- a stackful coroutine library for collaborative scheduling à la Go Language, written in C++ 11. Using libgo to write multi-threaded programs, it can be developed as fast and logical as golang and Erlang concurrent languages, and has the performance advantages of C++ native.
 - **libpipeline** [📁](./libpipeline) [🌐](https://github.com/GerHobbelt/libpipeline) -- libpipeline, a pipeline manipulation library for setting up and running pipelines of processes, without needing to involve shell command-line parsing which is often error-prone and insecure.  This alleviates programmers of the need to laboriously construct pipelines using lower-level primitives such as fork(2) and execve(2).
 - **libtuv** [📁](./libtuv) [🌐](https://github.com/GerHobbelt/libtuv) -- a multi-platform tiny event library refactored from `libuv` source for IoT and embedded systems.
 - **libunifex** [📁](./libunifex) [🌐](https://github.com/GerHobbelt/libunifex) -- a prototype implementation of the C++ sender/receiver async programming model that is currently being considered for standardisation. This project contains implementations of the following: Schedulers, Timers, Asynchronous I/O, Algorithms that encapsulate certain concurrency patterns, Async streams, Cancellation, Coroutine integration.
@@ -5667,6 +5672,7 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 - **chromium-snss-parse** [📁](./chromium-snss-parse) [🌐](https://github.com/GerHobbelt/chromium-snss-parse) -- Chromium SNSS parse library parses Chromium's SNSS files, e.g. Current Session, Current Tabs, Last Session, Last Tabs and other files.
 - **cilantro** [📁](./cilantro) [🌐](https://github.com/GerHobbelt/cilantro) -- a lean and fast C++ library for 2D/3D point cloud data processing, with emphasis given to the 3D case. It includes efficient implementations for a variety of common operations, providing a clean API and attempting to minimize the amount of boilerplate code. The library is extensively templated, enabling operations on data of arbitrary numerical type and dimensionality (where applicable) and featuring a modular/extensible design of the more complex procedures. At the same time, convenience aliases/wrappers for the most common cases are provided.
 - **cimfomfa** [📁](./cimfomfa) [🌐](https://github.com/GerHobbelt/cimfomfa) -- another blooming C utility library.
+- **cleanCppProject** [📁](./cleanCppProject) [🌐](https://github.com/GerHobbelt/cleanCppProject) -- an empty project template for any C++ project, featuring modern CMake build scripts, unit tests via Catch, documentation generation via Doxygen (code + wiki + UML diagrams with Graphviz and PlanUML), static code analysis, CI, etc. Works with your favourite linux distro, Windows and MacOS.
 - **cmake_examples** [📁](./cmake_examples) [🌐](https://github.com/GerHobbelt/cmake_examples) -- CMake examples for C/C++ projects.
 - **Cmathtuts** [📁](./Cmathtuts) [🌐](https://github.com/GerHobbelt/Cmathtuts) -- a collection of linear algebra math tutorials in C for BLAS, LAPACK and other fundamental APIs. These include samples for BLAS, LAPACK, CLAPACK, LAPACKE, ATLAS, OpenBLAS ...
 - **colormap-tools** [📁](./colormap-tools) [🌐](https://github.com/GerHobbelt/colormap-tools) -- read, manage & generate colors, colormaps and color gradients for various other applications (gnuplot, Photoshop, ...), in diverse output formats and color spaces (sRGB, OKLab, CMYK, ...). Also provide a C++ API for the same functionality, i.e. also serve as an in-app library providing these services.
@@ -6173,6 +6179,7 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 - **cld1-language-detect** [📁](./cld1-language-detect) [🌐](https://github.com/GerHobbelt/cld) -- the CLD (Compact Language Detection) library, extracted from the source code for Google's Chromium library. CLD1 probabilistically detects languages in Unicode UTF-8 text.
 - **cld2-language-detect** [📁](./cld2-language-detect) [🌐](https://github.com/GerHobbelt/cld2) -- CLD2 probabilistically detects over 80 languages in Unicode UTF-8 text, either plain text or HTML/XML. For mixed-language input, CLD2 returns the top three languages found and their approximate percentages of the total text bytes.  Optionally, it also returns a vector of text spans with the language of each identified. The design target is web pages of at least 200 characters (about two sentences); CLD2 is not designed to do well on very short text.
 - **cld3-language-detect** [📁](./cld3-language-detect) [🌐](https://github.com/GerHobbelt/cld3) -- CLD3 is a neural network model for language identification. The inference code extracts character ngrams from the input text and computes the fraction of times each of them appears. The model outputs BCP-47-style language codes, shown in the table below. For some languages, output is differentiated by script. Language and script names from Unicode CLDR.
+- **cleanCppProject** [📁](./cleanCppProject) [🌐](https://github.com/GerHobbelt/cleanCppProject) -- an empty project template for any C++ project, featuring modern CMake build scripts, unit tests via Catch, documentation generation via Doxygen (code + wiki + UML diagrams with Graphviz and PlanUML), static code analysis, CI, etc. Works with your favourite linux distro, Windows and MacOS.
 - **cli11** [📁](./cli11) [🌐](https://github.com/GerHobbelt/CLI11) -- command line options parser
 - **clipp** [📁](./clipp) [🌐](https://github.com/GerHobbelt/clipp) -- commandline parser
   
@@ -6236,6 +6243,7 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 - **CppNumericalSolvers** [📁](./CppNumericalSolvers) [🌐](https://github.com/GerHobbelt/CppNumericalSolvers) -- a header-only C++17 BFGS / L-BFGS-B optimization library.
 - **cpp.react** [📁](./cpp.react) [🌐](https://github.com/GerHobbelt/cpp.react) -- C++React is a reactive programming library for C++14. It enables the declarative definition of data dependencies between state and event flows. Based on these definitions, propagation of changes is handled automatically.
 - **cpp_rest_sdk** [📁](./cpp_rest_sdk) [🌐](https://github.com/GerHobbelt/cpprestsdk) -- the C++ REST SDK is a Microsoft project for cloud-based client-server communication in native code using a modern asynchronous C++ API design. This project aims to help C++ developers connect to and interact with services.
+- **cppserdes** [📁](./cppserdes) [🌐](https://github.com/GerHobbelt/cppserdes) -- a serialization/deserialization library designed with embedded systems in mind - where bit-level manipulation and low-level protocol design tooling are first class citizens.
 - **cppsimhash** [📁](./cppsimhash) [🌐](https://github.com/GerHobbelt/cppsimhash) -- C++ simhash implementation for documents and an additional (prototype) simhash index for text documents. Simhash is a hashing technique that belongs to the LSH (Local Sensitive Hashing) algorithmic family. It was initially developed by Moses S. Charikar in 2002 and is described in detail in his [paper](http://www.cs.princeton.edu/courses/archive/spring04/cos598B/bib/CharikarEstim.pdf).
 - **cpp-terminal** [📁](./cpp-terminal) [🌐](https://github.com/GerHobbelt/cpp-terminal) -- CPP-Terminal is a small C++ library for writing platform independent terminal-based applications. It follows the "Zero-overhead principle" and limits externally included files to the C++ STL. Being crossplatform we support Windows, Linux and MacOS and provide a unified API across all platforms. Our main features are consisting of Colors, Keyboard input, terminal resize handling, as well as other common terminal functionality. It's also possible to open a managed terminal from a windows GUI application.
 - **cpptoml** [📁](./cpptoml) [🌐](https://github.com/GerHobbelt/cpptoml) -- a header-only library for parsing [TOML][toml] configuration files. This includes support for the new DateTime format, inline tables, multi-line basic and raw strings, digit separators, hexadecimal integers, octal integers, binary integers, and float special values.
@@ -6636,6 +6644,9 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 - **hashtable-bench** [📁](./hashtable-bench) [🌐](https://github.com/GerHobbelt/hashtable-bench) -- a benchmark for hash tables (hash maps) with different hash functions in C++, attempting to evaluate the performance of the lookup, insertion, deletion, iteration, etc. on different data as comprehensively as possible.
 - **hdbscan** [📁](./hdbscan) [🌐](https://github.com/GerHobbelt/hdbscan) -- a fast parallel implementation for HDBSCAN* [[1]](https://dl.acm.org/doi/10.1145/2733381) (hierarchical DBSCAN). The implementation stems from our parallel algorithms [[2]](https://arxiv.org/pdf/2104.01126.pdf) developed at MIT, and presented at SIGMOD 2021. Our approach is based on generating a well-separated pair decomposition followed by using Kruskal's minimum spanning tree algorithm and bichromatic closest pair computations. We also give a new parallel divide-and-conquer algorithm for computing the dendrogram, which are used in visualizing clusters of different scale that arise for HDBSCAN*.
 - **hdbscan-cpp** [📁](./hdbscan-cpp) [🌐](https://github.com/GerHobbelt/hdbscan-cpp) -- Fast and Efficient Implementation of HDBSCAN in C++ using STL. HDBSCAN - Hierarchical Density-Based Spatial Clustering of Applications with Noise. Performs DBSCAN over varying epsilon values and integrates the result to find a clustering that gives the best stability over epsilon. This allows HDBSCAN to find clusters of varying densities (unlike DBSCAN), and be more robust to parameter selection. In practice this means that HDBSCAN returns a good clustering straight away with little or no parameter tuning -- and the primary parameter, minimum cluster size, is intuitive and easy to select. HDBSCAN is ideal for exploratory data analysis; it's a fast and robust algorithm that you can trust to return meaningful clusters (if there are any).
+- **hdf5** [📁](./hdf5) [🌐](https://github.com/GerHobbelt/hdf5) -- HDF5®, a high-performance software library and data format that has been adopted across multiple industries and has become a de facto standard in scientific and research communities.
+- **hdf5-examples** [📁](./hdf5-examples) [🌐](https://github.com/GerHobbelt/hdf5-examples) -- HDF5 Examples
+- **hdf5_plugins** [📁](./hdf5_plugins) [🌐](https://github.com/GerHobbelt/hdf5_plugins) -- HDF5 Compression Plugins
 - **HDiffPatch** [📁](./HDiffPatch) [🌐](https://github.com/GerHobbelt/HDiffPatch) -- a library and command-line tools for Diff & Patch between binary files or directories(folders); cross-platform; runs fast; create small delta/differential; support large files and limit memory requires when diff & patch.
 - **hedley** [📁](./hedley) [🌐](https://github.com/GerHobbelt/hedley) -- a C/C++ header file designed to smooth over some platform-specific annoyances.
 - **hescape** [📁](./hescape) [🌐](https://github.com/GerHobbelt/hescape) -- a C library for fast HTML escape using SSE instruction, `pcmpestri`. Hescape provides only one API, `hesc_escape_html()`.
@@ -6849,6 +6860,7 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 - **libclustering_dim_redux** [📁](./libclustering_dim_redux) [🌐](https://github.com/GerHobbelt/libclustering_dim_redux) -- C++ code for dimension reduction, Kohonen maps (SOMs), t-SNE, PCA, kNN, ...
 - **libcmime** [📁](./libcmime) [🌐](https://github.com/GerHobbelt/libcmime) -- MIME extract/insert/encode/decode: use for MHTML support
 - **libcnl** [📁](./libcnl) [🌐](https://github.com/GerHobbelt/cnl) -- The Compositional Numeric Library (CNL) is a C++ library of fixed-precision numeric classes which enhance integers to deliver safer, simpler, cheaper arithmetic types. CNL is particularly well-suited to: (1) compute on energy-constrained environments where FPUs are absent or costly; (2) compute on energy-intensive environments where arithmetic is the bottleneck such as simulations, machine learning applications and DSPs; and (3) domains such as finance where precision is essential.
+- **libco** [📁](./libco) [🌐](https://github.com/GerHobbelt/libco) -- a C/C++ coroutine library that is widely used in WeChat services. It has been running on tens of thousands of machines since 2013.
 - **libconfig** [📁](./libconfig) [🌐](https://github.com/GerHobbelt/libconfig) -- generic config (file) reader/writer
 - **libcopp** [📁](./libcopp) [🌐](https://github.com/GerHobbelt/libcopp) -- cross-platform coroutine library in C++
 - **libcppjieba** [📁](./libcppjieba) [🌐](https://github.com/GerHobbelt/libcppjieba) -- source code extracted from the [CppJieba] project to form a separate project, making it easier to understand and use.
@@ -6893,6 +6905,7 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 - **libgd** [📁](./libgd) [🌐](https://github.com/GerHobbelt/libgd) -- GD is a library for the dynamic creation of images by programmers. GD has support for: WebP, JPEG, PNG, AVIF, HEIF, TIFF, BMP, GIF, TGA, WBMP, XPM.
 - **libgif** [📁](./libgif) [🌐](https://github.com/GerHobbelt/libgif) -- a library for manipulating GIF files.
 - **libgnurx** [📁](./libgnurx) [🌐](https://github.com/GerHobbelt/libgnurx) -- the POSIX regex functionality from glibc extracted into a separate library, for Win32.
+- **libgo** [📁](./libgo) [🌐](https://github.com/GerHobbelt/libgo) -- a stackful coroutine library for collaborative scheduling à la Go Language, written in C++ 11. Using libgo to write multi-threaded programs, it can be developed as fast and logical as golang and Erlang concurrent languages, and has the performance advantages of C++ native.
 - **libgrape-lite** [📁](./libgrape-lite) [🌐](https://github.com/GerHobbelt/libgrape-lite) -- a C++ library from Alibaba for parallel graph processing (GRAPE). It differs from prior systems in its ability to parallelize sequential graph algorithms as a whole by following the PIE programming model from GRAPE. Sequential algorithms can be easily "plugged into" `libgrape-lite` with only minor changes and get parallelized to handle large graphs efficiently. `libgrape-lite` is designed to be highly efficient and flexible, to cope with the scale, variety and complexity of real-life graph applications.
 - **libharry** [📁](./libharry) [🌐](https://github.com/GerHobbelt/harry) -- Harry - A Tool for Measuring String Similarity. The tool supports several common distance and kernel functions for strings as well as some excotic similarity measures.  The focus of Harry lies on implicit similarity measures, that is, comparison functions that do not give rise to an explicit vector space.  Examples of such similarity measures are the Levenshtein distance, the Jaro-Winkler distance or the spectrum kernel.
 - **libhashish** [📁](./libhashish) [🌐](https://github.com/GerHobbelt/libhashish) -- non-cryptographic hash algorithms & various applications thereof (hash tables = dictionaries, bloom filters, ...)
@@ -6997,6 +7010,7 @@ abstraction without sacrificing performance. Whether you are targeting a single 
   The libsais is inspired by [libdivsufsort](https://github.com/y-256/libdivsufsort), [sais](https://sites.google.com/site/yuta256/sais) libraries by Yuta Mori and [msufsort](https://github.com/michaelmaniscalco/msufsort) by Michael Maniscalco.
 
 - **libscanf** [📁](./libscanf) [🌐](https://github.com/GerHobbelt/scnlib) -- a modern C++ library for replacing `scanf` and `std::istream`. This library attempts to move us ever so closer to replacing `iostream`s and C stdio altogether. It's faster than `iostream` (see Benchmarks) and type-safe, unlike `scanf`. Think [{fmt}](https://github.com/fmtlib/fmt) but in the other direction.
+- **libscientific** [📁](./libscientific) [🌐](https://github.com/GerHobbelt/libscientific) -- a simple and tiny, robust C library for multivariate and other statistical analysis that can be used not only in regular computers but also in embedded systems, written to be quasi-completely independent of common and well-established calculus libraries, except for the lapack library, which is used only to calculate left eigenvectors and eigenvalues.
 - **libserialport** [📁](./libserialport) [🌐](https://github.com/GerHobbelt/libserialport) -- a cross-platform library for accessing serial ports. libserialport is a minimal library written in C that is intended to take care of the OS-specific details when writing software that uses serial ports.
 - **libshmcache** [📁](./libshmcache) [🌐](https://github.com/GerHobbelt/libshmcache) -- a local share memory cache for multi processes. it is a high performance library because read mechanism is lockless. libshmcache is 100+ times faster than a remote interface such as redis.
 - **libsigcplusplus** [📁](./libsigcplusplus) [🌐](https://github.com/GerHobbelt/libsigcplusplus) -- libsigc++ : The Typesafe Callback Framework for C++. It allows you to define signals and to connect those signals to any callback function, either global or a member function, regardless of whether it is static or virtual.
@@ -7833,6 +7847,7 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 - **tao-json** [📁](./tao-json) [🌐](https://github.com/GerHobbelt/tao-json) -- taoJSON is a C++ header-only JSON library that provides a generic [Value Class](doc/Value-Class.md), uses [Type Traits](doc/Type-Traits.md) to interoperate with C++ types, uses an [Events Interface](doc/Events-Interface.md) to convert from and to JSON, JAXN, CBOR, MsgPack and UBJSON, and much more...
 - **taolog** [📁](./taolog) [🌐](https://github.com/GerHobbelt/taolog) -- a Win32 logger based on DebugView & ETW.
 - **tapkee** [📁](./tapkee) [🌐](https://github.com/GerHobbelt/tapkee) -- a C++ template library for dimensionality reduction with some bias on spectral methods. The Tapkee origins from the code developed during [GSoC 2011](http://www.google-melange.com/gsoc/homepage/google/gsoc2011) as the part of the [Shogun machine learning toolbox](https://github.com/shogun-toolbox/shogun). The project aim is to provide efficient and flexible standalone library for dimensionality reduction which can be easily integrated to existing codebases. Tapkee leverages capabilities of effective [Eigen3 linear algebra library](http://eigen.tuxfamily.org) and optionally makes use of the [ARPACK eigensolver](http://www.caam.rice.edu/software/ARPACK/). The library uses CoverTree and VP-tree data structures to compute nearest neighbors. To achieve greater flexibility we provide a callback interface which decouples dimension reduction algorithms from the data representation and storage schemes.
+- **tar2h5** [📁](./tar2h5) [🌐](https://github.com/GerHobbelt/tar2h5) -- convert Tape ARchives to HDF5 files.
 - **tarray** [📁](./tarray) [🌐](https://github.com/GerHobbelt/tarray) -- module provides Janet Typed-Arrays.
 - **taskflow** [📁](./taskflow) [🌐](https://github.com/GerHobbelt/taskflow) -- quickly write parallel and heterogeneous task programs in modern C++. Taskflow is faster, more expressive, and easier for drop-in integration than many of existing task programming frameworks in handling complex parallel workloads.
 - **tcl** [📁](./tcl) [🌐](https://github.com/GerHobbelt/tcl) -- the latest **Tcl** source distribution. Tcl provides a powerful platform for creating integration applications that tie together diverse applications, protocols, devices, and frameworks.
@@ -8262,10 +8277,6 @@ abstraction without sacrificing performance. Whether you are targeting a single 
   
   - **removed**; reason: GNOME libraries are horrible to integrate with other codebases.
 
-- ~~**HDF5** [🌐](https://github.com/HDFGroup/hdf5)~~
-  
-  - **removed**; reason: HDF5 is a nice concept but considered *overkill* right now; where we need disk stores, we'll be using SQLite or LMDB-like key-value stores instead. Such stores are not meant to be interchangeable with other software in their raw shape and we'll provide public access APIs instead, where applicable.
-
 - ~~**HighFive-HDF5** [🌐](https://github.com/BlueBrain/HighFive)~~
   
   - **removed**; reason: see the `HDF5` entry above.
@@ -8346,45 +8357,5 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 # TBD: Libraries which still need to be moved into the overview / categories above...
 
 
-
-
-
-
-[submodule "plutovg"]
-	path = plutovg
-	url = git@github.com:GerHobbelt/plutovg.git
-    fetchRecurseSubmodules = on-demand
-
-
-[submodule "genann"]
-	path = genann
-	url = git@github.com:GerHobbelt/genann.git
-    fetchRecurseSubmodules = on-demand
-
-
-[submodule "PhotoshopAPI"]
-	path = PhotoshopAPI
-	url = git@github.com:GerHobbelt/PhotoshopAPI.git
-    fetchRecurseSubmodules = on-demand
-
-
-[submodule "libco"]
-	path = libco
-	url = git@github.com:GerHobbelt/libco.git
-    fetchRecurseSubmodules = on-demand
-
-
-[submodule "libgo"]
-	path = libgo
-	url = git@github.com:GerHobbelt/libgo.git
-    fetchRecurseSubmodules = on-demand
-
-
-
-
-[submodule "cppserdes"]
-	path = cppserdes
-	url = git@github.com:GerHobbelt/cppserdes.git
-    fetchRecurseSubmodules = on-demand
 
 

@@ -62,6 +62,7 @@
 
 Also, we are currently more interested in *fast data serialization* then RPC *per se* as we aim for a solution that's more akin to a REST API interface style.
 
+- **atomic_queue** [📁](./atomic_queue) [🌐](https://github.com/GerHobbelt/atomic_queue) -- C++14 multiple-producer-multiple-consumer *lockless* queues based on circular buffer with [`std::atomic`][3]. The main design principle these queues follow is _minimalism_: the bare minimum of atomic operations, fixed size buffer, value semantics. There are no OS-blocking push/pop functions. This queue is designed for ultra-low-latency scenarios and using an OS blocking primitive would be sacrificing push-to-pop latency.
 - **corosync** [📁](./corosync) [🌐](https://github.com/GerHobbelt/corosync) -- the Corosync Cluster Engine. The synchronization algorithm is used for every service in corosync to synchronize state of the system. The checkpoint synchronization algorithm is to synchronize checkpoints after a partition or merge of two or more partitions.
 - ~~**oatpp** [🌐](https://github.com/oatpp/oatpp) -- IPC / server framework~~
   
