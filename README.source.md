@@ -8359,3 +8359,52 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 
 
 
+
+[submodule "cppserdes"]
+	path = cppserdes
+	url = git@github.com:GerHobbelt/cppserdes.git
+    fetchRecurseSubmodules = on-demand
+
+
+[submodule "hdf5"]
+	path = hdf5
+	url = git@github.com:GerHobbelt/hdf5.git
+    fetchRecurseSubmodules = on-demand
+
+
+[submodule "hdf5-examples"]
+	path = hdf5-examples
+	url = git@github.com:GerHobbelt/hdf5-examples.git
+    fetchRecurseSubmodules = on-demand
+
+
+[submodule "hdf5_plugins"]
+	path = hdf5_plugins
+	url = git@github.com:GerHobbelt/hdf5_plugins.git
+    fetchRecurseSubmodules = on-demand
+
+
+[submodule "tar2h5"]
+	path = tar2h5
+	url = git@github.com:GerHobbelt/tar2h5.git
+    fetchRecurseSubmodules = on-demand
+
+
+[submodule "libscientific"]
+	path = libscientific
+	url = git@github.com:GerHobbelt/libscientific.git
+    fetchRecurseSubmodules = on-demand
+
+
+[submodule "cleanCppProject"]
+	path = cleanCppProject
+	url = git@github.com:GerHobbelt/cleanCppProject.git
+    fetchRecurseSubmodules = on-demand
+
+
+[submodule "aocl-blas"]
+	path = aocl-blas
+	url = git@github.com:GerHobbelt/blis.git
+    fetchRecurseSubmodules = on-demand
+
+

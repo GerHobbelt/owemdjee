@@ -9568,3 +9568,9 @@
     fetchRecurseSubmodules = on-demand
 
 
+[submodule "aocl-blas"]
+	path = aocl-blas
+	url = git@github.com:GerHobbelt/blis.git
+    fetchRecurseSubmodules = on-demand
+
+
