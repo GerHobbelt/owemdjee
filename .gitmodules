@@ -2,19 +2,19 @@
     path = xtensor
     url = git@github.com:GerHobbelt/xtensor.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "xtensor-blas"]
     path = xtensor-blas
     url = git@github.com:GerHobbelt/xtensor-blas.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "xtensor-io"]
     path = xtensor-io
     url = git@github.com:GerHobbelt/xtensor-io.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "mlpack"]
     path = mlpack
@@ -44,7 +44,7 @@
     path = math-atlas
     url = git@github.com:GerHobbelt/math-atlas.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "opencv"]
     path = opencv
@@ -812,7 +812,7 @@
     path = clBLAS
     url = git@github.com:GerHobbelt/clBLAS.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "pcg-c-random"]
     path = pcg-c-random
@@ -1094,7 +1094,7 @@
     path = catboost
     url = git@github.com:GerHobbelt/catboost.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "LDCF-hash"]
     path = LDCF-hash
@@ -1262,7 +1262,7 @@
     path = CacheLib
     url = git@github.com:GerHobbelt/CacheLib.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "WinHttpPAL"]
     path = WinHttpPAL
@@ -2198,7 +2198,7 @@
     path = tensorflow
     url = git@github.com:GerHobbelt/tensorflow.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "libchardet"]
     path = libchardet
@@ -3134,7 +3134,7 @@
     path = OpenBLAS
     url = git@github.com:GerHobbelt/OpenBLAS.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "NiuTrans.NMT"]
     path = NiuTrans.NMT
@@ -3188,7 +3188,7 @@
     path = CLBlast
     url = git@github.com:GerHobbelt/CLBlast.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "libocca"]
     path = libocca
@@ -3326,13 +3326,13 @@
     path = stan-math
     url = git@github.com:GerHobbelt/stan-math.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "stan"]
     path = stan
     url = git@github.com:GerHobbelt/stan.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "memory"]
     path = memory
@@ -3386,7 +3386,7 @@
     path = PaddlePaddle
     url = git@github.com:GerHobbelt/Paddle.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "MNN"]
     path = MNN
@@ -3800,7 +3800,7 @@
     path = CLBlast-database
     url = git@github.com:GerHobbelt/CLBlast-database.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "libgateY"]
     path = libgateY
@@ -3920,7 +3920,7 @@
     path = vxl
     url = git@github.com:GerHobbelt/vxl.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "metalink-cli"]
     path = metalink-cli
@@ -4208,7 +4208,7 @@
     path = openvino
     url = git@github.com:GerHobbelt/openvino.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "vcopy"]
     path = vcopy
@@ -4616,7 +4616,7 @@
     path = FFmpeg
     url = git@github.com:GerHobbelt/FFmpeg.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "Pillow"]
     path = Pillow
@@ -4862,7 +4862,7 @@
     path = ITK
     url = git@github.com:GerHobbelt/ITK.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "cdc-file-transfer"]
     path = cdc-file-transfer
@@ -4910,7 +4910,7 @@
     path = vcpkg
     url = git@github.com:GerHobbelt/vcpkg.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "libass"]
     path = libass
@@ -5126,7 +5126,7 @@
     path = blaze
     url = git@github.com:GerHobbelt/blaze.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "poisson_blend"]
     path = poisson_blend
@@ -5318,7 +5318,7 @@
     path = scilab
     url = git@github.com:GerHobbelt/scilab.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "mitlm"]
     path = mitlm
@@ -5453,3028 +5453,3028 @@
 
 
 [submodule "u8_to_std_string"]
-	path = u8_to_std_string
-	url = git@github.com:GerHobbelt/u8_to_std_string.git
+    path = u8_to_std_string
+    url = git@github.com:GerHobbelt/u8_to_std_string.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "netdata"]
-	path = netdata
-	url = git@github.com:GerHobbelt/netdata.git
+    path = netdata
+    url = git@github.com:GerHobbelt/netdata.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "tempo"]
-	path = tempo
-	url = git@github.com:GerHobbelt/tempo.git
+    path = tempo
+    url = git@github.com:GerHobbelt/tempo.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "loki"]
-	path = loki
-	url = git@github.com:GerHobbelt/loki.git
+    path = loki
+    url = git@github.com:GerHobbelt/loki.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "jsoncpp"]
-	path = jsoncpp
-	url = git@github.com:GerHobbelt/jsoncpp.git
+    path = jsoncpp
+    url = git@github.com:GerHobbelt/jsoncpp.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "mosquitto"]
-	path = mosquitto
-	url = git@github.com:GerHobbelt/mosquitto.git
+    path = mosquitto
+    url = git@github.com:GerHobbelt/mosquitto.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "PEGTL"]
-	path = PEGTL
-	url = git@github.com:GerHobbelt/PEGTL.git
+    path = PEGTL
+    url = git@github.com:GerHobbelt/PEGTL.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "tao-json"]
-	path = tao-json
-	url = git@github.com:GerHobbelt/tao-json.git
+    path = tao-json
+    url = git@github.com:GerHobbelt/tao-json.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "qoi"]
-	path = qoi
-	url = git@github.com:GerHobbelt/qoi.git
+    path = qoi
+    url = git@github.com:GerHobbelt/qoi.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "safeclib"]
-	path = safeclib
-	url = git@github.com:GerHobbelt/safeclib.git
+    path = safeclib
+    url = git@github.com:GerHobbelt/safeclib.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "fpng"]
-	path = fpng
-	url = git@github.com:GerHobbelt/fpng.git
+    path = fpng
+    url = git@github.com:GerHobbelt/fpng.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "capnproto"]
-	path = capnproto
-	url = git@github.com:GerHobbelt/capnproto.git
+    path = capnproto
+    url = git@github.com:GerHobbelt/capnproto.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "vizzu"]
-	path = vizzu
-	url = git@github.com:GerHobbelt/vizzu-lib.git
+    path = vizzu
+    url = git@github.com:GerHobbelt/vizzu-lib.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "doctest"]
-	path = doctest
-	url = git@github.com:GerHobbelt/doctest.git
+    path = doctest
+    url = git@github.com:GerHobbelt/doctest.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "libparameters"]
-	path = libparameters
-	url = git@github.com:GerHobbelt/libparameters.git
+    path = libparameters
+    url = git@github.com:GerHobbelt/libparameters.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "opentelemetry-cpp-contrib"]
-	path = opentelemetry-cpp-contrib
-	url = git@github.com:GerHobbelt/opentelemetry-cpp-contrib.git
+    path = opentelemetry-cpp-contrib
+    url = git@github.com:GerHobbelt/opentelemetry-cpp-contrib.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "GSL"]
-	path = GSL
-	url = git@github.com:GerHobbelt/GSL.git
+    path = GSL
+    url = git@github.com:GerHobbelt/GSL.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "cachelot"]
-	path = cachelot
-	url = git@github.com:GerHobbelt/cachelot.git
+    path = cachelot
+    url = git@github.com:GerHobbelt/cachelot.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "lru_cache"]
-	path = lru_cache
-	url = git@github.com:GerHobbelt/lru_cache.git
+    path = lru_cache
+    url = git@github.com:GerHobbelt/lru_cache.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "poco"]
-	path = poco
-	url = git@github.com:GerHobbelt/poco.git
+    path = poco
+    url = git@github.com:GerHobbelt/poco.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "stlcache"]
-	path = stlcache
-	url = git@github.com:GerHobbelt/stlcache.git
+    path = stlcache
+    url = git@github.com:GerHobbelt/stlcache.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "GQ-gumbo-css-selectors"]
-	path = GQ-gumbo-css-selectors
-	url = git@github.com:GerHobbelt/GQ.git
+    path = GQ-gumbo-css-selectors
+    url = git@github.com:GerHobbelt/GQ.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "tclap"]
-	path = tclap
-	url = git@github.com:GerHobbelt/tclap.git
+    path = tclap
+    url = git@github.com:GerHobbelt/tclap.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "chibi-scheme"]
-	path = chibi-scheme
-	url = git@github.com:GerHobbelt/chibi-scheme.git
+    path = chibi-scheme
+    url = git@github.com:GerHobbelt/chibi-scheme.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "jimtcl"]
-	path = jimtcl
-	url = git@github.com:GerHobbelt/jimtcl.git
+    path = jimtcl
+    url = git@github.com:GerHobbelt/jimtcl.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "guile"]
-	path = guile
-	url = git@github.com:GerHobbelt/guile.git
+    path = guile
+    url = git@github.com:GerHobbelt/guile.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "tcl"]
-	path = tcl
-	url = git@github.com:GerHobbelt/tcl.git
+    path = tcl
+    url = git@github.com:GerHobbelt/tcl.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "itcl"]
-	path = itcl
-	url = git@github.com:GerHobbelt/itcl.git
+    path = itcl
+    url = git@github.com:GerHobbelt/itcl.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "tclclockmod"]
-	path = tclclockmod
-	url = git@github.com:GerHobbelt/tclclockmod.git
+    path = tclclockmod
+    url = git@github.com:GerHobbelt/tclclockmod.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "avro"]
-	path = avro
-	url = git@github.com:GerHobbelt/avro.git
+    path = avro
+    url = git@github.com:GerHobbelt/avro.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "javascript-serialization-benchmark"]
-	path = javascript-serialization-benchmark
-	url = git@github.com:GerHobbelt/javascript-serialization-benchmark.git
+    path = javascript-serialization-benchmark
+    url = git@github.com:GerHobbelt/javascript-serialization-benchmark.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "ngrams-weighted"]
-	path = ngrams-weighted
-	url = git@github.com:GerHobbelt/ngweight.git
+    path = ngrams-weighted
+    url = git@github.com:GerHobbelt/ngweight.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "sqlplot-tools"]
-	path = sqlplot-tools
-	url = git@github.com:GerHobbelt/sqlplot-tools.git
+    path = sqlplot-tools
+    url = git@github.com:GerHobbelt/sqlplot-tools.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "libhog"]
-	path = libhog
-	url = git@github.com:GerHobbelt/libhog.git
+    path = libhog
+    url = git@github.com:GerHobbelt/libhog.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "chromium-snss-parse"]
-	path = chromium-snss-parse
-	url = git@github.com:GerHobbelt/chromium-snss-parse.git
+    path = chromium-snss-parse
+    url = git@github.com:GerHobbelt/chromium-snss-parse.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "FastGlobbing"]
-	path = FastGlobbing
-	url = git@github.com:GerHobbelt/FastGlobbing.git
+    path = FastGlobbing
+    url = git@github.com:GerHobbelt/FastGlobbing.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "glyph_name"]
-	path = glyph_name
-	url = git@github.com:GerHobbelt/glyph_name.git
+    path = glyph_name
+    url = git@github.com:GerHobbelt/glyph_name.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "pikchr"]
-	path = pikchr
-	url = git@github.com:GerHobbelt/pikchr.git
+    path = pikchr
+    url = git@github.com:GerHobbelt/pikchr.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "libgnurx"]
-	path = libgnurx
-	url = git@github.com:GerHobbelt/libgnurx.git
+    path = libgnurx
+    url = git@github.com:GerHobbelt/libgnurx.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "duckdb"]
-	path = duckdb
-	url = git@github.com:GerHobbelt/duckdb.git
+    path = duckdb
+    url = git@github.com:GerHobbelt/duckdb.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "newlisp"]
-	path = newlisp
-	url = git@github.com:GerHobbelt/newlisp.git
+    path = newlisp
+    url = git@github.com:GerHobbelt/newlisp.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "sbcl"]
-	path = sbcl
-	url = git@github.com:GerHobbelt/sbcl.git
+    path = sbcl
+    url = git@github.com:GerHobbelt/sbcl.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "gegl"]
-	path = gegl
-	url = git@github.com:GerHobbelt/gegl.git
+    path = gegl
+    url = git@github.com:GerHobbelt/gegl.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "tee-win32"]
-	path = tee-win32
-	url = git@github.com:GerHobbelt/tee-win32.git
+    path = tee-win32
+    url = git@github.com:GerHobbelt/tee-win32.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "linecook"]
-	path = linecook
-	url = git@github.com:GerHobbelt/linecook.git
+    path = linecook
+    url = git@github.com:GerHobbelt/linecook.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "wcwidth9"]
-	path = wcwidth9
-	url = git@github.com:GerHobbelt/wcwidth9.git
+    path = wcwidth9
+    url = git@github.com:GerHobbelt/wcwidth9.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "libpipeline"]
-	path = libpipeline
-	url = git@github.com:GerHobbelt/libpipeline.git
+    path = libpipeline
+    url = git@github.com:GerHobbelt/libpipeline.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "libserialport"]
-	path = libserialport
-	url = git@github.com:GerHobbelt/libserialport.git
+    path = libserialport
+    url = git@github.com:GerHobbelt/libserialport.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "agg"]
-	path = agg
-	url = git@github.com:GerHobbelt/agg.git
+    path = agg
+    url = git@github.com:GerHobbelt/agg.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "gnuplot"]
-	path = gnuplot
-	url = git@github.com:GerHobbelt/gnuplot.git
+    path = gnuplot
+    url = git@github.com:GerHobbelt/gnuplot.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "gnuplot_i"]
-	path = gnuplot_i
-	url = git@github.com:GerHobbelt/gnuplot_i.git
+    path = gnuplot_i
+    url = git@github.com:GerHobbelt/gnuplot_i.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "gnuplot-palettes"]
-	path = gnuplot-palettes
-	url = git@github.com:GerHobbelt/gnuplot-palettes.git
+    path = gnuplot-palettes
+    url = git@github.com:GerHobbelt/gnuplot-palettes.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "1D-RGB-color-gradient"]
-	path = 1D-RGB-color-gradient
-	url = git@github.com:GerHobbelt/1D-RGB-color-gradient.git
+    path = 1D-RGB-color-gradient
+    url = git@github.com:GerHobbelt/1D-RGB-color-gradient.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "hsluv-color-gradient"]
-	path = hsluv-color-gradient
-	url = git@github.com:GerHobbelt/hsluv-color-gradient.git
+    path = hsluv-color-gradient
+    url = git@github.com:GerHobbelt/hsluv-color-gradient.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "2D-color-gradient-or-Procedural-texture"]
-	path = 2D-color-gradient-or-Procedural-texture
-	url = git@github.com:GerHobbelt/2D-color-gradient-or-Procedural-texture.git
+    path = 2D-color-gradient-or-Procedural-texture
+    url = git@github.com:GerHobbelt/2D-color-gradient-or-Procedural-texture.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "gencolormap"]
-	path = gencolormap
-	url = git@github.com:GerHobbelt/gencolormap.git
+    path = gencolormap
+    url = git@github.com:GerHobbelt/gencolormap.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "leptonica-hillshade"]
-	path = leptonica-hillshade
-	url = git@github.com:GerHobbelt/leptonica-hillshade.git
+    path = leptonica-hillshade
+    url = git@github.com:GerHobbelt/leptonica-hillshade.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "awesome-c"]
-	path = awesome-c
-	url = git@github.com:GerHobbelt/awesome-c.git
+    path = awesome-c
+    url = git@github.com:GerHobbelt/awesome-c.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "tray"]
-	path = tray
-	url = git@github.com:GerHobbelt/tray.git
+    path = tray
+    url = git@github.com:GerHobbelt/tray.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "libpathutils"]
-	path = libpathutils
-	url = git@github.com:GerHobbelt/libpathutils.git
+    path = libpathutils
+    url = git@github.com:GerHobbelt/libpathutils.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "nano-signal-slot"]
-	path = nano-signal-slot
-	url = git@github.com:GerHobbelt/nano-signal-slot.git
+    path = nano-signal-slot
+    url = git@github.com:GerHobbelt/nano-signal-slot.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "utf8proc"]
-	path = utf8proc
-	url = git@github.com:GerHobbelt/utf8proc.git
+    path = utf8proc
+    url = git@github.com:GerHobbelt/utf8proc.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "libmodbus"]
-	path = libmodbus
-	url = git@github.com:GerHobbelt/libmodbus.git
+    path = libmodbus
+    url = git@github.com:GerHobbelt/libmodbus.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "modbus-esp8266"]
-	path = modbus-esp8266
-	url = git@github.com:GerHobbelt/modbus-esp8266.git
+    path = modbus-esp8266
+    url = git@github.com:GerHobbelt/modbus-esp8266.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "cfgpath"]
-	path = cfgpath
-	url = git@github.com:GerHobbelt/cfgpath.git
+    path = cfgpath
+    url = git@github.com:GerHobbelt/cfgpath.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "AFLplusplus"]
-	path = AFLplusplus
-	url = git@github.com:GerHobbelt/AFLplusplus.git
+    path = AFLplusplus
+    url = git@github.com:GerHobbelt/AFLplusplus.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "owl"]
-	path = owl
-	url = git@github.com:GerHobbelt/owl.git
+    path = owl
+    url = git@github.com:GerHobbelt/owl.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "radamsa"]
-	path = radamsa
-	url = git@github.com:GerHobbelt/radamsa.git
+    path = radamsa
+    url = git@github.com:GerHobbelt/radamsa.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "PaddleOCR"]
-	path = PaddleOCR
-	url = git@github.com:GerHobbelt/PaddleOCR.git
+    path = PaddleOCR
+    url = git@github.com:GerHobbelt/PaddleOCR.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "PaddleDetection"]
-	path = PaddleDetection
-	url = git@github.com:GerHobbelt/PaddleDetection.git
+    path = PaddleDetection
+    url = git@github.com:GerHobbelt/PaddleDetection.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "PaddleClas"]
-	path = PaddleClas
-	url = git@github.com:GerHobbelt/PaddleClas.git
+    path = PaddleClas
+    url = git@github.com:GerHobbelt/PaddleClas.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "PaddleNLP"]
-	path = PaddleNLP
-	url = git@github.com:GerHobbelt/PaddleNLP.git
+    path = PaddleNLP
+    url = git@github.com:GerHobbelt/PaddleNLP.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "VTK"]
-	path = VTK
-	url = git@github.com:GerHobbelt/VTK.git
+    path = VTK
+    url = git@github.com:GerHobbelt/VTK.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "Paddle-Lite"]
-	path = Paddle-Lite
-	url = git@github.com:GerHobbelt/Paddle-Lite.git
+    path = Paddle-Lite
+    url = git@github.com:GerHobbelt/Paddle-Lite.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "mrpt"]
-	path = mrpt
-	url = git@github.com:GerHobbelt/mrpt.git
+    path = mrpt
+    url = git@github.com:GerHobbelt/mrpt.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "pyglass"]
-	path = pyglass
-	url = git@github.com:GerHobbelt/pyglass.git
+    path = pyglass
+    url = git@github.com:GerHobbelt/pyglass.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "DiskANN"]
-	path = DiskANN
-	url = git@github.com:GerHobbelt/DiskANN.git
+    path = DiskANN
+    url = git@github.com:GerHobbelt/DiskANN.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "flann"]
-	path = flann
-	url = git@github.com:GerHobbelt/flann.git
+    path = flann
+    url = git@github.com:GerHobbelt/flann.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "falconn"]
-	path = falconn
-	url = git@github.com:GerHobbelt/FALCONN.git
+    path = falconn
+    url = git@github.com:GerHobbelt/FALCONN.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "ffht"]
-	path = ffht
-	url = git@github.com:GerHobbelt/FFHT.git
+    path = ffht
+    url = git@github.com:GerHobbelt/FFHT.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "flinng"]
-	path = flinng
-	url = git@github.com:GerHobbelt/FLINNG.git
+    path = flinng
+    url = git@github.com:GerHobbelt/FLINNG.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "lshbox"]
-	path = lshbox
-	url = git@github.com:GerHobbelt/LSHBOX.git
+    path = lshbox
+    url = git@github.com:GerHobbelt/LSHBOX.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "liblbfgs"]
-	path = liblbfgs
-	url = git@github.com:GerHobbelt/liblbfgs.git
+    path = liblbfgs
+    url = git@github.com:GerHobbelt/liblbfgs.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "CurvatureFilter"]
-	path = CurvatureFilter
-	url = git@github.com:GerHobbelt/CurvatureFilter.git
+    path = CurvatureFilter
+    url = git@github.com:GerHobbelt/CurvatureFilter.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "aho_corasick"]
-	path = aho_corasick
-	url = git@github.com:GerHobbelt/aho_corasick.git
+    path = aho_corasick
+    url = git@github.com:GerHobbelt/aho_corasick.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "aho-corasick"]
-	path = aho-corasick
-	url = git@github.com:GerHobbelt/aho-corasick.git
+    path = aho-corasick
+    url = git@github.com:GerHobbelt/aho-corasick.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "libahocorasick"]
-	path = libahocorasick
-	url = git@github.com:GerHobbelt/pyahocorasick.git
+    path = libahocorasick
+    url = git@github.com:GerHobbelt/pyahocorasick.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "libirwls"]
-	path = libirwls
-	url = git@github.com:GerHobbelt/LIBIRWLS.git
+    path = libirwls
+    url = git@github.com:GerHobbelt/LIBIRWLS.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "kiwi"]
-	path = kiwi
-	url = git@github.com:GerHobbelt/kiwi.git
+    path = kiwi
+    url = git@github.com:GerHobbelt/kiwi.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "detect-character-encoding"]
-	path = detect-character-encoding
-	url = git@github.com:GerHobbelt/detect-character-encoding.git
+    path = detect-character-encoding
+    url = git@github.com:GerHobbelt/detect-character-encoding.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "EigenRand"]
-	path = EigenRand
-	url = git@github.com:GerHobbelt/EigenRand.git
+    path = EigenRand
+    url = git@github.com:GerHobbelt/EigenRand.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "rapidxml"]
-	path = rapidxml
-	url = git@github.com:GerHobbelt/rapidxml.git
+    path = rapidxml
+    url = git@github.com:GerHobbelt/rapidxml.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "LBFGS-Lite"]
-	path = LBFGS-Lite
-	url = git@github.com:GerHobbelt/LBFGS-Lite.git
+    path = LBFGS-Lite
+    url = git@github.com:GerHobbelt/LBFGS-Lite.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "uno-solver"]
-	path = uno-solver
-	url = git@github.com:GerHobbelt/Uno.git
+    path = uno-solver
+    url = git@github.com:GerHobbelt/Uno.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "MicroPather"]
-	path = MicroPather
-	url = git@github.com:GerHobbelt/MicroPather.git
+    path = MicroPather
+    url = git@github.com:GerHobbelt/MicroPather.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "spdmon"]
-	path = spdmon
-	url = git@github.com:GerHobbelt/spdmon.git
+    path = spdmon
+    url = git@github.com:GerHobbelt/spdmon.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "miniscript"]
-	path = miniscript
-	url = git@github.com:GerHobbelt/miniscript.git
+    path = miniscript
+    url = git@github.com:GerHobbelt/miniscript.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "libkra"]
-	path = libkra
-	url = git@github.com:GerHobbelt/libkra.git
+    path = libkra
+    url = git@github.com:GerHobbelt/libkra.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "cjose"]
-	path = cjose
-	url = git@github.com:GerHobbelt/cjose.git
+    path = cjose
+    url = git@github.com:GerHobbelt/cjose.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "liboauth2"]
-	path = liboauth2
-	url = git@github.com:GerHobbelt/liboauth2.git
+    path = liboauth2
+    url = git@github.com:GerHobbelt/liboauth2.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "fnmatch"]
-	path = fnmatch
-	url = git@github.com:GerHobbelt/fnmatch.git
+    path = fnmatch
+    url = git@github.com:GerHobbelt/fnmatch.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "text-wrangler"]
-	path = text-wrangler
-	url = git@github.com:GerHobbelt/text-wrangler.git
+    path = text-wrangler
+    url = git@github.com:GerHobbelt/text-wrangler.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "kann"]
-	path = kann
-	url = git@github.com:GerHobbelt/kann.git
+    path = kann
+    url = git@github.com:GerHobbelt/kann.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "deepdetect"]
-	path = deepdetect
-	url = git@github.com:GerHobbelt/deepdetect.git
+    path = deepdetect
+    url = git@github.com:GerHobbelt/deepdetect.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "xbrzscale"]
-	path = xbrzscale
-	url = git@github.com:GerHobbelt/xbrzscale.git
+    path = xbrzscale
+    url = git@github.com:GerHobbelt/xbrzscale.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "libxbr-standalone"]
-	path = libxbr-standalone
-	url = git@github.com:GerHobbelt/libxbr-standalone.git
+    path = libxbr-standalone
+    url = git@github.com:GerHobbelt/libxbr-standalone.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "libpano13"]
-	path = libpano13
-	url = git@github.com:GerHobbelt/libpano13.git
+    path = libpano13
+    url = git@github.com:GerHobbelt/libpano13.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "KDSPDSetup"]
-	path = KDSPDSetup
-	url = git@github.com:GerHobbelt/KDSPDSetup.git
+    path = KDSPDSetup
+    url = git@github.com:GerHobbelt/KDSPDSetup.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "serde-cpp"]
-	path = serde-cpp
-	url = git@github.com:GerHobbelt/serde-cpp.git
+    path = serde-cpp
+    url = git@github.com:GerHobbelt/serde-cpp.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "figcone"]
-	path = figcone
-	url = git@github.com:GerHobbelt/figcone.git
+    path = figcone
+    url = git@github.com:GerHobbelt/figcone.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "config-cpp"]
-	path = config-cpp
-	url = git@github.com:GerHobbelt/config-cpp.git
+    path = config-cpp
+    url = git@github.com:GerHobbelt/config-cpp.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "serdepp"]
-	path = serdepp
-	url = git@github.com:GerHobbelt/serdepp.git
+    path = serdepp
+    url = git@github.com:GerHobbelt/serdepp.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "CNTK"]
-	path = CNTK
-	url = git@github.com:GerHobbelt/CNTK.git
+    path = CNTK
+    url = git@github.com:GerHobbelt/CNTK.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "TNN"]
-	path = TNN
-	url = git@github.com:GerHobbelt/TNN.git
+    path = TNN
+    url = git@github.com:GerHobbelt/TNN.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "gtsam"]
-	path = gtsam
-	url = git@github.com:GerHobbelt/gtsam.git
+    path = gtsam
+    url = git@github.com:GerHobbelt/gtsam.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "Cmathtuts"]
-	path = Cmathtuts
-	url = git@github.com:GerHobbelt/Cmathtuts.git
+    path = Cmathtuts
+    url = git@github.com:GerHobbelt/Cmathtuts.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "flashlight"]
-	path = flashlight
-	url = git@github.com:GerHobbelt/flashlight.git
+    path = flashlight
+    url = git@github.com:GerHobbelt/flashlight.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "oneDNN"]
-	path = oneDNN
-	url = git@github.com:GerHobbelt/oneDNN.git
+    path = oneDNN
+    url = git@github.com:GerHobbelt/oneDNN.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "ZQCNN"]
-	path = ZQCNN
-	url = git@github.com:GerHobbelt/ZQCNN.git
+    path = ZQCNN
+    url = git@github.com:GerHobbelt/ZQCNN.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "blis"]
-	path = blis
-	url = git@github.com:GerHobbelt/blis.git
+    path = blis
+    url = git@github.com:GerHobbelt/blis.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "MegEngine"]
-	path = MegEngine
-	url = git@github.com:GerHobbelt/MegEngine.git
+    path = MegEngine
+    url = git@github.com:GerHobbelt/MegEngine.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "OpenNN"]
-	path = OpenNN
-	url = git@github.com:GerHobbelt/opennn.git
+    path = OpenNN
+    url = git@github.com:GerHobbelt/opennn.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "fCWT"]
-	path = fCWT
-	url = git@github.com:GerHobbelt/fCWT.git
+    path = fCWT
+    url = git@github.com:GerHobbelt/fCWT.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "wavelib"]
-	path = wavelib
-	url = git@github.com:GerHobbelt/wavelib.git
+    path = wavelib
+    url = git@github.com:GerHobbelt/wavelib.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "wdenoise"]
-	path = wdenoise
-	url = git@github.com:GerHobbelt/wdenoise.git
+    path = wdenoise
+    url = git@github.com:GerHobbelt/wdenoise.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "FastString"]
-	path = FastString
-	url = git@github.com:GerHobbelt/FastString.git
+    path = FastString
+    url = git@github.com:GerHobbelt/FastString.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "SIMDString"]
-	path = SIMDString
-	url = git@github.com:GerHobbelt/SIMDString.git
+    path = SIMDString
+    url = git@github.com:GerHobbelt/SIMDString.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "Multicore-TSNE"]
-	path = Multicore-TSNE
-	url = git@github.com:GerHobbelt/Multicore-TSNE.git
+    path = Multicore-TSNE
+    url = git@github.com:GerHobbelt/Multicore-TSNE.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "luple"]
-	path = luple
-	url = git@github.com:GerHobbelt/luple.git
+    path = luple
+    url = git@github.com:GerHobbelt/luple.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "jpegview"]
-	path = jpegview
-	url = git@github.com:GerHobbelt/jpegview.git
+    path = jpegview
+    url = git@github.com:GerHobbelt/jpegview.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "libprecog"]
-	path = libprecog
-	url = git@github.com:GerHobbelt/PRLib.git
+    path = libprecog
+    url = git@github.com:GerHobbelt/PRLib.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "fastrange"]
-	path = fastrange
-	url = git@github.com:GerHobbelt/fastrange.git
+    path = fastrange
+    url = git@github.com:GerHobbelt/fastrange.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "rollinghashcpp"]
-	path = rollinghashcpp
-	url = git@github.com:GerHobbelt/rollinghashcpp.git
+    path = rollinghashcpp
+    url = git@github.com:GerHobbelt/rollinghashcpp.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "Hackers-Delight"]
-	path = Hackers-Delight
-	url = git@github.com:GerHobbelt/Hackers-Delight.git
+    path = Hackers-Delight
+    url = git@github.com:GerHobbelt/Hackers-Delight.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "sdcc"]
-	path = sdcc
-	url = git@github.com:GerHobbelt/sdcc.git
+    path = sdcc
+    url = git@github.com:GerHobbelt/sdcc.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "sally"]
-	path = sally
-	url = git@github.com:GerHobbelt/sally.git
+    path = sally
+    url = git@github.com:GerHobbelt/sally.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "bustache"]
-	path = bustache
-	url = git@github.com:GerHobbelt/bustache.git
+    path = bustache
+    url = git@github.com:GerHobbelt/bustache.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "rtl"]
-	path = rtl
-	url = git@github.com:GerHobbelt/rtl.git
+    path = rtl
+    url = git@github.com:GerHobbelt/rtl.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "FM-fast-match"]
-	path = FM-fast-match
-	url = git@github.com:GerHobbelt/FAsT-Match.git
+    path = FM-fast-match
+    url = git@github.com:GerHobbelt/FAsT-Match.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "tapkee"]
-	path = tapkee
-	url = git@github.com:GerHobbelt/tapkee.git
+    path = tapkee
+    url = git@github.com:GerHobbelt/tapkee.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "see-phit"]
-	path = see-phit
-	url = git@github.com:GerHobbelt/see-phit.git
+    path = see-phit
+    url = git@github.com:GerHobbelt/see-phit.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "sse-popcount"]
-	path = sse-popcount
-	url = git@github.com:GerHobbelt/sse-popcount.git
+    path = sse-popcount
+    url = git@github.com:GerHobbelt/sse-popcount.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "readerwriterqueue"]
-	path = readerwriterqueue
-	url = git@github.com:GerHobbelt/readerwriterqueue.git
+    path = readerwriterqueue
+    url = git@github.com:GerHobbelt/readerwriterqueue.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "blazingmq"]
-	path = blazingmq
-	url = git@github.com:GerHobbelt/blazingmq.git
+    path = blazingmq
+    url = git@github.com:GerHobbelt/blazingmq.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "lockfree"]
-	path = lockfree
-	url = git@github.com:GerHobbelt/lockfree.git
+    path = lockfree
+    url = git@github.com:GerHobbelt/lockfree.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "sparsepp"]
-	path = sparsepp
-	url = git@github.com:GerHobbelt/sparsepp.git
+    path = sparsepp
+    url = git@github.com:GerHobbelt/sparsepp.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "FiberTaskingLib"]
-	path = FiberTaskingLib
-	url = git@github.com:GerHobbelt/FiberTaskingLib.git
+    path = FiberTaskingLib
+    url = git@github.com:GerHobbelt/FiberTaskingLib.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "state-threads"]
-	path = state-threads
-	url = git@github.com:GerHobbelt/state-threads.git
+    path = state-threads
+    url = git@github.com:GerHobbelt/state-threads.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "continuable"]
-	path = continuable
-	url = git@github.com:GerHobbelt/continuable.git
+    path = continuable
+    url = git@github.com:GerHobbelt/continuable.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "quantum"]
-	path = quantum
-	url = git@github.com:GerHobbelt/quantum.git
+    path = quantum
+    url = git@github.com:GerHobbelt/quantum.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "directorywatcher"]
-	path = directorywatcher
-	url = git@github.com:GerHobbelt/myoddweb.directorywatcher.git
+    path = directorywatcher
+    url = git@github.com:GerHobbelt/myoddweb.directorywatcher.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "MPMCQueue"]
-	path = MPMCQueue
-	url = git@github.com:GerHobbelt/MPMCQueue.git
+    path = MPMCQueue
+    url = git@github.com:GerHobbelt/MPMCQueue.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "SPSCQueue"]
-	path = SPSCQueue
-	url = git@github.com:GerHobbelt/SPSCQueue.git
+    path = SPSCQueue
+    url = git@github.com:GerHobbelt/SPSCQueue.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "libascii"]
-	path = libascii
-	url = git@github.com:GerHobbelt/libascii.git
+    path = libascii
+    url = git@github.com:GerHobbelt/libascii.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "tinyexr"]
-	path = tinyexr
-	url = git@github.com:GerHobbelt/tinyexr.git
+    path = tinyexr
+    url = git@github.com:GerHobbelt/tinyexr.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "Digital-Halftoning"]
-	path = Digital-Halftoning
-	url = git@github.com:GerHobbelt/Digital-Halftoning.git
+    path = Digital-Halftoning
+    url = git@github.com:GerHobbelt/Digital-Halftoning.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "libintrinsics"]
-	path = libintrinsics
-	url = git@github.com:GerHobbelt/libintrinsics.git
+    path = libintrinsics
+    url = git@github.com:GerHobbelt/libintrinsics.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "qHilbert"]
-	path = qHilbert
-	url = git@github.com:GerHobbelt/qHilbert.git
+    path = qHilbert
+    url = git@github.com:GerHobbelt/qHilbert.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "ruy"]
-	path = ruy
-	url = git@github.com:GerHobbelt/ruy.git
+    path = ruy
+    url = git@github.com:GerHobbelt/ruy.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "half"]
-	path = half
-	url = git@github.com:GerHobbelt/half.git
+    path = half
+    url = git@github.com:GerHobbelt/half.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "WebView2Samples"]
-	path = WebView2Samples
-	url = git@github.com:GerHobbelt/WebView2Samples.git
+    path = WebView2Samples
+    url = git@github.com:GerHobbelt/WebView2Samples.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "WebView2Browser"]
-	path = WebView2Browser
-	url = git@github.com:GerHobbelt/WebView2Browser.git
+    path = WebView2Browser
+    url = git@github.com:GerHobbelt/WebView2Browser.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "fmath"]
-	path = fmath
-	url = git@github.com:GerHobbelt/fmath.git
+    path = fmath
+    url = git@github.com:GerHobbelt/fmath.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "fast_double_parser"]
-	path = fast_double_parser
-	url = git@github.com:GerHobbelt/fast_double_parser.git
+    path = fast_double_parser
+    url = git@github.com:GerHobbelt/fast_double_parser.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "fastops"]
-	path = fastops
-	url = git@github.com:GerHobbelt/fastops.git
+    path = fastops
+    url = git@github.com:GerHobbelt/fastops.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "nedtries"]
-	path = nedtries
-	url = git@github.com:GerHobbelt/nedtries.git
+    path = nedtries
+    url = git@github.com:GerHobbelt/nedtries.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "HashMap"]
-	path = HashMap
-	url = git@github.com:GerHobbelt/HashMap.git
+    path = HashMap
+    url = git@github.com:GerHobbelt/HashMap.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "StringZilla"]
-	path = StringZilla
-	url = git@github.com:GerHobbelt/StringZilla.git
+    path = StringZilla
+    url = git@github.com:GerHobbelt/StringZilla.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "better-enums"]
-	path = better-enums
-	url = git@github.com:GerHobbelt/better-enums.git
+    path = better-enums
+    url = git@github.com:GerHobbelt/better-enums.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "or-tools"]
-	path = or-tools
-	url = git@github.com:GerHobbelt/or-tools.git
+    path = or-tools
+    url = git@github.com:GerHobbelt/or-tools.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "theoretica"]
-	path = theoretica
-	url = git@github.com:GerHobbelt/theoretica.git
+    path = theoretica
+    url = git@github.com:GerHobbelt/theoretica.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "baobzi"]
-	path = baobzi
-	url = git@github.com:GerHobbelt/baobzi.git
+    path = baobzi
+    url = git@github.com:GerHobbelt/baobzi.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "tweeny"]
-	path = tweeny
-	url = git@github.com:GerHobbelt/tweeny.git
+    path = tweeny
+    url = git@github.com:GerHobbelt/tweeny.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "mlinterp"]
-	path = mlinterp
-	url = git@github.com:GerHobbelt/mlinterp.git
+    path = mlinterp
+    url = git@github.com:GerHobbelt/mlinterp.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "BayerToRGB"]
-	path = BayerToRGB
-	url = git@github.com:GerHobbelt/BayerToRGB.git
+    path = BayerToRGB
+    url = git@github.com:GerHobbelt/BayerToRGB.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "fityk"]
-	path = fityk
-	url = git@github.com:GerHobbelt/fityk.git
+    path = fityk
+    url = git@github.com:GerHobbelt/fityk.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "tinyspline"]
-	path = tinyspline
-	url = git@github.com:GerHobbelt/tinyspline.git
+    path = tinyspline
+    url = git@github.com:GerHobbelt/tinyspline.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "glm"]
-	path = glm
-	url = git@github.com:GerHobbelt/glm.git
+    path = glm
+    url = git@github.com:GerHobbelt/glm.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "tinynurbs"]
-	path = tinynurbs
-	url = git@github.com:GerHobbelt/tinynurbs.git
+    path = tinynurbs
+    url = git@github.com:GerHobbelt/tinynurbs.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "cel-cpp"]
-	path = cel-cpp
-	url = git@github.com:GerHobbelt/cel-cpp.git
+    path = cel-cpp
+    url = git@github.com:GerHobbelt/cel-cpp.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "cel-spec"]
-	path = cel-spec
-	url = git@github.com:GerHobbelt/cel-spec.git
+    path = cel-spec
+    url = git@github.com:GerHobbelt/cel-spec.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "cpu_features"]
-	path = cpu_features
-	url = git@github.com:GerHobbelt/cpu_features.git
+    path = cpu_features
+    url = git@github.com:GerHobbelt/cpu_features.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "tink-cc"]
-	path = tink-cc
-	url = git@github.com:GerHobbelt/tink-cc.git
+    path = tink-cc
+    url = git@github.com:GerHobbelt/tink-cc.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "robotstxt"]
-	path = robotstxt
-	url = git@github.com:GerHobbelt/robotstxt.git
+    path = robotstxt
+    url = git@github.com:GerHobbelt/robotstxt.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "brunsli"]
-	path = brunsli
-	url = git@github.com:GerHobbelt/brunsli.git
+    path = brunsli
+    url = git@github.com:GerHobbelt/brunsli.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "unsmear"]
-	path = unsmear
-	url = git@github.com:GerHobbelt/unsmear.git
+    path = unsmear
+    url = git@github.com:GerHobbelt/unsmear.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "knusperli"]
-	path = knusperli
-	url = git@github.com:GerHobbelt/knusperli.git
+    path = knusperli
+    url = git@github.com:GerHobbelt/knusperli.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "open-vcdiff"]
-	path = open-vcdiff
-	url = git@github.com:GerHobbelt/open-vcdiff.git
+    path = open-vcdiff
+    url = git@github.com:GerHobbelt/open-vcdiff.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "xdelta"]
-	path = xdelta
-	url = git@github.com:GerHobbelt/xdelta.git
+    path = xdelta
+    url = git@github.com:GerHobbelt/xdelta.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "fsst"]
-	path = fsst
-	url = git@github.com:GerHobbelt/fsst.git
+    path = fsst
+    url = git@github.com:GerHobbelt/fsst.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "SuperString"]
-	path = SuperString
-	url = git@github.com:GerHobbelt/SuperString.git
+    path = SuperString
+    url = git@github.com:GerHobbelt/SuperString.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "flare-floss"]
-	path = flare-floss
-	url = git@github.com:GerHobbelt/flare-floss.git
+    path = flare-floss
+    url = git@github.com:GerHobbelt/flare-floss.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "binary2strings"]
-	path = binary2strings
-	url = git@github.com:GerHobbelt/binary2strings.git
+    path = binary2strings
+    url = git@github.com:GerHobbelt/binary2strings.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "strings2"]
-	path = strings2
-	url = git@github.com:GerHobbelt/strings2.git
+    path = strings2
+    url = git@github.com:GerHobbelt/strings2.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "houdini"]
-	path = houdini
-	url = git@github.com:GerHobbelt/houdini.git
+    path = houdini
+    url = git@github.com:GerHobbelt/houdini.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "hescape"]
-	path = hescape
-	url = git@github.com:GerHobbelt/hescape.git
+    path = hescape
+    url = git@github.com:GerHobbelt/hescape.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "gumbo_pp"]
-	path = gumbo_pp
-	url = git@github.com:GerHobbelt/gumbo_pp.git
+    path = gumbo_pp
+    url = git@github.com:GerHobbelt/gumbo_pp.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "html5lib-tests"]
-	path = html5lib-tests
-	url = git@github.com:GerHobbelt/html5lib-tests.git
+    path = html5lib-tests
+    url = git@github.com:GerHobbelt/html5lib-tests.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "StronglyUniversalStringHashing"]
-	path = StronglyUniversalStringHashing
-	url = git@github.com:GerHobbelt/StronglyUniversalStringHashing.git
+    path = StronglyUniversalStringHashing
+    url = git@github.com:GerHobbelt/StronglyUniversalStringHashing.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "units"]
-	path = units
-	url = git@github.com:GerHobbelt/units.git
+    path = units
+    url = git@github.com:GerHobbelt/units.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "chewing_text_cud"]
-	path = chewing_text_cud
-	url = git@github.com:GerHobbelt/chewing_text_cud.git
+    path = chewing_text_cud
+    url = git@github.com:GerHobbelt/chewing_text_cud.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "tiny-utf8"]
-	path = tiny-utf8
-	url = git@github.com:GerHobbelt/tiny-utf8.git
+    path = tiny-utf8
+    url = git@github.com:GerHobbelt/tiny-utf8.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "duktape"]
-	path = duktape
-	url = git@github.com:GerHobbelt/duktape.git
+    path = duktape
+    url = git@github.com:GerHobbelt/duktape.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "cilantro"]
-	path = cilantro
-	url = git@github.com:GerHobbelt/cilantro.git
+    path = cilantro
+    url = git@github.com:GerHobbelt/cilantro.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "pcl"]
-	path = pcl
-	url = git@github.com:GerHobbelt/pcl.git
+    path = pcl
+    url = git@github.com:GerHobbelt/pcl.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "tcllib"]
-	path = tcllib
-	url = git@github.com:GerHobbelt/tcllib.git
+    path = tcllib
+    url = git@github.com:GerHobbelt/tcllib.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "EWAHBoolArray"]
-	path = EWAHBoolArray
-	url = git@github.com:GerHobbelt/EWAHBoolArray.git
+    path = EWAHBoolArray
+    url = git@github.com:GerHobbelt/EWAHBoolArray.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "RoaringBitmap"]
-	path = RoaringBitmap
-	url = git@github.com:GerHobbelt/RoaringBitmap.git
+    path = RoaringBitmap
+    url = git@github.com:GerHobbelt/RoaringBitmap.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "pillow-resize"]
-	path = pillow-resize
-	url = git@github.com:GerHobbelt/pillow-resize.git
+    path = pillow-resize
+    url = git@github.com:GerHobbelt/pillow-resize.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "riegeli"]
-	path = riegeli
-	url = git@github.com:GerHobbelt/riegeli.git
+    path = riegeli
+    url = git@github.com:GerHobbelt/riegeli.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "concat"]
-	path = concat
-	url = git@github.com:GerHobbelt/concat.git
+    path = concat
+    url = git@github.com:GerHobbelt/concat.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "MultipartEncoder"]
-	path = MultipartEncoder
-	url = git@github.com:GerHobbelt/MultipartEncoder.git
+    path = MultipartEncoder
+    url = git@github.com:GerHobbelt/MultipartEncoder.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "poplar-trie"]
-	path = poplar-trie
-	url = git@github.com:GerHobbelt/poplar-trie.git
+    path = poplar-trie
+    url = git@github.com:GerHobbelt/poplar-trie.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "fast-hex"]
-	path = fast-hex
-	url = git@github.com:GerHobbelt/fast-hex.git
+    path = fast-hex
+    url = git@github.com:GerHobbelt/fast-hex.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "libCSD"]
-	path = libCSD
-	url = git@github.com:GerHobbelt/libCSD.git
+    path = libCSD
+    url = git@github.com:GerHobbelt/libCSD.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "fasthashing"]
-	path = fasthashing
-	url = git@github.com:GerHobbelt/fasthashing.git
+    path = fasthashing
+    url = git@github.com:GerHobbelt/fasthashing.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "fuzzy-match"]
-	path = fuzzy-match
-	url = git@github.com:GerHobbelt/fuzzy-match.git
+    path = fuzzy-match
+    url = git@github.com:GerHobbelt/fuzzy-match.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "SheenBidi"]
-	path = SheenBidi
-	url = git@github.com:GerHobbelt/SheenBidi.git
+    path = SheenBidi
+    url = git@github.com:GerHobbelt/SheenBidi.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "hydraquill"]
-	path = hydraquill
-	url = git@github.com:GerHobbelt/hydraquill.git
+    path = hydraquill
+    url = git@github.com:GerHobbelt/hydraquill.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "mechascribe"]
-	path = mechascribe
-	url = git@github.com:GerHobbelt/mechascribe.git
+    path = mechascribe
+    url = git@github.com:GerHobbelt/mechascribe.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "RectangleBinPack"]
-	path = RectangleBinPack
-	url = git@github.com:GerHobbelt/RectangleBinPack.git
+    path = RectangleBinPack
+    url = git@github.com:GerHobbelt/RectangleBinPack.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "fontbm"]
-	path = fontbm
-	url = git@github.com:GerHobbelt/fontbm.git
+    path = fontbm
+    url = git@github.com:GerHobbelt/fontbm.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "bitrush-index"]
-	path = bitrush-index
-	url = git@github.com:GerHobbelt/bitrush-index.git
+    path = bitrush-index
+    url = git@github.com:GerHobbelt/bitrush-index.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "OZBCBitmap"]
-	path = OZBCBitmap
-	url = git@github.com:GerHobbelt/OZBCBitmap.git
+    path = OZBCBitmap
+    url = git@github.com:GerHobbelt/OZBCBitmap.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "mutable_rank_select"]
-	path = mutable_rank_select
-	url = git@github.com:GerHobbelt/mutable_rank_select.git
+    path = mutable_rank_select
+    url = git@github.com:GerHobbelt/mutable_rank_select.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "qjs-ffi"]
-	path = qjs-ffi
-	url = git@github.com:GerHobbelt/qjs-ffi.git
+    path = qjs-ffi
+    url = git@github.com:GerHobbelt/qjs-ffi.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "quickjs-ffi"]
-	path = quickjs-ffi
-	url = git@github.com:GerHobbelt/quickjs-ffi.git
+    path = quickjs-ffi
+    url = git@github.com:GerHobbelt/quickjs-ffi.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "qjs-modules"]
-	path = qjs-modules
-	url = git@github.com:GerHobbelt/qjs-modules.git
+    path = qjs-modules
+    url = git@github.com:GerHobbelt/qjs-modules.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "qjs-opencv"]
-	path = qjs-opencv
-	url = git@github.com:GerHobbelt/qjs-opencv.git
+    path = qjs-opencv
+    url = git@github.com:GerHobbelt/qjs-opencv.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "giflib-turbo"]
-	path = giflib-turbo
-	url = git@github.com:GerHobbelt/giflib-turbo.git
+    path = giflib-turbo
+    url = git@github.com:GerHobbelt/giflib-turbo.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "nanovg-qjs"]
-	path = nanovg-qjs
-	url = git@github.com:GerHobbelt/nanovg-qjs.git
+    path = nanovg-qjs
+    url = git@github.com:GerHobbelt/nanovg-qjs.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "qjs-sqlite3"]
-	path = qjs-sqlite3
-	url = git@github.com:GerHobbelt/qjs-sqlite3.git
+    path = qjs-sqlite3
+    url = git@github.com:GerHobbelt/qjs-sqlite3.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "fph-table"]
-	path = fph-table
-	url = git@github.com:GerHobbelt/fph-table.git
+    path = fph-table
+    url = git@github.com:GerHobbelt/fph-table.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "OTB"]
-	path = OTB
-	url = git@github.com:GerHobbelt/OTB.git
+    path = OTB
+    url = git@github.com:GerHobbelt/OTB.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "openexr-images"]
-	path = openexr-images
-	url = git@github.com:GerHobbelt/openexr-images.git
+    path = openexr-images
+    url = git@github.com:GerHobbelt/openexr-images.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "nanogui"]
-	path = nanogui
-	url = git@github.com:GerHobbelt/nanogui.git
+    path = nanogui
+    url = git@github.com:GerHobbelt/nanogui.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "nlopt-util"]
-	path = nlopt-util
-	url = git@github.com:GerHobbelt/nlopt-util.git
+    path = nlopt-util
+    url = git@github.com:GerHobbelt/nlopt-util.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "darknet"]
-	path = darknet
-	url = git@github.com:GerHobbelt/darknet.git
+    path = darknet
+    url = git@github.com:GerHobbelt/darknet.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "unilib"]
-	path = unilib
-	url = git@github.com:GerHobbelt/unilib.git
+    path = unilib
+    url = git@github.com:GerHobbelt/unilib.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "re2c"]
-	path = re2c
-	url = git@github.com:GerHobbelt/re2c.git
+    path = re2c
+    url = git@github.com:GerHobbelt/re2c.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "mcmc-jags"]
-	path = mcmc-jags
-	url = git@github.com:GerHobbelt/mcmc-jags.git
+    path = mcmc-jags
+    url = git@github.com:GerHobbelt/mcmc-jags.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "we-love-colors"]
-	path = we-love-colors
-	url = git@github.com:GerHobbelt/we-love-colors.git
+    path = we-love-colors
+    url = git@github.com:GerHobbelt/we-love-colors.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "ColorPaletteCodable"]
-	path = ColorPaletteCodable
-	url = git@github.com:GerHobbelt/ColorPaletteCodable.git
+    path = ColorPaletteCodable
+    url = git@github.com:GerHobbelt/ColorPaletteCodable.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "libase"]
-	path = libase
-	url = git@github.com:GerHobbelt/libase.git
+    path = libase
+    url = git@github.com:GerHobbelt/libase.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "MetBrewer"]
-	path = MetBrewer
-	url = git@github.com:GerHobbelt/MetBrewer.git
+    path = MetBrewer
+    url = git@github.com:GerHobbelt/MetBrewer.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "wesanderson"]
-	path = wesanderson
-	url = git@github.com:GerHobbelt/wesanderson.git
+    path = wesanderson
+    url = git@github.com:GerHobbelt/wesanderson.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "PNWColors"]
-	path = PNWColors
-	url = git@github.com:GerHobbelt/PNWColors.git
+    path = PNWColors
+    url = git@github.com:GerHobbelt/PNWColors.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "ColorMagic"]
-	path = ColorMagic
-	url = git@github.com:GerHobbelt/ColorMagic.git
+    path = ColorMagic
+    url = git@github.com:GerHobbelt/ColorMagic.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "yy_color_convertor"]
-	path = yy_color_convertor
-	url = git@github.com:GerHobbelt/yy_color_convertor.git
+    path = yy_color_convertor
+    url = git@github.com:GerHobbelt/yy_color_convertor.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "paintingReorganize"]
-	path = paintingReorganize
-	url = git@github.com:GerHobbelt/paintingReorganize.git
+    path = paintingReorganize
+    url = git@github.com:GerHobbelt/paintingReorganize.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "K-Medoids-Clustering"]
-	path = K-Medoids-Clustering
-	url = git@github.com:GerHobbelt/K-Medoids-Clustering.git
+    path = K-Medoids-Clustering
+    url = git@github.com:GerHobbelt/K-Medoids-Clustering.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "usearch"]
-	path = usearch
-	url = git@github.com:GerHobbelt/usearch.git
+    path = usearch
+    url = git@github.com:GerHobbelt/usearch.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "pytorch_cluster"]
-	path = pytorch_cluster
-	url = git@github.com:GerHobbelt/pytorch_cluster.git
+    path = pytorch_cluster
+    url = git@github.com:GerHobbelt/pytorch_cluster.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "brown-cluster"]
-	path = brown-cluster
-	url = git@github.com:GerHobbelt/brown-cluster.git
+    path = brown-cluster
+    url = git@github.com:GerHobbelt/brown-cluster.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "spherical-k-means"]
-	path = spherical-k-means
-	url = git@github.com:GerHobbelt/spherical-k-means.git
+    path = spherical-k-means
+    url = git@github.com:GerHobbelt/spherical-k-means.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "DP_means"]
-	path = DP_means
-	url = git@github.com:GerHobbelt/DP_means.git
+    path = DP_means
+    url = git@github.com:GerHobbelt/DP_means.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "fast-kmeans"]
-	path = fast-kmeans
-	url = git@github.com:GerHobbelt/fast-kmeans.git
+    path = fast-kmeans
+    url = git@github.com:GerHobbelt/fast-kmeans.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "lterpalettefinder"]
-	path = lterpalettefinder
-	url = git@github.com:GerHobbelt/lterpalettefinder.git
+    path = lterpalettefinder
+    url = git@github.com:GerHobbelt/lterpalettefinder.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "worde_butcher"]
-	path = worde_butcher
-	url = git@github.com:GerHobbelt/worde_butcher.git
+    path = worde_butcher
+    url = git@github.com:GerHobbelt/worde_butcher.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "dkm"]
-	path = dkm
-	url = git@github.com:GerHobbelt/dkm.git
+    path = dkm
+    url = git@github.com:GerHobbelt/dkm.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "LMW-tree"]
-	path = LMW-tree
-	url = git@github.com:GerHobbelt/LMW-tree.git
+    path = LMW-tree
+    url = git@github.com:GerHobbelt/LMW-tree.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "xmunch"]
-	path = xmunch
-	url = git@github.com:GerHobbelt/xmunch.git
+    path = xmunch
+    url = git@github.com:GerHobbelt/xmunch.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "tlsh"]
-	path = tlsh
-	url = git@github.com:GerHobbelt/tlsh.git
+    path = tlsh
+    url = git@github.com:GerHobbelt/tlsh.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "mapreduce"]
-	path = mapreduce
-	url = git@github.com:GerHobbelt/mapreduce.git
+    path = mapreduce
+    url = git@github.com:GerHobbelt/mapreduce.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "puffinn"]
-	path = puffinn
-	url = git@github.com:GerHobbelt/puffinn.git
+    path = puffinn
+    url = git@github.com:GerHobbelt/puffinn.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "cppsimhash"]
-	path = cppsimhash
-	url = git@github.com:GerHobbelt/cppsimhash.git
+    path = cppsimhash
+    url = git@github.com:GerHobbelt/cppsimhash.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "minhash_clustering"]
-	path = minhash_clustering
-	url = git@github.com:GerHobbelt/minhash_clustering.git
+    path = minhash_clustering
+    url = git@github.com:GerHobbelt/minhash_clustering.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "Shifted-Hamming-Distance"]
-	path = Shifted-Hamming-Distance
-	url = git@github.com:GerHobbelt/Shifted-Hamming-Distance.git
+    path = Shifted-Hamming-Distance
+    url = git@github.com:GerHobbelt/Shifted-Hamming-Distance.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "simhash-cpp"]
-	path = simhash-cpp
-	url = git@github.com:GerHobbelt/simhash-cpp.git
+    path = simhash-cpp
+    url = git@github.com:GerHobbelt/simhash-cpp.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "dashing"]
-	path = dashing
-	url = git@github.com:GerHobbelt/dashing.git
+    path = dashing
+    url = git@github.com:GerHobbelt/dashing.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "LSHBOX"]
-	path = LSHBOX
-	url = git@github.com:GerHobbelt/LSHBOX.git
+    path = LSHBOX
+    url = git@github.com:GerHobbelt/LSHBOX.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "SymspellCPP"]
-	path = SymspellCPP
-	url = git@github.com:GerHobbelt/SymspellCPP.git
+    path = SymspellCPP
+    url = git@github.com:GerHobbelt/SymspellCPP.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "DBow3"]
-	path = DBow3
-	url = git@github.com:GerHobbelt/DBow3.git
+    path = DBow3
+    url = git@github.com:GerHobbelt/DBow3.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "g2o"]
-	path = g2o
-	url = git@github.com:GerHobbelt/g2o.git
+    path = g2o
+    url = git@github.com:GerHobbelt/g2o.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "GraphBLAS"]
-	path = GraphBLAS
-	url = git@github.com:GerHobbelt/GraphBLAS.git
+    path = GraphBLAS
+    url = git@github.com:GerHobbelt/GraphBLAS.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "SuiteSparse"]
-	path = SuiteSparse
-	url = git@github.com:GerHobbelt/SuiteSparse.git
+    path = SuiteSparse
+    url = git@github.com:GerHobbelt/SuiteSparse.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "yake"]
-	path = yake
-	url = git@github.com:GerHobbelt/yake.git
+    path = yake
+    url = git@github.com:GerHobbelt/yake.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "RAKE"]
-	path = RAKE
-	url = git@github.com:GerHobbelt/RAKE.git
+    path = RAKE
+    url = git@github.com:GerHobbelt/RAKE.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "pke"]
-	path = pke
-	url = git@github.com:GerHobbelt/pke.git
+    path = pke
+    url = git@github.com:GerHobbelt/pke.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "libcluster"]
-	path = libcluster
-	url = git@github.com:GerHobbelt/libcluster.git
+    path = libcluster
+    url = git@github.com:GerHobbelt/libcluster.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "BehaviorTree.CPP"]
-	path = BehaviorTree.CPP
-	url = git@github.com:GerHobbelt/BehaviorTree.CPP.git
+    path = BehaviorTree.CPP
+    url = git@github.com:GerHobbelt/BehaviorTree.CPP.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "backward-cpp"]
-	path = backward-cpp
-	url = git@github.com:GerHobbelt/backward-cpp.git
+    path = backward-cpp
+    url = git@github.com:GerHobbelt/backward-cpp.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "rttr"]
-	path = rttr
-	url = git@github.com:GerHobbelt/rttr.git
+    path = rttr
+    url = git@github.com:GerHobbelt/rttr.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "bplustree"]
-	path = bplustree
-	url = git@github.com:GerHobbelt/bplustree.git
+    path = bplustree
+    url = git@github.com:GerHobbelt/bplustree.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "SZ"]
-	path = SZ
-	url = git@github.com:GerHobbelt/SZ.git
+    path = SZ
+    url = git@github.com:GerHobbelt/SZ.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "SZ3"]
-	path = SZ3
-	url = git@github.com:GerHobbelt/SZ3.git
+    path = SZ3
+    url = git@github.com:GerHobbelt/SZ3.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "xcdat"]
-	path = xcdat
-	url = git@github.com:GerHobbelt/xcdat.git
+    path = xcdat
+    url = git@github.com:GerHobbelt/xcdat.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "zvec"]
-	path = zvec
-	url = git@github.com:GerHobbelt/zvec.git
+    path = zvec
+    url = git@github.com:GerHobbelt/zvec.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "pfp-cst"]
-	path = pfp-cst
-	url = git@github.com:GerHobbelt/pfp-cst.git
+    path = pfp-cst
+    url = git@github.com:GerHobbelt/pfp-cst.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "sac"]
-	path = sac
-	url = git@github.com:GerHobbelt/sac.git
+    path = sac
+    url = git@github.com:GerHobbelt/sac.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "AudioFile"]
-	path = AudioFile
-	url = git@github.com:GerHobbelt/AudioFile.git
+    path = AudioFile
+    url = git@github.com:GerHobbelt/AudioFile.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "libsndfile"]
-	path = libsndfile
-	url = git@github.com:GerHobbelt/libsndfile.git
+    path = libsndfile
+    url = git@github.com:GerHobbelt/libsndfile.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "DocLayNet"]
-	path = DocLayNet
-	url = git@github.com:GerHobbelt/DocLayNet.git
+    path = DocLayNet
+    url = git@github.com:GerHobbelt/DocLayNet.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "silk-v3-decoder"]
-	path = silk-v3-decoder
-	url = git@github.com:GerHobbelt/silk-v3-decoder.git
+    path = silk-v3-decoder
+    url = git@github.com:GerHobbelt/silk-v3-decoder.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "Solo"]
-	path = Solo
-	url = git@github.com:GerHobbelt/Solo.git
+    path = Solo
+    url = git@github.com:GerHobbelt/Solo.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "silk-codec"]
-	path = silk-codec
-	url = git@github.com:GerHobbelt/silk-codec.git
+    path = silk-codec
+    url = git@github.com:GerHobbelt/silk-codec.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "minimp3"]
-	path = minimp3
-	url = git@github.com:GerHobbelt/minimp3.git
+    path = minimp3
+    url = git@github.com:GerHobbelt/minimp3.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "opus"]
-	path = opus
-	url = git@github.com:GerHobbelt/opus.git
+    path = opus
+    url = git@github.com:GerHobbelt/opus.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "qoa"]
-	path = qoa
-	url = git@github.com:GerHobbelt/qoa.git
+    path = qoa
+    url = git@github.com:GerHobbelt/qoa.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "speex"]
-	path = speex
-	url = git@github.com:GerHobbelt/speex.git
+    path = speex
+    url = git@github.com:GerHobbelt/speex.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "flac"]
-	path = flac
-	url = git@github.com:GerHobbelt/flac.git
+    path = flac
+    url = git@github.com:GerHobbelt/flac.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "dr_libs"]
-	path = dr_libs
-	url = git@github.com:GerHobbelt/dr_libs.git
+    path = dr_libs
+    url = git@github.com:GerHobbelt/dr_libs.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "LZMA-Vizualizer"]
-	path = LZMA-Vizualizer
-	url = git@github.com:GerHobbelt/LZMA-Vizualizer.git
+    path = LZMA-Vizualizer
+    url = git@github.com:GerHobbelt/LZMA-Vizualizer.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "retinex"]
-	path = retinex
-	url = git@github.com:GerHobbelt/retinex.git
+    path = retinex
+    url = git@github.com:GerHobbelt/retinex.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "OpenCP"]
-	path = OpenCP
-	url = git@github.com:GerHobbelt/OpenCP.git
+    path = OpenCP
+    url = git@github.com:GerHobbelt/OpenCP.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "InferenceHelper"]
-	path = InferenceHelper
-	url = git@github.com:GerHobbelt/InferenceHelper.git
+    path = InferenceHelper
+    url = git@github.com:GerHobbelt/InferenceHelper.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "flatton-offline"]
-	path = flatton-offline
-	url = git@github.com:GerHobbelt/flatton-offline.git
+    path = flatton-offline
+    url = git@github.com:GerHobbelt/flatton-offline.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "L1Flattening"]
-	path = L1Flattening
-	url = git@github.com:GerHobbelt/L1Flattening.git
+    path = L1Flattening
+    url = git@github.com:GerHobbelt/L1Flattening.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "fbow"]
-	path = fbow
-	url = git@github.com:GerHobbelt/fbow.git
+    path = fbow
+    url = git@github.com:GerHobbelt/fbow.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "EasyOCR-cpp"]
-	path = EasyOCR-cpp
-	url = git@github.com:GerHobbelt/EasyOCR-cpp.git
+    path = EasyOCR-cpp
+    url = git@github.com:GerHobbelt/EasyOCR-cpp.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "EasyOCR"]
-	path = EasyOCR
-	url = git@github.com:GerHobbelt/EasyOCR.git
+    path = EasyOCR
+    url = git@github.com:GerHobbelt/EasyOCR.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "Sancho.Panza.on.tesseract.OCR"]
-	path = Sancho.Panza.on.tesseract.OCR
-	url = git@github.com:GerHobbelt/Sancho.Panza.on.tesseract.OCR.git
+    path = Sancho.Panza.on.tesseract.OCR
+    url = git@github.com:GerHobbelt/Sancho.Panza.on.tesseract.OCR.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "ocr_eval_tools"]
-	path = ocr_eval_tools
-	url = git@github.com:GerHobbelt/ocr_eval_tools.git
+    path = ocr_eval_tools
+    url = git@github.com:GerHobbelt/ocr_eval_tools.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "local_adaptive_binarization"]
-	path = local_adaptive_binarization
-	url = git@github.com:GerHobbelt/local_adaptive_binarization.git
+    path = local_adaptive_binarization
+    url = git@github.com:GerHobbelt/local_adaptive_binarization.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "Awesome-Image-Quality-Assessment"]
-	path = Awesome-Image-Quality-Assessment
-	url = git@github.com:GerHobbelt/Awesome-Image-Quality-Assessment.git
+    path = Awesome-Image-Quality-Assessment
+    url = git@github.com:GerHobbelt/Awesome-Image-Quality-Assessment.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "Awesome-Document-Image-Rectification"]
-	path = Awesome-Document-Image-Rectification
-	url = git@github.com:GerHobbelt/Awesome-Document-Image-Rectification.git
+    path = Awesome-Document-Image-Rectification
+    url = git@github.com:GerHobbelt/Awesome-Document-Image-Rectification.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "IMGUR5K-Handwriting-Dataset"]
-	path = IMGUR5K-Handwriting-Dataset
-	url = git@github.com:GerHobbelt/IMGUR5K-Handwriting-Dataset.git
+    path = IMGUR5K-Handwriting-Dataset
+    url = git@github.com:GerHobbelt/IMGUR5K-Handwriting-Dataset.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "ragel"]
-	path = ragel
-	url = git@github.com:GerHobbelt/ragel.git
+    path = ragel
+    url = git@github.com:GerHobbelt/ragel.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "colm"]
-	path = colm
-	url = git@github.com:GerHobbelt/colm.git
+    path = colm
+    url = git@github.com:GerHobbelt/colm.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "ModernCppStarter"]
-	path = ModernCppStarter
-	url = git@github.com:GerHobbelt/ModernCppStarter.git
+    path = ModernCppStarter
+    url = git@github.com:GerHobbelt/ModernCppStarter.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "libpostal"]
-	path = libpostal
-	url = git@github.com:GerHobbelt/libpostal.git
+    path = libpostal
+    url = git@github.com:GerHobbelt/libpostal.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "simdcomp"]
-	path = simdcomp
-	url = git@github.com:GerHobbelt/simdcomp.git
+    path = simdcomp
+    url = git@github.com:GerHobbelt/simdcomp.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "PDFGen"]
-	path = PDFGen
-	url = git@github.com:GerHobbelt/PDFGen.git
+    path = PDFGen
+    url = git@github.com:GerHobbelt/PDFGen.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "lmfit"]
-	path = lmfit
-	url = git@github.com:GerHobbelt/lmfit.git
+    path = lmfit
+    url = git@github.com:GerHobbelt/lmfit.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "cv-VanishingPoint"]
-	path = cv-VanishingPoint
-	url = git@github.com:GerHobbelt/cv-VanishingPoint.git
+    path = cv-VanishingPoint
+    url = git@github.com:GerHobbelt/cv-VanishingPoint.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "FFME"]
-	path = FFME
-	url = git@github.com:GerHobbelt/FFME.git
+    path = FFME
+    url = git@github.com:GerHobbelt/FFME.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "InversePerspectiveMapping"]
-	path = InversePerspectiveMapping
-	url = git@github.com:GerHobbelt/InversePerspectiveMapping.git
+    path = InversePerspectiveMapping
+    url = git@github.com:GerHobbelt/InversePerspectiveMapping.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "libchiaroscuramente"]
-	path = libchiaroscuramente
-	url = git@github.com:GerHobbelt/libchiaroscuramente.git
+    path = libchiaroscuramente
+    url = git@github.com:GerHobbelt/libchiaroscuramente.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "tesseract-ocr-mailing-list-archive"]
-	path = tesseract-ocr-mailing-list-archive
-	url = git@github.com:GerHobbelt/tesseract-ocr-mailing-list-archive.git
+    path = tesseract-ocr-mailing-list-archive
+    url = git@github.com:GerHobbelt/tesseract-ocr-mailing-list-archive.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "tesseract-dev-mailing-list-archive"]
-	path = tesseract-dev-mailing-list-archive
-	url = git@github.com:GerHobbelt/tesseract-dev-mailing-list-archive.git
+    path = tesseract-dev-mailing-list-archive
+    url = git@github.com:GerHobbelt/tesseract-dev-mailing-list-archive.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "libzint"]
-	path = libzint
-	url = git@github.com:GerHobbelt/libzint.git
+    path = libzint
+    url = git@github.com:GerHobbelt/libzint.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "wolfsort"]
-	path = wolfsort
-	url = git@github.com:GerHobbelt/wolfsort.git
+    path = wolfsort
+    url = git@github.com:GerHobbelt/wolfsort.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "piposort"]
-	path = piposort
-	url = git@github.com:GerHobbelt/piposort.git
+    path = piposort
+    url = git@github.com:GerHobbelt/piposort.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "learnopencv"]
-	path = learnopencv
-	url = git@github.com:GerHobbelt/learnopencv.git
+    path = learnopencv
+    url = git@github.com:GerHobbelt/learnopencv.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "hilbert_hpp"]
-	path = hilbert_hpp
-	url = git@github.com:GerHobbelt/hilbert_hpp.git
+    path = hilbert_hpp
+    url = git@github.com:GerHobbelt/hilbert_hpp.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "r8brain-free-src"]
-	path = r8brain-free-src
-	url = git@github.com:GerHobbelt/r8brain-free-src.git
+    path = r8brain-free-src
+    url = git@github.com:GerHobbelt/r8brain-free-src.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "libInterpolate"]
-	path = libInterpolate
-	url = git@github.com:GerHobbelt/libInterpolate.git
+    path = libInterpolate
+    url = git@github.com:GerHobbelt/libInterpolate.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "pico_tree"]
-	path = pico_tree
-	url = git@github.com:GerHobbelt/pico_tree.git
+    path = pico_tree
+    url = git@github.com:GerHobbelt/pico_tree.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "ikd-Tree"]
-	path = ikd-Tree
-	url = git@github.com:GerHobbelt/ikd-Tree.git
+    path = ikd-Tree
+    url = git@github.com:GerHobbelt/ikd-Tree.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "imagehash"]
-	path = imagehash
-	url = git@github.com:GerHobbelt/imagehash.git
+    path = imagehash
+    url = git@github.com:GerHobbelt/imagehash.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "libjpegqs"]
-	path = libjpegqs
-	url = git@github.com:GerHobbelt/libjpegqs.git
+    path = libjpegqs
+    url = git@github.com:GerHobbelt/libjpegqs.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "butteraugli"]
-	path = butteraugli
-	url = git@github.com:GerHobbelt/butteraugli.git
+    path = butteraugli
+    url = git@github.com:GerHobbelt/butteraugli.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "epeg"]
-	path = epeg
-	url = git@github.com:GerHobbelt/epeg.git
+    path = epeg
+    url = git@github.com:GerHobbelt/epeg.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "nfft"]
-	path = nfft
-	url = git@github.com:GerHobbelt/nfft.git
+    path = nfft
+    url = git@github.com:GerHobbelt/nfft.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "icer_compression"]
-	path = icer_compression
-	url = git@github.com:GerHobbelt/icer_compression.git
+    path = icer_compression
+    url = git@github.com:GerHobbelt/icer_compression.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "efftw"]
-	path = efftw
-	url = git@github.com:GerHobbelt/efftw.git
+    path = efftw
+    url = git@github.com:GerHobbelt/efftw.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "kissfft"]
-	path = kissfft
-	url = git@github.com:GerHobbelt/kissfft.git
+    path = kissfft
+    url = git@github.com:GerHobbelt/kissfft.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "ffts"]
-	path = ffts
-	url = git@github.com:GerHobbelt/ffts.git
+    path = ffts
+    url = git@github.com:GerHobbelt/ffts.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "amd-fftw"]
-	path = amd-fftw
-	url = git@github.com:GerHobbelt/amd-fftw.git
+    path = amd-fftw
+    url = git@github.com:GerHobbelt/amd-fftw.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "jpeg2dct"]
-	path = jpeg2dct
-	url = git@github.com:GerHobbelt/jpeg2dct.git
+    path = jpeg2dct
+    url = git@github.com:GerHobbelt/jpeg2dct.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "RandomizedRedundantDCTDenoising"]
-	path = RandomizedRedundantDCTDenoising
-	url = git@github.com:GerHobbelt/RandomizedRedundantDCTDenoising.git
+    path = RandomizedRedundantDCTDenoising
+    url = git@github.com:GerHobbelt/RandomizedRedundantDCTDenoising.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "libkdtree"]
-	path = libkdtree
-	url = git@github.com:GerHobbelt/libkdtree.git
+    path = libkdtree
+    url = git@github.com:GerHobbelt/libkdtree.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "QALSH"]
-	path = QALSH
-	url = git@github.com:GerHobbelt/QALSH.git
+    path = QALSH
+    url = git@github.com:GerHobbelt/QALSH.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "nanoflann_dbscan"]
-	path = nanoflann_dbscan
-	url = git@github.com:GerHobbelt/nanoflann_dbscan.git
+    path = nanoflann_dbscan
+    url = git@github.com:GerHobbelt/nanoflann_dbscan.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "QALSH_Mem"]
-	path = QALSH_Mem
-	url = git@github.com:GerHobbelt/QALSH_Mem.git
+    path = QALSH_Mem
+    url = git@github.com:GerHobbelt/QALSH_Mem.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "hilbert_curves"]
-	path = hilbert_curves
-	url = git@github.com:GerHobbelt/hilbert_curves.git
+    path = hilbert_curves
+    url = git@github.com:GerHobbelt/hilbert_curves.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "libhilbert"]
-	path = libhilbert
-	url = git@github.com:GerHobbelt/libhilbert.git
+    path = libhilbert
+    url = git@github.com:GerHobbelt/libhilbert.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "tiny-dnn"]
-	path = tiny-dnn
-	url = git@github.com:GerHobbelt/tiny-dnn.git
+    path = tiny-dnn
+    url = git@github.com:GerHobbelt/tiny-dnn.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "u8g2"]
-	path = u8g2
-	url = git@github.com:GerHobbelt/u8g2.git
+    path = u8g2
+    url = git@github.com:GerHobbelt/u8g2.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "mcmd"]
-	path = mcmd
-	url = git@github.com:GerHobbelt/mcmd.git
+    path = mcmd
+    url = git@github.com:GerHobbelt/mcmd.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "tab"]
-	path = tab
-	url = git@github.com:GerHobbelt/tab.git
+    path = tab
+    url = git@github.com:GerHobbelt/tab.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "binary_bakery"]
-	path = binary_bakery
-	url = git@github.com:GerHobbelt/binary_bakery.git
+    path = binary_bakery
+    url = git@github.com:GerHobbelt/binary_bakery.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "oof"]
-	path = oof
-	url = git@github.com:GerHobbelt/oof.git
+    path = oof
+    url = git@github.com:GerHobbelt/oof.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "QuantLib"]
-	path = QuantLib
-	url = git@github.com:GerHobbelt/QuantLib.git
+    path = QuantLib
+    url = git@github.com:GerHobbelt/QuantLib.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "design-patterns-cpp"]
-	path = design-patterns-cpp
-	url = git@github.com:GerHobbelt/design-patterns-cpp.git
+    path = design-patterns-cpp
+    url = git@github.com:GerHobbelt/design-patterns-cpp.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "ormpp"]
-	path = ormpp
-	url = git@github.com:GerHobbelt/ormpp.git
+    path = ormpp
+    url = git@github.com:GerHobbelt/ormpp.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "trng4"]
-	path = trng4
-	url = git@github.com:GerHobbelt/trng4.git
+    path = trng4
+    url = git@github.com:GerHobbelt/trng4.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "remake"]
-	path = remake
-	url = git@github.com:GerHobbelt/remake.git
+    path = remake
+    url = git@github.com:GerHobbelt/remake.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "clp"]
-	path = clp
-	url = git@github.com:GerHobbelt/clp.git
+    path = clp
+    url = git@github.com:GerHobbelt/clp.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "openalpr"]
-	path = openalpr
-	url = git@github.com:GerHobbelt/openalpr.git
+    path = openalpr
+    url = git@github.com:GerHobbelt/openalpr.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "onnxruntime-extensions"]
-	path = onnxruntime-extensions
-	url = git@github.com:GerHobbelt/onnxruntime-extensions.git
+    path = onnxruntime-extensions
+    url = git@github.com:GerHobbelt/onnxruntime-extensions.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "krabsetw"]
-	path = krabsetw
-	url = git@github.com:GerHobbelt/krabsetw.git
+    path = krabsetw
+    url = git@github.com:GerHobbelt/krabsetw.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "onnxruntime-genai"]
-	path = onnxruntime-genai
-	url = git@github.com:GerHobbelt/onnxruntime-genai.git
+    path = onnxruntime-genai
+    url = git@github.com:GerHobbelt/onnxruntime-genai.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "uvw"]
-	path = uvw
-	url = git@github.com:GerHobbelt/uvw.git
+    path = uvw
+    url = git@github.com:GerHobbelt/uvw.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "WinToast"]
-	path = WinToast
-	url = git@github.com:GerHobbelt/WinToast.git
+    path = WinToast
+    url = git@github.com:GerHobbelt/WinToast.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "nodesoup"]
-	path = nodesoup
-	url = git@github.com:GerHobbelt/nodesoup.git
+    path = nodesoup
+    url = git@github.com:GerHobbelt/nodesoup.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "quirc"]
-	path = quirc
-	url = git@github.com:GerHobbelt/quirc.git
+    path = quirc
+    url = git@github.com:GerHobbelt/quirc.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "arrow"]
-	path = arrow
-	url = git@github.com:GerHobbelt/arrow.git
+    path = arrow
+    url = git@github.com:GerHobbelt/arrow.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "glaze"]
-	path = glaze
-	url = git@github.com:GerHobbelt/glaze.git
+    path = glaze
+    url = git@github.com:GerHobbelt/glaze.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "sqlite-parquet-vtable"]
-	path = sqlite-parquet-vtable
-	url = git@github.com:GerHobbelt/sqlite-parquet-vtable.git
+    path = sqlite-parquet-vtable
+    url = git@github.com:GerHobbelt/sqlite-parquet-vtable.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "colorm"]
-	path = colorm
-	url = git@github.com:GerHobbelt/colorm.git
+    path = colorm
+    url = git@github.com:GerHobbelt/colorm.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "expected"]
-	path = expected
-	url = git@github.com:GerHobbelt/expected.git
+    path = expected
+    url = git@github.com:GerHobbelt/expected.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "bin2cpp"]
-	path = bin2cpp
-	url = git@github.com:GerHobbelt/bin2cpp.git
+    path = bin2cpp
+    url = git@github.com:GerHobbelt/bin2cpp.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "ink-stroke-modeler"]
-	path = ink-stroke-modeler
-	url = git@github.com:GerHobbelt/ink-stroke-modeler.git
+    path = ink-stroke-modeler
+    url = git@github.com:GerHobbelt/ink-stroke-modeler.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "libnatspec"]
-	path = libnatspec
-	url = git@github.com:GerHobbelt/libnatspec.git
+    path = libnatspec
+    url = git@github.com:GerHobbelt/libnatspec.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "bzip2"]
-	path = bzip2
-	url = git@github.com:GerHobbelt/bzip2.git
+    path = bzip2
+    url = git@github.com:GerHobbelt/bzip2.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "bzip3"]
-	path = bzip3
-	url = git@github.com:GerHobbelt/bzip3.git
+    path = bzip3
+    url = git@github.com:GerHobbelt/bzip3.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "Turbo-Range-Coder"]
-	path = Turbo-Range-Coder
-	url = git@github.com:GerHobbelt/Turbo-Range-Coder.git
+    path = Turbo-Range-Coder
+    url = git@github.com:GerHobbelt/Turbo-Range-Coder.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "libbsc"]
-	path = libbsc
-	url = git@github.com:GerHobbelt/libbsc.git
+    path = libbsc
+    url = git@github.com:GerHobbelt/libbsc.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "easylzma"]
-	path = easylzma
-	url = git@github.com:GerHobbelt/easylzma.git
+    path = easylzma
+    url = git@github.com:GerHobbelt/easylzma.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "xz"]
-	path = xz
-	url = git@github.com:GerHobbelt/xz.git
+    path = xz
+    url = git@github.com:GerHobbelt/xz.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "7zip"]
-	path = 7zip
-	url = git@github.com:GerHobbelt/7zip.git
+    path = 7zip
+    url = git@github.com:GerHobbelt/7zip.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "lzma"]
-	path = lzma
-	url = git@github.com:GerHobbelt/lzma.git
+    path = lzma
+    url = git@github.com:GerHobbelt/lzma.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "libsais"]
-	path = libsais
-	url = git@github.com:GerHobbelt/libsais.git
+    path = libsais
+    url = git@github.com:GerHobbelt/libsais.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "bxzstr"]
-	path = bxzstr
-	url = git@github.com:GerHobbelt/bxzstr.git
+    path = bxzstr
+    url = git@github.com:GerHobbelt/bxzstr.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "7-Zip-zstd"]
-	path = 7-Zip-zstd
-	url = git@github.com:GerHobbelt/7-Zip-zstd.git
+    path = 7-Zip-zstd
+    url = git@github.com:GerHobbelt/7-Zip-zstd.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "Image-Smoothing-Algorithm-Based-on-Gradient-Analysis"]
-	path = Image-Smoothing-Algorithm-Based-on-Gradient-Analysis
-	url = git@github.com:GerHobbelt/Image-Smoothing-Algorithm-Based-on-Gradient-Analysis.git
+    path = Image-Smoothing-Algorithm-Based-on-Gradient-Analysis
+    url = git@github.com:GerHobbelt/Image-Smoothing-Algorithm-Based-on-Gradient-Analysis.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "lodepng"]
-	path = lodepng
-	url = git@github.com:GerHobbelt/lodepng.git
+    path = lodepng
+    url = git@github.com:GerHobbelt/lodepng.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "float_compare"]
-	path = float_compare
-	url = git@github.com:GerHobbelt/float_compare.git
+    path = float_compare
+    url = git@github.com:GerHobbelt/float_compare.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "sse2neon"]
-	path = sse2neon
-	url = git@github.com:GerHobbelt/sse2neon.git
+    path = sse2neon
+    url = git@github.com:GerHobbelt/sse2neon.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "reflect-cpp"]
-	path = reflect-cpp
-	url = git@github.com:GerHobbelt/reflect-cpp.git
+    path = reflect-cpp
+    url = git@github.com:GerHobbelt/reflect-cpp.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "msgpack-c"]
-	path = msgpack-c
-	url = git@github.com:GerHobbelt/msgpack-c.git
+    path = msgpack-c
+    url = git@github.com:GerHobbelt/msgpack-c.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "libbson"]
-	path = libbson
-	url = git@github.com:GerHobbelt/libbson.git
+    path = libbson
+    url = git@github.com:GerHobbelt/libbson.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "flatbuffers"]
-	path = flatbuffers
-	url = git@github.com:GerHobbelt/flatbuffers.git
+    path = flatbuffers
+    url = git@github.com:GerHobbelt/flatbuffers.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "ztd.text"]
-	path = ztd.text
-	url = git@github.com:GerHobbelt/ztd.text.git
+    path = ztd.text
+    url = git@github.com:GerHobbelt/ztd.text.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "cmocka"]
-	path = cmocka
-	url = git@github.com:GerHobbelt/cmocka.git
+    path = cmocka
+    url = git@github.com:GerHobbelt/cmocka.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "cJSON"]
-	path = cJSON
-	url = git@github.com:GerHobbelt/cJSON.git
+    path = cJSON
+    url = git@github.com:GerHobbelt/cJSON.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "uni-algo"]
-	path = uni-algo
-	url = git@github.com:GerHobbelt/uni-algo.git
+    path = uni-algo
+    url = git@github.com:GerHobbelt/uni-algo.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "reflect"]
-	path = reflect
-	url = git@github.com:GerHobbelt/reflect.git
+    path = reflect
+    url = git@github.com:GerHobbelt/reflect.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "figcone_tree"]
-	path = figcone_tree
-	url = git@github.com:GerHobbelt/figcone_tree.git
+    path = figcone_tree
+    url = git@github.com:GerHobbelt/figcone_tree.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "sfun"]
-	path = sfun
-	url = git@github.com:GerHobbelt/sfun.git
+    path = sfun
+    url = git@github.com:GerHobbelt/sfun.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "figcone_shoal"]
-	path = figcone_shoal
-	url = git@github.com:GerHobbelt/figcone_shoal.git
+    path = figcone_shoal
+    url = git@github.com:GerHobbelt/figcone_shoal.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "shoal"]
-	path = shoal
-	url = git@github.com:GerHobbelt/shoal.git
+    path = shoal
+    url = git@github.com:GerHobbelt/shoal.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "figcone_ini"]
-	path = figcone_ini
-	url = git@github.com:GerHobbelt/figcone_ini.git
+    path = figcone_ini
+    url = git@github.com:GerHobbelt/figcone_ini.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "inifile-cpp"]
-	path = inifile-cpp
-	url = git@github.com:GerHobbelt/inifile-cpp.git
+    path = inifile-cpp
+    url = git@github.com:GerHobbelt/inifile-cpp.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "figcone_toml"]
-	path = figcone_toml
-	url = git@github.com:GerHobbelt/figcone_toml.git
+    path = figcone_toml
+    url = git@github.com:GerHobbelt/figcone_toml.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "figcone_json"]
-	path = figcone_json
-	url = git@github.com:GerHobbelt/figcone_json.git
+    path = figcone_json
+    url = git@github.com:GerHobbelt/figcone_json.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "figcone_xml"]
-	path = figcone_xml
-	url = git@github.com:GerHobbelt/figcone_xml.git
+    path = figcone_xml
+    url = git@github.com:GerHobbelt/figcone_xml.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "figcone_yaml"]
-	path = figcone_yaml
-	url = git@github.com:GerHobbelt/figcone_yaml.git
+    path = figcone_yaml
+    url = git@github.com:GerHobbelt/figcone_yaml.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "libchewing"]
-	path = libchewing
-	url = git@github.com:GerHobbelt/libchewing.git
+    path = libchewing
+    url = git@github.com:GerHobbelt/libchewing.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "libexif"]
-	path = libexif
-	url = git@github.com:GerHobbelt/libexif.git
+    path = libexif
+    url = git@github.com:GerHobbelt/libexif.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "exif"]
-	path = exif
-	url = git@github.com:GerHobbelt/exif.git
+    path = exif
+    url = git@github.com:GerHobbelt/exif.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "ocr-evaluation-tools"]
-	path = ocr-evaluation-tools
-	url = git@github.com:GerHobbelt/ocr-evaluation-tools.git
+    path = ocr-evaluation-tools
+    url = git@github.com:GerHobbelt/ocr-evaluation-tools.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "StringViewTests"]
-	path = StringViewTests
-	url = git@github.com:GerHobbelt/StringViewTests.git
+    path = StringViewTests
+    url = git@github.com:GerHobbelt/StringViewTests.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "map_benchmark"]
-	path = map_benchmark
-	url = git@github.com:GerHobbelt/map_benchmark.git
+    path = map_benchmark
+    url = git@github.com:GerHobbelt/map_benchmark.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "unordered_dense"]
-	path = unordered_dense
-	url = git@github.com:GerHobbelt/unordered_dense.git
+    path = unordered_dense
+    url = git@github.com:GerHobbelt/unordered_dense.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "emhash"]
-	path = emhash
-	url = git@github.com:GerHobbelt/emhash.git
+    path = emhash
+    url = git@github.com:GerHobbelt/emhash.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "rapidhash"]
-	path = rapidhash
-	url = git@github.com:GerHobbelt/rapidhash.git
+    path = rapidhash
+    url = git@github.com:GerHobbelt/rapidhash.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "gtl"]
-	path = gtl
-	url = git@github.com:GerHobbelt/gtl.git
+    path = gtl
+    url = git@github.com:GerHobbelt/gtl.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "dense_hash_map"]
-	path = dense_hash_map
-	url = git@github.com:GerHobbelt/dense_hash_map.git
+    path = dense_hash_map
+    url = git@github.com:GerHobbelt/dense_hash_map.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "Allocator"]
-	path = Allocator
-	url = git@github.com:GerHobbelt/Allocator.git
+    path = Allocator
+    url = git@github.com:GerHobbelt/Allocator.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "stl-allocator"]
-	path = stl-allocator
-	url = git@github.com:GerHobbelt/stl-allocator.git
+    path = stl-allocator
+    url = git@github.com:GerHobbelt/stl-allocator.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "pool_allocator"]
-	path = pool_allocator
-	url = git@github.com:GerHobbelt/pool_allocator.git
+    path = pool_allocator
+    url = git@github.com:GerHobbelt/pool_allocator.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "sparse-map"]
-	path = sparse-map
-	url = git@github.com:GerHobbelt/sparse-map.git
+    path = sparse-map
+    url = git@github.com:GerHobbelt/sparse-map.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "libetpan"]
-	path = libetpan
-	url = git@github.com:GerHobbelt/libetpan.git
+    path = libetpan
+    url = git@github.com:GerHobbelt/libetpan.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "cpp-base64"]
-	path = cpp-base64
-	url = git@github.com:GerHobbelt/cpp-base64.git
+    path = cpp-base64
+    url = git@github.com:GerHobbelt/cpp-base64.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "fast-cpp-csv-parser"]
-	path = fast-cpp-csv-parser
-	url = git@github.com:GerHobbelt/fast-cpp-csv-parser.git
+    path = fast-cpp-csv-parser
+    url = git@github.com:GerHobbelt/fast-cpp-csv-parser.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "llfio"]
-	path = llfio
-	url = git@github.com:GerHobbelt/llfio.git
+    path = llfio
+    url = git@github.com:GerHobbelt/llfio.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "popt"]
-	path = popt
-	url = git@github.com:GerHobbelt/POPT.git
+    path = popt
+    url = git@github.com:GerHobbelt/POPT.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "vivid"]
-	path = vivid
-	url = git@github.com:GerHobbelt/vivid.git
+    path = vivid
+    url = git@github.com:GerHobbelt/vivid.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "SSIM"]
-	path = SSIM
-	url = git@github.com:GerHobbelt/SSIM.git
+    path = SSIM
+    url = git@github.com:GerHobbelt/SSIM.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "observable"]
-	path = observable
-	url = git@github.com:GerHobbelt/observable.git
+    path = observable
+    url = git@github.com:GerHobbelt/observable.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "skia"]
-	path = skia
-	url = git@github.com:GerHobbelt/skia.git
+    path = skia
+    url = git@github.com:GerHobbelt/skia.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "inja"]
-	path = inja
-	url = git@github.com:GerHobbelt/inja.git
+    path = inja
+    url = git@github.com:GerHobbelt/inja.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "SFML"]
-	path = SFML
-	url = git@github.com:GerHobbelt/SFML.git
+    path = SFML
+    url = git@github.com:GerHobbelt/SFML.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "libpfm4"]
-	path = libpfm4
-	url = git@github.com:GerHobbelt/libpfm4.git
+    path = libpfm4
+    url = git@github.com:GerHobbelt/libpfm4.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "Catch2"]
-	path = Catch2
-	url = git@github.com:GerHobbelt/Catch2.git
+    path = Catch2
+    url = git@github.com:GerHobbelt/Catch2.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "entt"]
-	path = entt
-	url = git@github.com:GerHobbelt/entt.git
+    path = entt
+    url = git@github.com:GerHobbelt/entt.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "FASTER"]
-	path = FASTER
-	url = git@github.com:GerHobbelt/FASTER.git
+    path = FASTER
+    url = git@github.com:GerHobbelt/FASTER.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "actor-framework"]
-	path = actor-framework
-	url = git@github.com:GerHobbelt/actor-framework.git
+    path = actor-framework
+    url = git@github.com:GerHobbelt/actor-framework.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "restclient-cpp"]
-	path = restclient-cpp
-	url = git@github.com:GerHobbelt/restclient-cpp.git
+    path = restclient-cpp
+    url = git@github.com:GerHobbelt/restclient-cpp.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "stdexec"]
-	path = stdexec
-	url = git@github.com:GerHobbelt/stdexec.git
+    path = stdexec
+    url = git@github.com:GerHobbelt/stdexec.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "msgpack-cpp"]
-	path = msgpack-cpp
-	url = git@github.com:GerHobbelt/msgpack-c.git
+    path = msgpack-cpp
+    url = git@github.com:GerHobbelt/msgpack-c.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "ejdb"]
-	path = ejdb
-	url = git@github.com:GerHobbelt/ejdb.git
+    path = ejdb
+    url = git@github.com:GerHobbelt/ejdb.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "iowow"]
-	path = iowow
-	url = git@github.com:GerHobbelt/iowow.git
+    path = iowow
+    url = git@github.com:GerHobbelt/iowow.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "nanobench"]
-	path = nanobench
-	url = git@github.com:GerHobbelt/nanobench.git
+    path = nanobench
+    url = git@github.com:GerHobbelt/nanobench.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "libprng"]
-	path = libprng
-	url = git@github.com:GerHobbelt/libprng.git
+    path = libprng
+    url = git@github.com:GerHobbelt/libprng.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "curlpp"]
-	path = curlpp
-	url = git@github.com:GerHobbelt/curlpp.git
+    path = curlpp
+    url = git@github.com:GerHobbelt/curlpp.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "lsnms"]
-	path = lsnms
-	url = git@github.com:GerHobbelt/lsnms.git
+    path = lsnms
+    url = git@github.com:GerHobbelt/lsnms.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "libspatialindex"]
-	path = libspatialindex
-	url = git@github.com:GerHobbelt/libspatialindex.git
+    path = libspatialindex
+    url = git@github.com:GerHobbelt/libspatialindex.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "THST"]
-	path = THST
-	url = git@github.com:GerHobbelt/THST.git
+    path = THST
+    url = git@github.com:GerHobbelt/THST.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "simdutf"]
-	path = simdutf
-	url = git@github.com:GerHobbelt/simdutf.git
+    path = simdutf
+    url = git@github.com:GerHobbelt/simdutf.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "md5-optimisation"]
-	path = md5-optimisation
-	url = git@github.com:GerHobbelt/md5-optimisation.git
+    path = md5-optimisation
+    url = git@github.com:GerHobbelt/md5-optimisation.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "c4core"]
-	path = c4core
-	url = git@github.com:GerHobbelt/c4core.git
+    path = c4core
+    url = git@github.com:GerHobbelt/c4core.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "docopt.cpp"]
-	path = docopt.cpp
-	url = git@github.com:GerHobbelt/docopt.cpp.git
+    path = docopt.cpp
+    url = git@github.com:GerHobbelt/docopt.cpp.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "PSI"]
-	path = PSI
-	url = git@github.com:GerHobbelt/PSI.git
+    path = PSI
+    url = git@github.com:GerHobbelt/PSI.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "dablooms"]
-	path = dablooms
-	url = git@github.com:GerHobbelt/dablooms.git
+    path = dablooms
+    url = git@github.com:GerHobbelt/dablooms.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "Cuckoo_Filter"]
-	path = Cuckoo_Filter_simple
-	url = git@github.com:GerHobbelt/Cuckoo_Filter.git
+    path = Cuckoo_Filter_simple
+    url = git@github.com:GerHobbelt/Cuckoo_Filter.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "Containers"]
-	path = Containers
-	url = git@github.com:GerHobbelt/Containers.git
+    path = Containers
+    url = git@github.com:GerHobbelt/Containers.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "radix_tree"]
-	path = radix_tree
-	url = git@github.com:GerHobbelt/radix_tree.git
+    path = radix_tree
+    url = git@github.com:GerHobbelt/radix_tree.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "adaptive-radix-tree"]
-	path = adaptive-radix-tree
-	url = git@github.com:GerHobbelt/adaptive-radix-tree.git
+    path = adaptive-radix-tree
+    url = git@github.com:GerHobbelt/adaptive-radix-tree.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "PruningRadixTrie"]
-	path = PruningRadixTrie
-	url = git@github.com:GerHobbelt/PruningRadixTrie.git
+    path = PruningRadixTrie
+    url = git@github.com:GerHobbelt/PruningRadixTrie.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "libart"]
-	path = libart
-	url = git@github.com:GerHobbelt/libart.git
+    path = libart
+    url = git@github.com:GerHobbelt/libart.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "rax"]
-	path = rax
-	url = git@github.com:GerHobbelt/rax.git
+    path = rax
+    url = git@github.com:GerHobbelt/rax.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "botan"]
-	path = botan
-	url = git@github.com:GerHobbelt/botan.git
+    path = botan
+    url = git@github.com:GerHobbelt/botan.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "cpp-unicodelib"]
-	path = cpp-unicodelib
-	url = git@github.com:GerHobbelt/cpp-unicodelib.git
+    path = cpp-unicodelib
+    url = git@github.com:GerHobbelt/cpp-unicodelib.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "fast_align"]
-	path = fast_align
-	url = git@github.com:GerHobbelt/fast_align.git
+    path = fast_align
+    url = git@github.com:GerHobbelt/fast_align.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "Non-Maximum-Suppression"]
-	path = Non-Maximum-Suppression
-	url = git@github.com:GerHobbelt/Non-Maximum-Suppression.git
+    path = Non-Maximum-Suppression
+    url = git@github.com:GerHobbelt/Non-Maximum-Suppression.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "cmake_examples"]
-	path = cmake_examples
-	url = git@github.com:GerHobbelt/cmake_examples.git
+    path = cmake_examples
+    url = git@github.com:GerHobbelt/cmake_examples.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "modern-cpp-template"]
-	path = modern-cpp-template
-	url = git@github.com:GerHobbelt/modern-cpp-template.git
+    path = modern-cpp-template
+    url = git@github.com:GerHobbelt/modern-cpp-template.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "googletest-ci-cpp-template"]
-	path = googletest-ci-cpp-template
-	url = git@github.com:GerHobbelt/googletest-ci-cpp-template.git
+    path = googletest-ci-cpp-template
+    url = git@github.com:GerHobbelt/googletest-ci-cpp-template.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "Algo_Ds_Notes"]
-	path = Algo_Ds_Notes
-	url = git@github.com:GerHobbelt/Algo_Ds_Notes.git
+    path = Algo_Ds_Notes
+    url = git@github.com:GerHobbelt/Algo_Ds_Notes.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "UniversalStacktrace"]
-	path = UniversalStacktrace
-	url = git@github.com:GerHobbelt/UniversalStacktrace.git
+    path = UniversalStacktrace
+    url = git@github.com:GerHobbelt/UniversalStacktrace.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "signals-rt"]
-	path = signals-rt
-	url = git@github.com:GerHobbelt/signals-rt.git
+    path = signals-rt
+    url = git@github.com:GerHobbelt/signals-rt.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "sigslot"]
-	path = sigslot
-	url = git@github.com:GerHobbelt/sigslot.git
+    path = sigslot
+    url = git@github.com:GerHobbelt/sigslot.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "signal-slot-benchmarks"]
-	path = signal-slot-benchmarks
-	url = git@github.com:GerHobbelt/signal-slot-benchmarks.git
+    path = signal-slot-benchmarks
+    url = git@github.com:GerHobbelt/signal-slot-benchmarks.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "libccpalette"]
-	path = libccpalette
-	url = git@github.com:GerHobbelt/libccpalette.git
+    path = libccpalette
+    url = git@github.com:GerHobbelt/libccpalette.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "ssp"]
-	path = ssp
-	url = git@github.com:GerHobbelt/ssp.git
+    path = ssp
+    url = git@github.com:GerHobbelt/ssp.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "lazycsv"]
-	path = lazycsv
-	url = git@github.com:GerHobbelt/lazycsv.git
+    path = lazycsv
+    url = git@github.com:GerHobbelt/lazycsv.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "rapidcsv"]
-	path = rapidcsv
-	url = git@github.com:GerHobbelt/rapidcsv.git
+    path = rapidcsv
+    url = git@github.com:GerHobbelt/rapidcsv.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "libclustering_dim_redux"]
-	path = libclustering_dim_redux
-	url = git@github.com:GerHobbelt/libclustering_dim_redux.git
+    path = libclustering_dim_redux
+    url = git@github.com:GerHobbelt/libclustering_dim_redux.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "zimg"]
-	path = zimg
-	url = git@github.com:GerHobbelt/zimg.git
+    path = zimg
+    url = git@github.com:GerHobbelt/zimg.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "html-parser-test-corpus"]
-	path = html-parser-test-corpus
-	url = git@github.com:GerHobbelt/html-parser-test-corpus.git
+    path = html-parser-test-corpus
+    url = git@github.com:GerHobbelt/html-parser-test-corpus.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "libfsm"]
-	path = libfsm
-	url = git@github.com:GerHobbelt/libfsm.git
+    path = libfsm
+    url = git@github.com:GerHobbelt/libfsm.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "graphengine"]
-	path = graphengine
-	url = git@github.com:GerHobbelt/graphengine.git
+    path = graphengine
+    url = git@github.com:GerHobbelt/graphengine.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "tcmalloc"]
-	path = tcmalloc
-	url = git@github.com:GerHobbelt/tcmalloc.git
+    path = tcmalloc
+    url = git@github.com:GerHobbelt/tcmalloc.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "ygg"]
-	path = ygg
-	url = git@github.com:GerHobbelt/ygg.git
+    path = ygg
+    url = git@github.com:GerHobbelt/ygg.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "VisualizationLibrary"]
-	path = VisualizationLibrary
-	url = git@github.com:GerHobbelt/VisualizationLibrary.git
+    path = VisualizationLibrary
+    url = git@github.com:GerHobbelt/VisualizationLibrary.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "ntl"]
-	path = ntl
-	url = git@github.com:GerHobbelt/ntl.git
+    path = ntl
+    url = git@github.com:GerHobbelt/ntl.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "vigra"]
-	path = vigra
-	url = git@github.com:GerHobbelt/vigra.git
+    path = vigra
+    url = git@github.com:GerHobbelt/vigra.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "sds"]
-	path = sds
-	url = git@github.com:GerHobbelt/sds.git
+    path = sds
+    url = git@github.com:GerHobbelt/sds.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "units_cpp"]
-	path = units_cpp
-	url = git@github.com:GerHobbelt/units_cpp.git
+    path = units_cpp
+    url = git@github.com:GerHobbelt/units_cpp.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "opencv_3rdparty"]
-	path = opencv_3rdparty
-	url = git@github.com:GerHobbelt/opencv_3rdparty.git
+    path = opencv_3rdparty
+    url = git@github.com:GerHobbelt/opencv_3rdparty.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "cgal"]
-	path = cgal
-	url = git@github.com:GerHobbelt/cgal.git
+    path = cgal
+    url = git@github.com:GerHobbelt/cgal.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "oniguruma"]
     path = oniguruma
@@ -8483,698 +8483,698 @@
 
 
 [submodule "hwinfo"]
-	path = hwinfo
-	url = git@github.com:GerHobbelt/hwinfo.git
+    path = hwinfo
+    url = git@github.com:GerHobbelt/hwinfo.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "libMultiRobotPlanning"]
-	path = libMultiRobotPlanning
-	url = git@github.com:GerHobbelt/libMultiRobotPlanning.git
+    path = libMultiRobotPlanning
+    url = git@github.com:GerHobbelt/libMultiRobotPlanning.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "cppuprofile"]
-	path = cppuprofile
-	url = git@github.com:GerHobbelt/cppuprofile.git
+    path = cppuprofile
+    url = git@github.com:GerHobbelt/cppuprofile.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "sys_info"]
-	path = sys_info
-	url = git@github.com:GerHobbelt/sys_info.git
+    path = sys_info
+    url = git@github.com:GerHobbelt/sys_info.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "uuid_v4"]
-	path = uuid_v4
-	url = git@github.com:GerHobbelt/uuid_v4.git
+    path = uuid_v4
+    url = git@github.com:GerHobbelt/uuid_v4.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "cpp.react"]
-	path = cpp.react
-	url = git@github.com:GerHobbelt/cpp.react.git
+    path = cpp.react
+    url = git@github.com:GerHobbelt/cpp.react.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "ReactivePlusPlus"]
-	path = ReactivePlusPlus
-	url = git@github.com:GerHobbelt/ReactivePlusPlus.git
+    path = ReactivePlusPlus
+    url = git@github.com:GerHobbelt/ReactivePlusPlus.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "simde"]
-	path = simde
-	url = git@github.com:GerHobbelt/simde.git
+    path = simde
+    url = git@github.com:GerHobbelt/simde.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "libcds"]
-	path = libcds
-	url = git@github.com:GerHobbelt/libcds.git
+    path = libcds
+    url = git@github.com:GerHobbelt/libcds.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "sml"]
-	path = sml
-	url = git@github.com:GerHobbelt/sml.git
+    path = sml
+    url = git@github.com:GerHobbelt/sml.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "LibRaw"]
-	path = LibRaw
-	url = git@github.com:GerHobbelt/LibRaw.git
+    path = LibRaw
+    url = git@github.com:GerHobbelt/LibRaw.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "rawspeed"]
-	path = rawspeed
-	url = git@github.com:GerHobbelt/rawspeed.git
+    path = rawspeed
+    url = git@github.com:GerHobbelt/rawspeed.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "libuuid"]
-	path = libuuid
-	url = git@github.com:GerHobbelt/libuuid.git
+    path = libuuid
+    url = git@github.com:GerHobbelt/libuuid.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "libultrahdr"]
-	path = libultrahdr
-	url = git@github.com:GerHobbelt/libultrahdr.git
+    path = libultrahdr
+    url = git@github.com:GerHobbelt/libultrahdr.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "iod"]
-	path = iod
-	url = git@github.com:GerHobbelt/iod.git
+    path = iod
+    url = git@github.com:GerHobbelt/iod.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "avir"]
-	path = avir
-	url = git@github.com:GerHobbelt/avir.git
+    path = avir
+    url = git@github.com:GerHobbelt/avir.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "freeimage"]
-	path = freeimage
-	url = git@github.com:GerHobbelt/freeimage.git
+    path = freeimage
+    url = git@github.com:GerHobbelt/freeimage.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "vpp"]
-	path = vpp
-	url = git@github.com:GerHobbelt/vpp.git
+    path = vpp
+    url = git@github.com:GerHobbelt/vpp.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "detox"]
-	path = detox
-	url = git@github.com:GerHobbelt/detox.git
+    path = detox
+    url = git@github.com:GerHobbelt/detox.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "rankselect"]
-	path = rankselect
-	url = git@github.com:GerHobbelt/rankselect.git
+    path = rankselect
+    url = git@github.com:GerHobbelt/rankselect.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "vqf"]
-	path = vqf
-	url = git@github.com:GerHobbelt/vqf.git
+    path = vqf
+    url = git@github.com:GerHobbelt/vqf.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "libcron"]
-	path = libcron
-	url = git@github.com:GerHobbelt/libcron.git
+    path = libcron
+    url = git@github.com:GerHobbelt/libcron.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "open-location-code"]
-	path = open-location-code
-	url = git@github.com:GerHobbelt/open-location-code.git
+    path = open-location-code
+    url = git@github.com:GerHobbelt/open-location-code.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "janet"]
-	path = janet
-	url = git@github.com:GerHobbelt/janet.git
+    path = janet
+    url = git@github.com:GerHobbelt/janet.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "janet-sh"]
-	path = janet-sh
-	url = git@github.com:GerHobbelt/janet-sh.git
+    path = janet-sh
+    url = git@github.com:GerHobbelt/janet-sh.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "immer"]
-	path = immer
-	url = git@github.com:GerHobbelt/immer.git
+    path = immer
+    url = git@github.com:GerHobbelt/immer.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "lager"]
-	path = lager
-	url = git@github.com:GerHobbelt/lager.git
+    path = lager
+    url = git@github.com:GerHobbelt/lager.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "ewig"]
-	path = ewig
-	url = git@github.com:GerHobbelt/ewig.git
+    path = ewig
+    url = git@github.com:GerHobbelt/ewig.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "tarray"]
-	path = tarray
-	url = git@github.com:GerHobbelt/tarray.git
+    path = tarray
+    url = git@github.com:GerHobbelt/tarray.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "spork"]
-	path = spork
-	url = git@github.com:GerHobbelt/spork.git
+    path = spork
+    url = git@github.com:GerHobbelt/spork.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "janet-sqlite3"]
-	path = janet-sqlite3
-	url = git@github.com:GerHobbelt/janet-sqlite3.git
+    path = janet-sqlite3
+    url = git@github.com:GerHobbelt/janet-sqlite3.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "dcmtk"]
-	path = dcmtk
-	url = git@github.com:GerHobbelt/dcmtk.git
+    path = dcmtk
+    url = git@github.com:GerHobbelt/dcmtk.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "spatial_index_benchmark"]
-	path = spatial_index_benchmark
-	url = git@github.com:GerHobbelt/spatial_index_benchmark.git
+    path = spatial_index_benchmark
+    url = git@github.com:GerHobbelt/spatial_index_benchmark.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "RTree"]
-	path = RTree
-	url = git@github.com:GerHobbelt/RTree.git
+    path = RTree
+    url = git@github.com:GerHobbelt/RTree.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "tindicators"]
-	path = tindicators
-	url = git@github.com:GerHobbelt/tindicators.git
+    path = tindicators
+    url = git@github.com:GerHobbelt/tindicators.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "grid_map"]
-	path = grid_map
-	url = git@github.com:GerHobbelt/grid_map.git
+    path = grid_map
+    url = git@github.com:GerHobbelt/grid_map.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "SDLP"]
-	path = SDLP
-	url = git@github.com:GerHobbelt/SDLP.git
+    path = SDLP
+    url = git@github.com:GerHobbelt/SDLP.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "pyTsetlinMachine"]
-	path = pyTsetlinMachine
-	url = git@github.com:GerHobbelt/pyTsetlinMachine.git
+    path = pyTsetlinMachine
+    url = git@github.com:GerHobbelt/pyTsetlinMachine.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "iqa"]
-	path = iqa
-	url = git@github.com:GerHobbelt/iqa.git
+    path = iqa
+    url = git@github.com:GerHobbelt/iqa.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "DarkThumbs"]
-	path = DarkThumbs
-	url = git@github.com:GerHobbelt/DarkThumbs.git
+    path = DarkThumbs
+    url = git@github.com:GerHobbelt/DarkThumbs.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "bit7z"]
-	path = bit7z
-	url = git@github.com:GerHobbelt/bit7z.git
+    path = bit7z
+    url = git@github.com:GerHobbelt/bit7z.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "coolreader"]
-	path = coolreader
-	url = git@github.com:GerHobbelt/coolreader.git
+    path = coolreader
+    url = git@github.com:GerHobbelt/coolreader.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "OpenCL-Guide"]
-	path = OpenCL-Guide
-	url = git@github.com:GerHobbelt/OpenCL-Guide.git
+    path = OpenCL-Guide
+    url = git@github.com:GerHobbelt/OpenCL-Guide.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "OpenCL-CLHPP"]
-	path = OpenCL-CLHPP
-	url = git@github.com:GerHobbelt/OpenCL-CLHPP.git
+    path = OpenCL-CLHPP
+    url = git@github.com:GerHobbelt/OpenCL-CLHPP.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "gemmlowp"]
-	path = gemmlowp
-	url = git@github.com:GerHobbelt/gemmlowp.git
+    path = gemmlowp
+    url = git@github.com:GerHobbelt/gemmlowp.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "sod"]
-	path = sod
-	url = git@github.com:GerHobbelt/sod.git
+    path = sod
+    url = git@github.com:GerHobbelt/sod.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "quile"]
-	path = quile
-	url = git@github.com:GerHobbelt/quile.git
+    path = quile
+    url = git@github.com:GerHobbelt/quile.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "GALGO-2.0"]
-	path = GALGO-2.0
-	url = git@github.com:GerHobbelt/GALGO-2.0.git
+    path = GALGO-2.0
+    url = git@github.com:GerHobbelt/GALGO-2.0.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "optframe"]
-	path = optframe
-	url = git@github.com:GerHobbelt/optframe.git
+    path = optframe
+    url = git@github.com:GerHobbelt/optframe.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "openGA"]
-	path = openGA
-	url = git@github.com:GerHobbelt/openGA.git
+    path = openGA
+    url = git@github.com:GerHobbelt/openGA.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "CDT"]
-	path = CDT
-	url = git@github.com:GerHobbelt/CDT.git
+    path = CDT
+    url = git@github.com:GerHobbelt/CDT.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "delaunator-cpp"]
-	path = delaunator-cpp
-	url = git@github.com:GerHobbelt/delaunator-cpp.git
+    path = delaunator-cpp
+    url = git@github.com:GerHobbelt/delaunator-cpp.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "poly2tri"]
-	path = poly2tri
-	url = git@github.com:GerHobbelt/poly2tri.git
+    path = poly2tri
+    url = git@github.com:GerHobbelt/poly2tri.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "depth_clustering"]
-	path = depth_clustering
-	url = git@github.com:GerHobbelt/depth_clustering.git
+    path = depth_clustering
+    url = git@github.com:GerHobbelt/depth_clustering.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "adaptive_clustering"]
-	path = adaptive_clustering
-	url = git@github.com:GerHobbelt/adaptive_clustering.git
+    path = adaptive_clustering
+    url = git@github.com:GerHobbelt/adaptive_clustering.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "PointCloudSegmentation"]
-	path = PointCloudSegmentation
-	url = git@github.com:GerHobbelt/PointCloudSegmentation.git
+    path = PointCloudSegmentation
+    url = git@github.com:GerHobbelt/PointCloudSegmentation.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "dbscan_kdtree"]
-	path = dbscan_kdtree
-	url = git@github.com:GerHobbelt/dbscan_kdtree.git
+    path = dbscan_kdtree
+    url = git@github.com:GerHobbelt/dbscan_kdtree.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "TrianglePP"]
-	path = TrianglePP
-	url = git@github.com:GerHobbelt/TrianglePP.git
+    path = TrianglePP
+    url = git@github.com:GerHobbelt/TrianglePP.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "corosync"]
-	path = corosync
-	url = git@github.com:GerHobbelt/corosync.git
+    path = corosync
+    url = git@github.com:GerHobbelt/corosync.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "agglomerative-hierarchical-clustering"]
-	path = agglomerative-hierarchical-clustering
-	url = git@github.com:GerHobbelt/agglomerative-hierarchical-clustering.git
+    path = agglomerative-hierarchical-clustering
+    url = git@github.com:GerHobbelt/agglomerative-hierarchical-clustering.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "clustercat"]
-	path = clustercat
-	url = git@github.com:GerHobbelt/clustercat.git
+    path = clustercat
+    url = git@github.com:GerHobbelt/clustercat.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "mcl"]
-	path = mcl
-	url = git@github.com:GerHobbelt/mcl.git
+    path = mcl
+    url = git@github.com:GerHobbelt/mcl.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "cimfomfa"]
-	path = cimfomfa
-	url = git@github.com:GerHobbelt/cimfomfa.git
+    path = cimfomfa
+    url = git@github.com:GerHobbelt/cimfomfa.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "html5-parser"]
-	path = html5-parser
-	url = git@github.com:GerHobbelt/html5-parser.git
+    path = html5-parser
+    url = git@github.com:GerHobbelt/html5-parser.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "galib"]
-	path = galib
-	url = git@github.com:GerHobbelt/galib.git
+    path = galib
+    url = git@github.com:GerHobbelt/galib.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "mixbench"]
-	path = mixbench
-	url = git@github.com:GerHobbelt/mixbench.git
+    path = mixbench
+    url = git@github.com:GerHobbelt/mixbench.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "OpenCL-Wrapper"]
-	path = OpenCL-Wrapper
-	url = git@github.com:GerHobbelt/OpenCL-Wrapper.git
+    path = OpenCL-Wrapper
+    url = git@github.com:GerHobbelt/OpenCL-Wrapper.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "raylib"]
-	path = raylib
-	url = git@github.com:GerHobbelt/raylib.git
+    path = raylib
+    url = git@github.com:GerHobbelt/raylib.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "jbigkit"]
-	path = jbigkit
-	url = git@github.com:GerHobbelt/jbigkit.git
+    path = jbigkit
+    url = git@github.com:GerHobbelt/jbigkit.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "wuffs"]
-	path = wuffs
-	url = git@github.com:GerHobbelt/wuffs.git
+    path = wuffs
+    url = git@github.com:GerHobbelt/wuffs.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "crc32"]
-	path = crc32
-	url = git@github.com:GerHobbelt/crc32.git
+    path = crc32
+    url = git@github.com:GerHobbelt/crc32.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "zzuf"]
-	path = zzuf
-	url = git@github.com:GerHobbelt/zzuf.git
+    path = zzuf
+    url = git@github.com:GerHobbelt/zzuf.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "fpnge"]
-	path = fpnge
-	url = git@github.com:GerHobbelt/fpnge.git
+    path = fpnge
+    url = git@github.com:GerHobbelt/fpnge.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "thumbhash"]
-	path = thumbhash
-	url = git@github.com:GerHobbelt/thumbhash.git
+    path = thumbhash
+    url = git@github.com:GerHobbelt/thumbhash.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "blurhash"]
-	path = blurhash
-	url = git@github.com:GerHobbelt/blurhash.git
+    path = blurhash
+    url = git@github.com:GerHobbelt/blurhash.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "Image-Compression-Benchmark"]
-	path = Image-Compression-Benchmark
-	url = git@github.com:GerHobbelt/Image-Compression-Benchmark.git
+    path = Image-Compression-Benchmark
+    url = git@github.com:GerHobbelt/Image-Compression-Benchmark.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "NBLI"]
-	path = NBLI
-	url = git@github.com:GerHobbelt/NBLI.git
+    path = NBLI
+    url = git@github.com:GerHobbelt/NBLI.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "libsodium"]
-	path = libsodium
-	url = git@github.com:GerHobbelt/libsodium.git
+    path = libsodium
+    url = git@github.com:GerHobbelt/libsodium.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "lunasvg"]
-	path = lunasvg
-	url = git@github.com:GerHobbelt/lunasvg.git
+    path = lunasvg
+    url = git@github.com:GerHobbelt/lunasvg.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "thrill"]
-	path = thrill
-	url = git@github.com:GerHobbelt/thrill.git
+    path = thrill
+    url = git@github.com:GerHobbelt/thrill.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "stxxl"]
-	path = stxxl
-	url = git@github.com:GerHobbelt/stxxl.git
+    path = stxxl
+    url = git@github.com:GerHobbelt/stxxl.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "sundials"]
-	path = sundials
-	url = git@github.com:GerHobbelt/sundials.git
+    path = sundials
+    url = git@github.com:GerHobbelt/sundials.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "habla-el-babbla"]
-	path = habla-el-babbla
-	url = git@github.com:GerHobbelt/habla-el-babbla.git
+    path = habla-el-babbla
+    url = git@github.com:GerHobbelt/habla-el-babbla.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "UDDSketch"]
-	path = UDDSketch
-	url = git@github.com:GerHobbelt/UDDSketch.git
+    path = UDDSketch
+    url = git@github.com:GerHobbelt/UDDSketch.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "prometheus-cpp"]
-	path = prometheus-cpp
-	url = git@github.com:GerHobbelt/prometheus-cpp.git
+    path = prometheus-cpp
+    url = git@github.com:GerHobbelt/prometheus-cpp.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "libhashish"]
-	path = libhashish
-	url = git@github.com:GerHobbelt/libhashish.git
+    path = libhashish
+    url = git@github.com:GerHobbelt/libhashish.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "asp"]
-	path = asp
-	url = git@github.com:GerHobbelt/asp.git
+    path = asp
+    url = git@github.com:GerHobbelt/asp.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "physfs"]
-	path = physfs
-	url = git@github.com:GerHobbelt/physfs.git
+    path = physfs
+    url = git@github.com:GerHobbelt/physfs.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "my_basic"]
-	path = my_basic
-	url = git@github.com:GerHobbelt/my_basic.git
+    path = my_basic
+    url = git@github.com:GerHobbelt/my_basic.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "ChaiScript"]
-	path = ChaiScript
-	url = git@github.com:GerHobbelt/ChaiScript.git
+    path = ChaiScript
+    url = git@github.com:GerHobbelt/ChaiScript.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "daScript"]
-	path = daScript
-	url = git@github.com:GerHobbelt/daScript.git
+    path = daScript
+    url = git@github.com:GerHobbelt/daScript.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "atlast"]
-	path = atlast
-	url = git@github.com:GerHobbelt/atlast.git
+    path = atlast
+    url = git@github.com:GerHobbelt/atlast.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "pforth"]
-	path = pforth
-	url = git@github.com:GerHobbelt/pforth.git
+    path = pforth
+    url = git@github.com:GerHobbelt/pforth.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "gravity"]
-	path = gravity
-	url = git@github.com:GerHobbelt/gravity.git
+    path = gravity
+    url = git@github.com:GerHobbelt/gravity.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "wren"]
-	path = wren
-	url = git@github.com:GerHobbelt/wren.git
+    path = wren
+    url = git@github.com:GerHobbelt/wren.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "io"]
-	path = io
-	url = git@github.com:GerHobbelt/io.git
+    path = io
+    url = git@github.com:GerHobbelt/io.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "racket"]
-	path = racket
-	url = git@github.com:GerHobbelt/racket.git
+    path = racket
+    url = git@github.com:GerHobbelt/racket.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "pocketlang"]
-	path = pocketlang
-	url = git@github.com:GerHobbelt/pocketlang.git
+    path = pocketlang
+    url = git@github.com:GerHobbelt/pocketlang.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "micropython"]
-	path = micropython
-	url = git@github.com:GerHobbelt/micropython.git
+    path = micropython
+    url = git@github.com:GerHobbelt/micropython.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "PikaPython"]
-	path = PikaPython
-	url = git@github.com:GerHobbelt/PikaPython.git
+    path = PikaPython
+    url = git@github.com:GerHobbelt/PikaPython.git
     fetchRecurseSubmodules = on-demand
-    ignore = dirty
+
 
 [submodule "quirrel"]
-	path = quirrel
-	url = git@github.com:GerHobbelt/quirrel.git
+    path = quirrel
+    url = git@github.com:GerHobbelt/quirrel.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "Rebol3"]
-	path = Rebol3
-	url = git@github.com:GerHobbelt/Rebol3.git
+    path = Rebol3
+    url = git@github.com:GerHobbelt/Rebol3.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "squilu"]
-	path = squilu
-	url = git@github.com:GerHobbelt/squilu.git
+    path = squilu
+    url = git@github.com:GerHobbelt/squilu.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "squirrel"]
-	path = squirrel
-	url = git@github.com:GerHobbelt/squirrel.git
+    path = squirrel
+    url = git@github.com:GerHobbelt/squirrel.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "picol"]
-	path = picol
-	url = git@github.com:GerHobbelt/picol.git
+    path = picol
+    url = git@github.com:GerHobbelt/picol.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "ecl"]
-	path = ecl
-	url = git@github.com:GerHobbelt/ecl.git
+    path = ecl
+    url = git@github.com:GerHobbelt/ecl.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "mrubyc"]
-	path = mrubyc
-	url = git@github.com:GerHobbelt/mrubyc.git
+    path = mrubyc
+    url = git@github.com:GerHobbelt/mrubyc.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "mruby"]
-	path = mruby
-	url = git@github.com:GerHobbelt/mruby.git
+    path = mruby
+    url = git@github.com:GerHobbelt/mruby.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "barkeep"]
-	path = barkeep
-	url = git@github.com:GerHobbelt/barkeep.git
+    path = barkeep
+    url = git@github.com:GerHobbelt/barkeep.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "opendtrace"]
-	path = opendtrace
-	url = git@github.com:GerHobbelt/opendtrace.git
+    path = opendtrace
+    url = git@github.com:GerHobbelt/opendtrace.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "tscns"]
-	path = tscns
-	url = git@github.com:GerHobbelt/tscns.git
+    path = tscns
+    url = git@github.com:GerHobbelt/tscns.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "logger_benchmarks"]
-	path = logger_benchmarks
-	url = git@github.com:GerHobbelt/logger_benchmarks.git
+    path = logger_benchmarks
+    url = git@github.com:GerHobbelt/logger_benchmarks.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "the-yabbering-politician"]
-	path = the-yabbering-politician
-	url = git@github.com:GerHobbelt/the-yabbering-politician.git
+    path = the-yabbering-politician
+    url = git@github.com:GerHobbelt/the-yabbering-politician.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "cpptrace"]
-	path = cpptrace
-	url = git@github.com:GerHobbelt/cpptrace.git
+    path = cpptrace
+    url = git@github.com:GerHobbelt/cpptrace.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "dunce"]
-	path = dunce
-	url = git@github.com:GerHobbelt/dunce.git
+    path = dunce
+    url = git@github.com:GerHobbelt/dunce.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "win32-fileapi-demo"]
-	path = win32-fileapi-demo
-	url = git@github.com:GerHobbelt/win32-fileapi-demo.git
+    path = win32-fileapi-demo
+    url = git@github.com:GerHobbelt/win32-fileapi-demo.git
     fetchRecurseSubmodules = on-demand
 
 
@@ -9185,392 +9185,398 @@
 
 
 [submodule "imageio-freeimage"]
-	path = imageio-freeimage
-	url = git@github.com:GerHobbelt/imageio-freeimage.git
+    path = imageio-freeimage
+    url = git@github.com:GerHobbelt/imageio-freeimage.git
     fetchRecurseSubmodules = on-demand
 
-	
+
 [submodule "Lyra"]
-	path = Lyra
-	url = git@github.com:GerHobbelt/Lyra.git
+    path = Lyra
+    url = git@github.com:GerHobbelt/Lyra.git
     fetchRecurseSubmodules = on-demand
 
-	
+
 [submodule "small_vectors"]
-	path = small_vectors
-	url = git@github.com:GerHobbelt/small_vectors.git
+    path = small_vectors
+    url = git@github.com:GerHobbelt/small_vectors.git
     fetchRecurseSubmodules = on-demand
 
-	
+
 [submodule "Celero"]
-	path = Celero
-	url = git@github.com:GerHobbelt/Celero.git
+    path = Celero
+    url = git@github.com:GerHobbelt/Celero.git
     fetchRecurseSubmodules = on-demand
 
-	
+
 [submodule "openimageio-mupdf"]
-	path = openimageio-mupdf
-	url = git@github.com:GerHobbelt/openimageio-mupdf.git
+    path = openimageio-mupdf
+    url = git@github.com:GerHobbelt/openimageio-mupdf.git
     fetchRecurseSubmodules = on-demand
 
-	
+
 [submodule "gtest-tap-listener"]
-	path = gtest-tap-listener
-	url = git@github.com:GerHobbelt/gtest-tap-listener.git
+    path = gtest-tap-listener
+    url = git@github.com:GerHobbelt/gtest-tap-listener.git
     fetchRecurseSubmodules = on-demand
 
-	
+
 [submodule "lwlog"]
-	path = lwlog
-	url = git@github.com:GerHobbelt/lwlog.git
+    path = lwlog
+    url = git@github.com:GerHobbelt/lwlog.git
     fetchRecurseSubmodules = on-demand
 
-	
+
 [submodule "Jungle"]
-	path = Jungle
-	url = git@github.com:GerHobbelt/Jungle.git
+    path = Jungle
+    url = git@github.com:GerHobbelt/Jungle.git
     fetchRecurseSubmodules = on-demand
 
-	
+
 [submodule "data_tamer"]
-	path = data_tamer
-	url = git@github.com:GerHobbelt/data_tamer.git
+    path = data_tamer
+    url = git@github.com:GerHobbelt/data_tamer.git
     fetchRecurseSubmodules = on-demand
 
-	
+
 [submodule "forestdb"]
-	path = forestdb
-	url = git@github.com:GerHobbelt/forestdb.git
+    path = forestdb
+    url = git@github.com:GerHobbelt/forestdb.git
     fetchRecurseSubmodules = on-demand
 
-	
+
 [submodule "binary_log"]
-	path = binary_log
-	url = git@github.com:GerHobbelt/binary_log.git
+    path = binary_log
+    url = git@github.com:GerHobbelt/binary_log.git
     fetchRecurseSubmodules = on-demand
 
-	
+
 [submodule "Arduino-KalmanFilter"]
-	path = Arduino-KalmanFilter
-	url = git@github.com:GerHobbelt/Arduino-KalmanFilter.git
+    path = Arduino-KalmanFilter
+    url = git@github.com:GerHobbelt/Arduino-KalmanFilter.git
     fetchRecurseSubmodules = on-demand
 
-	
+
 [submodule "poisson-disc-distribution-bridson"]
-	path = poisson-disc-distribution-bridson
-	url = git@github.com:GerHobbelt/poisson-disc-distribution-bridson.git
+    path = poisson-disc-distribution-bridson
+    url = git@github.com:GerHobbelt/poisson-disc-distribution-bridson.git
     fetchRecurseSubmodules = on-demand
 
-	
+
 [submodule "OpenRAND"]
-	path = OpenRAND
-	url = git@github.com:GerHobbelt/OpenRAND.git
+    path = OpenRAND
+    url = git@github.com:GerHobbelt/OpenRAND.git
     fetchRecurseSubmodules = on-demand
 
-	
+
 [submodule "fast_io"]
-	path = fast_io
-	url = git@github.com:GerHobbelt/fast_io.git
+    path = fast_io
+    url = git@github.com:GerHobbelt/fast_io.git
     fetchRecurseSubmodules = on-demand
 
-	
+
 [submodule "msvc_sln_cleaner"]
-	path = msvc_sln_cleaner
-	url = git@github.com:GerHobbelt/msvc_sln_cleaner.git
+    path = msvc_sln_cleaner
+    url = git@github.com:GerHobbelt/msvc_sln_cleaner.git
     fetchRecurseSubmodules = on-demand
 
-	
+
 [submodule "unicode-inflection"]
-	path = unicode-inflection
-	url = git@github.com:GerHobbelt/inflection.git
+    path = unicode-inflection
+    url = git@github.com:GerHobbelt/inflection.git
     fetchRecurseSubmodules = on-demand
 
-	
+
 [submodule "pccts"]
-	path = pccts
-	url = git@github.com:GerHobbelt/pccts.git
+    path = pccts
+    url = git@github.com:GerHobbelt/pccts.git
     fetchRecurseSubmodules = on-demand
 
-	
+
 [submodule "DataFrame"]
-	path = DataFrame
-	url = git@github.com:GerHobbelt/DataFrame.git
+    path = DataFrame
+    url = git@github.com:GerHobbelt/DataFrame.git
     fetchRecurseSubmodules = on-demand
 
-	
+
 [submodule "buffered_tee"]
-	path = buffered_tee
-	url = git@github.com:GerHobbelt/buffered_tee.git
+    path = buffered_tee
+    url = git@github.com:GerHobbelt/buffered_tee.git
     fetchRecurseSubmodules = on-demand
 
-	
+
 [submodule "convert_floating_point_to_fraction"]
-	path = convert_floating_point_to_fraction
-	url = git@github.com:GerHobbelt/convert_floating_point_to_fraction.git
+    path = convert_floating_point_to_fraction
+    url = git@github.com:GerHobbelt/convert_floating_point_to_fraction.git
     fetchRecurseSubmodules = on-demand
 
-	
+
 [submodule "colormap-tools"]
-	path = colormap-tools
-	url = git@github.com:GerHobbelt/colormap-tools.git
+    path = colormap-tools
+    url = git@github.com:GerHobbelt/colormap-tools.git
     fetchRecurseSubmodules = on-demand
 
-	
+
 [submodule "pystring"]
-	path = pystring
-	url = git@github.com:GerHobbelt/pystring.git
+    path = pystring
+    url = git@github.com:GerHobbelt/pystring.git
     fetchRecurseSubmodules = on-demand
 
-	
+
 [submodule "test262"]
-	path = test262
-	url = git@github.com:GerHobbelt/test262.git
+    path = test262
+    url = git@github.com:GerHobbelt/test262.git
     fetchRecurseSubmodules = on-demand
 
-	
+
 [submodule "ut"]
-	path = ut
-	url = git@github.com:GerHobbelt/ut.git
+    path = ut
+    url = git@github.com:GerHobbelt/ut.git
     fetchRecurseSubmodules = on-demand
 
-	
+
 [submodule "perfetto"]
-	path = perfetto
-	url = git@github.com:GerHobbelt/perfetto.git
+    path = perfetto
+    url = git@github.com:GerHobbelt/perfetto.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "Win32.mmap"]
-	path = Win32.mmap
-	url = git@github.com:GerHobbelt/Win32.mmap
+    path = Win32.mmap
+    url = git@github.com:GerHobbelt/Win32.mmap
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "inih"]
-	path = inih
-	url = git@github.com:GerHobbelt/inih
+    path = inih
+    url = git@github.com:GerHobbelt/inih
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "magika"]
-	path = magika
-	url = git@github.com:GerHobbelt/magika.git
+    path = magika
+    url = git@github.com:GerHobbelt/magika.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "marisa-trie"]
-	path = marisa-trie
-	url = git@github.com:GerHobbelt/marisa-trie.git
+    path = marisa-trie
+    url = git@github.com:GerHobbelt/marisa-trie.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "EASTL"]
-	path = EASTL
-	url = git@github.com:GerHobbelt/EASTL.git
+    path = EASTL
+    url = git@github.com:GerHobbelt/EASTL.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "bestline"]
-	path = bestline
-	url = git@github.com:GerHobbelt/bestline.git
+    path = bestline
+    url = git@github.com:GerHobbelt/bestline.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "tgfx"]
-	path = tgfx
-	url = git@github.com:GerHobbelt/tgfx.git
+    path = tgfx
+    url = git@github.com:GerHobbelt/tgfx.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "fork_union"]
-	path = fork_union
-	url = git@github.com:GerHobbelt/fork_union.git
+    path = fork_union
+    url = git@github.com:GerHobbelt/fork_union.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "cista"]
-	path = cista
-	url = git@github.com:GerHobbelt/cista.git
+    path = cista
+    url = git@github.com:GerHobbelt/cista.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "gperftools"]
-	path = gperftools
-	url = git@github.com:GerHobbelt/gperftools.git
+    path = gperftools
+    url = git@github.com:GerHobbelt/gperftools.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "unicode-lstm_word_segmentation"]
-	path = unicode-lstm_word_segmentation
-	url = git@github.com:unicode-org/lstm_word_segmentation.git
+    path = unicode-lstm_word_segmentation
+    url = git@github.com:unicode-org/lstm_word_segmentation.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "unicode-UK-source-ideographs"]
-	path = unicode-UK-source-ideographs
-	url = git@github.com:unicode-org/uk-source-ideographs.git
+    path = unicode-UK-source-ideographs
+    url = git@github.com:unicode-org/uk-source-ideographs.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "unicode-cjk-symbols"]
-	path = unicode-cjk-symbols
-	url = git@github.com:unicode-org/cjk-symbols.git
+    path = unicode-cjk-symbols
+    url = git@github.com:unicode-org/cjk-symbols.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "unicode-icu-docs"]
-	path = unicode-icu-docs
-	url = git@github.com:GerHobbelt/icu-docs.git
+    path = unicode-icu-docs
+    url = git@github.com:GerHobbelt/icu-docs.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "unicode-last-resort-font"]
-	path = unicode-last-resort-font
-	url = git@github.com:unicode-org/last-resort-font.git
+    path = unicode-last-resort-font
+    url = git@github.com:unicode-org/last-resort-font.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "unicode-unihan-database"]
-	path = unicode-unihan-database
-	url = git@github.com:unicode-org/unihan-database.git
+    path = unicode-unihan-database
+    url = git@github.com:unicode-org/unihan-database.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "unicode-conformance"]
-	path = unicode-conformance
-	url = git@github.com:GerHobbelt/conformance.git
+    path = unicode-conformance
+    url = git@github.com:GerHobbelt/conformance.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "unicode-test-corpora"]
-	path = unicode-test-corpora
-	url = git@github.com:unicode-org/test-corpora.git
+    path = unicode-test-corpora
+    url = git@github.com:unicode-org/test-corpora.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "unicode-ml-confusables-generator"]
-	path = unicode-ml-confusables-generator
-	url = git@github.com:unicode-org/ml-confusables-generator.git
+    path = unicode-ml-confusables-generator
+    url = git@github.com:unicode-org/ml-confusables-generator.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "unicode-text-rendering-tests"]
-	path = unicode-text-rendering-tests
-	url = git@github.com:GerHobbelt/text-rendering-tests.git
+    path = unicode-text-rendering-tests
+    url = git@github.com:GerHobbelt/text-rendering-tests.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "unicode-cldr-staging"]
-	path = unicode-cldr-staging
-	url = git@github.com:unicode-org/cldr-staging.git
+    path = unicode-cldr-staging
+    url = git@github.com:unicode-org/cldr-staging.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "unicodetools"]
-	path = unicodetools
-	url = git@github.com:GerHobbelt/unicodetools.git
+    path = unicodetools
+    url = git@github.com:GerHobbelt/unicodetools.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "unicode-icu-perf"]
-	path = unicode-icu-perf
-	url = git@github.com:unicode-org/icu-perf.git
+    path = unicode-icu-perf
+    url = git@github.com:unicode-org/icu-perf.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "atomic_queue"]
-	path = atomic_queue
-	url = git@github.com:GerHobbelt/atomic_queue.git
+    path = atomic_queue
+    url = git@github.com:GerHobbelt/atomic_queue.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "unicode-unilex"]
-	path = unicode-unilex
-	url = git@github.com:GerHobbelt/unilex.git
+    path = unicode-unilex
+    url = git@github.com:GerHobbelt/unilex.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "Detours"]
-	path = Detours
-	url = git@github.com:GerHobbelt/Detours.git
+    path = Detours
+    url = git@github.com:GerHobbelt/Detours.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "plutovg"]
-	path = plutovg
-	url = git@github.com:GerHobbelt/plutovg.git
+    path = plutovg
+    url = git@github.com:GerHobbelt/plutovg.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "genann"]
-	path = genann
-	url = git@github.com:GerHobbelt/genann.git
+    path = genann
+    url = git@github.com:GerHobbelt/genann.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "PhotoshopAPI"]
-	path = PhotoshopAPI
-	url = git@github.com:GerHobbelt/PhotoshopAPI.git
+    path = PhotoshopAPI
+    url = git@github.com:GerHobbelt/PhotoshopAPI.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "libco"]
-	path = libco
-	url = git@github.com:GerHobbelt/libco.git
+    path = libco
+    url = git@github.com:GerHobbelt/libco.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "libgo"]
-	path = libgo
-	url = git@github.com:GerHobbelt/libgo.git
+    path = libgo
+    url = git@github.com:GerHobbelt/libgo.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "cppserdes"]
-	path = cppserdes
-	url = git@github.com:GerHobbelt/cppserdes.git
+    path = cppserdes
+    url = git@github.com:GerHobbelt/cppserdes.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "hdf5"]
-	path = hdf5
-	url = git@github.com:GerHobbelt/hdf5.git
+    path = hdf5
+    url = git@github.com:GerHobbelt/hdf5.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "hdf5-examples"]
-	path = hdf5-examples
-	url = git@github.com:GerHobbelt/hdf5-examples.git
+    path = hdf5-examples
+    url = git@github.com:GerHobbelt/hdf5-examples.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "hdf5_plugins"]
-	path = hdf5_plugins
-	url = git@github.com:GerHobbelt/hdf5_plugins.git
+    path = hdf5_plugins
+    url = git@github.com:GerHobbelt/hdf5_plugins.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "tar2h5"]
-	path = tar2h5
-	url = git@github.com:GerHobbelt/tar2h5.git
+    path = tar2h5
+    url = git@github.com:GerHobbelt/tar2h5.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "libscientific"]
-	path = libscientific
-	url = git@github.com:GerHobbelt/libscientific.git
+    path = libscientific
+    url = git@github.com:GerHobbelt/libscientific.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "cleanCppProject"]
-	path = cleanCppProject
-	url = git@github.com:GerHobbelt/cleanCppProject.git
+    path = cleanCppProject
+    url = git@github.com:GerHobbelt/cleanCppProject.git
     fetchRecurseSubmodules = on-demand
 
 
 [submodule "aocl-blas"]
-	path = aocl-blas
-	url = git@github.com:GerHobbelt/blis.git
+    path = aocl-blas
+    url = git@github.com:GerHobbelt/blis.git
+    fetchRecurseSubmodules = on-demand
+
+
+[submodule "Cougar"]
+    path = Cougar
+    url = git@github.com:GerHobbelt/Cougar.git
     fetchRecurseSubmodules = on-demand
 
 

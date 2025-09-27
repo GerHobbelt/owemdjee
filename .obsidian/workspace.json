@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.source.md",
+                "file": "Other subjects of interest.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "README.source"
+              "title": "Other subjects of interest"
             }
           }
         ]
@@ -184,6 +184,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -194,15 +195,33 @@
       "publish:Publish changes...": false
     }
   },
-  "active": "ea12bde47388f29c",
+  "active": "41f4eeea028e5f7b",
   "lastOpenFiles": [
+    "yasl/test/inputs/builtin-types/str/searchall.yasl.out",
+    "yasl/test/inputs/builtin-types/str/searchall.yasl",
+    "yasl/test/inputs/builtin-types/str/replace_multi.yasl.out",
+    "yasl/test/inputs/builtin-types/str/replace_multi.yasl",
+    "yasl/test/inputs/builtin-types/list/searchall.yasl.out",
+    "yasl/test/inputs/builtin-types/list/searchall.yasl",
+    "yasl/test/inputs/builtin-types/list/remove_index.yasl.out",
+    "yasl/test/inputs/builtin-types/list/remove_index.yasl",
+    "yasl/tests.sh.BASE.sh",
+    "yasl/tests.sh.REMOTE.sh",
+    "yasl/tests.sh.LOCAL.sh",
+    "word2vec-GloVe/README.md.BASE.md",
+    "word2vec-GloVe/README.md.REMOTE.md",
+    "word2vec-GloVe/README.md.LOCAL.md",
+    "word2vec-GloVe/Training_README.md",
+    "Cougar/docs/Cougar.png",
+    "Cougar/README.md",
+    "README.source.md",
+    "README.md",
+    "0000-index/0103-libraries-in-this-collection.md",
     "libdiagnostics/docs/libdiagnostics/libdiagnostics Design Specification.md",
     "libparameters/docs/libparameters/libparameters Design Specification.md",
     "libparameters/docs/libparameters/Design Specification.md",
     "libparameters/docs/libparameters/docs/libdiagnostics/Design Specification.md",
     "libparameters/docs/libparameters/docs/libdiagnostics/Design Notes.md",
-    "libparameters/docs/libparameters/docs/libdiagnostics",
-    "libparameters/docs/libparameters/docs",
     "libdiagnostics/docs/libdiagnostics/Design Specification.md",
     "libdiagnostics/docs/libdiagnostics/Untitled.md"
   ]
