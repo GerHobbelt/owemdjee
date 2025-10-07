@@ -7,7 +7,7 @@ GPP=/z/tools/git_pull_push.sh
 SCRIPT=$( basename "$0" )
 
 if [ "$1" != "TRACK-AND-MERGE" ] ; then
-	${GPP} -2x "$( realpath "$0" )" TRACK-AND-MERGE
+	${GPP} -1x "$( realpath "$0" )" TRACK-AND-MERGE
 else
 	echo "PWD = $( pwd )"
 	if [ -f ${SCRIPT} ] ; then
