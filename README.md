@@ -1,13 +1,6 @@
 # owemdjee
 
 
-
-
-
-
-
-
-
 <!-- 📁🌐 force Notepad++ to recognize UTF8: 📁🌐 -->
 
 

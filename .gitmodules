@@ -9580,3 +9580,15 @@
     fetchRecurseSubmodules = on-demand
 
 
+[submodule "libunisani"]
+	path = libunisani
+	url = git@github.com:GerHobbelt/libunisani.git
+    fetchRecurseSubmodules = on-demand
+
+
+[submodule "xmlwrapp"]
+	path = xmlwrapp
+	url = git@github.com:GerHobbelt/xmlwrapp.git
+    fetchRecurseSubmodules = on-demand
+
+

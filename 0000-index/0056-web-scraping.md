@@ -46,6 +46,7 @@
   - domain highlighting parts of the domain in a user interface
   - sorting domain lists by site
 
+- **libunisani** [📁](./libunisani) [🌐](https://github.com/GerHobbelt/libunisani) -- a sanitizer, sluggifier, normalizer, detoxer for Unicode and ASCII text strings. A customizable unified approach to filtering raw input for text, file names and paths, URL and file 'slugs' and various other outputs that require potential sanitization of your input texts / strings.
 - **libxml2** [📁](./libxml2) [🌐](https://github.com/GerHobbelt/libxml2) -- [libxml](http://xmlsoft.org/): XML read/write
 - **LLhttp-parser** [📁](./LLhttp-parser) [🌐](https://github.com/GerHobbelt/llhttp) -- a port and replacement of [http_parser](https://github.com/nodejs/http-parser) to TypeScript. [llparse](https://github.com/nodejs/llparse) is used to generate the output C source file, which could be compiled and linked with the embedder's program (like Node.js).
 - **picohttpparser** [📁](./picohttpparser) [🌐](https://github.com/GerHobbelt/picohttpparser) -- PicoHTTPParser is a tiny, primitive, fast HTTP request/response parser. Unlike most parsers, it is stateless and does not allocate memory by itself. All it does is accept pointer to buffer and the output structure, and setups the pointers in the latter to point at the necessary portions of the buffer.
@@ -59,6 +60,7 @@
 - **url-parser** [📁](./url-parser) [🌐](https://github.com/GerHobbelt/url.h) -- parse URLs much like Node's [url](http://nodejs.org/api/url.html) module.
 - **wget2** [📁](./wget2) [🌐](https://github.com/GerHobbelt/wget2) -- GNU Wget2 is the successor of GNU Wget, a file and recursive website downloader. Designed and written from scratch it wraps around libwget, that provides the basic functions needed by a web client. Wget2 works multi-threaded and uses many features to allow fast operation. In many cases Wget2 downloads much faster than Wget1.x due to HTTP2, HTTP compression, parallel connections and use of If-Modified-Since HTTP header.
 - **xml-pugixml** [📁](./xml-pugixml) [🌐](https://github.com/GerHobbelt/pugixml) -- light-weight, simple and fast XML parser for C++ with XPath support.
+- **xmlwrapp** [📁](./xmlwrapp) [🌐](https://github.com/GerHobbelt/xmlwrapp) -- a modern style C++ library for working with XML data, built atop the venerable libxml2 and libxslt C libraries.
 
 
 
