@@ -9592,3 +9592,21 @@
     fetchRecurseSubmodules = on-demand
 
 
+[submodule "pikchr-cmd"]
+	path = pikchr-cmd
+	url = git@github.com:GerHobbelt/pikchr-cmd.git
+    fetchRecurseSubmodules = on-demand
+
+
+[submodule "MSVC-sln-vcxproj-synchronization-and-update-tooling"]
+	path = MSVC-sln-vcxproj-synchronization-and-update-tooling
+	url = git@github.com:GerHobbelt/MSVC-sln-vcxproj-synchronization-and-update-tooling.git
+    fetchRecurseSubmodules = on-demand
+
+
+[submodule "dragonbox"]
+	path = dragonbox
+	url = git@github.com:GerHobbelt/dragonbox.git
+    fetchRecurseSubmodules = on-demand
+
+
