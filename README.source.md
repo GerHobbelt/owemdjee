@@ -8375,3 +8375,25 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 
 
 
+
+
+[submodule "BitSerializer"]
+	path = BitSerializer
+	url = git@github.com:GerHobbelt/BitSerializer.git
+    fetchRecurseSubmodules = on-demand
+
+
+
+
+[submodule "lemon-grove"]
+	path = lemon-grove
+	url = git@github.com:GerHobbelt/lemon-grove.git
+    fetchRecurseSubmodules = on-demand
+
+
+[submodule "ckdl"]
+	path = ckdl
+	url = git@github.com:GerHobbelt/ckdl.git
+    fetchRecurseSubmodules = on-demand
+
+

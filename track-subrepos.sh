@@ -13,9 +13,9 @@ else
 	if [ -f ${SCRIPT} ] ; then
 		echo "Skipping base directory..."
 	else
-		${GPP} -p
+		${GPP} -f
 		git reset --hard
-		/z/tools/merge_tracked_git_original_4_branch.sh -m 5
+		/z/tools/merge_tracked_git_original_4_branch.sh -m 3
 		git reset --hard
 	fi
 fi
