@@ -1,5 +1,12 @@
 # owemdjee
 
+
+
+
+
+
+
+
 <!-- 📁🌐 force Notepad++ to recognize UTF8: 📁🌐 -->
 
 
@@ -8372,28 +8379,8 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 
 # TBD: Libraries which still need to be moved into the overview / categories above...
 
-
-
-
-
-
-[submodule "BitSerializer"]
-	path = BitSerializer
-	url = git@github.com:GerHobbelt/BitSerializer.git
-    fetchRecurseSubmodules = on-demand
-
-
-
-
-[submodule "lemon-grove"]
-	path = lemon-grove
-	url = git@github.com:GerHobbelt/lemon-grove.git
-    fetchRecurseSubmodules = on-demand
-
-
-[submodule "ckdl"]
-	path = ckdl
-	url = git@github.com:GerHobbelt/ckdl.git
-    fetchRecurseSubmodules = on-demand
+- **BitSerializer** [📁](./BitSerializer) [🌐](https://github.com/GerHobbelt/BitSerializer)
+- **ckdl** [📁](./ckdl) [🌐](https://github.com/GerHobbelt/ckdl)
+- **lemon-grove** [📁](./lemon-grove) [🌐](https://github.com/GerHobbelt/lemon-grove)
 
 

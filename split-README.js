@@ -5,7 +5,7 @@
 const path = require("path");
 const fs = require("fs");
 
-
+const debug = false;
 
 
 
@@ -24,7 +24,7 @@ const toc_re = /<!-- \*toc([^*]*)\* -->/g;
 
 let arr = txt.split(split_re);
 
-console.log({arr, count: arr.length});
+if (debug) console.log({arr, count: arr.length});
 
 const heading_re = /^(#+)\s+(.*)$/m;
 
@@ -45,7 +45,7 @@ arr = arr.map(function (chunk) {
 	// clean up the heading and turn it into a github-style in-page bookmark...
 	let bookmark = `#` + heading.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/(?:^-)|(?:-$)/g, '');
 
-	console.log({heading, depth, short_heading, filename, bookmark});
+	if (debug) console.log({heading, depth, short_heading, filename, bookmark});
 	
 	if (unique_dict[filename]) {
 		throw `\nHeading is ambiguous:\n\n    ${m[0]}\n\n`;
@@ -73,7 +73,7 @@ for (let i = 1; i < arr.length; i++) {
 }
 
 //console.log({arr: arr.filter(function (spec) { return spec.has_toc; }), count: arr.length});
-console.log({arr, count: arr.length});
+if (debug) console.log({arr, count: arr.length});
 
 
 
@@ -85,7 +85,7 @@ for (let i = 0; i < arr.length; i++) {
 	
 	let fpath = (i == 0 ? `./${ spec.filename }.md` : `./0000-index/${ spec.filename }.md`);
 	
-	console.log({fpath, i});
+	if (debug) console.log({fpath, i});
 	
 	let txt = get_text_and_generate_TOCs_if_any(spec, arr, i);
 	
@@ -110,7 +110,7 @@ function get_TOC_spans(src) {
 		let idx = toc_re.lastIndex; // + re_match[0].length;
 		let s = src.substring(idx);
 		let m = span_re.exec(s);
-		console.log({src, re_match, toc_re, startIndex: toc_re.lastIndex, idx, s, m});
+		if (debug) console.log({src, re_match, toc_re, startIndex: toc_re.lastIndex, idx, s, m});
 		if (m) {
 			rv.push({
 				idx,
@@ -131,7 +131,7 @@ function get_TOC_spans(src) {
 		re_match = toc_re.exec(src);
 	}
 	
-	console.log({rv, len: rv.length});
+	if (debug) console.log({rv, len: rv.length});
 	return rv.length > 0 ? rv : null;
 }
 
@@ -141,13 +141,13 @@ function get_text_and_generate_TOCs_if_any(spec, arr, idx) {
 	if (!spec.toc_spans)
 		return append_navigation(txt, arr, idx);
 	
-	console.log({spec, idx, toc_spans: spec.toc_spans});
+	if (debug) console.log({spec, idx, toc_spans: spec.toc_spans});
 	
 	let base_depth = spec.depth;
 	for (let i = idx + 1; i < arr.length; i++) {
 		let spec = arr[i];
 		
-		console.log({spec, i});
+		if (debug) console.log({spec, i});
 		
 		if (spec.depth <= base_depth)
 			break;
