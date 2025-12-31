@@ -9628,3 +9628,9 @@
     fetchRecurseSubmodules = on-demand
 
 
+[submodule "libspng"]
+	path = libspng
+	url = git@github.com:GerHobbelt/libspng.git
+    fetchRecurseSubmodules = on-demand
+
+
