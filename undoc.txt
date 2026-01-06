@@ -1,4 +1,1 @@
-DIR: **./buffered_tee** -- - **buffered_tee** [📁](./buffered_tee) [🌐](https://github.com/GerHobbelt/buffered_tee)
-DIR: **./BitSerializer** -- - **BitSerializer** [📁](./BitSerializer) [🌐](https://github.com/GerHobbelt/BitSerializer)
-DIR: **./ckdl** -- - **ckdl** [📁](./ckdl) [🌐](https://github.com/GerHobbelt/ckdl)
-DIR: **./lemon-grove** -- - **lemon-grove** [📁](./lemon-grove) [🌐](https://github.com/GerHobbelt/lemon-grove)
+

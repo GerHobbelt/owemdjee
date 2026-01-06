@@ -12,6 +12,16 @@
 
 Data Science & Image Processing amalgam library in C/C++.
 
+>
+> # TL;DR :: Mgt. Summary
+>
+> This repository aims to simplify the management of libraries by avoiding the complexities of `git submodules` while providing a single reference point 
+> for data processing tools. It addresses concerns around the stability of dependencies during active development and aims to streamline build and test processes. 
+> Although this approach creates a single point of failure, it allows for better tracking and management of source-level code, reducing debugging time. 
+> Ultimately, the repository is designed to facilitate easier handling of libraries while ensuring they are all at the correct commit level, promoting code reliability.
+>
+
+
 This place is a gathering spot & integration workplace for the C & C++ libraries we choose to use.  Think "*Façade Pattern*" and you're getting warm. 😉
 The heavy data lifting will be done in the referenced libraries, while this lib will provide some glue and common ground for them to work in/with.
 

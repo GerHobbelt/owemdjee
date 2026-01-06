@@ -9634,3 +9634,15 @@
     fetchRecurseSubmodules = on-demand
 
 
+[submodule "charls"]
+	path = charls
+	url = git@github.com:GerHobbelt/charls.git
+    fetchRecurseSubmodules = on-demand
+
+
+[submodule "PlotGenCpp"]
+	path = PlotGenCpp
+	url = git@github.com:GerHobbelt/PlotGenCpp.git
+    fetchRecurseSubmodules = on-demand
+
+

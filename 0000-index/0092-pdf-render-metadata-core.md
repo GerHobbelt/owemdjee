@@ -10,6 +10,7 @@
 
 ## PDF render & metadata core (*mupdf*)
 
+- **charls** [📁](./charls) [🌐](https://github.com/GerHobbelt/charls) -- CharLS is a C++ implementation of the JPEG-LS standard for lossless and near-lossless image compression and decompression. JPEG-LS is a low-complexity image compression standard that matches JPEG 2000 compression ratios.
 - **extract** [📁](../../thirdparty/extract) [🌐](https://github.com/GerHobbelt/thirdparty_extract) -- clone of git://git.ghostscript.com/extract.git
 - **farver-OKlab** [📁](./farver-OKlab) [🌐](https://github.com/GerHobbelt/farver) -- provides very fast, vectorised functions for conversion of colours between different colour spaces, colour comparisons (distance between colours), encoding/decoding, and channel manipulation in colour strings.
 - **freeglut** [📁](../../thirdparty/freeglut) [🌐](https://github.com/GerHobbelt/thirdparty-freeglut) -- Freeglut, the Free OpenGL Utility Toolkit, is meant to be a free alternative to Mark Kilgard's GLUT library. In short, freeglut can be used by OpenGL programs to perform those tasks which would normally require platform-specific code. Tasks like creating a window, creating an OpenGL context and binding it to the window, and processing input events. Freeglut provides a concise and elegant API to handle those tasks, in a platform-independent manner, keeping the application simple and portable.
@@ -36,6 +37,7 @@
 
 - **libjpeg** [📁](../../thirdparty/libjpeg) [🌐](https://github.com/GerHobbelt/thirdparty-libjpeg) -- the Independent JPEG Group's JPEG software
 - **libpng** [📁](../../thirdparty/libpng) [🌐](https://github.com/GerHobbelt/libpng) -- LIBPNG: Portable Network Graphics support, official libpng repository.
+- **libspng** [📁](./libspng) [🌐](https://github.com/GerHobbelt/libspng) -- (**s**imple **png**) is a C library for reading and writing Portable Network Graphics (PNG) format files with a focus on security and ease of use.
 - **libtiff** [📁](../../thirdparty/libtiff) [🌐](https://github.com/GerHobbelt/libtiff) -- TIFF Software Distribution
 - **mozjpeg** [📁](./mozjpeg) [🌐](https://github.com/GerHobbelt/mozjpeg) -- the Mozilla JPEG Encoder Project improves JPEG compression efficiency achieving higher visual quality and smaller file sizes at the same time. It is compatible with the JPEG standard, and the vast majority of the world's deployed JPEG decoders. MozJPEG is a patch for [libjpeg-turbo](https://github.com/libjpeg-turbo/libjpeg-turbo).
 - **OpenColorIO** [📁](./OpenColorIO) [🌐](https://github.com/GerHobbelt/OpenColorIO) -- OpenColorIO (OCIO) is a complete color management solution geared towards motion picture production with an emphasis on visual effects and computer animation. OCIO provides a straightforward and consistent user experience across all supporting applications while allowing for sophisticated back-end configuration options suitable for high-end production usage. OCIO is compatible with the Academy Color Encoding Specification (ACES) and is LUT-format agnostic, supporting many popular formats.
