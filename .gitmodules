@@ -217,8 +217,8 @@
 [submodule "googletest"]
     path = googletest
     url = git@github.com:GerHobbelt/googletest.git
-    fetchRecurseSubmodules = on-demand
-    ignore = dirty
+    xfetchRecurseSubmodules = on-demand
+    xignore = dirty
 
 [submodule "jpeg-xl"]
     path = jpeg-xl
@@ -661,8 +661,8 @@
 [submodule "gflags"]
     path = gflags
     url = git@github.com:GerHobbelt/gflags.git
-    fetchRecurseSubmodules = on-demand
-    ignore = dirty
+    xfetchRecurseSubmodules = on-demand
+    xignore = dirty
 
 [submodule "libidn2"]
     path = libidn2
@@ -4549,8 +4549,8 @@
 [submodule "libdiagnostics"]
     path = libdiagnostics
     url = git@github.com:GerHobbelt/libdiagnostics.git
-    fetchRecurseSubmodules = on-demand
-    ignore = dirty
+    xfetchRecurseSubmodules = on-demand
+    xignore = dirty
 
 [submodule "LLhttp-parser"]
     path = LLhttp-parser
@@ -5539,8 +5539,8 @@
 [submodule "libparameters"]
     path = libparameters
     url = git@github.com:GerHobbelt/libparameters.git
-    fetchRecurseSubmodules = on-demand
-    ignore = dirty
+    xfetchRecurseSubmodules = on-demand
+    xignore = dirty
 
 [submodule "opentelemetry-cpp-contrib"]
     path = opentelemetry-cpp-contrib
