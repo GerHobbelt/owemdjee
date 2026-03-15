@@ -13,6 +13,7 @@
 ### CLI: commandline parsing & perusing
 
 - **argparse** [📁](./argparse) [🌐](https://github.com/GerHobbelt/argparse) -- simply include argparse.hpp and start parsing command-line arguments.
+- **args** [📁](./args) [🌐](https://github.com/GerHobbelt/args) -- a simple, small, flexible, single-header C++11 argument parsing library, designed to appear somewhat similar to Python's argparse, but in C++, with static type checking, and hopefully a lot faster (also allowing fully nestable group logic, where Python's argparse does not).
 - **cli11** [📁](./cli11) [🌐](https://github.com/GerHobbelt/CLI11) -- command line options parser
 - **clipp** [📁](./clipp) [🌐](https://github.com/GerHobbelt/clipp) -- commandline parser
   

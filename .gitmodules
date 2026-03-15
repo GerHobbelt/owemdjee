@@ -9646,3 +9646,171 @@
     fetchRecurseSubmodules = on-demand
     ignore = dirty
 
+[submodule "plf_hive"]
+	path = plf_hive
+	url = git@github.com:GerHobbelt/plf_hive.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "proxy"]
+	path = proxy
+	url = git@github.com:GerHobbelt/proxy.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "fastcgipp"]
+	path = fastcgipp
+	url = git@github.com:GerHobbelt/fastcgipp.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "spec"]
+	path = spec
+	url = git@github.com:GerHobbelt/spec.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "plotlypp"]
+	path = plotlypp
+	url = git@github.com:GerHobbelt/plotlypp.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "plf_rand"]
+	path = plf_rand
+	url = git@github.com:GerHobbelt/plf_rand.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "plf_reorderase"]
+	path = plf_reorderase
+	url = git@github.com:GerHobbelt/plf_reorderase.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "plf_indiesort"]
+	path = plf_indiesort
+	url = git@github.com:GerHobbelt/plf_indiesort.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "plf_queue"]
+	path = plf_queue
+	url = git@github.com:GerHobbelt/plf_queue.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "plf_bitsets"]
+	path = plf_bitsets
+	url = git@github.com:GerHobbelt/plf_bitsets.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "plf_stack"]
+	path = plf_stack
+	url = git@github.com:GerHobbelt/plf_stack.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "plf_colony"]
+	path = plf_colony
+	url = git@github.com:GerHobbelt/plf_colony.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "plf_list"]
+	path = plf_list
+	url = git@github.com:GerHobbelt/plf_list.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "libyuv"]
+	path = libyuv
+	url = git@github.com:GerHobbelt/libyuv.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "DjVuLibre"]
+	path = DjVuLibre
+	url = git@github.com:GerHobbelt/DjVuLibre.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "libcappuccino"]
+	path = libcappuccino
+	url = git@github.com:GerHobbelt/libcappuccino.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "fcgi2"]
+	path = fcgi2
+	url = git@github.com:GerHobbelt/fcgi2.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "executors"]
+	path = executors
+	url = git@github.com:GerHobbelt/executors.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "executors-impl"]
+	path = executors-impl
+	url = git@github.com:GerHobbelt/executors-impl.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "execution"]
+	path = execution
+	url = git@github.com:GerHobbelt/execution.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "crossguid"]
+	path = crossguid
+	url = git@github.com:GerHobbelt/crossguid.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "meta"]
+	path = meta
+	url = git@github.com:GerHobbelt/meta.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "args"]
+	path = args
+	url = git@github.com:GerHobbelt/args.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "glucose"]
+	path = glucose
+	url = git@github.com:GerHobbelt/glucose.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "TinyMPC"]
+	path = TinyMPC
+	url = git@github.com:GerHobbelt/TinyMPC.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "DySECT"]
+	path = DySECT
+	url = git@github.com:GerHobbelt/DySECT.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "lpqfilter"]
+	path = lpqfilter
+	url = git@github.com:GerHobbelt/lpqfilter.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "bitfilters"]
+	path = bitfilters
+	url = git@github.com:GerHobbelt/bitfilters.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
