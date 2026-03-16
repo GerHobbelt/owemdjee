@@ -9730,12 +9730,6 @@
     fetchRecurseSubmodules = on-demand
     ignore = dirty
 
-[submodule "DjVuLibre"]
-	path = DjVuLibre
-	url = git@github.com:GerHobbelt/DjVuLibre.git
-    fetchRecurseSubmodules = on-demand
-    ignore = dirty
-
 [submodule "libcappuccino"]
 	path = libcappuccino
 	url = git@github.com:GerHobbelt/libcappuccino.git
