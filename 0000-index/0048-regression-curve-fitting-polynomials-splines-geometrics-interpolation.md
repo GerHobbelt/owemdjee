@@ -80,4 +80,4 @@
 	
 ----
 
-🡸 [previous section](./0047-random-generators-all-things-random.md)  |  🡹 [up](./0032-pattern-recognition.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0049-solvers-clustering-monte-carlo-decision-trees.md)
+🡸 [previous section](./0047-random-generators-all-things-random.md)  |  🡹 [up](./0032-pattern-recognition.md)  |  🡻 [all (index)](./0104-libraries-in-this-collection.md)  |  🡺 [next section](./0049-solvers-clustering-monte-carlo-decision-trees.md)

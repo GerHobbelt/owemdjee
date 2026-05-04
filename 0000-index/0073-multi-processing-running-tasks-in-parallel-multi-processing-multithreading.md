@@ -76,4 +76,4 @@
 	
 ----
 
-🡸 [previous section](./0072-multi-processing-promise-a.md)  |  🡹 [up](./0066-multi-processing-core-technologies.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0074-multi-processing-event-handling-signals-asynchronous-operation.md)
+🡸 [previous section](./0072-multi-processing-promise-a.md)  |  🡹 [up](./0066-multi-processing-core-technologies.md)  |  🡻 [all (index)](./0104-libraries-in-this-collection.md)  |  🡺 [next section](./0074-multi-processing-event-handling-signals-asynchronous-operation.md)

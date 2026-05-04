@@ -154,4 +154,4 @@ These hashes are for other purposes, e.g. fast lookup in dictionaries, fast appr
 	
 ----
 
-🡸 [previous section](./0024-content-hashing.md)  |  🡹 [up](./0016-libraries-we-re-looking-at-for-this-intent.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0026-intermediate-data-storage-caching-hierarchical-data-stores.md)
+🡸 [previous section](./0024-content-hashing.md)  |  🡹 [up](./0016-libraries-we-re-looking-at-for-this-intent.md)  |  🡻 [all (index)](./0104-libraries-in-this-collection.md)  |  🡺 [next section](./0026-intermediate-data-storage-caching-hierarchical-data-stores.md)

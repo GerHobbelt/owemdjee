@@ -81,4 +81,4 @@
 	
 ----
 
-🡸 [previous section](./0048-regression-curve-fitting-polynomials-splines-geometrics-interpolation.md)  |  🡹 [up](./0032-pattern-recognition.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0050-distance-metrics-image-quality-metrics-image-comparison.md)
+🡸 [previous section](./0048-regression-curve-fitting-polynomials-splines-geometrics-interpolation.md)  |  🡹 [up](./0032-pattern-recognition.md)  |  🡻 [all (index)](./0104-libraries-in-this-collection.md)  |  🡺 [next section](./0050-distance-metrics-image-quality-metrics-image-comparison.md)

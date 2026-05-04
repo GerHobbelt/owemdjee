@@ -122,4 +122,4 @@ The additional (and more important) reason to ditch CPython from the R&D set is 
 	
 ----
 
-🡸 [previous section](./0063-language-detection-inference.md)  |  🡹 [up](./0016-libraries-we-re-looking-at-for-this-intent.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0065-quickjs-specific-modules-related-materials.md)
+🡸 [previous section](./0063-language-detection-inference.md)  |  🡹 [up](./0016-libraries-we-re-looking-at-for-this-intent.md)  |  🡻 [all (index)](./0104-libraries-in-this-collection.md)  |  🡺 [next section](./0065-quickjs-specific-modules-related-materials.md)

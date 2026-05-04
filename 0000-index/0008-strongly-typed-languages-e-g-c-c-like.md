@@ -29,4 +29,4 @@
 	
 ----
 
-🡸 [previous section](./0007-smalltalk.md)  |  🡹 [up](./0001-script-languages-for-embedding-in-c-c-applications.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0009-lua-uwitudinational.md)
+🡸 [previous section](./0007-smalltalk.md)  |  🡹 [up](./0001-script-languages-for-embedding-in-c-c-applications.md)  |  🡻 [all (index)](./0104-libraries-in-this-collection.md)  |  🡺 [next section](./0009-lua-uwitudinational.md)

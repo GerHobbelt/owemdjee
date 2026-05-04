@@ -48,4 +48,4 @@
 	
 ----
 
-🡸 [previous section](./0059-bibtex-and-similar-library-metadata-formats-support.md)  |  🡹 [up](./0016-libraries-we-re-looking-at-for-this-intent.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0061-fts.md)
+🡸 [previous section](./0059-bibtex-and-similar-library-metadata-formats-support.md)  |  🡹 [up](./0016-libraries-we-re-looking-at-for-this-intent.md)  |  🡻 [all (index)](./0104-libraries-in-this-collection.md)  |  🡺 [next section](./0061-fts.md)

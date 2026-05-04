@@ -275,4 +275,4 @@ The other JavaScript engines considered are of varying size, performance and com
 	
 ----
 
-🡻 [all (index)](./0000-index/0103-libraries-in-this-collection.md)  |  🡺 [next section](./0000-index/0001-script-languages-for-embedding-in-c-c-applications.md)
+🡻 [all (index)](./0000-index/0104-libraries-in-this-collection.md)  |  🡺 [next section](./0000-index/0001-script-languages-for-embedding-in-c-c-applications.md)

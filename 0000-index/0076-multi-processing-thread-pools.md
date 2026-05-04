@@ -39,4 +39,4 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 	
 ----
 
-🡸 [previous section](./0075-multi-processing-task-schedulers.md)  |  🡹 [up](./0066-multi-processing-core-technologies.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0077-run-time-library-core-features-logging-formatting.md)
+🡸 [previous section](./0075-multi-processing-task-schedulers.md)  |  🡹 [up](./0066-multi-processing-core-technologies.md)  |  🡻 [all (index)](./0104-libraries-in-this-collection.md)  |  🡺 [next section](./0077-run-time-library-core-features-logging-formatting.md)

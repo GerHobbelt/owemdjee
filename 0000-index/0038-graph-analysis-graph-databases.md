@@ -44,4 +44,4 @@
 	
 ----
 
-🡸 [previous section](./0037-gmm-hmm-km.md)  |  🡹 [up](./0032-pattern-recognition.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0039-nn.md)
+🡸 [previous section](./0037-gmm-hmm-km.md)  |  🡹 [up](./0032-pattern-recognition.md)  |  🡻 [all (index)](./0104-libraries-in-this-collection.md)  |  🡺 [next section](./0039-nn.md)

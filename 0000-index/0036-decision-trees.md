@@ -32,4 +32,4 @@
 	
 ----
 
-🡸 [previous section](./0035-fuzzy-matching.md)  |  🡹 [up](./0032-pattern-recognition.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0037-gmm-hmm-km.md)
+🡸 [previous section](./0035-fuzzy-matching.md)  |  🡹 [up](./0032-pattern-recognition.md)  |  🡻 [all (index)](./0104-libraries-in-this-collection.md)  |  🡺 [next section](./0037-gmm-hmm-km.md)

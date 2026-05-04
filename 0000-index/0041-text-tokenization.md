@@ -84,4 +84,4 @@ i.e. breaking text into words when you _receive a textstream without spaces_. Al
 	
 ----
 
-🡸 [previous section](./0040-similarity-search.md)  |  🡹 [up](./0032-pattern-recognition.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0042-regex-matchers.md)
+🡸 [previous section](./0040-similarity-search.md)  |  🡹 [up](./0032-pattern-recognition.md)  |  🡻 [all (index)](./0104-libraries-in-this-collection.md)  |  🡺 [next section](./0042-regex-matchers.md)

@@ -33,4 +33,4 @@ Guassian Mixture Models / Hidden Markov Models / k-Means: fit patterns, e.g. mat
 	
 ----
 
-🡸 [previous section](./0036-decision-trees.md)  |  🡹 [up](./0032-pattern-recognition.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0038-graph-analysis-graph-databases.md)
+🡸 [previous section](./0036-decision-trees.md)  |  🡹 [up](./0032-pattern-recognition.md)  |  🡻 [all (index)](./0104-libraries-in-this-collection.md)  |  🡺 [next section](./0038-graph-analysis-graph-databases.md)

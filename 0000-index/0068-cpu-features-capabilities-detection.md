@@ -50,4 +50,4 @@
 	
 ----
 
-🡸 [previous section](./0067-cli-commandline-parsing-perusing.md)  |  🡹 [up](./0066-multi-processing-core-technologies.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0069-date-time-functionality.md)
+🡸 [previous section](./0067-cli-commandline-parsing-perusing.md)  |  🡹 [up](./0066-multi-processing-core-technologies.md)  |  🡻 [all (index)](./0104-libraries-in-this-collection.md)  |  🡺 [next section](./0069-date-time-functionality.md)

@@ -46,4 +46,4 @@
 	
 ----
 
-🡸 [previous section](./0020-ipc-memory-mapping.md)  |  🡹 [up](./0016-libraries-we-re-looking-at-for-this-intent.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0022-ipc-cbor-for-protocol-design.md)
+🡸 [previous section](./0020-ipc-memory-mapping.md)  |  🡹 [up](./0016-libraries-we-re-looking-at-for-this-intent.md)  |  🡻 [all (index)](./0104-libraries-in-this-collection.md)  |  🡺 [next section](./0022-ipc-cbor-for-protocol-design.md)

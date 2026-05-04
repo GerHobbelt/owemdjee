@@ -38,4 +38,4 @@
 	
 ----
 
-🡸 [previous section](./0021-ipc-json-for-protocol-design.md)  |  🡹 [up](./0016-libraries-we-re-looking-at-for-this-intent.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0023-ipc-yaml-toml-etc-for-protocol-design.md)
+🡸 [previous section](./0021-ipc-json-for-protocol-design.md)  |  🡹 [up](./0016-libraries-we-re-looking-at-for-this-intent.md)  |  🡻 [all (index)](./0104-libraries-in-this-collection.md)  |  🡺 [next section](./0023-ipc-yaml-toml-etc-for-protocol-design.md)

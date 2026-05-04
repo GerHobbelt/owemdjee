@@ -31,4 +31,4 @@
 	
 ----
 
-🡸 [previous section](./0062-stemmers.md)  |  🡹 [up](./0061-fts.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0064-scripting-user-tunable-tasks-such-as-ocr-preprocessing-metadata.md)
+🡸 [previous section](./0062-stemmers.md)  |  🡹 [up](./0061-fts.md)  |  🡻 [all (index)](./0104-libraries-in-this-collection.md)  |  🡺 [next section](./0064-scripting-user-tunable-tasks-such-as-ocr-preprocessing-metadata.md)

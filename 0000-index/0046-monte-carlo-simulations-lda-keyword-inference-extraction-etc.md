@@ -54,4 +54,4 @@
 	
 ----
 
-🡸 [previous section](./0045-image-export-image-scanned-document-import.md)  |  🡹 [up](./0032-pattern-recognition.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0047-random-generators-all-things-random.md)
+🡸 [previous section](./0045-image-export-image-scanned-document-import.md)  |  🡹 [up](./0032-pattern-recognition.md)  |  🡻 [all (index)](./0104-libraries-in-this-collection.md)  |  🡺 [next section](./0047-random-generators-all-things-random.md)

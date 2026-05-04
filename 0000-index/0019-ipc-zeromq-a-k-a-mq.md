@@ -29,4 +29,4 @@
 	
 ----
 
-🡸 [previous section](./0018-ipc-websockets-etc-all-communication-means.md)  |  🡹 [up](./0018-ipc-websockets-etc-all-communication-means.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0020-ipc-memory-mapping.md)
+🡸 [previous section](./0018-ipc-websockets-etc-all-communication-means.md)  |  🡹 [up](./0018-ipc-websockets-etc-all-communication-means.md)  |  🡻 [all (index)](./0104-libraries-in-this-collection.md)  |  🡺 [next section](./0020-ipc-memory-mapping.md)

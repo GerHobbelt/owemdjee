@@ -66,4 +66,4 @@
 	
 ----
 
-🡸 [previous section](./0092-pdf-render-metadata-core.md)  |  🡹 [up](./0016-libraries-we-re-looking-at-for-this-intent.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0094-language-translation-transliteration.md)
+🡸 [previous section](./0092-pdf-render-metadata-core.md)  |  🡹 [up](./0016-libraries-we-re-looking-at-for-this-intent.md)  |  🡻 [all (index)](./0104-libraries-in-this-collection.md)  |  🡺 [next section](./0094-language-translation-transliteration.md)

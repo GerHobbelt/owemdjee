@@ -37,4 +37,4 @@
 	
 ----
 
-🡸 [previous section](./0031-ocr-hocr-output-format-other-output-formats.md)  |  🡹 [up](./0016-libraries-we-re-looking-at-for-this-intent.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0033-blas-lapack.md)
+🡸 [previous section](./0031-ocr-hocr-output-format-other-output-formats.md)  |  🡹 [up](./0016-libraries-we-re-looking-at-for-this-intent.md)  |  🡻 [all (index)](./0104-libraries-in-this-collection.md)  |  🡺 [next section](./0033-blas-lapack.md)

@@ -40,4 +40,4 @@
 	
 ----
 
-🡸 [previous section](./0046-monte-carlo-simulations-lda-keyword-inference-extraction-etc.md)  |  🡹 [up](./0032-pattern-recognition.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0048-regression-curve-fitting-polynomials-splines-geometrics-interpolation.md)
+🡸 [previous section](./0046-monte-carlo-simulations-lda-keyword-inference-extraction-etc.md)  |  🡹 [up](./0032-pattern-recognition.md)  |  🡻 [all (index)](./0104-libraries-in-this-collection.md)  |  🡺 [next section](./0048-regression-curve-fitting-polynomials-splines-geometrics-interpolation.md)

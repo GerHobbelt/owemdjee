@@ -31,4 +31,4 @@
 	
 ----
 
-🡸 [previous section](./0097-citations-output.md)  |  🡹 [up](./0016-libraries-we-re-looking-at-for-this-intent.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0099-xml-xslt-tooling.md)
+🡸 [previous section](./0097-citations-output.md)  |  🡹 [up](./0016-libraries-we-re-looking-at-for-this-intent.md)  |  🡻 [all (index)](./0104-libraries-in-this-collection.md)  |  🡺 [next section](./0099-xml-xslt-tooling.md)

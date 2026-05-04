@@ -55,4 +55,4 @@
 	
 ----
 
-🡸 [previous section](./0019-ipc-zeromq-a-k-a-mq.md)  |  🡹 [up](./0018-ipc-websockets-etc-all-communication-means.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0021-ipc-json-for-protocol-design.md)
+🡸 [previous section](./0019-ipc-zeromq-a-k-a-mq.md)  |  🡹 [up](./0018-ipc-websockets-etc-all-communication-means.md)  |  🡻 [all (index)](./0104-libraries-in-this-collection.md)  |  🡺 [next section](./0021-ipc-json-for-protocol-design.md)

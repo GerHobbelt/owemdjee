@@ -37,4 +37,4 @@
 	
 ----
 
-🡸 [previous section](./0027-ram-disk-based-large-queues-and-stores-b-tree-lsm-tree.md)  |  🡹 [up](./0026-intermediate-data-storage-caching-hierarchical-data-stores.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0029-data-storage-caching-ipc-loss-less-data-compression.md)
+🡸 [previous section](./0027-ram-disk-based-large-queues-and-stores-b-tree-lsm-tree.md)  |  🡹 [up](./0026-intermediate-data-storage-caching-hierarchical-data-stores.md)  |  🡻 [all (index)](./0104-libraries-in-this-collection.md)  |  🡺 [next section](./0029-data-storage-caching-ipc-loss-less-data-compression.md)

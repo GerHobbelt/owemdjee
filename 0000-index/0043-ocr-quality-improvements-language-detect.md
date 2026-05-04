@@ -64,4 +64,4 @@
 	
 ----
 
-🡸 [previous section](./0042-regex-matchers.md)  |  🡹 [up](./0032-pattern-recognition.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0044-ocr-page-image-preprocessing-scanner-tooling-getting-the-pages.md)
+🡸 [previous section](./0042-regex-matchers.md)  |  🡹 [up](./0032-pattern-recognition.md)  |  🡻 [all (index)](./0104-libraries-in-this-collection.md)  |  🡺 [next section](./0044-ocr-page-image-preprocessing-scanner-tooling-getting-the-pages.md)

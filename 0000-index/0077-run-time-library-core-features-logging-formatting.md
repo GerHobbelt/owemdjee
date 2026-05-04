@@ -91,4 +91,4 @@
 	
 ----
 
-🡸 [previous section](./0076-multi-processing-thread-pools.md)  |  🡹 [up](./0066-multi-processing-core-technologies.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0078-web-servers-generic-sockets-i-o.md)
+🡸 [previous section](./0076-multi-processing-thread-pools.md)  |  🡹 [up](./0066-multi-processing-core-technologies.md)  |  🡻 [all (index)](./0104-libraries-in-this-collection.md)  |  🡺 [next section](./0078-web-servers-generic-sockets-i-o.md)

@@ -32,4 +32,4 @@
 	
 ----
 
-🡸 [previous section](./0030-file-directory-tree-synchronization.md)  |  🡹 [up](./0016-libraries-we-re-looking-at-for-this-intent.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0032-pattern-recognition.md)
+🡸 [previous section](./0030-file-directory-tree-synchronization.md)  |  🡹 [up](./0016-libraries-we-re-looking-at-for-this-intent.md)  |  🡻 [all (index)](./0104-libraries-in-this-collection.md)  |  🡺 [next section](./0032-pattern-recognition.md)

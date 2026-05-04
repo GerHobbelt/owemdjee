@@ -41,4 +41,4 @@
 	
 ----
 
-🡸 [previous section](./0093-ui-gui.md)  |  🡹 [up](./0093-ui-gui.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0095-application-installers.md)
+🡸 [previous section](./0093-ui-gui.md)  |  🡹 [up](./0093-ui-gui.md)  |  🡻 [all (index)](./0104-libraries-in-this-collection.md)  |  🡺 [next section](./0095-application-installers.md)

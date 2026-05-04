@@ -135,4 +135,4 @@
 	
 ----
 
-🡸 [previous section](./0044-ocr-page-image-preprocessing-scanner-tooling-getting-the-pages.md)  |  🡹 [up](./0032-pattern-recognition.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0046-monte-carlo-simulations-lda-keyword-inference-extraction-etc.md)
+🡸 [previous section](./0044-ocr-page-image-preprocessing-scanner-tooling-getting-the-pages.md)  |  🡹 [up](./0032-pattern-recognition.md)  |  🡻 [all (index)](./0104-libraries-in-this-collection.md)  |  🡺 [next section](./0046-monte-carlo-simulations-lda-keyword-inference-extraction-etc.md)

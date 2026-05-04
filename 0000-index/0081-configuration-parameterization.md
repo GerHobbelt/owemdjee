@@ -45,4 +45,4 @@
 	
 ----
 
-🡸 [previous section](./0080-disk-i-o-monitoring-import-locations.md)  |  🡹 [up](./0016-libraries-we-re-looking-at-for-this-intent.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0082-toml.md)
+🡸 [previous section](./0080-disk-i-o-monitoring-import-locations.md)  |  🡹 [up](./0016-libraries-we-re-looking-at-for-this-intent.md)  |  🡻 [all (index)](./0104-libraries-in-this-collection.md)  |  🡺 [next section](./0082-toml.md)

@@ -60,4 +60,4 @@
 	
 ----
 
-🡸 [previous section](./0034-delta-features-other-feature-extraction.md)  |  🡹 [up](./0032-pattern-recognition.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0036-decision-trees.md)
+🡸 [previous section](./0034-delta-features-other-feature-extraction.md)  |  🡹 [up](./0032-pattern-recognition.md)  |  🡻 [all (index)](./0104-libraries-in-this-collection.md)  |  🡺 [next section](./0036-decision-trees.md)

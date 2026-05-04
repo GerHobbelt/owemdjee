@@ -29,4 +29,4 @@
 	
 ----
 
-🡸 [previous section](./0008-strongly-typed-languages-e-g-c-c-like.md)  |  🡹 [up](./0001-script-languages-for-embedding-in-c-c-applications.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0010-tcl-and-their-ilk.md)
+🡸 [previous section](./0008-strongly-typed-languages-e-g-c-c-like.md)  |  🡹 [up](./0001-script-languages-for-embedding-in-c-c-applications.md)  |  🡻 [all (index)](./0104-libraries-in-this-collection.md)  |  🡺 [next section](./0010-tcl-and-their-ilk.md)

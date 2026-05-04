@@ -50,4 +50,4 @@
 	
 ----
 
-🡸 [previous section](./0014-sans-category.md)  |  🡹 [up](./0001-script-languages-for-embedding-in-c-c-applications.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0016-libraries-we-re-looking-at-for-this-intent.md)
+🡸 [previous section](./0014-sans-category.md)  |  🡹 [up](./0001-script-languages-for-embedding-in-c-c-applications.md)  |  🡻 [all (index)](./0104-libraries-in-this-collection.md)  |  🡺 [next section](./0016-libraries-we-re-looking-at-for-this-intent.md)

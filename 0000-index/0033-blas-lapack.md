@@ -96,4 +96,4 @@
 	
 ----
 
-🡸 [previous section](./0032-pattern-recognition.md)  |  🡹 [up](./0032-pattern-recognition.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0034-delta-features-other-feature-extraction.md)
+🡸 [previous section](./0032-pattern-recognition.md)  |  🡹 [up](./0032-pattern-recognition.md)  |  🡻 [all (index)](./0104-libraries-in-this-collection.md)  |  🡺 [next section](./0034-delta-features-other-feature-extraction.md)

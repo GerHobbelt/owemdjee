@@ -9808,3 +9808,117 @@
     fetchRecurseSubmodules = on-demand
     ignore = dirty
 
+[submodule "DueFlashStorage"]
+	path = DueFlashStorage
+	url = git@github.com:GerHobbelt/DueFlashStorage.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "ArduinoCore-sam"]
+	path = ArduinoCore-sam
+	url = git@github.com:GerHobbelt/ArduinoCore-sam.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "printf"]
+	path = printf
+	url = git@github.com:GerHobbelt/printf.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "libmemory"]
+	path = libmemory
+	url = git@github.com:GerHobbelt/libmemory.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "libc"]
+	path = libc
+	url = git@github.com:GerHobbelt/libc.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "picolibc"]
+	path = picolibc
+	url = git@github.com:GerHobbelt/picolibc.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "avr-libc"]
+	path = avr-libc
+	url = git@github.com:GerHobbelt/avr-libc.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "lwmem"]
+	path = lwmem
+	url = git@github.com:GerHobbelt/lwmem.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "FakeIt"]
+	path = FakeIt
+	url = git@github.com:GerHobbelt/FakeIt.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "trompeloeil"]
+	path = trompeloeil
+	url = git@github.com:GerHobbelt/trompeloeil.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "cmake_template"]
+	path = cmake_template
+	url = git@github.com:GerHobbelt/cmake_template.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "bitfield_array"]
+	path = bitfield_array
+	url = git@github.com:GerHobbelt/bitfield_array.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "data_seek_cache"]
+	path = data_seek_cache
+	url = git@github.com:GerHobbelt/data_seek_cache.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "scales_chords_modes"]
+	path = scales_chords_modes
+	url = git@github.com:GerHobbelt/scales_chords_modes.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "enhanced_linn_sequencer"]
+	path = enhanced_linn_sequencer
+	url = git@github.com:GerHobbelt/enhanced_linn_sequencer.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "fixed_space_std_allocator"]
+	path = fixed_space_std_allocator
+	url = git@github.com:GerHobbelt/fixed_space_std_allocator.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "adsr_curve_tweens"]
+	path = adsr_curve_tweens
+	url = git@github.com:GerHobbelt/adsr_curve_tweens.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "flash_wear_leveling_management"]
+	path = flash_wear_leveling_management
+	url = git@github.com:GerHobbelt/flash_wear_leveling_management.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "specialty_histograms"]
+	path = specialty_histograms
+	url = git@github.com:GerHobbelt/specialty_histograms.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+

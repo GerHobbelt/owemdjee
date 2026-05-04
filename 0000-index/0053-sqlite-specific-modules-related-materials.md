@@ -58,4 +58,4 @@
 	
 ----
 
-🡸 [previous section](./0052-lmdb-nosql-and-key-value-stores.md)  |  🡹 [up](./0051-database-backend-storage.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0054-metadata-text.md)
+🡸 [previous section](./0052-lmdb-nosql-and-key-value-stores.md)  |  🡹 [up](./0051-database-backend-storage.md)  |  🡻 [all (index)](./0104-libraries-in-this-collection.md)  |  🡺 [next section](./0054-metadata-text.md)

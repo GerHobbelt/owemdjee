@@ -97,7 +97,6 @@
 - **piposort** [📁](./piposort) [🌐](https://github.com/GerHobbelt/piposort) -- a stable top-down adaptive branchless merge sort named piposort. It is intended as a simplified [quadsort](https://github.com/scandum/quadsort) with reduced adaptivity, but a great reduction in lines of code and overall complexity. The name stands for ping-pong.
 - **plf_bitsets** [📁](./plf_bitsets) [🌐](https://github.com/GerHobbelt/plf_bitsets) -- implements all the functionality of std::bitset with a few small exceptions (some constructors, some minor function differences).
 - **plf_colony** [📁](./plf_colony) [🌐](https://github.com/GerHobbelt/plf_colony) -- an unordered data container providing fast iteration/insertion/erasure while maintaining pointer/iterator/reference validity to non-erased elements. plf::colony is C++98/03/11/14/17/20/23-compatible.
-- **plf_colony** [📁](./plf_colony) [🌐](https://github.com/GerHobbelt/plf_colony) -- an unordered data container providing fast iteration/insertion/erasure while maintaining pointer/iterator/reference validity to non-erased elements. plf::colony is C++98/03/11/14/17/20/23-compatible.
 - **plf_hive** [📁](./plf_hive) [🌐](https://github.com/GerHobbelt/plf_hive) -- a simplified fork of plf::colony to match the current C++ standards proposal (https://wg21.link/p0447).
 - **plf_indiesort** [📁](./plf_indiesort) [🌐](https://github.com/GerHobbelt/plf_indiesort) -- a sort wrapper enabling use of random-access (eg. std::sort) sorting on non-random access containers, and increased performance for the sorting of large types in random-access containers. It has a temporary memory cost of N * (sizeof(pointer) + sizeof(size_t)) for sorting non-random-access iterators/containers and a N * sizeof(U) cost for random-access iterators/containers, where U = the smallest unsigned integer able to store N.
 - **plf_list** [📁](./plf_list) [🌐](https://github.com/GerHobbelt/plf_list) -- a faster drop-in replacement for std::list.
@@ -177,4 +176,4 @@
 	
 ----
 
-🡸 [previous section](./0069-date-time-functionality.md)  |  🡹 [up](./0066-multi-processing-core-technologies.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0071-multi-processing-invoking-external-applications.md)
+🡸 [previous section](./0069-date-time-functionality.md)  |  🡹 [up](./0066-multi-processing-core-technologies.md)  |  🡻 [all (index)](./0104-libraries-in-this-collection.md)  |  🡺 [next section](./0071-multi-processing-invoking-external-applications.md)

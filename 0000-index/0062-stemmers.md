@@ -28,4 +28,4 @@
 	
 ----
 
-🡸 [previous section](./0061-fts.md)  |  🡹 [up](./0061-fts.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0063-language-detection-inference.md)
+🡸 [previous section](./0061-fts.md)  |  🡹 [up](./0061-fts.md)  |  🡻 [all (index)](./0104-libraries-in-this-collection.md)  |  🡺 [next section](./0063-language-detection-inference.md)

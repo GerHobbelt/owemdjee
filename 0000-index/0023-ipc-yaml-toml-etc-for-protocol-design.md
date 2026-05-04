@@ -29,4 +29,4 @@ The more human readable formats (YAML, TOML, ...) are intended for human to mach
 	
 ----
 
-🡸 [previous section](./0022-ipc-cbor-for-protocol-design.md)  |  🡹 [up](./0016-libraries-we-re-looking-at-for-this-intent.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0024-content-hashing.md)
+🡸 [previous section](./0022-ipc-cbor-for-protocol-design.md)  |  🡹 [up](./0016-libraries-we-re-looking-at-for-this-intent.md)  |  🡻 [all (index)](./0104-libraries-in-this-collection.md)  |  🡺 [next section](./0024-content-hashing.md)

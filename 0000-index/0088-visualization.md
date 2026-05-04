@@ -71,4 +71,4 @@
 	
 ----
 
-🡸 [previous section](./0087-colour-processing-conversion.md)  |  🡹 [up](./0086-logging-debugging.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0089-etw.md)
+🡸 [previous section](./0087-colour-processing-conversion.md)  |  🡹 [up](./0086-logging-debugging.md)  |  🡻 [all (index)](./0104-libraries-in-this-collection.md)  |  🡺 [next section](./0089-etw.md)

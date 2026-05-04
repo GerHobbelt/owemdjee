@@ -44,4 +44,4 @@ The bit about **_"guaranteed"_ collision-free** is to be read as: hash algorithm
 	
 ----
 
-🡸 [previous section](./0023-ipc-yaml-toml-etc-for-protocol-design.md)  |  🡹 [up](./0016-libraries-we-re-looking-at-for-this-intent.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0025-hash-like-filters-fast-hashing-for-hash-tables-et-al.md)
+🡸 [previous section](./0023-ipc-yaml-toml-etc-for-protocol-design.md)  |  🡹 [up](./0016-libraries-we-re-looking-at-for-this-intent.md)  |  🡻 [all (index)](./0104-libraries-in-this-collection.md)  |  🡺 [next section](./0025-hash-like-filters-fast-hashing-for-hash-tables-et-al.md)

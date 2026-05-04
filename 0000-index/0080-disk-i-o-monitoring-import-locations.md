@@ -50,4 +50,4 @@
 	
 ----
 
-🡸 [previous section](./0079-socket-i-o-websockets.md)  |  🡹 [up](./0016-libraries-we-re-looking-at-for-this-intent.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0081-configuration-parameterization.md)
+🡸 [previous section](./0079-socket-i-o-websockets.md)  |  🡹 [up](./0016-libraries-we-re-looking-at-for-this-intent.md)  |  🡻 [all (index)](./0104-libraries-in-this-collection.md)  |  🡺 [next section](./0081-configuration-parameterization.md)

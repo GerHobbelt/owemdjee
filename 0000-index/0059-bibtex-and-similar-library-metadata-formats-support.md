@@ -29,4 +29,4 @@
 	
 ----
 
-🡸 [previous section](./0058-file-format-support.md)  |  🡹 [up](./0016-libraries-we-re-looking-at-for-this-intent.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0060-export-output-file-formats-text-formatting-etc.md)
+🡸 [previous section](./0058-file-format-support.md)  |  🡹 [up](./0016-libraries-we-re-looking-at-for-this-intent.md)  |  🡻 [all (index)](./0104-libraries-in-this-collection.md)  |  🡺 [next section](./0060-export-output-file-formats-text-formatting-etc.md)

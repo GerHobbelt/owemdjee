@@ -28,4 +28,4 @@
 	
 ----
 
-🡸 [previous section](./0006-igor-s-lisp-vetinari-s-scheming.md)  |  🡹 [up](./0001-script-languages-for-embedding-in-c-c-applications.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0008-strongly-typed-languages-e-g-c-c-like.md)
+🡸 [previous section](./0006-igor-s-lisp-vetinari-s-scheming.md)  |  🡹 [up](./0001-script-languages-for-embedding-in-c-c-applications.md)  |  🡻 [all (index)](./0104-libraries-in-this-collection.md)  |  🡺 [next section](./0008-strongly-typed-languages-e-g-c-c-like.md)

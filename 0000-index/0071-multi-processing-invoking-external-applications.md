@@ -42,4 +42,4 @@
 	
 ----
 
-🡸 [previous section](./0070-misc-core-functionality.md)  |  🡹 [up](./0066-multi-processing-core-technologies.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0072-multi-processing-promise-a.md)
+🡸 [previous section](./0070-misc-core-functionality.md)  |  🡹 [up](./0066-multi-processing-core-technologies.md)  |  🡻 [all (index)](./0104-libraries-in-this-collection.md)  |  🡺 [next section](./0072-multi-processing-promise-a.md)

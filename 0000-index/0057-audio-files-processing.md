@@ -41,4 +41,4 @@ Not just speech processing & speech recognition, but sometimes data is easier "v
 	
 ----
 
-🡸 [previous section](./0056-web-scraping.md)  |  🡹 [up](./0016-libraries-we-re-looking-at-for-this-intent.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0058-file-format-support.md)
+🡸 [previous section](./0056-web-scraping.md)  |  🡹 [up](./0016-libraries-we-re-looking-at-for-this-intent.md)  |  🡻 [all (index)](./0104-libraries-in-this-collection.md)  |  🡺 [next section](./0058-file-format-support.md)

@@ -135,4 +135,4 @@
 	
 ----
 
-🡸 [previous section](./0050-distance-metrics-image-quality-metrics-image-comparison.md)  |  🡹 [up](./0016-libraries-we-re-looking-at-for-this-intent.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0052-lmdb-nosql-and-key-value-stores.md)
+🡸 [previous section](./0050-distance-metrics-image-quality-metrics-image-comparison.md)  |  🡹 [up](./0016-libraries-we-re-looking-at-for-this-intent.md)  |  🡻 [all (index)](./0104-libraries-in-this-collection.md)  |  🡺 [next section](./0052-lmdb-nosql-and-key-value-stores.md)

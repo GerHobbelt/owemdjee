@@ -33,4 +33,4 @@
 	
 ----
 
-🡸 [previous section](./0001-script-languages-for-embedding-in-c-c-applications.md)  |  🡹 [up](./0001-script-languages-for-embedding-in-c-c-applications.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0003-forth-et-al.md)
+🡸 [previous section](./0001-script-languages-for-embedding-in-c-c-applications.md)  |  🡹 [up](./0001-script-languages-for-embedding-in-c-c-applications.md)  |  🡻 [all (index)](./0104-libraries-in-this-collection.md)  |  🡺 [next section](./0003-forth-et-al.md)

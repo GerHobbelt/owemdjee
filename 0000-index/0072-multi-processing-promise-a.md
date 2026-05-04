@@ -50,4 +50,4 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 	
 ----
 
-🡸 [previous section](./0071-multi-processing-invoking-external-applications.md)  |  🡹 [up](./0066-multi-processing-core-technologies.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0073-multi-processing-running-tasks-in-parallel-multi-processing-multithreading.md)
+🡸 [previous section](./0071-multi-processing-invoking-external-applications.md)  |  🡹 [up](./0066-multi-processing-core-technologies.md)  |  🡻 [all (index)](./0104-libraries-in-this-collection.md)  |  🡺 [next section](./0073-multi-processing-running-tasks-in-parallel-multi-processing-multithreading.md)

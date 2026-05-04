@@ -53,4 +53,4 @@
 	
 ----
 
-🡸 [previous section](./0094-language-translation-transliteration.md)  |  🡹 [up](./0016-libraries-we-re-looking-at-for-this-intent.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0096-checking-out-the-competition-compatriots-for-qiqqa-re-use-useful.md)
+🡸 [previous section](./0094-language-translation-transliteration.md)  |  🡹 [up](./0016-libraries-we-re-looking-at-for-this-intent.md)  |  🡻 [all (index)](./0104-libraries-in-this-collection.md)  |  🡺 [next section](./0096-checking-out-the-competition-compatriots-for-qiqqa-re-use-useful.md)

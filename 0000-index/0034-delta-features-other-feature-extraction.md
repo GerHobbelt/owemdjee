@@ -47,4 +47,4 @@
 	
 ----
 
-🡸 [previous section](./0033-blas-lapack.md)  |  🡹 [up](./0032-pattern-recognition.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0035-fuzzy-matching.md)
+🡸 [previous section](./0033-blas-lapack.md)  |  🡹 [up](./0032-pattern-recognition.md)  |  🡻 [all (index)](./0104-libraries-in-this-collection.md)  |  🡺 [next section](./0035-fuzzy-matching.md)

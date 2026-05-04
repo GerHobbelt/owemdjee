@@ -65,4 +65,4 @@
 	
 ----
 
-🡸 [previous section](./0049-solvers-clustering-monte-carlo-decision-trees.md)  |  🡹 [up](./0032-pattern-recognition.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0051-database-backend-storage.md)
+🡸 [previous section](./0049-solvers-clustering-monte-carlo-decision-trees.md)  |  🡹 [up](./0032-pattern-recognition.md)  |  🡻 [all (index)](./0104-libraries-in-this-collection.md)  |  🡺 [next section](./0051-database-backend-storage.md)

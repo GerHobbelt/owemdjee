@@ -48,4 +48,4 @@
 	
 ----
 
-🡸 [previous section](./0041-text-tokenization.md)  |  🡹 [up](./0032-pattern-recognition.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0043-ocr-quality-improvements-language-detect.md)
+🡸 [previous section](./0041-text-tokenization.md)  |  🡹 [up](./0032-pattern-recognition.md)  |  🡻 [all (index)](./0104-libraries-in-this-collection.md)  |  🡺 [next section](./0043-ocr-quality-improvements-language-detect.md)

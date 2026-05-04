@@ -86,4 +86,4 @@
 	
 ----
 
-🡸 [previous section](./0085-testing-benchmarking-fuzzing.md)  |  🡹 [up](./0016-libraries-we-re-looking-at-for-this-intent.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0087-colour-processing-conversion.md)
+🡸 [previous section](./0085-testing-benchmarking-fuzzing.md)  |  🡹 [up](./0016-libraries-we-re-looking-at-for-this-intent.md)  |  🡻 [all (index)](./0104-libraries-in-this-collection.md)  |  🡺 [next section](./0087-colour-processing-conversion.md)

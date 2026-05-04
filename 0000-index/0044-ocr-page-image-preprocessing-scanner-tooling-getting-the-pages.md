@@ -197,4 +197,4 @@
 	
 ----
 
-🡸 [previous section](./0043-ocr-quality-improvements-language-detect.md)  |  🡹 [up](./0032-pattern-recognition.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0045-image-export-image-scanned-document-import.md)
+🡸 [previous section](./0043-ocr-quality-improvements-language-detect.md)  |  🡹 [up](./0032-pattern-recognition.md)  |  🡻 [all (index)](./0104-libraries-in-this-collection.md)  |  🡺 [next section](./0045-image-export-image-scanned-document-import.md)

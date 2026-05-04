@@ -112,6 +112,7 @@
     * [Microsoft Word, Google Docs, LibreOffice: application integration](#microsoft-word-google-docs-libreoffice-application-integration)
     * [XML & XSLT tooling](#xml--xslt-tooling)
     * [Microsoft DOCX ~ OpenXML & other XML & XSLT tooling](#microsoft-docx--openxml--other-xml--xslt-tooling)
+    * [Embedded Development Specializations](#embedded-development-specializations)
     * [Misc. Uncategorized](#misc-uncategorized)
     * [sub-dependencies (libraries which are required by any of the above)](#sub-dependencies-libraries-which-are-required-by-any-of-the-above)
 * [Libraries in this collection (All of the above, listed in alphabetical order)](#libraries-in-this-collection-all-of-the-above-listed-in-alphabetical-order)
@@ -132,4 +133,4 @@
 	
 ----
 
-🡸 [previous section](./0015-misc-tooling.md)  |  🡹 [up](../README.md)  |  🡻 [all (index)](./0103-libraries-in-this-collection.md)  |  🡺 [next section](./0017-ipc-flatbuffer-et-al-for-protocol-design.md)
+🡸 [previous section](./0015-misc-tooling.md)  |  🡹 [up](../README.md)  |  🡻 [all (index)](./0104-libraries-in-this-collection.md)  |  🡺 [next section](./0017-ipc-flatbuffer-et-al-for-protocol-design.md)
