@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Other subjects of interest.md",
+                "file": "README.source.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Other subjects of interest"
+              "title": "README.source"
             }
           }
         ]
@@ -195,8 +195,9 @@
       "publish:Publish changes...": false
     }
   },
-  "active": "41f4eeea028e5f7b",
+  "active": "ea12bde47388f29c",
   "lastOpenFiles": [
+    "Other subjects of interest.md",
     "QuantLib/ql/termstructures/yield/spreaddiscountcurve.hpp",
     "gperftools/src/base/static_storage.h",
     "boost/libs/uuid/include/boost/uuid/detail/nil_uuid.hpp",
@@ -207,7 +208,6 @@
     "optframe/include/OptFrame/Heuristics/VNS/MetaVNS.hpp",
     "jsoncons/include/jsoncons/detail/make_obj_using_allocator.hpp",
     "gperftools/src/malloc_backtrace.h",
-    "hikyuu/hikyuu_cpp/hikyuu/KDataSharedBufferImp.h",
     "loki/tools/querytee/goldfish/README.md",
     "loki/vendor/github.com/pressly/goose/v3/README.md",
     "loki/vendor/github.com/pressly/goose/v3/CHANGELOG.md",

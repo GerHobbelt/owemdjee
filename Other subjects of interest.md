@@ -377,17 +377,17 @@
 
 - https://github.com/princesegzy01/incremental-machine-learning-techniques- :: Feature Engineering Techniques in Online / Incremental Learning
 
-    Online learnning is a medthod of machine learning where data becomes available in sequential order and is used to update our best predictor for future data at each step as opposed to batch learning techniques which generates best predictor by learning on the entore training datasets at once.
+    Online learning is a method of machine learning where data becomes available in sequential order and is used to update our best predictor for future data at each step as opposed to batch learning techniques which generates best predictor by learning on the entire training datasets at once.
     
     Advantages
     
-    - Online learning is used when it is computational infeasible to train the entire datasets, requiring the need of algorithim that can process data that are too large to fit in the computer memory at a time.
+    - Online learning is used when it is computational infeasible to train the entire datasets, requiring the need of algorithm that can process data that are too large to fit in the computer memory at a time.
     
     - It is used when it is neccessary for the algorithm to dynamically adapt to new patterns in the data, or when when the data itself is generated as a function in time, e.g stock price prediction    
 
-- https://github.com/princesegzy01/bitLsh-TrendingTopic :: Bit locality sensitive hashing is an unspervised machine learning algorithm that takes in some data and categorized them and then inturns detect trending topic.
+- https://github.com/princesegzy01/bitLsh-TrendingTopic :: Bit locality sensitive hashing is an unsupervised machine learning algorithm that takes in some data and categorized them and then in turn detects trending topics.
 
-    The goal of using lsh is to group similar tweets to the same buckets, Candidate pairs are those that hash at least once to the same bucket.
+    The goal of using `lsh` is to group similar tweets to the same buckets, Candidate pairs are those that hash at least once to the same bucket.
 
 - https://github.com/shivam13juna/Sequence_Prediction_LSTM_CHAR :: This is the model for predicting sequence prediction on character basis, with 3 uni-directional LSTM ( + FAQ )
 
@@ -552,7 +552,7 @@
     
 - https://github.com/tonykero/Moe :: Moe is a C++14 header-only dependency-free library providing generic implementations of some metaheuristic algorithms
 
-- https://github.com/RoboJackets/hungarian :: C++ Implementation of the hungarian algorithm 
+- https://github.com/RoboJackets/hungarian :: C++ Implementation of the Hungarian algorithm 
 
   C++ adaptation of Cyril Stachniss's libhungarian: http://www2.informatik.uni-freiburg.de/~stachnis/misc.html.
   
@@ -666,7 +666,7 @@
 
   The Succinct Data Structure Library (SDSL) is a powerful and flexible C++11 library implementing succinct data structures. In total, the library contains the highlights of 40 research publications. Succinct data structures can represent an object (such as a bitvector or a tree) in space close to the information-theoretic lower bound of the object while supporting operations of the original object efficiently. The theoretical time complexity of an operation performed on the classical data structure and the equivalent succinct data structure are (most of the time) identical.
 
-  Why SDSL?
+  #### Why SDSL?
 
   Succinct data structures have very attractive theoretical properties. However, in practice implementing succinct data structures is non-trivial as they are often composed of complex operations on bitvectors. The SDSL Library provides high quality, open source implementations of many succinct data structures proposed in literature.
 
@@ -689,7 +689,7 @@
 
   Arb produces a rigorous enclosure of the exact value of the expression, hence the user can rely on Arb's automatic error bound tracking to get an output that is guaranteed to be accurate -- no error analysis needs to be done by the user.
 
-  Features
+  #### Features
 
   Besides basic arithmetic, Arb allows working with univariate polynomials, truncated power series, and matrices over both real and complex numbers.
   
@@ -699,15 +699,15 @@
   
   Other features include root isolation for real functions, rigorous numerical integration of complex functions, and discrete Fourier transforms (DFTs).
   
-  Special functions
+  #### Special functions
 
   Arb can compute a wide range of transcendental and special functions, including the gamma function, polygamma functions, Riemann zeta and Hurwitz zeta function, Dirichlet L-functions, polylogarithm, error function, Gauss hypergeometric function 2F1, confluent hypergeometric functions, Bessel functions, Airy functions, Legendre functions and other orthogonal polynomials, exponential and trigonometric integrals, incomplete gamma and beta functions, Jacobi theta functions, modular functions, Weierstrass elliptic functions, complete and incomplete elliptic integrals, arithmetic-geometric mean, Bernoulli numbers, partition function, Barnes G-function, Lambert W function.
   
-  Speed
+  #### Speed
 
   Arb uses a midpoint-radius (ball) representation of real numbers. At high precision, this allows doing interval arithmetic without significant overhead compared to plain floating-point arithmetic. Various low-level optimizations have also been implemented to reduce overhead at precisions of just a few machine words. Most operations on polynomials and power series use asymptotically fast FFT multiplication based on FLINT. Similarly, most operations on large matrices take advantage of the fast integer matrix multiplication in FLINT.
 
-  For basic arithmetic, Arb should generally be around as fast as MPFR (http://mpfr.org), though it can be a bit slower at low precision, and around twice as fast as MPFI (https://perso.ens-lyon.fr/nathalie.revol/software.html).
+  For basic arithmetic, Arb should generally be about as fast as MPFR (http://mpfr.org), though it can be a bit slower at low precision, and around twice as fast as MPFI (https://perso.ens-lyon.fr/nathalie.revol/software.html).
   
   Transcendental functions in Arb are quite well optimized and should generally be faster than any other arbitrary-precision software currently available. 
 
