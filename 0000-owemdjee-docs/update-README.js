@@ -22,8 +22,8 @@ const origTxt = txt;
 
 txt = txt.replace(/\t/g, '    ');
 
-let module_spec = fs.readFileSync(".gitmodules", "utf8");
-let module_spec2 = fs.readFileSync("../../.gitmodules", "utf8");
+let module_spec = fs.readFileSync("../.gitmodules", "utf8");
+let module_spec2 = fs.readFileSync("../../../.gitmodules", "utf8");
 
 module_spec = module_spec.replace(/[\s\r\n]+/g, ' ');
 module_spec2 = module_spec2.replace(/[\s\r\n]+/g, ' ');

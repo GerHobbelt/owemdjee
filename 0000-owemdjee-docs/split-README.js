@@ -83,7 +83,7 @@ for (let i = 0; i < arr.length; i++) {
 	let spec = arr[i];
 	//console.log({spec, i});
 	
-	let fpath = (i == 0 ? `./${ spec.filename }.md` : `./0000-index/${ spec.filename }.md`);
+	let fpath = (i == 0 ? `../${ spec.filename }.md` : `../0000-index/${ spec.filename }.md`);
 	
 	if (debug) console.log({fpath, i});
 	
