@@ -57,6 +57,7 @@
 - **float_compare** [📁](./float_compare) [🌐](https://github.com/GerHobbelt/float_compare) -- C++ header providing floating point value comparators with user-specifiable tolerances and behaviour.
 - **fluxsort** [📁](./fluxsort) [🌐](https://github.com/GerHobbelt/fluxsort) -- is a stable quicksort / mergesort hybrid algorithm. The sort is stable, adaptive, branchless, and has exceptional performance.
 - **fnmatch** [📁](./fnmatch) [🌐](https://github.com/GerHobbelt/fnmatch) -- match a filename string or a pathname using POSIX wildcards.
+- **fpm** [📁](./fpm) [🌐](https://github.com/GerHobbelt/fpm) -- a C++/11 header-only fixed-point math library, designed to serve as a drop-in replacement for floating-point types and aims to provide as much of the standard library's functionality as possible with exclusively integers.
 - **getopt** [📁](./getopt) [🌐](https://github.com/GerHobbelt/getopt_port) -- an original implementation of `getopt` and `getopt_long` with limited GNU extensions. Provided under the BSD license, to allow non-GPL projects to use `getopt`-style command-line parsing.
 - **highway** [📁](./highway) [🌐](https://github.com/GerHobbelt/highway) -- dependency of JpegXL
 - **immer** [📁](./immer) [🌐](https://github.com/GerHobbelt/immer) -- a library of persistent_ and immutable_ data structures written in C++.  These enable whole new kinds of architectures for interactive and concurrent programs of striking simplicity, correctness, and performance.

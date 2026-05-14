@@ -9922,3 +9922,9 @@
     fetchRecurseSubmodules = on-demand
     ignore = dirty
 
+[submodule "fpm"]
+	path = fpm
+	url = git@github.com:GerHobbelt/fpm.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
