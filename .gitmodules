@@ -9928,3 +9928,63 @@
     fetchRecurseSubmodules = on-demand
     ignore = dirty
 
+[submodule "DueTimer"]
+	path = DueTimer
+	url = git@github.com:GerHobbelt/DueTimer.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "cmake-cpp"]
+	path = cmake-cpp
+	url = git@github.com:GerHobbelt/cmake-cpp.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "cpptemplate"]
+	path = cpptemplate
+	url = git@github.com:GerHobbelt/cpptemplate.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "function2"]
+	path = function2
+	url = git@github.com:GerHobbelt/function2.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "jthread"]
+	path = jthread
+	url = git@github.com:GerHobbelt/jthread.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "cmake-init"]
+	path = cmake-init
+	url = git@github.com:GerHobbelt/cmake-init.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "cpp-project"]
+	path = cpp-project
+	url = git@github.com:GerHobbelt/cpp-project.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "str-buf-stream-fmt-noheap"]
+	path = str-buf-stream-fmt-noheap
+	url = git@github.com:GerHobbelt/str-buf-stream-fmt-noheap.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "uclibc-ng"]
+	path = uclibc-ng
+	url = git@github.com:GerHobbelt/uclibc-ng.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "uClibc"]
+	path = uClibc
+	url = git@github.com:GerHobbelt/uClibc.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
