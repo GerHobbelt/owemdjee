@@ -9988,3 +9988,9 @@
     fetchRecurseSubmodules = on-demand
     ignore = dirty
 
+[submodule "cmark-gfm"]
+	path = cmark-gfm
+	url = git@github.com:GerHobbelt/cmark-gfm.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+

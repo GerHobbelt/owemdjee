@@ -8577,38 +8577,13 @@ abstraction without sacrificing performance. Whether you are targeting a single 
 - **DueTimer** [📁](./DueTimer) [🌐](https://github.com/GerHobbelt/DueTimer)
 - **cmake-cpp** [📁](./cmake-cpp) [🌐](https://github.com/GerHobbelt/cmake-cpp)
 - **cmake-init** [📁](./cmake-init) [🌐](https://github.com/GerHobbelt/cmake-init)
+- **cmark-gfm** [📁](./cmark-gfm) [🌐](https://github.com/GerHobbelt/cmark-gfm)
 - **cpp-project** [📁](./cpp-project) [🌐](https://github.com/GerHobbelt/cpp-project)
 - **cpptemplate** [📁](./cpptemplate) [🌐](https://github.com/GerHobbelt/cpptemplate)
 - **function2** [📁](./function2) [🌐](https://github.com/GerHobbelt/function2)
 - **jthread** [📁](./jthread) [🌐](https://github.com/GerHobbelt/jthread)
+- **str-buf-stream-fmt-noheap** [📁](./str-buf-stream-fmt-noheap) [🌐](https://github.com/GerHobbelt/str-buf-stream-fmt-noheap)
+- **uClibc** [📁](./uClibc) [🌐](https://github.com/GerHobbelt/uClibc)
+- **uclibc-ng** [📁](./uclibc-ng) [🌐](https://github.com/GerHobbelt/uclibc-ng)
 
-- **cleanCppProject** [📁](./cleanCppProject) [🌐](https://github.com/GerHobbelt/cleanCppProject) -- an empty project template for any C++ project, featuring modern CMake build scripts, unit tests via Catch, documentation generation via Doxygen (code + wiki + UML diagrams with Graphviz and PlanUML), static code analysis, CI, etc. Works with your favourite linux distro, Windows and MacOS.
-- **cmake_examples** [📁](./cmake_examples) [🌐](https://github.com/GerHobbelt/cmake_examples) -- CMake examples for C/C++ projects.
-- **cmake_template** [📁](./cmake_template) [🌐](https://github.com/GerHobbelt/cmake_template) -- a C++ Best Practices GitHub template for getting up and running with C++ quickly.
-- **googletest-ci-cpp-template** [📁](./googletest-ci-cpp-template) [🌐](https://github.com/GerHobbelt/googletest-ci-cpp-template) -- example of unit testing with [Google Test](https://code.google.com/p/googletest), compiled with CMake and deployed to various continuous integration (CI) systems.  Dependency management is performed by CMake's [FetchContent](https://cmake.org/cmake/help/latest/module/FetchContent.html) module, a part of CMake as of version 3.11 that works much like Google Test's [ExternalProject method](https://github.com/google/googletest/blob/v1.8.x/googletest/README.md#incorporating-into-an-existing-cmake-project). This can fetch and build Google Test at a specific revision in a more concise way than scripting CI to download, extract, and build release packages, all while making it easier for somebody who downloads this project to run the tests with minimal steps.
-- **ModernCppStarter** [📁](./ModernCppStarter) [🌐](https://github.com/GerHobbelt/ModernCppStarter) -- for setting up a new C++ project, providing a significant amount of preparation and boilerplate code, even more so for modern C++ projects with tests, executables and continuous integration. This template is the result of learnings from many previous projects and should help reduce the work required to setup up a modern C++ project.
-- **modern-cpp-template** [📁](./modern-cpp-template) [🌐](https://github.com/GerHobbelt/modern-cpp-template) -- a quick C++ template for modern CMake projects, aimed to be an easy to use starting point.
-
-
-
-
-
-[submodule "str-buf-stream-fmt-noheap"]
-	path = str-buf-stream-fmt-noheap
-	url = git@github.com:GerHobbelt/str-buf-stream-fmt-noheap.git
-    fetchRecurseSubmodules = on-demand
-    ignore = dirty
-
-
-[submodule "uclibc-ng"]
-	path = uclibc-ng
-	url = git@github.com:GerHobbelt/uclibc-ng.git
-    fetchRecurseSubmodules = on-demand
-    ignore = dirty
-
-[submodule "uClibc"]
-	path = uClibc
-	url = git@github.com:GerHobbelt/uClibc.git
-    fetchRecurseSubmodules = on-demand
-    ignore = dirty
 
