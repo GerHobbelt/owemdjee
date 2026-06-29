@@ -41,7 +41,7 @@ while (m) {
 	let repo = m[3];
 	let url = repo.replace(/git@github.com:GerHobbelt/, `https://github.com/GerHobbelt`).replace(/\.git$/, '');
 	let id = m[1];
-	let localdir = `./${ m[2] }`
+	let localdir = `../${ m[2] }`
 	let key2 = localdir.replace(/[\\\/.-]+/g, '');
 	if (dbg) console.log({id, key2, localdir, repo, url })
 
@@ -94,6 +94,7 @@ while (m) {
 	let url = repo;
 	let id = m[1];
 	let localdir = m[2];
+	localdir = localdir.replace(/^[.]\//, '../');
 	let key2 = localdir.replace('thirdparty/', '').replace(/[\\\/.-]+/g, '');
 	if (dbg) console.log({id, key2, localdir, repo, url })
 
@@ -145,7 +146,7 @@ while (m) {
 	let repo = m[3];
 	let url = repo.replace(/git@github.com:GerHobbelt/, `https://github.com/GerHobbelt`).replace(/\.git$/, '');
 	let id = m[1];
-	let localdir = `./${ m[2] }`
+	let localdir = `../${ m[2] }`
 	let key2 = localdir.replace(/[\\\/.-]+/g, '');
 	if (dbg) console.log({id, key2, localdir, repo, url })
 
@@ -248,7 +249,7 @@ txt = txt.replace(/([\r\n]+)\s*\[submodule "([^"]+)"\][\s\r\n]+path = ([^\s\r\n]
 	a = a
 	.replace(/^git@github.com:GerHobbelt\/([^\s]+)\.git$/, 'https://github.com/GerHobbelt/$1')
 
-	let rv = p1 + `- **${ p2 }** [📁](./${ p3 }) [🌐](${ a })\n`;
+	let rv = p1 + `- **${ p2 }** [📁](../${ p3 }) [🌐](${ a })\n`;
 	//console.log({ a, rv })
 	return rv;
 })
@@ -263,6 +264,26 @@ txt = txt.replace(/\n+(<!--[^->]+-->)\n+/g, '\n\n\n\n\n\n\n\n\n\n$1\n\n\n\n\n\n\
 let descr_arr = collect_descriptions(txt);
 
 txt = check_entries_against_their_categorized_references(txt);
+
+
+mod_re = /\*\*([^*]+)\*\* \[📁\]\(([^ )]+)\) \[🌐\]\(([^ )]+)\)/g;
+txt = txt.replace(mod_re, (m, p1, p2, p3, pos) => {
+	let id = 'x' + p1;
+	let localdir = p2;
+	let key2 = localdir.replace('thirdparty/', '').replace(/[\\\/.-]+/g, '');
+	let spec = dict[id.toLowerCase()];
+	if (!spec) {
+		spec = dict[key2.toLowerCase()];
+	}
+	if (!spec) {
+		console.log("not found: ", {id, key2});
+		return m;
+	}
+	let s = `**${ p1 }** [📁](${ spec.localdir }) [🌐](${ spec.url })`;
+	//console.log({ s })
+
+	return s;
+});
 
 
 mod_re = /- \*\*([^*]+)\*\* \[📁\]\(([^ )]+)\) \[🌐\]\(([^ )]+)\)\s*[\n]/g;
@@ -531,6 +552,7 @@ function collect_descriptions(txt) {
 		let url = repo;
 		let id = 'x' + m[1];
 		let localdir = m[2];
+		localdir = localdir.replace(/^[.]\//, '../');
 		let key2 = localdir.replace('thirdparty/', '').replace(/[\\\/.-]+/g, '');
 		let match = m[0];
 		let matchPos = m.index + match.length;
@@ -704,6 +726,7 @@ function collect_entries(txt) {
 		let url = repo;
 		let id = 'x' + m[1];
 		let localdir = m[2];
+		localdir = localdir.replace(/^[.]\//, '../');
 		let key2 = localdir.replace('thirdparty/', '').replace(/[\\\/.-]+/g, '');
 		let match = m[0];
 		let matchPos = m.index + match.length;

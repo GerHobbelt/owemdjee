@@ -10,8 +10,8 @@
 
 ### Smalltalk, ...
 
-- **io** [📁](./io) [🌐](https://github.com/GerHobbelt/io) -- a dynamic prototype-based programming language in the same realm as Smalltalk and Self. It revolves around the idea of message passing from object to object.
-- **wren** [📁](./wren) [🌐](https://github.com/GerHobbelt/wren) -- Wren is a small, fast, class-based concurrent scripting language: think Smalltalk in a Lua-sized package with a dash of Erlang and wrapped up in a familiar, modern syntax.
+- **io** [📁](../io) [🌐](https://github.com/GerHobbelt/io) -- a dynamic prototype-based programming language in the same realm as Smalltalk and Self. It revolves around the idea of message passing from object to object.
+- **wren** [📁](../wren) [🌐](https://github.com/GerHobbelt/wren) -- Wren is a small, fast, class-based concurrent scripting language: think Smalltalk in a Lua-sized package with a dash of Erlang and wrapped up in a familiar, modern syntax.
 
 
 

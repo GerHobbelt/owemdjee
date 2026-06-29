@@ -10,8 +10,8 @@
 
 ### Rebol nation
 
-- **racket** [📁](./racket) [🌐](https://github.com/GerHobbelt/racket) -- [Racket](https://racket-lang.org/) is a general-purpose programming language and an ecosystem for language-oriented programming.
-- **Rebol3** [📁](./Rebol3) [🌐](https://github.com/GerHobbelt/Rebol3) -- Rebol R3 pushes [Carl's original source](https://github.com/rebol/rebol) to be at least as usable as Rebol 2. Rebol itself is an interpreter.
+- **racket** [📁](../racket) [🌐](https://github.com/GerHobbelt/racket) -- [Racket](https://racket-lang.org/) is a general-purpose programming language and an ecosystem for language-oriented programming.
+- **Rebol3** [📁](../Rebol3) [🌐](https://github.com/GerHobbelt/Rebol3) -- Rebol R3 pushes [Carl's original source](https://github.com/rebol/rebol) to be at least as usable as Rebol 2. Rebol itself is an interpreter.
 
 
 

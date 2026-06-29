@@ -9,8 +9,9 @@ let lines = src.split('\n').map((l) => l.trim()).filter((l) => l.length > 0);
 
 let repos = lines.map((l) => l.replace(/^DIR: \*\*([^*]+)\*\*.*$/, '$1'));
 
+let debug = true;
 
-//console.log({lines, repos})
+if (debug) console.log({lines, repos})
 
 
 let content = lines.map((l, i) => {
@@ -23,6 +24,8 @@ let content = lines.map((l, i) => {
 		let read_path = repo_path;
 		if (dir != null)
 			read_path += '/' + dir;
+
+		if (debug) console.log({read_path})
 		
 		let f = `${ read_path }/README.md`;
 		if (fs.existsSync(f)) {
