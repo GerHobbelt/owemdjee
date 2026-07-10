@@ -9994,3 +9994,9 @@
     fetchRecurseSubmodules = on-demand
     ignore = dirty
 
+[submodule "embedded.MCU.experiments"]
+	path = embedded.MCU.experiments
+	url = git@github.com:GerHobbelt/embedded.MCU.experiments.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+

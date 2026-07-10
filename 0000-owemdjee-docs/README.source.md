@@ -8607,3 +8607,10 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 
 
 
+
+[submodule "embedded.MCU.experiments"]
+	path = embedded.MCU.experiments
+	url = git@github.com:GerHobbelt/embedded.MCU.experiments.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
