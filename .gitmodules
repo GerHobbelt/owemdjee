@@ -10000,3 +10000,27 @@
     fetchRecurseSubmodules = on-demand
     ignore = dirty
 
+[submodule "saucer"]
+	path = saucer
+	url = git@github.com:GerHobbelt/saucer.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "tinyusb"]
+	path = tinyusb
+	url = git@github.com:GerHobbelt/tinyusb.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "typed_fixed_point_and_fractional_arith"]
+	path = typed_fixed_point_and_fractional_arith
+	url = git@github.com:GerHobbelt/typed_fixed_point_and_fractional_arith.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "BOSSA"]
+	path = BOSSA
+	url = git@github.com:GerHobbelt/BOSSA.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
