@@ -5802,6 +5802,11 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 
 ## Misc. Uncategorized
 
+
+- **godbolt-C--polymorphic-function-templates-for-C-11** [📁](../godbolt-C--polymorphic-function-templates-for-C-11) [🌐](https://github.com/GerHobbelt/godbolt-C--polymorphic-function-templates-for-C-11) -- Godbolt demo code for C++ polymorphic function templates for C++/11: shows/tests C++ polymorphic function templates' implementation from scratch for C++/11 using [`type_traits`](https://en.cppreference.com/cpp/meta/type_traits) et al to ensure the compiler picks the desired incantation for each function argument type. 
+- **iso-codes** [📁](../iso-codes) [🌐](https://github.com/GerHobbelt/iso-codes) -- provides lists of various ISO standards (e.g. country, language, language scripts, and currency names) in one place, rather than repeated in many programs throughout the system.
+- **tagparser-cpp-utilities** [📁](../tagparser-cpp-utilities) [🌐](https://github.com/GerHobbelt/tagparser-cpp-utilities) -- useful C++ classes and routines, such as an argument parser, I/O, and conversion utilities. Used by the (id3-)tagparser submodule.
+
 - **ADE-graph-management** [📁](../ADE-graph-management) [🌐](https://github.com/GerHobbelt/ade) -- ADE Framework is a graph construction, manipulation, and processing framework.  ADE Framework is suitable for organizing data flow processing and execution.
 - **adsr_curve_tweens** [📁](../adsr_curve_tweens) [🌐](https://github.com/GerHobbelt/adsr_curve_tweens) -- a C++ template based compact ADSR (attack, decay, sustain, release) modulation library. Includes advanced features e.g. smoothing, tweening, time & rate scaling modes, while using a tiny storage footprint as this is geared towards embedded applications (firmware).
 - **Algo_Ds_Notes** [📁](../Algo_Ds_Notes) [🌐](https://github.com/GerHobbelt/Algo_Ds_Notes) -- Algorithm and Data Structure Notes :clipboard:, focused on understanding the concepts and while doing so, whenever someone gets trapped, they can see one way to code in any language they want.
@@ -6096,6 +6101,10 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 
 
 ## sub-dependencies (libraries which are required by any of the above)
+
+
+- **iso-codes** [📁](../iso-codes) [🌐](https://github.com/GerHobbelt/iso-codes) -- provides lists of various ISO standards (e.g. country, language, language scripts, and currency names) in one place, rather than repeated in many programs throughout the system.
+- **tagparser-cpp-utilities** [📁](../tagparser-cpp-utilities) [🌐](https://github.com/GerHobbelt/tagparser-cpp-utilities) -- useful C++ classes and routines, such as an argument parser, I/O, and conversion utilities. Used by the (id3-)tagparser submodule.
 
 - **abseil-cpp** [📁](../abseil-cpp) [🌐](https://github.com/GerHobbelt/abseil-cpp) -- a collection of C++ code (compliant to C++11) designed to augment the C++ standard library.
 - **boost** [📁](../boost) [🌐](https://github.com/GerHobbelt/boost) -- required by several other libraries in this collection
@@ -8595,6 +8604,10 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
   - **removed**; `zlog` has a nice overall design but is too 'Unix-is-the-world' in its coding: in the end it was ease of cross-platform compilation of `glog`/`spdlog` that won the day and I'm okay with layering on top of that one to get the zlog category and other channel features, once I really need them.
 
 
+- **godbolt-C--polymorphic-function-templates-for-C-11** [📁](../godbolt-C--polymorphic-function-templates-for-C-11) [🌐](https://github.com/GerHobbelt/godbolt-C--polymorphic-function-templates-for-C-11) -- Godbolt demo code for C++ polymorphic function templates for C++/11: shows/tests C++ polymorphic function templates' implementation from scratch for C++/11 using [`type_traits`](https://en.cppreference.com/cpp/meta/type_traits) et al to ensure the compiler picks the desired incantation for each function argument type. 
+- **iso-codes** [📁](../iso-codes) [🌐](https://github.com/GerHobbelt/iso-codes) -- provides lists of various ISO standards (e.g. country, language, language scripts, and currency names) in one place, rather than repeated in many programs throughout the system.
+- **tagparser-cpp-utilities** [📁](../tagparser-cpp-utilities) [🌐](https://github.com/GerHobbelt/tagparser-cpp-utilities) -- useful C++ classes and routines, such as an argument parser, I/O, and conversion utilities. Used by the (id3-)tagparser submodule.
+
 
 
 
@@ -8621,6 +8634,6 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 
 # TBD: Libraries which still need to be moved into the overview / categories above...
 
-
-
-
+- **godbolt-C--polymorphic-function-templates-for-C-11** [📁](../godbolt-C--polymorphic-function-templates-for-C-11) [🌐](https://github.com/GerHobbelt/godbolt-C--polymorphic-function-templates-for-C-11) -- Godbolt demo code for C++ polymorphic function templates for C++/11: shows/tests C++ polymorphic function templates' implementation from scratch for C++/11 using [`type_traits`](https://en.cppreference.com/cpp/meta/type_traits) et al to ensure the compiler picks the desired incantation for each function argument type. 
+- **iso-codes** [📁](../iso-codes) [🌐](https://github.com/GerHobbelt/iso-codes) -- provides lists of various ISO standards (e.g. country, language, language scripts, and currency names) in one place, rather than repeated in many programs throughout the system.
+- **tagparser-cpp-utilities** [📁](../tagparser-cpp-utilities) [🌐](https://github.com/GerHobbelt/tagparser-cpp-utilities) -- useful C++ classes and routines, such as an argument parser, I/O, and conversion utilities. Used by the (id3-)tagparser submodule.

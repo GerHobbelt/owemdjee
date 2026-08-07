@@ -10024,3 +10024,27 @@
     fetchRecurseSubmodules = on-demand
     ignore = dirty
 
+[submodule "tagparser-cpp-utilities"]
+	path = tagparser-cpp-utilities
+	url = git@github.com:GerHobbelt/tagparser-cpp-utilities.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "iso-codes"]
+	path = iso-codes
+	url = git@github.com:GerHobbelt/iso-codes.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "godbolt-C--polymorphic-function-templates-for-C-11"]
+	path = godbolt-C--polymorphic-function-templates-for-C-11
+	url = git@github.com:GerHobbelt/godbolt-C--polymorphic-function-templates-for-C-11.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
+[submodule "godbolt-C--compiler-compile-time-feature-detection-and-all-operator-overloads"]
+	path = godbolt-C--compiler-compile-time-feature-detection-and-all-operator-overloads
+	url = git@github.com:GerHobbelt/godbolt-C--compiler-compile-time-feature-detection-and-all-operator-overloads.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
