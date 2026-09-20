@@ -10048,3 +10048,9 @@
     fetchRecurseSubmodules = on-demand
     ignore = dirty
 
+[submodule "arm_cortex_atomics"]
+	path = arm_cortex_atomics
+	url = git@github.com:GerHobbelt/arm_cortex_atomics.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+

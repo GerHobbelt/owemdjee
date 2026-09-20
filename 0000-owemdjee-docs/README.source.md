@@ -8637,3 +8637,17 @@ IMPORTANT NOTE: there is one major difference, though. Most modern Javascript pr
 - **godbolt-C--polymorphic-function-templates-for-C-11** [📁](../godbolt-C--polymorphic-function-templates-for-C-11) [🌐](https://github.com/GerHobbelt/godbolt-C--polymorphic-function-templates-for-C-11) -- Godbolt demo code for C++ polymorphic function templates for C++/11: shows/tests C++ polymorphic function templates' implementation from scratch for C++/11 using [`type_traits`](https://en.cppreference.com/cpp/meta/type_traits) et al to ensure the compiler picks the desired incantation for each function argument type. 
 - **iso-codes** [📁](../iso-codes) [🌐](https://github.com/GerHobbelt/iso-codes) -- provides lists of various ISO standards (e.g. country, language, language scripts, and currency names) in one place, rather than repeated in many programs throughout the system.
 - **tagparser-cpp-utilities** [📁](../tagparser-cpp-utilities) [🌐](https://github.com/GerHobbelt/tagparser-cpp-utilities) -- useful C++ classes and routines, such as an argument parser, I/O, and conversion utilities. Used by the (id3-)tagparser submodule.
+
+
+
+
+
+
+
+
+[submodule "arm_cortex_atomics"]
+	path = arm_cortex_atomics
+	url = git@github.com:GerHobbelt/arm_cortex_atomics.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
