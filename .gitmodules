@@ -10054,3 +10054,9 @@
     fetchRecurseSubmodules = on-demand
     ignore = dirty
 
+[submodule "linnstrument-firmware"]
+	path = linnstrument-firmware
+	url = git@github.com:GerHobbelt/linnstrument-firmware.git
+    fetchRecurseSubmodules = on-demand
+    ignore = dirty
+
